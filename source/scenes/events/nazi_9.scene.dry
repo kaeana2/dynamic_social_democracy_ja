@@ -1,5 +1,5 @@
-title: [+ nsdap_leader +] and Papen
-subtitle: The two men meet once more.
+title: [+ nsdap_leader +]とパーペン
+subtitle: 二人が再び会談する。
 view-if: chancellor = "Schleicher" and hindenburg_hitler_r >= 1 and lippe_good
 new-page: true
 tags: event
@@ -18,22 +18,22 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= [+ nsdap_leader +] and Papen
+= [+ nsdap_leader +]とパーペン
 
-In [+ nsdap_leader +]'s pursuit of power, a certain champagne salesman by the name of Joachim von Ribbentrop has offered to act as an intermediary to former Chancellor von Papen, whom he met during the Great War. [? if lippe_election_seen: With the Lippe campaign now over, ?][+ nsdap_leader +] finally has time to resume talks with Papen—who is more than eager himself.
+[+ nsdap_leader +]が権力を追求するなか、ヨアヒム・フォン・リッベントロップというシャンパン販売業者が、先の大戦中に知り合った元首相フォン・パーペンとの仲介役を申し出た。[? if lippe_election_seen:リッペ選挙運動も終わり、?][+ nsdap_leader +]はようやくパーペンとの協議を再開する時間を得た。パーペン自身も乗り気である。
 
-Accompanied by Heinrich Himmler and [? if not rohm_explode: Ernst Röhm?][? if rohm_explode: the leader of the <span style="color: #7A3C00;">**SA**</span>?], [+ nsdap_leader +] joined Papen for lunch at Ribbentrop’s villa, reiterating his demand for the chancellorship. He claimed that the <span style="color: #7A3C00;">Nazi</span> movement was still very much alive, and could not accept a subordinate role in any Papen-led cabinet.
+ハインリヒ・ヒムラーと[? if not rohm_explode:エルンスト・レーム?][? if rohm_explode:<span style="color: #7A3C00;">**SA**</span>指導者?]を伴った[+ nsdap_leader +]は、リッベントロップ邸でパーペンとの昼食会に臨み、改めて首相職を要求した。<span style="color: #7A3C00;">ナチ党</span>運動は今なお健在であり、パーペン率いる内閣で従属的な役割を受け入れることはできないと主張した。
 
-Papen pushed back, insisting that President Hindenburg’s opposition to appointing [+ nsdap_chancellor +] as Chancellor remained firm—and that even he could not change the old man's mind. The meeting ended without resolution, and with no plans to meet again. Despite increased secrecy, some of the details still leaked to the press.
+パーペンは、ヒンデンブルク大統領が[+ nsdap_chancellor +]の首相任命に断固反対しており、自分でも老大統領の考えは変えられないと反論した。会談は決着も次回の予定もないまま終わった。秘密保持は強化されていたが、それでも一部の詳細が報道機関へ漏れた。
 
-- @nazi: [+ nsdap_chancellor +] remains far from the chancellorship!
+- @nazi: [+ nsdap_chancellor +]の首相就任は依然として遠い！
 
 @nazi
 
-When Schleicher was asked for comment following the leaks, his illusions about Papen’s intentions were finally shattered: he at last realizes that his old friend is scheming against him.
+漏洩後にコメントを求められたシュライヒャーは、ついにパーペンの意図に関する幻想を打ち砕かれた。旧友が自分を倒す策謀を巡らせていると、ようやく悟ったのである。
 
-The chancellor has exhausted his possible avenues. The <span style="color: #7A3C00;">**NSDAP**</span> has no interest in tolerating him, with Strasser powerless, and Hindenburg increasingly unlikely to grant an emergency decree to postpone elections. Having alienated all political parties in the Reichstag, he is truly doomed in a vote of no confidence.
+首相は可能な手段を使い果たした。シュトラッサーは無力で、<span style="color: #7A3C00;">**NSDAP**</span>には彼へ閣外協力する意思がなく、ヒンデンブルクが選挙延期の緊急令を認める可能性も低下する一方である。国会の全政党を敵に回した彼は、不信任決議で確実に破滅する。
 
-Despite his military training, Schleicher has committed a cardinal mistake: he failed to prepare an avenue of retreat in the event that his plans collapsed. He is still banking on [+ nsdap_leader +] changing his mind—and if that fails, on Hindenburg’s willingness to support his election postponement.
+軍人として訓練を受けたにもかかわらず、シュライヒャーは根本的な過ちを犯した。計画が崩壊した場合の退路を用意しなかったのである。彼はなお[+ nsdap_leader +]が考えを変えることに賭け、それが失敗すればヒンデンブルクが選挙延期を支持してくれることに期待している。
 
-Schleicher has given no thought to adopting a defensive posture; instead, he continues to pursue his offensive strategy as if nothing has changed.
+シュライヒャーには守勢へ転じる考えがなく、何も変わっていないかのように攻勢戦略を追求し続けている。

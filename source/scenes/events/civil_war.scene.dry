@@ -1,4 +1,4 @@
-title: Civil War
+title: 内戦
 audio: music/communist/A_las_barricadas.ogg
 on-arrival: {!
 Q.rb_strength = Math.round(Q.rb_strength);
@@ -100,34 +100,34 @@ if (Q.total_power >= Q.enemy_power*0.95) {
 !}
 go-to: war_menu
 
-= The Array of Forces
+= 両軍の戦力
 
-Our enemies are the <span style="color: #808080;">nationalist</span> <span style="color: #3E88B3;">**Stahlhelm**</span>, with [+ sh_strength +] thousand troops, and the <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span>, with [+ sa_strength +] thousand troops. The loyalties of the Reichswehr, with its [+ reichswehr_strength +] thousand regular soldiers, and Prussian police, with [+ prussian_police_strength +] thousand members, are unclear.
+敵は[+ sh_strength +]千人を擁する<span style="color: #808080;">国家主義</span>の<span style="color: #3E88B3;">**鉄兜団**</span>と、[+ sa_strength +]千人を擁する<span style="color: #7A3C00;">ナチ党</span>の<span style="color: #7A3C00;">**SA**</span>である。[+ reichswehr_strength +]千人の正規兵を持つ国軍と、[+ prussian_police_strength +]千人のプロイセン警察がどちらへ忠誠を示すかは分からない。
 
-[? if chancellor_party == "KPD" or president == "Thälmann" or kpd_reichsex_sax : The <span style="color: #700000;">**KPD**</span>'s paramilitary, the <span style="color: #8B0000;">**RFB**</span>, is leading the battle, and we are their co-combatants. ?]
+[? if chancellor_party == "KPD" or president == "Thälmann" or kpd_reichsex_sax : <span style="color: #700000;">**KPD**</span>の準軍事組織<span style="color: #8B0000;">**RFB**</span>が戦闘を主導し、我々は共同戦線を張っている。?]
 
-On our side, we have the Reichsbanner, at [+ rb_strength +] thousand members. [? if dissent > 0.15 and dissent <= 0.25: It is somewhat weakened by dissent within the party, and some members choose not to fight. ?][? if dissent > 0.25 and dissent < 0.5: It is weakened by dissent within the party, and many members choose not to fight. ?][? if dissent >= 0.5: It is heavily weakened by dissent within the party, and a substantial portion of members choose not to fight. ?]
+我々の側には[+ rb_strength +]千人の国旗団がいる。[? if dissent > 0.15 and dissent <= 0.25: 党内の不和でやや弱体化し、一部の団員は戦闘を拒んでいる。?][? if dissent > 0.25 and dissent < 0.5: 党内の不和で弱体化し、多くの団員が戦闘を拒んでいる。?][? if dissent >= 0.5: 党内の不和で著しく弱体化し、相当数の団員が戦闘を拒んでいる。?]
 
-[? if rb_militancy < 0.25 : Unfortunately, the Reichsbanner are poorly trained and equipped, and will not be able to stand against our more militarized opponents. ?][? if rb_militancy >= 0.25 and rb_militancy < 0.5 : We have spent some resources training and equipping the Reichsbanner. Let us hope our people can persist. ?][? if rb_militancy >= 0.5 : We have spent quite a great deal of resources on turning the Reichsbanner into a fighting force. Let us hope that they survive. ?]
+[? if rb_militancy < 0.25 : 残念ながら国旗団は訓練も装備も不十分で、より軍事化された敵には対抗できない。?][? if rb_militancy >= 0.25 and rb_militancy < 0.5 : 国旗団の訓練と装備にいくらか資源を投じてきた。同志たちが持ちこたえることを祈ろう。?][? if rb_militancy >= 0.5 : 国旗団を戦闘部隊へ変えるため、かなりの資源を投じてきた。彼らが生き延びることを祈ろう。?]
 
-What else do we have?
+ほかに何がある？
 
 # note: many scenarios lead to civil war. This calculates the array of forces, and the possible outcomes.
 
 @war_menu
 
-- @rw_help: Appeal to the Reichswehr to stand down.
-- @kpd_help: Call for support from the <span style="color: #700000;">Communists</span>.
-- @general_strike: Call a general strike!
-- @loyal_police: Call up the loyal portions of the police.
-- @war_outcome: Now, the battle...
+- @rw_help: 国軍に武装解除を呼びかける。
+- @kpd_help: <span style="color: #700000;">共産主義者</span>へ支援を求める。
+- @general_strike: ゼネストを呼びかける！
+- @loyal_police: 忠実な警察部隊を召集する。
+- @war_outcome: いざ、戦闘へ……
 
 @rw_help
 max-visits: 1
 go-to: war_menu
 on-arrival: war_choices += 1
 
-We have urged the Reichswehr to stand down, to avoid killing their countrymen. [? if reichswehr_loyalty < 0.2 : Unfortunately, few heed our calls; the Reichswehr detests us. ?][? if reichswehr_loyalty >= 0.2 and reichswehr_loyalty < 0.4 : Some officers and troops heed our calls to not fight against us. Some even join us. ?][? if reichswehr_loyalty >= 0.4 and reichswehr_loyalty < 0.6 : The Reichswehr is split. Many avoid taking a side, or join our side. ?][? if reichswehr_loyalty >= 0.6 : Surprisingly, the majority of the Reichswehr is on our side! Our preparations have worked. ?]
+同胞を殺すことを避けるため、国軍に武装解除を呼びかけた。[? if reichswehr_loyalty < 0.2 : 残念ながら応じる者はわずかである。国軍は我々を憎悪している。?][? if reichswehr_loyalty >= 0.2 and reichswehr_loyalty < 0.4 : 一部の将校と兵士は、我々と戦わないよう求める呼びかけに応じた。中には我々へ加わる者もいる。?][? if reichswehr_loyalty >= 0.4 and reichswehr_loyalty < 0.6 : 国軍は分裂した。多くが中立を保つか、我々の側へ加わっている。?][? if reichswehr_loyalty >= 0.6 : 驚くべきことに、国軍の大半が我々の側についた！　準備が実を結んだ。?]
 
 @kpd_help
 max-visits: 1
@@ -135,16 +135,16 @@ view-if: chancellor_party != "KPD" and president != "Thälmann" and not kpd_reic
 go-to: war_menu
 on-arrival: war_choices += 1
 
-There are [+ rfb_strength +] thousand fighters with the <span style="color: #700000;">Communist</span> <span style="color: #8B0000;">**RFB**</span>, in addition to the workers who support the <span style="color: #700000;">**KPD**</span>.
+<span style="color: #700000;">共産党</span>の<span style="color: #8B0000;">**RFB**</span>には[+ rfb_strength +]千人の闘士がおり、さらに<span style="color: #700000;">**KPD**</span>を支持する労働者もいる。
 
-[? if kpd_relation >= 60 : The <span style="color: #700000;">**KPD**</span> is entirely on our side, owing to our good relations. ?][? if kpd_relation < 60 and kpd_relation >= 45 : Most of the <span style="color: #700000;">**KPD**</span> is on our side, due to their good relations with us. ?][? if kpd_relation < 45 : The <span style="color: #700000;">**KPD**</span> does not support us. ?]
+[? if kpd_relation >= 60 : 良好な関係により、<span style="color: #700000;">**KPD**</span>は全面的に我々の側についている。?][? if kpd_relation < 60 and kpd_relation >= 45 : 我々との良好な関係により、<span style="color: #700000;">**KPD**</span>の大半が我々の側についている。?][? if kpd_relation < 45 : <span style="color: #700000;">**KPD**</span>は我々を支持しない。?]
 
 @general_strike
 max-visits: 1
 go-to: war_menu
 on-arrival: war_choices += 1
 
-A general strike stopped the Kapp Putsch in 1920, and it can stop <span style="color: #7A3C00;">fascism</span> today. [? if normalized_workers_total > 70 : The workers are largely united with us. ?][? if normalized_workers_total >= 50 and normalized_workers_total <= 70 : There is some dissent within labor, but a majority of workers support the general strike. ?][? if normalized_workers_total > 30 and normalized_workers_total < 50 : However, there is substantial dissent within labor, and less than half support the general strike. ?][? if normalized_workers_total <= 30 : However, labor is deeply divided, and most workers do not heed the call to strike. ?]
+ゼネストは1920年にカップ一揆を阻止した。今日も<span style="color: #7A3C00;">ファシズム</span>を阻止できる。[? if normalized_workers_total > 70 : 労働者の大部分は我々と結束している。?][? if normalized_workers_total >= 50 and normalized_workers_total <= 70 : 労働運動内に多少の不和はあるが、労働者の過半数がゼネストを支持している。?][? if normalized_workers_total > 30 and normalized_workers_total < 50 : しかし労働運動内には相当な不和があり、ゼネスト支持は半数に満たない。?][? if normalized_workers_total <= 30 : しかし労働運動は深く分裂し、大半の労働者がストライキの呼びかけに応じない。?]
 
 
 @loyal_police
@@ -153,7 +153,7 @@ go-to: war_menu
 on-arrival: war_choices += 1
 view-if: spd_prussia = 1
 
-Since we still control the Prussian government, we can call upon the Prussian police. [? if prussian_police_loyalty < 0.4 : Unfortunately, the police are politically unreliable at best. ?][? if prussian_police_loyalty >= 0.4 and prussian_police_loyalty < 0.65 : In this crucial hour, the Prussian police are split, with about half actively supporting our efforts. ?][? if prussian_police_loyalty >= 0.65 : Most join in supporting our efforts. Our efforts in cultivating <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> loyalties in the police have proven their worth. ?]
+我々はなおプロイセン政府を掌握しているため、プロイセン警察を召集できる。[? if prussian_police_loyalty < 0.4 : 残念ながら警察は、よく見積もっても政治的に信用できない。?][? if prussian_police_loyalty >= 0.4 and prussian_police_loyalty < 0.65 : この決定的な時にプロイセン警察は分裂し、約半数が我々の戦いを積極的に支持している。?][? if prussian_police_loyalty >= 0.65 : 大半が我々の戦いに加わった。警察内に<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">への</span>忠誠を育ててきた努力が報われた。?]
 
 
 
@@ -172,26 +172,26 @@ go-to: defeat if total_defeat = 1; long_war if long_war = 1; republic_victory if
 
 @defeat
 
-= Total Defeat
+= 完全敗北
 
-Our forces are no match for those of the <span style="color: #808080;">reactionaries</span>. Reichsbanner fighters are quickly overpowered by the forces of the <span style="color: #3E88B3;">**Stahlhelm**</span>, <span style="color: #7A3C00;">**SA**</span>, and Reichswehr. Many are killed before the rest surrender. Our remaining leaders flee the country or face execution, as the <span style="color: #808080;">reactionaries</span> take absolute power over Germany.
+我々の軍勢は<span style="color: #808080;">反動勢力</span>に太刀打ちできない。国旗団の闘士は<span style="color: #3E88B3;">**鉄兜団**</span>、<span style="color: #7A3C00;">**SA**</span>、国軍に瞬く間に制圧され、多くが殺された後、残りも降伏する。残された指導者は国外へ逃れるか処刑され、<span style="color: #808080;">反動勢力</span>がドイツの絶対権力を握る。
 
-Our resistance will be recorded in the history books, and in the future, our names will be honored. But for now, all is lost.
+我々の抵抗は歴史書に記され、後世にはその名誉が称えられるだろう。しかし今は、すべてが失われた。
 
-- @game_over: Game over.
+- @game_over: ゲーム終了。
 
 @long_war
 go-to: long_war_intervention if resist_coup == 0; game_over_menu if resist_coup == 1
 
-= Long War
+= 長期戦
 
-The initial phase of the action ends, and somehow, both sides remain standing.
+戦闘の初期段階が終わったが、どういうわけか双方とも持ちこたえている。
 
-The war settles into fixed battle lines. This will not be a quick coup, but a long civil war. The nation will destroy itself before it can be rebuilt again.
+戦線は膠着した。これは短期間のクーデターではなく、長い内戦となる。国家は再建される前に自らを破壊するだろう。
 
 @game_over_menu
 
-While we might want to call for foreign assistance, the foreign powers see the "Prussian Coup" as a purely internal matter.
+国外へ支援を求めたいところだが、列強は「プロイセン・クーデター」を純粋な国内問題と見なしている。
 
 - @game_over
 
@@ -199,43 +199,42 @@ While we might want to call for foreign assistance, the foreign powers see the "
 
 @long_war_intervention
 
-- @west_aid: Perhaps we can receive aid from the Western powers, <span style="color: #002654;">France</span> and <span style="color: #C8102E;">Britain</span>.
-- @soviet_aid: Perhaps we can receive aid from the <span style="color: #750e0e;">Soviet Union</span>.
-- @east_aid: Perhaps our eastern neighbors, <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> and <span style="color: #11457E;">Czech</span><span style="color: #FFFFFF;">oslo</span><span style="color: #D7141A;">vakia</span>, can help us. If they know anything, they do not want <span style="color: #7A3C00;">fascists</span> coming to power in Germany.
-- @game_over: Game over.
+- @west_aid: 西側列強、<span style="color: #002654;">フランス</span>と<span style="color: #C8102E;">イギリス</span>から支援を受けられるかもしれない。
+- @soviet_aid: <span style="color: #750e0e;">ソ連</span>から支援を受けられるかもしれない。
+- @east_aid: 東の隣国、<span style="color: #DC143C;">ポー</span><span style="color: #FFFFFF;">ランド</span>と<span style="color: #11457E;">チェコ</span><span style="color: #FFFFFF;">スロバ</span><span style="color: #D7141A;">キア</span>が支援するかもしれない。彼らもドイツで<span style="color: #7A3C00;">ファシスト</span>が権力を握ることを望んではいない。
+- @game_over: ゲーム終了。
 
 @west_aid
 choose-if: west_relation >= 2
-unavailable-subtitle: Our relations are not strong enough.
+unavailable-subtitle: 関係が十分に強くない。
 on-arrival: west_aid += 1
 max-visits: 1
 go-to: long_war_intervention
 
-We send a call for help to the West, but their governments are divided on whether or not to support us. We have to survive on our own until they make a decision.
+西側へ救援を求めたが、各国政府は我々を支援すべきかで意見が割れている。彼らが決断するまで、自力で生き延びなければならない。
 
 @soviet_aid
 choose-if: (soviet_relation >= 1 and kpd_relation >= 50) or (kpd_relation >= 75)
 on-arrival: soviet_aid += 1
-unavailable-subtitle: Our relations are not strong enough.
+unavailable-subtitle: 関係が十分に強くない。
 max-visits: 1
 go-to: long_war_intervention
 
-We send a call for help to the <span style="color: #750e0e;">Soviet Union</span>. The <span style="color: #700000;">**KPD**</span> receives the bulk of the aid, while the Reichsbanner and our loyal military units are left floundering. If we win, this does not bode well for our future.
+<span style="color: #750e0e;">ソ連</span>へ救援を求めた。支援の大半は<span style="color: #700000;">**KPD**</span>が受け取り、国旗団と我々に忠実な軍部隊は苦境に取り残される。勝利したとしても、将来にとって良い兆候ではない。
 
 @east_aid
 choose-if: east_relation >= 2
 on-arrival: east_aid += 1
-unavailable-subtitle: Our relations are not strong enough.
+unavailable-subtitle: 関係が十分に強くない。
 max-visits: 1
 go-to: long_war_intervention
 
-<span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> and <span style="color: #11457E;">Czech</span><span style="color: #FFFFFF;">oslo</span><span style="color: #D7141A;">vakia</span> are largely too absorbed in their own problems to be of much help, but weapons and volunteers filter through the parts of the borders that we control.
+<span style="color: #DC143C;">ポー</span><span style="color: #FFFFFF;">ランド</span>と<span style="color: #11457E;">チェコ</span><span style="color: #FFFFFF;">スロバ</span><span style="color: #D7141A;">キア</span>は自国の問題にかかりきりで大した援助はできないが、我々が支配する国境地帯を通じて武器と義勇兵が少しずつ入ってくる。
 
 @republic_victory
 
-= Victory for the Republic
+= 共和国の勝利
 
-The battle lines hold, and the <span style="color: #7A3C00;">**SA**</span>, <span style="color: #3E88B3;">**Stahlhelm**</span>, and pro-coup Reichswehr forces are defeated. Today, the forces of the republic prevail over the <span style="color: #7A3C00;">fascists</span> and the <span style="color: #3E88B3;">reactionaries</span>. There is a new revolution in Germany. Let us hope it produces a longer-lasting peace than the previous one.
+戦線を維持し、<span style="color: #7A3C00;">**SA**</span>、<span style="color: #3E88B3;">**鉄兜団**</span>、クーデター派国軍部隊を打ち破った。今日、共和国の軍勢は<span style="color: #7A3C00;">ファシスト</span>と<span style="color: #3E88B3;">反動勢力</span>に勝利した。ドイツで新たな革命が起きたのである。前の革命より長く続く平和を生み出すことを願おう。
 
-- @game_over: Game over.
-
+- @game_over: ゲーム終了。

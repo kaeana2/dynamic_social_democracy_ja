@@ -1,5 +1,5 @@
-title: Papen's First Emergency Decree
-subtitle: A virtual abolishment of unemployment insurance!
+title: パーペンの第一次緊急令
+subtitle: 失業保険を事実上廃止するものだ！
 view-if: chancellor = "Papen" and papen_time == 2
 new-page: true
 tags: event
@@ -17,16 +17,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Papen's First Emergency Decree
+= パーペンの第一次緊急令
 
-Papen has unveiled his first emergency decree—one that keeps most of Brüning’s planned austerity measures but strips away the system of peasant homesteads. Most egregiously, it subjects all recipients of unemployment insurance to a means test after just six weeks. In effect, the system has been dismantled—radicalizing the proletariat, especially toward the <span style="color: #700000;">**Communists**</span>.
+パーペンは最初の緊急令を発表した。ブリューニングが計画した緊縮措置の大部分を維持する一方、小農家への自作農創設制度を廃止するものである。なかでも最も悪質なのは、失業保険の受給者全員に、わずか6週間後から資力調査を課す点だ。これは制度を事実上解体し、プロレタリアート、とりわけ<span style="color: #700000;">**共産主義者**</span>へ傾く人々を急進化させる。
 
-Unlike Brüning, who at least aimed to share the burdens of austerity across classes, Papen’s decree openly targets the working poor. Unsurprisingly, the gutting of the welfare state has triggered a spike in unemployment and a sharp dip in the stock market. As ever, Germany finds itself with no shortage of problems.
+少なくとも諸階級に緊縮の負担を分担させようとしたブリューニングとは異なり、パーペンの緊急令は露骨にワーキングプアを標的としている。福祉国家の骨抜きによって失業率が急上昇し、株式市場が大幅に下落したのも当然である。相変わらず、ドイツは問題に事欠かない。
 
 - @papen
 
 @papen
-title: The decree is signed by President Hindenburg.
+title: ヒンデンブルク大統領が緊急令に署名する。
 on-arrival: unemployed += 3.5; economic_growth -= 1; inflation -= 1; budget += 1; unemployed_kpd += 4; workers_kpd += 4; workers_spd += 2; unemployed_spd += 2; workers_dnvp -= 2; workers_dnf -= 2; workers_nsdap -= 2; unemployed_nsdap -= 2; new_middle_nsdap -= 2; new_middle_kpd += 2; pro_republic -= 5
 
-The decree confirms the overtly anti-social character of the so-called “cabinet of barons,” and has ignited fury across the working class. With nearly two-thirds of the country now irrevocably hostile to the chancellor, it is politically suicidal for any party outside the <span style="color: #808080;">reactionary</span> right to support him without suffering severe electoral consequences.
+この緊急令は、いわゆる「男爵内閣」の露骨な反社会的性格を裏づけ、労働者階級全体の怒りに火をつけた。国民のほぼ3分の2が首相に対して取り返しのつかない敵意を抱く今、<span style="color: #808080;">反動</span>右翼以外の政党が深刻な選挙上の代償を払わずに彼を支持するのは、政治的自殺に等しい。

@@ -1,40 +1,40 @@
-title: End of the [+ chancellor +] government
-subtitle: Chancellor [+ chancellor +] proposes a controversial tax bill.
+title: [+ chancellor +]政権の終焉
+subtitle: [+ chancellor +]首相が物議を醸す税制法案を提出した。
 new-page: true
 view-if: bruning_event_timer = 2 and dnvp_ideology == "Radical" and not dnvp_split_2 and dnvp_bruning == 1 and not bourgeois_coalition >= 50 and not cvp_formed
 tags: event
 max-visits: 1
 
-= Tax reform
+= 税制改革
 
-Due to the crisis of the Great Depression, government budgets have fallen and welfare spending has risen substantially. Chancellor [+ chancellor +] has proposed another reform of German finances featuring unpopular tax increases.
+世界恐慌による危機のため、政府歳入は落ち込み、福祉支出は大幅に増えている。[+ chancellor +]首相は、不人気な増税を柱とする新たな財政改革を提案した。
 
-Chancellor [+ chancellor +] has used Article 48 of the constitution for the first time in order to pass the bill. In response, a motion has been put forward to rescind the government's emergency powers, and if it succeeds, [+ chancellor +] is prepared to dissolve the Reichstag and call for new elections.
+[+ chancellor +]首相は法案を成立させるため、初めて憲法第48条を行使した。これに対し、政府の緊急権限を撤回する動議が提出された。可決されれば、[+ chancellor +]は国会を解散して総選挙に踏み切る構えである。
 
 - @vote_no
 - @vote_yes
 
 @vote_no
-title: Vote for this motion, ending the coalition.
+title: 動議に賛成し、協力関係を終わらせる。
 on-arrival: time_to_election = 2; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 3; other_r += dnvp_r*0.4 if not kvp_formed; kvp_r += dnvp_r*0.4 if kvp_formed; dnvp_r = dnvp_r*0.6; rural_dnvp -= 4; new_middle_dnvp -= 5; old_middle_dnvp -= 5; rural_other += 5 if not kvp_formed; new_middle_other += 5 if not kvp_formed; old_middle_other += 5 if not kvp_formed; rural_kvp += 5 if kvp_formed; new_middle_kvp += 5 if kvp_formed; old_middle_kvp += 5 if kvp_formed; bruning_vonc_2 = 1; dnvp_split_2 = 1; dnvp_split_2_timer = 1 if not kvp_formed; bruning_event_timer = 0
 call: set_next_election_time_2
 go-to: recalculate
 
-We have voted against the [+ chancellor +] government in a vote of no confidence. The moderates within the <span style="color: #3E88B3;">**DNVP**</span> under Westarp have finally resigned from their party[? if kvp_formed:&nbsp;to join the <span style="color: #0087DC;">**KVP**</span> and?] to vote against our motion, although it still isn't enough to block it. 
+我々は不信任投票で[+ chancellor +]政権に反対票を投じた。ヴェスタープ率いる<span style="color: #3E88B3;">**DNVP**</span>穏健派はついに離党し、[? if kvp_formed:<span style="color: #0087DC;">**KVP**</span>に加わって?]我々の動議に反対票を投じたが、それでも阻止するには足りなかった。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+総選挙は[+ next_election_year +]年[+ next_election_month : month +]に決まった。
 
 
 @vote_yes
-title: Vote against the motion and to start a toleration agreement.
-subtitle: Our parliamentary delegation may refuse to obey our orders.
+title: 動議に反対し、閣外協力を始める。
+subtitle: 党議員団が指示に従わない可能性がある。
 on-arrival: time_to_election = 2; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 3; other_r += dnvp_r*0.4 if not kvp_formed; kvp_r += dnvp_r*0.4 if kvp_formed; dnvp_r = dnvp_r*0.6; rural_dnvp -= 4; new_middle_dnvp -= 5; old_middle_dnvp -= 5; rural_other += 5 if not kvp_formed; new_middle_other += 5 if not kvp_formed; old_middle_other += 5 if not kvp_formed; rural_kvp += 5 if kvp_formed; new_middle_kvp += 5 if kvp_formed; old_middle_kvp += 5 if kvp_formed; bruning_vonc_2 = 1; dnvp_split_2 = 1; dnvp_split_2_timer = 1 if not kvp_formed; bruning_event_timer = 0; center_dissent += 20; labor_dissent += 20; left_dissent += 20
 call: set_next_election_time_2
 go-to: recalculate
 
-We have once again voted in favor of the [+ chancellor +] government in a vote of no confidence. However, our parliamentary delegation is in open revolt over this decision and has announced they will disobey our orders, ultimately bringing down the [+ chancellor +] government regardless. The moderates within the <span style="color: #3E88B3;">**DNVP**</span> under Westarp have finally resigned from their party[? if kvp_formed:&nbsp;to join the <span style="color: #0087DC;">**KVP**</span> and?] to vote the motion, although it still isn't enough to block it. 
+我々は再び不信任投票で[+ chancellor +]政権に賛成票を投じた。しかし党議員団はこの決定に公然と反旗を翻し、指示に従わないと表明したため、結局[+ chancellor +]政権は倒れることになった。ヴェスタープ率いる<span style="color: #3E88B3;">**DNVP**</span>穏健派もついに離党し、[? if kvp_formed:<span style="color: #0087DC;">**KVP**</span>に加わって?]動議に賛成票を投じたが、それだけでは可決に足りなかった。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+総選挙は[+ next_election_year +]年[+ next_election_month : month +]に決まった。
 
 
 @recalculate

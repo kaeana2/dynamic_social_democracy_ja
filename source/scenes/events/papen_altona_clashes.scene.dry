@@ -1,27 +1,27 @@
-title: <span style="color: #7A3C00;">Nazi</span> March in Altona
+title: <span style="color: #7A3C00;">ナチ</span>、アルトナを行進
 new-page: true
-subtitle: An <span style="color: #7A3C00;">**SA**</span> demonstration, with the potential for violence.
+subtitle: 暴力に発展しかねない<span style="color: #7A3C00;">**SA**</span>の示威行進。
 tags: event
 view-if: papen_time == 7 and spd_prussia == 1 and chancellor == "Papen" and not altona_seen
 on-arrival: altona_seen = 1
 max-visits: 1
 
-= <span style="color: #7A3C00;">Nazi</span> March in Altona
+= <span style="color: #7A3C00;">ナチ</span>、アルトナを行進
 
-The <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> is planning a march through Altona, a working-class neighborhood of Hamburg known for its high working-class population. Altona is a <span style="color: #700000;">**Communist**</span> stronghold, and the planned march will almost certainly lead to violent conflict.
+<span style="color: #7A3C00;">ナチ</span>の<span style="color: #7A3C00;">**SA**</span>は、労働者が多く暮らすハンブルクの労働者街アルトナを行進しようとしている。アルトナは<span style="color: #700000;">**共産党**</span>の牙城であり、計画された行進はほぼ確実に暴力的衝突を引き起こす。
 
-[? if sa_ban_repealed: The recent surge in provocative political demonstrations and violence is clearly a result of Papen’s decision to lift the <span style="color: #7A3C00;">**SA**</span> ban—yet he places blame not on his own actions, but on our Prussian Interior Minister Carl Severing. ?]
+[? if sa_ban_repealed: 最近、挑発的な政治示威と暴力が急増したのは、明らかにパーペンが<span style="color: #7A3C00;">**SA**</span>禁止令を解除した結果である。ところが彼は自らの決定ではなく、我らがプロイセン内相カール・ゼーフェリンクに責任を負わせている。?]
 
-- @ban_march: Ban the march before it starts.
-- @allow_police: Allow the march, with a heavy police presence.
-- @allow_no_police: Allow the march without a police presence.
+- @ban_march: 行進が始まる前に禁止する。
+- @allow_police: 大規模な警察部隊を配置したうえで行進を認める。
+- @allow_no_police: 警察を配置せずに行進を認める。
 
 @ban_march
 choose-if: judicial_reform >= 2
-unavailable-subtitle: The judiciary would not allow us to ban the protest, because of free speech.
+unavailable-subtitle: 表現の自由を理由に、司法は示威行進の禁止を認めないだろう。
 on-arrival: sa_strength -= 10; altona_good = 1
 
-We have banned the planned protest. The <span style="color: #7A3C00;">Nazis</span> appeal the ban in the courts in the name of freedom of speech. Thankfully, the judiciary agrees with us that the <span style="color: #7A3C00;">Nazis</span>' argument is specious.
+我々は計画された示威行進を禁止した。<span style="color: #7A3C00;">ナチ</span>は表現の自由を掲げて、禁止処分を裁判所に訴えた。幸いにも司法は、<span style="color: #7A3C00;">ナチ</span>の主張が詭弁にすぎないという我々の見解を認めた。
 
 @allow_police
 go-to: allow_police_violence if prussian_police_loyalty <= 0.75; allow_police_no_violence if prussian_police_loyalty > 0.75 
@@ -29,16 +29,16 @@ go-to: allow_police_violence if prussian_police_loyalty <= 0.75; allow_police_no
 @allow_police_violence
 on-arrival: strife += 1; sa_strength += 50; kpd_relation -= 8; communist_coalition -= 1
 
-When the march arrives in Altona, they are immediately confronted by an angry crowd of <span style="color: #700000;">communists</span> and <span style="color: #c00000;">socialists</span>, who throw objects at the <span style="color: #7A3C00;">Nazis</span>. The police attempt to separate the two groups, to no avail. Gunshots are heard, reportedly from rooftop snipers (whom the police believe are <span style="color: #700000;">communists</span>). In response, the police fire into the surrounding buildings. Dozens are killed. All turn out to be civilians, and the reported snipers are never found.
+行進隊がアルトナに到着すると、怒りに燃えた<span style="color: #700000;">共産主義者</span>と<span style="color: #c00000;">社会主義者</span>の群衆が直ちに立ちはだかり、<span style="color: #7A3C00;">ナチ</span>へ物を投げつけた。警察は両者を引き離そうとしたが、効果はなかった。屋上の狙撃手によるものとされる銃声が響き、警察は狙撃手を<span style="color: #700000;">共産主義者</span>と判断した。これに応じて警察は周囲の建物へ発砲し、数十人が死亡した。犠牲者は全員民間人であり、報告された狙撃手はついに発見されなかった。
 
-This incident has been called "Altona Bloody Sunday" in the media. The <span style="color: #700000;">**Communists**</span> assail the incompetence of the police, who are supposedly under our command.
+報道機関はこの事件を「アルトナの血の日曜日」と呼んでいる。<span style="color: #700000;">**共産主義者**</span>は、我々の指揮下にあるはずの警察の無能を激しく非難した。
 
 @allow_police_no_violence
 on-arrival: altona_good = 1; sa_strength += 10
 
-When the march arrives in Altona, they are immediately confronted by an angry crowd of <span style="color: #700000;">communists</span> and <span style="color: #c00000;">socialists</span>, who throw objects at the <span style="color: #7A3C00;">Nazis</span>. The police attempt to separate the two groups, to no avail. Gunshots are heard, reportedly from rooftop snipers. The police manage to keep their cool, the shots stop, and the march disperses without further violence.
+行進隊がアルトナに到着すると、怒りに燃えた<span style="color: #700000;">共産主義者</span>と<span style="color: #c00000;">社会主義者</span>の群衆が直ちに立ちはだかり、<span style="color: #7A3C00;">ナチ</span>へ物を投げつけた。警察は両者を引き離そうとしたが、効果はなかった。屋上の狙撃手によるものとされる銃声が響いた。それでも警察は冷静さを保ち、やがて銃声は止み、行進隊はさらなる暴力を起こすことなく解散した。
 
 @allow_no_police
 on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; kpd_relation -= 8; communist_coalition -= 1
 
-When the march arrives in Altona, they are immediately confronted by an angry crowd of <span style="color: #700000;">communists</span> and <span style="color: #c00000;">socialists</span>, who throw objects at the <span style="color: #7A3C00;">Nazis</span>. Gunshots are heard, reportedly from rooftop snipers. In response, the <span style="color: #7A3C00;">**SA**</span> engage the surrounding crowd and fire at the surrounding buildings. Dozens are killed, mostly civilians. The <span style="color: #7A3C00;">Nazis</span> recruit off their dead martyrs.
+行進隊がアルトナに到着すると、怒りに燃えた<span style="color: #700000;">共産主義者</span>と<span style="color: #c00000;">社会主義者</span>の群衆が直ちに立ちはだかり、<span style="color: #7A3C00;">ナチ</span>へ物を投げつけた。屋上の狙撃手によるものとされる銃声が響くと、<span style="color: #7A3C00;">**SA**</span>は周囲の群衆と交戦し、建物へ向けても発砲した。数十人が死亡し、その大半は民間人だった。<span style="color: #7A3C00;">ナチ</span>は死者を殉教者として宣伝し、新たな党員を募っている。

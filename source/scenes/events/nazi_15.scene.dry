@@ -1,5 +1,5 @@
-title: Hindenburg's Resistance Crumbles...
-subtitle: The pressure begins to mount on the President.
+title: ヒンデンブルクの抵抗が崩れる……
+subtitle: 大統領への圧力が高まり始める。
 view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode
 new-page: true
 tags: event
@@ -18,34 +18,34 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Negotiations, Pt. 2
+= 組閣交渉・第2部
 
-With his closest friends, his son, and his chief of staff all advocating for a [+ nsdap_chancellor +] chancellorship, Hindenburg’s once-unshakable resolve to refuse [+ nsdap_chancellor +] is beginning to crumble.
+親友たち、息子、大統領府長官までもが[+ nsdap_chancellor +]の首相就任を唱えるなか、[+ nsdap_chancellor +]を拒むというヒンデンブルクのかつて揺るがなかった決意は崩れ始めた。
 
 - @nazi_2
 
 @nazi_2
-title: Hindenburg receives a visit from an old friend.
+title: ヒンデンブルクのもとを旧友が訪れる。
 on-arrival: hindenburg_hitler_r += 1
 
-Elard von Oldenburg-Januschau, the elderly *Junker* neighbor of the President in East Prussia—and the man who once rallied the German Right to buy Hindenburg's estate as a gift in 1927—arrives with advice. He assures the President that only a [+ nsdap_chancellor +] cabinet can bring relief to the depressed agriculture of the east, and that conservative forces would be enough to prevent a one-party dictatorship.
+東プロイセンで大統領の隣人である老*ユンカー*、エラルト・フォン・オルデンブルク＝ヤヌシャウが助言を携えて現れた。1927年にドイツ右翼へ呼びかけ、ヒンデンブルクのために荘園を購入して贈った人物でもある。彼は、疲弊した東部農業を救えるのは[+ nsdap_chancellor +]内閣だけであり、保守勢力が一党独裁を阻止するには十分だと大統領へ保証した。
 
 - @nazi_3
 
 @nazi_3
-title: Hindenburg receives a reassuring message from Göring.
+title: ヒンデンブルクがゲーリングから安心させる伝言を受ける。
 on-arrival: hindenburg_hitler_r += 1
 
-Göring, a decorated war hero and fellow officer, sends a message pledging respect for Hindenburg’s authority as President. He insists his party has no intention of violating the constitution or politicizing the military—words that make an impression on the old field marshal.
+勲章を受けた戦争英雄で同じ将校でもあるゲーリングは、ヒンデンブルクの大統領としての権威を尊重すると誓う伝言を送った。党には憲法を侵害する意思も、軍を政治化する意思もないと強調し、その言葉は老元帥に感銘を与えた。
 
 - @nazi_4
 
 @nazi_4
-title: His resolve begins to fail.
+title: その決意が揺らぎ始める。
 on-arrival: hindenburg_hitler_r += 1
 
-In a meeting with Papen, the former Chancellor presents [+ nsdap_chancellor +] in a moderate light, claiming he only seeks a minimal number of cabinet positions and is willing to submit the remaining appointments for the President's approval. Papen also reports that many ministers from his and Schleicher’s cabinets are prepared to continue under [+ nsdap_chancellor +]. Despite his dislike of Hugenberg, Hindenburg agrees to grant him control of both the national[? if prussia_leader == "Schleicher":&nbsp;and Prussian?] ministries of agriculture and economics.
+パーペンとの会談で、元首相は[+ nsdap_chancellor +]を穏健な人物として描き、求めている閣僚職は最小限で、残りの人事は大統領の承認に委ねる用意があると主張した。パーペンはまた、自内閣とシュライヒャー内閣の閣僚の多くが[+ nsdap_chancellor +]の下でも留任する用意があると報告した。ヒンデンブルクはフーゲンベルクを嫌っているにもかかわらず、中央[? if prussia_leader == "Schleicher":およびプロイセン?]の農業省と経済省の双方を彼に委ねることへ同意した。
 
-Hindenburg is also offered the choice of appointing the Foreign and Defense Ministers. He is pleased to learn that the aristocratic Foreign Minister from Papen and Schleicher’s cabinet is willing to remain under [+ nsdap_chancellor +]. As for the Defense Ministry, it is agreed Schleicher must go. Hindenburg proposes General Werner von Blomberg—currently serving with the German delegation in Geneva and a known rival of Schleicher within the ministry.
+ヒンデンブルクには外相と国防相を任命する選択権も提示された。パーペン内閣とシュライヒャー内閣で外相を務めた貴族が、[+ nsdap_chancellor +]の下でも留任する意思を持つと知り、彼は満足した。国防省については、シュライヒャーを去らせることで合意した。ヒンデンブルクは、現在ジュネーヴのドイツ代表団に勤務し、省内でシュライヒャーの対抗者として知られるヴェルナー・フォン・ブロンベルク将軍を提案した。
 
-Papen ends the meeting by promising to serve as Vice-Chancellor. The day ends, and the next begins.
+パーペンは副首相を務めると約束して会談を終えた。一日が終わり、次の日が始まる。

@@ -1,22 +1,22 @@
-title: Schleicher Resigns!
-subtitle: Hindenburg is dissatisfied with the chancellor.
+title: シュライヒャー辞任！
+subtitle: ヒンデンブルクは首相に不満を抱いている。
 view-if: chancellor == "Schleicher" and schleicher_post and schleicher_pause
 face-image: img/portraits/schleicher_stare.jpg
 max-visits: 1
 new-page: true
 tags: event
 
-= Schleicher Resigns!
+= シュライヒャー辞任！
 
-Hindenburg is beyond furious that Schleicher—head of the Reichswehr and the man who repeatedly assured the President of the army's power to crush any threat from the <span style="color: #700000;">**Communists**</span>—has now capitulated to our demands to lift the ban on the <span style="color: #700000;">**KPD**</span>.
+国防軍の長であり、軍には<span style="color: #700000;">**共産主義者**</span>のあらゆる脅威を粉砕する力があると繰り返し大統領に請け合ってきたシュライヒャーが、今や<span style="color: #700000;">**KPD**</span>の禁止解除を求める我々の要求に屈した。ヒンデンブルクの怒りは頂点に達している。
 
-With his faith in the Reichswehr shattered, he has turned back to his old allies among the <span style="color: #3E88B3;">nationalists</span>. And with the bar set so low, perhaps this is a blessing to us. Though they remain our enemies, as they were in the days of normalcy, whoever Hindenburg selects now is likely to be preferable to Schleicher’s continued hold on office.
+国防軍への信頼を打ち砕かれた大統領は、<span style="color: #3E88B3;">国家主義者</span>の旧友へ再び目を向けた。基準がここまで下がった以上、これは我々にとって幸運かもしれない。平常期と同様、彼らは依然として敵だが、ヒンデンブルクが今選ぶ人物は、シュライヒャーの続投よりはましだろう。
 
 - @treviranus
 
 @treviranus
-title: Kuno von Westarp -[? if dnvp_ideology == "Radical":&nbsp;Former?] <span style="color: #3E88B3;">**DNVP**</span>
-subtitle: Hindenburg's preferred choice once again, and [? if dnvp_leader != "Westarp":former?] <span style="color: #3E88B3;">**DNVP**</span> party leader.
+title: クーノ・フォン・ヴェスタルプ――[? if dnvp_ideology == "Radical":&nbsp;元?]<span style="color: #3E88B3;">**DNVP**</span>
+subtitle: 再びヒンデンブルクの第一候補となった、[? if dnvp_leader != "Westarp":元?]<span style="color: #3E88B3;">**DNVP**</span>党首。
 face-image: img/portraits/Treviranus.jpg
 on-arrival: {!
 Q.chancellor = "Treviranus";
@@ -37,8 +37,8 @@ Q.schleicher_spd_influence -= 4;
 Q.schleicher_spd_support -= 5;
 !}
 
-Westarp, despite being once again begged by an older and increasingly sick Hindenburg, has declined the offer. Instead, he recommends the appointment of rising star and <span style="color: #0087DC;">Volkskonservativ</span> leader Gottfried Treviranus. With deep ties to German industry, the Right, and a pseudo-<span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> veneer, Treviranus is a candidate aimed at stabilizing Germany’s worsening crisis.
+年老いて病状を悪化させるヒンデンブルクから再び懇願されたにもかかわらず、ヴェスタルプは申し出を断った。代わりに、新進気鋭の<span style="color: #0087DC;">人民保守派</span>指導者ゴットフリート・トレヴィラヌスの任命を推した。ドイツ産業界や右翼と深い関係を持ちながら、疑似<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">的</span>な外観をまとったトレヴィラヌスは、悪化するドイツの危機を安定させるための候補である。
 
-Much like Papen’s dismissal in favor of Schleicher, the political class breathes yet another sigh of relief. Even within the <span style="color: #c00000;">**SPD**</span>, many find it easier to confront the devil they know rather than face Schleicher’s dynamic and unpredictable rule.
+パーペンを解任してシュライヒャーを選んだ時と同じく、政治階級は再び安堵の息をついた。<span style="color: #c00000;">**SPD**</span>内部でさえ、精力的で予測不能なシュライヒャーの統治より、素性の知れた悪魔と対峙する方が容易だと考える者が多い。
 
-Treviranus will seek to construct a working majority via parliament.
+トレヴィラヌスは議会を通じ、機能する多数派の構築を目指す。

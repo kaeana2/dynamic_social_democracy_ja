@@ -1,5 +1,5 @@
-title: A Meeting Between the Reichswehr and <span style="color: #7A3C00;">**NSDAP**</span>
-subtitle: <span style="color: #c00000;">**SPD**</span> intelligence has obtained knowledge of a secret meeting...
+title: 国防軍と<span style="color: #7A3C00;">**NSDAP**</span>の会談
+subtitle: <span style="color: #c00000;">**SPD**</span>の情報活動により、秘密会談の存在が判明した……
 view-if: chancellor = "Papen" and papen_time == 8
 on-arrival: red_general_unlock = 1
 new-page: true
@@ -18,31 +18,31 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Secret Reichswehr Meeting
+= 国防軍の秘密会談
 
-Through our intelligence work, the <span style="color: #c00000;">**SPD**</span> has received a copy of minutes of a meeting between <span style="color: #7A3C00;">Nazi</span> leaders Gregor Strasser, Hermann Göring, and [? if not rohm_explode: Ernst Röhm?][? if rohm_explode: the leader of the <span style="color: #7A3C00;">**SA**</span>?], with former General Edwin von Stülpnagel, a close ally of Schleicher.
+情報活動を通じて、<span style="color: #c00000;">**SPD**</span>は<span style="color: #7A3C00;">ナチ党</span>幹部のグレゴール・シュトラッサー、ヘルマン・ゲーリング、[? if not rohm_explode: エルンスト・レーム?][? if rohm_explode: <span style="color: #7A3C00;">**SA**</span>指導者?]と、シュライヒャーの側近である退役将軍エトヴィン・フォン・シュテュルプナーゲルとの会談の議事録を入手した。
 
-The topic of the conference was about possible joint action between the Reichswehr and the <span style="color: #7A3C00;">**SA**</span>, if the leftists were to make a move following the elections.
+会談の議題は、選挙後に左派が行動を起こした場合、国防軍と<span style="color: #7A3C00;">**SA**</span>が共同行動を取れるかどうかだった。
 
 - @schleicher
 
 @schleicher
-title: Concerning.
+title: 懸念すべき事態だ。
 on-arrival: schleicher_spd_r -= 1; schleicher_spd_support -= 1; nazi_urgency += 1; 
 
-This all but confirms our suspicions that General Schleicher is conspiring with the <span style="color: #7A3C00;">Nazis</span> against the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> forces. Our relations with the "Red General" has worsened.
+シュライヒャー将軍が<span style="color: #7A3C00;">ナチ党</span>と結び、<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>勢力に対して陰謀を企てているという疑いは、これでほぼ裏付けられた。「赤い将軍」との関係は悪化した。
 
 - @schleicher_2
 
 @schleicher_2
-title: Von Schleicher offers to meet with the unions, and to ease their fears.
-subtitle: The unions are independent of the party, and have agreed to participate.
+title: フォン・シュライヒャーが、不安を和らげるため労組との会談を提案する。
+subtitle: 労組は党から独立しており、参加に同意した。
 on-arrival: schleicher_spd_r += 1; schleicher_spd_support += 1; labor_dissent += 5
 
-The invitation for a direct meeting between Theodor Leipart, leader of the ADGB, and von Schleicher is declined. Instead, a larger meeting is held, including Papen, his Interior Minister, and the ADGB’s co-chairs.
+ADGB指導者テオドール・ライパルトとフォン・シュライヒャーの直接会談への招待は断られた。代わりに、パーペンと内相、ADGBの共同議長らを加えた、より大規模な会談が開かれた。
 
-At the meeting, the union leaders confront Schleicher over alleged secret agreements with the <span style="color: #7A3C00;">**SA**</span>, prompting both Schleicher and Papen to strike a more conciliatory tone in response to union complaints about unfair government treatment. Schleicher denies any such deals with the <span style="color: #7A3C00;">**SA**</span>, insisting that the government's highest priority is reducing unemployment. Papen also requests the unions to use their influence to persuade the <span style="color: #c00000;">**SPD**</span> to give the government time to deliver results.
+会談で労組指導者は、<span style="color: #7A3C00;">**SA**</span>との秘密協定の疑惑をシュライヒャーに問いただした。政府の不当な扱いを訴える労組に対し、シュライヒャーとパーペンはともに融和的な態度を示した。シュライヒャーは<span style="color: #7A3C00;">**SA**</span>との協定を否定し、政府の最優先課題は失業の削減だと強調した。パーペンも、政府に成果を出す時間を与えるよう、労組の影響力で<span style="color: #c00000;">**SPD**</span>を説得してほしいと求めた。
 
-By the end of the meeting, the three unionists are left impressed by Schleicher, who hints at possible concessions to a “patriotic labor movement.” A line of communication between the ADGB and the government remains open—much to Wels’s frustration, as he aims to maintain a united front against the regime.
+会談を終えるころには、労組側の三人は「愛国的な労働運動」への譲歩を示唆したシュライヒャーに好印象を抱いていた。ADGBと政府の連絡経路は維持された。体制への統一した反対戦線を保とうとするヴェルスにとっては、いらだたしい展開だ。
 
-(Leipart is granted an ability)
+（ライパルトに能力が追加される）

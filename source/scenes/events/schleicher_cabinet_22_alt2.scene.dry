@@ -1,20 +1,20 @@
-title: Government of National Unity
-subtitle: Treviranus's solution to the impasse?
+title: 挙国一致政府
+subtitle: 行き詰まりを打開するトレヴィラヌスの解決策か？
 view-if: chancellor == "Treviranus" and treviranus_post and next_reichstag_time == rubicon_time and next_reichstag_time > 0 and year == 1934
 max-visits: 1
 new-page: true
 tags: event
 go-to: treviranus_menu
 
-= Government of National Unity
+= 挙国一致政府
 
-Treviranus, having failed to win over the <span style="color: #6A1E1E;">**DSU**</span>, has now turned to us for support. We find ourselves in the role of kingmaker, while the Chancellor grows increasingly desperate to secure a majority. However, Hindenburg—on his death bed—lacks the energy to intervene in the process, leading Treviranus to personally approach us with an offer.
+<span style="color: #6A1E1E;">**DSU**</span>の取り込みに失敗したトレヴィラヌスは、今度は我々に支持を求めてきた。我々が政権の行方を左右する一方、首相は多数派確保にますます必死になっている。しかし死の床にあるヒンデンブルクには、この過程へ介入するだけの気力がない。そこでトレヴィラヌス本人が取引を持ちかけてきた。
 
-He is offering to repeal the ban on the <span style="color: #700000;">**KPD**</span>[? if sapd_formed:&nbsp;and <span style="color: #9B0000;">**SAPD**</span>?], in return for us refraining to call a vote of no confidence on his government until Hindenburg inevitably kicks the bucket.
+彼は<span style="color: #700000;">**KPD**</span>[? if sapd_formed:と<span style="color: #9B0000;">**SAPD**</span>?]への禁止を解除する代わりに、ヒンデンブルクが避けられない死を迎えるまで、我々が政権への不信任決議を提出しないよう求めている。
 
-But perhaps we can bypass this deadlock by targeting Hindenburg himself. With a two-thirds majority in the Reichstag, we could initiate impeachment proceedings under Article 59 or trigger a recall election under Article 43. If the recall election were to fail, the Reichstag would be dissolved for new elections.
+だがヒンデンブルク本人を標的にすれば、この行き詰まりを迂回できるかもしれない。国会の3分の2の多数を得れば、第59条に基づく弾劾手続きか、第43条に基づく大統領罷免国民投票を開始できる。罷免案が国民投票で否決されれば、国会は解散されて新選挙となる。
 
-Yet the <span style="color: #808080;">reactionary</span> nature of the courts renders impeachment unlikely to succeed. Recall, however, remains a narrow possibility—it requires only a majority of those who vote, not of all eligible voters. Still, to make either path viable, we must secure the backing of other parties.
+しかし裁判所は<span style="color: #808080;">反動的</span>であり、弾劾が成功する見込みは薄い。一方、罷免にはわずかな可能性が残る。全有権者ではなく、実際の投票者の過半数だけで成立するからだ。それでも、いずれの道を実現するにも他党の支持を確保しなければならない。
 
 @treviranus_menu
 
@@ -22,8 +22,8 @@ Yet the <span style="color: #808080;">reactionary</span> nature of the courts re
 - @reichstag_impeach
 
 @reichstag_impeach
-title: Put forth a motion to remove President Hindenburg from office.
-subtitle: A two-thirds majority in the Reichstag is required to succeed.
+title: ヒンデンブルク大統領の罷免動議を提出する。
+subtitle: 成立には国会の3分の2の多数が必要である。
 on-arrival: {!
 Q.impeachment_votes = 0;
 
@@ -57,32 +57,32 @@ Q.impeachment_votes = parseFloat(Q.impeachment_votes.toFixed(1));
 !}
 max-visits: 1
 
-We are able to gather the support of [+ spd_r + kpd_r + sapd_r +]% of the Reichstag, with all <span style="color: #c00000;">**SPD**</span>, <span style="color: #700000;">**KPD**</span>[? if sapd_formed:&nbsp;and <span style="color: #9B0000;">**SAPD**</span>?] deputies expected to vote in favor. Our effort is also aided by the fact that Hindenburg only has a few months left to live.
+我々は国会の[+ spd_r + kpd_r + sapd_r +]%の支持を集められる。<span style="color: #c00000;">**SPD**</span>、<span style="color: #700000;">**KPD**</span>[? if sapd_formed:、<span style="color: #9B0000;">**SAPD**</span>?]の全議員が賛成票を投じる見込みである。ヒンデンブルクの余命が数か月しかないことも、我々の運動を後押ししている。
 
-[? if impeachment_ddp: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has been one of the only bourgeois parties standing up for the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic and the constitution the party's founders drafted. We are expected to see their deputies vote with us. ?][? if not impeachment_ddp and not lvp_formed: Unfortunately, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has strayed too far from its former <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> ideals, and now sees support for Hindenburg as a hard but necessary choice in the national interest. ?]
+[? if impeachment_ddp: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>は、<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>共和国と、党の創設者たちが起草した憲法を擁護してきた数少ないブルジョワ政党の一つである。同党の議員は我々とともに投票する見込みだ。?][? if not impeachment_ddp and not lvp_formed: 残念ながら<span style="color: #D3C24D;">**[+ ddp_name +]**</span>はかつての<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">的</span>理念からあまりに遠ざかり、今ではヒンデンブルク支持を国益のための苦渋の、しかし必要な選択と見なしている。?]
 
-[? if impeachment_dvp: The <span style="color: #C0A054;">**DVP**</span> were once staunch supporters of Hindenburg, but even the industrialists have grown tired of his antics and have lobbied the party to vote against the president. ?][? if not impeachment_dvp and not lvp_formed and dvp_exist: The <span style="color: #C0A054;">**DVP**</span> remains trapped in its <span style="color: #808080;">reactionary</span> spiral and will not support our motion. ?]
+[? if impeachment_dvp: <span style="color: #C0A054;">**DVP**</span>はかつてヒンデンブルクの断固たる支持者だったが、実業家たちさえ彼の振る舞いにうんざりし、大統領に反対票を投じるよう党へ圧力をかけている。?][? if not impeachment_dvp and not lvp_formed and dvp_exist: <span style="color: #C0A054;">**DVP**</span>はなお<span style="color: #808080;">反動化</span>の悪循環に陥っており、我々の動議を支持しない。?]
 
-[? if impeachment_lvp: The <span style="color: #FFCC00;">**LVP**</span>, nominally a <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> party, has remained faithful to its democratic convictions and will vote against President Hindenburg. ?][? if not impeachment_lvp and lvp_formed: The <span style="color: #FFCC00;">**LVP**</span> has drifted far from its professed <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> and democratic principles. Swayed by its <span style="color: #808080;">reactionary</span> right wing, it will reluctantly remain aligned with Hindenburg. ?]
+[? if impeachment_lvp: 名目上は<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">政党</span>である<span style="color: #FFCC00;">**LVP**</span>は民主主義的信念を守り、ヒンデンブルク大統領に反対票を投じる。?][? if not impeachment_lvp and lvp_formed: <span style="color: #FFCC00;">**LVP**</span>は自ら掲げる<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">的</span>・民主主義的原則から大きく逸脱した。<span style="color: #808080;">反動的</span>な右派に動かされ、不承不承ながらヒンデンブルク陣営にとどまる。?]
 
-[? if impeachment_z: The <span style="color: #000000;">Center Party</span>, our ally since the Republic’s founding, stands with us to defend it. ?][? if not impeachment_z: The <span style="color: #000000;">Center Party</span>, our ally since the Republic’s founding, has unexpectedly sided with Hindenburg. Strained relations are to blame, as they now prioritize the survival of Treviranus’s government over principle. ?]
+[? if impeachment_z: 共和国創設以来の盟友である<span style="color: #000000;">中央党</span>は、その共和国を守るため我々とともに立つ。?][? if not impeachment_z: 共和国創設以来の盟友である<span style="color: #000000;">中央党</span>は、意外にもヒンデンブルク側についた。関係悪化が原因であり、今や原則よりトレヴィラヌス政権の存続を優先している。?]
 
-[? if impeachment_bvp: Even the <span style="color: #A2D8E0;">**BVP**</span>—once deeply loyal to Hindenburg—has grown disillusioned with his anti-constitutionalist and erratic behavior, and now supports our effort. ?][? if not impeachment_bvp: The <span style="color: #A2D8E0;">**BVP**</span> has, as expected, remained loyal to President Hindenburg, despite their reported discontent over his anti-constitutional conduct. ?]
+[? if impeachment_bvp: かつてヒンデンブルクに強く忠誠を尽くした<span style="color: #A2D8E0;">**BVP**</span>さえ、彼の反憲法的で一貫性のない振る舞いに幻滅し、我々の運動を支持している。?][? if not impeachment_bvp: <span style="color: #A2D8E0;">**BVP**</span>は、ヒンデンブルクの反憲法的行為に不満を抱いていると伝えられながらも、予想どおり大統領への忠誠を保った。?]
 
-The right-wing parties and <span style="color: #3E88B3;">nationalists</span> remain Hindenburg’s most loyal supporters. Even Hugenberg recognizes the danger of a potential <span style="color: #c00000;">socialist</span> president should Hindenburg be removed from office.
+右翼諸党と<span style="color: #3E88B3;">国家主義者</span>は、今なおヒンデンブルクの最も忠実な支持者である。フーゲンベルクでさえ、ヒンデンブルクが罷免された場合に<span style="color: #c00000;">社会主義者</span>の大統領が誕生しかねない危険を理解している。
 
-The <span style="color: #7A3C00;">**NSDAP**</span>[? if nvf_exist:&nbsp;and <span style="color: #142e20;">**NVF**</span>?] will break with the <span style="color: #6A1E1E;">**DSU**</span> on the vote, and vote to impeach the president that has impeded their progress over and over again.
+<span style="color: #7A3C00;">**NSDAP**</span>[? if nvf_exist:と<span style="color: #142e20;">**NVF**</span>?]はこの採決で<span style="color: #6A1E1E;">**DSU**</span>と袂を分かち、自らの前進を幾度も妨げてきた大統領の罷免に賛成する。
 
 - @reichstag_impeach_2
 - @reichstag_impeach_fail
 
 @reichstag_impeach_2
-title: The moment of truth...
-unavailable-subtitle: The Reichstag can simply relegate our motion down the agenda.
+title: 運命の時……
+unavailable-subtitle: 国会は我々の動議を議事日程の後方へ回すだけでよい。
 choose-if: impeachment_votes >= 50
 go-to: reichstag_impeach_3 if impeachment_votes >= 66.7; reichstag_impeach_fail_2 if impeachment_votes < 66.7
 
-With a simple majority, the Reichstag has chosen to set aside our motion and instead proceed with a vote of no confidence in Treviranus first. Should the motion pass—as is likely—his government will collapse, and the Reichstag will likely be either adjourned or dissolved in the aftermath.
+国会は単純過半数により、我々の動議をいったん棚上げし、先にトレヴィラヌスへの不信任決議を採決することを選んだ。予想どおり可決されれば政権は崩壊し、その後、国会は休会または解散となる可能性が高い。
 
 @reichstag_impeach_3
 on-arrival: {!
@@ -105,28 +105,28 @@ if (Q.impeachment_ref_month > 12) {
 }
 !}
 
-[+ impeachment_votes +]% of the Reichstag has voted to recall President Hindenburg! But our fight is not over yet. A popular referendum is scheduled exactly one month from now to confirm the Reichstag’s decision.
+国会の[+ impeachment_votes +]%がヒンデンブルク大統領の罷免に賛成した！　しかし我々の戦いはまだ終わっていない。国会の決定を承認するため、ちょうど1か月後に国民投票が行われる。
 
-If the referendum succeeds, a new presidential election will be held to determine Hindenburg’s successor. But if it fails, the constitution mandates that the Reichstag be dissolved and fresh elections called once again.
+国民投票が成立すれば、ヒンデンブルクの後継者を決める新たな大統領選挙が行われる。しかし否決されれば、憲法の規定により国会が解散され、再び新選挙が行われる。
 
-The referendum is scheduled for [+ impeachment_ref_month : month +] [+ impeachment_ref_year +], Week [+ impeachment_ref_week +].
+国民投票は[+ impeachment_ref_year +]年[+ impeachment_ref_month : month +]（第[+ impeachment_ref_week +]週）に予定されている。
 
 @reichstag_impeach_fail
-title: The Reichstag shoots down our motion.
-subtitle: An anti-climatic end.
+title: 国会が我々の動議を否決する。
+subtitle: あっけない結末。
 view-if: impeachment_votes < 50
 go-to: treviranus_menu
 
-With a simple majority, the Reichstag has chosen to set aside our motion. We must decide on the deal next.
+国会は単純過半数により、我々の動議を棚上げした。次は取引を受け入れるか決めなければならない。
 
 @reichstag_impeach_fail_2
 go-to: treviranus_menu
 
-Despite our best efforts, we manage to rally only [+ impeachment_votes +]% of the Reichstag to our cause. We must decide on the deal next.
+全力を尽くしたが、我々の側に結集させられたのは国会の[+ impeachment_votes +]%にすぎない。次は取引を受け入れるか決めなければならない。
 
 @reichstag
-title: We can certainly wait a few months, accept the deal.
-subtitle: The German parliamentary system desperately needs legitimacy. Forcing new elections now risks driving voters further into the extremes.
+title: 数か月なら待てる。取引を受け入れる。
+subtitle: ドイツの議会制度には正統性が何より必要である。今新選挙を強行すれば、有権者をさらに急進派へ追いやりかねない。
 on-arrival: kpd_banned = 0; sapd_banned = 0; rfb_strength += 30; workers_kpd += 6; unemployed_kpd += 6; workers_sapd += 2; unemployed_sapd += 2; pro_republic += 10
 
-Under the influence of the plot and the modman's laziness, the <span style="color: #c00000;">**SPD**</span> has agreed on a truce, and Treviranus survives another day. Hindenburg is reportedly displeased at this development, but doesn't intervene as expected. He must be really sick then.
+筋書きの都合とMOD作者の怠慢により、<span style="color: #c00000;">**SPD**</span>は休戦に同意し、トレヴィラヌスはひとまず生き延びた。ヒンデンブルクはこの展開に不満だと伝えられるが、予想どおり介入しない。本当に重病なのだろう。

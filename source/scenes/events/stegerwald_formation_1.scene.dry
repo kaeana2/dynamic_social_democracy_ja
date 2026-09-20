@@ -1,5 +1,5 @@
-title: [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] Reformation
-subtitle: Christian labor is capturing the working-class.
+title: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の改革
+subtitle: キリスト教労働が労働者階級を捉えている。
 view-if: (year == 1929 and month >= 3) or (stegerwald_transformation_timer == 9) and z_leader == "Stegerwald"
 new-page: true
 on-arrival: workers_z += 5; new_middle_z += 10; old_middle_z += 10; rural_z += 10; unemployed_z += 4; workers_kpd -= 2; catholics_z -= 3; catholics -= 3; catholics_dnvp += 2 if dnvp_ideology == "Moderate"; workers_dnvp += 2 if dnvp_ideology == "Moderate"; new_middle_dnvp += 2 if dnvp_ideology == "Moderate"; catholics_other += 1; catholics_spd += 4; workers_ddp += 1; workers_lvp += 1; labor_dissent += 15; zentrum_disintegration += 1; dvp_right += 1; ddp_left += 1; lvp_right += 1; new_middle_other -= 3; old_middle_other -= 3; workers_other -= 1; rural_other -= 1; unemployed_other -= 1; liberal_cooperation += 8; bourgeois_cooperation += 3; pro_republic += 5; z_relation -= 5
@@ -7,33 +7,33 @@ max-visits: 1
 tags: event
 face-image: img/campaign.jpg
 
-= [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] Reformation
+= [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の改革
 
-As the newly elected chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], Adam Stegerwald has been working to expand the party's reach in Protestant areas and quell opposition against his agenda. As a trade union leader himself, he has sizable influence over the Christian labor movement, which is already well-connected through entrenched network of alliances with various right-wing organizations. [? if dnvp_ideology == "Moderate": Cooperation between the various Christian labor unions have been heightened, and together, they are taking down our long-held dominance over the interests of the working-class. ?][? if dnvp_ideology == "Radical": However, Hugenberg of the <span style="color: #3E88B3;">**DNVP**</span> maintains strict oversight of its <span style="color: #6D5298;">Christian Social</span> wing, and will not tolerate any cooperation, making the process considerably more challenging without support of the <span style="color: #3E88B3;">**DNVP**</span> affiliated unions. Furthermore, Hugenberg's inaction as the <span style="color: #3E88B3;">**DNVP**</span> loses its main voter base is fueling significant internal turmoil over the party's future direction. ?]
+新たに[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首となったアダム・シュテーガーヴァルトは、プロテスタント地域への党勢拡大と、路線に反対する党内勢力の抑制に取り組んでいる。労働組合指導者でもある彼は、すでに右派組織との強固な人脈で結ばれたキリスト教労働運動に大きな影響力を持つ。[? if dnvp_ideology == "Moderate": キリスト教系労組の協力は強まり、労働者階級の利益をめぐる我々の長年の優位を崩そうと団結している。?][? if dnvp_ideology == "Radical": しかし<span style="color: #3E88B3;">**DNVP**</span>のフーゲンベルクは党内の<span style="color: #6D5298;">キリスト教社会派</span>を厳しく監視し、いかなる協力も認めていない。<span style="color: #3E88B3;">**DNVP**</span>系労組の支援なしでは、この動きは著しく困難になる。さらに、主要支持層を失った<span style="color: #3E88B3;">**DNVP**</span>でフーゲンベルクが手をこまねいていることは、党の将来路線をめぐる大きな動揺を引き起こしている。?]
 
-This has led to concerns from the labor wing of our party, as we can't afford to lose support of the largest demographic to the bourgeois.
+これは党の労働部門から懸念を招いている。我々は最大の人口層をブルジョワに失う余裕はない。
 
-- @fightback_working: We will increase our campaigning towards the working class.
-- @fightback_other: We will increase our campaigning towards other demographics to compensate.
-- @nothing: Unfortunate.
+- @fightback_working: 労働者階級への運動を強化する。
+- @fightback_other: 他の層への運動を強化して補う。
+- @nothing: 残念だ。
 
 @fightback_working
-subtitle: -2 resources.
+subtitle: -2リソース。
 choose-if: resources >= 2
-unavailable-subtitle:[? if resources < 2 : We do not have enough resources. ?]
+unavailable-subtitle:[? if resources < 2 : 資源が足りない。?]
 on-arrival: resources -= 2; workers_spd += 8; unemployed_spd += 5; workers_kpd += 1; new_middle_spd += 4; labor_dissent -= 10
 
-We increase our messaging among the workers, fighting back against the shift to the right. It isn't enough, but it is something. 
+労働者へのメッセージを強める。右への傾きに抵抗する。十分ではないが、何かしらだ。
 
 @fightback_other
 choose-if: resources >= 1
-subtitle: -1 resource.
-unavailable-subtitle:[? if resources < 1 : We do not have enough resources. ?]
+subtitle: -1リソース。
+unavailable-subtitle:[? if resources < 1 : 資源が足りない。?]
 on-arrival: resources -= 1; workers_kpd += 5; new_middle_spd += 6; old_middle_spd += 4; rural_spd += 4; catholics_spd += 4; labor_dissent += 15; left_dissent += 10; zentrum_disintegration += 1; peoples_party_support += 1; liberal_cooperation += 2
 
-If the bourgeois wants to appeal to the workers, then we will simply find support elsewhere. The <span style="color: #700000;">**KPD**</span> makes inroads on our inaction. The left of the <span style="color: #c00000;">**SPD**</span> is opposed to this path, seeing it as diluting the class character of the party. On the other hand, reformists support branching out to different classes.
+ブルジョワが労働者にアピールしたいのなら、我々は単に別の場所で支持を見つける。<span style="color: #700000;">**KPD**</span>は我々の不作為に侵入してくる。<span style="color: #c00000;">**SPD**</span>の左翼は、これを党の階級的性格を希薄化するものとみなし、この道に反対する。一方、改革派は異なる階級への拡大を支持する。
 
 @nothing
 on-arrival: zentrum_disintegration += 1; 
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] continues to eat into our party's primary voter base.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は、我が党の主要支持層を侵食し続けている。

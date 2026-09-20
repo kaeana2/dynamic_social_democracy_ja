@@ -1,20 +1,19 @@
-title: <span style="color: #000000;">Bourgeois</span>-<span style="color: #3E88B3;">Right</span> Government Collapses!
-subtitle: New elections scheduled
+title: <span style="color: #000000;">ブルジョワ</span>・<span style="color: #3E88B3;">右派</span>政権崩壊！
+subtitle: 新選挙が予定されている
 new-page: true
 view-if: year = 1928 and month >= 2
 tags: event
 max-visits: 1
 
-= Right-wing Coalition Dissolved
+= 右派連合解散
 
-The right-wing coalition comprising the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], <span style="color: #A2D8E0;">**BVP**</span>, <span style="color: #C0A054;">**DVP**</span>, and <span style="color: #3E88B3;">**DNVP**</span>, led by Chancellor Wilhelm Marx, has been declared dissolved by the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] due to conflicts over school law regulations. While most coalition members supported the law, the <span style="color: #C0A054;">**DVP**</span> expressed concerns, advocating for the primacy of interdenominational schools and seeking to limit the church's influence. 
+首相ヴィルヘルム・マルクスが率いる、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]、<span style="color: #A2D8E0;">**BVP**</span>、<span style="color: #C0A054;">**DVP**</span>、および<span style="color: #3E88B3;">**DNVP**</span>からなる右派連合は、学校法規をめぐる対立のため、[? if z_party_name != "CVP": <span style="color: #000000;">中央</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]によって解体された。連合のほとんどのメンバーがその法律を支持したが、<span style="color: #C0A054;">**DVP**</span>は懸念を表明し、宗派を超えた学校の優位性を主張し、教会の影響を制限しようとした。
 
-With talks having collapsed, new elections are scheduled for May, and the government will continue in a caretaker capacity.
+交渉の決裂を受けて新たな選挙が5月に予定され、政府は選挙管理内閣として存続する。
 
-- @good: Great!
+- @good: 素晴らしい！
 
 @good
 on-arrival: next_election_month = 5; next_election_time = 5
 
-Our task is to prepare for the next elections where we stand to gain.
-
+我々の任務は、我々が得をする次の選挙に備えることだ。

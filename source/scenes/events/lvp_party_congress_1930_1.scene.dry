@@ -1,5 +1,5 @@
-title: Second <span style="color: #FFCC00;">**LVP**</span> Congress
-subtitle: The <span style="color: #FFCC00;">**LVP**</span> decides their fate...
+title: <span style="color: #FFCC00;">**LVP**</span>第2回党大会
+subtitle: <span style="color: #FFCC00;">**LVP**</span>が自らの命運を決める……
 view-if: lvp_existence_timer == 12 and lvp_formed
 on-arrival: {!
 Q.heuss_points = 0;
@@ -139,21 +139,21 @@ tags: event
 face-image: img/weimar_coalition_3.jpg
 new-page: true
 
-= Second <span style="color: #FFCC00;">**LVP**</span> Party Congress
+= <span style="color: #FFCC00;">**LVP**</span>第2回党大会
 
-The merger of two notoriously factionalized parties has unsurprisingly introduced great dysfunction into the internal politics of the <span style="color: #FFCC00;">**LVP**</span>. Not even a unifying figure like Hans Luther has been able to quell the endless bickering among the party's factions. The economic depression has only deepened these divisions, with disagreements arising even on broadly supported issues like parliamentary government, making unified action nearly impossible.
+派閥抗争で悪名高い二党が合併した結果、予想にたがわず<span style="color: #FFCC00;">**LVP**</span>の党内運営は深刻な機能不全に陥った。ハンス・ルターほどのまとめ役でさえ、各派の果てしないいがみ合いを鎮められない。経済恐慌は対立を一層深め、議会政治のように幅広い支持を得ているはずの問題でさえ意見が割れ、一致した行動はほぼ不可能になっている。
 
-[? if chancellor == "Brüning" and not spd_in_government: The <span style="color: #FFCC00;">**LVP**</span> has shifted significantly to the right due to their participation in [? if in_right_coalition: Brüning's center-right coalition?][? if not in_right_coalition: Brüning's emergency government?]. This election will be pivotal in determining their policy of cooperation with us in the foreseeable future.?] While Hans Luther is expected to secure re-election, scattered candidates from across the party could emerge if the majority loses confidence in Luther's leadership.
+[? if chancellor == "Brüning" and not spd_in_government: <span style="color: #FFCC00;">**LVP**</span>は[? if in_right_coalition: ブリューニングの中道右派連立?][? if not in_right_coalition: ブリューニングの緊急令政権?]への参加によって大きく右傾化した。今回の党首選は、当面の我々との協力方針を決める重要な節目となる。?]ハンス・ルターの再選が見込まれるものの、党内の多数派がその指導力への信頼を失えば、各派から候補者が乱立する可能性もある。
 
-- @luther: The party votes...
-- @luther_fail: The party votes...
+- @luther: 採決が行われる……
+- @luther_fail: 採決が行われる……
 
 @luther
 view-if: luther_points >= opposition_points
 on-arrival: lvp_relation += 3; lvp_left += 2
 face-image: img/portraits/luther.jpg
 
-Hans Luther is expectedly re-elected as the leader of the <span style="color: #FFCC00;">**LVP**</span>. He will navigate the party through the economic depression and will hopefully try to maintain bourgeois backing for the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system, but there is only so much he can do.
+予想どおり、ハンス・ルターが<span style="color: #FFCC00;">**LVP**</span>党首に再選された。彼は経済恐慌の中で党を率いていく。<span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>体制に対するブルジョワ層の支持をつなぎとめるべく尽力することを期待したいが、彼にできることにも限りがある。
 
 @luther_fail
 view-if: opposition_points > luther_points
@@ -218,7 +218,7 @@ if (!Q.dietrich_lead && !Q.heuss_lead && !Q.dingeldey_lead && !Q.curtius_lead) {
 
 !}
 
-Surprisingly, Luther has failed to command the majority of the <span style="color: #FFCC00;">**LVP**</span> behind his candidacy. Following this result, Luther has resigned from his chairmanship and now endorses [+ luther_endorsed_candidate +] for the leadership race, however his endorsement fails to sway much delegates into his favor. Luther has now taken up a position as the President of the Reichsbank, still holding some sway over party affairs.
+意外にも、ルターは<span style="color: #FFCC00;">**LVP**</span>の過半数の支持を集められなかった。この結果を受けて党首を辞任し、後任の党首選では[+ luther_endorsed_candidate +]を支持しているが、その推薦で支持に回る代議員は少ない。ルターは今やライヒスバンク総裁に就任しているが、党務にもなお一定の影響力を持つ。
 
 - @heuss
 - @dietrich
@@ -227,63 +227,63 @@ Surprisingly, Luther has failed to command the majority of the <span style="colo
 - @deadlock
 
 @heuss
-title: Theodor Heuss is elected!
-subtitle: Heuss is a <span style="color: #c00000;">Social</span> <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span>, and a member of the former <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
-unavailable-subtitle: The wider <span style="color: #FFCC00;">LVP</span> perceive him as too left-wing, despite his previous affiliation with the <span style="color: #D3C24D;">[+ ddp_name +]</span>'s business wing.
+title: テオドール・ホイスが選出された！
+subtitle: ホイスは<span style="color: #c00000;">社会的</span>理念を重視する<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>支持者で、旧<span style="color: #D3C24D;">**[+ ddp_name +]**</span>の出身である。
+unavailable-subtitle: かつて<span style="color: #D3C24D;">[+ ddp_name +]</span>の実業界派に属していたにもかかわらず、<span style="color: #FFCC00;">LVP</span>の党内全体では左寄りに過ぎると見られている。
 choose-if: heuss_lead
 on-arrival: lvp_relation += 12; lvp_left += 7; lvp_leader = "Heuss"; pro_republic += (lvp_votes / 2); workers_lvp += 2; workers_spd -= 2; new_middle_lvp += 6; old_middle_lvp -= 3; old_middle_other += 5 if (dnvp_ideology == "Radical"); old_middle_dnvp += 5 if dnvp_ideology == "Moderate"; old_middle_kvp += 5; rural_lvp -= 5; rural_other += 5 if (dnvp_ideology == "Radical" and not kvp_formed); rural_dnvp += 5 if dnvp_ideology == "Moderate"; rural_kvp += 5; catholics_lvp += 3; catholics_spd -= 3; coalition_dissent -= 1; heuss_explode_time = time + 8; heuss_election_time = time
 face-image: img/portraits/heuss.jpg
 
-Theodor Heuss, a rising star and former member of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, has been elected chairman of the <span style="color: #FFCC00;">Liberal People's Party</span>. Backed primarily by the 'Social Republican Circle,' composed of former <span style="color: #D3C24D;">**[+ ddp_name +]**</span> members and liberal intellectuals and newspapers, Heuss has also garnered support from the broader party due to his decently conservative stances on economic and national issues.
+旧<span style="color: #D3C24D;">**[+ ddp_name +]**</span>出身の新鋭テオドール・ホイスが、<span style="color: #FFCC00;">自由人民党</span>党首に選ばれた。主な支持基盤は、旧<span style="color: #D3C24D;">**[+ ddp_name +]**</span>党員と自由主義的な知識人・新聞からなる「社会共和主義者の会」である。経済問題や国家の問題ではかなり保守的な立場を取るため、党内の幅広い層からも支持を得た。
 
-Heuss's victory empowers the '<span style="color: #c00000;">Social</span> <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span>' wing, strengthening our cooperation. Despite his personal leanings toward the right, Heuss remains one of the most committed and genuine supporters for <span style="color: #FFCC00;">liberal</span> <span style="color: #586593;">democracy</span> within the <span style="color: #FFCC00;">**LVP**</span>.
+ホイスの勝利は、<span style="color: #c00000;">社会的</span>理念と<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>を支持する派閥の力を強め、我々との協力を促進する。個人的には右寄りの傾向を持つものの、ホイスは<span style="color: #FFCC00;">**LVP**</span>内でも、<span style="color: #FFCC00;">自由主義</span><span style="color: #586593;">的民主主義</span>を最も真摯かつ熱心に支持する人物の一人である。
 
 @dietrich
-title: Hermann Dietrich is elected!
-subtitle: Dietrich was the former leader of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s business wing, and is somewhat skeptical of cooperation with us.
-unavailable-subtitle: [? if not heuss_lead: The wider <span style="color: #FFCC00;">LVP</span> perceive him as too left-wing, despite his previous affiliation with the <span style="color: #D3C24D;">[+ ddp_name +]</span>'s business wing. ?][? if heuss_lead: His lack of energy and the burden of his governmental roles have led the party to favor Heuss instead. ?]
+title: ヘルマン・ディートリヒが選出された！
+subtitle: ディートリヒは旧<span style="color: #D3C24D;">**[+ ddp_name +]**</span>の実業界派を率いていた人物で、我々との協力にはやや懐疑的である。
+unavailable-subtitle: [? if not heuss_lead: かつて<span style="color: #D3C24D;">[+ ddp_name +]</span>の実業界派に属していたにもかかわらず、<span style="color: #FFCC00;">LVP</span>の党内全体では左寄りに過ぎると見られている。?][? if heuss_lead: 活力に乏しく、政府での職務にも追われているため、党は代わりにホイスを支持している。?]
 choose-if: dietrich_lead
 on-arrival: lvp_relation += 7; lvp_left += 3; lvp_leader = "Dietrich"; pro_republic += 5; old_middle_lvp += 4; rural_lvp += 4; new_middle_lvp -= 4; dietrich_lvp_explode_time = time + 8; dietrich_election_time = time
 face-image: img/portraits/dietrich.jpg
 
-Hermann Dietrich, formerly affiliated with the business wing of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, has been elected chairman of the <span style="color: #FFCC00;">**LVP**</span>. Dietrich is mainly supported by smaller businesses and ruralites, and [? if chancellor == "Brüning" and not spd_in_government: is known for formulating Brüning's emergency decrees during his tenure as Finance Minister.?][? if not (chancellor == "Brüning" and not spd_in_government): is known for his fiscal conservatism.?]
+かつて<span style="color: #D3C24D;">**[+ ddp_name +]**</span>の実業界派に属していたヘルマン・ディートリヒが、<span style="color: #FFCC00;">**LVP**</span>党首に選ばれた。主な支持基盤は中小企業と農村住民であり、[? if chancellor == "Brüning" and not spd_in_government: 財務相在任中にブリューニングの緊急令を立案したことで知られる。?][? if not (chancellor == "Brüning" and not spd_in_government): 財政保守主義で知られる。?]
 
-Despite this, Dietrich is not as extreme as the industrialists on the right of the party and remains open to cooperation with us if there is no other majority. However, his leadership has been quite uninspiring, to say the least. [? if agriculture_minister_party == "LVP" or economic_minister_party == "LVP": The responsibilities of his ministry prevent him from being involved in the day-to-day running of his party, which is now delegated to a group of his associates in the business wing. ?]
+それでも、ディートリヒは党右派の産業界の面々ほど極端ではなく、ほかに過半数を組めなければ我々との協力にも応じる姿勢を保っている。しかし、その指導ぶりは、控えめに言っても精彩を欠く。[? if agriculture_minister_party == "LVP" or economic_minister_party == "LVP": 閣僚としての職責に追われ、日常の党運営には関与できず、実業界派の側近たちに任せている。?]
 
 @curtius
-title: Julius Curtius is elected!
-subtitle: Curtius was a member of the former <span style="color: #C0A054;">**DVP**</span>, and is a committed Stresemannite and member of their left wing. He has since succeeded Stresemann on foreign policy matters.
-unavailable-subtitle: [? if dingeldey_lead: The <span style="color: #FFCC00;">LVP</span> perceive him as too left-wing, and point out his lackluster record as a successor to Stresemann. ?][? if dietrich_lead or heuss_lead: The left wing of the <span style="color: #FFCC00;">LVP</span> wants to elect a former <span style="color: #D3C24D;">[+ ddp_name +]</span> member, to replace Luther. ?][? if lvp_deadlock: The left wing of the <span style="color: #FFCC00;">LVP</span> wants to elect a former <span style="color: #D3C24D;">[+ ddp_name +]</span> member, while the right wing of the party prefers a more right-wing former <span style="color: #C0A054;">DVP</span> member. ?]
+title: ユリウス・クルティウスが選出された！
+subtitle: クルティウスは旧<span style="color: #C0A054;">**DVP**</span>の左派に属する熱心なシュトレーゼマン支持者である。外交ではシュトレーゼマンの後を継いだ。
+unavailable-subtitle: [? if dingeldey_lead: <span style="color: #FFCC00;">LVP</span>内では左寄りに過ぎると見られ、シュトレーゼマンの後継者としての実績も振るわないと指摘されている。?][? if dietrich_lead or heuss_lead: <span style="color: #FFCC00;">LVP</span>左派は、ルターの後任に旧<span style="color: #D3C24D;">[+ ddp_name +]</span>出身者を選びたいと考えている。?][? if lvp_deadlock: <span style="color: #FFCC00;">LVP</span>左派は旧<span style="color: #D3C24D;">[+ ddp_name +]</span>出身者を望む一方、党右派は旧<span style="color: #C0A054;">DVP</span>出身の、より右寄りの人物を望んでいる。?]
 choose-if: curtius_lead
 view-if: not curtius_resign_lvp and not (curtius_banking_crisis and banking_crisis_seen)
 on-arrival: lvp_relation += 7; lvp_left += 4; lvp_leader = "Curtius"; pro_republic += 5; old_middle_lvp += 6; new_middle_lvp += 6
 face-image: img/portraits/curtius.jpg
 
-Julius Curtius, Stresemann's successor in foreign affairs and a former member of the <span style="color: #C0A054;">**DVP**</span>, has won the vote to succeed Luther for the chairmanship. Curtius is supported by the 'Pragmatic Center', and was put forth as a compromise candidate. 
+外交でシュトレーゼマンの後を継いだ旧<span style="color: #C0A054;">**DVP**</span>出身のユリウス・クルティウスが、ルターの後任を選ぶ党首選に勝利した。「現実主義中道派」の支持を受け、妥協候補として擁立された人物である。
 
-As a former member of the <span style="color: #C0A054;">**DVP**</span>'s left wing, he is in favor of closer cooperation with us. However, his leadership has been quite uninspiring, to say the least. [? if foreign_minister_party == "LVP": The responsibilities of the foreign ministry prevent him from being involved in the day-to-day running of his party, which is now delegated to a group of his associates in the 'Pragmatic Center'. ?]
+旧<span style="color: #C0A054;">**DVP**</span>左派の出身であり、我々との協力強化に賛成している。しかし、その指導ぶりは、控えめに言っても精彩を欠く。[? if foreign_minister_party == "LVP": 外相としての職責に追われ、日常の党運営には関与できず、「現実主義中道派」の側近たちに任せている。?]
 
 @dingeldey
-title: Eduard Dingeldey is elected.
-subtitle: Dingeldey was a member of the former <span style="color: #C0A054;">**DVP**</span>, and commonly associated with the industrial-right of the party.
-unavailable-subtitle: The right-industrial faction of the <span style="color: #FFCC00;">LVP</span> lack the power necessary to install their candidate.
+title: エドゥアルト・ディンゲルダイが選出された。
+subtitle: ディンゲルダイは旧<span style="color: #C0A054;">**DVP**</span>の出身で、党の産業界右派と結びつきが深い。
+unavailable-subtitle: <span style="color: #FFCC00;">LVP</span>の産業界右派には、自派の候補を当選させるだけの力がない。
 choose-if: dingeldey_lead
 on-arrival: lvp_relation -= 8; lvp_right += 5; lvp_leader = "Dingeldey"; new_middle_lvp -= 4; workers_lvp -= 2; old_middle_lvp += 3; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
 face-image: img/portraits/dingeldey.jpg
 
-Eduard Dingeldey, previously part of the movement for bourgeois unity, has now been elected chairman of the <span style="color: #FFCC00;">**LVP**</span>. Dingeldey is backed by the industrial forces on the right of the party, alongside former <span style="color: #C0A054;">**DVP**</span> members. He appears to be focused on fostering closer cooperation with the array of parties between the <span style="color: #FFCC00;">**LVP**</span> and the <span style="color: #3E88B3;">**DNVP**</span>.
+かつてブルジョワ勢力の統合運動に参加していたエドゥアルト・ディンゲルダイが、<span style="color: #FFCC00;">**LVP**</span>党首に選ばれた。旧<span style="color: #C0A054;">**DVP**</span>党員に加え、党右派の産業界勢力の支持を受けている。<span style="color: #FFCC00;">**LVP**</span>と<span style="color: #3E88B3;">**DNVP**</span>の間に位置する諸党との協力強化に力を注いでいるようだ。
 
-However, Dingeldey has thus far proven to be an ineffectual leader, often capitulating to the right wing of the <span style="color: #FFCC00;">**LVP**</span>. Recently, we’ve observed a deterioration in relations with his party, alongside a noticeable rightward shift in the <span style="color: #FFCC00;">**LVP**</span>'s internal politics.
+しかし、これまでのところディンゲルダイは指導力に乏しく、しばしば<span style="color: #FFCC00;">**LVP**</span>右派に屈している。最近は我々との関係が悪化し、<span style="color: #FFCC00;">**LVP**</span>の党内政治にも明らかな右傾化が見られる。
 
 @deadlock
-title: The vote has been deadlocked!
-subtitle: No candidate is able to gather a sufficient amount of votes.
+title: 採決は膠着状態に陥った！
+subtitle: 十分な票を集められる候補者がいない。
 view-if: lvp_deadlock
 
-The vote has been deadlocked, with no candidate ahead by enough to constitute a majority. You, the player, now has free will to choose a compromise candidate. Spend it wisely.
+過半数に達するほどの支持を得た候補者がおらず、採決は膠着状態に陥った。ここからはプレイヤーであるあなたが、妥協候補を自由に選べる。賢明に選ぼう。
 
-- @dietrich_compromise: Hermann Dietrich.
-- @curtius_compromise: Julius Curtius.
+- @dietrich_compromise: ヘルマン・ディートリヒ。
+- @curtius_compromise: ユリウス・クルティウス。
 
 @dietrich_compromise
 go-to: dietrich
@@ -291,4 +291,3 @@ go-to: dietrich
 @curtius_compromise
 view-if: not curtius_resign_lvp and not (curtius_banking_crisis and banking_crisis_seen)
 go-to: curtius
-

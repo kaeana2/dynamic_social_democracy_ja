@@ -1,5 +1,5 @@
-title: Prussian Landtag Referendum
-subtitle: The results have come in.
+title: プロイセン州議会解散国民投票
+subtitle: 結果が判明した。
 new-page: true
 tags: event
 view-if: year = 1931 and month >= 8 and landtag_ref_signatures_passed
@@ -21,25 +21,25 @@ Q.landtag_ref_votes_collected = 1;
 !}
 max-visits: 1
 
-= Prussian Landtag referendum
+= プロイセン州議会解散国民投票
 
-After months of intense and polarizing propaganda from both sides, the day of the plebiscite has arrived. For it to pass, over 50% of the eligible Prussian population must vote in favor—not just a majority of those who cast their ballots. Like the Young Plan referendum, this high threshold makes success nearly impossible. However, even a strong showing by the anti-democratic forces could give them significant momentum.
+両陣営による数か月の激しく分断的な宣伝戦を経て、国民投票の日が訪れた。成立には投票者の過半数だけでなく、プロイセンの全有権者の50％を超える賛成票が必要である。ヤング案国民投票と同じく、この高い要件のため成立はほぼ不可能だ。しかし反民主勢力が善戦するだけでも、彼らへ大きな勢いを与えかねない。
 
-[? if landtag_ref_kpd: The <span style="color: #700000;">red</span>-<span style="color: #7A3C00;">brown</span> coalition—once unthinkable—is now a reality. <span style="color: #700000;">**Communist**</span>, <span style="color: #7A3C00;">**Nazi**</span> and <span style="color: #3E88B3;">**Stahlhelm**</span> officials are sitting at the same tables at the polling stations, under the <span style="color: #7A3C00;">swastika</span> and the <span style="color: #700000;">Soviet star</span>. ?]
+[? if landtag_ref_kpd: かつては考えられなかった<span style="color: #700000;">赤</span><span style="color: #7A3C00;">褐色</span>連合が現実となった。投票所では<span style="color: #700000;">**共産党**</span>、<span style="color: #7A3C00;">**ナチ党**</span>、<span style="color: #3E88B3;">**鉄兜団**</span>の係員が、<span style="color: #7A3C00;">鉤十字</span>と<span style="color: #700000;">ソビエトの赤い星</span>の下で同じ机に座っている。?]
 
 - @PLR_results
 
 @PLR_results
-title: The votes are counted.
+title: 開票する。
 go-to: PLR_passed_votes if landtag_ref_votes >= 50; PLR_failed_votes if landtag_ref_votes < 50
 
 @PLR_passed_votes
 on-arrival: pro_republic -= 10; workers_spd -= 8; workers_kpd += 3; workers_nsdap += 5; unemployed_spd -= 5; unemployed_nsdap += 5; new_middle_spd -= 5; new_middle_nsdap += 5; old_middle_spd -= 5; old_middle_nsdap += 5; rural_spd -= 5; rural_nsdap += 5; rural_dnvp += 3; old_middle_dnvp += 3; rural_dnf += 3; old_middle_dnf += 3; catholics_spd -= 5; catholics_nsdap += 5; sa_strength += 200; rfb_strength += 100; prussian_police_loyalty -= 0.3
 call: set_next_election_time_prussia
 
-It's over for German democracy. [+ landtag_ref_votes +]% of the eligible Prussian population has voted for it, dissolving the Landtag and calling new elections, where the extremists are expected to make colossal gains at our expense. [? if landtag_ref_kpd: All my homies hate the <span style="color: #700000;">**KPD**</span>. ?]
+ドイツの民主主義は終わりだ。プロイセン全有権者の[+ landtag_ref_votes +]％が賛成票を投じ、州議会は解散されて新たな選挙が行われる。我々を犠牲に、過激派が空前の躍進を遂げると予想される。[? if landtag_ref_kpd: 仲間はみんな<span style="color: #700000;">**KPD**</span>が大嫌いだ。?]
 
-New Prussian elections have been set for [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
+新たなプロイセン州選挙は[+ next_election_year_prussia +]年[+ next_election_month_prussia : month +]に設定された。
 
 @PLR_failed_votes
 on-arrival: {!
@@ -90,11 +90,10 @@ if (Q.landtag_ref_votes >= 42) {
 
 !}
 
-[? if landtag_ref_votes < 25: The referendum has failed, with only [+ landtag_ref_votes +]% of the Prussian population voting in favor. Support for the referendum was lower than expected, barely exceeding the number of signatures collected months ago. This suggests that public sentiment has remained largely unchanged since then. The <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> is demoralized and has suffered significant financial losses. Meanwhile, the democratic press is jubilant at the result, declaring a victory for German democracy. ?]
+[? if landtag_ref_votes < 25: 国民投票は否決され、賛成票はプロイセン人口の[+ landtag_ref_votes +]％にとどまった。支持は予想を下回り、数か月前に集めた署名数をわずかに超えたにすぎない。それ以来、世論がほとんど変化していないことを示している。<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>は意気消沈し、多額の資金を失った。一方、民主派の新聞は結果をドイツ民主主義の勝利だと宣言し、歓喜している。?]
 
-[? if landtag_ref_votes >= 25 and landtag_ref_votes < 35: The referendum has failed, with only [+ landtag_ref_votes +]% of the Prussian population voting in favor. The results were as expected[? if landtag_ref_kpd:, as the formation of the <span style="color: #700000;">red</span>-<span style="color: #7A3C00;">brown</span> bloc may have alienated committed ideologues?][? if not landtag_ref_kpd:, given the neutrality of the <span style="color: #700000;">KPD</span>?]. The democratic press celebrates this as a victory for democracy, but the whole ordeal has polarized the political landscape in favor of the extremists. ?]
+[? if landtag_ref_votes >= 25 and landtag_ref_votes < 35: 国民投票は否決され、賛成票はプロイセン人口の[+ landtag_ref_votes +]％にとどまった。結果は予想どおりである[? if landtag_ref_kpd:。<span style="color: #700000;">赤</span><span style="color: #7A3C00;">褐色</span>陣営の結成が、信念を重んじる支持者を遠ざけたのだろう?][? if not landtag_ref_kpd:。<span style="color: #700000;">KPD</span>が中立を保った以上、当然だ?]。民主派の新聞は民主主義の勝利として祝っているが、この騒動は過激派に有利な形で政治的分断を深めた。?]
 
-[? if landtag_ref_votes >= 35 and landtag_ref_votes < 42: The referendum has failed, with [+ landtag_ref_votes +]% of the Prussian population voting in favor. Support was higher than expected, significantly surpassing the number of initial signatures. This outcome signals a growing wave of anti-<span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> sentiment across Germany. Despite this, the democratic press celebrates the defeat, though the results reinforce concerns that the Landtag no longer reflects the nation’s evolving political landscape. Moreover, the entire ordeal has deepened political divisions and given extremist parties an opportunity to spread their propaganda. ?]
+[? if landtag_ref_votes >= 35 and landtag_ref_votes < 42: 国民投票は否決され、プロイセン人口の[+ landtag_ref_votes +]％が賛成票を投じた。支持は予想を上回り、当初の署名数を大幅に超えている。この結果は、ドイツ全土で反<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">感情</span>の波が高まりつつあることを示す。それでも民主派の新聞は否決を祝っているが、州議会が変化する国民の政治意識をもはや反映していないという懸念は強まった。さらに、この騒動は政治的分断を深め、過激政党へ宣伝を広める機会を与えた。?]
 
-[? if landtag_ref_votes >= 42 and landtag_ref_votes < 50: The referendum has failed, with [+ landtag_ref_votes +]% of the Prussian population voting in favor. The unexpectedly high support has reinvigorated the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>, attracting new donors and voters, despite the referendum’s failure.?]
-
+[? if landtag_ref_votes >= 42 and landtag_ref_votes < 50: 国民投票は否決されたが、プロイセン人口の[+ landtag_ref_votes +]％が賛成票を投じた。予想外の高い支持は、否決にもかかわらず<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>を再び勢いづけ、新たな献金者と有権者を引き寄せている。?]

@@ -1,38 +1,38 @@
-title: Gregor Strasser Resigns from the <span style="color: #7A3C00;">**NSDAP**</span>!
-subtitle: A lone resignation or perhaps something larger?
+title: グレゴール・シュトラッサーが<span style="color: #7A3C00;">**NSDAP**</span>の役職を辞任！
+subtitle: 一人だけの辞任か、それともより大きな動きの始まりか？
 view-if: chancellor = "Schleicher" and not reichstag_rubicon and reichstag_schleicher_seen
 new-page: true
 tags: event
 max-visits: 1
 face-image: img/portraits/strasser.jpg
 
-= Strasser's Resignation
+= シュトラッサーの辞任
 
-Arguably the second most powerful man in the <span style="color: #7A3C00;">**NSDAP**</span>, just behind [+ nsdap_leader +] himself, Gregor Strasser, has resigned from his party posts! As head of the party organization and standard-bearer of its "left wing", Strasser had built a reputation as a sober and pragmatic counterbalance in a movement otherwise dominated by fanatics. 
+<span style="color: #7A3C00;">**NSDAP**</span>で[+ nsdap_leader +]本人に次ぐ第二の実力者ともいえるグレゴール・シュトラッサーが、党の役職を辞任した！　党組織全国指導者で「左派」の旗手でもあるシュトラッサーは、狂信者に支配された運動のなかで、冷静かつ実務的な対抗勢力として評価を築いていた。
 
-A realist, Strasser believed the <span style="color: #7A3C00;">**NSDAP**</span> could not win a majority at the ballot box and should have participated in the Papen cabinet when their bargaining power was strongest. His deep understanding of the grassroots conditions had led him to predict that another election would devastate the party’s support and morale, ultimately drying up their funding.
+現実主義者のシュトラッサーは、<span style="color: #7A3C00;">**NSDAP**</span>が選挙で過半数を得ることはできず、交渉力が最も強かった時点でパーペン内閣に参加すべきだったと考えていた。草の根の状況を熟知する彼は、再選挙が党の支持と士気に壊滅的打撃を与え、やがて資金も枯渇すると予測していた。
 
-Disillusionment with [+ nsdap_leader +]’s rigid, all-or-nothing strategy had been building for months. Strasser was reportedly authorized to negotiate the final terms of a deal for <span style="color: #7A3C00;">Nazi</span> participation in a Schleicher-led cabinet. Yet, at the last moment, [+ nsdap_leader +] reversed himself—abruptly rejecting the plan under influence from Goebbels and Göring during a party leadership meeting.
+[+ nsdap_leader +]の頑なな全か無かの戦略への幻滅は、数か月にわたり積み重なっていた。伝えられるところでは、シュトラッサーはシュライヒャー内閣への<span style="color: #7A3C00;">ナチ党</span>参加をめぐる合意の最終条件を交渉する権限を与えられていた。しかし土壇場で[+ nsdap_leader +]は態度を翻し、党指導部会議でゲッベルスとゲーリングの影響を受け、計画を突然拒否した。
 
-For Strasser, this last-minute betrayal was the breaking point. He openly criticized [+ nsdap_leader +]’s indecisiveness, declaring that he would even support a violent seizure of power—if a clear order were given. The final straw came when [+ nsdap_leader +] publicly addressed the party’s parliamentary delegation, proclaiming: “A great movement has never triumphed by taking the path of compromise”.
+シュトラッサーにとって、この土壇場の裏切りは我慢の限界であった。彼は[+ nsdap_leader +]の優柔不断を公然と批判し、明確な命令さえあれば暴力的な権力奪取すら支持すると宣言した。決定打となったのは、[+ nsdap_leader +]が党国会議員団を前に「偉大な運動が妥協の道を歩んで勝利したことなど一度もない」と公言したことである。
 
 # TODO
 
 - @nazi
 
 @nazi
-title: Is this part of a Schleicher-Strasser conspiracy?
-subtitle: Rumor has it that the chancellor is planning a *Querfront*, and Strasserist split in the <span style="color: #7A3C00;">**NSDAP**</span> is just the beginning.
+title: これはシュライヒャー＝シュトラッサーの陰謀の一環か？
+subtitle: 首相は「横断戦線」を企てており、<span style="color: #7A3C00;">**NSDAP**</span>内のシュトラッサー派分裂は始まりにすぎないとの噂がある。
 on-arrival: nazi_peak_triggered = 1 if not hitler_mode; nazi_peak_votes = nsdap_votes  if not hitler_mode; nazi_decay_timer = 24 if not hitler_mode; coup_progress += 4; workers_nsdap -= 2; unemployed_nsdap -= 2; nazi_explode += 1
 
-However, nothing ever happens. After sending a letter to [+ nsdap_leader +] explaining his reasons for resigning, Strasser quietly departs on a two-week vacation to northern Italy. In a letter, he assures [+ nsdap_leader +] that he has no intention of becoming "the focal point of oppositional efforts or even of discussions thereof." Strasser is not a fighter like his brother; he has squandered his chance to trigger a meaningful defection—potentially involving sixty Reichstag deputies.
+しかし、結局何も起こらなかった。辞任理由を説明する手紙を[+ nsdap_leader +]へ送った後、シュトラッサーはひっそりと北イタリアへ二週間の休暇に旅立った。手紙では、自分が「反対運動、あるいはその種の議論の焦点にすらなる」意思はないと[+ nsdap_leader +]に保証している。シュトラッサーは弟のような闘士ではない。最大60人の国会議員を巻き込めたかもしれない実質的な離反を引き起こす機会を、彼は浪費した。
 
-This was not part of any grand plan by Schleicher to split the <span style="color: #7A3C00;">**NSDAP**</span>. In fact, the loss of his closest potential "ally" within the party has effectively ended Schleicher’s hopes of using his influence to convince the broader party to tolerate his government.
+これは、<span style="color: #7A3C00;">**NSDAP**</span>を分裂させるシュライヒャーの壮大な計画の一部ではなかった。それどころか、党内で最も「盟友」に近い可能性を持つ人物を失ったため、彼の影響力を通じて党全体に政権への閣外協力を受け入れさせるというシュライヒャーの望みは、事実上潰えた。
 
-For the <span style="color: #7A3C00;">**NSDAP**</span>, losing their most effective organizational leader is a serious blow. Across Germany, a growing sense emerges: the <span style="color: #7A3C00;">Nazis</span> have peaked, and their internal contradictions will soon begin pitting the movement against itself. However, Hitler’s threat of suicide, his impassioned pleas, and his charismatic presence have so far held the party together—preventing others from following Strasser’s lead, at least for now. Publicly, Hitler claims that Strasser has merely requested sick leave, softening the immediate impact.
+<span style="color: #7A3C00;">**NSDAP**</span>にとって、最も有能な組織指導者を失うことは深刻な打撃である。ドイツ全土で、<span style="color: #7A3C00;">ナチ党</span>は頂点を越え、内部矛盾によって運動がまもなく内輪で争い始めるとの見方が広がっている。しかし、ヒトラーの自殺の脅し、情熱的な訴え、そしてカリスマ的存在感がこれまでのところ党を結束させ、少なくとも当面は他の者がシュトラッサーに続くのを防いだ。ヒトラーは公には、シュトラッサーが病気休暇を申請しただけだと主張し、当面の衝撃を和らげている。
 
-> *"If the party falls apart... I’ll finish myself off with a pistol within three minutes."*
+> *「党が崩壊するなら……私は三分以内に拳銃で自分を始末する」*
 
- - Adolf Hitler to Joseph Goebbels, [+ year +]
+ - アドルフ・ヒトラーからヨーゼフ・ゲッベルスへ、[+ year +]年
 
 # not immediate support loss, since strasser and nsdap didnt make a big deal over it to the public

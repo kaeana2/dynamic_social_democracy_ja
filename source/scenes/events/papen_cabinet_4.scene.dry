@@ -1,5 +1,5 @@
-title: Decree Against Political Terror
-subtitle: Papen attempts to combat the political violence he has enabled.
+title: 政治的テロに対する緊急令
+subtitle: パーペンは自ら助長した政治暴力を抑えようとしている。
 view-if: chancellor = "Papen" and papen_time == 10
 new-page: true
 tags: event
@@ -17,14 +17,14 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Decree Against Political Terror
+= 政治的テロに対する緊急令
 
-In an attempt to combat the common-place violence on the streets, that had particularly escalated days before the federal elections, a new decree has been issued to drastically streamline the judicial process in death penalty cases, which now includes politically motivated killings, and limiting the right of appeal. New special local courts are also created to fast track the prosecution of the most heinous of crimes. 
+街頭で日常化し、国会選挙の数日前にとりわけ激化した暴力を抑えるため、新たな緊急令が発せられた。政治的動機による殺人も死刑対象に含め、その裁判手続きを大幅に簡略化するとともに、上訴権を制限するものである。さらに、最も凶悪な犯罪の訴追を迅速化するため、新たな特別地方裁判所も設置された。
 
 - @papen
 
 @papen
-title: The decree is signed by President Hindenburg.
-on-arrival: sa_strength -= 50; sa_militancy -= 0.02; judicial_reform -= 2; workers_kpd += 2; unemployed_kpd += 2; rfb_strength += 25; rfb_militancy += 0.04; papen_goal = "Maintain public order"
+title: ヒンデンブルク大統領が緊急令に署名する。
+on-arrival: sa_strength -= 50; sa_militancy -= 0.02; judicial_reform -= 2; workers_kpd += 2; unemployed_kpd += 2; rfb_strength += 25; rfb_militancy += 0.04; papen_goal = "治安を維持する"
 
-A few hours after the decree’s enactment, five uniformed <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> men broke into the apartment of a <span style="color: #700000;">**Communist**</span> miner and trade unionist, brutally beating him to death in front of his mother. The assailants were quickly arrested and are set to stand trial next week. They’ve since become known as the "Potempa Five," named after the village where the attack took place.
+緊急令の施行から数時間後、制服姿の<span style="color: #7A3C00;">ナチ</span><span style="color: #7A3C00;">**SA**</span>隊員5人が、<span style="color: #700000;">**共産党員**</span>である鉱夫・労働組合員の住居へ押し入り、母親の目前で彼を殴り殺した。加害者はすぐに逮捕され、翌週に裁判を受ける予定である。事件が起きた村の名から、彼らは「ポテンパの五人組」と呼ばれるようになった。

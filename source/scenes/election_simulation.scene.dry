@@ -1,4 +1,4 @@
-title: Election Simulation
+title: 選挙シミュレーション
 set-jump: post_election
 
 
@@ -280,9 +280,9 @@ Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
 Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 !}
 
-The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
+選挙制度は基本的に比例代表制であり、国会の議席比率は得票率とほぼ等しくなる。
  
-**Election results:**
+**選挙結果：**
 
 # 1928: 30, 1930: 25, 1932: 22
 SPD: [+ spd_r +]
@@ -306,15 +306,14 @@ DNVP: [+ dnvp_r +]
 NSDAP: [+ nsdap_r +]
 
 # 1928: 9, 1930: 10
-Other: [+ other_r +]
+その他：[+ other_r +]
 
-**Potential coalitions:**
+**成立可能な連立：**
 
-Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
+ヴァイマル連立（SPD + Z + DDP）：[+ weimar_coalition +]
 
-Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
+大連立（SPD + Z + BVP + DDP + DVP）：[+ grand_coalition +]
 
-Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
+ブルジョワ連立（Z + BVP + DDP + DVP + その他）：[+ bourgeois_coalition +]
 
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
-
+右翼連立（Z + BVP + DVP + その他 + DNVP）：[+ right_coalition +]

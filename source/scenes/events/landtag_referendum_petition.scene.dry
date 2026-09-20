@@ -1,5 +1,5 @@
-title: Prussian Landtag referendum
-subtitle: A petition for the dissolution of the Landtag is launched.
+title: プロイセン州議会解散国民投票
+subtitle: 州議会解散を求める国民請願が始まる。
 new-page: true
 tags: event
 view-if: year = 1931 and month >= 3 and next_election_time_prussia - time >= 6 and spd_prussia
@@ -18,46 +18,46 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Prussian Landtag referendum
+= プロイセン州議会解散国民投票
 
-The <span style="color: #3E88B3;">**Stahlhelm**</span> has officially presented its plan for a referendum to dissolve the Reichstag to Prussian Interior Minister Carl Severing, aiming to strengthen the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> presence in the Landtag, arguing that it no longer reflects the national mood. [? if not hitler_deported: Adolf Hitler’s?][? if hitler_deported: The?] <span style="color: #7A3C00;">**NSDAP**</span> remains non-committal, [? if dnvp_ideology == "Radical": despite Hugenberg’s pleas, ?]dismissing the effort as a waste of resources for a government that will collapse within a year anyway.
+<span style="color: #3E88B3;">**鉄兜団**</span>は、州議会がもはや国民世論を反映していないと主張し、州議会内の<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>勢力を強めるため、プロイセン州議会解散国民投票の計画をカール・ゼーフェリング内相へ正式に提出した。[? if not hitler_deported: アドルフ・ヒトラー率いる?][? if hitler_deported: 当の?]<span style="color: #7A3C00;">**NSDAP**</span>は、[? if dnvp_ideology == "Radical": フーゲンベルクの懇願にもかかわらず、?]どうせ1年以内に崩壊する政府へ資源を費やすのは無駄だとして、態度を決めかねている。
 
-For the petition to proceed to a plebiscite, it must gather signatures from over 20% of eligible voters—a significantly higher bar than the Young Plan referendum. Given the <span style="color: #7A3C00;">**NSDAP**</span>[? if not in_popular_front_prussia and not in_left_front_prussia:&nbsp;and <span style="color: #700000;">**KPD**</span>?]’s hesitation, success is far from guaranteed. [? if dnvp_ideology == "Moderate": Furthermore, the <span style="color: #3E88B3;">**DNVP**</span>, acting independently of the <span style="color: #3E88B3;">**Stahlhelm**</span>, is not fully committed to the plan, arguing that a dissolution would primarily benefit the <span style="color: #7A3C00;">**NSDAP**</span> at their own expense. ?]
+請願を国民投票へ進めるには、有権者の20％を超える署名を集めなければならない。ヤング案国民投票よりもはるかに高い壁である。<span style="color: #7A3C00;">**NSDAP**</span>[? if not in_popular_front_prussia and not in_left_front_prussia:と<span style="color: #700000;">**KPD**</span>?]が及び腰である以上、成功の保証はない。[? if dnvp_ideology == "Moderate": さらに<span style="color: #3E88B3;">**鉄兜団**</span>とは独自に行動する<span style="color: #3E88B3;">**DNVP**</span>も、解散は自党を犠牲にして<span style="color: #7A3C00;">**NSDAP**</span>を利するだけだと主張し、計画へ全面的には加わっていない。?]
 
 - @PLR_launched
 
 @PLR_launched
-title: The collection of signatures will begin next month.
+title: 署名集めは来月始まる。
 on-arrival: political_decree_landtag = 1 if political_decree == 1
 
-As we are in control of the democratic bulwark for now, we can attempt to use our position to our advantage.
+当面は民主主義の防塁を掌握している。この立場を我々に有利に利用できるはずだ。
 
-- @campaign: Campaign against the referendum, and for democracy.
+- @campaign: 国民投票に反対し、民主主義を守る運動を行う。
 - @urge_paramilitary
-- @hope: We have done enough.
+- @hope: やるべきことはやった。
 
 @campaign
-subtitle: -2 resources
+subtitle: 資源 -2
 view-if: not campaigned_democracy
 choose-if: resources >= 2
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 資源が足りない。
 on-arrival: resources -= 2; pro_republic += 6; new_middle_nsdap -= pro_republic / 25; old_middle_nsdap -= pro_republic / 25; workers_nsdap -= pro_republic / 25; campaigned_democracy = 1
 go-to: PLR_launched
 
-We have campaigned against the referendum, but our success ultimately depends on the people's faith in democracy.
+国民投票への反対運動を行ったが、成否を最後に決めるのは民衆の民主主義への信頼である。
 
 @urge_paramilitary
 view-if: not political_decree_landtag and spd_toleration
 choose-if: spd_prussia and strife >= 3 and z_relation >= 35
-unavailable-subtitle: [? if not spd_prussia: We don't control the Prussian government. ?] [? if strife < 3: Paramilitary violence isn't severe enough to justify an emergency decree. ?] [? if z_relation < 35: We lack sufficient relations with Brüning. ?]
-title: Urge Brüning to grant us stronger actions against political extremists, and to restrict certain rights.
+unavailable-subtitle: [? if not spd_prussia: プロイセン政府を掌握していない。?] [? if strife < 3: 準軍事組織の暴力は、緊急令を正当化できるほど深刻ではない。?] [? if z_relation < 35: ブリューニングとの関係が不十分である。?]
+title: 政治的過激派への対策強化と、一部権利の制限をブリューニングに求める。
 on-arrival: political_decree += 1; prussian_police_loyalty += 0.04; prussian_police_strength += 5; kpd_relation -= 6; rfb_militancy *= 0.9; rfb_strength *= 0.85; sa_militancy *= 0.96; sa_strength *= 0.96; sh_militancy *= 0.98; sh_strength *= 0.98; workers_kpd -= 1; workers_nsdap -= 1; unemployed_kpd -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 2; hindenburg_angry_bruning += 5; political_decree_landtag = 1
 go-to: PLR_launched
 
-Carl Severing and other Prussian officials have successfully urged Brüning to issue an emergency decree expanding police authority to suppress political extremism. The decree imposes restrictions on political meetings, organizations, newspapers, and posters, all of which now require police approval beforehand.
+カール・ゼーフェリングらプロイセン当局者はブリューニングを説得し、政治的過激主義を抑えるため警察権限を拡大する緊急令を公布させた。この緊急令は政治集会、政治団体、新聞、ポスターを制限し、いずれも事前に警察の許可を得るよう義務づける。
 
-As a result, several <span style="color: #7A3C00;">Nazi</span> and <span style="color: #700000;">Communist</span> newspapers have been banned, triggering violent clashes between their supporters and the police. [? if president == "Hindenburg": President Hindenburg has reluctantly signed the decree, but is losing patience with Brüning for yielding to our demands. ?]
+その結果、複数の<span style="color: #7A3C00;">ナチ</span>系・<span style="color: #700000;">共産党</span>系新聞が発禁となり、支持者と警察の激しい衝突を引き起こした。[? if president == "Hindenburg": ヒンデンブルク大統領は不承不承ながら緊急令へ署名したが、我々の要求に譲歩するブリューニングへ我慢の限界を迎えつつある。?]
 
 @hope
 
-Hopefully a victory here could demoralize the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.
+ここで勝利すれば、<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>を意気消沈させられるだろう。

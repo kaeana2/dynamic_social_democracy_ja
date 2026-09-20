@@ -1,5 +1,5 @@
-title: Schleicher's Health Deteriorates
-subtitle: The chancellor only has a few months left.
+title: シュライヒャーの健康悪化
+subtitle: 首相に残された時間は数か月しかない。
 view-if: year >= 1934 and month >= 2 and chancellor == "Schleicher" and schleicher_post
 on-arrival: schleicher_dead = 1; schleicher_successor_time = rubicon_time + 1
 max-visits: 1
@@ -7,19 +7,19 @@ new-page: true
 tags: event
 face-image: img/portraits/schleicher_stare.jpg
 
-= Schleicher's Health Deteriorates
+= シュライヒャーの健康悪化
 
-Unbeknownst to the public, Schleicher has been suffering from pernicious anemia for several years. As early as 1930, his family doctor warned him that, given the stress and heavy responsibilities of his career, he likely had no more than six years to live. Now, with the added strain of the chancellorship, those who interact with him have begun to notice his steady decline into lethargy. He may only have a few months left.
+国民には知られていないが、シュライヒャーは数年前から悪性貧血を患っている。早くも1930年には、主治医から職務上の重圧と重大な責任を考えれば余命はおそらく6年に満たないと警告されていた。首相職の負担まで加わった今、彼と接する者たちはその身体が徐々に衰弱していくことに気づき始めた。残された時間は数か月しかないのかもしれない。
 
-In a public announcement, Schleicher announces his resignation, stating that he will soon handpick a successor to be appointed by Hindenburg. He never truly enjoyed the role, and in recent months has quietly delegated his duties to trusted allies in the Reichswehr, grooming them to take his place.
+シュライヒャーは公に辞任を表明し、ヒンデンブルクが任命する後継者を近く自ら選ぶと述べた。彼は首相職を心から楽しんだことなどなく、ここ数か月は信頼する国防軍内の盟友へ密かに職務を委ね、後継者として育てていた。
 
-The question now: who will carry forward Schleicher's legacy?
+問題は、誰がシュライヒャーの遺産を継承するかである。
 
 - @schleicher_dead
 
 @schleicher_dead
-title: Schleicher isn't the only one in bad health.
-subtitle: President Hindenburg will not survive the year as well.
+title: 健康を損ねているのはシュライヒャーだけではない。
+subtitle: ヒンデンブルク大統領も年を越せないだろう。
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -33,8 +33,8 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-President Hindenburg, now 86, is reportedly stricken with numerous ailments—bladder cancer, heart disease, and other suspected conditions kept from the public eye. Bedridden at his Neudeck estate, he requires constant care.
+86歳となったヒンデンブルク大統領は膀胱癌、心臓病をはじめ、国民には伏せられた複数の疾患に侵されているという。ノイデックの領地で寝たきりとなり、常時介護を必要としている。
 
-Two men of a fading generation are nearing their end.
+消えゆく世代に属する二人の男が、その最期を迎えようとしている。
 
-- @root: Hooray...?
+- @root: 万歳……なのか？

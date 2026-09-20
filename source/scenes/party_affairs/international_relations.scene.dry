@@ -1,4 +1,4 @@
-title: International Relations
+title: 国際関係
 new-page: true
 is-card: true
 tags: party_affairs
@@ -8,62 +8,62 @@ card-image: img/international.jpg
 max-visits: 4
 #subtitle: Building ties with our fraternal socialist parties.
 
-At the <span style="color: #D50032;">Labor and Socialist International</span>, we can forge contacts with our fraternal <span style="color: #c00000;">socialist</span> parties in <span style="color: #001489;">Europe</span> and across the world.
+<span style="color: #D50032;">労働社会主義インターナショナル</span>を通じ、<span style="color: #001489;">ヨーロッパ</span>と世界各地の兄弟<span style="color: #c00000;">社会主義</span>政党との関係を築ける。
 
-- @fr_uk: Build relationships with the <span style="color: #002654;">French</span> <span style="color: #ff0000;">SFIO</span> and <span style="color: #C8102E;">British</span> <span style="color: #f0456a;">Labour Party</span> to move their governments in Germany's favor.
-- @austria: Learn organization and street fighting from the <span style="color: #EF3340;">Au</span><span style="color: #ffffff;"><span style="color: #ffffff;">str</span></span><span style="color: #EF3340;">ian</span> <span style="color: #A50034;">SDAPÖ</span>.
-- @scandi: Learn the path of economics and reform from the Scandinavian <span style="color: #D70926;">social democrats</span>.
-- @comintern: Forget the second international - embed a spy in the <span style="color: #D50000;">Comintern</span>'s conference.
-- @america: Contact the <span style="color: #940f0f;">Socialist Party of America</span>.
-- @return: We do not need international contacts at the moment.
+- @fr_uk: <span style="color: #002654;">フランス</span>の<span style="color: #ff0000;">SFIO</span>、<span style="color: #C8102E;">イギリス</span>の<span style="color: #f0456a;">労働党</span>と関係を築き、両政府を親独的に動かす。
+- @austria: <span style="color: #EF3340;">オーストリア</span>の<span style="color: #A50034;">SDAPÖ</span>から組織化と街頭闘争を学ぶ。
+- @scandi: スカンディナヴィアの<span style="color: #D70926;">社会民主主義者</span>から経済政策と改革の道を学ぶ。
+- @comintern: 第二インターナショナルは忘れ、<span style="color: #D50000;">コミンテルン</span>大会へ諜報員を潜入させる。
+- @america: <span style="color: #940f0f;">アメリカ社会党</span>と接触する。
+- @return: 現時点で国際的な接触は必要ない。
 - @easy_discard
 - @cancel_advisor_action
 
 @fr_uk
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: resources -= 1; west_relation += 1; reformist_strength += 3; pacifism += 1; moderate_plan_support += 1; international_socialist_support += 1
 
-The <span style="color: #f0456a;">socialists</span> of <span style="color: #002654;">France</span> and <span style="color: #C8102E;">Britain</span> can influence their governments to be friendlier towards Germany. Hopefully they will reduce our reparations burden.
+<span style="color: #002654;">フランス</span>と<span style="color: #C8102E;">イギリス</span>の<span style="color: #f0456a;">社会主義者</span>は、両政府をドイツに友好的な方向へ動かせる。賠償負担の軽減につながることを期待する。
 
 @austria
-subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
+subtitle: リソース－1 [? if austrian_parliament_seen and not austrian_civil_war_seen: ――オーストリア人の反独裁闘争も支援する。 ?]
 view-if: not rb_explode
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 audio: shuffle music/communist/workers_of_vienna_normalized.mp3
 on-arrival: left_strength += 3; radicalization += 1; rb_militancy += 0.03; resources -= 1; austria_relation += 1; sdapo_strength += 1 if austrian_parliament_seen = 1
 
-Our Reichsbanner can learn much in paramilitary organization and training from the Austrian Republikanischer Schutzbund (Republican Protection Units), the paramilitary branch of the <span style="color: #EF3340;">Au</span><span style="color: #ffffff;"><span style="color: #ffffff;">str</span></span><span style="color: #EF3340;">ian</span> <span style="color: #A50034;">social democrats</span>.
+国旗団は、<span style="color: #EF3340;">オーストリア</span><span style="color: #A50034;">社会民主主義者</span>の準軍事組織「共和国防衛同盟」から、準軍事組織の運営と訓練を多く学べる。
 
-[? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian <span style="color: #A50034;">Social Democratic Worker's Party</span> build up their resources in preparation for a future struggle, legally and illegally. ?]
+[? if austrian_parliament_seen and not austrian_civil_war_seen: 将来の合法・非合法双方の闘争に備え、オーストリア<span style="color: #A50034;">社会民主労働党</span>の資源蓄積も支援している。 ?]
 
 
 @scandi
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: reformist_strength += 3; wtb_support += 1; resources -= 1; moderate_plan_support += 1
 
-The programs of the Nordic <span style="color: #D70926;">socialists</span> involve active government intervention in the economy. We can learn from their economic strategies, and how they moved beyond their working-class base to attract a broader set of constituents.
+北欧の<span style="color: #D70926;">社会主義者</span>の綱領は、政府による積極的な経済介入を含む。その経済戦略と、労働者階級の基盤を越えて幅広い有権者を引きつけた方法を学べる。
 
 @comintern
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: resources -= 1; kpd_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
 
-The <span style="color: #8B0000;">Stalinists</span> of the <span style="color: #700000;">**KPD**</span> insists on calling us "<span style="color: #c00000;">social</span> <span style="color: #7A3C00;">fascists</span>", suggesting that we <span style="color: #c00000;">social democrats</span> are as bad or worse than actual <span style="color: #7A3C00;">fascists</span>. Needless to say, this is not good for our relationship with the <span style="color: #700000;">communists</span>. By observing the <span style="color: #D50000;">Comintern</span>, we can better understand the <span style="color: #700000;">**KPD**</span>, enabling us to potentially improve relations, or counter the <span style="color: #700000;">**KPD**</span> if it may come to that.
+<span style="color: #700000;">**KPD**</span>の<span style="color: #8B0000;">スターリン主義者</span>は、われわれを「<span style="color: #c00000;">社会</span><span style="color: #7A3C00;">ファシスト</span>」と呼び、<span style="color: #c00000;">社会民主主義者</span>は実際の<span style="color: #7A3C00;">ファシスト</span>と同等か、それ以上に悪質だと主張する。当然、これは<span style="color: #700000;">共産主義者</span>との関係を損なう。<span style="color: #D50000;">コミンテルン</span>を監視すれば<span style="color: #700000;">**KPD**</span>への理解を深め、関係改善または必要時の対抗に役立てられる。
 
 @america
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: resources -= 1
 
-The <span style="color: #940f0f;">Socialist Party of America</span> is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
+<span style="color: #940f0f;">アメリカ社会党</span>は小さく、支持も限られている。われわれが彼らにできることは少なく、その逆も同様である。
 
 @reduce
 
-We do not need the international contacts at the moment.
+現時点で国際的な接触は必要ない。

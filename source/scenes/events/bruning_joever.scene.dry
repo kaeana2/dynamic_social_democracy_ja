@@ -1,5 +1,5 @@
-title: Brüning's Race against Time
-subtitle: Hindenburg's inner circle is conspiring against him...
+title: 時間と闘うブリューニング
+subtitle: ヒンデンブルクの側近集団が首相追放を画策している……
 view-if: chancellor = "Brüning" and (year = 1932 and month >= 5) and president = "Hindenburg" and spd_in_government = 0 and (hindenburg_angry_bruning >= 200 or (hindenburg_angry_bruning >= 175 and hindenburg_sacked)) and not presidential_powers and not cvp_formed and not reparations_resolved
 on-arrival: bruning_joever = 1
 new-page: true
@@ -8,22 +8,22 @@ max-visits: 1
 priority: -1
 face-image: img/portraits/BrüningHeinrich.jpg
 
-= Brüning's Race against Time
+= 時間と闘うブリューニング
 
-Brüning's days are numbered. The only reason President Hindenburg is keeping him around is solely by the fact of his foreign policy expertise, and his claim that he's only 'one hundred meters from the finish line' from achieving a huge breakthrough in terms of securing an abolishment of reparations at Lausanne and Germany's rearmament at Geneva, an issue close to Hindenburg's heart. The only hope for Brüning's political salvation rests in those conferences. [? if not hindenburg_sacked: There is also no precedent of the President sacking a government that still enjoys a parliamentary majority. ?]
+ブリューニングの命運は尽きかけている。ヒンデンブルク大統領がなお彼を留任させているのは、その外交手腕と、ローザンヌでの賠償廃止、さらにヒンデンブルクが強く望むジュネーヴでのドイツ再軍備承認という大きな突破口まで「ゴールまであと100メートル」に迫ったとの主張だけが理由である。ブリューニングが政治的に生き残る唯一の望みは、これらの会議に懸かっている。[? if not hindenburg_sacked: さらに、議会多数の支持を保つ政府を大統領が罷免した前例もない。?]
 
-However, General Kurt von Schleicher sees Brüning as the biggest obstacle in his '<span class="tooltip-text" title="Coined by conservative elites like Schleicher and Papen, this strategy aims to control the dynamic Nazi movement and integrate it into the state by introducing the party to government. In their eyes, this would moderate the Nazis, transforming them into a constructive component of the state.">taming strategy</span>', as Brüning has refused to take serious efforts toward bringing the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> into government. The sense of urgency Schleicher has invoked onto the issue, along with his convincing of Hindenburg's State Secretary Otto Meissner and his son Oskar, has brought Hindenburg to make an early and rash decision on the matter.
+しかしクルト・フォン・シュライヒャー将軍は、ブリューニングが<span style="color: #7A3C00;">国民的</span><span style="color: #3E88B3;">反対派</span>の政権参加に向けて真剣に動こうとしないため、自らの「<span class="tooltip-text" title="シュライヒャーやパーペンら保守派エリートが唱えた戦略。勢いを増すナチ運動を制御し、入閣させて国家に取り込むことを目指す。彼らは、これによってナチ党が穏健化し、国家の建設的な一翼へ変わると考えた。">飼い慣らし戦略</span>」にとって最大の障害だと見ている。シュライヒャーは事態の緊急性を煽り、ヒンデンブルクの国務長官オットー・マイスナーと息子オスカーも説き伏せたため、ヒンデンブルクは早急で軽率な決断へ傾いた。
 
 - @schleicher_time
 
 @schleicher_time
-title: Chancellor Brüning is sacked!
-subtitle: President Hindenburg dismisses the government.
+title: ブリューニング首相、罷免！
+subtitle: ヒンデンブルク大統領が政府を罷免した。
 go-to: successor_menu
 
-Former Chancellor Brüning has been dismissed—despite commanding a parliamentary majority. It appears Schleicher has struck an unwritten deal with the <span style="color: #7A3C00;">**NSDAP**</span>, promising “fruitful cooperation” with a new right-wing cabinet that[? if sa_nationwide_ban:&nbsp;lifted the ban on the <span style="color: #7A3C00;">**SA**</span> and?] called for new Reichstag elections.
+ブリューニング首相は、議会多数を握っていたにもかかわらず罷免された。シュライヒャーは<span style="color: #7A3C00;">**NSDAP**</span>と非公式の取引を結び、[? if sa_nationwide_ban:<span style="color: #7A3C00;">**SA**</span>の禁止を解除し、?]国会を解散して総選挙を行う新たな右翼内閣との「実りある協力」を約束させたようだ。
 
-It’s a shame that Schleicher would fall for [+ nsdap_leader +]’s lies. But the real question now is: who will succeed Brüning?
+シュライヒャーが[+ nsdap_leader +]の嘘に乗せられたとは嘆かわしい。だが今や真の問題は、誰がブリューニングの後を継ぐかである。
 
 @successor_menu
 
@@ -32,40 +32,40 @@ It’s a shame that Schleicher would fall for [+ nsdap_leader +]’s lies. But t
 - @papen
 
 @goerdeler
-title: Carl Friedrich Goerdeler?
-subtitle: The Reich Price Commissioner and the Mayor of Leipzig. [? if dnvp_ideology == "Radical": Former?] <span style="color: #3E88B3;">**DNVP**</span> member.
+title: カール・フリードリヒ・ゲルデラーか？
+subtitle: ライヒ価格監督官兼ライプツィヒ市長。[? if dnvp_ideology == "Radical": 元?]<span style="color: #3E88B3;">**DNVP**</span>党員。
 max-visits: 1
 on-arrival: goerdeler_seen = 1
 face-image: img/portraits/goerdeler.jpg
 go-to: successor_menu
 
-To most political observers, Carl Goerdeler, Mayor of Leipzig and the Reich Prize Commissioner, and being a fiscal conservative arguing for a wide reaching reforms of the German welfare state and finances, was the expected successor to Brüning, with his name even being floated around as the Minister-President of Prussia of a <span style="color: #000000;">Center</span>-<span style="color: #7A3C00;">**NSDAP**</span> coalition.
+多くの政治観測者は、ライプツィヒ市長とライヒ価格監督官を務め、ドイツの福祉国家と財政の広範な改革を唱える財政保守派のカール・ゲルデラーこそ、ブリューニングの後継者になると予想していた。<span style="color: #000000;">中央党</span>・<span style="color: #7A3C00;">**NSDAP**</span>連立によるプロイセン州首相候補として、その名が取り沙汰されたほどである。
 
-However, his demands for authorization of sweeping fiscal reforms is too similar to that of Brüning in Schleicher's eyes, who supports a public works solution to Germany's economic woes. Goerdeler will not be the new chancellor.
+しかし、抜本的な財政改革の権限を求める姿勢は、公共事業によるドイツ経済の救済を支持するシュライヒャーの目には、ブリューニングとあまりに似て映った。ゲルデラーが新首相になることはない。
 
 @westarp
-title: Kuno von Westarp?
-subtitle: Hindenburg's preferred choice, and [? if dnvp_leader != "Westarp":former?] <span style="color: #3E88B3;">**DNVP**</span> party leader.
+title: クーノ・フォン・ヴェスタープか？
+subtitle: ヒンデンブルクの意中の人物であり、[? if dnvp_leader != "Westarp":元?]<span style="color: #3E88B3;">**DNVP**</span>党首。
 max-visits: 1
 on-arrival: westarp_seen = 1
 face-image: img/portraits/Kuno_von_Westarp.jpg
 go-to: successor_menu
 
-Hindenburg's personal preference is the [? if dnvp_leader != "Westarp":former?] <span style="color: #3E88B3;">**DNVP**</span> leader that played a critical role in securing Hindenburg's reelection. The two has maintained contact over the past years, and share a hatred of Hugenberg. Despite this, in a meeting with Hindenburg, Westarp has declined the chancellorship and argued against dismissing Brüning, and against new elections that would destroy the German middle parties.
+ヒンデンブルクが個人的に望んだのは、その再選に決定的な役割を果たした[? if dnvp_leader != "Westarp":元?]<span style="color: #3E88B3;">**DNVP**</span>党首である。二人はここ数年も連絡を保ち、フーゲンベルクへの嫌悪を共有してきた。それでもヴェスタープはヒンデンブルクとの会談で首相就任を断り、ブリューニング罷免にも、ドイツの中間政党を壊滅させる総選挙にも反対した。
 
-Even when Hindenburg was reduced to tears, a strategy that had worked on Brüning before, Westarp remains firm in his refusal. Westarp will not be the new chancellor.
+ヒンデンブルクは、かつてブリューニングに通じた涙ながらの説得まで試みたが、ヴェスタープは固辞した。ヴェスタープが新首相になることはない。
 
 @papen
-title: Franz von Papen?
-subtitle: An relatively unknown Catholic Conservative from the <span style="color: #000000;">Center Party</span>. Schleicher's preferred candidate.
+title: フランツ・フォン・パーペンか？
+subtitle: <span style="color: #000000;">中央党</span>に属する無名に近いカトリック保守派。シュライヒャーの意中の候補。
 on-arrival: spd_toleration = 0; spd_toleration_right = 0; chancellor = "Papen"; chancellor_party = "I"; schleicher_papen_r -= 1
 view-if: westarp_seen and goerdeler_seen
 face-image: img/portraits/PapenFranz.jpg
 
-With Goerdeler and Westarp out of the equation, Hindenburg has grasped the straw Schleicher offered and appointed a far-right Catholic Conservative, Franz von Papen, from the <span style="color: #000000;">Center Party</span>, as chancellor. Papen is relatively unknown, only whose political experience is limited to two terms in the Prussian Landtag. The two have been friends since their days in the Prussian military academy.
+ゲルデラーとヴェスタープが候補から外れ、ヒンデンブルクはシュライヒャーが差し出した藁にもすがり、<span style="color: #000000;">中央党</span>の極右カトリック保守派フランツ・フォン・パーペンを首相に任命した。パーペンはほぼ無名で、政治経験もプロイセン州議会議員を2期務めたにすぎない。パーペンとシュライヒャーは、プロイセン陸軍士官学校時代からの友人である。
 
-Papen's decision to take the chancellorship, despite [+ z_leader +]'s urging and Papen's promise not to, Hindenburg has used the same tactic on him as he used on Brüning, convincing him to accept the position. Due to Papen breaking his promise to [+ z_leader +] just after he made it, expulsion proceedings and against him are interrupted by his resignation from the <span style="color: #000000;">Center Party</span>, forever ruining his relations with the party necessary for a parliamentary majority as they strongly denounce him as the "Ephialtes of the <span style="color: #000000;">Center Party</span>".
+[+ z_leader +]に辞退を促され、そう約束していたにもかかわらず、パーペンは首相就任を受け入れた。ヒンデンブルクが、ブリューニングに対して用いたのと同じ手で説得したのである。[+ z_leader +]と約束した直後にそれを破ったパーペンには除名手続きが始まったが、彼は<span style="color: #000000;">中央党</span>を離党した。党は彼を「<span style="color: #000000;">中央党</span>のエフィアルテス」と激しく非難し、議会多数の確保に不可欠だった同党との関係は永久に断たれた。
 
-It's unknown of the exact reasons why Schleicher would choose a man like Papen as Brüning's successor, but we can assume he was trying to secure the support of the <span style="color: #000000;">Center Party</span> and <span style="color: #7A3C00;">Nazis</span>, as he's a far-right member of the former, and that Papen would be an easy person to control.
+シュライヒャーがなぜパーペンのような人物を後継首相に選んだのか、正確な理由は不明である。ただし、中央党内の極右に属する彼なら<span style="color: #000000;">中央党</span>と<span style="color: #7A3C00;">ナチ党</span>双方の支持を確保でき、しかも容易に操れると考えたのだろう。
 
-Time will tell if the <span style="color: #7A3C00;">**NSDAP**</span> will honor its promises to Schleicher, which they'd purposefully refused to write on paper.
+<span style="color: #7A3C00;">**NSDAP**</span>が、意図的に文書化を拒んだシュライヒャーとの約束を守るかどうかは、時が明らかにする。

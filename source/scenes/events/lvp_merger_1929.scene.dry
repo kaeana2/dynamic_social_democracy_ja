@@ -1,5 +1,5 @@
-title: <span style="color: #C0A054;">**DVP**</span> & <span style="color: #D3C24D;">**[+ ddp_name +]**</span> Congress
-subtitle: The future of the liberal movement will be decided here.
+title: <span style="color: #C0A054;">**DVP**</span>・<span style="color: #D3C24D;">**[+ ddp_name +]**</span>党大会
+subtitle: 自由主義運動の将来がここで決まる。
 view-if: lvp_merger_1_timer == 1
 on-arrival: {!
 Q.lvp_formation_points = 0;
@@ -24,23 +24,23 @@ tags: event
 face-image: img/dvp.jpg
 new-page: true
 
-= <span style="color: #C0A054;">**DVP**</span> Congress
+= <span style="color: #C0A054;">**DVP**</span>党大会
 
-The <span style="color: #C0A054;">**DVP**</span>, now under the interim leadership of Julius Curtius, is locked in open conflict with the party’s right wing and industrial backers over the proposed merger with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. With no other choice, the left wing of the <span style="color: #C0A054;">**DVP**</span> has called for an emergency party congress to formally vote on the merger.
+ユリウス・クルティウスを暫定党首とする<span style="color: #C0A054;">**DVP**</span>では、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>との合併案をめぐり、党右派と産業界の後援者との対立が表面化している。ほかに打つ手のない<span style="color: #C0A054;">**DVP**</span>左派は、合併を正式に採決するため、臨時党大会の開催を求めた。
 
-Meanwhile, the Liberal Association has made significant progress in preparing for a unified liberal party, establishing a national framework and drafting a middle-class-oriented policy platform that enjoys broad support from both sides. However, a defeat at this congress would spell the end of liberal cooperation for the foreseeable future, and will greatly demoralize the German middle.
+一方、自由主義協会は自由主義統一政党の結成準備を大きく進め、全国組織の枠組みを整え、双方から幅広い支持を得る中間層重視の政策綱領を起草した。しかし、この党大会で否決されれば、自由主義勢力の協力は当面終わりを告げ、ドイツの中間層は大きく意気消沈するだろう。
 
-- @dvp_success: The party votes... 
-- @dvp_fail: The party votes...
+- @dvp_success: 採決が行われる……
+- @dvp_fail: 採決が行われる……
 
 @dvp_success
 view-if: lvp_formation_points >= 3
 on-arrival: dvp_relation += 3; dvp_left += 3
 face-image: img/weimar_coalition_3.jpg
 
-The momentum towards liberal unity has proven too great for the holdouts within the <span style="color: #C0A054;">**DVP**</span>'s right wing to stand against. The party has officially voted to approve the merger with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, although the latter has yet to reach a final decision.
+自由主義勢力の統合に向けた機運は、<span style="color: #C0A054;">**DVP**</span>右派の抵抗派にも抑えきれないほど強まった。党は採決により、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>との合併を正式に承認した。ただし、相手側はまだ最終決定に至っていない。
 
-The aftermath of the congress has significantly diminished the influence of the <span style="color: #C0A054;">**DVP**</span>'s right wing, and will shape the ideology of the <span style="color: #FFCC00;">Liberal People's Party</span> if it is to form.
+この党大会を経て<span style="color: #C0A054;">**DVP**</span>右派の影響力は大きく低下した。この結果は、<span style="color: #FFCC00;">自由人民党</span>が結成された場合、その理念にも影響を及ぼすだろう。
 
 - @lvp_merger_1929_2
 
@@ -49,4 +49,4 @@ view-if: lvp_formation_points < 3
 on-arrival: dvp_relation -= 3; dvp_right += 5; new_middle_dvp -= 2; old_middle_dvp -= 2; pro_republic -= 3; liberal_cooperation -= 10
 face-image: img/portraits/ernst_scholz.jpg
 
-Unfortunately, the efforts to unify the liberal parties have ended in failure. The right wing and industrial backers of the <span style="color: #C0A054;">**DVP**</span> successfully swayed a narrow majority to reject the merger proposal. This outcome has greatly demoralized the German middle and has forced the disbandment of the Liberal Association.
+残念ながら、自由主義諸党の統合に向けた努力は失敗に終わった。<span style="color: #C0A054;">**DVP**</span>右派と産業界の後援者は、僅差ながら過半数を味方につけ、合併案を否決させた。この結果、ドイツの中間層は大きく意気消沈し、自由主義協会は解散を余儀なくされた。

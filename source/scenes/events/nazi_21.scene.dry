@@ -1,5 +1,5 @@
-title: The <span style="color: #7A3C00;">**NSDAP**</span> Splinters!
-subtitle: Their internal contradictions have finally caught up with them.
+title: <span style="color: #7A3C00;">**NSDAP**</span>、分裂！
+subtitle: ついに内部矛盾が彼ら自身を追い詰めた。
 view-if: chancellor = "Schleicher" and schleicher_time == 10 and hitler_dead
 new-page: true
 tags: event
@@ -17,15 +17,15 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #7A3C00;">**NSDAP**</span> Splinters!
+= <span style="color: #7A3C00;">**NSDAP**</span>、分裂！
 
-Those who follow Hitler, even after death, constitute of the Hitlerite faction, who remain in control of the <span style="color: #7A3C00;">**NSDAP**</span>. This group consists of people like Goebbels and Göring.
+ヒトラーの死後もなお彼に従う者たちはヒトラー派を形成し、引き続き<span style="color: #7A3C00;">**NSDAP**</span>を支配している。この一派にはゲッベルスやゲーリングらが属する。
 
-Those who follow Gregor Strasser, and his line of governmental participation, form the <span style="color: #6A1E1E;">German Social Union</span> (<span style="color: #6A1E1E;">**DSU**</span>). This group consists of people like Strasser and Frick. The former having come back from retirement.
+グレゴール・シュトラッサーとその入閣路線に従う者たちは、<span style="color: #6A1E1E;">ドイツ社会同盟</span>（<span style="color: #6A1E1E;">**DSU**</span>）を結成した。この一派には、政界を引退していたシュトラッサー本人のほか、フリックらが属する。
 
-Those who follow Ernst Röhm, and his belief that an anti-capitalist revolution should be led by the <span style="color: #7A3C00;">**SA**</span>, form the <span style="color: #142e20;">National People's Front</span> (<span style="color: #142e20;">**NVF**</span>). This group consists of people like Röhm and Rudolf Hess.
+エルンスト・レームと、反資本主義革命は<span style="color: #7A3C00;">**SA**</span>が主導すべきだというその信念に従う者たちは、<span style="color: #142e20;">国民戦線</span>（<span style="color: #142e20;">**NVF**</span>）を結成した。この一派にはレームやルドルフ・ヘスらが属する。
 
-- @nazi_2: Without funds and without support. 
+- @nazi_2: 資金も支持もない。
 
 @nazi_2
 on-arrival: {!
@@ -41,6 +41,6 @@ Q.nvf_r = Math.round(Q.nsdap_r*0.15 * 10) / 10;
 Q.nsdap_hitler_r = Math.round((Q.nsdap_r - Q.dsu_r - Q.nvf_r) * 10) / 10;
 !}
 
-These parties are doomed to eternal infighting and, eventually, irrelevance. However, the polarization caused by this, coupled with the potential for participationist <span style="color: #7A3C00;">Nazis</span> entering the government, may still have far-reaching consequences.
+これらの政党は果てしない内紛を続け、やがて取るに足らない存在になる運命にある。しかし、この分裂がもたらす政治的両極化と、政権参加派の<span style="color: #7A3C00;">ナチ</span>が入閣する可能性は、なお広範な影響を及ぼしうる。
 
-We must not get complacent.
+油断は禁物である。

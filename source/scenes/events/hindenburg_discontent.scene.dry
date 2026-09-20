@@ -1,5 +1,5 @@
-title: Hindenburg Voices Disapproval
-subtitle: While powerless, he still possesses significant sway over our bourgeois allies.
+title: ヒンデンブルクが不満を表明
+subtitle: 権力を失っても、我々のブルジョワ同盟諸党にはなお大きな影響力を持つ。
 view-if: (president == "Hindenburg" and presidential_powers and spd_in_government and hindenburg_angry >= 115 and hindenburg_angry_trigger) and chancellor != "Brüning" and next_election_time - time > 3 and not in_spd_majority and not in_left_front and not sapd_toleration and time >= hindenburg_grr_time
 priority: -1
 new-page: true
@@ -7,8 +7,8 @@ tags: event
 on-arrival: dvp_relation -= 6; ddp_relation -= 3; lvp_relation -= 3; z_relation -= 3 if chancellor_party != "Z"; coalition_dissent += 1; hindenburg_grr_time = time + 6; hindenburg_grr_amount += 1
 max-visits: 3
 
-= Hindenburg Voices Disapproval
+= ヒンデンブルクの不満表明
 
-President Hindenburg has made his dissatisfaction with the <span style="color: #c00000;">socialist</span> presence in government clear and would use his presidential powers to remove us by force—if he actually had them.
+ヒンデンブルク大統領は、政権内に<span style="color: #c00000;">社会主義者</span>がいることへの不満を明確にした。もし大統領権限が実際に残っていれば、それを用いて我々を強制的に排除しただろう。
 
-[? if hindenburg_grr_amount <= 2: However, Hindenburg still holds great sway over the bourgeois parties and, along with his influential inner circle, has pressured them to break with our government. ?][? if hindenburg_grr_amount > 2: Hindenburg has been sidelined lately, and his influence over the bourgeois parties have weakened. This is the last time we will hear of the old man. ?]
+[? if hindenburg_grr_amount <= 2: しかしヒンデンブルクはブルジョワ諸党になお大きな影響力を持ち、強力な側近集団とともに、我が政権と決裂するよう圧力をかけている。?][? if hindenburg_grr_amount > 2: ヒンデンブルクは近頃脇へ追いやられ、ブルジョワ諸党への影響力も弱まった。この老人の声を聞くのはこれが最後となる。?]

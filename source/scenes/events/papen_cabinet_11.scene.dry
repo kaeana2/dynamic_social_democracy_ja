@@ -1,5 +1,5 @@
-title: Papen Plans to Declare Martial Law!
-subtitle: The chancellor meets with his cabinet...
+title: パーペン、戒厳令布告を計画！
+subtitle: 首相が閣議を開く……
 view-if: chancellor = "Papen" and papen_post_2 and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 new-page: true
 tags: event
@@ -8,18 +8,18 @@ priority: 3
 on-arrival: schleicher_papen_r -= 1
 face-image: img/weimar_constitution.jpg
 
-= Martial Law
+= 戒厳令
 
-Papen continues to assert his independence, disregarding Schleicher’s advice, and is still planning to declare martial law, dissolve the Reichstag, and cancel elections indefinitely when the Reichstag reconvenes this week, as he announced to the cabinet. His aim is to implement a new constitution via plebiscite—or, perhaps, simply through a presidential decree, with Hindenburg’s continued support.
+パーペンはシュライヒャーの助言を無視して自立性を主張し続け、閣議で表明したとおり、今週の国会再開時に戒厳令を布告し、国会を解散して選挙を無期限に停止する計画をなお進めている。目標は国民投票によって新憲法を施行すること、あるいはヒンデンブルクの支持を頼みに、大統領緊急令だけで実施することかもしれない。
 
-Amid rising labor protests and growing hostility from all corners of German society, Schleicher can no longer support his former ally. Papen’s reckless pursuit of political suicide, backed only by President Hindenburg, has pushed Schleicher to distance himself from Papen’s unpopular policies in preparation for his own chancellorship. He has engaged with trade unions and a variety of political figures, including Gregor Strasser, to build the necessary support.
+労働者の抗議が高まり、ドイツ社会のあらゆる方面から敵意が強まるなか、シュライヒャーはもはや旧友を支持できない。ヒンデンブルク大統領だけを後ろ盾に政治的自殺へ突き進むパーペンを見て、シュライヒャーは自らの首相就任に備え、不人気な政策から距離を置くようになった。必要な支持を築くため、労働組合やグレゴール・シュトラッサーを含むさまざまな政治家と接触している。
 
-One thing is clear: Papen must go for German democracy to survive.
+一つだけ明白である。ドイツの民主主義が生き残るには、パーペンを退陣させねばならない。
 
 - @papen
 
 @papen
-title: The cabinet meets.
+title: 閣議が開かれる。
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -34,15 +34,15 @@ on-display: {!
 !}
 on-arrival: hindenburg_papen_r -= 1
 
-In a cabinet meeting convened to discuss plans for imposing martial law, Schleicher turned the tables against the chancellor by revealing the results of Reichswehr war games simulating conflict with the <span style="color: #7A3C00;">**SA**</span>, <span style="color: #700000;">**RFB**</span>, and the Reichsbanner. The exercises concluded that the army would be unable to cope with a civil war against all three groups.
+戒厳令施行案を協議するため開かれた閣議で、シュライヒャーは首相に反撃した。<span style="color: #7A3C00;">**SA**</span>、<span style="color: #700000;">**RFB**</span>、国旗団との衝突を想定して国防軍が実施した兵棋演習の結果を公表したのである。演習は、三者すべてを相手にした内戦に軍が対処できないと結論づけていた。
 
-With his last hope for salvaging power extinguished and all but one minister turning against him, Papen is left with no viable path forward—resign now, or be crushed by the Reichstag later in the week.
+権力維持への最後の望みを絶たれ、一人を除く全閣僚に背かれたパーペンには、もはや現実的な道が残されていない。今すぐ辞職するか、週内に国会で打ち倒されるかである。
 
 - @papen_2
 
 @papen_2
-title: Papen resigns his position!
-subtitle: Who will succeed him?
+title: パーペン、首相を辞任！
+subtitle: 後継者は誰になるのか？
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -56,14 +56,14 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-An embittered Papen—convinced that Schleicher orchestrated his downfall and vowing never to forgive the betrayal—has officially submitted his resignation to Hindenburg, who, with reluctance, has accepted it. 
+シュライヒャーが自らの失脚を仕組んだと確信し、この裏切りを決して許さないと誓う憤懣やるかたないパーペンは、ヒンデンブルクへ正式に辞表を提出した。大統領は不承不承ながら受理した。
 
-As this marks yet another cabinet's fall under Schleicher's influence, Hindenburg's suspicions of his motives begin to grow, particularly with Schleicher’s constant invoking of national security as justification for his actions.
+シュライヒャーの影響によってまた一つ内閣が倒れたことで、ヒンデンブルクはその動機への疑念を強め始めた。とりわけ、シュライヒャーが行動の正当化に国家安全保障を繰り返し持ち出すことを怪しんでいる。
 
 - @papen_3
 
 @papen_3
-title: General Kurt von Schleicher is appointed chancellor!
+title: クルト・フォン・シュライヒャー将軍、首相に任命される！
 on-arrival: {!
 Q.chancellor = "Schleicher";
 if (Q.prussia_leader == "Papen") Q.prussia_leader = "Schleicher"
@@ -72,10 +72,10 @@ Q.schleicher_time = 0
 Q.pro_republic += 5;
 Q.reichswehr_militancy += 0.5;
 
-Q.papen_goal = "Cry over spilt milk";
-Q.schleicher_goal = "Scavenge for parliamentary backing";
-Q.oskar_goal = "Be buddies with Schleicher";
-Q.meissner_goal = "Become acquainted with the new chancellor";
+Q.papen_goal = "覆水を嘆く";
+Q.schleicher_goal = "議会内の支持をかき集める";
+Q.oskar_goal = "シュライヒャーと親密になる";
+Q.meissner_goal = "新首相との関係を築く";
 
 Q.schleicher_papen_r = 0; 
 Q.hindenburg_schleicher_r -= 1; 
@@ -84,10 +84,10 @@ Q.schleicher_strength -= 1;
 !}
 face-image: img/portraits/SchleicherKurt.jpg
 
-Schleicher is now Papen’s successor, having orchestrated his downfall through manipulated war games conducted by his close friends, and has been appointed chancellor with full support from President Hindenburg.
+シュライヒャーは親しい友人たちに操作させた兵棋演習によってパーペンの失脚を仕組み、その後継者となった。ヒンデンブルク大統領の全面的支持を得て、首相に任命されたのである。
 
-However, Schleicher is deeply reluctant to accept the position. He prefers to exert influence through his extensive behind-the-scenes network, knowing full well that he lacks the public profile and charisma necessary to be an effective chancellor. Despite his reservations, Schleicher feels bound by duty to obey a direct order from the commander-in-chief.
+しかし、シュライヒャーは就任を強くためらっている。自分には有能な首相に必要な知名度もカリスマもないと十分に理解しており、広範な舞台裏の人脈を通じて影響力を行使する方を好んでいる。それでも、統帥権者からの直接命令には職務上従わねばならないと考えた。
 
-His appointment is a breath of fresh air compared to Papen, and his more moderate and social leanings are more acceptable to the <span style="color: #c00000;">**SPD**</span> and the party system as a whole.
+彼の任命はパーペンと比べれば新風であり、より穏健で社会政策を重んじる傾向は、<span style="color: #c00000;">**SPD**</span>にも政党制全体にも受け入れやすい。
 
-However, many still view Schleicher as little better than his predecessor. After all, he was responsible for the [? if otl_prussian_coup_seen:&nbsp;Prussian coup and the?] disastrous policies of the Papen government. At the end of the day, most folk view him as just another <span style="color: #808080;">reactionary</span>.
+しかし多くの人々は今なお、シュライヒャーも前任者と大差ないと見ている。結局のところ、彼は[? if otl_prussian_coup_seen: プロイセン・クーデターと?]パーペン政権の破滅的政策に責任を負う人物である。大多数の国民にとって、彼もまた一人の<span style="color: #808080;">反動派</span>にすぎない。

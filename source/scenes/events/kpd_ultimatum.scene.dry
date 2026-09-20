@@ -1,4 +1,4 @@
-title: The <span style="color: #700000;">**KPD**</span> checks upon our progress in accomplishing the coalition's goals...
+title: <span style="color: #700000;">**KPD**</span>が連立目標の達成状況を確認
 view-if: (in_popular_front or in_left_front) and (kpd_ultimatum_timer = 0 or (welfare_goal_completed and agriculture_goal_completed and economy_goal_completed and finance_goal_completed and labor_goal_completed and reichswehr_goal_completed)) and kpd_goals_seen = 1 and kpd_ultimatum_seen = 0 and spd_in_government
 on-arrival: {!
 Q.kpd_ultimatum_seen = 1;
@@ -40,48 +40,48 @@ new-page: true
 tags: event
 go-to: goals_success if kpd_goals_completed; goals_failed if not kpd_goals_completed
 
-= <span style="color: #700000;">**KPD**</span> Goals
+= <span style="color: #700000;">**KPD**</span>の要求
 
-At the start of this government, the <span style="color: #700000;">**KPD**</span> presented a list of goals for the coalition:
+政権発足時、<span style="color: #700000;">**KPD**</span>は連立政権に次の目標を提示した。
 
-[? if welfare_goal = 1 : - Expand social welfare programs - [? if welfare_goal_completed : success ?][? if not welfare_goal_completed: failed ?] ?]
+[? if welfare_goal = 1 : - 社会福祉制度を拡充する――[? if welfare_goal_completed : 成功 ?][? if not welfare_goal_completed: 失敗 ?] ?]
 
-[? if agriculture_goal = 1 : - Enact a land reform program. - [? if agriculture_goal_completed : success ?][? if not agriculture_goal_completed: failed ?] ?]
+[? if agriculture_goal = 1 : - 土地改革計画を実施する――[? if agriculture_goal_completed : 成功 ?][? if not agriculture_goal_completed: 失敗 ?] ?]
 
-[? if economy_goal = 1 : - Start substantial nationalization of the economy. - [? if economy_goal_completed : success ?][? if not economy_goal_completed: failed ?] ?]
+[? if economy_goal = 1 : - 経済の大規模な国有化に着手する――[? if economy_goal_completed : 成功 ?][? if not economy_goal_completed: 失敗 ?] ?]
 
-[? if finance_goal = 1 : - Make taxes more progressive. - [? if finance_goal_completed : success ?][? if not finance_goal_completed: failed ?] ?]
+[? if finance_goal = 1 : - 税制の累進性を強化する――[? if finance_goal_completed : 成功 ?][? if not finance_goal_completed: 失敗 ?] ?]
 
-[? if labor_goal = 1 : - Support workers in labor disputes. - [? if labor_goal_completed : success ?][? if not labor_goal_completed: failed ?] ?]
+[? if labor_goal = 1 : - 労働争議で労働者を支援する――[? if labor_goal_completed : 成功 ?][? if not labor_goal_completed: 失敗 ?] ?]
 
-[? if foreign_goal = 1 : - Improve our relations with the <span style="color: #750e0e;">Soviet Union</span>. - [? if foreign_goal_completed : success ?][? if not foreign_goal_completed: failed ?] ?]
+[? if foreign_goal = 1 : - <span style="color: #750e0e;">ソビエト連邦</span>との関係を改善する――[? if foreign_goal_completed : 成功 ?][? if not foreign_goal_completed: 失敗 ?] ?]
 
-[? if reichswehr_goal = 1 : - Reduce funding for the Reichswehr. - [? if reichswehr_goal_completed : success ?][? if not reichswehr_goal_completed: failed ?] ?]
+[? if reichswehr_goal = 1 : - 国防軍への予算を削減する――[? if reichswehr_goal_completed : 成功 ?][? if not reichswehr_goal_completed: 失敗 ?] ?]
 
 @goals_failed
 on-arrival: kpd_relation -= 10; workers_spd -= 8; unemployed_spd -= 8;
 
-Unfortunately, we have failed to accomplish all of the goals the <span style="color: #700000;">**KPD**</span> set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
+残念ながら、<span style="color: #700000;">**KPD**</span>の掲げた目標をすべて達成することはできなかった。彼らは政府不信任決議を提出する構えを見せ、労働者の目から我々の政権の正統性を奪う宣伝運動をすでに始めている。
 
-- @appeal: Appeal to the <span style="color: #700000;">Communists</span> to have patience - we are trying!
-- @kpd_vote_of_no_confidence.support_center: Could we form a new government based on the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: (and possibly <span style="color: #C0A054;">**DVP**</span>)?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]?
-- @kpd_vote_of_no_confidence.let_it_happen: Let the vote happen.
-- @no_vonc: They cannot call a vote of no confidence due to the constitutional reforms, but they can obstruct our government at every opportunity.
-- @spd_majority: We have a majority without them.
+- @appeal: <span style="color: #700000;">共産主義者</span>に忍耐を求める。我々は努力しているのだ！
+- @kpd_vote_of_no_confidence.support_center: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:（場合によっては<span style="color: #C0A054;">**DVP**</span>も）?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]を軸に、新政権を組めないだろうか？
+- @kpd_vote_of_no_confidence.let_it_happen: 投票を行え。
+- @no_vonc: 憲法改正を理由に不信任決議案を提出することはできないが、あらゆる機会で我々の政府を妨害できる。
+- @spd_majority: 彼らなしで過半数を得た。
 
 @appeal
 choose-if: (kpd_score >= 4 and kpd_relation > 50 and kpd_appeal_seen = 0) or kpd_leader = "Conciliators"
-unavailable-subtitle: [? if kpd_score < 4: They do not see us as serious in trying to achieve the goals of the coalition. ?] [? if kpd_relation < 50: Our relations are too poor. ?] [? if kpd_appeal_seen = 1: we do not have any more time. ?]
+unavailable-subtitle: [? if kpd_score < 4: 彼らは我々が連立の目標達成に真剣に取り組んでいるとは思っていない。 ?] [? if kpd_relation < 50: 我々の関係はあまりに悪い。 ?] [? if kpd_appeal_seen = 1: 我々にはもう時間がない。 ?]
 on-arrival: kpd_ultimatum_seen = 0; kpd_ultimatum_timer += 6; kpd_appeal_seen = 1
 
-We argue that we are working hard to achieve the coalition's goals, and in the name of proletarian solidarity, we must make this coalition function. Surprisingly, the <span style="color: #700000;">**KPD**</span> hears our pleas, and is willing to give us six more months before the coalition goals must be achieved.
+我々は連立目標の達成に全力を尽くしており、プロレタリアートの連帯のためにも、この連立を機能させねばならないと訴えた。驚くべきことに<span style="color: #700000;">**KPD**</span>は要請を受け入れ、目標達成までさらに6か月の猶予を認めた。
 
 
 @goals_success
 on-arrival: workers_spd += 8; unemployed_spd += 8; kpd_relation += 10; workers_kpd += 5; kpd_coalition_success += 1; kpd_demands_federal = 0
 go-to: popular_front_achievement if in_popular_front; united_front_achievement if in_left_front
 
-Against all expectations, the <span style="color: #700000;">**KPD**</span>'s goals have all been met! Apparently the <span style="color: #700000;">**Communists**</span> did not prepare for this eventuality, a worker's government successfully built through democratic means. They will continue to "tolerate" our government for the rest of our term, while still acting as a watchdog against bourgeois backsliding.
+あらゆる予想に反し、<span style="color: #700000;">**KPD**</span>の目標はすべて達成された！ <span style="color: #700000;">**共産主義者**</span>は、民主的手段で労働者政府が実現する事態を想定していなかったらしい。彼らは任期満了まで我々の政権への「閣外協力」を続ける一方、ブルジョワ的後退を監視し続けるだろう。
 
 
 @popular_front_achievement
@@ -96,10 +96,10 @@ achievement: einheitsfront_2
 view-if: constructive_vonc
 on-arrival: in_popular_front = 0; in_left_front = 0; in_minority_government = 1
 
-We have been effectively made a minority government, and the <span style="color: #700000;">**KPD**</span> intends to obstruct our attempts to pass policy.
+我々は事実上の少数政権となり、<span style="color: #700000;">**KPD**</span>は今後あらゆる政策の成立を妨害する構えである。
 
 @spd_majority
 view-if: spd_r >= 50
 on-arrival: in_popular_front = 0; in_left_front = 0; in_spd_majority = 1; kpd_demands_federal = 0
 
-We were so kind.
+我々はとても親切だった。

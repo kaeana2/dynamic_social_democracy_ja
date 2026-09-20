@@ -1,5 +1,5 @@
-title: 1934
-subtitle: A new year
+title: 1934年
+subtitle: 新年
 new-page: true
 tags: event
 priority: 2
@@ -8,10 +8,10 @@ max-visits: 1
 on-arrival: {!
 !}
 
-= 1934
+= 1934年
 
-A new year begins. [? if works_program = 0 : The economic depression seems to have bottomed out, but there is still much suffering. It is not too late to launch an economic rescue program. ?][? if works_program >= 1 and unemployed >= 15 : We have begun to launch a public works program, but the economy is still troubled. The recovery has begun, but more must be done. ?][? if works_program >= 1 and unemployed < 15 : Our public works program has successfully guided us through the worst of the crisis. The economy is improving, and finally people have optimism for the future. ?]
+新たな年が始まる。[? if works_program = 0 : 恐慌は底を打ったようだが、苦境はなお広く残っている。今からでも経済救済計画を始めるのは遅くない。?][? if works_program >= 1 and unemployed >= 15 : 公共事業計画を開始したが、経済はいまだ苦境にある。回復は始まったものの、さらなる対策が必要である。?][? if works_program >= 1 and unemployed < 15 : 公共事業計画によって危機の最悪期を切り抜けることに成功した。経済は好転し、国民はついに将来への希望を持ち始めている。?]
 
-[? if return_to_normalcy: With the return to normalcy, the political landscape in Germany is shifting. Liberalism is making a return among the middle classes, and the radical parties of the right are declining. ?]
+[? if return_to_normalcy: 正常化への回帰とともに、ドイツの政治情勢は変化している。中間層の間で自由主義が復調し、右翼急進政党は衰退しつつある。?]
 
-[? if president = "Hindenburg" : The president is in poor health; he is not expected to live out the year. ?]
+[? if president = "Hindenburg" : 大統領の健康状態は悪く、年を越せないと見られている。?]

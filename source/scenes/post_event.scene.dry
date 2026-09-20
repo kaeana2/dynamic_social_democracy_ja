@@ -1,4 +1,4 @@
-title: Post Event
+title: イベント後処理
 new-page: true
 on-arrival: {!
 
@@ -800,8 +800,8 @@ if (Q.rubicon && Q.month_actions >= 1 && Q.month_actions != Q.month_actions_chec
         Q.hindenburg_schleicher_r -= 1;
         Q.schleicher_strength -= 1;
         Q.papen_strength += 1;
-        Q.meissner_goal = "Convince Hindenburg to continue supporting Papen";
-        Q.oskar_goal = "Convince Hindenburg to continue supporting Papen"
+        Q.meissner_goal = "パーペン支持を続けるようヒンデンブルクを説得する";
+        Q.oskar_goal = "パーペン支持を続けるようヒンデンブルクを説得する"
     }
     if (Q.papen_economy_time >= Q.rubicon_time) {
         Q.unemployed -= 2/12;
@@ -834,10 +834,10 @@ if (Q.rubicon && Q.month_actions >= 1 && Q.month_actions != Q.month_actions_chec
     }
     if (Q.schleicher_time == 5 && Q.hugenberg_dvp) Q.hugenberg_dvp = 0;
     if (Q.schleicher_time == 8) {
-        Q.schleicher_goal = "Regain public confidence";
+        Q.schleicher_goal = "国民の信頼を取り戻す";
     }
     if (Q.schleicher_time >= 15) {
-        Q.schleicher_goal = "Consolidate power";
+        Q.schleicher_goal = "権力基盤を固める";
     }
     if (Q.schleicher_economy_time >= Q.rubicon_time) {
         Q.unemployed *= 0.99;
@@ -5238,7 +5238,7 @@ if (typeof window !== "undefined" && window.generateBar) {
 !}
 go-to: bg_change if rubicon; events_choice if has_event = 1 and not rubicon; main if has_event = 0 and difficulty >= 0 and not rubicon; main.main_easy if has_event = 0 and difficulty < 0 and not rubicon
 
-= [+ month : month +] [+ year +][? if rubicon:, Week [+ week +]?]
+= [+ year +]年[+ month : month +][? if rubicon:（第[+ week +]週）?]
 
 @bg_change
 set-bg: img/street.jpg

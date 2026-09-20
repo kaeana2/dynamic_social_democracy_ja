@@ -1,5 +1,5 @@
-title: Reichsexekution of Thuringia
-subtitle: History repeats itself.
+title: テューリンゲンへのライヒ執行
+subtitle: 歴史は繰り返す。
 view-if: reichsexekution_defeated = 0 and president = "Hindenburg" and red_thuringia and (rb_force + rfb_force < 75) and not presidential_powers and (prussian_coup_seen or prussian_reichsexekution or hindenburg_angry >= 100 or hindenburg_angry_bruning >= 50 or strife >= 5 or rb_militancy >= 0.1 or bruning_time or saxony_joever) and year >= 1930
 on-arrival: thuringia_joever = 1; strife += 1; hindenburg_angry += 25; hindenburg_angry_bruning -= 25
 new-page: true
@@ -7,22 +7,22 @@ tags: event
 max-visits: 1
 face-image: img/Reichswehr.jpg
 
-= Reichsexekution of Thuringia
+= テューリンゲンへのライヒ執行
 
-President [+ president +] has invoked the <i>Reichsexekution</i> to dismiss the Thuringian government, citing its "inability to maintain order" amidst escalating clashes between the <span style="color: #7A3C00;">**SA**</span>, Reichsbanner, and the increasingly militant <span style="color: #700000;">**RFB**</span>.
+大統領[+ president +]は<i>ライヒ執行</i>を発動し、テューリンゲン政府を罷免した。<span style="color: #7A3C00;">**SA**</span>、国旗団、そして軍事化を強める<span style="color: #700000;">**RFB**</span>の衝突が激化するなか、州政府には「秩序を維持する能力がない」というのである。
 
-However, the true motivation is clear: the left-wing coalition governing Thuringia poses a direct threat to the conservative and nationalist establishment in Germany.
+しかし真の動機は明白だ。テューリンゲンを統治する左派連立政権は、ドイツの保守・民族主義支配層にとって直接の脅威なのである。
 
 - @defend
 - @surrender
 
 @defend
-title: Fight against this overthrow attempt!
-subtitle: Labor will call a general strike. The Reichsbanner and RFB will be mobilized to resist the Reichswehr. 
+title: この政権打倒の企てと戦え！
+subtitle: 労働者はゼネストを宣言する。国旗団とRFBを動員し、国防軍に抵抗する。
 
-The Reichswehr and Stalhelm are already preparing to enter Thuringia. Our forces are unprepared for a fight and many Reformists think that the risk of civl war over Thuringia is too high. Do we recognize this?
+国防軍と鉄兜団は、すでにテューリンゲンへ進駐する準備を整えている。我々の部隊には戦闘の備えがなく、改革派の多くもテューリンゲンをめぐって内戦に至る危険は大きすぎると考えている。そのことは理解しているはずだ。
 
-- @defend_2: We will defend the Thuringian Government with the Communists. 
+- @defend_2: 共産党とともにテューリンゲン政府を守る。
 - @surrender
 
 @defend_2
@@ -31,23 +31,23 @@ go-to: defend_2_civil_war if defense_strength < enemy_strength; defend_2_victory
 
 @defend_2_civil_war
 
-As the Reichswehr and their reactionary auxiliaries march into Thuringia, armed fighting erupts between them and the leftist forces of the Thuringian government. Hindenburg refuses to withdraw the Reichsexekution and orders more Reichswehr troops into Thuringia.  
+国防軍と反動派の補助部隊がテューリンゲンへ進軍すると、テューリンゲン政府の左派部隊との間で武力衝突が始まった。ヒンデンブルクはライヒ執行の撤回を拒み、さらに多くの国防軍部隊をテューリンゲンへ投入するよう命じた。
 
-- @civil_war: It is a civil war.
+- @civil_war: 内戦だ。
 
 @defend_2_victory
 on-arrival: sa_strength *= 0.8; sh_strength *= 0.8; left_dissent -= 10; reformist_dissent -= 10; reichsexekution_defeated = 1; pro_republic += 5; workers_spd += 4; unemployed_spd += 4; workers_kpd += 3; unemployed_kpd += 3; workers_nsdap -= 6; unemployed_nsdap -= 6; hindenburg_angry -= 35; hindenburg_angry_bruning += 30; coup_victory = 1; kpd_relation += 15; rfb_strength += 100; rfb_militancy += 0.1; rb_strength += 200
 achievement: drei_pfeile
 
-The Reichsbanner and RFB confront the reactionaries on the road to Thuringia and somehow, the enemy has retreated without a fight! They were surprised by our resistance and Hindenburg has decided to not risk a civil war over Thuringia.
+テューリンゲンへ向かう途上で国旗団とRFBが反動派を迎え撃つと、どういうわけか敵は戦わずして撤退した！　我々の抵抗に不意を突かれ、ヒンデンブルクはテューリンゲンをめぐって内戦の危険を冒さないと決めたのである。
 
-This show of force has reinvigorated support for both the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span> and has weakened the fascists and reactionaries. Hindenburg's ire has also been turned away from us. For now. 
+この示威行動は<span style="color: #c00000;">**SPD**</span>と<span style="color: #700000;">**KPD**</span>双方への支持を再び活気づけ、ファシストと反動派を弱体化させた。ヒンデンブルクの怒りも、ひとまず我々からそれている。
 
 @surrender
-title: Resign our positions, to prevent bloodshed.
-subtitle: Hindenburg will appoint a new <i>Reichskommissar</i>.
+title: 流血を避けるため、我々の役職を辞任する。
+subtitle: ヒンデンブルクは新たな国家弁務官を任命する。
 on-arrival: red_thuringia = 0; workers_spd -= 3; workers_kpd -= 3; unemployed_kpd -= 3; unemployed_spd -= 3; left_dissent += 10; labor_dissent += 5; rb_militancy = rb_militancy*0.8; rb_strength -= 200; rfb_banned = 1; rfb_strength -= 100; rfb_militancy -= 0.1; kpd_relation -= 25; communist_coalition -= 1
 
-The <span style="color: #700000;">communists</span> protesting in the streets are brutally suppressed, with the Reichswehr patrolling the streets, restricting political gatherings, and turning a blind eye to the <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> as they harass local party officials.
+街頭で抗議する<span style="color: #700000;">共産党員</span>は容赦なく鎮圧された。国防軍は街頭を巡回して政治集会を制限し、<span style="color: #7A3C00;">ナチ</span>の<span style="color: #7A3C00;">**SA**</span>が地元党幹部を襲っても見て見ぬふりをしている。
 
-Hindenburg appoints <span style="color: #7FCEB1;">**CNBLP**</span> member Erwin Baum as <i>Reichskommissar</i> to govern Thuringia, tasked with dismantling our reforms and violently suppressing the <span style="color: #700000;">**RFB**</span>.
+ヒンデンブルクは<span style="color: #7FCEB1;">**CNBLP**</span>所属のエルヴィン・バウムをテューリンゲン国家弁務官に任命し、我々の改革を解体して<span style="color: #700000;">**RFB**</span>を暴力的に弾圧するよう命じた。

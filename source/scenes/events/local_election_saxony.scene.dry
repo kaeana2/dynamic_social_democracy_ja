@@ -1,29 +1,29 @@
-title: Saxony Landtag Election
+title: ザクセン州議会選挙
 view-if: (year == 1929 and month == 5 and not saxony_election_seen) or (saxony_election_2_trigger_time == time and saxony_election_seen_time != time)
 new-page: true
 tags: event
 on-arrival: saxony_election_seen += 1 if saxony_election_seen; saxony_election_seen = 1 if not saxony_election_seen; saxony_election_seen_time = time; saxony_most_recent = time; saxony_toleration = 0; saxony_groko = 0; red_saxony = 0; saxony_joever = 0; saxony_spd = 0; saxony_right_2 = 0; saxony_nsdap = 0; saxony_spd_splinter = 0; saxony_soclib = 0; saxony_nsdap_maj = 0; saxony_kpd = 0; saxony_spd_maj = 0
 priority: 2
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
+on-display: {!
+    var cardEl = document.createElement('div');
+    cardEl.className = "face-figure2";
 
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/states.png";  
+    var image = new Image();
+    image.className = "face-img";
+    image.src = "img/states.png";
 
-    cardEl.appendChild(image);  
+    cardEl.appendChild(image);
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
 
-= Elections, [+ month : month +] [+ year +]
+= [+ year +]年[+ month : month +]
 
-The Saxon state elections are to be held now.
+ザクセン州の選挙が今行われる
 
 # 1932 ref to dissolve saxony
 
-- @saxony: May we do our best...
+- @saxony: 最善を尽くすことを願う...
 
 @saxony
 on-arrival: {!
@@ -466,12 +466,12 @@ if (window && d3) {
 !}
 go-to: saxony_achievement
 
-**Saxony results:**
+**ザクセンの結果:**
 
 {!<svg id="saxony_landtag" style="width: 500px; height: 250px;"> </svg>!}
 
-{!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
+{!<table>!}
+{!<tr><td>政党</td><td>得票率</td><td>州議会議席率</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_saxony_elections_vote +]%** {!</td><td>!} [+ spd_r_saxony +]% {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_saxony_elections_vote +]% {!</td><td>!} [+ sapd_r_saxony +]% {!</td></tr>!} ?]
@@ -489,7 +489,7 @@ go-to: saxony_achievement
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !} Z: {!</td><td>!} [+ z_saxony_elections_vote +]% {!</td><td>!} [+ z_r_saxony +]%  {!</td></tr>!}
 
 [? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_saxony_elections_vote +]% {!</td><td>!} [+ dvp_r_saxony +]%  {!</td></tr>!} ?]
- 
+
 {!<tr><td><div class="box" style='background-color:#11DD11'> </div> !} SLV: {!</td><td>!} [+ farm_saxony_elections_vote +]% {!</td><td>!} [+ farm_r_saxony +]%  {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#b8996f'> </div> !} WP: {!</td><td>!} [+ wp_saxony_elections_vote +]% {!</td><td>!} [+ wp_r_saxony +]%  {!</td></tr>!}
@@ -505,21 +505,21 @@ go-to: saxony_achievement
 {!<tr><td><div class="box" style='background-color:#7A3C00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_saxony_elections_vote +]% {!</td><td>!} [+ nsdap_r_saxony +]%  {!</td></tr>!}
 {!</table>!}
 <hr id="read-marker">
-Saxony is currently governed by the <span style="color: #fe9e00;">Old Social Democratic Party</span> (<span style="color: #fe9e00;">**ASPD**</span>) under Max Heldt (formerly of the <span style="color: #c00000;">**SPD**</span>), leading a majority coalition that includes all parties positioned between the <span style="color: #c00000;">**SPD**</span> and the <span style="color: #7A3C00;">**NSDAP**</span>, including the <span style="color: #3E88B3;">**DNVP**</span> and various <span style="color: #b8996f;">special</span> <span style="color: #11DD11;">interest</span> parties.
+ザクセン州は現在、<span style="color: #fe9e00;">旧社会民主党</span>（<span style="color: #fe9e00;">**ASPD**</span>）がマクス・ヘルト（元<span style="color: #c00000;">**SPD**</span>所属）の下で統治しており、この連合は<span style="color: #c00000;">**SPD**</span>と<span style="color: #7A3C00;">**NSDAP**</span>の間に位置する全ての政党、そして<span style="color: #3E88B3;">**DNVP**</span>や様々な<span style="color: #b8996f;">特別</span><span style="color: #11DD11;">利益</span>政党を含む過半数連合を率いている。
 
-The Saxon Dispute arose when the Saxon branch of the <span style="color: #c00000;">**SPD**</span> clashed with the party’s parliamentary delegation, demanding that Heldt dissolve the Grand Coalition and negotiate with the <span style="color: #700000;">**KPD**</span>—even after the Reichsexekution. This conflict led to the party’s reformists breaking away and forming the <span style="color: #fe9e00;">**ASPD**</span>, which has since evolved into a left-wing nationalist offshoot of the <span style="color: #c00000;">**SPD**</span>. Despite initially securing a majority of the Landtag delegation following the dispute, the <span style="color: #fe9e00;">**ASPD**</span> has struggled to achieve electoral success and now appears destined for irrelevance.
+ザクセン紛争は、<span style="color: #c00000;">**SPD**</span>ザクセン支部が党の州議会議員団と衝突し、ライヒ執行後でさえヘルトに大連立の解消と<span style="color: #700000;">**KPD**</span>との交渉を要求したことから始まった。この対立で改革派は離党して<span style="color: #fe9e00;">**ASPD**</span>を結成し、同党はやがて<span style="color: #c00000;">**SPD**</span>から派生した左翼民族主義政党となった。紛争直後は州議会議員団の過半数を確保したものの、選挙では振るわず、今や政治的影響力を失いつつある。
 
-Notable members of the <span style="color: #fe9e00;">**ASPD**</span> include Max Heldt, August Winnig (a supporter of the Kapp Putsch), Ernst Niekisch (a "<span style="color: #7A3C00;">national</span> <span style="color: #700000;">bolshevik</span>"), and its party leader, former Minister-President Wilhelm Buck. The party was labeled "<span style="color: #c00000;">social</span> <span style="color: #7A3C00;">fascist</span>" by the <span style="color: #700000;">**Communists**</span>, marking the <span class="tooltip-text" title="that's me! the modman!">origin</span> of the term.
+<span style="color: #fe9e00;">**ASPD**</span>の著名な党員には、マックス・ヘルト、カップ一揆支持者のアウグスト・ヴィニッヒ、「<span style="color: #7A3C00;">国家</span><span style="color: #700000;">ボルシェヴィキ</span>」のエルンスト・ニーキッシュ、党首で元州首相のヴィルヘルム・ブックがいる。<span style="color: #700000;">**共産党**</span>は同党を「<span style="color: #c00000;">社会</span><span style="color: #7A3C00;">ファシスト</span>」と呼び、これがこの<span class="tooltip-text" title="that's me! the modman!">用語の起源</span>となった。
 <hr id="read-marker">
-United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #700000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_saxony +]% 
+統一左翼連合（<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #700000;">**KPD**</span>[? if sapd_formed:&nbsp; + <span style="color: #9B0000;">**SAPD**</span>?]）：[+ left_coalition_saxony +]%
 
-Grand Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #fe9e00;">**ASPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_saxony:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ spd_coalition_saxony +]% 
+大連立 (<span style="color: #c00000;">**SPD**</span> + <span style="color: #fe9e00;">**ASPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_saxony:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ spd_coalition_saxony +]%
 
-Bourgeois Coalition ([? if aspd_r_saxony: <span style="color: #fe9e00;">**ASPD**</span> + ?][? if z_r_saxony: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8996f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span>): [+ true_bourgeois_coalition_saxony +]%
+ブルジョワ連合（[? if aspd_r_saxony: <span style="color: #fe9e00;">**ASPD**</span> + ?][? if z_r_saxony: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8996f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp; + <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span>）：[+ true_bourgeois_coalition_saxony +]%
 
-Right-Wing Coalition ([? if aspd_r_saxony: <span style="color: #fe9e00;">**ASPD**</span> + ?][? if z_r_saxony: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8996f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #7A3C00;">**NSDAP**</span>): [+ bourgeois_coalition_saxony +]%
+右翼連合（[? if aspd_r_saxony: <span style="color: #fe9e00;">**ASPD**</span> + ?][? if z_r_saxony: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8996f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp; + <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #7A3C00;">**NSDAP**</span>）：[+ bourgeois_coalition_saxony +]%
 
-[? if nsdap_saxony_elections_vote >= 4: The rise of the <span style="color: #7A3C00;">**NSDAP**</span> is quite unexpected, especially given their meager 1.6% of the vote in the last election. ?]
+[? if nsdap_saxony_elections_vote >= 4: <span style="color: #7A3C00;">**NSDAP**</span>の台頭は、特に前回選挙でのわずか1.6%の票数から考えると、かなり予想外である。 ?]
 
 @saxony_achievement
 go-to: alt_aber_gold if aspd_saxony_elections_vote >= 5 and saxony_election_seen == 1; saxony_coalition_menu if aspd_saxony_elections_vote < 5 or saxony_election_seen != 1
@@ -569,9 +569,9 @@ if ((Q.dvp_relation < (dvp_toleration_threshold + 5) && !Q.lvp_formed) || (Q.lvp
 !}
 
 <hr id="read-marker">
-The bourgeois parties have historically been hostile to us in state politics, particularly after the notorious <span style="color: #c00000;">**SPD**</span>-<span style="color: #700000;">**KPD**</span> United Left government faced a <i>Reichsexekution</i> six years ago. The split of our reformist wing into the <span style="color: #fe9e00;">**ASPD**</span> further pushed our state organization toward the left.
+ブルジョワ政党は歴史的に我々を国家政治で敵視してきた。特に悪名高い<span style="color: #c00000;">**SPD**</span>-<span style="color: #700000;">**KPD**</span>の統一左翼政府が6年前に<i>ライヒ執行</i>を経験した後だ。我々の改革派の派閥が<span style="color: #fe9e00;">**ASPD**</span>に分裂したことは、我々の州組織をさらに左に押しやった。
 
-[? if aspd_saxony_elections_vote <= 3: With the <span style="color: #fe9e00;">**ASPD**</span>'s disastrous result of [+ aspd_saxony_elections_vote +]%, their viability as a political force in the state is coming to an end, with bourgeois parties are seeking a replacement for Max Heldt. ?][? if aspd_saxony_elections_vote > 3: The <span style="color: #fe9e00;">**ASPD**</span> has not suffered the decline we thought it would, winning [+ aspd_saxony_elections_vote +]% of the vote. Whether Max Heldt remains is up to the bourgeois parties. ?] Despite our cooperation on the local level, the national <span style="color: #700000;">**KPD**</span> is unlikely to ever accept a coalition.
+[? if aspd_saxony_elections_vote <= 3: <span style="color: #fe9e00;">**ASPD**</span>は[+ aspd_saxony_elections_vote +]%という惨憺たる結果に終わり、州の政治勢力として存続できる見込みは薄れた。ブルジョワ諸党はマックス・ヘルトの後任を探している。?][? if aspd_saxony_elections_vote > 3: <span style="color: #fe9e00;">**ASPD**</span>は予想ほど衰退せず、[+ aspd_saxony_elections_vote +]%を獲得した。マックス・ヘルトが留任するかはブルジョワ諸党次第である。?]地方では協力しているものの、全国指導部の<span style="color: #700000;">**KPD**</span>が連立を受け入れる可能性は低い。
 
 - @true_bourgeois_coalition_saxony
 - @bourgeois_coalition_saxony
@@ -582,70 +582,70 @@ The bourgeois parties have historically been hostile to us in state politics, pa
 
 
 @toleration_saxony
-title: We will enter a toleration agreement with the incumbent government.
+title: 我々は現政権と容認協定を結ぶだろう。
 choose-if: toleration_possible_saxony and left_strength < 30
-unavailable-subtitle: [? if not toleration_possible_saxony: The bourgeois parties won't even accept our toleration. ?][? if left_strength >= 30: Our Saxon organization is too left-wing to even consider this as an option. With the reformists having largely split into the <span style="color: #fe9e00;">ASPD</span>, the left wing is dominant. ?]
+unavailable-subtitle: [? if not toleration_possible_saxony:は我々の容認さえ受け入れないだろう。?][? if left_strength >= 30:我々のザクセン組織は、これを選択肢として考えるには左翼すぎる。改革派が主に<span style="color: #fe9e00;">ASPD</span>に分裂したことで、左翼派が優勢だ。?]
 on-arrival: saxony_toleration = 1; old_middle_nsdap -= 1; rural_nsdap -= 1; workers_spd += 1; workers_kpd += 2; left_dissent += 10
 
-We have entered a toleration agreement with the bourgeois cabinet, and have made it unnecessary for them to cooperate with the <span style="color: #7A3C00;">**NSDAP**</span>. As part of our agreement, the bourgeois parties have allowed Max Heldt to retain his Minister-President position, and for the <span style="color: #fe9e00;">**ASPD**</span> to occupy the Work and Welfare	ministry. 
+我々はブルジョワ内閣と容認協定を結び、彼らが<span style="color: #7A3C00;">**NSDAP**</span>と協力する必要性をなくした。我々の合意の一環として、ブルジョワ政党はマクス・ヘルトに州首相の地位を維持させ、<span style="color: #fe9e00;">**ASPD**</span>に労働福祉省を占めることを許可した。
 
-Despite the unsavory qualities of the <span style="color: #fe9e00;">**ASPD**</span>, they're still Marxist at the end of the day. The leftist Saxon organization has protested at our intervention, and many have jumped ship to the <span style="color: #700000;">**KPD**</span>.
+<span style="color: #fe9e00;">**ASPD**</span>の不快な性質にもかかわらず、彼らは結局はマルクス主義者だ。左翼のザクセン組織は我々の介入に抗議し、多くの者が<span style="color: #700000;">**KPD**</span>に乗り換えた。
 
 @true_bourgeois_coalition_saxony
-title: The incumbent Heldt III cabinet will continue.
-subtitle: They are able to retain their majority. Surprising.
+title: 現ヘルト三内閣は継続する。
+subtitle: 彼らは過半数を維持することができた。驚きだ。
 view-if: true_bourgeois_coalition_saxony >= 50
 on-arrival: saxony_right = 1; saxony_leader = "Heldt"; pro_republic += 1; rural_nsdap -= 2; old_middle_nsdap -= 2; rural_other += 2 if dnvp_ideology == "Radical"; old_middle_other += 2 if dnvp_ideology == "Radical"; rural_dnvp += 2 if dnvp_ideology == "Moderate"; old_middle_dnvp += 2 if dnvp_ideology == "Moderate"
 
-The surprisingly good results for the incumbent coalition[? if aspd_saxony_elections_vote >= 4:&nbsp;and <span style="color: #fe9e00;">**ASPD**</span>?] have allowed them and Heldt to continue governing. The <span style="color: #7A3C00;">**NSDAP**</span> is discouraged by this defeat, as they had hoped to use their gains to influence the government.
+与党連合[? if aspd_saxony_elections_vote >= 4:&nbsp;と <span style="color: #fe9e00;">**ASPD**</span>?]の予想外に良い結果は、彼らとヘルトに政権継続を許した。この敗北により、彼らは自分たちの利益を利用して政府に影響を与えようとしていたため、<span style="color: #7A3C00;">**NSDAP**</span>は落胆している。
 
 @bourgeois_coalition_saxony
-title: A bourgeois coalition is formed.
-subtitle: The incumbent coalition, which will survive on toleration from the <span style="color: #7A3C00;">**NSDAP**</span>.
+title: ブルジョワの連合が結成された。
+subtitle: 与党連合は、<span style="color: #7A3C00;">**NSDAP**</span>からの寛容さによって生き残る。
 view-if: bourgeois_coalition_saxony >= 50 and true_bourgeois_coalition_saxony < 50
 on-arrival: saxony_right = 1; saxony_leader = "Bünger"; saxony_irl = 1
 
-The incumbent coalition has failed to win a majority, and toleration from the <span style="color: #7A3C00;">**NSDAP**</span> is required. They've demanded the exclusion of the <span style="color: #fe9e00;">**ASPD**</span>[? if not lvp_formed:&nbsp;and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?] from the cabinet, and the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]'s new Minister-President Wilhelm Bünger has no choice but to agree. However, this decision was soon reverted and the <span style="color: #fe9e00;">**ASPD**</span> is granted the Ministry of Work and Welfare. 
+与党連合は過半数を得られず、<span style="color: #7A3C00;">**NSDAP**</span>の閣外協力が必要となった。同党は<span style="color: #fe9e00;">**ASPD**</span>[? if not lvp_formed:&nbsp;と<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?]の内閣排除を要求し、[? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]の新州首相ヴィルヘルム・ビュンガーは応じざるを得なかった。しかしこの決定はほどなく覆され、<span style="color: #fe9e00;">**ASPD**</span>には労働福祉省が与えられた。
 
-Despite the exclusion of many supporting parties from the cabinet in favor of non-partisan figures, they choose to tolerate the coalition nonetheless.
+多くの支持政党を内閣から除外する代わりに非党派的な人物を起用したにもかかわらず、彼らはそれでも連合を容認することを選んだ。
 
 @grand_coalition_saxony
-title: A [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition is formed!
-subtitle: We have somehow reconciled with the bourgeois parties, that they're willing to govern with us again.
-unavailable-subtitle: [? if z_relation < 50 and stegerwald_path: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if dvp_toleration_threshold_fail_saxony: We need higher relations with the [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?][? if left_strength >= 15: Our Saxon organization is too left-wing to even consider this as an option—after all, their stubborn refusal in the past led to the expulsion of the majority of the parliamentary faction and the subsequent formation of the <span style="color: #fe9e00;">ASPD</span>. ?]
+title: [? if lvp_formed and stegerwald_path: <span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>?][? if not lvp_formed or not stegerwald_path:大?]連立が成立した！
+subtitle: 我々はブルジョワ政党と何らかの形で和解し、彼らが再び我々と共に統治する意思を持った。
+unavailable-subtitle: [? if z_relation < 50 and stegerwald_path: 我々は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]とのより良い関係を必要としている。?][? if dvp_toleration_threshold_fail_saxony: 我々は[? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]とのより良い関係を必要としている。?][? if left_strength >= 15: 我々のザクセン支部は、過去の彼らの頑なな拒否が議会派の大部分の追放とそれに続く<span style="color: #fe9e00;">ASPD</span>の結成を招いたため、これを選択肢として考えるにはあまりにも左翼的だ。?]
 view-if: spd_coalition_saxony >= 50
 choose-if: spd_coalition_possible_saxony and left_strength < 15
 on-arrival: saxony_spd = 1; saxony_groko = 1; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_spd += 3; unemployed_spd += 3; z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 5; pro_republic += 3; reformist_dissent -= 15; reformist_strength += 10; aspd_dead = 1
 
-Somehow, the bourgeois parties are willing to form a [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition with us, rather than continuing their current government with Max Heldt and the right-wing parties.
+どういうわけかブルジョワ諸党は、マックス・ヘルトと右派諸党の現政権を続ける代わりに、我々との[? if lvp_formed and stegerwald_path:<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>?][? if not lvp_formed or not stegerwald_path:大?]連立へ応じる姿勢を示した。
 
-With the <span style="color: #fe9e00;">**ASPD**</span> (whose Saxon chapter is notably more sane) now convinced of our reformist path, they have rejoined the Saxon <span style="color: #c00000;">**SPD**</span>!
+<span style="color: #fe9e00;">**ASPD**</span>（特にザクセン支部は常識的だ）が我々の改革路線を確信し、ザクセンの<span style="color: #c00000;">**SPD**</span>に再参加した！
 
 @united_left_saxony
-title: The <span style="color: #c00000;">**SPD**</span> will form a coalition government with the <span style="color: #700000;">**KPD**</span>.
-subtitle: History will repeat itself.
+title: <span style="color: #c00000;">**SPD**</span>が<span style="color: #700000;">**KPD**</span>と連立政権を樹立するだろう。
+subtitle: 歴史は繰り返すものだ。
 view-if: left_coalition_saxony >= 50 and (kpd_relation >= 35 and kpd_leader == "Conciliators") or (kpd_relation >= 55 and kpd_leader != "Conciliators")
 on-arrival: red_saxony = 1; z_relation -= 7; ddp_relation -= 7; dvp_relation -= 7; lvp_relation -= 7; coup_progress += 5; hindenburg_angry += 60; rfb_militancy += 0.08; rfb_strength += 150; sa_strength += 80; sh_strength += 80; strife += 1; workers_spd += 5; workers_kpd += 5; unemployed_spd += 5; new_middle_spd -= 5 if new_middle_conscious == 0; old_middle_spd -= 5; rural_spd -= 5 if rural_conscious == 0; communist_coalition += 3; kpd_relation += 15
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
+on-display: {!
+    var cardEl = document.createElement('div');
+    cardEl.className = "face-figure2";
 
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/redsaxony.png";  
+    var image = new Image();
+    image.className = "face-img";
+    image.src = "img/redsaxony.png";
 
-    cardEl.appendChild(image);  
+    cardEl.appendChild(image);
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
 
-Surprisingly, despite reluctance on both sides due to fears that the <span style="color: #808080;">reactionary</span> Hindenburg will order a <i>Reichsexekution</i> if a coalition were to form, <span style="color: #c00000;">Red</span> Saxony is restored! 
+驚くべきことに、もし連立が組まれた場合、<span style="color: #808080;">反動的な</span>ヒンデンブルクが<i>国境執行</i>を命じるかもしれないという両陣営の懸念にもかかわらず、<span style="color: #c00000;">赤の</span>ザクセンが回復した！
 
-As one of the most left-wing and industrial states in Germany, we will use our leverage to implement comprehensive reforms and transform Saxony into a stronghold of <span style="color: #c00000;">socialism</span>. Hindenburg’s patience is especially thin. Tread carefully.
+ドイツで最も左翼的で工業化された州の一つである我々は、その影響力を利用して包括的な改革を実施し、ザクセンを<span style="color: #c00000;">社会主義</span>の牙城に変えるだろう。ヒンデンブルクの忍耐は特に薄い。慎重に動け。
 
 @no_majority
-title: No majority can be found!
-subtitle: [? if bourgeois_coalition_saxony < 50 and spd_coalition_saxony < 50: All possible coalitions lack a majority. ?][? if spd_coalition_saxony >= 50 and not spd_coalition_possible_saxony: The bourgeois parties are antagonistic to our Saxon organization. ?][? if spd_coalition_saxony >= 50 and left_strength >= 15: Our party itself rejects the possibility of a majority coalition with the liberals. ?]
+title: 過半数は見つからない！
+subtitle: [? if bourgeois_coalition_saxony < 50 and spd_coalition_saxony < 50:あらゆる可能な連立は過半数に達しない。?][? if spd_coalition_saxony >= 50 and not spd_coalition_possible_saxony:ブルジョワ政党は我々のザクセン組織に敵対的だ。?][? if spd_coalition_saxony >= 50 and left_strength >= 15:我々の党自体が、自由主義者との過半数連立の可能性を拒否する。?]
 view-if: bourgeois_coalition_saxony < 50 and (not spd_coalition_possible_saxony or left_strength >= 15)
 on-arrival: {!
 let dvp_toleration_threshold = 30;
@@ -673,35 +673,35 @@ if (Q.saxony_no_majority) {
     lvp_toleration_threshold = 0;
     dvp_toleration_threshold = 0;
 }
-if ((Q.dvp_relation >= dvp_toleration_threshold && !Q.lvp_formed) || (Q.lvp_relation >= lvp_toleration_threshold && Q.lvp_formed)) { 
+if ((Q.dvp_relation >= dvp_toleration_threshold && !Q.lvp_formed) || (Q.lvp_relation >= lvp_toleration_threshold && Q.lvp_formed)) {
     Q.toleration_possible_saxony = 1;
 } else {
     Q.toleration_possible_saxony = 0;
 }
 !}
 
-With the bourgeois parties unable to secure a majority even with the toleration of the <span style="color: #7A3C00;">**NSDAP**</span>, and their refusal to form a coalition with us, no viable majority can be established. The ruling coalition fears that calling new elections will only accelerate their decline and further erode their support.
+ブルジョワ諸党は<span style="color: #7A3C00;">**NSDAP**</span>の閣外協力を得ても過半数を確保できず、我々との連立も拒むため、成立可能な多数派がない。与党連合は、新選挙を行えば自らの衰退が加速し、支持をさらに失うだけだと恐れている。
 
-In an effort to avoid this, they are more open to negotiating a toleration agreement.
+これを避けるため、彼らは閣外協力協定の交渉に前向きである。
 
 - @toleration_saxony
 - @no_majority_2
 
 @no_majority_2
-title: A majority still can't be found!
-subtitle: [? if not toleration_possible_saxony: This is getting ridiculous. ?][? if toleration_possible_saxony: We will refuse to tolerate the bourgeois government, forcing new elections. ?]
+title: 過半数はまだ見つからない！
+subtitle: [? if not toleration_possible_saxony: これは馬鹿げてきた。?][? if toleration_possible_saxony: ブルジョワ政権への閣外協力を拒み、新選挙へ追い込む。?]
 on-arrival: saxony_election_2_trigger_time = time + 3; saxony_no_majority = 1 if not saxony_no_majority; saxony_no_majority += 1 if saxony_no_majority; new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 1; unemployed_nsdap += 2; pro_republic -= 3; new_middle_spd -= 2 if toleration_possible_saxony; old_middle_spd -= 2 if toleration_possible_saxony; rural_spd -= 1 if toleration_possible_saxony
 
-A coalition of all the parties to the right of the <span style="color: #c00000;">**SPD**</span> isn't possible, and the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] is refusing any form of a Grand Coalition including us.
+右派の全政党による連合<span style="color: #c00000;">**SPD**</span>不可能だ、そして [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]は、我々を含むいかなる形の大連立も拒否している。
 
-With no viable alternatives, the Landtag faces dissolution, triggering new elections—an opportunity the <span style="color: #7A3C00;">**NSDAP**</span> hopes to exploit by capitalizing on political instability and the perceived failure of parliamentary democracy.
+他に実行可能な選択肢がないため、州議会は解散に直面し、新たな選挙が招かれる。これは、<span style="color: #7A3C00;">**NSDAP**</span> が政治的不安定と議会民主主義の認識された失敗に乗じて利用しようとする機会である。
 
-[? if saxony_no_majority > 1: Please stop. ?][? if saxony_no_majority > 2: Please stop. ?][? if saxony_no_majority > 3: Please stop. ?][? if saxony_no_majority > 4: Please stop. ?][? if saxony_no_majority > 5: Please stop. ?][? if saxony_no_majority > 6: Please stop. ?][? if saxony_no_majority > 7: Please stop. ?][? if saxony_no_majority > 8: Please stop. ?][? if saxony_no_majority > 9: Please stop. ?][? if saxony_no_majority > 10: Please stop. ?][? if saxony_no_majority > 11: Please stop. ?][? if saxony_no_majority > 12: Please stop. ?]
+[? if saxony_no_majority > 1: やめてくれ。 ?] [? if saxony_no_majority > 2: やめてくれ。 ?] [? if saxony_no_majority > 3: やめてくれ。 ?] [? if saxony_no_majority > 4: やめてくれ。 ?] [? if saxony_no_majority > 5: やめてくれ。 ?] [? if saxony_no_majority > 6: やめてくれ。 ?] [? if saxony_no_majority > 7: やめてくれ。 ?] [? if saxony_no_majority > 8: やめてくれ。 ?] [? if saxony_no_majority > 9: やめてくれ。 ?] [? if saxony_no_majority > 10: やめてくれ。 ?] [? if saxony_no_majority > 11: やめてくれ。 ?] [? if saxony_no_majority > 12: やめてくれ。 ?]
 
 @spd_majority
-title: Form an SPD only government!
-subtitle: Sweat...
-view-if: spd_r_saxony >= 50 
+title: SPDのみの政府を樹立せよ！
+subtitle: 汗...
+view-if: spd_r_saxony >= 50
 on-arrival: saxony_spd = 1; reformist_dissent -= 5; left_dissent -= 30; left_strength += 10; center_dissent -= 10; labor_dissent -= 10; aspd_dead = 1; workers_spd += 7; workers_kpd -= 4; new_middle_spd += 3; old_middle_spd += 2; unemployed_spd += 4; unemployed_nsdap -= 3; pro_republic += 5
 
-Unexpectedly, we've found ourselves controlling a majority of the Saxony landtag and being able to form a government of just the <span style="color: #c00000;">**SPD**</span>! It is unclear how the bourgeois and <span style="color: #808080;">reactionaries</span> will react to a <span style="color: #c00000;">Red</span> Saxony but without the <span style="color: #700000;">**Communists**</span>... [? if aspd_share > 0: The <span style="color: #fe9e00;">**ASPD**</span> seeing as we no longer require on coalition negotiations to form government has decided to join us. ?] 
+意外にも我々はザクセン州議会の過半数を握り、<span style="color: #c00000;">**SPD**</span>単独で政権を樹立できる！<span style="color: #700000;">**共産党**</span>を含まない<span style="color: #c00000;">赤い</span>ザクセンに、ブルジョワや<span style="color: #808080;">反動派</span>がどう反応するかは分からない。[? if aspd_share > 0: 政権樹立に連立交渉が不要となったのを見て、<span style="color: #fe9e00;">**ASPD**</span>は我々への合流を決めた。?]

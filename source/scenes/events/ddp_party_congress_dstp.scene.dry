@@ -1,5 +1,5 @@
-title: Discontent in the <span style="color: #D3C24D;">**DStP**</span>.
-subtitle: The conflict between the Young Germans and <span style="color: #D3C24D;">**Democrats**</span> has reached a climax...
+title: <span style="color: #D3C24D;">**DStP**</span>内の不満
+subtitle: 青年ドイツ団と<span style="color: #D3C24D;">**民主党員**</span>の対立が頂点に達する……。
 view-if: year == 1930 and month >= 10 and not lvp_formed and dstp_formed
 on-arrival: {!
 Q.dstp_collapse_seen = 1;
@@ -40,14 +40,14 @@ tags: event
 face-image: img/dstp.jpg
 new-page: true
 
-= Discontent in the <span style="color: #D3C24D;">**DStP**</span>
+= <span style="color: #D3C24D;">**DStP**</span>内の不満
 
-Since the formation of the <span style="color: #D3C24D;">**DStP**</span> over the last few months, tensions between the old-line <span style="color: #D3C24D;">democrats</span> and those who joined from the <span style="color: #D3D3A9;">**VNR**</span> have escalated significantly. It seems the consequences of merging a mildly anti-Semitic paramilitary group with a left-liberal party traditionally associated with the <span style="color: #005EB8;">Jews</span> have finally caught up to them. [? if change_ddp_votes < 0 and dstp_election: The electoral defeat suffered by the <span style="color: #D3C24D;">**DStP**</span> in the most recent elections has further fueled internal discontent, with both sides blaming each other for the loss.?][? if not dstp_election: Despite this glaring contradiction, the new party has yet to test its worth in a national election, and skeptics on both sides have kept their criticisms subdued for the time being. ?] [? if dstp_election or next_election_time - time < 6: Among embittered <span style="color: #D3C24D;">democrats</span>, it appears that nearly half of the voters in the Order cast their ballots for the <span style="color: #7A3C00;">**NSDAP**</span> instead of the party they helped establish, with electoral gains only being reported in districts where their own candidate is at the top of the ballot.?]
+<span style="color: #D3C24D;">**DStP**</span>結成から数か月、古参の<span style="color: #D3C24D;">民主党員</span>と<span style="color: #D3D3A9;">**VNR**</span>出身者の緊張は大幅に高まった。反ユダヤ主義を帯びた準軍事組織と、伝統的に<span style="color: #005EB8;">ユダヤ人</span>と結び付けられてきた左派自由主義政党を合併した矛盾が、ついに表面化したようである。[? if change_ddp_votes < 0 and dstp_election: 直近の選挙における<span style="color: #D3C24D;">**DStP**</span>の敗北で不満はさらに強まり、両陣営は互いに責任を押し付けている。?][? if not dstp_election: この明白な矛盾にもかかわらず、新党はまだ全国選挙で試されておらず、双方の懐疑派は今のところ批判を抑えている。 ?] [? if dstp_election or next_election_time - time < 6: 憤る<span style="color: #D3C24D;">民主党員</span>によれば、団の支持者の半数近くが、自ら結成を助けた党ではなく<span style="color: #7A3C00;">**NSDAP**</span>に投票したようである。得票増が報告されているのも、団出身の候補が名簿筆頭を占める選挙区だけだ。?]
 
-According to the agreement on which the founding of the <span style="color: #D3C24D;">**DStP**</span> was based, Koch-Weser was to serve as the new party’s parliamentary leader, and Mahraun as the head of its national organization. However, this arrangement is blocked by a group of old-line <span style="color: #D3C24D;">democrats</span> who succeeded in preventing Koch-Weser’s election as the head of the Reichstag delegation. Relations between the two groups further soured when Mahraun, acting as the "Reichsführer" of the <span style="color: #D3C24D;">**DStP**</span>, attempted to alter the previously agreed organizational structure. This dispute over the separation of powers has led to open attacks between the opposing sides, with the old-line <span style="color: #D3C24D;">democrats</span> seeking to sideline Artur Mahraun's Young German Order, and Mahraun refusing to relinquish his position as "Reichsführer."
+<span style="color: #D3C24D;">**DStP**</span>結成時の合意では、コッホ＝ヴェーザーが議会指導者、マーラウンが全国組織の長となるはずだった。ところが古参の<span style="color: #D3C24D;">民主党員</span>の一派が、コッホ＝ヴェーザーの国会議員団長選出を阻んだ。さらに、<span style="color: #D3C24D;">**DStP**</span>の「全国指導者」として振る舞うマーラウンが、合意済みの組織構造を変えようとし、両派の関係は一層悪化した。権限配分をめぐる争いは公然たる非難の応酬となった。古参の<span style="color: #D3C24D;">民主党員</span>はアルトゥール・マーラウンの青年ドイツ団を脇に追いやろうとし、マーラウンは「全国指導者」の地位を手放そうとしない。
 
-- @dstp_maintained: The <span style="color: #D3C24D;">**DStP**</span> is maintained!
-- @dstp_collapse: The <span style="color: #D3C24D;">**DStP**</span> has collapsed!
+- @dstp_maintained: <span style="color: #D3C24D;">**DStP**</span>が存続する！
+- @dstp_collapse: <span style="color: #D3C24D;">**DStP**</span>が崩壊する！
 
 @dstp_maintained
 view-if: dstp_collapse_points < 4
@@ -56,9 +56,9 @@ face-image: img/young_german_order.jpg
 achievement: ein_interessantes_experiment
 go-to: recalculate
 
-Surprisingly, the contradiction that is the <span style="color: #D3C24D;">**DStP**</span> continues to live on. After intense negotiations between the <span style="color: #D3C24D;">democrats</span> in favor of the merger, like Koch-Weser, and the dissenting old-line <span style="color: #D3C24D;">democrats</span>, they agree to elevate Koch-Weser to the chairman of the Reichstag faction. However, Mahraun's control over the party's national organization proved to be a much trickier problem, as Mahraun’s Order remained inflexible when it came to compromise. The deadlock is finally resolved when Mahraun agrees to cede some of his Reichsführer powers to the executive committee in exchange for a larger share of <span style="color: #D3D3A9;">**VNR**</span>-affiliated delegates at next month's party congress.
+驚くべきことに、矛盾を抱える<span style="color: #D3C24D;">**DStP**</span>は存続する。コッホ＝ヴェーザーら合併賛成派の<span style="color: #D3C24D;">民主党員</span>と、反対する古参の<span style="color: #D3C24D;">民主党員</span>は激しい交渉の末、彼を国会議員団長に据えることで合意した。しかし全国組織に対するマーラウンの支配権は、団が妥協に応じないため、さらに難しい問題となった。最終的に、翌月の党大会で<span style="color: #D3D3A9;">**VNR**</span>系代議員の比率を増やす代わりに、マーラウンが全国指導者の権限の一部を執行委員会に譲り、膠着は解消された。
 
-It seems this experiment will persist, with the <span style="color: #D3C24D;">**DStP**</span> adopting a more nationalistic and statist identity compared to the old <span style="color: #D3C24D;">**DDP**</span>. Only time will tell how the party will fare against the rise of the <span style="color: #7A3C00;">**NSDAP**</span>.
+この実験は続くようだ。<span style="color: #D3C24D;">**DStP**</span>は旧<span style="color: #D3C24D;">**DDP**</span>よりも民族主義と国家主義を強める。台頭する<span style="color: #7A3C00;">**NSDAP**</span>にどこまで対抗できるかは、時が明らかにするだろう。
 
 @dstp_collapse
 view-if: dstp_collapse_points >= 4
@@ -66,11 +66,11 @@ on-arrival: dstp_collapsed = 1; liberal_cooperation -= 1; bourgeois_cooperation 
 face-image: img/young_german_order.jpg
 go-to: recalculate
 
-Negotiations between Mahraun and the <span style="color: #D3C24D;">democrats</span> have finally collapsed; the experiment has finally fallen apart. The members from Mahraun's <span style="color: #D3D3A9;">**VNR**</span> have split[? if dstp_election:, taking their Reichstag seats with them?]. Responsibility for the break is argued on both sides, with the old-line <span style="color: #D3C24D;">democrats</span> Mahraun's refusal to compromise and the Order blaming purposeful obstruction.
+マーラウンと<span style="color: #D3C24D;">民主党員</span>の交渉はついに決裂し、この実験は破綻した。マーラウンの<span style="color: #D3D3A9;">**VNR**</span>出身者は[? if dstp_election:国会議席を保持したまま?]離脱した。双方は決裂の責任を争い、古参の<span style="color: #D3C24D;">民主党員</span>はマーラウンの妥協拒否を、団は意図的な妨害を非難している。
 
-[? if dstp_election: In terms of consequences, the defection of the <span style="color: #D3D3A9;">**VNR**</span>-affiliated Reichstag delegates has severely diminished their parliamentary influence. [? if ddp_r < 3.6: So much so that the <span style="color: #D3C24D;">**DStP**</span> is now too small to form a parliamentary faction and must negotiate with another party, which is challenging given the debacle that occurred months ago.?]?] An air of pessimism and despair has settled over the <span style="color: #D3C24D;">**DStP**</span>, especially impacting Koch-Weser, who, deeply demoralized by the collapse of the <span style="color: #D3C24D;">**State Party**</span>, has ultimately decided to retire from politics altogether.
+[? if dstp_election: <span style="color: #D3D3A9;">**VNR**</span>系国会議員の離脱は、議会での影響力を著しく弱めた。[? if ddp_r < 3.6: <span style="color: #D3C24D;">**DStP**</span>は単独会派を組めない規模にまで縮小し、他党と交渉せざるを得ない。しかし数か月前の騒動を考えれば、容易ではない。?]?]悲観と絶望が<span style="color: #D3C24D;">**DStP**</span>を覆っている。特にコッホ＝ヴェーザーは<span style="color: #D3C24D;">**国家党**</span>の崩壊で深く意気消沈し、ついに政界からの完全引退を決意した。
 
-Overall, this entire debacle has essentially resulted in the <span style="color: #D3C24D;">**DStP**</span> becoming the <span style="color: #D3C24D;">**DDP**</span> with a new name, albeit with a more nationalistic and statist platform.
+結局、この騒動の結果、<span style="color: #D3C24D;">**DStP**</span>は名前を変えた<span style="color: #D3C24D;">**DDP**</span>に戻ったに等しい。ただし綱領には、以前より民族主義・国家主義的な色彩が濃く残った。
 
 
 @recalculate
@@ -112,4 +112,3 @@ achievement: dstp_maintained
 
 @dstp_collapsed_achievement
 achievement: dstp_collapsed
-

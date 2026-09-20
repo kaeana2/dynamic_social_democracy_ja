@@ -1,43 +1,42 @@
-title: Magnus Hirschfeld
+title: マグヌス・ヒルシュフェルト
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/HirschfeldMagnus.jpg
 view-if: hirschfeld_advisor = 1
 new-page: true 
 
-= Magnus Hirschfeld
+= マグヌス・ヒルシュフェルト
 
-Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities. [? if homosexual_rights: He currently has considerable support among party factions due to the <span style="color: #c00000;">**SPD**</span>'s achievement in <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> rights. ?]
+マグヌス・ヒルシュフェルトは性科学研究所の創設者で、性的少数者の権利擁護者である。[? if homosexual_rights: <span style="color: #c00000;">**SPD**</span>が<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span><span style="color: blue;">の権</span><span style="color: purple;">利</span>を前進させたため、現在は党内諸派から相当な支持を得ている。 ?]
 
 
 - @homosexual_rights_
 - @womens_rights_
 - @science_funding
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 
 @homosexual_rights_
-title: <span style="color: red;">Ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> rights
-subtitle: Enact policy that supports <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> rights.
+title: <span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span><span style="color: blue;">の権</span><span style="color: purple;">利</span>
+subtitle: <span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span><span style="color: blue;">の権</span><span style="color: purple;">利</span>を擁護する政策を実施する。
 choose-if: advisor_action_timer = 0 and spd_in_government and progressive_coalition >= 50 and not cvp_women_accepted
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not currently in government. ?][? if progressive_coalition < 50 : We do not have the votes to enact these policies. ?] [? if cvp_women_accepted : Our coalition agreement stipulates against action toward <span style="color: red;">Ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> rights. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_in_government : <span style="color: #c00000;">SPD</span>は現在政権に参加していない。 ?][? if progressive_coalition < 50 : この政策を実施するための票が足りない。 ?] [? if cvp_women_accepted : 連立協定により同性愛者の権利に関する施策は禁止されている。 ?]
 on-arrival: advisor_action_timer = 6; homosexual_rights_timer -= 11; last_advisor_action = 1
 go-to: homosexual_rights
 
 
 @womens_rights_
-title: Women's rights
-subtitle: Enact policy with regards to women's rights.
+title: 女性の権利
+subtitle: 女性の権利に関する政策を実施する。
 choose-if: advisor_action_timer = 0 and spd_in_government and not cvp_women_accepted
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not currently in government. ?] [? if cvp_women_accepted : Our coalition agreement stipulates against action toward Women's rights. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_in_government : <span style="color: #c00000;">SPD</span>は現在政権に参加していない。 ?] [? if cvp_women_accepted : 連立協定により女性の権利に関する施策は禁止されている。 ?]
 on-arrival: advisor_action_timer = 6; womens_rights_timer -= 10; last_advisor_action = 1
 go-to: womens_rights
 
 @science_funding
-title: Science funding
-subtitle: Increase funding for scientific research.
+title: 科学研究費
+subtitle: 科学研究への資金を増額する。
 choose-if: advisor_action_timer = 0 and spd_in_government and economic_minister_party = "SPD" and chancellor_party = "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not currently in government. ?][? if economic_minister_party != "SPD": This requires the Economic Ministry. ?][? if chancellor_party != "SPD": The Chancellor must be an <span style="color: #c00000;">SPD</span> member. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_in_government : <span style="color: #c00000;">SPD</span>は現在政権に参加していない。 ?][? if economic_minister_party != "SPD": 経済省の掌握が必要である。 ?][? if chancellor_party != "SPD": 首相が<span style="color: #c00000;">SPD</span>所属でなければならない。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.increase_science
-

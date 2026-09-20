@@ -1,5 +1,5 @@
-title: The <span style="color: #FFCC00;">**LVP**</span> and the Reichsbanner
-subtitle: Due to its militarization, the <span style="color: #FFCC00;">liberals</span> are leaving the Reichsbanner.
+title: <span style="color: #FFCC00;">**LVP**</span>と国旗団
+subtitle: 国旗団の軍事化を理由に、<span style="color: #FFCC00;">自由主義者</span>が離脱しようとしている。
 view-if: rb_militancy >= 0.04 and not rb_exit and not rb_stay and lvp_formed and lvp_ideology != "Left"
 new-page: true
 tags: event
@@ -17,18 +17,18 @@ on-display: {!
 !}
 max-visits: 1
 
-= The <span style="color: #FFCC00;">**LVP**</span> and the Reichsbanner
+= <span style="color: #FFCC00;">**LVP**</span>と国旗団
 
-The Reichsbanner has increasingly militarized, acquiring arms, conducting paramilitary training, and attracting a stream of <span style="color: #9B0000;">radicalized</span> <span style="color: #c00000;">**SPD**</span> members. The <span style="color: #FFCC00;">**LVP**</span> in particular is offended by this, as many of its members originate from the semi-monarchist <span style="color: #C0A054;">**DVP**</span> and even have <span style="color: #3E88B3;">**Stahlhelm**</span> memberships. The organization's militarization has provided them with a pretext to sever formal ties with this <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> organization.
+国旗団は武器を調達し、準軍事訓練を実施し、<span style="color: #9B0000;">急進化した</span><span style="color: #c00000;">**SPD**</span>党員を次々と引き入れ、軍事化を強めている。とりわけ<span style="color: #FFCC00;">**LVP**</span>はこれに反発している。党員の多くは半君主主義的な<span style="color: #C0A054;">**DVP**</span>の出身で、<span style="color: #3E88B3;">**鉄兜団**</span>にも所属する者さえいるためだ。国旗団の軍事化は、この<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">組織</span>との正式な関係を断つ口実を与えた。
 
-- @let_go: Let the <span style="color: #FFCC00;">liberals</span> go.
-- @lower_militancy: We must lower the Reichsbanner's militancy.
-- @keep_them: Can we convince them that a militant Reichsbanner is necessary for defending the Republic?
+- @let_go: <span style="color: #FFCC00;">自由主義者</span>を去らせる。
+- @lower_militancy: 国旗団の戦闘性を下げなければならない。
+- @keep_them: 共和国防衛には戦闘的な国旗団が必要だと説得できないか？
 
 @let_go
 on-arrival: rb_strength *= 0.95; z_relation -= 3; lvp_relation -= 5; lvp_right += 3; pro_republic -= 3; lvp_leave_reichsbanner = 1
 
-We have judged that the Reichsbanner's militancy is more important than maintaining a coalition with the <span style="color: #FFCC00;">**LVP**</span>. The Reichsbanner members affiliated with the <span style="color: #FFCC00;">liberals</span> leave, and this may inspire the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to follow suit.
+<span style="color: #FFCC00;">**LVP**</span>との協力関係を維持するより、国旗団の戦闘性を保つほうが重要だと判断した。<span style="color: #FFCC00;">自由主義者</span>系の国旗団員は離脱し、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]も後に続くかもしれない。
 
 # TODO: this should make it harder to form Weimar coalitions
 
@@ -36,12 +36,12 @@ We have judged that the Reichsbanner's militancy is more important than maintain
 @lower_militancy
 on-arrival: rb_militancy *= 0.5
 
-Bowing to the <span style="color: #FFCC00;">**LVP**</span>'s demands, we reduce the Reichsbanner's military training, thus inducing them to stay.
+<span style="color: #FFCC00;">**LVP**</span>の要求に譲歩し、国旗団の軍事訓練を縮小して残留を促した。
 
 
 @keep_them
-unavailable-subtitle: They are unable to be convinced at this time.
+unavailable-subtitle: 現時点では説得できない。
 choose-if: strife >= 3 and lvp_relation >= 55 and lvp_ideology != "Right"
 on-arrival: lvp_left += 3; lvp_relation += 3; old_middle_dnvp += 3; old_middle_lvp -= 3; pro_republic += 3
 
-Seeing the strife that has filled Germany's streets, the <span style="color: #FFCC00;">**LVP**</span> seem to be convinced that it is necessary for the Reichsbanner to be militarized, and will not leave the organization. Unfortunately, many die-hard <span style="color: #3E88B3;">**Stahlhelm**</span> members within the party are constantly pressing for a reversal of this policy.
+ドイツの街頭を覆う闘争を目の当たりにし、<span style="color: #FFCC00;">**LVP**</span>は国旗団の軍事化が必要だと納得したようで、組織を離れないことになった。だが党内の頑迷な<span style="color: #3E88B3;">**鉄兜団**</span>員は、この方針を撤回するよう絶えず迫っている。

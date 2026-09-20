@@ -1,5 +1,5 @@
-title: Papen Resigns!
-subtitle: The failure of the *Preußenschlag* has compelled him to resign.
+title: パーペン、辞任！
+subtitle: プロイセン・クーデターの失敗により辞任へ追い込まれた。
 view-if: chancellor = "Papen" and prussia_coup_win
 on-arrival: papen_explode = 1
 new-page: true
@@ -7,8 +7,8 @@ tags: event
 max-visits: 1
 face-image: img/portraits/PapenFranz.jpg
 
-= Papen Resigns
+= パーペン、辞任
 
-Following the disastrous failure of the Prussian <i>Reichsexekution</i>, Papen has lost the support of Hindenburg and his camarilla, making his position untenable. It's expected that General Schleicher would be the successor to Papen, however, being the Defense Minister and mastermind of the failed coup has severely damaged his standing as well. With new elections coming up soon, Hindenburg may choose to keep Papen in office, until a successor can be found with a new, more right-wing Reichstag.
+プロイセンに対するライヒ執行が破滅的な失敗に終わったため、パーペンはヒンデンブルクとその側近集団の支持を失い、地位を維持できなくなった。後継者にはシュライヒャー将軍が予想されるが、国防相であり失敗したクーデターの首謀者でもあったため、彼の立場も深刻な打撃を受けている。新選挙が近く行われることから、より右翼的な新国会の下で後継者が見つかるまで、ヒンデンブルクがパーペンを留任させる可能性もある。
 
 # TODO

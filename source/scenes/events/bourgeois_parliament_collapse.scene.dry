@@ -1,18 +1,18 @@
-title: Bourgeois Parliamentary Group Collapses!
+title: ブルジョワ議会グループ崩壊！
 new-page: true
-subtitle: Crazy stuffs.
+subtitle: 奇妙な同盟の終焉。
 tags: event
 view-if: bruning_time >= 6 and (in_center_right_coalition or in_right_coalition or spd_toleration_right) and (bourgeois_parliament or bourgeois_parliament_no_liberals) and bruning_coalition_dissent >= 3 and not cvp_formed
 on-arrival: pro_republic -= 3; dvp_right += 5; ddp_cohesion -= 3 if bourgeois_coalition_ddp; ddp_right += 3 if bourgeois_coalition_ddp; lvp_right += 3
 max-visits: 1
 
-= Bourgeois Parliamentary Group Collapses!
+= ブルジョワ議会グループ崩壊！
 
-The various disagreements that have arisen between the bourgeois parties themselves, as well as with Chancellor Brüning, have caused the parliamentary group to fracture, with each party now going its own separate way. This division significantly weakens their collective influence over Brüning and his policies, granting him greater autonomy as he now negotiates with each party individually.
+ブルジョワ諸党間の対立と、ブリューニング首相との意見の相違によって議会グループは分裂し、各党は別々の道を歩むことになった。この分裂でブリューニングとその政策に対する共同の影響力は著しく弱まり、首相は各党と個別に交渉することで、より自由に行動できるようになった。
 
-- @damn: The affairs of the bourgeois parties don't concern us.
+- @damn: ブルジョワ政党のことは我々には関心がない。
 
 @damn
 on-arrival: bourgeois_parliament = 0; bourgeois_parliament_no_liberals = 0; bourgeois_parliament_ddp = 0; bourgeois_parliament_kvp = 0; bourgeois_list = 0; bourgeois_list_ddp = 0; bourgeois_list_kvp = 0
 
-Brüning’s austerity measures will likely intensify from this point forward.
+ブリューニングの緊縮策は、ここからさらに強まるだろう。

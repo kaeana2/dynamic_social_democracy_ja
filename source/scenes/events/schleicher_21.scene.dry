@@ -1,5 +1,5 @@
-title: The <span style="color: #c00000;">**SPD**</span> Slips Away
-subtitle: We handed Schleicher too much influence over us.
+title: <span style="color: #c00000;">**SPD**</span>が我々の手を離れる
+subtitle: 我々はシュライヒャーに、党内であまりに大きな影響力を与えてしまった。
 view-if: chancellor = "Schleicher" and dnef_formed and schleicher_spd_influence >= 10
 new-page: true
 priority: 2
@@ -33,18 +33,18 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #c00000;">**SPD**</span> Slips Away
+= <span style="color: #c00000;">**SPD**</span>が我々の手を離れる
 
-Low-ranking party members loyal to Schleicher have steadily climbed the ranks, until a new executive committee finally replaces the old guard that had served the party since the founding of the republic.
+シュライヒャーに忠実な下級党員が着実に昇進し、ついに新たな執行部が、共和国成立以来党を支えてきた旧指導層に取って代わった。
 
-At its head now stand Schleicher’s yes-men—figures like the notorious former Defense Minister Gustav Noske and Lothar Erdmann, a nationalist voice within the ADGB, fiercely hostile to the Treaty of Versailles and far closer to Schleicher’s ideology than the mere pragmatism of Braun or Leipart.
+今やその先頭に立つのは、悪名高い元国防相グスタフ・ノスケや、ADGB内の国家主義者ロータル・エルトマンといったシュライヒャーの追従者である。ヴェルサイユ条約に激しく敵対し、単に現実主義的なブラウンやライパルトより、はるかにシュライヒャーの思想に近い。
 
-The <span style="color: #BFC8CC;">German National Unity Front</span> welcomes its new member.
+<span style="color: #BFC8CC;">ドイツ国民統一戦線</span>が新たな参加者を迎える。
 
 - @spd_joever
 
 @spd_joever
-title: The end of <span style="color: #c00000;">Social Democracy</span>.
+title: <span style="color: #c00000;">社会民主主義</span>の終焉。
 go-to: game_over if not (dynamic_mode or historical_mode or difficulty == 1); sozialdemokratische_blockpartei if (dynamic_mode or historical_mode or difficulty == 1)
 
 @sozialdemokratische_blockpartei

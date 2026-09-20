@@ -1,42 +1,42 @@
-title: Wittorf Affair
-subtitle: A crisis in the <span style="color: #700000;">**KPD**</span>?
+title: ヴィットルフ事件
+subtitle: <span style="color: #700000;">**KPD**</span>を揺るがす危機か？
 new-page: true
 view-if: kpd_relation >= 30 and comintern_seen and year = 1928 and month >= 8 and month <= 10
 max-visits: 1
 on-arrival: wittorf_affair_seen = 1
 tags: event
 
-= Wittorf Affair
+= ヴィットルフ事件
 
-Our spies and contacts amongst the communists have brought news of a scandal engulfing the <span style="color: #700000;">**KPD**</span> leadership. An associate of <span style="color: #700000;">**KPD**</span> chairman Ernst Thälmann, a <span style="color: #700000;">**KPD**</span> official named John Wittorf, is accused of embezzling campaign funds, diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
+我々の密偵と共産主義者内部の連絡員から、<span style="color: #700000;">**KPD**</span>指導部を巻き込む醜聞の知らせが届いた。<span style="color: #700000;">**KPD**</span>党首エルンスト・テールマンの側近で、<span style="color: #700000;">**KPD**</span>幹部でもあるジョン・ヴィットルフが選挙資金数千ライヒスマルクを横領し、私的に流用したとして告発され、テールマンにも事件を隠蔽した疑いがかけられている。党中央委員会は告発を重大視している。
 
-The Conciliators in the <span style="color: #700000;">**KPD**</span>, a faction opposed to the party's present hard-line policy, are said to have leaked this information to aid them in the intra-party struggle. Dissident communists in the Leninbund also have information about this affair, and are planning to publish it.
+<span style="color: #700000;">**KPD**</span>内で現行の強硬路線に反対する調停派が、党内闘争を有利に進めるため情報を漏らしたといわれる。レーニン同盟の反対派共産主義者も事件の情報を握り、公表を計画している。
 
-What should we do with this information?
+この情報はどうするべきか？
 
 - @publicize
 - @nothing
 - @secret
 
 @publicize
-title: We will publicize the scandal to damage the <span style="color: #700000;">**KPD**</span> and Thälmann.
+title: 醜聞を公表し、<span style="color: #700000;">**KPD**</span>とテールマンに打撃を与える。
 on-arrival: kpd_relation -= 10; workers_kpd -= 4; unemployed_kpd -= 4
 
-Our newspapers are among the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. We have damaged the <span style="color: #700000;">**KPD**</span>'s standing among the workers, but also perhaps closed the door on further cooperation.
+我が党の新聞は事件をいち早く報じ、共産主義者の偽善へ激しい批判を浴びせた。<span style="color: #700000;">**KPD**</span>の労働者層における立場を傷つけた一方、今後の協力への道も閉ざしたかもしれない。
 
-In the end, <span style="color: #8B0000;">Stalin</span>'s pressure helps to keep Thälmann from facing much in the way of consequences.
+結局、<span style="color: #8B0000;">スターリン</span>の圧力によって、テールマンは重大な処分を免れた。
 
 @nothing
-title: Do nothing with the information.
+title: 情報を利用しない。
 on-arrival: workers_kpd -= 2; unemployed_kpd -= 2
 
-The information spreads without our help, leading to some loss of <span style="color: #700000;">**KPD**</span> support among the workers.
+情報は我々が手を貸さずとも広まり、<span style="color: #700000;">**KPD**</span>は労働者層の支持をいくらか失った。
 
 
 @secret
-title: It is best to keep this information secret. Prevent the Leninbund and dissident <span style="color: #700000;">**KPD**</span> members from spreading this.
+title: 情報を秘匿し、レーニン同盟と<span style="color: #700000;">**KPD**</span>反対派による拡散を阻止する。
 choose-if: levi_advisor or rosenfeld_advisor
-unavailable-subtitle: We do not have contacts among the dissident communists.
+unavailable-subtitle: 反対派共産主義者との連絡経路がない。
 on-arrival: wittorf_secret = 1; reformist_dissent += 5; left_dissent += 5
 
-Some among our leadership consider it unsavory to engage in cloak-and-dagger scheming. However, keeping this secret might be necessary to work with the <span style="color: #700000;">**KPD**</span>, and the information might become useful later.
+党指導部には、このような謀略に手を染めるのは卑劣だと考える者もいる。だが<span style="color: #700000;">**KPD**</span>と協力するには、事件を秘匿する必要があるかもしれない。情報はいずれ役立つ可能性もある。

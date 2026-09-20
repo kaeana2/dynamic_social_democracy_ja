@@ -1,36 +1,36 @@
-title: Hitler appointed Chancellor!
-subtitle: The beginning of the end...
+title: ヒトラー、首相に任命される！
+subtitle: 終焉の始まり……
 view-if: year >= 1933 and president = "Hindenburg" and (chancellor = "Papen" or chancellor = "Schleicher") and schleicher_chancellor_timer == 1 and in_grand_coalition = 0 and spd_in_government = 0 and largest_party = "NSDAP" and hitler_deported = 0 and not presidential_powers and not schleichers_scheme_success
 on-departure: chancellor = "Hitler"; chancellor_party = "NSDAP"
 #tags: event
 new-page: true
 
-= Hitler Appointed Chancellor!
+= ヒトラー、首相に任命される！
 
-Internal scheming by the camarilla surrounding the president has caused President Hindenburg to appoint Hitler as chancellor, replacing the unpopular [+ chancellor +]. [? if hitler_deported : Despite his earlier deportation, the <span style="color: #7A3C00;">Nazi</span> leaders and their <span style="color: #3E88B3;">reactionary</span> allies have connived for the president to give him German citizenship after all. ?] Some of the <span style="color: #808080;">reactionaries</span> surrounding Hindenburg believe that he will restore Germany to its supposed former glory, while others believe that they can control him and his movement.
+大統領を取り巻く側近集団の策謀により、ヒンデンブルク大統領は不人気な[+ chancellor +]に代えて、ヒトラーを首相に任命した。[? if hitler_deported : 以前に国外追放されていたにもかかわらず、<span style="color: #7A3C00;">ナチ</span>指導部とその<span style="color: #3E88B3;">反動派</span>の同盟者は結託し、結局は大統領にヒトラーのドイツ国籍を認めさせた。?]ヒンデンブルク周辺の<span style="color: #808080;">反動派</span>には、ヒトラーがドイツをかつての栄光へ戻すと信じる者もいれば、彼とその運動を自分たちの統制下に置けると考える者もいる。
 
-He has promised a campaign of revenge against the <span style="color: #c00000;">socialists</span>, and the <span style="color: #7A3C00;">Nazis</span> have already spilled blood. In his published manifesto, he promises a campaign of <span style="color: #7e0000;">**unspeakable**</span> <span style="color: #3f0000;">**horror**</span> against <span style="color: #005EB8;">Jews</span>, and endless wars of violent expansion that will ruin all of Europe.
+彼は<span style="color: #c00000;">社会主義者</span>への復讐を公言し、<span style="color: #7A3C00;">ナチ</span>はすでに血を流してきた。公刊された綱領のなかで、彼は<span style="color: #005EB8;">ユダヤ人</span>に対する<span style="color: #7e0000;">**言語を絶する**</span><span style="color: #3f0000;">**恐怖**</span>の迫害と、全ヨーロッパを破滅させる果てしない武力膨張戦争を予告している。
 
-What are we to do now?
+今、我々はどうすべきなのか？
 
-- @fight: We will fight on the streets to prevent Hitler from taking power.
-- @give_up: We will vote against the <span style="color: #7A3C00;">Nazis</span> in the Reichstag.
+- @fight: ヒトラーの権力掌握を阻むため、街頭で戦う。
+- @give_up: 国会で<span style="color: #7A3C00;">ナチ</span>に反対票を投じる。
 
 
 @fight
 
-Do we realize that this means civil war, against the full force of the state?
+それが国家の全兵力を相手にする内戦を意味すると理解しているのか？
 
-- @civil_war: Yes.
-- @give_up: We are not ready for war. Instead, we will vote against the nazis in the Reichstag.
+- @civil_war: その通りだ。
+- @give_up: 戦争の準備はできていない。代わりに国会でナチに反対票を投じる。
 
 @give_up
 on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; prussia_leader = "Papen"
 
-Speeches are made. Votes are held. Bullets fly in the streets. Some <span style="color: #c00000;">socialists</span> are killed or jailed. Others flee the country. What can votes even do at this juncture?
+演説が行われ、投票が実施される。街頭では銃弾が飛び交う。<span style="color: #c00000;">社会主義者</span>の一部は殺され、あるいは投獄され、別の者たちは国外へ逃れた。この段階で、投票にいったい何ができるというのか？
 
-The Reichstag is burned, ostensibly by a foreign <span style="color: #700000;">communist</span>. In the wake, the <span style="color: #7A3C00;">Nazis</span> pass decrees giving them unlimited power. They, combined with the [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?], will win a majority at the next elections.
+国会議事堂が炎上した。表向きは外国人の<span style="color: #700000;">共産主義者</span>による犯行とされた。事件を受け、<span style="color: #7A3C00;">ナチ</span>は自らに無制限の権力を与える緊急令を成立させた。次の選挙では、彼らと[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]を合わせた勢力が過半数を獲得するだろう。
 
-Germany is lost.
+ドイツは失われた。
 
 - @game_over

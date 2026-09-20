@@ -1,5 +1,5 @@
-title: Schleicher Presents a New Government
-subtitle: A Commissioner for Employment is established for planned public works...
+title: シュライヒャーが新内閣を発表
+subtitle: 公共事業計画のため、雇用担当の国家弁務官が設置される……
 view-if: chancellor = "Schleicher" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 new-page: true
 tags: event
@@ -8,12 +8,12 @@ priority: 3
 on-arrival: pro_republic += 5; schleicher_spd_support += 1; schleicher_spd_support += 2 if wtb_adopted; schleicher_spd_r += 1 if wtb_adopted; schleicher_approval += 1
 face-image: img/portraits/schleicher_chancellor.jpg
 
-= Von Schleicher Cabinet
+= フォン・シュライヒャー内閣
 
-Chancellor Schleicher has unveiled his new cabinet—retaining all but two of Papen’s ministers. His top priority, he claims, is putting people back to work. To that end, he has appointed Günther Gereke, President of the Rural Municipal Congress and a reformist economic theorist, as <i>Reichskommissar</i> for Employment, with a full seat in the cabinet.
+シュライヒャー首相は新内閣を発表し、パーペン内閣の閣僚を二人を除いて留任させた。最優先課題は人々に仕事を取り戻すことだという。そのため、農村自治体会議の会長で改革派の経済理論家ギュンター・ゲーレケを、正式な閣僚資格を持つ雇用担当<i>国家弁務官</i>に任命した。
 
-For now, Schleicher is enjoying a political honeymoon. The relief at Papen’s fall has been widespread, and his public disavowal of any plans to alter the constitution has calmed both the national mood and the <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span> who had bitterly opposed his predecessor.
+今のところ、シュライヒャーは政権発足直後の好意的な空気を享受している。パーペン退陣への安堵は広く行き渡り、憲法改変の意図を公然と否定したことで、国民感情も、前任者に激しく反対した<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>も落ち着いた。
 
-The <span style="color: #000000;">Christian</span> trade unions and their affiliated parties have adopted a conciliatory stance, while the ADGB and <span style="color: #c00000;">**SPD**</span> leaderships, viewing Schleicher as the lesser evil, have responded positively to his public works proposals.
+<span style="color: #000000;">キリスト教系</span>労組と関係政党は融和的な態度を取り、ADGBと<span style="color: #c00000;">**SPD**</span>の指導部も、シュライヒャーをよりましな選択肢と見て、公共事業構想に好意的に応じている。
 
-But the real issue isn’t popular unrest—it’s whether Schleicher can survive the no-confidence vote looming in the Reichstag later this week.
+しかし本当の問題は民衆の不穏な動きではない。今週後半に国会で迫る不信任投票を、シュライヒャーが乗り切れるかどうかだ。

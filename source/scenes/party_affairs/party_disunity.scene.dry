@@ -1,4 +1,4 @@
-title: Party Disunity
+title: 党内不統一
 new-page: true
 is-card: true
 view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (reformist_dissent > 30 and not reformists_resign) or (center_dissent > 30 and not centrists_resign) or (left_dissent > 30 and not left_split) or (labor_dissent > 30 and not unions_independent) or (neorevisionist_dissent > 30 and neorevisionism))
@@ -8,17 +8,17 @@ frequency: 200
 tags: party_affairs
 
 
-= Party Disunity
+= 党内不統一
 
-The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies.
+党は内部対立によって引き裂かれている。指導部と全般的な方針に不満を抱く各派閥は、競争相手への妨害を始め、得票と政策遂行を阻害している。
 
-[? if reformist_dissent > 30 : The reformists are upset at our direction.  ?]
-[? if center_dissent > 30 : The centrists are displeased with the direction of our party. ?]
-[? if labor_dissent > 30 : The trade unions disagree with our present course of action. ?]
-[? if left_dissent > 30: Leftists are making noises about another party split. ?]
-[? if neorevisionist_dissent > 30 and neorevisionism = 1 : Neorevisionists are in disagreement about our political direction. ?]
+[? if reformist_dissent > 30 : 改革派は現在の方針に不満を抱いている。 ?]
+[? if center_dissent > 30 : 中間派は党の進路に不満を抱いている。 ?]
+[? if labor_dissent > 30 : 労働組合は現在の行動方針に反対している。 ?]
+[? if left_dissent > 30: 左派は再度の党分裂をほのめかしている。 ?]
+[? if neorevisionist_dissent > 30 and neorevisionism = 1 : 新修正主義派は政治路線に異議を唱えている。 ?]
 
-Something must be done to reinforce party unity.
+党の結束を強化しなければならない。
 
 - @enforce_unity
 - @concessions_reformists
@@ -30,70 +30,70 @@ Something must be done to reinforce party unity.
 - @easy_discard
 
 @enforce_unity
-title: Enforce party discipline.
+title: 党規律を徹底する。
 on-arrival: reformist_dissent -= 8; center_dissent -= 8; labor_dissent -= 8; left_dissent -= 8; neorevisionist_dissent -= 8; workers_spd -= (dissent * 10); new_middle_spd -= (dissent * 5); unemployed_spd -= (dissent * 5)
 
-Enforcing party discipline reduces dissent, but it could lead to an exit of dissenting members.
+党規律の徹底は不満を抑えるが、反対派党員の離党を招く恐れがある。
 
 # enforcing party discipline applies to all parties.
 
 # each party has a concessions action and an expulsions action.
 
 @concessions_reformists
-title: Give concessions to the reformists.
+title: 改革派へ譲歩する。
 view-if: reformist_dissent > 30
 on-arrival: reformist_dissent -= 15; left_dissent += 10
 
-We have promised to adopt a more reformist posture. This may alienate the left, however.
+より改革主義的な姿勢を取ると約束した。ただし左派を遠ざける恐れがある。
 
 @concessions_center
-title: Give concessions to the centrists.
+title: 中間派へ譲歩する。
 view-if: center_dissent > 30
 on-arrival: center_dissent -= 15; reformist_dissent += 8; left_dissent += 8; neorevisionist_dissent += 8
 
-We have promised to take more policy suggestions from the centrists. Both the left and reformist wings of the party might be displeased.
+中間派の政策提案をさらに採用すると約束した。左派と改革派は不満を抱くだろう。
 
 @concessions_left
-title: Give concessions to the left.
+title: 左派へ譲歩する。
 view-if: left_dissent > 30
 on-arrival: left_dissent -= 15; reformist_dissent += 10; center_dissent += 5
 
-We have promised that we will listen to the left wing of the party. Of course, this leads to increased dissent from the reformists and centrists.
+党内左派の意見に耳を傾けると約束した。当然ながら改革派と中間派の不満は高まる。
 
 @concessions_labor
-title: Give concessions to labor.
+title: 労働派へ譲歩する。
 view-if: labor_dissent > 30
 on-arrival: labor_dissent -= 15; center_dissent += 10
 
-The trade unions will be granted more influence in party decision making. This upsets the centrists, who would prefer to centralize political decision making within the party.
+労働組合に党の意思決定への影響力をさらに与える。政治的意思決定を党内へ集中させたい中間派は反発する。
 
 @concessions_neorevisionists
-title: Give concessions to the neorevisionists.
+title: 新修正主義派へ譲歩する。
 view-if: neorevisionist_dissent > 30 and neorevisionism = 1
 on-arrival: neorevisionist_dissent -= 15; center_dissent += 10;
 
-Giving the neorevisionists more influence will cause increased dissent from the centrists.
+新修正主義派の影響力を増せば、中間派の不満が高まる。
 
 
 @do_nothing
-title: Let the factions argue with themselves.
+title: 派閥同士で議論させる。
 on-arrival: labor_dissent += 1; left_dissent += 1; center_dissent += 1; reformist_dissent += 1
 
-Let the factions bicker; perhaps dissent is healthy for the party.
+派閥には言い争わせておけばよい。異論は党にとって健全なのかもしれない。
 
 
 @expel_reformists
-title: Expel the dissident reformists.
+title: 反対派の改革主義者を除名する。
 view-if: reformist_dissent > 30
 
 @expel_left
-title: Expel the dissident leftists.
+title: 反対派の左翼を除名する。
 view-if: left_dissent > 30
 
 @expel_center
-title: Expel the centrists.
+title: 中間派を除名する。
 view-if: center_dissent > 30
 
 @expel_labor
-title: Expel the labor supporters.
+title: 労働派支持者を除名する。
 view-if: labor_dissent > 30

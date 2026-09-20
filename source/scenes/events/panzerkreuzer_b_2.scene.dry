@@ -1,54 +1,54 @@
-title: Panzerkreuzer B
-subtitle: A political question
+title: 装甲巡洋艦B
+subtitle: 政治問題
 tags: event
 on-arrival: panzerkreuzer_b_seen = 1
 new-page: true
 face-image: img/panzerkreuzer.jpg
 view-if: panzerkreuzer_b_seen = 0 and year = 1931 and month >= 2 and (spd_in_government = 1 or spd_toleration = 1) and panzerkreuser_right_seen = 1
 
-= Panzerkreuzer B
+= 装甲巡洋艦B
 
-The Navy is demanding the construction of another new battlecruiser. The previous battlecruiser had been funded, and has already been launched. Another ship would further progress Germany's rearmament. The first battlecruiser was funded by the right-wing parties during our time in opposition, however we can now attempt to stop the Reichswehr's rearmament plan now.
+海軍は新たな装甲巡洋艦をもう一隻建造するよう要求している。前の装甲巡洋艦には予算が付き、すでに進水した。二隻目はドイツの再軍備をさらに推し進めるだろう。最初の艦は我々が野党だった間に右翼諸党によって予算化されたが、今なら国防軍の再軍備計画を阻止できる。
 
-Much of our party is deeply opposed to rearmament, while the center and right parties are united in support. What will we do?
+我が党の大半は再軍備に強く反対する一方、中道・右翼諸党は一致して支持している。どうするべきか。
 
-- @vote_yes: Vote yes, for constructing the battlecruiser.
-- @vote_no: Vote no, against constructing the battlecruiser.
-- @abstain: Abstain from the vote.
-- @ministry: Use the Reichswehr Ministry to prevent the construction.
+- @vote_yes: 装甲巡洋艦の建造に賛成票を投じる。
+- @vote_no: 装甲巡洋艦の建造に反対票を投じる。
+- @abstain: 採決を棄権する。
+- @ministry: 国防省を利用して建造を阻止する。
 
 @vote_yes
 on-arrival: left_dissent += 10; labor_dissent += 10; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; panzerkreuzer_b_funded = 1; kpd_coalition_dissent += 1; kpd_relation -= 6; workers_spd -= 6; dvp_left += 2; lvp_left += 1; hindenburg_angry -= 5
 
-Our grassroots party members are highly critical of our decision. Many party branches have increased their agitation against our parliamentary fraction, especially after we opposed the construction of the first ship in favor of food for children.
+党の一般党員は我々の決定を厳しく批判している。最初の艦より子供の食事を優先して建造に反対した経緯もあり、多くの支部が国会議員団への反対運動を強めた。
 
-The vote in favor of the battlecruiser easily passes, with opposition only from the <span style="color: #700000;">**KPD**</span>. The ship will be built.
+装甲巡洋艦の建造案は、<span style="color: #700000;">**KPD**</span>だけが反対する中で難なく可決された。艦は建造される。
 
 @vote_no
 on-arrival: dvp_relation -= 8; lvp_relation -= 5; z_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_spd += 4*(1-dissent) if nationalism < 49; dvp_right += 1; hindenburg_angry += 5
 go-to: built if (spd_r + kpd_r + sapd_r < 50); not_built if (spd_r + kpd_r + sapd_r >= 50)
 
-Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_grand_coalition or in_weimar_coalition: , including our coalition partners ?][? if spd_toleration: , including the minority government that we are currently supporting ?].
+装甲巡洋艦への反対票は右翼諸党の不評を買った[? if in_grand_coalition or in_weimar_coalition: 。その中には連立相手も含まれる?][? if spd_toleration: 。その中には現在我々が閣外協力している少数派政権も含まれる?]。
 
 @abstain
 on-arrival: dvp_relation -= 5; lvp_relation -= 3; z_relation -= 3; left_dissent += 8; labor_dissent += 8; panzerkreuzer_b_funded = 1; kpd_relation -= 3; workers_spd -= 2
 
-The center-right parties are critical of our decision to abstain, and the pressure from our left flank is not entirely assuaged. Despite our abstention, the vote in the Reichstag passes, with all parties in favor except members of the dissident <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span>. The ship will be built.
+中道右派諸党は我々の棄権を批判し、左側からの圧力も完全には収まっていない。我々が棄権しても国会の採決は通り、造反した<span style="color: #c00000;">**SPD**</span>議員と<span style="color: #700000;">**KPD**</span>議員を除く全党が賛成した。艦は建造される。
 
-Our lack of opposition has sparked criticism against our parliamentary fraction, since we've already opposed the construction of the first ship in favor of food for children.
+最初の艦より子供の食事を優先して建造に反対した経緯があるため、今回反対しなかったことで国会議員団への批判が噴出した。
 
 @built
 on-arrival: panzerkreuzer_b_funded = 1
 
-Chancellor [+ chancellor +] brings the matter to a full Reichstag vote, which passes with all parties in favor except the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span>. The ship will be built.
+首相[+ chancellor +]はこの問題を国会本会議の採決に付し、<span style="color: #c00000;">**SPD**</span>と<span style="color: #700000;">**KPD**</span>を除く全党の賛成で可決された。艦は建造される。
 
 @not_built
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0; hindenburg_angry += 5; coup_progress += 1
 
-Our vote against the battlecruiser succeeds, with the support of the <span style="color: #700000;">**KPD**</span>. The ship will not be built!
+<span style="color: #700000;">**KPD**</span>の支持を得て、装甲巡洋艦に対する我々の反対票が勝利した。艦は建造されない！
 
 @ministry
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0; hindenburg_angry += 5; coup_progress += 1
 view-if: reichswehr_minister_party == "SPD"
 
-With our control of the Reichswehr Ministry, we have pressured the Navy to abandon its rearmament plans. The ship will not be built. 
+国防省の掌握を利用して海軍に圧力をかけ、再軍備計画を断念させた。艦は建造されない。

@@ -1,5 +1,5 @@
-title: Reichstag Reconvenes
-subtitle: Schleicher has a decree to present.
+title: 国会の再開
+subtitle: シュライヒャーが大統領令を提示する。
 view-if: chancellor = "Schleicher" and schleicher_time and schleicher_post_reichstag and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: reichstag_rubicon = 1
 new-page: true
@@ -19,16 +19,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Reichstag Reconvenes
+= 国会の再開
 
-After the break cut short by Schleicher's insistence, the Reichstag is back in session. Reportedly, Schleicher has obtained Hindenburg's authorization for an unconstitutional decree, presumably in the vein of forcing the Reichstag's adjournment or cancelling new elections.
+シュライヒャーの強い要求で休会が打ち切られ、国会が再開された。伝えられるところでは、彼は国会を強制的に休会させるか新選挙を中止する類の、違憲な大統領令についてヒンデンブルクの承認を得たという。
 
-However, the situation has changed, Schleicher is much more popular and its expected that the backlash to an unconstitutional act will be more limited, and not be to the degree that it would provoke a civil war. 
+しかし情勢は変わった。シュライヒャーの人気は大きく高まり、違憲行為への反発は以前より限定的で、内戦を引き起こすほどにはならないと見込まれている。
 
 - @reichstag
 
 @reichstag
-title: The Reichstag enters session.
+title: 国会が開会する。
 on-arrival: {!
 Q.pro_republic -= 20;
 
@@ -82,8 +82,8 @@ if (Q.next_reichstag_month > 12) {
 }
 !}
 
-Schleicher immediately issues his decree to unconstitutionally adjourn the Reichstag indefinitely, declaring that the chamber will remain closed until the parties prove they can govern constructively again. Reactions inside the chamber are mixed: Schleicher's supporters applaud the chancellor’s show of strong leadership, while the <span style="color: #700000;">**Communists**</span> ignite brawls that police are forced to break up.
+シュライヒャーは直ちに国会を違憲に無期限休会とする大統領令を発し、諸党が再び建設的に統治できると証明するまで議場を閉鎖すると宣言した。議場内の反応は分かれ、支持者は首相の強力な指導力を称賛する一方、<span style="color: #700000;">**共産主義者**</span>は乱闘を起こし、警察が鎮圧に入った。
 
-In the following days, civil demonstrations are violently suppressed. Police disperse crowds with tear gas, street clashes erupt, and several civilians are killed. The strengthened Reichswehr and the divided stance of <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span> make any serious rebellion futile. At least half of the <span style="color: #700000;">**Communist**</span> deputies in the Reichstag are arrested and sent to special courts for inciting violence.
+その後数日間、市民のデモは暴力的に鎮圧された。警察は催涙ガスで群衆を追い散らし、街頭衝突が発生し、複数の市民が死亡した。強化された国防軍と<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">者</span>の分裂した対応により、本格的な反乱は無益となる。国会の<span style="color: #700000;">**共産党**</span>議員の少なくとも半数が、暴力扇動の罪で逮捕され特別裁判所へ送られた。
 
-The <span style="color: #c00000;">**SPD**</span> remains largely untouched[? if rb_militancy > 0.1:, though suspicious activity has been reported to be planned against the Reichsbanner?].
+<span style="color: #c00000;">**SPD**</span>はおおむね攻撃を免れている[? if rb_militancy > 0.1: が、国旗団を標的とする不審な動きが計画されているとの報告もある?]。

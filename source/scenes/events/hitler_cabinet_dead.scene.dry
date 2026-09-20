@@ -1,29 +1,29 @@
-title: [+ chancellor +] is Sacked!
+title: [+ chancellor +]、罷免される！
 view-if: chancellor_party == "NSDAP" and rubicon_mini and president != "Hindenburg" and president != "Hitler" and president != "Göring" and president != "Frick"
 new-page: true
 tags: event
 max-visits: 1
 
-= [+ chancellor +] is Sacked
+= [+ chancellor +]、罷免される
 
-The newly elected president, [+ president +], holds little sympathy for [+ chancellor +] or his party, and has compelled his resignation as Chancellor. The <span style="color: #7A3C00;">**NSDAP**</span>, however, refuses to yield—denouncing the move as “anti-democratic,” insisting that [+ chancellor +] is still the head of government, and openly threatening armed resistance.
+新たに選出された大統領[+ president +]は、[+ chancellor +]にもその党にもほとんど同情を寄せず、首相辞任を強いた。しかし<span style="color: #7A3C00;">**NSDAP**</span>は屈服を拒み、この措置を「反民主的」と非難して[+ chancellor +]こそ今なお政府の長だと言い張り、公然と武力抵抗をちらつかせている。
 
-What are we to do now?
+今、我々はどうすべきなのか？
 
-- @fight: We will fight on the streets to prevent Hitler from retaining power.
-- @give_up: We will vote against the <span style="color: #7A3C00;">Nazis</span> in the Reichstag.
+- @fight: ヒトラーが権力を維持するのを阻むため、街頭で戦う。
+- @give_up: 国会で<span style="color: #7A3C00;">ナチ</span>に反対票を投じる。
 
 @fight
 
-Do we realize that this means civil war, against the full force of the state?
+それが国家の全兵力を相手にする内戦を意味すると理解しているのか？
 
-- @civil_war: Yes.
-- @give_up: We are not ready for war. Instead, we will vote against the <span style="color: #7A3C00;">Nazis</span> in the Reichstag.
+- @civil_war: その通りだ。
+- @give_up: 戦争の準備はできていない。代わりに国会で<span style="color: #7A3C00;">ナチ</span>に反対票を投じる。
 
 @give_up
 go-to: give_up_1 if president_ideology != "Left" or reichswehr_loyalty > 0.2; give_up_2 if (president_ideology == "Left" and reichswehr_loyalty <= 0.2)
 
-The President is on our side, but the Reichswehr remains divided.
+大統領は我々の側に立っているが、国防軍はなお分裂している。
 
 @give_up_1
 on-arrival: {!
@@ -88,18 +88,18 @@ Q.rubicon_mini = 0;
 Q.rubicon_mini_leave = 1;
 !}
 
-Still, they place more trust in [+ president +] than in Chancellor [+ old_chancellor +], and under this influence, [+ old_chancellor +] was forced to accept his defeat. His removal, along with the replacement of many <span style="color: #7A3C00;">Nazi</span> cabinet ministers, has stopped Germany's slippery slope into dictatorship.
+それでも国防軍は首相[+ old_chancellor +]より[+ president +]を信頼し、その圧力を受けた[+ old_chancellor +]は敗北を受け入れざるをえなかった。彼の罷免と、多くの<span style="color: #7A3C00;">ナチ</span>閣僚の更迭によって、ドイツが独裁へ転落する流れは食い止められた。
 
-[? if chancellor == "Brüning": Heinrich Brüning of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is appointed as interim chancellor. ?][? if chancellor == "Wels": Otto Wels of the <span style="color: #c00000;">**SPD**</span> is selected as appointed chancellor. ?]
+[? if chancellor == "Brüning": [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]のハインリヒ・ブリューニングが暫定首相に任命された。?][? if chancellor == "Wels": <span style="color: #c00000;">**SPD**</span>のオットー・ヴェルスが暫定首相に任命された。?]
 
-The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
+次回選挙は[+ next_election_year +]年[+ next_election_month : month +]に予定されている。
 
 @give_up_2
 
-Unfortunately, the President’s left-wing leanings make him an unacceptable figure to the <span style="color: #808080;">reactionary</span> strongholds of the state. The Reichswehr refuses to take his side over that of [+ chancellor +]. Despite holding the highest office in the land, the President finds himself powerless, outmaneuvered by [+ chancellor +].
+しかし不幸にも、大統領の左派的傾向は、国家の<span style="color: #808080;">反動派</span>の牙城にとって受け入れがたいものだった。国防軍は[+ chancellor +]より大統領の側に立つことを拒んだ。国内最高の官職にありながら、大統領は[+ chancellor +]に出し抜かれ、無力な存在となった。
 
-Eventually, he is ousted through legally questionable means, and new elections are held under the watchful eye of <span style="color: #7A3C00;">**SA**</span> troopers—securing Hitler’s rise to absolute power.
+やがて大統領は法的に疑わしい手段で追放され、<span style="color: #7A3C00;">**SA**</span>隊員の監視下で新たな選挙が実施された――こうしてヒトラーの絶対権力への道が開かれた。
 
-Germany is lost.
+ドイツは失われた。
 
-- @game_over: Game over.
+- @game_over: ゲームオーバー。

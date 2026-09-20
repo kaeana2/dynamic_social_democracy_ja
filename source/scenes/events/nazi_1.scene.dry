@@ -1,5 +1,5 @@
-title: Gauleiter Conference Leaked
-subtitle: The "alternative" way the <span style="color: #7A3C00;">Nazis</span> plan to take power is revealed...
+title: 大管区指導者会議の内容が漏洩
+subtitle: <span style="color: #7A3C00;">ナチ党</span>が政権を奪取する「もう一つの」方法が明るみに出る……。
 view-if: chancellor = "Papen" and papen_time == 9 and prussia_coup_lose
 new-page: true
 tags: event
@@ -17,21 +17,21 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Gauleiter Conference Leaked
+= 大管区指導者会議の内容が漏洩
 
-Berlin's former police chief and <span style="color: #c00000;">**SPD**</span> member Albert Grzesinski, who's also apart of our executive committee, has brought a report received from an informant about a meeting of <span style="color: #7A3C00;">Nazi</span> regional officials. The discussions is of what would happen if the elections were to bring a <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> majority; an immediate state of emergency, suspension of parts of the constitution, non-secret supervised balloting, all with the support of the Defense Minister von Schleicher.
+ベルリン元警察長官で<span style="color: #c00000;">**SPD**</span>党員、かつ我が党執行部の一員でもあるアルベルト・グジェジンスキが、<span style="color: #7A3C00;">ナチ党</span>地方幹部の会合について情報提供者から得た報告書を持ち込んだ。議題は、選挙で<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>が過半数を得た場合の行動であった。すなわち、国防相フォン・シュライヒャーの支持を得て直ちに非常事態を宣言し、憲法の一部を停止し、秘密投票を廃して監視下で投票させるというものだ。
 
-If a majority isn't received, the alternative would be to pit the <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> and von Schleicher's Reichswehr against Papen, and if Papen refused to act, they would be forced to take action themselves.
+過半数を得られなければ、別案として<span style="color: #7A3C00;">ナチ党</span>の<span style="color: #7A3C00;">**SA**</span>とフォン・シュライヒャー配下の国防軍をパーペンに突きつける。パーペンが行動を拒めば、自ら実力行使に出ざるを得ないという。
 
 - @nazi
 
 @nazi
-title: Immediately strengthen the Reichsbanner in response.
-subtitle: -1 resource
-unavailable-subtitle: Not enough resources.
+title: 直ちに国旗団を強化して対抗する。
+subtitle: 資源－1
+unavailable-subtitle: 資源が足りない。
 choose-if: resources >= 1
 on-arrival: nazi_urgency += 1; resources -= 1; rb_strength += 200; rb_militancy += 0.05
 
-This development has persuaded the <span style="color: #c00000;">**SPD**</span> leadership—and Otto Wels himself—to grant the Reichsbanner independent authority and financial support, which its leaders deem essential.
+この事態を受け、<span style="color: #c00000;">**SPD**</span>指導部、そしてオットー・ヴェルス自身も、国旗団に独立した権限と財政支援を与えるよう説得された。国旗団指導部が不可欠と考えていた措置である。
 
-Such backing is especially critical following our loss of Prussia and its well-equipped police force.
+プロイセンと、その装備の整った警察力を失った今、こうした支援はとりわけ重要である。

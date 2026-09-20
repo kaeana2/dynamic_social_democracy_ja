@@ -1,30 +1,30 @@
-title: Braun Meets With Schleicher
-subtitle: An unauthorized meeting, but perhaps a welcome one?
+title: ブラウンとシュライヒャーの会談
+subtitle: 党に無断の会談だが、歓迎すべきものかもしれない。
 view-if: chancellor = "Schleicher" and schleicher_time == 4 and prussia_leader == "Schleicher"
 new-page: true
 tags: event
 max-visits: 1
 face-image: img/portraits/schleicher_pro.jpg
 
-= Braun Meets With Schleicher
+= ブラウンとシュライヒャーの会談
 
-Otto Braun, former Minister-President of Prussia and leader of our reformist wing, has—without informing the <span style="color: #c00000;">**SPD**</span> leadership—met privately with Chancellor von Schleicher. Braun proposed cooperation, on the condition that Schleicher relinquish federal control over Prussia and restore him to office with full authority, including the power to dissolve the Landtag. Braun suggested that, together, they could rule by decree and wage a determined campaign against the <span style="color: #7A3C00;">Nazis</span>.
+前プロイセン州首相で我が党の改革派を率いるオットー・ブラウンが、<span style="color: #c00000;">**SPD**</span>指導部に知らせず、フォン・シュライヒャー首相と非公式に会談した。ブラウンは、シュライヒャーがプロイセンへの全国政府の支配を解き、州議会の解散権を含む全権を持つ州首相として自分を復職させることを条件に、協力を提案した。両者が組めば政令で統治し、<span style="color: #7A3C00;">ナチ党</span>に対する断固たる闘争を進められるというのである。
 
-Schleicher, however, was unenthusiastic. Having led the Prussian coup himself, he is reluctant to undo the federal consolidation of power. More importantly, unlike Braun, he is not committed to weakening the <span style="color: #7A3C00;">**NSDAP**</span>; he still views them as a potential source of support for his cabinet—admiring the <span style="color: #7A3C00;">**SA**</span>’s militarism and the <span style="color: #7A3C00;">**NSDAP**</span>’s fanatical discipline as traits to be co-opted into the state.
+しかしシュライヒャーは乗り気ではなかった。自らプロイセン・クーデタを主導しただけに、全国政府への権力集中を覆すことに消極的である。さらに重要なのは、ブラウンと違って<span style="color: #7A3C00;">**NSDAP**</span>の弱体化を目指してはいないという点だ。彼はなお同党を内閣の潜在的な支持勢力と見ており、<span style="color: #7A3C00;">**SA**</span>の軍国主義と<span style="color: #7A3C00;">**NSDAP**</span>の狂信的な規律を、国家に取り込むべき資質として評価している。
 
 - @yay
 - @nay
 
 @yay
-title: Perhaps he can still be convinced?
-unavailable-subtitle: Schleicher is committed to his taming strategy.
+title: まだ説得の余地があるのではないか。
+unavailable-subtitle: シュライヒャーは飼い慣らし戦略を貫こうとしている。
 choose-if: super_secret_mode == 1
 on-arrival: schleicher_would_never_do_this_he_is_literally_hitler = 1
 
 # TODO
 
 @nay
-title: As we thought.
+title: やはり予想どおりだ。
 on-arrival: schleicher_spd_support += 1; schleicher_spd_support += 1 if reformist_strength >= center_strength
 
-Nothing ultimately comes of the meeting. However, Braun becomes the first major political figure outside the unions to openly signal willingness to strike a deal with the chancellor.
+結局、会談は何の成果も生まなかった。しかしブラウンは、労組以外の主要な政治家として初めて、首相と取引する意向を公然と示した人物となった。

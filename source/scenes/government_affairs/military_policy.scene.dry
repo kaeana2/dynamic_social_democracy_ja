@@ -1,4 +1,4 @@
-title: Military Policy
+title: 軍事政策
 new-page: true
 is-card: true
 tags: govt_affairs, cabinet
@@ -7,41 +7,41 @@ view-if: spd_in_government = 1 and reichswehr_minister_party = "SPD" and militar
 card-image: img/portraits/LeberJulius.jpg
 #subtitle: Dealing with the Reichswehr.
 
-= Military Policy
+= 軍事政策
 
-The Reichswehr is a deeply <span style="color: #808080;">reactionary</span> institution that has been generally hostile to any notion of <span style="color: #c00000;">socialism</span> or democracy. However, we now control the military as part of the government. What should we do to reform it?
+国防軍はきわめて<span style="color: #808080;">反動的</span>な組織であり、概して<span style="color: #c00000;">社会主義</span>や民主主義のあらゆる理念に敵対してきた。しかし今や、我々は政府の一員として軍を管轄している。これをどう改革すべきか？
 
-- @increase_funding: Increase funding for the military to purchase its loyalty.
-- @decrease_funding: Reduce funding for the military so we have more for social spending.
-- @reform: Conduct a thorough reform of the ranks, reducing the influence of <span style="color: #808080;">reactionaries</span> and making it more hospitable to us.
-- @root: No change to military policy.
+- @increase_funding: 軍事予算を増額し、軍の忠誠を買う。
+- @decrease_funding: 軍事予算を削減し、社会支出へ回す財源を増やす。
+- @reform: 軍内部を徹底的に改革し、<span style="color: #808080;">反動派</span>の影響力を削いで我々を受け入れやすくする。
+- @root: 軍事政策を変更しない。
 - @easy_discard
 - @cancel_advisor_action
 
 @increase_funding
-subtitle: -1 budget
+subtitle: 予算 -1
 choose-if: budget >= 1
-unavailable-subtitle: We do not have the budget.
+unavailable-subtitle: 予算が足りない。
 on-arrival: budget -= 1; coalition_dissent -= 1 if coalition_dissent > 0; reichswehr_loyalty += 0.07 if reichswehr_loyalty < 1; reichswehr_strength += 20; left_dissent += 5; kpd_coalition_dissent += 1; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; eu_progress -= 1; dvp_left += 1; dvp_relation += 4; lvp_relation += 4; ddp_relation += 2; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 1; goal_spd_cancel += 1; hindenburg_angry -= 10; economic_growth += 0.1
 
-The military and the center-right parties are pleasantly surprised that we would increase military funding. Our membership tends to be anti-military, and is less enthused. Germany's neighbors are watching our military buildup with worry. [? if reparations >= 0 : This is not good for the reparations negotiations. ?]
+軍部と中道右派政党は、我々が軍事予算を増額したことを好意的な驚きをもって受け止めている。反軍的な傾向を持つ党員の反応は冷ややかである。近隣諸国はドイツの軍備増強を懸念している。[? if reparations >= 0 : 賠償交渉には悪影響となる。 ?]
 
 @decrease_funding
-subtitle: +1 budget
-unavailable-subtitle: There is nothing left to cut.
+subtitle: 予算 +1
+unavailable-subtitle: これ以上削減できない。
 choose-if: reichswehr_strength > 0
 on-arrival: budget += 1; coalition_dissent += 1 if in_grand_coalition == 1; coalition_dissent += 1 if (in_weimar_coalition and lvp_formed); dvp_relation -= 8; ddp_relation -= 4; lvp_relation -= 6; z_relation -= 4; reichswehr_militancy -= 1; reichswehr_strength -= 20; sh_strength += 15; sa_strength += 5; sh_militancy += 0.05; reichswehr_loyalty -= 0.05 if reichswehr_loyalty > 0; coup_progress += 1; coup_progress += 1 if reichswehr_loyalty < 0.2; coup_progress += 1 if reichswehr_loyalty < 0.1; coup_progress += 1 if reichswehr_loyalty <= 0; reichswehr_goal_completed = 1; dvp_right += 3; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 2; reichswehr_goal_spd += 1; hindenburg_angry += 10; economic_growth -= 0.1
 
-The military has fewer guns and fewer soldiers. There is no hint of a coup yet, but we do not know where the line will be drawn. The center-right parties are committed to the military and deeply opposed to our budget cuts.
+軍の兵器と兵員は減少した。今のところクーデターの兆候はないが、どこが一線となるかは分からない。中道右派政党は軍を重視しており、我々の予算削減に強く反対している。
 
-Many demobilized soldiers have joined the right-wing paramilitaries such as the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">**SA**</span>, and weapons are missing from our stockpiles.
+除隊した兵士の多くが<span style="color: #3E88B3;">**鉄兜団**</span>や<span style="color: #7A3C00;">**SA**</span>などの右翼準軍事組織に加わり、備蓄から兵器が消えている。
 
 @reform
-subtitle: -1 budget
+subtitle: 予算 -1
 choose-if: budget >= 1 and reichswehr_loyalty < 1
-unavailable-subtitle: [? if budget < 1 : We do not have the budget. ?][? if reichswehr_loyalty >= 1 : The Reichswehr is already fully loyal to the democratic government. ?]
+unavailable-subtitle: [? if budget < 1 : 予算が足りない。 ?][? if reichswehr_loyalty >= 1 : 国防軍はすでに民主政府へ完全に忠誠を誓っている。 ?]
 on-arrival: coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); reichswehr_loyalty += 0.15; reichswehr_militancy -= 0.5 if reichswehr_loyalty < 0.5; budget -= 1; coup_progress += 1; dvp_relation -= 5; pacifism += 1; democratization += 1; dvp_right += 2; ddp_left += 1; lvp_right += 1; hindenburg_angry += 5;
 
-Our efforts are at least somewhat successful; we have changed the recruiting and training patterns so that more soldiers from non-<span style="color: #808080;">reactionary</span> backgrounds can join, hopefully changing the culture of the forces. We have also removed some of the officers who supported the previous Kapp putsch.
+我々の試みは少なくとも一定の成果を上げた。募集と訓練のあり方を変更し、非<span style="color: #808080;">反動的</span>な背景を持つ者がより多く入隊できるようにしたことで、軍の文化も変わっていくことが期待される。かつてカップ一揆を支持した将校の一部も排除した。
 
-The center-right parties are committed to the military and deeply suspicious of our efforts to reform it.
+中道右派政党は軍を重視しており、我々の改革に強い疑念を抱いている。

@@ -1,53 +1,53 @@
-title: Antonie Pfülf
+title: アントニー・プフュルフ
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 1
 new-page: true 
 
-= Antonie Pfülf
+= アントニー・プフュルフ
 
-Pfülf is a former teacher from <span style="color: #00CCFF;">Bavaria</span> who came from a conservative Catholic family. She is an activist for women's rights and for broadening the support of the <span style="color: #c00000;">**SPD**</span>. 
+プフュルフは<span style="color: #00CCFF;">バイエルン</span>の保守的なカトリック家庭出身の元教師である。女性の権利と<span style="color: #c00000;">**SPD**</span>の支持基盤拡大を求めて活動している。
 
 - @support_peoples_party
 - @build_peoples_party
 - @campaigning_peoples_party
 - @womens_rights_
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @support_peoples_party
-title: Build support for a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: 人民政党への支持を築く
+subtitle: 産業労働者階級を越えて党の支持を広げられるだろうか。
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if peoples_party_support > 4: 人民政党にはすでに相当な支持がある。 ?]
 on-arrival: advisor_action_timer = 6; peoples_party_support += 1; reformist_strength += 5;
 
-We are building up support for the idea of a People's Party.
+人民政党構想への支持を築いている。
 
 @build_peoples_party
-title: Building a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: 人民政党を築く
+subtitle: 産業労働者階級を越えて党の支持を広げられるだろうか。
 view-if: peoples_party = 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if peoples_party_support < 3: この政策に対する党内の支持が足りない。 ?]
 on-arrival: advisor_action_timer = 6;
 go-to: peoples_party
 
 @campaigning_peoples_party
-title: Campaigning as a People's Party
-subtitle: Campaigning with some of our previously nontraditional demographics.
+title: 人民政党として選挙運動を行う
+subtitle: 従来は支持基盤でなかった社会集団にも働きかける。
 view-if: peoples_party = 1
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6;
 go-to: peoples_party_campaigning
 
 
 @womens_rights_
-title: Women's rights
-subtitle: Enact policy with regards to women's rights.
+title: 女性の権利
+subtitle: 女性の権利に関する政策を実施する。
 choose-if: advisor_action_timer = 0 and spd_in_government and not cvp_women_accepted
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not currently in government. ?] [? if cvp_women_accepted : Our coalition agreement stipulates against action toward Women's rights. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if not spd_in_government : <span style="color: #c00000;">SPD</span>は現在政権に参加していない。 ?] [? if cvp_women_accepted : 連立協定により女性の権利に関する施策は禁止されている。 ?]
 on-arrival: advisor_action_timer = 6; womens_rights_timer -= 10; last_advisor_action = 1
 go-to: womens_rights

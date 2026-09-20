@@ -1,5 +1,5 @@
-title: Exodus from the Reichsbanner
-subtitle: Owing to its militarization, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] [? if not lvp_formed: and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed and not lvp_leave_reichsbanner: and <span style="color: #FFCC00;">**LVP**</span>?] are leaving the Reichsbanner.
+title: 国旗団からの大量離脱
+subtitle: 国旗団の軍事化を理由に、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:と<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed and not lvp_leave_reichsbanner:と<span style="color: #FFCC00;">**LVP**</span>?]が離脱しようとしている。
 view-if: rb_militancy >= 0.2 and not rb_exit and not rb_stay and not lvp_leave and not cvp_formed
 new-page: true
 tags: event
@@ -16,18 +16,18 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Exodus from the Reichsbanner
+= 国旗団からの大量離脱
 
-The Reichsbanner has become increasingly militarized as of late, with ever-greater quantities of arms and paramilitary training, as well as a stream of <span style="color: #9B0000;">radicalized</span> <span style="color: #c00000;">**SPD**</span> members. In response, the members associated with the other <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> parties, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] [? if not lvp_formed: and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed and not lvp_leave_reichsbanner: and <span style="color: #FFCC00;">**LVP**</span>?], are threatening to leave for good. They signed up for a mass movement to defend the republic, not a <span style="color: #c00000;">socialist</span> militia.
+近ごろ国旗団はますます軍事化し、武器と準軍事訓練を増やし、<span style="color: #9B0000;">急進化した</span><span style="color: #c00000;">**SPD**</span>党員を次々と引き入れている。これに反発し、他の<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>諸党、すなわち[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:と<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed and not lvp_leave_reichsbanner:と<span style="color: #FFCC00;">**LVP**</span>?]に属する団員が、完全離脱をちらつかせている。彼らが参加したのは共和国を守る大衆運動であって、<span style="color: #c00000;">社会主義者</span>の民兵ではない。
 
-- @let_go: Let the <span style="color: #000000;">centrists</span> [? if not lvp_formed: and <span style="color: #D3C24D;">liberals</span>?][? if lvp_formed and not lvp_leave_reichsbanner: and <span style="color: #FFCC00;">liberals</span>?] go.
-- @lower_militancy: We must lower the Reichsbanner's militancy.
-- @keep_them: Can we convince them that a militant Reichsbanner is necessary for defending the Republic?
+- @let_go: <span style="color: #000000;">中道派</span>[? if not lvp_formed:と<span style="color: #D3C24D;">自由主義者</span>?][? if lvp_formed and not lvp_leave_reichsbanner:と<span style="color: #FFCC00;">自由主義者</span>?]を去らせる。
+- @lower_militancy: 国旗団の戦闘性を下げなければならない。
+- @keep_them: 共和国防衛には戦闘的な国旗団が必要だと説得できないか？
 
 @let_go
 on-arrival: rb_strength *= 0.9; z_relation -= 5; ddp_relation -= 5; lvp_relation -= 5; rb_exit = 1; left_strength += 5*(1-dissent); ddp_right += 3; lvp_right += 3
 
-We have judged that the Reichsbanner's militancy is more important than maintaining a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] [? if not lvp_formed: and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed and not lvp_leave_reichsbanner: and <span style="color: #FFCC00;">**LVP**</span>?]. The Reichsbanner members affiliated with these parties leave, while the left of the <span style="color: #c00000;">**SPD**</span> is strengthened.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:と<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed and not lvp_leave_reichsbanner:と<span style="color: #FFCC00;">**LVP**</span>?]との協力関係を維持するより、国旗団の戦闘性を保つほうが重要だと判断した。これらの政党に属する国旗団員は離脱し、<span style="color: #c00000;">**SPD**</span>左派は勢力を増した。
 
 # TODO: this should make it harder to form Weimar coalitions
 
@@ -35,12 +35,12 @@ We have judged that the Reichsbanner's militancy is more important than maintain
 @lower_militancy
 on-arrival: rb_militancy *= 0.5
 
-Bowing to the other parties' demands, we reduce the Reichsbanner's military training, thus inducing them to stay.
+他党の要求に譲歩し、国旗団の軍事訓練を縮小して残留を促した。
 
 
 @keep_them
-unavailable-subtitle: They are unable to be convinced at this time.
+unavailable-subtitle: 現時点では説得できない。
 choose-if: strife >= 5 and (z_relation >= 50 or z_leader == "Kaiser" or (z_leader == "Joos" and z_relation >= 30)) and ((ddp_relation >= 50 and not lvp_formed) or (lvp_relation >= 50 and lvp_formed))
 on-arrival: rb_stay = 1; ddp_left += 2; ddp_cohesion += 2; lvp_left += 2
 
-Seeing the strife that has filled Germany's streets, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] [? if not lvp_formed: and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed and not lvp_leave_reichsbanner: and <span style="color: #FFCC00;">**LVP**</span>?] seem to be convinced that it is necessary for the Reichsbanner to be militarized, and will not leave the organization.
+ドイツの街頭を覆う闘争を目の当たりにし、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:と<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed and not lvp_leave_reichsbanner:と<span style="color: #FFCC00;">**LVP**</span>?]は国旗団の軍事化が必要だと納得したようで、組織を離れないことになった。

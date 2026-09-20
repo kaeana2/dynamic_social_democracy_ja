@@ -1,5 +1,5 @@
-title: March on Berlin
-subtitle: Right-wing militants are taking action...
+title: ベルリン進軍
+subtitle: 右翼武装勢力が行動を開始した……
 view-if: ((spd_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0 or far_right_force >= 40)) or (year >= 1933 and month >= 2 and nsdap_normalized + dnvp_normalized >= 0.5)) and march_on_berlin_timer = 0
 new-page: true
 max-visits: 4
@@ -7,39 +7,39 @@ on-arrival: march_on_berlin_seen += 1; sa_strength += 80; sh_strength += 80; str
 go-to: ask_resign if spd_in_government and (president_ideology == "Right" or president == "Hindenburg"); govt_menu if president_ideology == "Left"; presidential_glaze if president_ideology == "Moderate"; non_govt_menu if spd_in_government = 0 and (president_ideology == "Right" or president == "Hindenburg")
 tags: event
 
-= March on Berlin
+= ベルリン進軍
 
-The <span style="color: #7A3C00;">far</span> <span style="color: #3E88B3;">right</span> is mobilizing. Paramilitary forces of the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">**SA**</span>, organized under the Harzburg Front, have marched on Berlin, threatening to violently overthrow the government.
+<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>が動員を開始した。ハルツブルク戦線の下に結集した<span style="color: #3E88B3;">**鉄兜団**</span>と<span style="color: #7A3C00;">**SA**</span>の準軍事部隊がベルリンへ進軍し、政府を暴力的に打倒すると威嚇している。
 
-They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and the appointment of Adolf Hitler as chancellor[? if hitler_deported : , and the revocation of his deportation ?]. It is obvious that they are threatening a civil war if their demands are not met.
+彼らは、国家主義準軍事組織の「監視」下で直ちに選挙を実施するか、政府が即時辞任してアドルフ・ヒトラーを首相に任命すること[? if hitler_deported : 、さらに彼の国外追放を撤回すること?]を要求している。要求が受け入れられなければ内戦を起こすという、露骨な脅迫である。
 
 @non_govt_menu
 
-It appears that President [+ president +] is looking favorably upon the <span style="color: #7A3C00;">fascist</span> proposals. Chancellor [+ chancellor +] has announced plans to resign.
+大統領[+ president +]は<span style="color: #7A3C00;">ファシスト</span>の提案を好意的に見ているようだ。首相[+ chancellor +]は辞任する意向を表明した。
 
 - @fight
 - @accept
 
 @accept
-title: There is nothing we can do.
+title: 我々にできることはない。
 go-to: accept_election if (nsdap_normalized + dnvp_normalized >= 0.5 and far_right_coalition < 50); accept_hitler if (nsdap_normalized + dnvp_normalized < 0.5 or far_right_coalition >= 50)
 
 @accept_election
 on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; old_middle_nsdap += 10; new_middle_nsdap += 10; workers_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 8; workers_spd -= 10; workers_kpd -= 10; sa_strength += 100;
 
-President [+ president +] has called for emergency elections, to be held next month, under a caretaker government. The <span style="color: #7A3C00;">**SA**</span> is permitted to act with impunity, intimidating voters into supporting the <span style="color: #7A3C00;">fascists</span>.
+大統領[+ president +]は暫定政権の下、翌月に緊急選挙を実施すると布告した。<span style="color: #7A3C00;">**SA**</span>は処罰を恐れずに活動することを許され、有権者を威嚇して<span style="color: #7A3C00;">ファシスト</span>への投票を強いている。
 
 
 @accept_hitler
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; spd_in_government = 0
 
-After the resignation of the chancellor, Hitler has been appointed chancellor[? if hitler_deported: , after being made a citizen again ?].
+首相の辞任後、ヒトラーが首相に任命された[? if hitler_deported: 。それに先立ち、彼には再びドイツ国籍が与えられた?]。
 
 - @hitler_takes_power
 
 @ask_resign
 
-President [+ president +] has asked our government to resign.
+大統領[+ president +]は我が政府に辞任を求めた。
 
 - @fight
 - @fight_constitution
@@ -51,13 +51,13 @@ President [+ president +] has asked our government to resign.
 - @new_elections
 
 @fight
-title: Deploy the Reichsbanner and call a general strike to resist the <span style="color: #7A3C00;">fascists</span>!
+title: 国旗団を動員してゼネストを呼びかけ、<span style="color: #7A3C00;">ファシスト</span>に抵抗する！
 on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if spd_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president_ideology == "Left" and spd_in_government; defense_strength += rfb_strength*rfb_militancy*(kpd_relation/100) if kpd_truce or in_popular_front or in_left_front or in_popular_front_prussia or in_left_front_prussia
 go-to: fight_2_win if defense_strength >= enemy_strength and march_on_berlin_seen <= 1; fight_2_win_2 if defense_strength >= enemy_strength and march_on_berlin_seen > 1; fight_2_pre_civil_war if defense_strength < enemy_strength
 
-The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to counter the <span style="color: #7A3C00;">fascist</span> demonstration.
+国旗団の兵力は[+ rb_strength +]千人に達し、その多くが<span style="color: #7A3C00;">ファシスト</span>の示威行進に対抗するためベルリンに集結している。
 
-[? if spd_prussia: The Prussian police has been deployed against the <span style="color: #7A3C00;">fascists</span>. ?] [? if spd_in_government and president == "Braun" : The portions of the Reichswehr that are loyal are also deployed. ?]
+[? if spd_prussia: プロイセン警察も<span style="color: #7A3C00;">ファシスト</span>に対して動員された。?] [? if spd_in_government and president == "Braun" : 国防軍のうち政府に忠実な部隊も展開している。?]
 
 
 @fight_2_win
@@ -65,40 +65,40 @@ on-arrival: coup_progress = 0; sa_strength *= 0.7; sh_strength *= 0.7; rb_streng
 go-to: left_outcome if march_on_berlin_left
 achievement: drei_pfeile
 
-Our forces confront the <span style="color: #7A3C00;">fascists</span>, and somehow, the <span style="color: #7A3C00;">fascists</span> retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
+我々の部隊が<span style="color: #7A3C00;">ファシスト</span>と対峙すると、驚くべきことに彼らは退却した！　我々の示した力に圧倒され、惨めに逃げ去る道を選んだのである。少なくとも今のところ、クーデター未遂は終わった。
 
-The show of force has reinvigorated support for the republic and for the <span style="color: #c00000;">**SPD**</span>, and has weakened the <span style="color: #7A3C00;">fascists</span>.
+この示威は共和国と<span style="color: #c00000;">**SPD**</span>への支持を再び活気づけ、<span style="color: #7A3C00;">ファシスト</span>を弱体化させた。
 
 @fight_2_win_2
 on-arrival: coup_progress = 0; pro_republic += 5; workers_nsdap -= 2*(1-dissent); unemployed_nsdap -= 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent); rb_strength *= 0.9; sa_strength *= 0.9; sh_strength *= 0.9
 go-to: left_outcome if march_on_berlin_left
 
-Our forces confront the <span style="color: #7A3C00;">fascists</span>, and somehow, the <span style="color: #7A3C00;">fascists</span> retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
+我々の部隊が<span style="color: #7A3C00;">ファシスト</span>と対峙すると、驚くべきことに彼らは退却した！　我々の示した力に圧倒され、惨めに逃げ去る道を選んだのである。少なくとも今のところ、クーデター未遂は終わった。
 
-The show of force has reinvigorated support for the republic and for the <span style="color: #c00000;">**SPD**</span>, and has weakened the <span style="color: #7A3C00;">fascists</span>.
+この示威は共和国と<span style="color: #c00000;">**SPD**</span>への支持を再び活気づけ、<span style="color: #7A3C00;">ファシスト</span>を弱体化させた。
 
 
 @fight_2_pre_civil_war
 
-Our forces confront the <span style="color: #7A3C00;">fascists</span> on the streets of Berlin, and armed fighting erupts. Neither side is dislodged from their positions.
+我々の部隊はベルリンの街頭で<span style="color: #7A3C00;">ファシスト</span>と対峙し、武力衝突が勃発した。双方とも陣地を譲らない。
 
-- @civil_war: It is a civil war.
+- @civil_war: これは内戦だ。
 
 
 @fight_constitution
-title: This is unconstitutional! We will keep our positions in government, and ask the courts to keep us in power.
+title: これは憲法違反だ！　閣僚職にとどまり、政権維持を裁判所に訴える。
 choose-if: judicial_reform >= 3
-unavailable-subtitle: The judiciary would never agree with us.
+unavailable-subtitle: 司法が我々の主張を認めるはずがない。
 
-The courts agree that President [+ president +] is wrong to dismiss us, and that we should remain in the government. The President might respect the court's decision for now, but the <span style="color: #7A3C00;">fascists</span> in the streets do not. They are still demanding snap elections or the resignation of the government, and will remain in the streets until we either meet their demands, or they are forced out.
+裁判所は、大統領[+ president +]が我々を罷免するのは誤りであり、政府にとどまるべきだとの判断を示した。大統領はひとまず判決を尊重するかもしれないが、街頭の<span style="color: #7A3C00;">ファシスト</span>は従わない。彼らは依然として解散総選挙か政府辞任を要求し、要求が満たされるか、力ずくで排除されるまで街頭に居座る構えである。
 
 - @new_elections
 - @fight
 
 
 @new_elections
-title: Call for new snap elections.
-subtitle: We will not resign at gunpoint, and we will attempt to maintain the integrity of the elections.
+title: 新たな解散総選挙を実施する。
+subtitle: 銃口を突きつけられて辞任はしない。選挙の公正も守り抜く。
 go-to: new_elections_braun if president_ideology == "Left"; new_elections_hindenburg if ((president_ideology != "Left" and president_ideology == "Right") or president == "Hindenburg") and z_relation >= 40 and far_right_coalition < 50; new_elections_hindenburg_reject if ((president_ideology != "Left" and president_ideology == "Right") or president == "Hindenburg") and (z_relation < 40 or far_right_coalition >= 50); new_elections_moderate if president_ideology == "Moderate"
 
 
@@ -108,7 +108,7 @@ go-to: new_elections_braun_2 if nsdap_normalized + dnvp_normalized >= 0.5 and fa
 
 @new_elections_braun_reject
 
-The <span style="color: #7A3C00;">fascists</span> reject our offer of free and fair elections. They are demanding that President [+ president +] dismisses the current government and appoints Hitler chancellor. [? if far_right_coalition >= 50 : They claim that since the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> coalition has the majority in the Reichstag, they are constitutionally justified in appointing the chancellor. Unfortunately, their argument is not exactly wrong. ?]
+<span style="color: #7A3C00;">ファシスト</span>は自由かつ公正な選挙という我々の提案を拒絶した。彼らは大統領[+ president +]に現政権を罷免し、ヒトラーを首相に任命するよう要求している。[? if far_right_coalition >= 50 : <span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>連立が国会の過半数を占めている以上、首相任命には憲法上の正当性があるというのが彼らの主張である。不幸にも、この主張は完全な誤りとはいえない。?]
 
 - @braun_appoints_hitler
 - @rosenfeld_appoints_strasser
@@ -117,13 +117,13 @@ The <span style="color: #7A3C00;">fascists</span> reject our offer of free and f
 @new_elections_braun_2
 go-to: new_elections_2
 
-The <span style="color: #7A3C00;">fascists</span> seem to believe that they would win an election if one were to be held now, so they agree to our holding an election for next month.
+<span style="color: #7A3C00;">ファシスト</span>は今なら選挙に勝てると考えているらしく、翌月に選挙を実施するという我々の提案に同意した。
 
 
 @new_elections_hindenburg
 go-to: new_elections_2
 
-With the mediation of various establishment figures, new elections are called for next month, without the use of <span style="color: #7A3C00;">fascist</span> "electoral monitors".
+体制側のさまざまな人物の仲介により、<span style="color: #7A3C00;">ファシスト</span>の「選挙監視員」を使わず、翌月に新たな選挙を実施することになった。
 
 
 @new_elections_2
@@ -132,70 +132,70 @@ on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_e
 
 @new_elections_hindenburg_reject
 
-[? if president == "Hindenburg": Influenced by his inner circle and by the <span style="color: #7A3C00;">fascists</span> in the streets, President Hindenburg rejects our offer of new free and fair elections, and again demands that we resign. ?][? if president != "Hindenburg": Influenced by the <span style="color: #7A3C00;">fascists</span> in the streets—and his own sympathies, as the <span style="color: #3E88B3;">**Stahlhelm**</span> is also taking part—President [+ president +] rejects our proposal for new free and fair elections, and once again demands our resignation. ?] There is no arguing.
+[? if president == "Hindenburg": 側近と街頭の<span style="color: #7A3C00;">ファシスト</span>に影響されたヒンデンブルク大統領は、自由かつ公正な新選挙という我々の提案を拒み、再び辞任を要求した。?][? if president != "Hindenburg": 街頭の<span style="color: #7A3C00;">ファシスト</span>に加え、<span style="color: #3E88B3;">**鉄兜団**</span>も参加しているため自らの共感にも動かされた大統領[+ president +]は、自由かつ公正な新選挙という我々の提案を拒み、再び辞任を要求した。?]もはや議論の余地はない。
 
 - @resign
 - @fight
 
 @new_elections_moderate
 
-Despite President [+ president +] standing with us against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> marchers, he remains under pressure from the <span style="color: #7A3C00;">fascists</span> in the streets and prioritizes a peaceful resolution above all else.
+大統領[+ president +]は我々とともに<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の行進隊に対抗しているが、街頭の<span style="color: #7A3C00;">ファシスト</span>から圧力を受け続け、何よりも平和的解決を優先している。
 
-Still, [+ president +] refuses to accept any new election that is not truly free and fair.
+それでも[+ president +]は、真に自由かつ公正でない選挙を受け入れることを拒んでいる。
 
 - @new_elections_moderate_2
 - @new_elections_moderate_2_alt
 
 @new_elections_moderate_2
-title: Free and fair elections it is!
+title: 自由かつ公正な選挙だ！
 choose-if: far_right_coalition < 50 and nsdap_normalized + dnvp_normalized >= 0.5
-unavailable-subtitle: The <span style="color: #7A3C00;">fascists</span> want nothing less than a rigged ballot.
+unavailable-subtitle: <span style="color: #7A3C00;">ファシスト</span>が求めるのは不正選挙以外の何物でもない。
 go-to: new_elections_2
 
-The <span style="color: #7A3C00;">fascists</span>, confident in their chances, agree to [+ president +]’s proposal to hold elections next month.
+勝算に自信を持つ<span style="color: #7A3C00;">ファシスト</span>は、翌月に選挙を実施するという[+ president +]の提案に同意した。
 
 @new_elections_moderate_2_alt
-title: Any chance of a peaceful resolution is thrown out.
+title: 平和的解決の可能性は潰えた。
 choose-if: far_right_coalition >= 50 and nsdap_normalized + dnvp_normalized < 0.5
-unavailable-subtitle: The <span style="color: #7A3C00;">fascists</span> are confident in their chances.
+unavailable-subtitle: <span style="color: #7A3C00;">ファシスト</span>は自らの勝算に自信を持っている。
 
-[+ president +] cannot bring himself to violate German democracy—or appoint a <span style="color: #7A3C00;">Nazi</span> as Chancellor. Our only option now is to confront the <span style="color: #7A3C00;">fascists</span> head-on, with the support of loyal government forces.
+[+ president +]にはドイツの民主主義を踏みにじることも、<span style="color: #7A3C00;">ナチ</span>を首相に任命することもできない。今や我々に残された唯一の選択肢は、政府に忠実な部隊の支援を受けて<span style="color: #7A3C00;">ファシスト</span>と正面から対決することだ。
 
 - @fight
 
 @resign
-title: Resign our positions in the government.
+title: 政府の役職を辞任する。
 choose-if: president != "Braun"
-unavailable-subtitle: President Braun cannot resign.
+unavailable-subtitle: ブラウン大統領は辞任できない。
 on-arrival: chancellor = "Goerdeler"; chancellor_party = "I"; spd_in_government = 0;
 go-to: accept
 
-We have resigned our positions in the government. We are replaced by the <span style="color: #808080;">reactionary</span> Goerdeler, who aims to bring the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> into government.
+我々は政府の役職を辞任した。後任には<span style="color: #808080;">反動派</span>のゲルデラーが就き、<span style="color: #7A3C00;">国民的</span><span style="color: #3E88B3;">反対派</span>の入閣を目指している。
 
 @braun_appoints_hitler
-title: We cannot do anything but appoint Hitler chancellor.
+title: ヒトラーを首相に任命するほかない。
 view-if: president_ideology == "Left"
 choose-if: (nsdap_normalized >= 0.5 or largest_party == "NSDAP") and president != "Rosenfeld"
-unavailable-subtitle: There is no way President [+ president +] could do such a blatantly undemocratic act. [? if president == "Rosenfeld": Rosenfeld would never do this, no matter the circumstances. ?]
+unavailable-subtitle: 大統領[+ president +]にこれほど露骨な反民主的行為ができるはずはない。[? if president == "Rosenfeld": ローゼンフェルトなら、どのような状況でも決して実行しない。?]
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; spd_in_government = 0
 
-Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Hitler of the <span style="color: #7A3C00;">**NSDAP**</span> as chancellor.
+内戦の脅威にさらされ、もはや戦う意志を失った大統領[+ president +]は現政権を罷免し、<span style="color: #7A3C00;">**NSDAP**</span>のヒトラーを首相に任命した。
 
 @rosenfeld_appoints_strasser
-title: We cannot do anything but appoint Strasser chancellor.
+title: シュトラッサーを首相に任命するほかない。
 view-if: president_ideology == "Left" and president == "Rosenfeld"
 choose-if: time >= hitler_explode and hitler_explode
-unavailable-subtitle: There is no way President [+ president +] could do such a blatantly undemocratic act.
+unavailable-subtitle: 大統領[+ president +]にこれほど露骨な反民主的行為ができるはずはない。
 on-arrival: chancellor = "Strasser"; chancellor_party = "NSDAP"; spd_in_government = 0
 
-Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Strasser of the <span style="color: #7A3C00;">**NSDAP**</span> as chancellor.
+内戦の脅威にさらされ、もはや戦う意志を失った大統領[+ president +]は現政権を罷免し、<span style="color: #7A3C00;">**NSDAP**</span>のシュトラッサーを首相に任命した。
 
 - @hitler_takes_power
 
 @presidential_glaze
 on-arrival: reichswehr_loyalty += 0.1; reichswehr_loyalty += 0.1 if president == "Gessler"
 
-Luckily, President [+ president +] is on our side in this crisis. He has recognized the coup for what it is, and is prepared to stand by the government if we resist.
+幸いにも、この危機において大統領[+ president +]は我々の側に立っている。彼はこれがクーデターであると正しく認識し、我々が抵抗するなら政府を支える覚悟を固めている。
 
 - @fight
 - @new_elections
@@ -207,13 +207,13 @@ go-to: left_front if in_left_front; pop_front if in_popular_front
 @left_front
 on-arrival: foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; reichswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_loyalty -= 0.05; dvp_right += 10; ddp_right += 5; ddp_cohesion -= 3; lvp_right += 8; liberal_cooperation += 5; bourgeois_cooperation += 10; liberal_cooperation += 3 if in_left_front_prussia or in_popular_front_prussia; bourgeois_cooperation += 5 if in_left_front_prussia or in_popular_front_prussia; reformist_dissent += 20; reformist_strength -= 10; left_dissent -= 30; left_strength += 20; hindenburg_angry += 10 if in_popular_front_prussia or in_left_front_prussia; catastrophepolitik = 1 if n_elections >= 5 and not catastrophepolitik_cancel
 
-The <span style="color: #700000;">**KPD**</span> has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" in the worker's government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that we would inevitably fail, and that our failure would benefit them. 
+<span style="color: #700000;">**KPD**</span>は閣僚職について不参加の立場を取った。労働者政府の「忠実な反対党」として参加し、閣外から我々を支援する一方、労働者を自陣営へ引き入れる独自の宣伝活動も続けると主張している。我々はいずれ必ず失敗し、その失敗が自党の利益になると見込んでいるらしい。
 
-Whatever their reasoning is, the <span style="color: #c00000;">**SPD**</span> has control over the ministries of government.
+彼らの思惑が何であれ、政府の各省は<span style="color: #c00000;">**SPD**</span>が掌握した。
 
 @pop_front
 on-arrival: kpd_goals_seen = 0; finance_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = "Z"; ddp_in_popular_front = 1 if (liberal_parliament = 0 and bourgeois_parliament_ddp == 0 and not lvp_formed); justice_minister_party = ddp_name if ddp_in_popular_front; economic_minister_party = "Z"; economic_minister_party = ddp_name if ddp_in_popular_front; labor_minister_party = "Z"; foreign_minister_party = "Z"; agriculture_minister_party = "Z"; reichswehr_minister = "I"; leverage += kpd_r; leverage += ddp_r if liberal_parliament = 1 or bourgeois_parliament_ddp == 1; dvp_right += 6; ddp_right += 3; lvp_right += 5; ddp_cohesion -= 2 if liberal_parliament = 0; liberal_cooperation += 5 if liberal_parliament = 1 or bourgeois_parliament_ddp == 1; bourgeois_cooperation += 5; liberal_cooperation += 3 if ((liberal_parliament = 1 or bourgeois_parliament_ddp == 1) and (in_popular_front_prussia or in_left_front_prussia)); bourgeois_cooperation += 3 if (in_popular_front_prussia or in_left_front_prussia); dvp_relation -= 5; ddp_relation -= 5 if liberal_parliament = 1 or bourgeois_parliament_ddp == 1; lvp_relation -= 5; reformist_dissent += 20; reformist_strength -= 10; left_dissent -= 20; left_strength += 15; leverage += spd_r if support_kpd_grand; leverage += kpd_r if support_kpd_grand; hindenburg_angry += 10 if (in_popular_front_prussia or in_left_front_prussia)
 
-The <span style="color: #700000;">**KPD**</span> has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" within the Popular Front government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that the Popular Front would inevitably fail, and that our failure would benefit them. 
+<span style="color: #700000;">**KPD**</span>は閣僚職について不参加の立場を取った。人民戦線政府の「忠実な反対党」として参加し、閣外から我々を支援する一方、労働者を自陣営へ引き入れる独自の宣伝活動も続けると主張している。人民戦線はいずれ必ず失敗し、その失敗が自党の利益になると見込んでいるらしい。
 
-- @election_1928.ministries: First, we must select our ministries.
+- @election_1928.ministries: まず閣僚職を選ばねばならない。

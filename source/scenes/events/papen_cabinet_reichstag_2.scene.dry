@@ -1,7 +1,7 @@
-title: Emergency Decree to Suspend Parliament?
-subtitle: Rumors of a President authorized unconstitutional decree...
+title: 議会停止の緊急令？
+subtitle: 大統領が違憲な緊急令を承認したとの噂……
 view-if: chancellor = "Papen" and papen_time and (next_reichstag_time - 1) == rubicon_time and next_reichstag_time > 0 and reichstag_pres_rubicon
-on-arrival: reichstag_decree_rubicon = 1; papen_strength += 1; papen_goal = "Postpone elections indefinitely"
+on-arrival: reichstag_decree_rubicon = 1; papen_strength += 1; papen_goal = "選挙を無期限に延期する"
 new-page: true
 tags: event
 max-visits: 1
@@ -18,8 +18,8 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Rumored Emergency Decree
+= 緊急令の噂
 
-It is rumored that by the end of last month, Chancellor von Papen secured Hindenburg's approval for two emergency decrees: one to dissolve the Reichstag, and another—blatantly unconstitutional—to postpone elections beyond the 60-day limit mandated by the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution. These decrees would allow Papen to govern unchallenged, free from the threat of parliamentary repeal or a vote of no confidence.
+先月末までに、フォン・パーペン首相が二つの緊急令についてヒンデンブルクの承認を得たとの噂がある。一つは国会を解散するもの、もう一つは<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>憲法が定める60日以内という期限を越えて選挙を延期する、露骨に違憲なものである。これらの緊急令により、パーペンは議会による廃止や不信任決議の脅威を免れ、何者にも妨げられず統治できるようになる。
 
-Papen has quickly become Hindenburg’s favorite, and the president—unwilling to part with him—has signed off on a decree that violates the constitution he swore to uphold. Former Chancellor Brüning, upon learning of this, has threatened Hindenburg with impeachment should he proceed, persuading himself that he'd deterred Papen from presenting the decree in the next session.
+パーペンはたちまちヒンデンブルクのお気に入りとなり、彼を手放したくない大統領は、自らが擁護を誓った憲法に反する緊急令を承認した。これを知ったブリューニング前首相は、実行すればヒンデンブルクを弾劾すると警告し、パーペンが次の会期に緊急令を提出するのを阻止できたと信じ込んでいる。

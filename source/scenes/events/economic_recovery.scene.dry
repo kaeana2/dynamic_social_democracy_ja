@@ -1,11 +1,11 @@
-title: Global Economic Recovery
-subtitle: Finally, the world economy is leaving the worst throes of the depression.
+title: 世界経済の回復
+subtitle: ついに、世界経済は恐慌の最悪の苦境を脱しつつある。
 view-if: year = 1933 and month >= 6
 on-arrival: unemployed -= 3 if unemployed > 25; unemployed -= 2 if unemployed > 15; unemployed -= 1 if unemployed > 8; workers_nsdap -= 5; unemployed_nsdap -= 5; inflation += 1.5 if inflation < 0; ddp_left += 4; dvp_left += 4; ddp_cohesion += 4; lvp_left += 4
 new-page: true
 max-visits: 1
 #tags: event
 
-= Global Economic Recovery
+= 世界経済の回復
 
-Finally, countries across the world seem to be recovering from the worst effects of the Great Depression. It is an uneven recovery, but we seem to be exiting the worst period of crisis. [? if unemployed >= 10: Our unemployment has fallen. ?]
+ついに、世界中の国々が世界恐慌の最悪の影響から回復しているようだ。回復は不均一だが、最悪の危機的状況を脱しつつあるようだ。[? if unemployed >= 10: 我々の失業率は低下した。?]

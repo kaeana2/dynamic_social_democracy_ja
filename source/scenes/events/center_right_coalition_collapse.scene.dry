@@ -1,22 +1,21 @@
-title: <span style="color: #000000;">Bourgeois</span>-<span style="color: #3E88B3;">Right</span> Government Collapses!
+title: <span style="color: #000000;">ブルジョワ</span>・<span style="color: #3E88B3;">右派</span>政権崩壊！
 new-page: true
-subtitle: New elections scheduled
+subtitle: 新選挙が予定されている
 tags: event
 view-if: total_bruning_time >= 6 and (in_right_coalition or in_center_right_coalition) and bruning_coalition_dissent >= 4 and bruning_time and not cvp_formed
 on-arrival: pro_republic -= 3
 max-visits: 1
 
-= <span style="color: #000000;">Bourgeois</span>-<span style="color: #3E88B3;">Right</span> Government Collapses!
+= <span style="color: #000000;">ブルジョワ</span>・<span style="color: #3E88B3;">右派</span>政権崩壊！
 
-The disagreements between Chancellor [+ chancellor +] and his supporting parties have fallen beyond repair, and the [? if dvp_exist: <span style="color: #C0A054;">**DVP**</span>?][? if not dvp_exist: <span style="color: #3E88B3;">**DNVP**</span> ?] have issued a vote of no confidence against his government, which is expected to be supported by [? if dvp_exist: the <span style="color: #3E88B3;">**DNVP**</span> and ?]the array of special interest parties as well. 
+首相 [+ chancellor +] とその支持政党との意見の相違は修復不能な域に達し、[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span>?][? if not dvp_exist: <span style="color: #3E88B3;">**DNVP**</span> ?] は、[? if dvp_exist: の支持を得て、<span style="color: #3E88B3;">**DNVP**</span> および ?] の一連の特殊利益政党からも支持されると予想される、彼の政府に対する不信任投票を発した。
 
 - @great
 
 @great
-title: Support the vote of no confidence, voting against the government.
-subtitle: The government will collapse, and there will be new elections.
+title: 不信任決議案に賛成し、政府に反対票を投じる。
+subtitle: 政府は崩壊し、新たな選挙が行われる。
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0
 call: set_next_election_time
 
-The <span style="color: #000000;">bourgeois</span>-<span style="color: #3E88B3;">right</span> coalition has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
-
+<span style="color: #000000;">ブルジョワ</span>・<span style="color: #3E88B3;">右派</span>連立は崩壊した。新たな選挙は[+ next_election_year +]年[+ next_election_month : month +]に予定された。

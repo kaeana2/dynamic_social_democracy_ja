@@ -1,5 +1,5 @@
-title: The Papen Cabinet Resigns!
-subtitle: Symbolic if anything, he remains as a caretaker.
+title: パーペン内閣、総辞職！
+subtitle: 象徴的な措置にすぎず、彼は暫定首相にとどまる。
 view-if: chancellor = "Papen" and papen_time == 23 and papen_post_2
 new-page: true
 tags: event
@@ -7,8 +7,8 @@ max-visits: 1
 face-image: img/weimar_constitution.jpg
 on-arrival: pro_republic += 3; schleicher_papen_r -= 1
 
-= Papen's Resignation
+= パーペンの辞職
 
-With no progress made on securing <span style="color: #7A3C00;">Nazi</span> toleration of the cabinet, and Papen still unable to survive a Reichstag vote when the chamber reconvenes, Schleicher has advised the chancellor to resign in order to calm the national mood. This would allow the President to seek a broader base of support without Papen at the helm.
+<span style="color: #7A3C00;">ナチ</span>による内閣への閣外協力を取りつける交渉は進展せず、国会が再開すればパーペンが採決を乗り切れない状況も変わらない。シュライヒャーは国民感情を鎮めるため、首相に辞職を勧告した。パーペンを政権の座から外せば、大統領はより広範な支持基盤を探れるようになる。
 
-However, Papen’s cabinet continues to function in a caretaker role, and little has changed fundamentally. As Papen has stated to his cabinet, none of this matters, as Hindenburg remains "firmly resolved to take all measures that might become necessary" to support him.
+しかしパーペン内閣は暫定政権として機能し続けており、根本的にはほとんど何も変わっていない。パーペンが閣僚に語ったように、ヒンデンブルクは彼を支えるため「必要となりうるあらゆる措置を取ることを固く決意」しており、総辞職など問題ではないというのである。

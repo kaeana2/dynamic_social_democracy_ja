@@ -1,5 +1,5 @@
-title: The <span style="color: #6A1E1E;">**DSU**</span> Enters Government
-subtitle: Our choice doesn't matter after all.
+title: <span style="color: #6A1E1E;">**DSU**</span>の入閣
+subtitle: 結局、我々の選択に意味はなかった。
 view-if: chancellor == "Schleicher" and not dsu_in_gov and not dsu_was_gov and z_in_gov and z_leader == "Bracht" and schleicher_post_time >= 8
 max-visits: 1
 new-page: true
@@ -17,16 +17,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #6A1E1E;">**DSU**</span> Enters Government
+= <span style="color: #6A1E1E;">**DSU**</span>の入閣
 
-With the favorable Bracht being installed at the head of the <span style="color: #000000;">Center Party</span>, the party no longer voice loud reservations over the inclusion of the "reasonable" <span style="color: #6A1E1E;">**DSU**</span> into the Schleicher cabinet, to increase its popular backing, and to tame the <span style="color: #7A3C00;">Nazis</span> that can be tamed. 
+好意的なブラハトが<span style="color: #000000;">中央党</span>党首に就任したことで、同党は政権の国民的支持を広げ、懐柔可能な<span style="color: #7A3C00;">ナチ党員</span>を従わせるため、「理性的な」<span style="color: #6A1E1E;">**DSU**</span>をシュライヒャー内閣へ迎えることに強い懸念を表明しなくなった。
 
-This goes completely against Schleicher's promise to us, that he'll never let the <span style="color: #7A3C00;">Nazis</span> into cabinet if we were to give him a major concession. e have been conned, big time.
+これは、大幅な譲歩と引き換えに<span style="color: #7A3C00;">ナチ党</span>を決して入閣させないというシュライヒャーの約束に真っ向から反する。我々は完全に騙されたのだ。
 
 - @dsu_in_gov
 
 @dsu_in_gov
-title: Strasser enters the cabinet.
+title: シュトラッサーが入閣する。
 on-arrival: {!
 Q.dsu_in_gov = 1;
 Q.schleicher_post = 1;
@@ -45,8 +45,8 @@ Q.schleicher_spd_r -= 4;
 Q.schleicher_spd_influence -= 3;
 !}
 
-Wilhelm Frick is nominated to the Interior Ministry[? if old_prussia_leader == "Schleicher": —both in the Reich and in Prussia?]. Gregor Strasser takes the vice-chancellorship—a title in name only. [? if prussia_leader == "Goerdeler":  Although the <span style="color: #6A1E1E;">**DSU**</span> would’ve preferred Strasser installed in Prussia, Goerdeler stays on—as Schleicher’s loyal puppet and as a concession to the <span style="color: #000000;">Center Party</span>. ?]
+ヴィルヘルム・フリックが内相に指名された[? if old_prussia_leader == "Schleicher": ――ライヒとプロイセンの双方においてである?]。グレゴール・シュトラッサーは副首相となるが、それは名ばかりの称号である。[? if prussia_leader == "Goerdeler": <span style="color: #6A1E1E;">**DSU**</span>はシュトラッサーをプロイセン州首相に据えることを望んだが、ゲルデラーはシュライヒャーの忠実な傀儡として、また<span style="color: #000000;">中央党</span>への譲歩として留任する。 ?]
 
-At the <span style="color: #7A3C00;">Nazis’</span> insistence, Hjalmar Schacht is brought in as an independent to head the Economic Ministry.
+<span style="color: #7A3C00;">ナチ党</span>の要求により、ヒャルマル・シャハトが無所属の経済相として迎えられた。
 
-To compensate for the <span style="color: #000000;">Center Party</span>’s loss of influence, they're given an additional Ministry without Portfolio. Not that the <span style="color: #000000;">Center</span> can complain—not with Bracht in charge.
+<span style="color: #000000;">中央党</span>の影響力低下を補うため、同党には無任所相が追加で与えられた。ブラハトが党を率いている以上、<span style="color: #000000;">中央党</span>が不満を述べることはない。

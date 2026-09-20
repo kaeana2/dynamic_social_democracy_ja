@@ -1,4 +1,4 @@
-title: Building a People's Party
+title: 人民政党の建設
 new-page: true
 is-card: true
 card-image: img/poster_0.jpg
@@ -8,17 +8,17 @@ tags: party_affairs
 max-visits: 4
 #subtitle: Can the SPD move beyond the working class?
 
-= Building a People's Party
+= 人民政党の建設
 
-Contrary to orthodox Marxist predictions, the industrial proletariat is not constantly increasing in size. The rapid growth of the "new middle class" of white-collar workers and the persistence of small farmers and the peasantry confound predictions of a working-class majority.
+正統派マルクス主義の予測に反し、産業プロレタリアートは絶えず増大しているわけではない。ホワイトカラー労働者からなる「新中間層」の急増と、小農・農民層の存続により、労働者階級が多数派になるとの予測は崩れている。
 
-In order to build a <span style="color: #c00000;">socialist</span> majority, many reformists and neorevisionists are calling for our party to move beyond the urban working class, to embrace the concerns of the middle class, farmers, and women of all classes. We can create a new and inclusive vision of the party that encompasses all people who work for a living, which is almost everyone in the country save the aristocrats and top capitalists.
+<span style="color: #c00000;">社会主義</span>多数派を築くため、多くの改革派と新修正主義派は都市労働者階級を越え、中間層、農民、あらゆる階級の女性の関心を取り込むよう求めている。貴族と大資本家を除く、生活のために働くほぼ全国民を包摂する新たな党像を作れる。
 
-- @support_peoples_party: Yes, we must become a people's party!
-- @build_support: We must build additional support before becoming a people's party.
-- @support_peoples_party_hard: Despite strong opposition from the Center and Left factions, we will become a people's party.
-- @no_new_ideas: No, we will always be a party of the working class.
-- @root: Perhaps we can discuss this at a later time.
+- @support_peoples_party: そうだ、人民政党にならなければならない！
+- @build_support: 人民政党になる前に、さらなる支持を築く。
+- @support_peoples_party_hard: 中間派と左派の強硬な反対を押し切り、人民政党になる。
+- @no_new_ideas: いや、われわれは常に労働者階級の党である。
+- @root: 後で改めて議論する。
 - @easy_discard
 - @cancel_advisor_action
 
@@ -26,18 +26,18 @@ In order to build a <span style="color: #c00000;">socialist</span> majority, man
 view-if: (neorevisionist_strength + reformist_strength < left_strength + center_strength) or peoples_party_support < 5
 on-arrival: peoples_party_support += 1; neorevisionist_strength += 5; left_strength -= 5; left_dissent += 5
 
-Within our party, we are pushing forward proposals for a people's party against the Left and Center.
+左派と中間派の反対を受けながら、党内で人民政党案を推進している。
 
 
 @support_peoples_party
 choose-if: (neorevisionist_strength + reformist_strength >= left_strength + center_strength) and peoples_party_support >= 4
-unavailable-subtitle: The opposition is too strong.
+unavailable-subtitle: 反対が強すぎる。
 on-arrival: neorevisionist_strength += 15; reformist_strength += 15; neorevisionist_dissent -= 10; reformist_dissent -= 10; peoples_party = 1; workers_spd -= 12; rural_spd += 10; new_middle_spd += 10; old_middle_spd += 8; catholics_spd += 8; left_dissent += 25; center_dissent += 20; kpd_relation -= 10; kpd_coalition_dissent += 1; coalition_dissent -= 1; z_relation += 5*(1-dissent); dvp_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); dvp_left += 3; ddp_left += 3; ddp_cohesion += 2; lvp_left += 3; hindenburg_angry -= 30; hindenburg_angry_base -= 30
 achievement: volkspartei
 
-In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the workers and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from <span style="color: #9B0000;">Marxism</span> towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
+臨時党大会で、労働者と都市貧困層だけでなくドイツの一般国民すべてを包摂する人民政党になると決定した。左派と中間派は、新綱領は創立理念への裏切りであり、<span style="color: #9B0000;">マルクス主義</span>からブルジョワ的日和見主義への転向だと主張する。いずれにせよ、われわれはプロレタリアートだけでなく全人民を代表する党となった。
 
-Should we run a new campaign to publicize our new platform?
+新綱領を周知する運動を行うべきか。
 
 - @campaign_workers
 - @campaign_middle
@@ -48,14 +48,14 @@ Should we run a new campaign to publicize our new platform?
 
 
 @support_peoples_party_hard
-subtitle: This will increase dissent.
+subtitle: 党内不満が増加する。
 view-if: (neorevisionist_strength + reformist_strength < left_strength + center_strength) or (peoples_party_support < 4)
 on-arrival: neorevisionist_strength += 10; reformist_strength += 8; peoples_party = 1; workers_spd -= 15; rural_spd += 10; new_middle_spd += 10; old_middle_spd += 8; catholics_spd += 8; left_dissent += 40; center_dissent += 40; kpd_relation -= 10; kpd_coalition_dissent += 1; coalition_dissent -= 1; z_relation += 4*(1-dissent); dvp_relation += 4*(1-dissent); ddp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); dvp_left += 2; ddp_left += 2; ddp_cohesion += 1.5; lvp_left += 2; hindenburg_angry -= 20; hindenburg_angry_base -= 20
 achievement: volkspartei
 
-It is an arduous and contentious process, but we have pushed through the proposal to become a people's party. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from <span style="color: #9B0000;">Marxism</span> towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
+困難で対立に満ちた過程だったが、人民政党化の提案を押し通した。左派と中間派は、新綱領は創立理念への裏切りであり、<span style="color: #9B0000;">マルクス主義</span>からブルジョワ的日和見主義への転向だと主張する。いずれにせよ、われわれはプロレタリアートだけでなく全人民を代表する党となった。
 
-Should we run a new campaign to publicize our new platform?
+新綱領を周知する運動を行うべきか。
 
 - @campaign_workers
 - @campaign_middle
@@ -65,46 +65,45 @@ Should we run a new campaign to publicize our new platform?
 - @campaign_catholics
 
 @campaign_workers
-title: Campaign among the workers, to assuage their doubts about our changes.
+title: 党の変化への疑念を和らげるため、労働者に働きかける。
 on-arrival: workers_spd += 6*(1-dissent);
 
-The workers are still a key part of our constituency, and we must not alienate them in the transformation of our party.
+労働者は今なお重要な支持基盤であり、党の変革によって遠ざけてはならない。
 
 @campaign_middle
-title: Campaign among the middle classes.
+title: 中間層に働きかける。
 on-arrival: old_middle_spd += 5*(1-dissent); new_middle_spd += 6*(1-dissent)
 
-As a people's party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
+人民政党として中間層の被用者と小規模事業者を代表し、彼らは党の訴えを受け入れ始めている。
 
 @campaign_rural
-title: Campaign in rural areas.
+title: 農村部で運動する。
 choose-if: rural_policy > 0
-unavailable-subtitle: We have not enacted any rural policies yet.
+unavailable-subtitle: 農村政策をまだ実施していない。
 on-arrival: rural_spd += 7*(1-dissent)
 
-As a people's party, we represent farmers and rural workers as well, and they are becoming receptive to our messages.
+人民政党として農民と農村労働者も代表し、彼らは党の訴えを受け入れ始めている。
 
 @campaign_unemployed
-title: Campaign among the unemployed.
+title: 失業者に働きかける。
 on-arrival: unemployed_spd += 6*(1-dissent);
 
-As a people's party, the urban poor are still a key part of our constituency.
+人民政党となっても、都市貧困層は重要な支持基盤である。
 
 @campaign_women
-title: Campaign among women of all classes.
+title: あらゆる階級の女性に働きかける。
 on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent);
 
-As a people's party, we represent women of all classes.
+人民政党として、あらゆる階級の女性を代表する。
 
 @campaign_catholics
-title: Campaign among political Catholics.
+title: 政治的カトリックに働きかける。
 on-arrival: catholics_spd += 7*(1-dissent);
 
-Catholics have historically been tied to the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], but there is no reason why our party cannot appeal to them. The Prussian Concordat in particular is a sign of our friendship with Catholicism.
+カトリック教徒は歴史的に[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と結びついてきたが、わが党が支持を訴えられない理由はない。とりわけプロイセン政教条約はカトリックとの友好の証である。
 
 
 @no_new_ideas
 on-arrival: neorevisionist_strength -= 6; neorevisionist_dissent += 5; center_strength += 8; left_strength += 3; peoples_party = 0; peoples_party_support -= 3
 
-The <span style="color: #c00000;">Social Democrats</span> have been and will always be a party of the working class.
-
+<span style="color: #c00000;">社会民主党</span>はこれまでも、これからも労働者階級の党である。

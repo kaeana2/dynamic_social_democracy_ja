@@ -1,5 +1,5 @@
-title: [+ nsdap_chancellor +] and Papen Meet
-subtitle: A conspiracy against the chancellor is hatched.
+title: [+ nsdap_chancellor +]とパーペンが会談
+subtitle: 首相を倒す陰謀が企てられる。
 view-if: chancellor = "Schleicher" and schleicher_time == 4
 new-page: true
 tags: event
@@ -17,40 +17,40 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= [+ nsdap_chancellor +] and Papen Meet
+= [+ nsdap_chancellor +]とパーペンが会談
 
-(While the public remained unaware of the details of the plot, they are included here for informational purposes)
+（陰謀の詳細は国民に知られていなかったが、参考情報としてここに記す）
 
-Papen, eager to return to power and thirsting for revenge against his former ally and ouster Schleicher, has been working behind the scenes to arrange a meeting with [+ nsdap_chancellor +]. With the help of intermediaries—and ultimately a banker sympathetic to the <span style="color: #7A3C00;">Nazis</span>—he finally secured an audience with the man himself.
+権力への復帰を熱望し、自らを追放したかつての盟友シュライヒャーへの復讐に燃えるパーペンは、[+ nsdap_chancellor +]との会談を実現すべく舞台裏で動いていた。仲介者たち、そして最後には<span style="color: #7A3C00;">ナチ党</span>に同情的な銀行家の助けを借り、ついに本人との会談にこぎ着けた。
 
-The two met at the banker’s home, where they spent much of the time airing old grievances. Nevertheless, Papen made a concerted effort to court the <span style="color: #7A3C00;">Nazi</span> leader. He insisted that it was Schleicher, not he, who had blocked [+ nsdap_chancellor +]’s path to the chancellorship. He also revealed that President Hindenburg had yet to issue Schleicher a decree to dissolve the Reichstag—evidence, he claimed, of the president’s deep reservations about him. Papen emphasized that the true nature of the Hindenburg-Schleicher relationship was far more strained than the public believed, and he asserted that he himself still wielded considerable influence over the old man. His hatred for Schleicher was unmistakable throughout.
+二人は銀行家の邸宅で会い、長い時間をかつての不満のぶつけ合いに費やした。それでもパーペンは<span style="color: #7A3C00;">ナチ党</span>指導者を懐柔しようと懸命に努めた。[+ nsdap_chancellor +]の首相就任を阻んだのは自分ではなくシュライヒャーだと言い張り、ヒンデンブルク大統領がいまだシュライヒャーに国会解散令を与えていないことも明かした。これは大統領が彼に深い疑念を抱いている証拠だという。ヒンデンブルクとシュライヒャーの真の関係は国民が考えるよりはるかに険悪であり、自分はなお老大統領に相当な影響力を持つとパーペンは強調した。彼のシュライヒャーへの憎悪は終始明白であった。
 
-By the end of the meeting, the two had reached a mutual understanding: they would work together to oust Schleicher and replace his government with a presidential cabinet based on a coalition between the <span style="color: #7A3C00;">Nazis</span> and the <span style="color: #808080;">reactionary right</span>, with the goal of crushing the leftist parties once and for all.
+会談の終わりまでに、二人は共通認識へ達した。協力してシュライヒャーを追放し、その政府を<span style="color: #7A3C00;">ナチ党</span>と<span style="color: #808080;">反動右翼</span>の連立に基づく大統領内閣へ置き換え、左翼諸党を一挙に粉砕するというものだ。
 
-However, the question of who should lead this new government remained unresolved. Papen argued that Hindenburg’s well-known opposition to appointing [+ nsdap_chancellor +] should make him the more viable candidate, offering to give the <span style="color: #7A3C00;">Nazis</span> control over the Interior and Defense Ministries as compensation. [+ nsdap_chancellor +] flatly rejected this, still insisting that his mass movement had earned the right to the chancellorship.
+しかし、新政府を誰が率いるかは未解決のままであった。ヒンデンブルクが[+ nsdap_chancellor +]の任命に反対していることは周知である以上、自分の方が現実的な候補だとパーペンは主張し、代償として内務省と国防省を<span style="color: #7A3C00;">ナチ党</span>に委ねると提案した。[+ nsdap_chancellor +]はこれをきっぱり拒絶し、自らの大衆運動には首相職を得る権利があると譲らなかった。
 
-The meeting concluded with a promise to continue discussions, though no future date was set.
+会談は協議継続の約束をもって終わったが、次回の日取りは定められなかった。
 
 - @nazi
 
 @nazi
-title: An end to [+ nsdap_chancellor +]'s political isolation...
-subtitle: President Hindenburg will never appoint [+ nsdap_chancellor +]! No need to worry.
+title: [+ nsdap_chancellor +]の政治的孤立が終わる……。
+subtitle: ヒンデンブルク大統領が[+ nsdap_chancellor +]を任命するはずはない！　心配無用だ。
 
-Indeed, no need to worry. But [+ nsdap_chancellor +]’s chances of seizing power legally have jumped from zero to near-zero. He has finally breached the protective ring of advisors that shielded President Hindenburg from him—and now holds the offer of an alliance with a former chancellor who still enjoys the old man's affection.
+確かに心配無用である。しかし、[+ nsdap_chancellor +]が合法的に権力を奪取する可能性は、ゼロからゼロ同然に跳ね上がった。彼はついに、自分からヒンデンブルク大統領を隔てていた側近の防壁を突破し、老大統領の寵愛をなお受ける元首相から同盟の申し出を得た。
 
-It remains unlikely that a man like Papen would surrender his own ambitions for the chancellorship—and the same can be said for [+ nsdap_chancellor +]—but Papen's thirst for revenge knows no bounds.
+パーペンのような男が自らの首相への野望を捨てるとは考えにくく、[+ nsdap_chancellor +]についても同様である。だが、パーペンの復讐心には限度がない。
 
-The reason we know of this secretive meeting? When Papen stepped out of a taxi at the meeting location, he was unpleasantly surprised to find a photographer aiming a camera at him. Through a long chain of whispers—beginning with Strasser and ending with Brüning’s personal dentist hiring the photographer—the front pages of newspapers across Germany now blare: “*[+ nsdap_chancellor +] and Papen Against Schleicher*.”
+なぜ我々がこの秘密会談を知っているのか？　パーペンが会談場所でタクシーを降りると、カメラを向ける写真家がいて彼を不愉快に驚かせたからである。シュトラッサーに始まり、ブリューニングのかかりつけ歯科医が写真家を雇うところへ至る長い伝聞の鎖を経て、ドイツ全土の新聞一面は今や「*[+ nsdap_chancellor +]とパーペン、シュライヒャーに対抗*」と大書している。
 
 @nazi_2
-title: What does Schleicher think of this?
+title: シュライヒャーはこれをどう見ているのか？
 on-arrival: workers_nsdap -= 2; workers_spd += 2
 
-Papen quickly dismisses the "fabricated" charges that the meeting was directed against Schleicher, claiming he merely wanted to discuss how he could bring the <span style="color: #7A3C00;">Nazis</span> into the cabinet—to Schleicher’s benefit. The leftist parties, including even our own newspaper, frame it as a capitalist conspiracy, given that the meeting took place in the home of a <span style="color: #808080;">reactionary</span> banker.
+パーペンは、会談がシュライヒャーを狙ったものだという「捏造された」非難を直ちに否定し、シュライヒャーの利益となるよう<span style="color: #7A3C00;">ナチ党</span>を入閣させる方法を話し合いたかっただけだと主張した。我が党の新聞を含む左翼諸党は、会談が<span style="color: #808080;">反動的</span>銀行家の邸宅で行われたことから、資本家の陰謀として描いている。
 
-Only a minority understands the meeting for what it truly was: two men, both hostile to the current chancellor, conspiring against him. Even Schleicher, the political mastermind, failed to take Papen seriously enough to believe he would plot behind his back. He assumed Papen was merely trying to restore himself to favor and sought to broker a reconciliation between his cabinet and [+ nsdap_chancellor +].
+会談の真相、すなわち現首相に敵対する二人の男が彼を倒す陰謀を企てたと理解する者は少数にすぎない。政治の策士シュライヒャーでさえ、パーペンが背後で陰謀を巡らせるとは考えず、彼を十分に警戒しなかった。パーペンは単に寵愛を取り戻そうとし、自分の内閣と[+ nsdap_chancellor +]の和解を仲介しているだけだと思い込んだのである。
 
-> *"He imagined that he was going to pull off a master stroke and serve up [+ nsdap_chancellor +] to us on a platter. As if [+ nsdap_chancellor +] had not shown many times that he cannot be trusted! Now Papen is embarrassed. He fears our reproaches. I won’t scold him. I’ll just say to him: ‘my Fränzchen, you’ve committed another blunder!"*
+> *「彼は妙手を決め、[+ nsdap_chancellor +]を皿に載せて我々へ差し出せると思っていた。[+ nsdap_chancellor +]が信用ならないと何度も示してきたことなど、なかったかのように！　今やパーペンは困惑し、我々の非難を恐れている。私は彼を叱りはしない。ただこう言うだけだ。『私のフレンツヒェン、またへまをしたな！』」*
 
- - Kurt von Schleicher, to the French ambassador
+ - クルト・フォン・シュライヒャー、フランス大使に対して

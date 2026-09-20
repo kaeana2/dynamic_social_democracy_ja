@@ -1,5 +1,5 @@
-title: <span style="color: #C0A054;">**DVP**</span> Executive Committee Meeting
-subtitle: Ernst Scholz has resigned!
+title: <span style="color: #C0A054;">**DVP**</span>執行委員会
+subtitle: エルンスト・ショルツが辞任！
 view-if: year = 1930 and month = 12 and dvp_leader == "Scholz" and not lvp_formed
 on-arrival: dvp_left += 2 if dvp_relation >= 35; dvp_left += 2 if in_grand_coalition
 max-visits: 1
@@ -7,13 +7,13 @@ tags: event
 face-image: img/portraits/ernst_scholz.jpg
 new-page: true
 
-= <span style="color: #C0A054;">**DVP**</span> Executive Committee Meeting
+= <span style="color: #C0A054;">**DVP**</span>執行委員会
 
-Ernst Scholz, recovering from surgery the past few months due to a resurgence of his health problems, has ultimately resigned in favor of his deputy Eduard Dingeldey, who is now guaranteed to succeed him as chairman.
+持病の再発で手術を受け、ここ数か月療養していたエルンスト・ショルツは、ついに副党首エドゥアルト・ディンゲルダイに道を譲って辞任した。ディンゲルダイの党首就任は確実である。
 
-Eduard Dingeldey is one of the first within the <span style="color: #C0A054;">**DVP**</span> to support the movement for bourgeois unity and is popular with the youth and bourgeois unity groups that have coalesced on the <span style="color: #C0A054;">**DVP**</span>'s left wing, having rallied around Schnell and his efforts last month. Dingeldey is also sufficiently conservative on most political issues—particularly on the question of cooperation with the <span style="color: #c00000;">**SPD**</span>—to gain support from the party's right wing.
+エドゥアルト・ディンゲルダイは、<span style="color: #C0A054;">**DVP**</span>内でいち早くブルジョワ統一運動を支持した人物である。先月シュネルの活動を支持して結集した、<span style="color: #C0A054;">**DVP**</span>左派の青年層や統一運動団体に人気がある。一方、大半の政治問題、とりわけ<span style="color: #c00000;">**SPD**</span>との協力については十分に保守的であり、党内右派の支持も得ている。
 
-- @resultsdvp: The party votes...
+- @resultsdvp: 党内投票が行われる……。
 
 @resultsdvp
 on-arrival: {!
@@ -31,6 +31,6 @@ go-to: dingeldey
 on-arrival: dvp_leader = "Dingeldey"; old_middle_dvp -= 2; new_middle_dvp -= 2; old_middle_nsdap += 2; new_middle_nsdap += 2; pro_republic -= 3; liberal_cooperation -= 1; bourgeois_cooperation += 1
 face-image: img/portraits/dingeldey.jpg
 
-Dingeldey's election to the chairmanship represents a triumph for the reform-minded elements on the <span style="color: #C0A054;">**DVP**</span>'s left wing and met with strong approval from the movement towards bourgeois unity. However, despite the enthusiasm exhibited by those on the left wing, his election doesn't seem to represent a shift to the left at all and only confirms the party's shift to the right. [? if chancellor == "Brüning" and not spd_in_government: Dingeldey doesn't even feel great loyalty toward the Brüning government and believes that the party could only fulfill its mission towards bourgeois concentration after it is freed from the burden of governmental responsibility.?] So far, he has proven to be a weak and ineffectual leader, capitulating to the right wing at every possible opportunity.
+ディンゲルダイの党首選出は、<span style="color: #C0A054;">**DVP**</span>左派の改革志向の勢力の勝利として、ブルジョワ統一運動から強く歓迎された。しかし、左派の熱狂とは裏腹に、選出は左旋回を全く意味せず、党の右傾化を追認したにすぎないようだ。[? if chancellor == "Brüning" and not spd_in_government: ディンゲルダイはブリューニング政権への忠誠心さえ強くなく、政権責任の重荷から解放されてこそ、ブルジョワ諸勢力の結集という党の使命を果たせると考えている。?]これまでのところ、彼は事あるごとに右派に屈する、弱く無力な指導者である。
 
-Furthermore, Dingeldey is not particularly interested in a closer relationship with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and definitely not with us, but rather with parties to the right, such as the <span style="color: #3E88B3;">**DNVP**</span> and even the <span style="color: #7A3C00;">**NSDAP**</span>, to transform them into a 'constructive component of the state.' This does not bode well for the future of <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> democracy.
+さらにディンゲルダイは、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>との接近にはさほど関心を持たず、我々との接近にはなおさら冷淡である。むしろ<span style="color: #3E88B3;">**DNVP**</span>、さらには<span style="color: #7A3C00;">**NSDAP**</span>のような右の政党と協力し、「国家の建設的な構成要素」に変えようとしている。<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>民主主義の将来には不吉な兆候である。

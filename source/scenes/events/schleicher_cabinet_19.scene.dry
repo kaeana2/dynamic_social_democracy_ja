@@ -1,4 +1,4 @@
-title: Schleicher's Announces His Successor
+title: シュライヒャーが後継者を発表
 view-if: year >= 1934 and month >= 2 and chancellor == "Schleicher" and schleicher_post and schleicher_successor_time == rubicon_time
 on-arrival: {!
 Q.schleicher_resign = 1;
@@ -12,16 +12,16 @@ max-visits: 1
 new-page: true
 tags: event
 
-= Schleicher's Successor
+= シュライヒャーの後継者
 
-With his resignation announced last week, speculation over who will succeed the monumental leader now dominates the minds of citizens across the nation. Some believe he is prepared to pass power to a civilian, while others expect another military man to take the helm. In the end, it hardly matters—Germany has been changed forever.
+先週辞任を発表して以来、この大指導者を誰が継ぐのかという憶測が全国民の関心を支配している。民間人へ権力を渡す用意があると考える者もいれば、別の軍人が舵を取ると予想する者もいる。結局のところ大差はない。ドイツは永久に変わってしまった。
 
 - @goerdeler
 - @bredow
 
 @goerdeler
-title: Carl Friedrich Goerdeler - <span style="color: #BFC8CC;">**DNEF**</span>
-subtitle: Former <span style="color: #3E88B3;">nationalist</span> mayor of Leipzig. Strong conservative.
+title: カール・フリードリヒ・ゲルデラー――<span style="color: #BFC8CC;">**DNEF**</span>
+subtitle: 元ライプツィヒ市長の<span style="color: #3E88B3;">国家主義者</span>。強硬な保守派。
 face-image: img/portraits/goerdeler.jpg
 choose-if: goerdeler_dnef_unlock
 on-arrival: {!
@@ -35,17 +35,17 @@ Q.schleicher_spd_influence -= 5;
 Q.schleicher_spd_support -= 6; 
 !}
 
-Goerdeler, an outspoken conservative on the German Right, with personal authoritarian and monarchist leanings, represents Schleicher’s signal of a return to partisan rule in essence. Despite breaking with his former party to join the <span style="color: #BFC8CC;">**DNEF**</span>, his appointment is seen by workers and <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span> as little different from naming a <span style="color: #3E88B3;">**DNVP**</span> man.
+権威主義・君主主義的傾向を持つドイツ右翼の公然たる保守派ゲルデラーの指名は、本質的には党派政治への回帰を示すシュライヒャーの合図である。旧党と袂を分かって<span style="color: #BFC8CC;">**DNEF**</span>へ加わったにもかかわらず、労働者と<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">者</span>は、その任命を<span style="color: #3E88B3;">**DNVP**</span>党員の指名とほとんど変わらないものと見ている。
 
-Yet, the fact that he is not a military figure like Schleicher or his circle has brought some measure of relief. Though a long-time opponent of Alfred Hugenberg and his faction, Goerdeler remains a conservative at heart and is expected to continue the dismantling of the despised <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> order.
+それでもシュライヒャーやその一派のような軍人ではないことは、いくらかの安堵をもたらした。アルフレート・フーゲンベルクとその派閥に長年反対してきたとはいえ、ゲルデラーは根本的には保守派であり、忌み嫌う<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>体制の解体を続けると見込まれる。
 
-But Goerdeler is no Schleicher. He lacks the vast network of political ties that his patron carefully cultivated across German society, and Schleicher’s personal popularity has failed to pass to his chosen successor. Moreover, Goerdeler is known for his hardline fiscal conservatism and anti-<span style="color: #c00000;">social</span> stance, having once called for the abolition of unemployment insurance during the Papen era.
+だがゲルデラーはシュライヒャーではない。後援者がドイツ社会全体に注意深く築いた広大な政治的人脈を持たず、シュライヒャー個人の人気も後継者には引き継がれなかった。さらにゲルデラーは強硬な財政保守主義と反<span style="color: #c00000;">社会主義</span>姿勢で知られ、パーペン時代には失業保険の廃止を求めたこともある。
 
-Perhaps the house of cards Schleicher so carefully built is already beginning to wobble.
+シュライヒャーが丹念に築いた砂上の楼閣は、すでに揺らぎ始めているのかもしれない。
 
 @bredow
-title: Ferdinand von Bredow - <span style="color: #BFC8CC;">**DNEF**</span>
-subtitle: Deputy Defense Minister. Ideology suspected to be similar to Schleicher's.
+title: フェルディナント・フォン・ブレドウ――<span style="color: #BFC8CC;">**DNEF**</span>
+subtitle: 国防次官。思想はシュライヒャーに近いとみられる。
 face-image: img/portraits/bredow.jpg
 choose-if: bredow_unlock
 on-arrival: {!
@@ -58,8 +58,8 @@ Q.schleicher_spd_influence -= 4;
 Q.schleicher_spd_support -= 5; 
 !}
 
-Presenting himself as a continuation of Schleicher and as another non-partisan military man, von Bredow has won his close friend Schleicher's favor. Although former chancellor Schleicher is officially retired, he still pulls many strings behind the scenes, unwilling to give up that scheming of his. 
+シュライヒャー路線の継承者で、もう一人の無党派軍人を自任するフォン・ブレドウは、親友シュライヒャーの支持を得た。前首相シュライヒャーは正式には引退したものの、策謀癖を捨てようとせず、今なお舞台裏で数多くの糸を操っている。
 
-However, von Bredow is certainly no Schleicher, he possesses no vast network of political connections throughout all walks of life, and Schleicher's personal popularity has largely failed to transfer over to his hand picked successor.
+しかしフォン・ブレドウは決してシュライヒャーではない。社会各層に広がる巨大な政治的人脈を持たず、シュライヒャー個人の人気も自ら選んだ後継者にはほとんど引き継がれなかった。
 
-Perhaps the house of cards Schleicher has carefully built will come tumbling down?
+シュライヒャーが丹念に築いた砂上の楼閣は、崩れ落ちるのだろうか？

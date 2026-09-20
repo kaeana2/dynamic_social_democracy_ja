@@ -1,32 +1,32 @@
-title: Rudolf Wissell
+title: ルドルフ・ヴィッセル
 is-pinned-card: true
 tags: advisor, labor
 card-image: img/portraits/WissellRudolf.jpg
 view-if: wissell_advisor = 1
 new-page: true 
 
-= Rudolf Wissell
+= ルドルフ・ヴィッセル
 
-Wissell is a labor economist working for the ADGB, the federation of free trade unions, and has been a labor minister on multiple occasions. His priority is to improve conditions for organized workers.
+ヴィッセルは自由労働組合の連合体ADGBに所属する労働経済学者で、労相を複数回務めた。組織労働者の待遇改善を最優先としている。
 
 - @labor_rights_
 - @union_unity
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @labor_rights_
-title: Labor Rights
-subtitle: As Labor Minister, Wissell can help set regulations for working conditions.
+title: 労働者の権利
+subtitle: ヴィッセルは労相として労働条件に関する規制を整備できる。
 choose-if: advisor_action_timer <= 0 and spd_in_government and labor_minister_party = "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "SPD" : The SPD does not control the Labor Ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if labor_minister_party != "SPD" : SPDは労働省を掌握していない。 ?]
 on-arrival: advisor_action_timer = 6; labor_rights_timer -= 10; last_advisor_action = 1
 go-to: labor_rights
 
 
 @union_unity
-title: Union-party coordination
-subtitle: Reduce dissent among the unions.
+title: 労働組合と党の連携
+subtitle: 労働組合派の不満を抑える。
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?]
 on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
 
-We have reduced tensions with the Labor faction, and increased its strength in the party.
+労働組合派との緊張を緩和し、党内での勢力を拡大した。

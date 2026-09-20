@@ -1,4 +1,4 @@
-title: Fundraising
+title: 資金調達
 new-page: true
 view-if: fundraising_timer <= 0
 on-arrival: fundraising_timer = 12
@@ -6,36 +6,35 @@ is-card: true
 card-image: img/poster_2.jpg
 tags: party_affairs
 
-= Fundraising
+= 資金調達
 
-For better or for worse, the party cannot exist without money. Without the support of wealthy industrialists, we depend on membership dues to sustain our efforts.
+良くも悪くも、資金なしに党は存続できない。富裕な産業家の支援を受けないわれわれは、活動を維持するため党費に頼っている。
 
-We receive dues at the end of each year, but can adjust them throughout. Low party dissent can secure more funds, and vice versa.
+党費は毎年末に受け取るが、金額は随時変更できる。党内不満が低ければ多くの資金を確保でき、その逆もまた然りである。
 
-- @maintain: Maintain our current dues.
-- @reduce: Reduce dues.
-- @increase: Increase dues.
+- @maintain: 現在の党費を維持する。
+- @reduce: 党費を引き下げる。
+- @increase: 党費を引き上げる。
 - @easy_discard
 
 @maintain
-subtitle: We gain [+ dues +] resources per year.
+subtitle: 毎年リソースを[+ dues +]獲得する。
 
-We maintain our current dues.
+現在の党費を維持した。
 
 @reduce
-subtitle: We will gain [+ dues - 1 +] resources per year. -1 resource
-unavailable-subtitle: We lack resources.
+subtitle: 毎年リソースを[+ dues - 1 +]獲得する。リソース－1
+unavailable-subtitle: リソースが足りない。
 choose-if: dues > 1 and resources >= 1
 on-arrival: dues -= 1; resources -= 1; left_dissent -= 8; center_dissent -= 8; reformist_dissent -= 8; labor_dissent -= 8; resources += 1 if dissent_percent < 5; resources -= 1 if dissent_percent > 30; month_actions += 1
 
-Our current members appreciate this, but no one decides to join a party because of the low dues.
+現党員には歓迎されたが、党費が安いという理由で入党する者はいない。
 
 @increase
-subtitle: We will gain [+ dues + 1 +] resources per year. +1 resource [? if unemployed >= 15 : Given the present economic situation, this may be painful. ?][? if dues >= 4 : Dues are already rather high; increasing them might reduce our membership. ?]
+subtitle: 毎年リソースを[+ dues + 1 +]獲得する。リソース＋1 [? if unemployed >= 15 : 現在の経済状況では大きな負担となりうる。 ?][? if dues >= 4 : 党費はすでに高く、引き上げれば党員が減る恐れがある。 ?]
 on-arrival: dues += 1; resources += 1; workers_spd -= 3; unemployed_spd -= 3; workers_spd -= 10 if unemployed >= 15; unemployed_spd -= 10 if unemployed >= 15; workers_spd -= 3*dues if dues >= 5; unemployed_spd -= 3*dues if dues >= 5; month_actions += 1
 view-if: dues <= 4
 
-Our members grumble at this, and some of the less committed members leave. But now, we have access to additional resources.
+党員は不満を漏らし、献身性の低い者の一部は離党した。しかし追加のリソースを確保できる。
 
-[? if unemployed >= 15 : Because of the presently high unemployment, our members are feeling the extra burden hard. ?] The higher dues will make it more difficult for the <span style="color: #c00000;">**SPD**</span> to expand electorally.
-
+[? if unemployed >= 15 : 現在の高失業率のため、党員は追加負担を重く感じている。 ?]党費の引き上げにより、<span style="color: #c00000;">**SPD**</span>の選挙上の拡大は難しくなる。

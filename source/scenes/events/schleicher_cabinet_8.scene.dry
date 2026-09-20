@@ -1,5 +1,5 @@
-title: <span style="color: #6A1E1E;">**DSU**</span> Policy
-subtitle: The <span style="color: #7A3C00;">Nazi</span> ministers are carrying out their own policies. 
+title: <span style="color: #6A1E1E;">**DSU**</span>の政策
+subtitle: <span style="color: #7A3C00;">ナチ党</span>の閣僚たちが独自の政策を実行している。
 view-if: chancellor == "Schleicher" and dsu_in_gov and dsu_policy_timer <= 0
 on-arrival: {!
 Q.dsu_policy_timer += 4;
@@ -21,17 +21,17 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= <span style="color: #6A1E1E;">**DSU**</span> Policy
+= <span style="color: #6A1E1E;">**DSU**</span>の政策
 
-With the <span style="color: #7A3C00;">Nazis</span> in government, they seek to pursue their policy course. 
+<span style="color: #7A3C00;">ナチ党</span>は入閣を果たし、独自の政策路線を推し進めようとしている。
 
 - @interior
 - @works
 - @works_alt
 
 @interior
-title: The <span style="color: #7A3C00;">Nazis</span> crack down on the Reichsbanner and <span style="color: #700000;">**RFB**</span>!
-subtitle: Ordered by Wilhelm Frick of the Interior Ministry.
+title: <span style="color: #7A3C00;">ナチ党</span>が国旗団と<span style="color: #700000;">**RFB**</span>を弾圧！
+subtitle: 内務省のヴィルヘルム・フリックによる命令。
 on-arrival: {!
 Q.schleicher_spd_r -= 1;
 Q.schleicher_spd_support -= 2;
@@ -71,17 +71,17 @@ face-image: img/portraits/frick.jpg
 
 @interior_1
 
-With the <span style="color: #7A3C00;">Nazis</span> now controlling the Interior Ministry, they hold jurisdiction over the federal police. [? if prussia_leader != "Strasser": Without control of the Prussian Interior Ministry, their reach is limited—though they have already begun turning the federal police into a force loyal to the <span style="color: #7A3C00;">Nazis</span>. ?][? if prussia_leader == "Strasser": The Prussian Interior Ministry, however, is the real prize—its police force now answers entirely to them, with widespread purges of <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> officials taking place. ?]Fortunately, Schleicher has barred <span style="color: #7A3C00;">Nazi</span> Party members from joining the police, maintaining the same restriction already enforced in the Reichswehr.
+内務省を掌握した<span style="color: #7A3C00;">ナチ党</span>は、連邦警察を管轄下に置いた。[? if prussia_leader != "Strasser": プロイセン内務省を支配していないため影響範囲は限られるが、連邦警察をすでに<span style="color: #7A3C00;">ナチ党</span>へ忠誠を誓う組織へ変え始めている。?][? if prussia_leader == "Strasser": しかし真の獲物はプロイセン内務省であり、その警察は今や完全に彼らの指揮に服し、<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">者</span>の官吏が大規模に追放されている。?]幸い、シュライヒャーは国軍ですでに実施しているのと同じ制限を維持し、<span style="color: #7A3C00;">ナチ党</span>員の警察加入を禁じている。
 
-Lately, we have observed the police exclusively targeting Reichsbanner and <span style="color: #700000;">**RFB**</span> fighters, while openly shielding <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> demonstrations from our protests. They have even persuaded Schleicher to transfer command of the Reichswehr's militia to the Interior Ministry, citing the need for centralized control.
+近頃、警察は国旗団と<span style="color: #700000;">**RFB**</span>の闘士だけを標的とする一方、我々の抗議から<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>のデモを公然と保護している。指揮系統の一元化が必要だとしてシュライヒャーを説得し、国軍民兵の指揮権まで内務省へ移管させた。
 
 @interior_2
 
-The <span style="color: #7A3C00;">Nazis</span> have continued cracking down on even lawful <span style="color: #c00000;">leftist</span> activity, on bogus claims of "inciting violence." It seems Frick is doing Schleicher's dirty work for him—cracking down on democrats and all, while Schleicher is still viewed highly in the eyes of many workers.
+<span style="color: #7A3C00;">ナチ党</span>は「暴力を扇動した」というでっち上げを口実に、合法的な<span style="color: #c00000;">左翼</span>活動まで弾圧し続けている。フリックは民主主義者をはじめとする勢力を弾圧し、シュライヒャーの汚れ仕事を代行しているようだ。その間もシュライヒャーは多くの労働者から高く評価されている。
 
 @works
-title: "MEFO Bills"
-subtitle: Ordered by Hjalmar Schacht of the Economic Ministry.
+title: 「MEFO手形」
+subtitle: 経済省のヒャルマル・シャハトによる命令。
 view-if: dsu_policy == 2 and not mefo_bills_alt
 on-arrival: {!
 Q.schleicher_spd_r -= 1;
@@ -101,35 +101,35 @@ Q.dsu_policy += 1;
 !}
 face-image: img/portraits/SchachtHjalmar.jpg
 
-Despite Hjalmar Schacht not being a Keynesian, he understands that large scale public works and state funded projected are the way out of Germany's slump, and for Germany to retake its great power status on the international stage. He believes that, since <span style="color: #002654;">France</span> and <span style="color: #C8102E;">Britain</span> are preoccupied with their own economic woes, the time is right for a mass industrialization and rearmament program.
+ヒャルマル・シャハトはケインズ主義者ではないが、大規模な公共事業と国家資金による計画こそ、ドイツが不況から脱し、国際舞台で大国の地位を取り戻す道だと理解している。<span style="color: #002654;">フランス</span>と<span style="color: #C8102E;">イギリス</span>が自国の経済問題に忙殺される今こそ、大規模な工業化と再軍備計画を実施する好機だと考えている。
 
-The construction of the "Autobahn", a new nationwide highway system, by poorly paid workers has begun, as an expansion of Schleicher's public works plans. A new innovative method for disguising rearmament has also been devised, a "MEFO bill", a system of promissory notes issued through a dummy company to secretly fund arms production while keeping the spending off the official government budget. However, he insists that a revival of Germany's economy should take precedent over rearmament.
+シュライヒャーの公共事業計画を拡大し、低賃金労働者を使った全国的な新高速道路網「アウトバーン」の建設が始まった。再軍備を隠蔽する革新的な新手法も考案された。「MEFO手形」と呼ばれる、ダミー会社を通じて約束手形を発行し、政府の公式予算に支出を計上せず秘密裏に兵器生産へ資金を供給する仕組みである。ただしシャハトは、ドイツ経済の再生を再軍備より優先すべきだと主張している。
 
 - @reichsbank
 
 @reichsbank
-title: What will the Reichsbank say?
-subtitle: Reichsbank President - [? if luther_reichsbank: Hans Luther?][? if not luther_reichsbank: Friedrich Dreyse?]
+title: ライヒスバンクの判断は？
+subtitle: ライヒスバンク総裁――[? if luther_reichsbank: ハンス・ルター?][? if not luther_reichsbank: フリードリヒ・ドライゼ?]
 go-to: reichsbank_luther if luther_reichsbank; reichsbank_dreyse if not luther_reichsbank
 
 
 @reichsbank_luther
 face-image: img/portraits/luther.jpg
 
-The Reichsbank, long known for its strict fiscal conservatism and obsessive anti-inflation stance, had already slashed Schleicher's initial public works decree by 15%. So, it was no surprise when news of even greater government spending met with their disapproval.
+厳格な財政保守主義と執拗な反インフレ姿勢で知られるライヒスバンクは、シュライヒャーの当初の公共事業令をすでに15％削減していた。さらに大規模な政府支出の知らせに反対したのも驚くことではない。
 
-However, the endorsement of the campaign by Hjalmar Schacht—a respected banker and former Reichsbank President credited with ending hyperinflation—has done much to calm the business community. Under government pressure, the Reichsbank is ultimately coerced into backing the plan.
+しかし、ハイパーインフレーションを終息させた功績を持つ、尊敬された銀行家で前ライヒスバンク総裁のヒャルマル・シャハトが計画を支持したことで、実業界は大いに落ち着いた。政府の圧力を受け、ライヒスバンクは最終的に計画支持を強いられる。
 
 @reichsbank_dreyse
 face-image: img/portraits/dreyse.jpg
 
-The Reichsbank, long known for its strict fiscal conservatism and obsessive anti-inflation stance, had already slashed Schleicher's initial public works decree by 15%. So, it was no surprise when news of even greater government spending met with their disapproval.
+厳格な財政保守主義と執拗な反インフレ姿勢で知られるライヒスバンクは、シュライヒャーの当初の公共事業令をすでに15％削減していた。さらに大規模な政府支出の知らせに反対したのも驚くことではない。
 
-However, the endorsement of the campaign by Hjalmar Schacht—a respected banker and former Reichsbank President credited with ending hyperinflation—has done much to calm the business community. Under government pressure, the Reichsbank is ultimately coerced into backing the plan.
+しかし、ハイパーインフレーションを終息させた功績を持つ、尊敬された銀行家で前ライヒスバンク総裁のヒャルマル・シャハトが計画を支持したことで、実業界は大いに落ち着いた。政府の圧力を受け、ライヒスバンクは最終的に計画支持を強いられる。
 
 @works_alt
-title: "MEFO Bills"
-subtitle: Ordered by Hjalmar Schacht of the Economic Ministry.
+title: 「MEFO手形」
+subtitle: 経済省のヒャルマル・シャハトによる命令。
 view-if: dsu_policy == 2 and mefo_bills_alt
 on-arrival: {!
 Q.schleicher_spd_r -= 2;
@@ -151,6 +151,6 @@ Q.dsu_policy += 1;
 !}
 face-image: img/portraits/SchachtHjalmar.jpg
 
-Despite the public works campaign being expanded before Hjalmar Schacht took office as Economic Minister, he now seeks to build upon it—transforming it into a mass industrialization and rearmament program, more closely aligned with Schleicher's ambitions. Only then, he argues, can Germany hope to rival the major powers.
+公共事業計画はヒャルマル・シャハトの経済相就任以前に拡大されていたが、彼は今やそれを基礎に、シュライヒャーの野心により近い大規模工業化・再軍備計画へ変えようとしている。それによって初めて、ドイツは列強に対抗できるというのだ。
 
-An innovative new method for disguising rearmament has also been devised: the "MEFO bill," a system of promissory notes issued through a dummy company to secretly finance arms production while keeping the spending off the official government books. Nevertheless, Schacht insists that reviving Germany's economy must take precedence over rearmament—for now.
+再軍備を隠蔽する革新的な新手法も考案された。「MEFO手形」と呼ばれる、ダミー会社を通じて約束手形を発行し、政府の公式帳簿に支出を計上せず秘密裏に兵器生産へ資金を供給する仕組みである。それでもシャハトは、少なくとも当面はドイツ経済の再生を再軍備より優先すべきだと主張している。

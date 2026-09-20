@@ -1,5 +1,5 @@
-title: <span style="color: #3E88B3;">**DNVP**</span> Congress
-subtitle: The economic depression has radicalized the party...
+title: <span style="color: #3E88B3;">**DNVP**</span>党大会
+subtitle: 経済恐慌が党を急進化させた……
 view-if: year = 1930 and month = 11 and dnvp_leader = "Lambach"
 on-arrival: {!
 if (Q.pro_republic < 50) Q.pro_republic += Q.workers_dnvp_normalized;
@@ -40,55 +40,55 @@ tags: event
 face-image: img/dnvp3.jpg
 new-page: true
 
-= <span style="color: #3E88B3;">**DNVP**</span> Congress
+= <span style="color: #3E88B3;">**DNVP**</span>党大会
 
-Walther Lambach has been a divisive figure, alienating nearly every faction within the party—a feat only Hugenberg had previously accomplished. Under normal circumstances, he would have been removed long ago, but his efforts to expand the influence of his <span style="color: #6D5298;">Christian Social</span> faction have made the wider party wary of another split, yet another parallel to Hugenberg.
+ヴァルター・ランバッハは党を分断する人物となり、ほぼすべての派閥を敵に回した。かつてこれを成し遂げたのはフーゲンベルクだけである。通常ならとうに解任されていただろうが、自らの<span style="color: #6D5298;">キリスト教社会派</span>の影響力を拡大したことで、党内には再分裂への警戒が生まれている。これもまたフーゲンベルクと似ている。
 
-The turmoil within the <span style="color: #3E88B3;">**DNVP**</span> appears to be endless. First came Hugenberg’s split, then the Young Plan debacle and the Christian Social takeover—now Lambach is pushing to open the party to <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span> as he first outlined in his controversial article that started this whole mess years ago. Meanwhile, the economic crisis and the rising <span style="color: #7A3C00;">**NSDAP**</span>, threatening to eclipse the party, have only added fuel to the fire.
+<span style="color: #3E88B3;">**DNVP**</span>の混乱には終わりが見えない。フーゲンベルクの分党、ヤング案をめぐる混乱、キリスト教社会派の党掌握に続き、今度はランバッハが<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>支持者にも党を開こうとしている。数年前、この一連の騒動の発端となった論文で示した構想だ。経済危機と、党を追い抜こうとする<span style="color: #7A3C00;">**NSDAP**</span>の台頭が、さらに火に油を注いでいる。
 
-- @lambach: Lambach solidifies the party’s <span style="color: #6D5298;">Christian Social</span> direction.
-- @lambach_ousted: Lambach is taken down in a simple vote of no confidence.
+- @lambach: ランバッハが党の<span style="color: #6D5298;">キリスト教社会派</span>路線を固める。
+- @lambach_ousted: ランバッハが単純な不信任投票で解任される。
 
 @lambach
 choose-if: lambach_trigger and not westarp_trigger and not schiele_trigger
-unavailable-subtitle: [? if schiele_trigger: The <span style="color: #385A38;">agrarian</span> wing of the <span style="color: #3E88B3;">DNVP</span> objects, alienated by Lambach's preference of the workers. ?][? if westarp_trigger: The national conservatives and industrialists object, claiming that the balance of power is out of order. ?]
+unavailable-subtitle: [? if schiele_trigger: <span style="color: #3E88B3;">DNVP</span>の<span style="color: #385A38;">農業派</span>は、ランバッハの労働者優先に反発している。?][? if westarp_trigger: 国家保守派と産業界は、党内の力関係が崩れているとして反対している。?]
 on-arrival: lambach_stays = 1; rural_dnvp -= 6; rural_nsdap += 4; rural_dnf += 4; new_middle_dnvp += 2; new_middle_spd -= 2; old_middle_dnvp -= 6; old_middle_nsdap += 4; old_middle_dnf += 2; new_middle_dvp += 4; old_middle_dvp += 4; new_middle_lvp += 4; old_middle_lvp += 4; rural_dvp += 3; rural_lvp += 3; workers_dnvp += 12; workers_z -= 3; workers_spd -= 6; workers_nsdap -= 4; catholics_dnvp += 4; catholics_z -= 2; catholics_other -= 2; pro_republic += 3; dvp_right += 3; ddp_right += 1.5; lvp_right += 2
 face-image: img/portraits/LambachWalther.jpg
 achievement: christlicher_sozialismus
 
-Against all odds, Walther Lambach survives a vote of no confidence at the party congress by allying with Treviranus’s Young Conservatives, securing a mandate to advance his vision for the <span style="color: #3E88B3;">**DNVP**</span> in line with the late Adolf Stoecker, founder of the pre-war <span style="color: #008080;">Christian Social Party</span>. The party’s program, once tailored to its broad coalition, now includes significantly more <span style="color: #c00000;">worker-friendly</span> policies, such as expanding social welfare, increasing pensions, and implementing progressive income taxes. they have even rejected austerity as a solution to Germany's current economic crisis.
+大方の予想に反し、ヴァルター・ランバッハはトレヴィラヌスの青年保守派と手を組み、党大会の不信任投票を乗り切った。戦前の<span style="color: #008080;">キリスト教社会党</span>を創設した故アドルフ・シュテッカーに倣う<span style="color: #3E88B3;">**DNVP**</span>構想を進める信任を得たのである。かつて幅広い勢力の連合に合わせていた党綱領には、社会福祉の拡充、年金増額、累進所得税の導入など、<span style="color: #c00000;">労働者寄り</span>の政策が大幅に増えた。現在のドイツの経済危機の解決策として、緊縮財政さえ否定している。
 
-However, this shift has severely strained Lambach’s relationship with much of the party, particularly its industrial backers, who have begun withholding funding and redirecting it—albeit reluctantly—to more right-wing parties like the <span style="color: #003755;">**DNF**</span> and <span style="color: #7A3C00;">**NSDAP**</span>. At the same time, severe internal opposition has moved to obstruct him any way they can, prompting Westarp to intervene and suppress a revolt within the party. As a result, Lambach was forced to make concessions, ensuring that his leadership would not stray too far from the <span style="color: #3E88B3;">**DNVP**</span>'s traditional anti-<span style="color: #c00000;">Marxist</span> and monarchist stance.
+しかし、この転換はランバッハと党の多くの勢力、とりわけ産業界の後援者との関係を著しく悪化させた。彼らは資金を引き揚げ、不本意ながら<span style="color: #003755;">**DNF**</span>や<span style="color: #7A3C00;">**NSDAP**</span>のような、さらに右の政党へ振り向け始めた。同時に、党内の強硬な反対派があらゆる手段で妨害しようとしたため、ヴェスタルプが介入して反乱を抑えた。その結果、ランバッハは譲歩を余儀なくされ、<span style="color: #3E88B3;">**DNVP**</span>伝統の反<span style="color: #c00000;">マルクス主義</span>・君主主義路線から大きく逸脱しないことを保証した。
 
 @lambach_ousted
-unavailable-subtitle: Lambach has successfully consolidated power.
+unavailable-subtitle: ランバッハは権力の掌握に成功した。
 choose-if: not lambach_trigger
 
-Lambach has, perhaps predictably, lost a vote of no confidence, forcing him to relinquish his leadership to a candidate from the party’s traditionally conservative establishment.
+予想できたことかもしれないが、ランバッハは不信任投票に敗れ、党の伝統的な保守主流派の候補に指導権を譲らねばならなくなった。
 
-The agrarian wing, long opposed to both Lambach and the <span style="color: #6D5298;">Christian Socials</span>—united with them only by their shared hatred for Hugenberg—argues that only the appointment of the <span style="color: #006400;">National Rural League</span> (<span style="color: #006400;">RLB</span>) president can restore the party’s tarnished reputation in rural Germany.
+農業派は以前からランバッハと<span style="color: #6D5298;">キリスト教社会派</span>の双方に反対しており、共通するフーゲンベルクへの憎悪だけで結びついていた。彼らは、<span style="color: #006400;">全国農村連盟</span>（<span style="color: #006400;">RLB</span>）会長の就任だけが、農村で傷ついた党の評判を回復できると主張している。
 
-Meanwhile, the national conservatives favor re-electing Westarp, citing his unifying presence and experience in managing party dissent. They credit him with preventing many of the party’s more <span style="color: #808080;">reactionary</span> members from drifting toward the <span style="color: #003755;">**DNF**</span> during Lambach’s tenure.
+一方、国家保守派は、党をまとめる存在感と党内対立を処理してきた経験を理由に、ヴェスタルプの再選を望んでいる。ランバッハの在任中、より<span style="color: #808080;">反動的</span>な党員の多くが<span style="color: #003755;">**DNF**</span>へ流れるのを防いだと評価している。
 
-- @westarp: The party rallies around Westarp, restoring him to his former position.
-- @schiele: The mantle is transferred to Martin Schiele and the <span style="color: #385A38;">agrarians</span>.
+- @westarp: 党がヴェスタルプの下に結集し、彼を元の地位に戻す。
+- @schiele: マルティン・シーレと<span style="color: #385A38;">農業派</span>に指導権が移る。
 
 @westarp
 choose-if: westarp_trigger and not schiele_trigger
-unavailable-subtitle: The party prefers to elect Schiele.
+unavailable-subtitle: 党はシーレの選出を望んでいる。
 on-arrival: dnvp_leader = "Westarp"; pro_republic -= 5; workers_dnvp -= 6; workers_spd += 6; workers_nsdap += 2; rural_dnvp += 6; rural_dnf -= 4; rural_dvp -= 2; new_middle_dnvp -= 3; new_middle_spd += 2; new_middle_ddp += 1; old_middle_dnvp += 8; old_middle_dnf -= 4; old_middle_nsdap -= 2; old_middle_dvp -= 2; catholics_dnvp -= 2; catholics_other += 2
 face-image: img/portraits/Kuno_von_Westarp.jpg
 
-The <span style="color: #3E88B3;">**DNVP**</span>’s shift toward <span style="color: #6D5298;">Christian Corporatism</span> and <span style="color: #000000;">repu</span><span style="color: #DD0000;">blic</span><span style="color: #FFCC00;">anism</span> has stalled with the re-election of Kuno von Westarp as party leader, promoted from his role as chairman of the Reichstag delegation. So far, Westarp has avoided drastic changes to prevent a party split, frustrating the party’s more conservative and industrial backers, who had hoped his leadership would restore the <span style="color: #3E88B3;">**DNVP**</span> to its previous course.
+国会議員団長から党首に返り咲いたクーノ・フォン・ヴェスタルプの下で、<span style="color: #3E88B3;">**DNVP**</span>の<span style="color: #6D5298;">キリスト教コーポラティズム</span>と<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>支持への転換は停滞した。今のところ、党の分裂を避けるため急激な変更を控えている。そのため、彼の指導で<span style="color: #3E88B3;">**DNVP**</span>が以前の路線に戻ると期待していた保守派や産業界の後援者は不満を募らせている。
 
-At the same time, Westarp is careful not to alienate the <span style="color: #6D5298;">Christian Social</span> wing through drastic changes to the party program, fearing a split or the defection of its working-class base back to the <span style="color: #c00000;">**SPD**</span>. As a compromise, he preserves some worker-friendly provisions in the party program and messaging. While this is not enough to hold onto the working-class support Lambach had built, the party offsets these losses by winning back monarchist and conservative voters from the <span style="color: #003755;">**DNF**</span>, aided by a resurgence in industrial funding.
+同時に、ヴェスタルプは綱領の急激な変更で<span style="color: #6D5298;">キリスト教社会派</span>を遠ざけないよう注意している。分裂や、労働者支持基盤が<span style="color: #c00000;">**SPD**</span>へ戻ることを恐れているためだ。妥協として、党綱領と発信に労働者寄りの内容を一部残している。ランバッハが築いた労働者の支持を維持するには不十分だが、産業界からの資金回復にも助けられ、<span style="color: #003755;">**DNF**</span>から君主主義・保守派の有権者を取り戻して損失を補っている。
 
 @schiele
 choose-if: schiele_trigger
-unavailable-subtitle: The <span style="color: #385A38;">agrarian</span> wing believes Westarp can help heal the divided party.
+unavailable-subtitle: <span style="color: #385A38;">農業派</span>は、ヴェスタルプなら分裂した党を修復できると考えている。
 on-arrival: dnvp_leader = "Schiele"; pro_republic -= 5; rural_dnvp += 12; rural_nsdap -= 4; rural_dnf -= 4; rural_dvp -= 2; rural_dnvp += rural_other; rural_other = rural_other*0.3; new_middle_dnvp -= 4; new_middle_spd += 2; new_middle_ddp += 1; new_middle_nsdap += 1; workers_dnvp -= 10; workers_spd += 6; workers_nsdap += 4; catholics_dnvp += 3; catholics_other -= 1; catholics_z -= 2; z_relation -= 3; dnvp_r += other_r*0.3; other_r = other_r*0.7
 face-image: img/portraits/schiele.jpg
 
-[? if land_reform >= 1 : Due to the land reform policies enacted by our[? if not spd_in_government:&nbsp;previous?] government, the <span style="color: #385A38;">agrarian</span> conservative elites have made it their strongest effort to rally the German right against them. To this end, they have elected Martin Schiele, president of the <span style="color: #006400;">National Rural League</span> (<span style="color: #006400;">RLB</span>), as chairman of the <span style="color: #3E88B3;">**DNVP**</span>. By electing the most influential figure in the agricultural community, the party aims to safeguard the role of organized agriculture in Germany, and to restore the tarnished reputation the party has incurred under Lambach. ?][? if rural_spd_normalized >= 30 and land_reform == 0 : With the <span style="color: #c00000;">**SPD**</span> making significant inroads among rural voters, the <span style="color: #3E88B3;">**DNVP**</span> and its <span style="color: #385A38;">agrarian</span> elites have elected the president of the <span style="color: #006400;">National Rural League</span> (<span style="color: #006400;">RLB</span>), Martin Schiele, to the chairmanship of the <span style="color: #3E88B3;">**DNVP**</span>. By electing the most influential figure in the agricultural community, they aim to safeguard the role of organized agriculture in Germany, and to restore the tarnished reputation the party has incurred under Lambach. ?][? if rural_nsdap_normalized >= (rural_dnvp_normalized + 10) and rural_spd_normalized < 30 and land_reform == 0 : The significant inroads made by the insurgent <span style="color: #7A3C00;">**NSDAP**</span> among their primary rural voter base under Lambach's tenure has deeply unsettled the party's <span style="color: #385A38;">agrarian</span> conservatives. In response, they have elected the president of the <span style="color: #006400;">National Rural League</span> (<span style="color: #006400;">RLB</span>), Martin Schiele, as the new party leader. They believe that appointing Schiele, the most influential figure in the agricultural community, will halt this trend and preserve the longstanding alliance between agriculture and German conservatism by restoring the party’s tarnished reputation among rural voters after Lambach’s tenure.?]The new agrarian focus of the <span style="color: #3E88B3;">**DNVP**</span> has alienated the working-class voters initially drawn to Lambach. In response, the <span style="color: #6D5298;">Christian Social</span> wing attempts to counteract this by successfully pressuring Schiele and Westarp to retain some of its worker-friendly provisions in its program.
+[? if land_reform >= 1 : 我々の[? if not spd_in_government:かつての?]政権が実施した土地改革に対し、<span style="color: #385A38;">農業派</span>の保守エリートはドイツ右派を結集すべく全力を尽くしている。そのため、<span style="color: #006400;">全国農村連盟</span>（<span style="color: #006400;">RLB</span>）会長マルティン・シーレを<span style="color: #3E88B3;">**DNVP**</span>党首に選んだ。農業界で最も影響力のある人物を選ぶことで、ドイツの農業団体の役割を守り、ランバッハの下で傷ついた党の評判を回復しようとしている。?][? if rural_spd_normalized >= 30 and land_reform == 0 : <span style="color: #c00000;">**SPD**</span>が農村有権者への支持を大きく広げたため、<span style="color: #3E88B3;">**DNVP**</span>と<span style="color: #385A38;">農業派</span>エリートは、<span style="color: #006400;">全国農村連盟</span>（<span style="color: #006400;">RLB</span>）会長マルティン・シーレを<span style="color: #3E88B3;">**DNVP**</span>党首に選んだ。農業界で最も影響力のある人物を選ぶことで、ドイツの農業団体の役割を守り、ランバッハの下で傷ついた党の評判を回復しようとしている。?][? if rural_nsdap_normalized >= (rural_dnvp_normalized + 10) and rural_spd_normalized < 30 and land_reform == 0 : ランバッハの在任中、台頭する<span style="color: #7A3C00;">**NSDAP**</span>が主要な農村支持基盤に深く食い込んだことで、党の<span style="color: #385A38;">農業派</span>保守派は強い危機感を抱いた。そこで、<span style="color: #006400;">全国農村連盟</span>（<span style="color: #006400;">RLB</span>）会長マルティン・シーレを新党首に選んだ。農業界で最も影響力のあるシーレなら、この傾向を食い止め、ランバッハの下で傷ついた農村有権者の間での評判を回復することで、農業とドイツ保守主義の長年の結びつきを維持できると考えている。?]<span style="color: #3E88B3;">**DNVP**</span>が新たに農業重視へ転じたことで、ランバッハに引かれていた労働者有権者は離れた。<span style="color: #6D5298;">キリスト教社会派</span>はこれに対抗し、シーレとヴェスタルプに圧力をかけ、綱領の労働者寄りの条項を一部残させることに成功した。
 
-Schiele’s election has also led to the merger of the <span style="color: #7FCEB1;">**CNBLP**</span> into the <span style="color: #3E88B3;">**DNVP**</span>, strengthening its hold on the countryside and uniting the <span style="color: #006400;">RLB</span> in lobbying for <span style="color: #385A38;">agrarian</span> interests. This consolidation has given rise to the renewal of the <span style="color: #385A38;">Green Front</span>, an umbrella group of the <span style="color: #006400;">RLB</span>, peasant unions, and some Catholic and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]-affiliated agricultural organizations.
+シーレの選出はまた、<span style="color: #7FCEB1;">**CNBLP**</span>が<span style="color: #3E88B3;">**DNVP**</span>に合流し、農村での支配力が強まった。<span style="color: #006400;">RLB</span>も<span style="color: #385A38;">農業派</span>の利益を求める運動で結束している。この結集により、<span style="color: #006400;">RLB</span>、農民組合、一部のカトリック系および[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]系農業団体を束ねる<span style="color: #385A38;">緑の戦線</span>が再び活性化した。

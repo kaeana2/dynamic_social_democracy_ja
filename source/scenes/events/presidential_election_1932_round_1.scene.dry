@@ -1,5 +1,5 @@
-title: Presidential Election
-subtitle: [? if hindenburg_run: Hindenburg runs for re-election... ?][? if not hindenburg_run: The first round results have come in... ?]
+title: 大統領選挙
+subtitle: [? if hindenburg_run: ヒンデンブルクが再選を目指す……?][? if not hindenburg_run: 第1回投票の結果が出た……?]
 view-if: year = 1932 and month == 3 and presidential_election_seen = 0 and not hindenburg_term_extended
 frequency: 1000
 max-visits: 1
@@ -19,9 +19,9 @@ face-image: img/hindenburg_hitler.jpg
 
 @pres_election
 
-The presidential election's first round is set to take place this month. If no candidate secures a majority, a second round will be held, with the candidate receiving the most votes winning the presidency.
+今月、大統領選挙の第1回投票が行われる。過半数を獲得する候補がいなければ第2回投票となり、最多得票の候補が大統領に当選する。
 
-- @final_election: The first round results...
+- @final_election: 第1回投票の結果は……
 
 @final_election
 on-arrival: election_round = 0
@@ -669,13 +669,13 @@ go-to: calculation
 @calculation
 go-to: hindenburg_wins if hindenburg_majority == 1; thalmann_wins if thalmann_majority == 1; hitler_wins if nsdap_president_majority == 1; braun_wins if spd_president_majority == 1 and spd_candidate_1932 == "Braun"; duesterburg_wins if duesterburg_majority == 1; rosenfeld_wins if spd_president_majority == 1 and spd_candidate_1932 == "Rosenfeld"; eckener_wins if spd_president_majority == 1 and spd_candidate_1932 == "Eckener"; reactionary_candidate_wins if (reactionary_candidate_1_majority or reactionary_candidate_2_majority); no_majority_round1 if any_majority == 0
 
-Results:
+結果：
 
 [? if kpd_support_spd == 0 : <span style="color: #700000;">**[+ communist_candidate_1932 +]**</span> - [+ thalmann_votes_disp +]% ?]
 
-[? if spd_campaign > 0 : [? if spd_candidate_1932 != "Eckener": <span style="color: #c00000;">**[+ spd_candidate_1932 +]**</span>?][? if spd_candidate_1932 == "Eckener": <span style="color: #000000;">**Ec**</span><span style="color: #DD0000;">**ken**</span><span style="color: #FFCC00;">**er**</span>?] - [+ spd_president_votes_disp +]% ?]
+[? if spd_campaign > 0 : [? if spd_candidate_1932 != "Eckener": <span style="color: #c00000;">**[+ spd_candidate_1932 +]**</span>?][? if spd_candidate_1932 == "Eckener": <span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>?] - [+ spd_president_votes_disp +]% ?]
 
-<span style="color: #0075EB;">**Winter**</span> - [+ vrp_presidential_votes_disp +]%
+<span style="color: #0075EB;">**ヴィンター**</span> - [+ vrp_presidential_votes_disp +]%
 
 [? if hindenburg_run: <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span> - [+ hindenburg_votes_disp +]% ?][? if not hindenburg_run: [? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Gessler" or reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932 +]**</span>?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932 +]**</span>?][? if reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932 +]**</span>?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932 +]**</span>?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932 +]**</span>?][? if reactionary_candidate_1932 == "Adenauer" or reactionary_candidate_1932 == "Brüning" or reactionary_candidate_1932 == "Stegerwald" or (reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932 +]**</span>?] - [+ reactionary_candidate_1_votes_disp +]% ?]
 
@@ -689,19 +689,19 @@ Results:
 on-arrival: hitler_support_hindenburg = 1 if (spd_plurality or thalmann_plurality) and hindenburg_run
 go-to: round2_menu
 
-There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
+第1回投票では誰も過半数を得られなかった。第2回投票では最多得票の候補が当選する。我々はどうするべきか？
 
-[? if dnvp_candidate_1932 == "Duesterberg": Due to [+ dnvp_candidate_1932 +]'s poor performance, he has withdrawn from the race and personally endorsed [? if reactionary_candidate_1_votes >= reactionary_candidate_2_votes: [+ reactionary_candidate_1932 +]?][? if reactionary_candidate_2_votes > reactionary_candidate_1_votes: [+ secondary_reactionary_candidate_1932 +]?]—despite widespread dislike of him among his supporters. Meanwhile, Hugenberg has urged his followers to abstain from the second round, drawing intense criticism from within his own party. How this will impact the runoff remains uncertain, but [+ nsdap_candidate_1932 +] is likely to capture a sizable share of these voters. ?][? if dnvp_candidate_1932 == "Hugenberg": Due to [+ dnvp_candidate_1932 +]'s poor performance, he has withdrawn from the race and urged his followers to abstain from the second round, drawing intense criticism from within his own party. How this will impact the runoff remains uncertain, but [+ nsdap_candidate_1932 +] is likely to capture a sizable share of these voters. ?]
+[? if dnvp_candidate_1932 == "Duesterberg": [+ dnvp_candidate_1932 +]は振るわなかったため選挙戦から撤退し、支持者の間で広く嫌われているにもかかわらず、個人として[? if reactionary_candidate_1_votes >= reactionary_candidate_2_votes: [+ reactionary_candidate_1932 +]?][? if reactionary_candidate_2_votes > reactionary_candidate_1_votes: [+ secondary_reactionary_candidate_1932 +]?]を支持した。一方、フーゲンベルクは支持者へ第2回投票での棄権を呼びかけ、党内から激しい批判を浴びている。決選投票への影響は不透明だが、[+ nsdap_candidate_1932 +]がこれらの有権者のかなりの部分を獲得する可能性が高い。?][? if dnvp_candidate_1932 == "Hugenberg": [+ dnvp_candidate_1932 +]は振るわなかったため選挙戦から撤退し、支持者へ第2回投票での棄権を呼びかけたが、党内から激しい批判を浴びている。決選投票への影響は不透明だが、[+ nsdap_candidate_1932 +]がこれらの有権者のかなりの部分を獲得する可能性が高い。?]
 
-[? if hindenburg_confidence: Hindenburg has narrowly missed securing the required majority for a first-round victory, making his success in the runoff highly probable. With state and local elections just a month away, the industrialists and parties backing him have redirected their remaining campaign funds to those contests, confident that his victory is all but assured. This, however, presents a valuable opportunity for [+ nsdap_candidate_1932 +] to gain support among [+ dnvp_candidate_1932 +] voters and leverage their dominance in the presidential campaign to coincide with their local efforts. ?]
+[? if hindenburg_confidence: ヒンデンブルクは第1回投票での当選に必要な過半数へあと一歩届かなかっただけで、決選投票での勝利は極めて有力である。わずか1か月後に州・地方選挙を控え、勝利はほぼ確実と見た支援政党と実業家は、残る選挙資金をそちらへ振り向けた。しかしこれは[+ nsdap_candidate_1932 +]にとって、[+ dnvp_candidate_1932 +]の有権者から支持を奪い、大統領選挙での優勢を地方選挙の活動にも結びつける絶好の機会となる。?]
 
-[? if thalmann_votes < 15 and thalmann_votes: The <span style="color: #700000;">**Communists**</span> have suffered a demoralizing defeat, leaving many of their supporters disillusioned about the prospects of revolution—a future they once saw as inevitable given Germany’s current state. In the second round, many will abstain from voting altogether, while a small minority may even cast their ballots for [? if not spd_campaign: [+ nsdap_candidate_1932 +] ?][? if spd_campaign: [+ spd_candidate_1932 +] ?]in an effort to make their vote count. ?]
+[? if thalmann_votes < 15 and thalmann_votes: <span style="color: #700000;">**共産主義者**</span>は士気をくじく敗北を喫し、多くの支持者が革命の展望へ幻滅している。ドイツの現状を見れば、かつては避けられない未来と考えていたものだ。第2回投票では多くが棄権し、少数ながら自らの票を無駄にしないため[? if not spd_campaign: [+ nsdap_candidate_1932 +]?][? if spd_campaign: [+ spd_candidate_1932 +]?]へ投票する者さえ現れるだろう。?]
 
-[? if dnvp_candidate_1932: There had been discussions of Crown Prince Wilhelm running as a Harzburg unity candidate, a prospect the <span style="color: #7A3C00;">**NSDAP**</span> showed interest in supporting. However, the <span style="color: #3E88B3;">**DNVP**</span> and the <span style="color: #3E88B3;">**Stahlhelm**</span> rejected the idea due to their hostility toward an accommodation with the <span style="color: #7A3C00;">**NSDAP**</span>. The nail in the coffin was that his own father threatened to disinherit him if he stood for the "<span style="color: #c00000;">red</span> <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> presidential seat of an Ebert". He has since endorsed [+ nsdap_candidate_1932 +]. ?]
+[? if dnvp_candidate_1932: ヴィルヘルム皇太子をハルツブルク統一候補として擁立する案も検討され、<span style="color: #7A3C00;">**NSDAP**</span>は支持に関心を示していた。しかし<span style="color: #3E88B3;">**DNVP**</span>と<span style="color: #3E88B3;">**鉄兜団**</span>は、<span style="color: #7A3C00;">**NSDAP**</span>との妥協を敵視して案を拒んだ。決定打となったのは、実の父が「エーベルトの<span style="color: #c00000;">赤い</span><span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">大統領</span>の座」に立候補すれば廃嫡すると脅したことである。その後、皇太子は[+ nsdap_candidate_1932 +]を支持した。?]
 
-[? if hitler_support_hindenburg : In order to consolidate the vote for the <span style="color: #808080;">right</span>, and to prevent a <span style="color: #c00000;">socialist</span> from becoming president, <span style="color: #7A3C00;">[+ nsdap_candidate_1932 +]</span> is no longer running in the second round, and has switched his endorsement to <span style="color: #808080;">Hindenburg</span>. ?]
+[? if hitler_support_hindenburg : <span style="color: #808080;">右翼</span>票を一本化し、<span style="color: #c00000;">社会主義者</span>の大統領就任を阻止するため、<span style="color: #7A3C00;">[+ nsdap_candidate_1932 +]</span>は第2回投票への出馬を取りやめ、<span style="color: #808080;">ヒンデンブルク</span>支持へ転じた。?]
 
-[? if lib_drop_out_bourgeois : In order to consolidate the bourgeois electorate around a single candidate, [+ liberal_reactionary_candidate_1932_name +] has withdrawn from the race and endorsed [+ center_reactionary_candidate_1932_name +]. ?][? if z_drop_out_bourgeois : In order to consolidate the bourgeois electorate around a single candidate, [+ center_reactionary_candidate_1932_name +] has withdrawn from the race and endorsed [+ liberal_reactionary_candidate_1932_name +]. ?]
+[? if lib_drop_out_bourgeois : ブルジョワ有権者を一人の候補へ結集するため、[+ liberal_reactionary_candidate_1932_name +]は選挙戦から撤退し、[+ center_reactionary_candidate_1932_name +]を支持した。?][? if z_drop_out_bourgeois : ブルジョワ有権者を一人の候補へ結集するため、[+ center_reactionary_candidate_1932_name +]は選挙戦から撤退し、[+ liberal_reactionary_candidate_1932_name +]を支持した。?]
 
 @round2_menu
 on-arrival: {!
@@ -710,63 +710,63 @@ if ((Q.lvp_support_spd && Q.lvp_formed || (Q.dvp_support_spd || Q.ddp_support_sp
 if (Q.z_support_spd == 1 && Q.center_reactionary_candidate_1932 && !Q.z_drop_out_bourgeois && !Q.z_drop_out) Q.z_drop_out_2 = 1;
 !}
 
-- @round2_convince_z: Convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to switch their support to us.
-- @round2_convince_kpd: Convince the <span style="color: #700000;">**KPD**</span> to switch their support to us. 
-- @round2_convince_ddp: Convince the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to switch their support to us.
-- @round2_convince_lvp: Convince the <span style="color: #FFCC00;">**LVP**</span> to switch their support to us.
-- @convince_z_eckener: Convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to switch their support to <span style="color: #000000;">**Ec**</span><span style="color: #DD0000;">**ken**</span><span style="color: #FFCC00;">**er**</span>.
-- @convince_ddp_eckener: Convince the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to switch their support to <span style="color: #000000;">**Ec**</span><span style="color: #DD0000;">**ken**</span><span style="color: #FFCC00;">**er**</span>.
-- @convince_lvp_eckener: Convince the <span style="color: #FFCC00;">**LVP**</span> to switch their support to <span style="color: #000000;">**Ec**</span><span style="color: #DD0000;">**ken**</span><span style="color: #FFCC00;">**er**</span>.
-- @convince_dvp_eckener: Convince the <span style="color: #C0A054;">**DVP**</span> to switch their support to <span style="color: #000000;">**Ec**</span><span style="color: #DD0000;">**ken**</span><span style="color: #FFCC00;">**er**</span>.
-- @round2_hindenburg: Switch our support to Hindenburg.
-- @round2_reactionary: Switch our support to [? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Gessler" or reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932 +]**</span>?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932 +]**</span>?][? if reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932 +]**</span>?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932 +]**</span>?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932 +]**</span>?][? if reactionary_candidate_1932 == "Adenauer" or reactionary_candidate_1932 == "Brüning" or reactionary_candidate_1932 == "Stegerwald" or (reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932 +]**</span>?].
-- @round2_reactionary_2: Switch our support to [? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Gessler" or secondary_reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if secondary_reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if ((secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if ((secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if secondary_reactionary_candidate_1932 == "Adenauer" or secondary_reactionary_candidate_1932 == "Brüning" or secondary_reactionary_candidate_1932 == "Stegerwald" or (secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932 +]**</span>?].
-- @round2_thalmann: Switch our support to <span style="color: #700000;">**Thälmann**</span> of the <span style="color: #700000;">**KPD**</span>.
+- @round2_convince_z: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]を説得し、我々への支持に転じさせる。
+- @round2_convince_kpd: <span style="color: #700000;">**KPD**</span>を説得し、我々への支持に転じさせる。
+- @round2_convince_ddp: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>を説得し、我々への支持に転じさせる。
+- @round2_convince_lvp: <span style="color: #FFCC00;">**LVP**</span>を説得し、我々への支持に転じさせる。
+- @convince_z_eckener: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]を説得し、<span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>支持へ転じさせる。
+- @convince_ddp_eckener: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>を説得し、<span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>支持へ転じさせる。
+- @convince_lvp_eckener: <span style="color: #FFCC00;">**LVP**</span>を説得し、<span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>支持へ転じさせる。
+- @convince_dvp_eckener: <span style="color: #C0A054;">**DVP**</span>を説得し、<span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>支持へ転じさせる。
+- @round2_hindenburg: ヒンデンブルク支持へ転じる。
+- @round2_reactionary: [? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Gessler" or reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932 +]**</span>?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932 +]**</span>?][? if reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932 +]**</span>?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932 +]**</span>?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932 +]**</span>?][? if reactionary_candidate_1932 == "Adenauer" or reactionary_candidate_1932 == "Brüning" or reactionary_candidate_1932 == "Stegerwald" or (reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932 +]**</span>?]支持へ転じる。
+- @round2_reactionary_2: [? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Gessler" or secondary_reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if secondary_reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if ((secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if ((secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932 +]**</span>?][? if secondary_reactionary_candidate_1932 == "Adenauer" or secondary_reactionary_candidate_1932 == "Brüning" or secondary_reactionary_candidate_1932 == "Stegerwald" or (secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932 +]**</span>?]支持へ転じる。
+- @round2_thalmann: <span style="color: #700000;">**KPD**</span>の<span style="color: #700000;">**テールマン**</span>支持へ転じる。
 - @round2_organizational_endorsement
-- @round2_vote: We've done enough, second round voting begins next month.
+- @round2_vote: 十分に対応した。第2回投票は来月始まる。
 
 @convince_ddp_eckener
 view-if: not lvp_formed and eckener_campaign and not ddp_support_spd
 max-visits: 1
 go-to: convince_ddp_success_eckener if (ddp_relation >= 40 and (ddp_ideology == "Right" or dstp_maintained)) or (ddp_relation >= 30 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 20 and ddp_ideology == "Left" and not dstp_maintained); convince_ddp_fail_eckener if not ((ddp_relation >= 40 and (ddp_ideology == "Right" or dstp_maintained)) or (ddp_relation >= 30 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 20 and ddp_ideology == "Left" and not dstp_maintained))
 
-The <span style="color: #FFCC00;">liberal</span> vote has been falling over time, especially during the current economic depression, so they will probably be of minimal help. Still, every little bit counts.
+<span style="color: #FFCC00;">自由主義者</span>の票は、とりわけ現在の恐慌下で減少を続けており、助けはごくわずかだろう。それでも一票一票が重要だ。
 
 @convince_ddp_success_eckener
 on-arrival: ddp_support_spd = 1; ddp_left += 1; ddp_cohesion -= 1; ddp_relation += 3
 go-to: round2_menu
 
-Thanks to our friendly relations, connections with their left wing, and Eckener's non-partisanship, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is now campaigning for Eckener in the election.
+友好的関係、党内左派とのつながり、そしてエッケナーの無党派性により、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は選挙でエッケナーのために運動を始めた。
 
 @convince_ddp_fail_eckener
 on-arrival: ddp_support_spd = 0; ddp_right += 1; ddp_cohesion -= 1; ddp_relation -= 3
 go-to: round2_menu
 
-Unfortunately, under the influence of its business wing, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has refused to support a <span style="color: #c00000;">socialist</span>-backed candidate for the presidency. This is a major blow—Eckener was meant to be a unity candidate, and we've clearly failed in that objective.
+残念ながら財界派の影響を受けた<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は、<span style="color: #c00000;">社会主義者</span>が支援する大統領候補への支持を拒んだ。これは大打撃である。エッケナーは統一候補となるはずだったが、その目標は明らかに達成できなかった。
 
 @convince_lvp_eckener
 view-if: lvp_formed and eckener_campaign and not lvp_support_spd
 max-visits: 1
 go-to: convince_lvp_success_eckener if ((lvp_relation >= 50 and lvp_ideology == "Right") or (lvp_relation >= 40 and lvp_ideology == "Moderate") or (lvp_relation >= 30 and lvp_ideology == "Left")) and (lvp_leader != "Dingeldey" or lvp_ideology != "Right"); convince_lvp_fail_eckener if not (((lvp_relation >= 50 and lvp_ideology == "Right") or (lvp_relation >= 40 and lvp_ideology == "Moderate") or (lvp_relation >= 30 and lvp_ideology == "Left")) and (lvp_leader != "Dingeldey" or lvp_ideology != "Right"))
 
-The <span style="color: #FFCC00;">liberal</span> vote has been falling over time, especially during the current economic depression, so they will probably be of minimal help to us. Still, every little bit counts. They will certainly be a hard party to convince, with vehemently anti-<span style="color: #c00000;">socialist</span> industrialists influencing the party away from Eckener.
+<span style="color: #FFCC00;">自由主義者</span>の票は、とりわけ現在の恐慌下で減少を続けており、助けはごくわずかだろう。それでも一票一票が重要だ。党内には激烈な反<span style="color: #c00000;">社会主義</span>の実業家が強い影響力を持ち、エッケナーから党を遠ざけているため、説得は間違いなく困難である。
 
 @convince_lvp_success_eckener
 on-arrival: lvp_support_spd = 1; lvp_left += 3; lvp_relation += 4; old_middle_lvp -= 2; rural_lvp -= 2; old_middle_kvp += 2; rural_kvp += 2; old_middle_kvp += 2 if not kvp_formed; rural_kvp += 2 if not kvp_formed
 go-to: round2_menu
 
-We have convinced the <span style="color: #FFCC00;">**LVP**</span> to give Eckener an official endorsement, to the displeasure of the party's industrial backers. In response, they begin to withdraw their support from the party, and a notable portion of right-wing voters are opting to abstain.
+<span style="color: #FFCC00;">**LVP**</span>からエッケナーへの公式支持を取り付けたが、党を支える実業家たちは不満を募らせている。彼らは党への支援を引き揚げ始め、右翼有権者のかなりの部分が棄権を選んでいる。
 
 @convince_lvp_fail_eckener
 on-arrival: lvp_support_spd = 0; lvp_right += 3; lvp_relation -= 5
 go-to: round2_menu
 
-We have failed to persuade the <span style="color: #FFCC00;">**LVP**</span> to back <span style="color: #c00000;">Braun</span>, due to their deep antipathy toward cooperating with the <span style="color: #c00000;">socialists</span>—even with Eckener at the head of the ticket. This is a major blow—Eckener was meant to be a unity candidate, and we've clearly failed in that objective.
+エッケナーを候補に据えても、<span style="color: #c00000;">社会主義者</span>との協力に対する根深い反感は崩せず、<span style="color: #FFCC00;">**LVP**</span>から支持を取り付けられなかった。これは大打撃である。エッケナーは統一候補となるはずだったが、その目標は明らかに達成できなかった。
 
 @convince_z_eckener
 view-if: eckener_campaign and not z_support_spd
 choose-if: spd_votes >= z_votes and not cvp_formed
-unavailable-subtitle: [? if spd_votes < z_votes: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] knows that they are more popular than us; they do not see a reason to support our candidate. ?][? if cvp_formed: The <span style="color: #000000;">CVP</span> can never be convinced. ?]
+unavailable-subtitle: [? if spd_votes < z_votes: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は自党のほうが我々より有力だと承知しており、こちらの候補を支持する理由を見いだしていない。?][? if cvp_formed: <span style="color: #000000;">CVP</span>を説得することは決してできない。?]
 on-arrival: {!
 Q.z_support_spd = 0;
 if (Q.z_relation >= 45 || (Q.z_relation > 35 && Q.z_ideology == "Left")) {
@@ -781,56 +781,56 @@ if (Q.z_relation >= 65) Q.bvp_support_spd = 1;
 go-to: z_failed_eckener if z_support_spd = 0; z_success_eckener if z_support_spd = 1; z_partial_eckener if z_support_spd = 2
 max-visits: 1
 
-We remind the <span style="color: #000000;">Center Party</span> of our past friendships, our support of Wilhelm Marx in 1925, and promote Eckener as a non-partisan unity candidate that can stop the <span style="color: #7A3C00;">Nazis</span>.
+<span style="color: #000000;">中央党</span>に過去の友好関係と1925年のヴィルヘルム・マルクス支持を思い起こさせ、<span style="color: #7A3C00;">ナチ党</span>を阻止できる無党派の統一候補としてエッケナーを売り込む。
 
 @z_success_eckener
 go-to: round2_menu
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is convinced! They will be part of the Eckener coalition. [? if bvp_support_spd: The <span style="color: #A2D8E0;">**BVP**</span> has also, surprisingly, joined the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] in endorsing Eckener. ?][? if not bvp_support_spd: However, the <span style="color: #A2D8E0;">**BVP**</span> has split from the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and refuses to back Eckener. ?]
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の説得に成功した。同党はエッケナー連合に加わる。[? if bvp_support_spd: 驚くべきことに、<span style="color: #A2D8E0;">**BVP**</span>も[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と歩調を合わせ、エッケナー支持に加わった。?][? if not bvp_support_spd: しかし<span style="color: #A2D8E0;">**BVP**</span>は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と袂を分かち、エッケナー支持を拒んだ。?]
 
 @z_failed_eckener
 go-to: round2_menu
 
-Unfortunately, we are unable to convince the <span style="color: #000000;">Center Party</span> for some reason. 
+残念ながら、<span style="color: #000000;">中央党</span>を説得することはできなかった。
 
 @z_partial_eckener
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is not satisfied with our arguments, but they are open to being convinced if we front the resources.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は我々の主張に納得していないものの、こちらが資源を負担すれば説得に応じる余地がある。
 
-- @pay_z_eckener: Give them the resources they need.
-- @round2_menu: Forget about the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
+- @pay_z_eckener: 必要な資源を提供する。
+- @round2_menu: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は諦める。
 
 @pay_z_eckener
 choose-if: resources >= 1
-subtitle: -1 resource
-unavailable-subtitle: Not enough resources
+subtitle: 資源 -1
+unavailable-subtitle: 資源が足りない。
 on-arrival: resources -= 1; z_support_spd = 1; bvp_support_spd = 1 if z_relation >= 65
 go-to: round2_menu
 
-With our resources, the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] are convinced to support Eckener. [? if bvp_support_spd: The <span style="color: #A2D8E0;">**BVP**</span> has also, surprisingly, joined the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] in endorsing Eckener. ?][? if not bvp_support_spd: However, the <span style="color: #A2D8E0;">**BVP**</span> has split from the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and refuses to back Eckener. ?]
+我々の資源によって、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]をエッケナー支持へ説得した。[? if bvp_support_spd: 驚くべきことに、<span style="color: #A2D8E0;">**BVP**</span>も[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と歩調を合わせ、エッケナー支持に加わった。?][? if not bvp_support_spd: しかし<span style="color: #A2D8E0;">**BVP**</span>は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と袂を分かち、エッケナー支持を拒んだ。?]
 
 @convince_dvp_eckener
 view-if: not lvp_formed and dvp_exist and eckener_campaign and not dvp_support_spd
 max-visits: 1
 go-to: convince_dvp_success_eckener if (dvp_relation >= 70 and dvp_ideology == "Right") or (dvp_relation >= 60 and dvp_ideology == "Moderate") or (dvp_relation >= 50 and dvp_ideology == "Left"); convince_dvp_fail_eckener if not ((dvp_relation >= 70 and dvp_ideology == "Right") or (dvp_relation >= 60 and dvp_ideology == "Moderate") or (dvp_relation >= 50 and dvp_ideology == "Left"))
 
-The <span style="color: #C0A054;">**DVP**</span> will be the most difficult of the bourgeois parties to convince, given their preference to keep their distance from us. However, Eckener’s status as a non-partisan conservative presents a unique opportunity to win them over.
+<span style="color: #C0A054;">**DVP**</span>は我々と距離を置こうとするため、ブルジョワ諸党のなかで最も説得が難しいだろう。しかし無党派の保守派というエッケナーの立場は、同党を味方につけるまたとない機会をもたらす。
 
 @convince_dvp_success_eckener
 on-arrival: dvp_support_spd = 1; dvp_left += 3; dvp_relation += 5
 go-to: round2_menu
 
-Thanks to our friendly relations and Eckener's non-partisanship, the <span style="color: #C0A054;">**DVP**</span> is now campaigning for Eckener in the election. However, they refuse to join <span style="color: #c00000;">socialist</span>-led campaign committees and emphasize their independence from us.
+友好的関係とエッケナーの無党派性により、<span style="color: #C0A054;">**DVP**</span>は選挙でエッケナーのために運動を始めた。ただし<span style="color: #c00000;">社会主義者</span>主導の選挙委員会への参加は拒み、我々からの独立性を強調している。
 
 @convince_dvp_fail_eckener
 on-arrival: dvp_support_spd = 0; dvp_right += 1; dvp_relation -= 3
 go-to: round2_menu
 
-Unfortunately, under the influence of their industrialist wing, the <span style="color: #C0A054;">**DVP**</span> has rejected our overtures and will continue on their own path.
+残念ながら実業家派の影響を受けた<span style="color: #C0A054;">**DVP**</span>は我々の働きかけを拒み、独自路線を進むことになった。
 
 @round2_organizational_endorsement
-title: What about the endorsements of the non-partisan organizations?
-subtitle: With [+ dnvp_candidate_1932 +] out of the running, it's a choice between [+ reactionary_candidate_1932 +] and [+ nsdap_candidate_1932 +].
+title: 超党派団体の支持はどうなっている？
+subtitle: [+ dnvp_candidate_1932 +]が撤退し、選択肢は[+ reactionary_candidate_1932 +]と[+ nsdap_candidate_1932 +]になった。
 on-arrival: {!
 Q.organizational_endorsements_seen = 1;
 if (Q.rlb_nazi) {
@@ -856,28 +856,28 @@ view-if: hindenburg_run and not hitler_support_hindenburg
 max-visits: 1
 go-to: round2_menu
 
-<span style="color: #006400;">National Rural League</span> (<span style="color: #006400;">RLB</span>) - [? if rlb_hindenburg: <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span> ?][? if not rlb_hindenburg: <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span> ?]
+<span style="color: #006400;">全国農村同盟</span>（<span style="color: #006400;">RLB</span>）― [? if rlb_hindenburg: <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span> ?][? if not rlb_hindenburg: <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span> ?]
 
-Stahlhelm - [? if dnvp_ideology == "Radical": Abstention?][? if dnvp_ideology == "Moderate": <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span> ?]
+鉄兜団 ― [? if dnvp_ideology == "Radical": 棄権?][? if dnvp_ideology == "Moderate": <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span> ?]
 
-German National Association of Commercial Employees (DHV) - <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span>
+ドイツ国家商業従業員連盟（DHV）― <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span>
 
-Pan-German League (ADV) - <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>
+全ドイツ連盟（ADV）― <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>
 
-United Patriotic Leagues (VVVD) - <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>
+愛国団体連合（VVVD）― <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>
 
-Kyffhäuser League - <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span>
+キフホイザー連盟 ― <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span>
 
-Many <span style="color: #3E88B3;">**Stahlhelm**</span> members defied orders by voting for [+ nsdap_candidate_1932 +], while others remain firmly opposed to formal cooperation with the <span style="color: #3E88B3;">**DNVP**</span>. The disappointing performance of [+ dnvp_candidate_1932 +] has led the <span style="color: #3E88B3;">**Stahlhelm**</span> to abandon its alliance with the <span style="color: #3E88B3;">**DNVP**</span> and return to a stance of non-partisanship, blaming the party's lackluster support for their candidate for the poor showing.
+多くの<span style="color: #3E88B3;">**鉄兜団**</span>員が命令に背いて[+ nsdap_candidate_1932 +]へ投票する一方、<span style="color: #3E88B3;">**DNVP**</span>との正式協力に断固反対する者もいる。[+ dnvp_candidate_1932 +]が期待外れの成績に終わったことで、<span style="color: #3E88B3;">**鉄兜団**</span>は<span style="color: #3E88B3;">**DNVP**</span>との同盟を解消し、超党派の立場へ戻った。不振の原因は、同党が候補を十分に支援しなかったことにあると非難している。
 
-The shift of many right-wing organizations toward [+ nsdap_candidate_1932 +]’s candidacy will cripple the parties caught between the <span style="color: #000000;">Center</span> and the extremes, polarizing the electorate between the <span style="color: #7A3C00;">Nazis</span> and the <span style="color: #9B0000;">Marxists</span>—a strategy once championed by Hugenberg, now turned against him by his former ally.
+多くの右翼団体が[+ nsdap_candidate_1932 +]支持へ傾けば、<span style="color: #000000;">中央</span>と両極の間に挟まれた諸党は弱体化し、有権者は<span style="color: #7A3C00;">ナチ党</span>と<span style="color: #9B0000;">マルクス主義者</span>へ二極化する。かつてフーゲンベルク自身が唱えた戦略が、今や元同盟者によって彼へ向けられている。
 
-[? if not rlb_hindenburg: The <span style="color: #006400;">RLB</span>’s decision to endorse <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span> rather than abstain has triggered a sharp break with the organization’s moderate affiliates. Their Württemberg branch, the <span style="color: #006400;">**WBWB**</span>, has been especially vocal, campaigning hard against the endorsement and in favor of [+ reactionary_candidate_1932 +]. Neither this backlash nor Hugenberg’s push for abstention has convinced the <span style="color: #006400;">RLB</span> to reverse course, and millions of rural voters are now expected to turn out for [+ nsdap_candidate_1932 +] in the next election. ?]
+[? if not rlb_hindenburg: <span style="color: #006400;">RLB</span>が棄権ではなく<span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>支持を決めたことで、穏健派の加盟団体との亀裂が決定的となった。なかでもヴュルテンベルク支部の<span style="color: #006400;">**WBWB**</span>は強硬に反発し、支持決定へ反対するとともに[+ reactionary_candidate_1932 +]を支持する運動を精力的に展開している。しかしこの反発も、フーゲンベルクによる棄権要求も、<span style="color: #006400;">RLB</span>の方針を覆せなかった。次の投票では数百万人の農村有権者が[+ nsdap_candidate_1932 +]へ投票すると予想される。?]
 
 @round2_convince_z
 view-if: braun_campaign > 0 and z_support_spd != 1 and not eckener_campaign and not rosenfeld_campaign
 choose-if: spd_votes >= z_votes and not cvp_formed
-unavailable-subtitle: [? if spd_votes < z_votes: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] knows that they are more popular than us; they do not see a reason to support our candidate. ?] [? if cvp_formed: The former <span style="color: #3E88B3;">**DNVP**</span> elements of the <span style="color: #000000;">**CVP**</span> would never support a Socialist candidate for president. ?]
+unavailable-subtitle: [? if spd_votes < z_votes: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は自党のほうが我々より有力だと承知しており、こちらの候補を支持する理由を見いだしていない。?] [? if cvp_formed: <span style="color: #000000;">**CVP**</span>に加わった旧<span style="color: #3E88B3;">**DNVP**</span>勢力が、社会主義者の大統領候補を支持することは決してない。?]
 on-arrival: {!
 if (!Q.bruning_time) {
     if (((Q.z_relation >= 60 && Q.spd_president_votes >= Q.hindenburg_votes) || (Q.z_relation > 50 && Q.z_ideology == "Left")) && Q.prussia_leader != "Braun") {
@@ -905,101 +905,101 @@ if (Q.bruning_time) {
 go-to: z_failed if z_support_spd = 0; z_success if z_support_spd = 1; z_partial if z_support_spd = 2
 max-visits: 1
 
-[? if bruning_time: Hindenburg's support for Brüning's government has left them with little room to oppose the very president sustaining his cabinet, but we can still try. ?]
+[? if bruning_time: ヒンデンブルクがブリューニング内閣を支えているため、同党には自らの内閣を存続させる大統領へ反対する余地がほとんどない。それでも試みることはできる。?]
 
 @z_success
 go-to: round2_menu
 on-arrival: hindenburg_angry_bruning += 50 if bruning_time
 on-departure: hitler_support_hindenburg = 1 if spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1
 
-[? if hitler_support_hindenburg : The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s opinion is affected by the <span style="color: #7A3C00;">Nazis</span>' support of Hindenburg, and is willing to turn away from him. ?] The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] are convinced! They will be part of the Braun coalition.
+[? if hitler_support_hindenburg : <span style="color: #7A3C00;">ナチ党</span>がヒンデンブルクを支持したことで、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の見方は変わり、彼から離れる意思を示した。?] [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の説得に成功した。同党はブラウン連合に加わる。
 
-[? if not hitler_support_hindenburg and ((spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1) or (spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1)): With the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
+[? if not hitler_support_hindenburg and ((spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1) or (spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1)): [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]がブラウンを支持したため、[+ nsdap_candidate_1932 +]は選挙戦から撤退した。<span style="color: #7A3C00;">ナチ党</span>は<span style="color: #c00000;">社会主義者</span>の大統領就任を阻止するため、ヒンデンブルクを支持した。?]
 
 @z_partial
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is not satisfied with our arguments, but they are open to being convinced[? if hitler_support_hindenburg: , especially given the <span style="color: #7A3C00;">Nazis</span>' support for Hindenburg?]. [? if prussia_leader == "Braun": They are willing to run a joint campaign if we concede the Prussian Minister-President position to them, as they are opposed to Braun holding both the President and Minister-President positions. ?][? if prussia_leader != "Braun": They are willing to run a joint campaign if we front the resources. ?]
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は我々の主張に納得していないものの、説得の余地は残している[? if hitler_support_hindenburg:。とりわけ<span style="color: #7A3C00;">ナチ党</span>がヒンデンブルクを支持したためである?]。[? if prussia_leader == "Braun": ブラウンが大統領とプロイセン州首相を兼ねることには反対であり、州首相職を譲れば共同選挙運動に応じるという。?][? if prussia_leader != "Braun": こちらが資源を負担すれば共同選挙運動に応じるという。?]
 
-- @give_up_prussia: Give up on leadership of Prussia.
-- @pay_z: Give them the resources they need.
-- @round2_menu: Forget about the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
+- @give_up_prussia: プロイセンの指導権を譲る。
+- @pay_z: 必要な資源を提供する。
+- @round2_menu: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は諦める。
 
 @give_up_prussia
-subtitle: Braun will resign.
+subtitle: ブラウンは辞任する。
 view-if: prussia_leader == "Braun"
 on-arrival: z_support_spd = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1; hindenburg_angry_bruning += 30 if bruning_time
 go-to: round2_menu
 
-Ironic, considering that seven years ago, we brokered a deal for Wilhelm Marx to resign in favor of Braun in exchange for our support for him in the presidential elections. Anyhow, the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is now convinced to support Braun over Hindenburg.
+皮肉な話だ。7年前には、大統領選挙でヴィルヘルム・マルクスを支持する見返りに、彼がブラウンへ州首相職を譲る取引を我々が仲介したのである。ともあれ、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]はヒンデンブルクではなくブラウンを支持することになった。
 
-The Minister-President position is transferred to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s [+ prussia_leader +]. Hopefully, their support will outweigh the loss of popularity and internal dissent caused by the resignation of our most well-known figure.
+プロイセン州首相職は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の[+ prussia_leader +]へ移る。同党の支持が、我が党で最も著名な人物の辞任による人気低下と党内反発を上回ることを願おう。
 
 @pay_z
 view-if: prussia_leader != "Braun"
 choose-if: resources >= 3
-subtitle: -3 resources
-unavailable-subtitle: Not enough resources (need 3)
+subtitle: 資源 -3
+unavailable-subtitle: 資源が足りない（3必要）。
 on-arrival: resources -= 3; z_support_spd = 1; hindenburg_angry_bruning += 60 if bruning_time
 on-departure: hitler_support_hindenburg = 1 if spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1
 go-to: round2_menu
 
-With our resources, the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] are convinced to support Braun over Hindenburg.
+我々の資源によって、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]をヒンデンブルクではなくブラウンの支持へ説得した。
 
-[? if not hitler_support_hindenburg and ((spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1) or (spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1)): With the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
+[? if not hitler_support_hindenburg and ((spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1) or (spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1)): [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]がブラウンを支持したため、[+ nsdap_candidate_1932 +]は選挙戦から撤退した。<span style="color: #7A3C00;">ナチ党</span>は<span style="color: #c00000;">社会主義者</span>の大統領就任を阻止するため、ヒンデンブルクを支持した。?]
 
 @z_failed
 go-to: round2_menu
 
-Unfortunately, we fail to turn them away from [? if not hindenburg_run: [+ z_choice +]?][? if hindenburg_run: Hindenburg?]. [? if hindenburg_votes > spd_president_votes and hindenburg_run : Given that Hindenburg received more votes than Braun, they believe that we should turn to Hindenburg, not the other way around. ?]
+残念ながら、同党を[? if not hindenburg_run: [+ z_choice +]?][? if hindenburg_run: ヒンデンブルク?]から引き離すことはできなかった。[? if hindenburg_votes > spd_president_votes and hindenburg_run : ヒンデンブルクがブラウンより多くの票を得た以上、ヒンデンブルクがこちらへ来るのではなく、我々が彼へ歩み寄るべきだと考えている。?]
 
 @round2_convince_kpd
 choose-if: spd_votes >= kpd_votes
-unavailable-subtitle: The <span style="color: #700000;">**KPD**</span> knows that they are more popular than us; they do not see a reason to support our candidate.
+unavailable-subtitle: <span style="color: #700000;">**KPD**</span>は自党のほうが我々より有力だと承知しており、こちらの候補を支持する理由を見いだしていない。
 view-if: spd_campaign > 0 and kpd_support_spd == 0 and not eckener_campaign
 max-visits: 1
 
-The <span style="color: #700000;">**KPD**</span> is committed to supporting Ernst Thälmann. [? if (kpd_relation >= 55 and kpd_leader != "Conciliators" or kpd_relation >= 40 and kpd_leader == "Conciliators") : However, the <span style="color: #7A3C00;">Nazi</span>-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if (kpd_relation < 55 and kpd_leader != "Conciliators" or kpd_relation < 40 and kpd_leader == "Conciliators") : They do not seem willing to be convinced. ?]
+<span style="color: #700000;">**KPD**</span>はエルンスト・テールマン支持を貫いている。[? if (kpd_relation >= 55 and kpd_leader != "Conciliators" or kpd_relation >= 40 and kpd_leader == "Conciliators") : しかし<span style="color: #7A3C00;">ナチ党</span>とヒンデンブルクの連合を強く警戒し、選挙運動を取りやめてブラウンを支持するよう説得を受け入れる意思がある。?][? if (kpd_relation < 55 and kpd_leader != "Conciliators" or kpd_relation < 40 and kpd_leader == "Conciliators") : 説得に応じる様子はない。?]
 
-- @r2_kpd_resources: Use our resources.
-- @r2_kpd_relations: Use our good relations.
-- @round2_menu: Forget about the <span style="color: #700000;">KPD</span>.
+- @r2_kpd_resources: 資源を使う。
+- @r2_kpd_relations: 良好な関係を利用する。
+- @round2_menu: <span style="color: #700000;">KPD</span>は諦める。
 
 @r2_kpd_resources
 view-if: kpd_relation >= 55 or (kpd_relation >= 40 and kpd_leader == "Conciliators")
 choose-if: resources >= 3
-subtitle: -3 resources
-unavailable-subtitle: Not enough resources (need 3).
+subtitle: 資源 -3
+unavailable-subtitle: 資源が足りない（3必要）。
 on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
-The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+<span style="color: #700000;">**KPD**</span>が大統領選挙でブラウン支持に転じた。ブルジョワ有権者を遠ざけないよう、支持表明は控えめにするよう求めた。
 
 @r2_kpd_relations
 view-if: kpd_relation >= 70 or (kpd_leader == "Conciliators" and kpd_relation >= 50)
-unavailable-subtitle: Our relations are not good enough.
+unavailable-subtitle: 関係が十分に良くない。
 on-arrival: kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
-The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
+<span style="color: #700000;">**KPD**</span>が大統領選挙でブラウン支持に転じた。ブルジョワ有権者を遠ざけないよう、支持表明は控えめにするよう求めた。
 
 @round2_convince_ddp
 view-if: not lvp_formed and spd_campaign > 0 and ddp_support_spd != 1 and not eckener_campaign and not rosenfeld_campaign
 max-visits: 1
 go-to: convince_ddp_success if (((ddp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (ddp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((ddp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (ddp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg); convince_ddp_fail if not ((((ddp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (ddp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((ddp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (ddp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg))
 
-The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has always been the most friendly of the bourgeois parties, hopefully reminding them of our successes in <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalitions will help convince them. [? if hitler_support_hindenburg: Furthermore, the withdrawal of [+ nsdap_candidate_1932 +] in favor of Hindenburg has led them to distance themselves from him. ?]
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は常にブルジョワ諸党で最も友好的だった。<span style="color: #000000;">ワイ</span><span style="color: #DD0000;">マー</span><span style="color: #FFCC00;">ル連合</span>でともに上げた成果を思い起こさせれば、説得の助けになるだろう。[? if hitler_support_hindenburg: さらに[+ nsdap_candidate_1932 +]が撤退してヒンデンブルクを支持したため、同党も彼から距離を置くようになった。?]
 
 @convince_ddp_success
 on-arrival: ddp_support_spd = 1; ddp_left += 2; ddp_cohesion -= 1; ddp_relation += 4
 go-to: round2_menu
 
-Thanks to our friendly relations and connections with their left wing, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is now campaigning for Braun in the election.
+友好的関係と党内左派とのつながりにより、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は選挙でブラウンのために運動を始めた。
 
 @convince_ddp_fail
 on-arrival: ddp_support_spd = 0
 go-to: round2_menu
 
-Unfortunately, under the influence of their business wing, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has refused to support a <span style="color: #c00000;">socialist</span> for the presidency. 
+残念ながら財界派の影響を受けた<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は、<span style="color: #c00000;">社会主義者</span>の大統領候補を支持しなかった。
 
 @round2_convince_lvp
 view-if: lvp_formed and spd_campaign > 0 and lvp_support_spd != 1 and not eckener_campaign and not rosenfeld_campaign
@@ -1015,83 +1015,83 @@ if ((Q.lvp_relation >= 65 && Q.lvp_ideology == "Right" || Q.lvp_relation >= 55 &
 !}
 go-to: round2_convince_lvp_success if convince_lvp_success == 1; round2_convince_lvp_fail if convince_lvp_success == 0; round2_convince_lvp_partial if convince_lvp_success == 2
 
-[? if hitler_support_hindenburg: The <span style="color: #7A3C00;">Nazis</span>'s support of Hindenburg has dampened their enthusiasm, perhaps we can convince them to turn away from him? ?] They will certainly be a hard party to convince, with vehemently anti-<span style="color: #c00000;">socialist</span> industrialists influencing the party.
+[? if hitler_support_hindenburg: <span style="color: #7A3C00;">ナチ党</span>がヒンデンブルクを支持したことで同党の熱意は冷めている。彼から離れるよう説得できるかもしれない。?] 党内には激烈な反<span style="color: #c00000;">社会主義</span>の実業家が強い影響力を持つため、説得は間違いなく困難である。
 
 @round2_convince_lvp_success
 on-arrival: lvp_support_spd = 1; lvp_left += 4; lvp_relation += 3; new_middle_dnvp += new_middle_lvp*0.05 if not kvp_formed; old_middle_dnvp += old_middle_lvp*0.15 if not kvp_formed; rural_dnvp += rural_lvp*0.15 if not kvp_formed; new_middle_kvp += new_middle_lvp*0.05 if not kvp_formed; old_middle_kvp += old_middle_lvp*0.15 if not kvp_formed; rural_kvp += rural_lvp*0.15 if not kvp_formed; new_middle_lvp *= 0.95; old_middle_lvp *= 0.85; rural_lvp *= 0.85
 go-to: round2_menu
 
-Surprisingly, we have convinced the <span style="color: #FFCC00;">**LVP**</span> to give <span style="color: #c00000;">Braun</span> an official endorsement, to the shock of the party's industrial backers. In response, some die-hard Hindenburg supporters begin withdrawing from the party.
+驚くべきことに、<span style="color: #FFCC00;">**LVP**</span>から<span style="color: #c00000;">ブラウン</span>への公式支持を取り付けた。党を支える実業家たちは衝撃を受け、ヒンデンブルクの熱烈な支持者の一部が党から離れ始めた。
 
 @round2_convince_lvp_fail
 on-arrival: lvp_support_spd = 0
 go-to: round2_menu
 
-Perhaps expectedly, we have failed to persuade the <span style="color: #FFCC00;">**LVP**</span> to back <span style="color: #c00000;">Braun</span>, owing to their strong antipathy toward <span style="color: #c00000;">socialism</span> in general.
+予想どおりというべきか、<span style="color: #c00000;">社会主義</span>全般に対する強い反感のため、<span style="color: #FFCC00;">**LVP**</span>に<span style="color: #c00000;">ブラウン</span>支持を認めさせることはできなかった。
 
 @round2_convince_lvp_partial
 
-The <span style="color: #FFCC00;">**LVP**</span> is not satisfied with our arguments, but they are open to being convinced[? if hitler_support_hindenburg: , especially given the <span style="color: #7A3C00;">Nazis</span>' support for Hindenburg?]. They are demanding a hefty amount of resources, and there is no guarantee that they will outright endorse us. Instead, they may simply withdraw their endorsement from Hindenburg.
+<span style="color: #FFCC00;">**LVP**</span>は我々の主張に納得していないものの、説得の余地は残している[? if hitler_support_hindenburg:。とりわけ<span style="color: #7A3C00;">ナチ党</span>がヒンデンブルクを支持したためである?]。同党は大量の資源を要求しており、我々を明確に支持する保証もない。単にヒンデンブルクへの支持を撤回するだけかもしれない。
 
-- @pay_lvp: Give them the resources they need.
-- @round2_menu: Forget about the <span style="color: #FFCC00;">**LVP**</span>.
+- @pay_lvp: 必要な資源を提供する。
+- @round2_menu: <span style="color: #FFCC00;">**LVP**</span>は諦める。
 
 @pay_lvp
 choose-if: resources >= 4
-subtitle: -4 resources
-unavailable-subtitle: Not enough resources (need 4)
+subtitle: 資源 -4
+unavailable-subtitle: 資源が足りない（4必要）。
 on-arrival: resources -= 4; lvp_support_spd = 1; lvp_partial = 1
 on-departure: hitler_support_hindenburg = 1 if spd_president_votes + lvp_votes > nsdap_presidential_votes and z_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and z_support_spd == 1; 
 go-to: round2_menu
 
-With our resources, the <span style="color: #FFCC00;">**LVP**</span> are convinced to drop their endorsement of Hindenburg. [? if lvp_ideology == "Left": Through our friendly relations with their left wing, we are able to get them to endorse Braun! ?][? if lvp_ideology != "Left": The business and industrial influences within their party prevent any shows of explicit support toward Braun however. ?]
+我々の資源によって、<span style="color: #FFCC00;">**LVP**</span>はヒンデンブルクへの支持撤回に同意した。[? if lvp_ideology == "Left": 党内左派との友好関係を通じ、ブラウンへの支持表明まで取り付けた！?][? if lvp_ideology != "Left": ただし党内の財界・産業界勢力に阻まれ、ブラウンへの明確な支持は表明できない。?]
 
-[? if not hitler_support_hindenburg and ((spd_president_votes + lvp_votes > nsdap_presidential_votes and z_support_spd != 1) or spd_president_votes + lvp_votes > nsdap_presidential_votes and z_support_spd == 1): With the <span style="color: #FFCC00;">liberals</span> supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
+[? if not hitler_support_hindenburg and ((spd_president_votes + lvp_votes > nsdap_presidential_votes and z_support_spd != 1) or spd_president_votes + lvp_votes > nsdap_presidential_votes and z_support_spd == 1): <span style="color: #FFCC00;">自由主義者</span>がブラウンを支持したため、[+ nsdap_candidate_1932 +]は選挙戦から撤退した。<span style="color: #7A3C00;">ナチ党</span>は<span style="color: #c00000;">社会主義者</span>の大統領就任を阻止するため、ヒンデンブルクを支持した。?]
 
 @round2_thalmann
 view-if: spd_support_thalmann == 0 and kpd_support_spd == 0 and organizational_endorsements_seen
 choose-if: kpd_relation >= 50 and left_strength > reformist_strength 
-unavailable-subtitle: [? if kpd_relation < 50 : We do not have good enough relations with the <span style="color: #700000;">Communists</span>, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
+unavailable-subtitle: [? if kpd_relation < 50 : <span style="color: #700000;">共産主義者</span>との関係が十分に良くないため、我々の支持さえ受け入れようとしない。?] [? if reformist_strength >= left_strength : 改革派は、この奇妙な協力を党が支持しないよう押しとどめられる。?]
 max-visits: 1
 
-Supporting Thälmann is rather unpopular in our party, even if the <span style="color: #700000;">**Communists**</span> accept our support. Are we sure?
+<span style="color: #700000;">**共産主義者**</span>が我々の支持を受け入れるとしても、テールマン支持は党内でかなり不人気である。本当に実行するのか？
 
-- @round2_thalmann_2: Yes, we will support <span style="color: #700000;">**Thälmann**</span>, despite the reformists' pleas against it.
-- @round2_menu: Never mind.
+- @round2_thalmann_2: そうだ。改革派の反対を押し切り、<span style="color: #700000;">**テールマン**</span>を支持する。
+- @round2_menu: やめておく。
 
 @round2_thalmann_2
 on-arrival: spd_campaign = 0; spd_support_thalmann = 1; reformist_dissent += 20; center_dissent += 15; labor_dissent += 10; neorevisionist_dissent += 15; catholics_spd -= 5; workers_spd -= 3; workers_kpd += 5; kpd_relation += 10; communist_coalition += 2; dvp_relation -= 15; ddp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
 on-departure: z_support_spd = 0; kpd_support_spd = 0;
 
-Fine. We have thrown our support to Chairman Thälmann of the <span style="color: #700000;">**KPD**</span> to the dismay of our bourgeois allies.
+よし。ブルジョワの同盟勢力を狼狽させながらも、我々は<span style="color: #700000;">**KPD**</span>議長テールマン支持へ踏み切った。
 
-[? if z_support_spd : The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is confused at our capricious behavior, and have switched their support to Hindenburg. ?]
+[? if z_support_spd : [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は我々の気まぐれな行動に困惑し、ヒンデンブルク支持へ転じた。?]
 
-- @round2_vote: Second round voting begins next month.
+- @round2_vote: 第2回投票は来月始まる。
 
 @round2_hindenburg
 view-if: (spd_campaign > 0 or spd_support_thalmann > 0) and organizational_endorsements_seen and hindenburg_run
 on-arrival: spd_campaign = 0; spd_support_thalmann = 0; spd_support_reactionary = 1; left_dissent += 10; hindenburg_angry_bruning += 25; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
-We have switched our support to Hindenburg. [? if bruning_time: Hindenburg is reportedly dissatisfied with having been elected with the support of <span style="color: #c00000;">socialists</span>, blaming Brüning and his unpopular cabinet for this outcome. ?]
+我々はヒンデンブルク支持へ転じた。[? if bruning_time: ヒンデンブルクは<span style="color: #c00000;">社会主義者</span>の支持で当選することに不満を抱き、この結果をブリューニングと不人気な内閣の責任だとしているという。?]
 
-- @round2_vote: Second round voting begins next month.
+- @round2_vote: 第2回投票は来月始まる。
 
 @round2_reactionary
 view-if: not hindenburg_run and reactionary_candidate_1932 and reactionary_candidate_1932 != "Westarp" and reactionary_candidate_1932 != "Lettow-Vorbeck" and not (lib_drop_out_bourgeois and liberal_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (z_drop_out_bourgeois and center_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (lib_drop_out_2 and liberal_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (z_drop_out_2 and center_reactionary_candidate_1932_name == reactionary_candidate_1932) and spd_choice != reactionary_candidate_1932
 on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_campaign = 0; braun_campaign = 0; rosenfeld_campaign = 0; eckener_campaign = 0; z_choice = reactionary_candidate_1932 if spd_campaign; ddp_choice = reactionary_candidate_1932 if spd_campaign; lvp_choice = reactionary_candidate_1932 if spd_campaign; dvp_choice = reactionary_candidate_1932 if spd_campaign; spd_choice = reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
-We have switched our support to [+ reactionary_candidate_1932 +].
+我々は[+ reactionary_candidate_1932 +]支持へ転じた。
 
-- @round2_vote: Second round voting begins next month.
+- @round2_vote: 第2回投票は来月始まる。
 
 @round2_reactionary_2
 view-if: not hindenburg_run and secondary_reactionary_candidate_1932 and secondary_reactionary_candidate_1932 != "Westarp" and secondary_reactionary_candidate_1932 != "Lettow-Vorbeck" and not (lib_drop_out_bourgeois and liberal_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (z_drop_out_bourgeois and center_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (lib_drop_out_2 and liberal_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (z_drop_out_2 and center_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and spd_choice != secondary_reactionary_candidate_1932
 on-arrival: spd_support_reactionary = 1; spd_support_reactionary_2 = 1; spd_campaign = 0; braun_campaign = 0; rosenfeld_campaign = 0; eckener_campaign = 0; z_choice = secondary_reactionary_candidate_1932 if spd_campaign; ddp_choice = secondary_reactionary_candidate_1932 if spd_campaign; lvp_choice = secondary_reactionary_candidate_1932 if spd_campaign; dvp_choice = secondary_reactionary_candidate_1932 if spd_campaign; spd_choice = secondary_reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
-We have switched our support to [+ reactionary_candidate_1932 +].
+我々は[+ reactionary_candidate_1932 +]支持へ転じた。
 
-- @round2_vote: Second round voting begins next month.
+- @round2_vote: 第2回投票は来月始まる。
 
 @round2_vote
 view-if: (organizational_endorsements_seen or not hindenburg_run or hitler_support_hindenburg)
@@ -1208,59 +1208,59 @@ if (!Q.hindenburg_run) {
 }
 !}
 
-Hopefully Germany makes the right choice. [? if hindenburg_confidence: With Hindenburg’s campaign losing strength now that his victory seems assured, [+ nsdap_candidate_1932 +]’s effort remains in full swing. The lack of activity from Hindenburg’s camp is likely to fuel a resurgence for the <span style="color: #7A3C00;">Nazis</span>. ?]
+ドイツが正しい選択をすることを願おう。[? if hindenburg_confidence: ヒンデンブルクの勝利が確実視されて選挙運動が弱まる一方、[+ nsdap_candidate_1932 +]陣営は全力で活動を続けている。ヒンデンブルク陣営の停滞は、<span style="color: #7A3C00;">ナチ党</span>の巻き返しを促す可能性が高い。?]
 
-[? if lib_drop_out_2: Fortunately for us, [+ liberal_reactionary_candidate_1932_name +] has dropped out due to our courting of the <span style="color: #FFCC00;">liberals</span>. ?][? if z_drop_out_2: Fortunately for us, [+ center_reactionary_candidate_1932_name +] has dropped out due to our courting of the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?]
+[? if lib_drop_out_2: 幸いにも、<span style="color: #FFCC00;">自由主義者</span>への働きかけが実り、[+ liberal_reactionary_candidate_1932_name +]は出馬を取りやめた。?][? if z_drop_out_2: 幸いにも、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]への働きかけが実り、[+ center_reactionary_candidate_1932_name +]は出馬を取りやめた。?]
 
-[? if vorbeck_trolling: However, the withdrawal of [? if liberal_reactionary_candidate_1932: [+ liberal_reactionary_candidate_1932_name +] and?][+ center_reactionary_candidate_1932_name +] has forced the entry of [+ reactionary_candidate_1932 +] into the race, serving as a candidate for the moderate right. ?]
+[? if vorbeck_trolling: しかし、[? if liberal_reactionary_candidate_1932: [+ liberal_reactionary_candidate_1932_name +]と?][+ center_reactionary_candidate_1932_name +]の撤退により、穏健右派の候補として[+ reactionary_candidate_1932 +]が出馬することになった。?]
 
 @hindenburg_wins
 on-arrival: president = "Hindenburg"
 
-As expected, the incumbent Hindenburg wins the presidency. Let's hope he continues to keep the <span style="color: #7A3C00;">Nazis</span> out of power.
+予想どおり、現職のヒンデンブルクが大統領選挙に勝利した。今後も<span style="color: #7A3C00;">ナチ党</span>を政権から遠ざけ続けることを願おう。
 
 @thalmann_wins
 on-arrival: president = "Thälmann"; kpd_relation = 80;
 
-Ernst Thälmann of the <span style="color: #700000;">**KPD**</span> has won the presidency. Immediately, the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> launches a coup attempt against the government. We have no choice but to unite with the <span style="color: #700000;">**KPD**</span> against the <span style="color: #7A3C00;">fascists</span>...
+<span style="color: #700000;">**KPD**</span>のエルンスト・テールマンが大統領選挙に勝利した。直ちに<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>が政府に対するクーデターを開始する。我々には<span style="color: #700000;">**KPD**</span>と団結し、<span style="color: #7A3C00;">ファシスト</span>へ立ち向かうほかない……
 
-- @civil_war: This is civil war.
+- @civil_war: これは内戦だ。
 
 @hitler_wins
 on-arrival: president = nsdap_candidate_1932; chancellor = "Hitler"; chancellor_party = "NSDAP"
 
-[? if nsdap_candidate_1932 == "Hitler" : Adolf Hitler of the <span style="color: #7A3C00;">**NSDAP**</span> has won the presidency. He wastes no time in consolidating power. ?]
-[? if nsdap_candidate_1932 != "Hitler" : The <span style="color: #7A3C00;">**NSDAP**</span> candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The <span style="color: #7A3C00;">Nazis</span> waste no time in consolidating power. ?]
+[? if nsdap_candidate_1932 == "Hitler" : <span style="color: #7A3C00;">**NSDAP**</span>のアドルフ・ヒトラーが大統領選挙に勝利した。彼は直ちに権力の掌握へ動く。?]
+[? if nsdap_candidate_1932 != "Hitler" : <span style="color: #7A3C00;">**NSDAP**</span>候補[+ president +]が勝利した。[+ president +]大統領が最初に行ったのは、ヒトラーをドイツへ呼び戻し、首相に任命することだった。<span style="color: #7A3C00;">ナチ党</span>は直ちに権力の掌握へ動く。?]
 
-- @hitler_takes_power: What do we do now?
+- @hitler_takes_power: 今、我々は何をする？
 
 
 @braun_wins
 on-arrival: president = "Braun"; president_ideology = "Left"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 6*(1-dissent); old_middle_spd += 4*(1-dissent); new_middle_spd += 4*(1-dissent); rural_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent);
 go-to: achievement_check_1
 
-Otto Braun of the <span style="color: #c00000;">**SPD**</span> has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
+<span style="color: #c00000;">**SPD**</span>のオットー・ブラウンが大統領選挙に勝利した！　我が党にとって祝賀の時であり、この勝利は支持を押し上げる。
 
 @rosenfeld_wins
 on-arrival: president = "Rosenfeld"; president_ideology = "Left"; center_dissent -= 5; labor_dissent -= 5; left_dissent -= 15; left_strength += 20; workers_spd += 9*(1-dissent); unemployed_spd += 6*(1-dissent); coup_progress += 4; capital_strike_progress += 4
 go-to: achievement_check_1
 
-Kurt Rosenfeld of the [? if not left_split: <span style="color: #c00000;">**SPD**</span>?][? if left_split: <span style="color: #9B0000;">**SAPD**</span>?] has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
+[? if not left_split: <span style="color: #c00000;">**SPD**</span>?][? if left_split: <span style="color: #9B0000;">**SAPD**</span>?]のクルト・ローゼンフェルトが大統領選挙に勝利した！　我が党にとって祝賀の時であり、この勝利は支持を押し上げる。
 
-However, his leftism has sparked rumors of a planned "March on Berlin" by the <span style="color: #7A3C00;">**SA**</span> and <span style="color: #3E88B3;">**Stahlhelm**</span>, who see his election as tantamount to electing a <span style="color: #700000;">**Communist**</span>. Industrialists, equally displeased, may resort to protest through their own means.
+しかし彼の左派的立場により、当選を<span style="color: #700000;">**共産主義者**</span>の選出に等しいとみなす<span style="color: #7A3C00;">**SA**</span>と<span style="color: #3E88B3;">**鉄兜団**</span>が「ベルリン進軍」を計画しているとの噂が広がった。同じく不満を抱く実業家も、独自の手段で抗議に出るかもしれない。
 
 @eckener_wins
 on-arrival: president = "Eckener"; president_ideology = "Moderate"; reformist_dissent -= 20; center_dissent -= 5; labor_dissent -= 5; reformist_strength += 20; workers_spd += 4*(1-dissent); unemployed_spd += 2*(1-dissent); old_middle_spd += 2*(1-dissent); new_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent)
 achievement: zeppelin_kapitan
 go-to: achievement_check_1
 
-Nationally renown Zeppelin pilot and independent Hugo Eckener has won the presidency! This is a moment of celebration for our party, as his victory helps keep the <span style="color: #7A3C00;">Nazis</span> at bay.
+全国的に著名な飛行船操縦士で無所属のフーゴー・エッケナーが大統領選挙に勝利した！　彼の勝利は<span style="color: #7A3C00;">ナチ党</span>を抑える助けとなり、我が党にとって祝賀の時である。
 
 @duesterburg_wins
 on-arrival: president = "Braun"; president_ideology = "Left"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
 go-to: achievement_check_1
 
-Duesterberg is too ashamed to accept the Presidency, and out of the kindness of his heart, has given it to Otto Braun. 
+デュスターベルクは恥じ入って大統領職を受けることができず、その慈悲深い心からオットー・ブラウンへ譲り渡した。
 
 @achievement_check_1
 on-arrival: neue_geschaftsfuhrung = 1 if chancellor == "Brüning" and spd_toleration
@@ -1276,23 +1276,23 @@ go-to: jarres_win if (reactionary_candidate_1_majority and reactionary_candidate
 on-arrival: president = "Jarres"; president_ideology = "Right"; new_middle_dvp += 4; old_middle_dvp += 4; rural_dvp += 4; new_middle_lvp += 4; old_middle_lvp += 4; rural_lvp += 4
 achievement: aller_guten_dinge_sind_zwei
 
-Perhaps surprisingly, Karl Jarres has made an unforeseen comeback and won the presidency. We hope that his governance will be an improvement over that of Hindenburg, and that he continues to keep the <span style="color: #7A3C00;">Nazis</span> out of power. 
+意外にも、カール・ヤレスが予期せぬ復活を遂げ、大統領選挙に勝利した。彼の統治がヒンデンブルクより良いものとなり、<span style="color: #7A3C00;">ナチ党</span>を政権から遠ざけ続けることを願おう。
 
 @gessler_win
 on-arrival: president = "Gessler"; president_ideology = "Moderate"; new_middle_ddp += 2; old_middle_ddp += 2; rural_ddp += 2; new_middle_dvp += 2; old_middle_dvp += 2; rural_dvp += 2; new_middle_lvp += 4; old_middle_lvp += 4; rural_lvp += 4
 
-Otto Gessler has made a comeback and won the presidency. Despite his[? if lvp_formed: &nbsp;former?] affiliation with the <span style="color: #D3C24D;">**DDP**</span>, he isn’t as friendly as his colleagues. However, he is a significant step up from Hindenburg. Let’s hope he continues to keep the <span style="color: #7A3C00;">Nazis</span> out of power.
+オットー・ゲスラーが復活を遂げ、大統領選挙に勝利した。<span style="color: #D3C24D;">**DDP**</span>に[? if lvp_formed: かつて?]所属していたにもかかわらず、同僚ほど我々に友好的ではない。それでもヒンデンブルクからは大きな前進である。今後も<span style="color: #7A3C00;">ナチ党</span>を政権から遠ざけ続けることを願おう。
 
 @luther_win
 on-arrival: president = "Luther"; president_ideology = "Moderate"; new_middle_dvp += 4; old_middle_dvp += 4; rural_dvp += 4; new_middle_lvp += 4; old_middle_lvp += 4; rural_lvp += 4
 
-From former Chancellor to President, Hans Luther has secured the presidency. Known for his technocratic beliefs, he's unlikely to rock the boat in either political direction. Let’s hope he continues to keep the <span style="color: #7A3C00;">Nazis</span> out of power.
+元首相から大統領へ、ハンス・ルターが大統領職を勝ち取った。テクノクラート的信条で知られ、政治的にどちらの方向へも波風を立てる可能性は低い。今後も<span style="color: #7A3C00;">ナチ党</span>を政権から遠ざけ続けることを願おう。
 
 @adenauer_win
 on-arrival: president = "Adenauer"; president_ideology = "Moderate"; workers_z += 4; new_middle_z += 6; old_middle_z += 6; rural_z += 4; catholics_z += 4
 go-to: bundesrepublik if presidential_powers
 
-Konrad Adenauer has risen from Mayor to President and is expected to pursue friendlier policies toward the <span style="color: #c00000;">**SPD**</span> than Hindenburg. Still, let's hope he remains firm in keeping the <span style="color: #7A3C00;">Nazis</span> out of power.
+コンラート・アデナウアーは市長から大統領へ上り詰めた。ヒンデンブルクより<span style="color: #c00000;">**SPD**</span>に友好的な政策を採ると期待される。それでも、断固として<span style="color: #7A3C00;">ナチ党</span>を政権から遠ざけ続けることを願おう。
 
 @bundesrepublik
 achievement: bundesrepublik
@@ -1301,19 +1301,19 @@ achievement: bundesrepublik
 @bruning_win
 on-arrival: president = "Brüning"; president_ideology = "Moderate"; new_middle_z += 4; old_middle_z += 4; rural_z += 2; catholics_z += 2
 
-Heinrich Brüning may be an advocate of economic austerity, but as president, he’s a clear step up from Hindenburg in both his <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> convictions and his stance toward the <span style="color: #c00000;">**SPD**</span>. Let’s hope he stands firm and keeps the <span style="color: #7A3C00;">Nazis</span> out of power.
+ハインリヒ・ブリューニングは経済緊縮の唱道者かもしれない。しかし大統領としては、<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">的</span>信念でも<span style="color: #c00000;">**SPD**</span>への姿勢でも、ヒンデンブルクから明らかな前進である。断固として<span style="color: #7A3C00;">ナチ党</span>を政権から遠ざけることを願おう。
 
 @stegerwald_win
 on-arrival: president = "Stegerwald"; president_ideology = "Moderate"; workers_z += 8; new_middle_z += 6; old_middle_z += 6; rural_z += 4; catholics_z += 4
 
-Adam Stegerwald has risen from union president to President of Germany. He is expected to pursue friendlier policies toward the <span style="color: #c00000;">**SPD**</span> than Hindenburg did, and to provide a voice for the laborers of Germany. Let's hope he remains firm in keeping the <span style="color: #7A3C00;">Nazis</span> out of power.
+アダム・シュテーガーヴァルトは労働組合委員長からドイツ大統領へ上り詰めた。ヒンデンブルクより<span style="color: #c00000;">**SPD**</span>に友好的な政策を採り、ドイツの労働者の声を代弁すると期待される。断固として<span style="color: #7A3C00;">ナチ党</span>を政権から遠ざけ続けることを願おう。
 
 @vorbeck_win
 on-arrival: president = "Lettow-Vorbeck"; president_ideology = "Right"; vorbeck_party = "DNVP"; vorbeck_party = "KVP" if kvp_formed; vorbeck_party = "Other" if dnvp_ideology == "Radical" and not kvp_formed; workers_dnvp += 4 if vorbeck_party == "DNVP"; new_middle_dnvp += 4 if vorbeck_party == "DNVP"; old_middle_dnvp += 6 if vorbeck_party == "DNVP"; rural_dnvp += 6 if vorbeck_party == "DNVP"; catholics_dnvp += 4 if vorbeck_party == "DNVP"; workers_kvp += 4 if vorbeck_party == "KVP"; new_middle_kvp += 4 if vorbeck_party == "KVP"; old_middle_kvp += 6 if vorbeck_party == "KVP"; rural_kvp += 6 if vorbeck_party == "KVP"; catholics_kvp += 4 if vorbeck_party == "KVP"; workers_other += 4 if vorbeck_party == "Other"; new_middle_other += 4 if vorbeck_party == "Other"; old_middle_other += 6 if vorbeck_party == "Other"; rural_other += 6 if vorbeck_party == "Other"; catholics_other += 4 if vorbeck_party == "Other"; 
 
-Unfortunately, Paul von Lettow-Vorbeck, a <span style="color: #3E88B3;">nationalist</span> not far different from Hindenburg, has been elected president. A return to government under his leadership—his Camarilla certainly won’t allow it. Let’s hope he holds the line against the <span style="color: #7A3C00;">Nazis</span> and abandons the dangerous taming strategy.
+残念ながら、ヒンデンブルクと大差ない<span style="color: #3E88B3;">国家主義者</span>パウル・フォン・レットウ＝フォルベックが大統領に選出された。彼のもとで政権へ復帰することは、側近集団が決して許さないだろう。<span style="color: #7A3C00;">ナチ党</span>に対する一線を守り、危険な「飼い慣らし戦略」を放棄することを願おう。
 
 @westarp_win
 on-arrival: president = "Westarp"; president_ideology = "Right"; westarp_party = "DNVP"; westarp_party = "KVP" if kvp_formed; westarp_party = "Other" if dnvp_ideology == "Radical" and not kvp_formed; workers_dnvp += 2 if westarp_party == "DNVP"; new_middle_dnvp += 4 if westarp_party == "DNVP"; old_middle_dnvp += 6 if westarp_party == "DNVP"; rural_dnvp += 6 if westarp_party == "DNVP"; catholics_dnvp += 2 if westarp_party == "DNVP"; workers_kvp += 2 if westarp_party == "KVP"; new_middle_kvp += 4 if westarp_party == "KVP"; old_middle_kvp += 6 if westarp_party == "KVP"; rural_kvp += 6 if westarp_party == "KVP"; catholics_kvp += 2 if westarp_party == "KVP"; workers_other += 2 if westarp_party == "Other"; new_middle_other += 4 if westarp_party == "Other"; old_middle_other += 6 if westarp_party == "Other"; rural_other += 6 if westarp_party == "Other"; catholics_other += 2 if westarp_party == "Other"; 
 
-Unfortunately, Kuno von Westarp, a known <span style="color: #808080;">reactionary</span> and <span style="color: #3E88B3;">nationalist</span>, has been elected president. It’s unlikely we’ll return to government under his leadership. Let’s hope he holds the line against the <span style="color: #7A3C00;">Nazis</span>—and abandons his dangerous taming strategy.
+残念ながら、名高い<span style="color: #808080;">反動主義者</span>であり<span style="color: #3E88B3;">国家主義者</span>でもあるクーノ・フォン・ヴェスタープが大統領に選出された。彼のもとで我々が政権へ復帰する可能性は低い。<span style="color: #7A3C00;">ナチ党</span>に対する一線を守り、危険な「飼い慣らし戦略」を放棄することを願おう。

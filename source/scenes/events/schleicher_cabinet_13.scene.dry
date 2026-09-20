@@ -1,5 +1,5 @@
-title: Schleicher's Turn to Play
-subtitle: Will the general hold firm?
+title: シュライヒャーの番
+subtitle: 将軍は強硬姿勢を貫くのか？
 view-if: chancellor == "Schleicher" and kpd_explode and schleicher_fight
 max-visits: 1
 new-page: true
@@ -8,7 +8,7 @@ tags: event
 face-image: img/portraits/schleicher_cool.jpg
 go-to: reichstag
 
-= Schleicher's Turn to Play
+= シュライヒャーの番
 
 @reichstag
 on-arrival: {!
@@ -55,9 +55,9 @@ for (var party of Q.parties) {
 !}
 go-to: reichstag_diagram
 
-In defiance of the illegal adjournment of the Reichstag, an alternative assembly has been convened. The parties participating are determined by their ties to us and their role in the ongoing demonstrations.
+国会の違法な休会に抗議し、代替議会が召集された。参加政党は、我々との関係と進行中のデモで果たした役割によって決まる。
 
-[? if kpd_r_alt: With most <span style="color: #700000;">**KPD**</span> deputies imprisoned, substitute representatives have been appointed to fill their seats. ?]
+[? if kpd_r_alt: <span style="color: #700000;">**KPD**</span>議員の大半が投獄されているため、その議席を埋める代理代表が任命された。?]
 
 @reichstag_diagram
 on-display: {!
@@ -115,8 +115,8 @@ if (Q.lvp_r_alt && Q.lvp_formed) {
 
 data = data.concat([{
         "id": "z",
-        "legend": "Center",
-        "name": "Center",
+        "legend": "中央党",
+        "name": "中央党",
         "seats": Math.round(Q.z_r_alt * 2),
     }
 ]);
@@ -142,8 +142,8 @@ if (Q.dnef_r_alt && Q.dnef_formed) {
 if (Q.other_r_alt) {
     data.push({
         "id": "other",
-        "legend": "Other",
-        "name": "Other",
+        "legend": "その他",
+        "name": "その他",
         "seats": Math.round(Q.other_r_alt * 2),
     });
 }
@@ -228,7 +228,7 @@ if (window && d3) {
 !}
 go-to: negotiation_menu_med if spd_med; negotiation_menu_win if spd_win
 
-= Reichstag composition
+= 国会の構成
 
 {!<svg id="alt_reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -244,7 +244,7 @@ go-to: negotiation_menu_med if spd_med; negotiation_menu_win if spd_win
 
 [? if not lvp_formed and dvp_exist and dvp_dnef and dvp_r_alt: {!<tr><td><div class="box2" style='background-color:#AA861F'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r_alt +]% {!</td></tr>!} ?]
 
-[? if other_dnef and other_r_alt: {!<tr><td><div class="box2" style='background-color:#707070'> </div></td><td>!} Others: {!</td><td>!} [+ other_r_alt +]% {!</td></tr>!} ?]
+[? if other_dnef and other_r_alt: {!<tr><td><div class="box2" style='background-color:#707070'> </div></td><td>!} その他: {!</td><td>!} [+ other_r_alt +]% {!</td></tr>!} ?]
 
 [? if kvp_formed and not cvp_kvp_formed and kvp_dnef and kvp_r_alt: {!<tr><td><div class="box2" style='background-color:#0072C0'> </div></td><td>!} KVP: {!</td><td>!} [+ kvp_r_alt +]% {!</td></tr>!} ?]
 
@@ -266,7 +266,7 @@ go-to: negotiation_menu_med if spd_med; negotiation_menu_win if spd_win
 
 [? if not lvp_formed and dvp_exist and not dvp_dnef and dvp_r_alt: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r_alt +]% {!</td></tr>!} ?]
 
-[? if not other_dnef and other_r_alt: {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r_alt +]% {!</td></tr>!} ?]
+[? if not other_dnef and other_r_alt: {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} その他の政党: {!</td><td>!} [+ other_r_alt +]% {!</td></tr>!} ?]
 
 [? if kvp_formed and not cvp_kvp_formed and not kvp_dnef and kvp_r_alt: {!<tr><td><div class="box" style='background-color:#0087DC'> </div></td><td>!} KVP: {!</td><td>!} [+ kvp_r_alt +]% {!</td></tr>!} ?]
 
@@ -283,16 +283,16 @@ go-to: negotiation_menu_med if spd_med; negotiation_menu_win if spd_win
 [? if nvf_exist and nvf_r_alt and not nvf_dnef: {!<tr><td><div class="box" style='background-color:#142e20'> </div></td><td>!} NVF: {!</td><td>!} [+ nvf_r_alt +]% {!</td></tr>!} ?]
 {!</table>!}
 
-Total: [+ total_r_alt_2 +]% of the original Reichstag involved.
+合計：元の国会の[+ total_r_alt_2 +]%が参加。
 
-We have leverage, and we should use it to extract concessions. No one wants civil war.
+我々には交渉力があり、譲歩を引き出すために使うべきだ。誰も内戦を望んではいない。
 
 @negotiation_menu_med
 
 - @reichstag_reconvene
 - @rights
 - @schemes
-- @civil_war: Screw this! A civil war is necessary after all.
+- @civil_war: もうたくさんだ！　やはり内戦が必要である。
 
 @negotiation_menu_win
 
@@ -300,11 +300,11 @@ We have leverage, and we should use it to extract concessions. No one wants civi
 - @rights
 - @schemes
 - @democracy
-- @civil_war: Screw this! A civil war is necessary after all.
+- @civil_war: もうたくさんだ！　やはり内戦が必要である。
 
 @reichstag_reconvene
-title: Demand a reconvening of the Reichstag, with no dirty tricks this time.
-subtitle:[? if reichstag_fire_decree_schleicher: Different building, of course.?]
+title: 今度は小細工なしで国会を再開するよう要求する。
+subtitle:[? if reichstag_fire_decree_schleicher: もちろん別の建物で。?]
 on-arrival: {!
 Q.schleicher_post_protests = 1;
 Q.reichstag_break = 0;
@@ -336,15 +336,15 @@ if (Q.pro_republic < 20) Q.pro_republic = 20;
 Q.pro_republic += 10;
 !}
 
-With our limited leverage, we are only able to negotiate the reconvening of the Reichstag. Schleicher has promised not to impede the chamber's right to assemble when it sees fit. The emergency restrictions on the free press and some political meetings have been lifted.
+限られた交渉力では、国会の再開しか取りつけられなかった。シュライヒャーは、国会が適切と判断した時に集会する権利を妨げないと約束した。報道の自由と一部の政治集会に対する緊急制限は解除された。
 
-This is a disappointing outcome, but perhaps a vote of no confidence and new elections could turn the tide. After all, we will be able to harness the significant enthusiasm shown by the people in defiance of dictatorship.
+失望すべき結果だが、不信任決議と新選挙によって流れを変えられるかもしれない。何しろ、独裁への抵抗で国民が示した大きな熱意を活用できる。
 
-The Reichstag will convene on [+ next_reichstag_month : month +] [+ next_reichstag_year +], Week [+ next_reichstag_week +].
+国会は[+ next_reichstag_year +]年[+ next_reichstag_month : month +]（第[+ next_reichstag_week +]週）に開会する。
 
 @rights
-title: Demand the above, and [? if not reichstag_fire_decree_schleicher: also guarantees for democratic rights?][? if reichstag_fire_decree_schleicher: a repeal of the Reichstag Fire Decree?].
-unavailable-subtitle: Not enough leverage.
+title: 上記に加え、[? if not reichstag_fire_decree_schleicher: 民主的権利の保障?][? if reichstag_fire_decree_schleicher: 国会議事堂放火事件令の撤廃?]も要求する。
+unavailable-subtitle: 交渉力が足りない。
 choose-if: spd_win and total_r_alt_2 >= 35
 on-arrival: {!
 Q.schleicher_post_protests = 1;
@@ -405,16 +405,16 @@ Q.hindenburg_schleicher_r -= 1;
 Q.schleicher_strength -= 1;
 !}
 
-With our limited leverage, we have managed to negotiate the reconvening of the Reichstag, with Schleicher promising not to obstruct the chamber's right to assemble as it sees fit. Furthermore, we secured an agreement that his government will not infringe upon the people's right to organize peacefully or on the freedom of the press, with Schleicher lifting all emergency restrictions. [? if reichstag_fire_decree_schleicher: This includes the repeal of the Reichstag Fire Decree. ?]
+限られた交渉力ながら国会の再開を取りつけ、シュライヒャーは国会が適切と判断した時に集会する権利を妨げないと約束した。さらに、国民が平和的に結社する権利と報道の自由を政権が侵害しないとの合意を得て、シュライヒャーはすべての緊急制限を解除した。[? if reichstag_fire_decree_schleicher: これには国会議事堂放火事件令の撤廃も含まれる。?]
 
-This is a disappointing outcome for all our efforts, but perhaps a vote of no confidence and new elections could turn the tide. After all, we can harness the significant public enthusiasm shown in defiance of dictatorship, and we need not fear further democratic backsliding—so long as Schleicher keeps his word.
+我々の努力に対しては失望すべき結果だが、不信任決議と新選挙によって流れを変えられるかもしれない。独裁への抵抗で国民が示した大きな熱意を活用でき、シュライヒャーが約束を守る限り、これ以上の民主主義の後退を恐れる必要もない。
 
-The Reichstag will convene on [+ next_reichstag_month : month +] [+ next_reichstag_year +], Week [+ next_reichstag_week +].
+国会は[+ next_reichstag_year +]年[+ next_reichstag_month : month +]（第[+ next_reichstag_week +]週）に開会する。
 
 @schemes
-title: Demand the above, and also guarantees for the continued independence of political organizations.
-subtitle: Including the <span style="color: #700000;">**KPD**</span>.
-unavailable-subtitle: [? if not spd_win or total_r_alt_2 < 50: Not enough leverage. ?][? if pro_republic < 50 and weimar_votes < 45 or reichstag_fire_decree_schleicher: Schleicher is dead-set on banning the <span style="color: #700000;">Communists</span>. ?]
+title: 上記に加え、政治組織が引き続き独立を保つことの保障も要求する。
+subtitle: <span style="color: #700000;">**KPD**</span>も含む。
+unavailable-subtitle: [? if not spd_win or total_r_alt_2 < 50: 交渉力が足りない。?][? if pro_republic < 50 and weimar_votes < 45 or reichstag_fire_decree_schleicher: シュライヒャーは<span style="color: #700000;">共産主義者</span>の禁止を固く決意している。?]
 view-if: dnef_formed
 choose-if: spd_win and (pro_republic >= 50 or weimar_votes >= 45) and total_r_alt_2 >= 50 and not reichstag_fire_decree_schleicher
 on-arrival: {!
@@ -494,18 +494,18 @@ Q.schleicher_strength -= 1;
 !}
 achievement: getrennt_marschieren_vereint_schlagen
 
-With our leverage, we have negotiated the reconvening of the Reichstag, with Schleicher promising not to obstruct the chamber's right to assemble as it sees fit. Furthermore, we secured an agreement that his government will not infringe upon the people's right to organize peacefully or on the freedom of the press, with all emergency restrictions lifted.
+我々の交渉力によって国会の再開を取りつけ、シュライヒャーは国会が適切と判断した時に集会する権利を妨げないと約束した。さらに、国民が平和的に結社する権利と報道の自由を政権が侵害しないとの合意を得て、すべての緊急制限が解除された。
 
-The most controversial concession was the lifting of the ban on the <span style="color: #700000;">**KPD**</span>[? if sapd_formed: and <span style="color: #9B0000;">**SAPD**</span>?], a major retreat and an open sign of Schleicher's defeat. Although expectedly, the <span style="color: #700000;">**RFB**</span> remains banned.
+最も物議を醸した譲歩は、<span style="color: #700000;">**KPD**</span>[? if sapd_formed:と<span style="color: #9B0000;">**SAPD**</span>?]への禁止解除である。これは大幅な後退であり、シュライヒャーの敗北を公然と示している。ただし予想どおり、<span style="color: #700000;">**RFB**</span>への禁止は維持された。
 
-President Hindenburg, along with the <span style="color: #C0A054;">industrialists</span> and <span style="color: #3E88B3;">nationalists</span>, have now completely lost confidence in the chancellor. A vote of no confidence and new elections are expected. We can harness the significant public enthusiasm shown in defiance of dictatorship and need not fear further democratic backsliding—so long as Schleicher keeps his word.
+ヒンデンブルク大統領、<span style="color: #C0A054;">産業家</span>、<span style="color: #3E88B3;">国家主義者</span>は、今や首相への信頼を完全に失った。不信任決議と新選挙が予想される。独裁への抵抗で国民が示した大きな熱意を活用でき、シュライヒャーが約束を守る限り、これ以上の民主主義の後退を恐れる必要もない。
 
-The Reichstag will convene on [+ next_reichstag_month : month +] [+ next_reichstag_year +], Week [+ next_reichstag_week +].
+国会は[+ next_reichstag_year +]年[+ next_reichstag_month : month +]（第[+ next_reichstag_week +]週）に開会する。
 
 @democracy
-title: Demand the above, and Schleicher's resignation.
-unavailable-subtitle: Not enough leverage.
+title: 上記に加え、シュライヒャーの辞任を要求する。
+unavailable-subtitle: 交渉力が足りない。
 choose-if: super_secret_mode
 on-arrival: dataminer_detected = 1; ip_grabber = 1
 
-Lol.
+笑止。

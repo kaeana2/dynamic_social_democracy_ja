@@ -1,5 +1,5 @@
-title: Schleicher and the Industrialists
-subtitle: The most powerful men in Germany are brought into the fold.
+title: シュライヒャーと実業界
+subtitle: ドイツで最も強大な男たちが取り込まれる。
 view-if: chancellor = "Schleicher" and dnef_formed and industrialists_schleicher >= 10
 new-page: true
 priority: 2
@@ -18,13 +18,13 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Schleicher and the Industrialists
+= シュライヒャーと実業界
 
-The German industrialists and big business leaders have maintained a friendly stance toward Schleicher, appreciating his prioritization of their interests over those of the agrarians and his efforts to stabilize the economy. However, concerns linger over his growing state intervention and the risk that his public works campaign could trigger runaway inflation.
+ドイツの実業家や大企業の経営者は、シュライヒャーに友好的な態度を保ってきた。農業勢力よりも自分たちの利益を優先し、経済の安定化に努めている点を評価している。しかし国家の介入拡大や、公共事業運動が歯止めの利かないインフレを引き起こす危険への懸念は残る。
 
-To address this, Schleicher has summoned a secret meeting with his allies and Germany’s leading industrialists. He will offer sweeping concessions: a guarantee of capitalism’s preservation and their continued dominance over labor within a corporatist framework. In return, they are expected to pool their resources for unrestricted use by the <span style="color: #BFC8CC;">**DNEF**</span>.
+これに対処するため、シュライヒャーは盟友とドイツの有力実業家を秘密会合に招いた。資本主義の維持と、協調組合主義の枠組みの中で労働側に対する優位を保つことを保証するという、大幅な譲歩を示すつもりだ。見返りとして、実業界は資金を持ち寄り、<span style="color: #BFC8CC;">**DNEF**</span>が自由に使えるようにすることを求められる。
 
-- @schleicher_2: The <span style="color: #C0A054;">industrialists</span> are granted their place in the new order.
+- @schleicher_2: <span style="color: #C0A054;">実業界</span>は新秩序における地位を与えられる。
 
 @schleicher_2
 on-arrival: {!
@@ -43,4 +43,4 @@ Q.unemployed_dnef -= 4;
 Q.dnef_relation -= 10;
 !}
 
-Schleicher continues to walk a tightrope between appeasing organized labor and retaining the favor of Germany’s industrial elite. Nonetheless, the <span style="color: #BFC8CC;">**DNEF**</span> secures over five million marks in funding from a consortium of German businesses—chiefly those tied to rearmament, who see Schleicher’s survival as essential to their own profits.
+シュライヒャーは、組織労働者をなだめることと、ドイツの産業界の有力者の支持を保つことの間で、綱渡りを続けている。それでも<span style="color: #BFC8CC;">**DNEF**</span>は、ドイツ企業の共同出資により500万マルクを超える資金を確保した。主な出資者は、シュライヒャーの存続を自らの利益に不可欠と考える再軍備関連企業である。

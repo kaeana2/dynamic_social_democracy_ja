@@ -1,5 +1,5 @@
-title: Hindenburg's Announcement
-subtitle: The President is to announce whether or not he will run again.
+title: ヒンデンブルクの声明
+subtitle: 大統領が再選出馬の可否を発表する。
 new-page: true
 on-arrival: {!
 Q.the_decision_2010 = 1;
@@ -53,36 +53,36 @@ priority: 2
 max-visits: 1
 
 
-= Hindenburg's Announcement
+= ヒンデンブルクの声明
 
-President Hindenburg has expressed his reluctance to run for re-election. At 84 years old, he prefers to spend his remaining years in retirement free from the burdens of his high office. While he has been open to serving longer if his term were extended by the Reichstag, the failure of those efforts, combined with his unwillingness to endure a grueling presidential campaign, has caused concern, particularly for Kurt von Schleicher[? if bruning_toleration_time: and Chancellor [+ chancellor +], on whom he depends to enact his decrees?].
+ヒンデンブルク大統領は再選出馬に消極的な姿勢を示している。84歳となった彼は、重職の負担から解放され、余生を隠退して過ごすことを望んでいる。国会が任期を延長するなら続投する用意はあったものの、その試みは失敗し、過酷な大統領選挙運動にも耐えたくないと考えている。これは、とりわけクルト・フォン・シュライヒャー[? if bruning_toleration_time: と、大統領令の発布を彼に頼る[+ chancellor +]首相?]を不安にさせた。
 
-Heinrich Sahm, the Mayor of Berlin, has formed a re-election committee to persuade Hindenburg to run again. This effort has included the collection of over [+ hindenburg_signatures +] million signatures and appeals from a wide array of figures and political parties across German society, including Artur Mahraun of the Young German Order, and controversial former Defense Ministers Otto Gessler and Gustav Noske.
+ベルリン市長ハインリヒ・ザームは、ヒンデンブルクに再出馬を促す再選委員会を結成した。この運動では[+ hindenburg_signatures +]百万人を超える署名が集まり、青年ドイツ騎士団のアルトゥール・マーラウン、毀誉褒貶のある元国防相オットー・ゲスラーとグスタフ・ノスケをはじめ、ドイツ社会の幅広い人物と政党が出馬を要請している。
 
-Impressed by the public support, Hindenburg is reconsidering his decision but insists that his candidacy must be backed by the German Right and veteran organizations rather than the German Left and Center. [? if not hitler_deported: Hitler?][? if hitler_deported: Goebbels?], Hugenberg, their parties, and the <span style="color: #3E88B3;">**Stahlhelm**</span>—aligned with the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span>—have demanded concessions in exchange for their support, despite the <span style="color: #3E88B3;">**Stahlhelm**</span>'s general friendliness toward Hindenburg and its belief that he is one of their own. However, Hindenburg sees these demands as an affront to his personal honor and refuses to tie his candidacy to the dismissal of the current government or the appointment of Hugenberg and Hitler.
+国民の支持に心を動かされたヒンデンブルクは決断を再考しているが、自らの立候補はドイツの左派や中道ではなく、右翼と退役軍人団体に支えられねばならないと固執している。[? if not hitler_deported: ヒトラー?][? if hitler_deported: ゲッベルス?]、フーゲンベルク、両者の政党、そして<span style="color: #7A3C00;">国民的</span><span style="color: #3E88B3;">反対派</span>に加わる<span style="color: #3E88B3;">**鉄兜団**</span>は、支持の見返りに譲歩を要求した。<span style="color: #3E88B3;">**鉄兜団**</span>は概してヒンデンブルクに友好的で、彼を自分たちの同志とみなしているにもかかわらずである。しかしヒンデンブルクは、こうした要求を自らの名誉への侮辱と受け止め、現政権の罷免やフーゲンベルクとヒトラーの入閣を立候補の条件とすることを拒んでいる。
 
 - @hindenburg_drop_out
 - @hindenburg_running
 
 @hindenburg_drop_out
-title: We await his decision.
+title: 彼の決断を待つ。
 view-if: not hindenburg_run
 
-President Hindenburg has decided not to run for re-election, citing his health problems and old age as the primary reasons. He feels that the current national situation doesn't warrant a reelection campaign.
+ヒンデンブルク大統領は、健康問題と高齢を主な理由として再選に立候補しないと決めた。現在の国内情勢は、再選運動に臨むほどのものではないと考えている。
 
-This development could be either beneficial or detrimental to us. If we wanted to rally behind Hindenburg to oppose Hitler and the <span style="color: #7A3C00;">Nazis</span>, the absence of a unifying, widely supported national figure—one capable of garnering support from both the moderate left and right—leaves us at a disadvantage. On the other hand, if we decide to run a candidate of our own, the lack of someone with Hindenburg's charisma could make it easier for us to secure a victory.
+この展開は我々にとって有利にも不利にもなりうる。ヒトラーと<span style="color: #7A3C00;">ナチ</span>に対抗するためヒンデンブルクのもとへ結集するつもりだったなら、穏健左派と穏健右派の双方から支持を集められる、広範な国民的人物を失ったことは不利に働く。一方、独自候補を立てるなら、ヒンデンブルクほどの威信を持つ人物がいないことで勝利は容易になるかもしれない。
 
-The absence of a candidate for the German middle and moderate right to rally behind creates a vacuum, which will likely be filled as other parties announce their candidates in the near future.
+ドイツの中道と穏健右派が結集できる候補者の不在は空白を生み出した。各党が近く候補者を発表するにつれ、この空白も埋められていくだろう。
 
-- @presidential_election_1932_candidate: Who will the candidates be now that Hindenburg is retiring?
+- @presidential_election_1932_candidate: ヒンデンブルクが引退する今、誰が候補者となるのか？
 
 @hindenburg_running
-title: We await his decision.
+title: 彼の決断を待つ。
 view-if: hindenburg_run
 on-arrival: new_middle_kvp += 4; old_middle_kvp += 4; rural_kvp += 2
 
-[? if dnvp_ideology == "Moderate": The break of the <span style="color: #3E88B3;">**Stahlhelm**</span> from the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span> to endorse Hindenburg's candidacy, combined with the unconditional support of the Kyffhäuser League, has given Hindenburg the motivation to run for re-election. He is now convinced that his primary source of support will come from the right.?][? if dnvp_ideology == "Radical": Despite Hindenburg rejecting the demands of the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span>, he still (incorrectly) believes that the friendly leadership of the <span style="color: #3E88B3;">**Stahlhelm**</span>, despite his rejection of their demands, would unconditionally support him. Together with the unconditional backing of the Kyffhäuser League, this has given Hindenburg the motivation to run for re-election, convinced his primary support would come from the right.?] Of course, a multitude of other factors contributed, including the signature campaign and Schleicher's persistence.
+[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**鉄兜団**</span>が<span style="color: #7A3C00;">国民的</span><span style="color: #003755;">反対派</span>から離脱してヒンデンブルク支持を表明し、キフホイザー連盟も無条件の支持を与えたことで、ヒンデンブルクは再選出馬を決意した。今や彼は、支持の主力が右翼から来ると確信している。?][? if dnvp_ideology == "Radical": ヒンデンブルクは<span style="color: #7A3C00;">国民的</span><span style="color: #3E88B3;">反対派</span>の要求を拒絶したにもかかわらず、友好的な<span style="color: #3E88B3;">**鉄兜団**</span>指導部なら無条件で自分を支持すると、なおも誤って信じている。キフホイザー連盟も無条件の支持を与えたことで、ヒンデンブルクは支持の主力が右翼から来ると確信し、再選出馬を決意した。?]もちろん、署名運動やシュライヒャーの粘り強い説得をはじめ、ほかにも多くの要因が寄与している。
 
-The Sahm committee for Hindenburg's re-election has been dissolved and replaced by a much larger, national "United Hindenburg Committees" organization, which will work in coordination with the various local Hindenburg committees across the country. With the appointment of Westarp and Gereke to top positions, and the exclusion of <span style="color: #c00000;">socialist</span> and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] politicians, they are attempting to position Hindenburg as the candidate of the moderate right.
+ヒンデンブルク再選のためのザーム委員会は解散され、はるかに大規模な全国組織「ヒンデンブルク統一委員会」へ改組された。同組織は全国各地のヒンデンブルク委員会と連携して活動する。ヴェスタープとゲレケを幹部に据え、<span style="color: #c00000;">社会主義者</span>と[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の政治家を排除することで、ヒンデンブルクを穏健右派の候補として位置づけようとしている。
 
-- @presidential_election_1932_candidate: Who will the candidates be now that Hindenburg has decided to run for re-election?
+- @presidential_election_1932_candidate: ヒンデンブルクが再選出馬を決めた今、誰が候補者となるのか？

@@ -1,18 +1,18 @@
-title: Deficit Spending
-subtitle: This goes against our coalition agreement with the <span style="color: #000000;">**[+ z_party_name +]**</span>...
+title: 赤字財政
+subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span>との連立協定に反する……
 new-page: true
 on-arrival: z_relation -= 8; hindenburg_angry += 20; coalition_dissent += 2; cvp_economy_accepted_time = time + 3
 view-if: spd_in_government and in_social_catholic_coalition and cvp_formed and cvp_economy_accepted and budget < 0 and time >= cvp_economy_accepted_time
 tags: event
 
-= Deficit Spending
+= 赤字財政
 
-During the coalition formation process, we've promised the <span style="color: #000000;">**[+ z_party_name +]**</span> to maintain a budgetary surplus at all times. We've failed.
+連立交渉で、我々は<span style="color: #000000;">**[+ z_party_name +]**</span>に常に財政黒字を維持すると約束した。その約束を守れなかった。
 
-[? if coalition_dissent < 3: The <span style="color: #000000;">**[+ z_party_name +]**</span> have given us more time, as they still believe that we'll follow through on our promises. ?][? if coalition_dissent >= 3: The <span style="color: #000000;">**[+ z_party_name +]**</span> have called a vote of no confidence against us. ?]
+[? if coalition_dissent < 3: <span style="color: #000000;">**[+ z_party_name +]**</span>は、我々が約束を果たすとまだ信じており、猶予を与えた。?][? if coalition_dissent >= 3: <span style="color: #000000;">**[+ z_party_name +]**</span>は、我々に対する不信任投票を求めた。?]
 
-- @careful: Ouch.
+- @careful: これは痛い。
 
 @careful
 
-We should be more careful next time.
+次はもっと慎重にすべきである。

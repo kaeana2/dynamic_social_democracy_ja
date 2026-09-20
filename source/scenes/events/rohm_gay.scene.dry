@@ -1,5 +1,5 @@
-title: <span style="color: #7A3C00;">**SA**</span> Leader Ernst Röhm's <span style="color: red;">Ho</span><span style="color: orange;">mo</span><span style="color: yellow;">se</span><span style="color: green;">xu</span><span style="color: blue;">al</span><span style="color: purple;">ity</span> Exposed
-subtitle: The Prussian Ministry of the Interior uncovers shocking revelations about the <span style="color: #7A3C00;">Nazi</span> leader...
+title: <span style="color: #7A3C00;">**SA**</span>指導者エルンスト・レームの<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">が</span><span style="color: blue;">発</span><span style="color: purple;">覚</span>
+subtitle: プロイセン内務省が<span style="color: #7A3C00;">ナチ</span>指導者に関する衝撃的事実を暴く……
 view-if: year == 1932 and month == 3 and not hindenburg_term_extended and spd_prussia and not repealed_175
 priority: 3
 max-visits: 1
@@ -8,44 +8,44 @@ new-page: true
 on-arrival: nazi_urgency += 1
 face-image: img/portraits/rohm.jpg
 
-= <span style="color: #7A3C00;">**SA**</span> Leader Ernst Röhm's <span style="color: red;">Ho</span><span style="color: orange;">mo</span><span style="color: yellow;">se</span><span style="color: green;">xu</span><span style="color: blue;">al</span><span style="color: purple;">ity</span> Exposed
+= <span style="color: #7A3C00;">**SA**</span>指導者エルンスト・レームの<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">が</span><span style="color: blue;">発</span><span style="color: purple;">覚</span>
 
-Wilhelm Abegg from the Prussian Ministry of the Interior has approached the <span style="color: #c00000;">**SPD**</span> and informed us about three letters written by <span style="color: #7A3C00;">**SA**</span> leader Ernst Röhm to Berlin nerve specialist Karl-Günther Heimsoth during his self-imposed exile in Bolivia. These letters, confiscated by the Prussian state police, are notable not for their political content but for Röhm’s candid discussions about his <span style="color: red;">ho</span><span style="color: orange;">mo</span><span style="color: yellow;">se</span><span style="color: green;">xu</span><span style="color: blue;">al</span><span style="color: purple;">ity</span>—potentially exposing him to legal action.
+プロイセン内務省のヴィルヘルム・アベックが<span style="color: #c00000;">**SPD**</span>に接触し、<span style="color: #7A3C00;">**SA**</span>指導者エルンスト・レームがボリビアで自主亡命していた時期に、ベルリンの神経科医カール＝ギュンター・ハイムゾートへ送った3通の手紙について知らせてきた。プロイセン州警察が押収したこれらの手紙が注目されるのは、政治的内容のためではない。レームが自らの<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">に</span><span style="color: blue;">つ</span><span style="color: purple;">いて</span>率直に語っており、法的追及につながりうるためである。
 
-Röhm has never concealed his <span style="color: red;">ho</span><span style="color: orange;">mo</span><span style="color: yellow;">se</span><span style="color: green;">xu</span><span style="color: blue;">al</span><span style="color: purple;">ity</span>, and Hitler has never taken offense at it. Despite Röhm facing multiple prosecutions under Paragraph 175 in the past, none have been successful. However, this time we now have definitive proof.
+レームは自らが<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span><span style="color: blue;">で</span><span style="color: purple;">ある</span>ことを隠さず、ヒトラーもそれを問題視してこなかった。レームは過去にも刑法175条に基づき何度か訴追されたが、いずれも有罪には至らなかった。しかし今度は決定的な証拠がある。
 
-What shall be our next move regarding these letters?
+これらの手紙をどう扱うべきだろうか？
 
-> *"We oppose the disgraceful Paragraph 175 wherever we can; therefore we must not join the choir of those among us who want to banish a man from society because he is homosexual".*
+> *「我々は、恥ずべき刑法175条に可能な限り反対する。それゆえ、同性愛者であるという理由で一人の人間を社会から追放しようとする者たちの合唱に、我々が加わるべきではない」*
 
- - Die Weltbühne, German weekly magazine
+― ドイツの週刊誌『ディ・ヴェルトビューネ』
 
-- @expose_rohm: We will publish the letters, as the revelation of such a high-ranking <span style="color: #7A3C00;">Nazi</span> official being <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> will undoubtedly harm their appeal among core demographics.
-- @no_expose_rohm: The <span style="color: #c00000;">**SPD**</span> is nominally in favor of <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> rights, and it would be in poor taste to expose such a personal matter.
+- @expose_rohm: 手紙を公表する。<span style="color: #7A3C00;">ナチ</span>の高級幹部が<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span><span style="color: blue;">で</span><span style="color: purple;">ある</span>との暴露は、中核支持層への訴求力を確実に損なうだろう。
+- @no_expose_rohm: <span style="color: #c00000;">**SPD**</span>は曲がりなりにも<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span><span style="color: blue;">の</span><span style="color: purple;">権利</span>を支持している。これほど私的な事柄を暴くのは品位に欠ける。
 
 @expose_rohm
 on-arrival: hindenburg_angry_bruning -= 10; old_middle_nsdap -= 2; rural_nsdap -= 2; catholics_nsdap -= 2; new_middle_spd -= 0.01; z_relation += 3; left_dissent += 5
 
-We have published the Röhm letters under the title *Der Fall Röhm* (The Röhm Affair), distributing the pamphlet across all corners of Germany. This has damaged the <span style="color: #7A3C00;">Nazi</span> Party’s appeal among its more socially reactionary supporters and has even sparked a plot among some <span style="color: #7A3C00;">Nazi</span> members to murder Röhm.
+我々はレームの手紙を『レーム事件』と題して公表し、ドイツ全土で小冊子を配布した。これにより、<span style="color: #7A3C00;">ナチ</span>党は社会的により反動的な支持者への訴求力を失い、一部の<span style="color: #7A3C00;">ナチ</span>党員の間ではレーム暗殺計画すら持ち上がった。
 
-The pamphlet argues that a party tolerating <span style="color: red;">ho</span><span style="color: orange;">mo</span><span style="color: yellow;">se</span><span style="color: green;">xu</span><span style="color: blue;">al</span><span style="color: purple;">ity</span> at its highest levels must seek to "poison the people and destroy its moral strength." It warns that this would lead to Germany’s decline, akin to the fall of ancient Rome, and claims that by keeping Röhm in power, the Nazis are complicit in "knowingly and intentionally furthering the seduction of German youths into becoming <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> minions."
+小冊子は、最高幹部の<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">を</span><span style="color: blue;">容</span><span style="color: purple;">認</span>する党は「国民に毒を盛り、その道徳的活力を破壊」しようとしているに違いないと論じた。そして古代ローマの滅亡と同じくドイツを衰退へ導くと警告し、レームを権力の座にとどめるナチは「ドイツ青年を誘惑して<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span><span style="color: blue;">の</span><span style="color: purple;">手先</span>にすることを、意識的かつ意図的に助長」していると主張した。
 
-Despite this, Hitler has swiftly come to Röhm’s defense, publicly reaffirming his position as leader of the <span style="color: #7A3C00;">**SA**</span>. The electoral performance of the <span style="color: #7A3C00;">Nazis</span> remains largely unaffected, but the impression this controversy leaves on President Hindenburg may yet prove significant.
+それでもヒトラーは直ちにレームを擁護し、<span style="color: #7A3C00;">**SA**</span>指導者としての地位を公然と再確認した。<span style="color: #7A3C00;">ナチ</span>の選挙成績はほとんど影響を受けていないが、この騒動がヒンデンブルク大統領に残す印象は、なお重大な意味を持ちうる。
 
-Meanwhile, the pamphlet’s publisher, Helmuth Klotz, has been brutally beaten by <span style="color: #7A3C00;">Nazi</span> deputies inside the Reichstag building as an act of revenge—an event that has overshadowed the scandal itself.
+一方、小冊子の発行者ヘルムート・クロッツは報復として国会議事堂内で<span style="color: #7A3C00;">ナチ</span>議員から残忍な暴行を受け、この事件が醜聞そのものを霞ませた。
 
-- @persecute_rohm: Attempt to persecute Röhm! <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> acts are prohibited by Paragraph 175, allowing us to open up legal action against him.
+- @persecute_rohm: レームの訴追を試みる！　刑法175条は<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">間</span><span style="color: green;">の</span><span style="color: blue;">性</span><span style="color: purple;">行為</span>を禁じており、彼に対する法的手続きを開始できる。
 
 @no_expose_rohm
 on-arrival: old_middle_nsdap -= 2; left_dissent -= 5; wholesome_point += 1; rohm_join_rb_time = time + 6
 
-It would be in poor taste for a party advocating for <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> rights to attack someone for being gay. We’ve taken the high road, but many within our party feel we’ve missed an opportunity.
+<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span><span style="color: blue;">の</span><span style="color: purple;">権利</span>を擁護する政党が、同性愛者であることを理由に誰かを攻撃するのは品位に欠ける。我々は節度ある道を選んだが、党内には好機を逃したと感じる者も多い。
 
 @persecute_rohm
-unavailable-subtitle: Despite the widespread distaste for <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span>, the judiciary is too reactionary to be able to convict a top <span style="color: #7A3C00;">Nazi</span>.
+unavailable-subtitle: <span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">へ</span><span style="color: blue;">の</span><span style="color: purple;">嫌悪</span>は広く存在するが、司法は反動的すぎるため<span style="color: #7A3C00;">ナチ</span>高級幹部を有罪にできない。
 choose-if: judicial_reform >= 3
 on-arrival: rohm_explode = 1; new_middle_nsdap -= 2; old_middle_nsdap -= 4; rural_nsdap -= 2; catholics_nsdap -= 4; left_dissent += 3; sa_strength *= 0.9; hindenburg_angry_bruning -= 10
 
-With definitive proof of Röhm violating Paragraph 175, the law criminalizing <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">al</span> acts, we have been able to initiate legal action against him once more. Röhm is unable to deny the authenticity of the letters, and many have taken that as confirmation of their legitimacy.
+<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">間</span><span style="color: green;">の</span><span style="color: blue;">性</span><span style="color: purple;">行為</span>を犯罪とする刑法175条にレームが違反した決定的証拠を得たため、我々は彼に対する法的手続きを再び開始できた。レームは手紙が本物であることを否定できず、多くの者がそれを内容の真実性まで認めたものと受け取った。
 
-In the end, Röhm has been convicted under Paragraph 175 and sentenced to one year in prison. This has brought the scandal back into the spotlight, severely damaging the public perception of the <span style="color: #7A3C00;">**NSDAP**</span> and <span style="color: #7A3C00;">**SA**</span>.
+最終的にレームは刑法175条違反で有罪となり、禁錮1年を言い渡された。醜聞は再び世間の注目を集め、<span style="color: #7A3C00;">**NSDAP**</span>と<span style="color: #7A3C00;">**SA**</span>に対する世評を大きく傷つけた。

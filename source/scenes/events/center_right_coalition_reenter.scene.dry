@@ -1,19 +1,19 @@
-title: The <span style="color: #3E88B3;">**DNVP**</span> Rejoins Government
+title: <span style="color: #3E88B3;">**DNVP**</span>が政府に復帰する
 new-page: true
-subtitle: The center-right coalition is restored.
+subtitle: 中道右派連合が再建された。
 tags: event
 view-if: year = 1930 and young_plan_ratified and was_in_center_right_coalition and spd_toleration and dnvp_ideology == "Moderate" and center_right_coalition >= 50
 on-arrival: still_in_center_right_coalition = 1
 max-visits: 1
 
-= The <span style="color: #3E88B3;">**DNVP**</span> Rejoins Government
+= <span style="color: #3E88B3;">**DNVP**</span>が政府に復帰する
 
-The Young Plan has been ratified, and the controversy surrounding it has largely subsided, prompting the <span style="color: #3E88B3;">**DNVP**</span> to rejoin the cabinet it had previously abandoned. Their primary motivation for reentering the government is their fear of <span style="color: #c00000;">socialist</span> influence over Brüning's policies due to our toleration of Brüning’s administration. As a result, Brüning no longer depends on our votes.
+ヤング案が批准され、それをめぐる論争もおおむね沈静化したため、<span style="color: #3E88B3;">**DNVP**</span>は以前離脱した内閣へ復帰した。同党が政権へ戻った主な理由は、我々がブリューニング政権を閣外から支えたことで、その政策に<span style="color: #c00000;">社会主義</span>的影響が及ぶのを恐れたためである。これにより、ブリューニングはもはや我々の票に頼らずに済む。
 
 - @center_right_coalition
 
 @center_right_coalition
-title: The <span style="color: #3E88B3;">**DNVP**</span> replaces us in government.
+title: <span style="color: #3E88B3;">**DNVP**</span>が我々の政府の座を奪う。
 on-arrival: spd_toleration = 0; in_right_coalition = 0; in_center_right_coalition = 1
 
-There is nothing we can do. Well actually, you, the player, could've done something. Why did you do this?
+今となっては何もできない。いや、本当はプレイヤーである君にできたことがあったはずだ。なぜこうなった？

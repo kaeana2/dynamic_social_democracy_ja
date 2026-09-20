@@ -1,5 +1,5 @@
-title: Organized Labor Under Threat
-subtitle: Proposal for a united labor front between the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> unions.
+title: 脅かされる労働組合運動
+subtitle: <span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>労組による労働統一戦線の提案。
 view-if: chancellor = "Schleicher" and dnef_formed and schleicher_post_time >= 6
 new-page: true
 priority: 2
@@ -7,29 +7,29 @@ tags: event
 max-visits: 1
 face-image: img/beauty_of_labor.jpg
 
-= Organized Labor Under Threat
+= 脅かされる労働組合運動
 
-We have observed extensive infiltration of Schleicher's supporters into the leadership of the ADGB, the <span style="color: #000000;">Christian</span>, and <span style="color: #D3C24D;">liberal</span> trade unions—with the rank-and-file of all three even more inclined to back him.
+ADGB、<span style="color: #000000;">キリスト教系</span>、<span style="color: #D3C24D;">自由主義系</span>の各労組指導部に、シュライヒャー支持者が広く入り込んでいることが分かった。しかも三者とも、一般組合員は指導部以上に彼を支持する傾向がある。
 
-In response, a proposal for a united labor front—bringing together our ADGB, the <span style="color: #000000;">Christian</span> GcG formerly led by Stegerwald, and the <span style="color: #D3C24D;">Hirsch-Duncker</span> liberal unions under Ernst Lemmer—has been floated by figures like our Wilhelm Leuschner and the <span style="color: #000000;">Center</span>'s Jakob Kaiser.
+これを受け、我々のADGB、かつてシュテーガーヴァルトが率いた<span style="color: #000000;">キリスト教系</span>のGcG、エルンスト・レマー率いる<span style="color: #D3C24D;">ヒルシュ＝ドゥンカー</span>自由主義労組を結ぶ労働統一戦線の構想が浮上した。我が党のヴィルヘルム・ロイシュナーや<span style="color: #000000;">中央党</span>のヤーコプ・カイザーらが提唱している。
 
-The hope is that such unity will allow organized labor to resist coercion from Schleicher’s government and secure a stronger position within the corporatist order he has been promoting, should it come to that.
+結束すれば、労働組合運動はシュライヒャー政権の強制に抵抗でき、仮に彼が推進する協調組合主義的秩序が実現しても、その中でより強い立場を確保できるという期待がある。
 
-- @schleicher_2: A united labor front is formed!
-- @schleicher_3: Negotiations stall.
+- @schleicher_2: 労働統一戦線が成立！
+- @schleicher_3: 交渉が行き詰まる。
 
 @schleicher_2
-unavailable-subtitle: [? if schleicher_spd_influence >= 6: Schleicher uses his influence within the ADGB to block further negotiations. ?][? if labor_dissent >= 40 or unions_independent: Labor dissent is too high. ?][? if z_relation < 40 or (z_relation < 60 and z_in_gov): We lack the adequate relations with the <span style="color: #000000;">Center Party</span>. ?]
+unavailable-subtitle: [? if schleicher_spd_influence >= 6: シュライヒャーがADGB内の影響力を使い、交渉の進展を阻んでいる。?][? if labor_dissent >= 40 or unions_independent: 労働側の不満が強すぎる。?][? if z_relation < 40 or (z_relation < 60 and z_in_gov): <span style="color: #000000;">中央党</span>との関係が不十分だ。?]
 choose-if: schleicher_spd_influence < 6 and (z_relation >= 40 or (z_relation >= 60 and z_in_gov)) and labor_dissent < 40 and not unions_independent
 
-Negotiations have progressed, but one major obstacle remains: the ADGB’s continued commitment to <span style="color: #9B0000;">Marxism</span>, setting it apart from the other unions that now advocate for class collaboration. The question stands—do we stay silent on this point, for the sake of unity?
+交渉は進んだが、大きな障害が一つ残る。ADGBはなお<span style="color: #9B0000;">マルクス主義</span>を堅持し、今や階級協調を唱える他の労組と一線を画しているのだ。団結のため、この点には触れずにおくべきだろうか。
 
 - @schleicher_2_pro
-- @schleicher_3: Negotiations stall.
+- @schleicher_3: 交渉が行き詰まる。
 
 @schleicher_2_pro
-title: Go along with the <span style="color: #000000;">Center</span>'s proposal.
-unavailable-subtitle: Our party doesn't support this course of action.
+title: <span style="color: #000000;">中央党</span>の提案に同意する。
+unavailable-subtitle: 我が党はこの方針を支持していない。
 choose-if: labor_strength >= center_strength + left_strength
 on-arrival: {!
 Q.united_labor = 1
@@ -56,7 +56,7 @@ Q.unemployed_dnef -= 6;
 Q.unemployed_spd += 6;
 !}
 
-The unification of the labor unions has complicated Schleicher's efforts to divide and conquer, depriving him of the option to play the more moderate unions against the ADGB. We have also agreed to coordinate unified action in response to any offensive measures his government may attempt in the coming months.
+労組の統一により、シュライヒャーの分断統治は難しくなった。穏健な労組をADGBに対抗させる手段を失ったのだ。我々はまた、今後数か月の間に政府が攻撃的な措置を試みた場合、統一行動で応じることにも合意した。
 
 @schleicher_3
 on-arrival: {!
@@ -66,8 +66,8 @@ Q.workers_z -= 2;
 Q.workers_dnef += 2;
 !}
 
-Without coordination among the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> unions, Schleicher has moved quickly to strike separate deals with the more right-leaning organizations. The DHV, the conservative white-collar union, has been the first to pledge loyalty to the "new state," joined by the <span style="color: #D3C24D;">Hirsch-Duncker</span> unions—too marginal to wield real leverage anyway.
+<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>労組間の連携がないため、シュライヒャーは素早く動き、より右寄りの組織と個別に取引した。保守的なホワイトカラー労組DHVが真っ先に「新国家」への忠誠を誓い、<span style="color: #D3C24D;">ヒルシュ＝ドゥンカー</span>労組も続いた。後者はいずれにせよ、実効的な交渉力を持つには小さすぎる。
 
-The <span style="color: #000000;">Christian</span> unions have been cozying up to Schleicher for months[? if z_in_gov:, and Stegerwald's entry into government has only accelerated these talks of cooperation between his cabinet and the unionists.?][? if not z_in_gov:, though they remain broadly wary of Schleicher and his true intentions.?] Their advocacy for a "pluralistic" model, where unions retain formal autonomy within a corporatist Germany, has only made Schleicher’s task easier.
+<span style="color: #000000;">キリスト教系</span>労組は、数か月にわたりシュライヒャーへの接近を進めてきた[? if z_in_gov:。シュテーガーヴァルトの入閣は、内閣と労組の協力交渉をさらに加速させた。?][? if not z_in_gov:が、シュライヒャーとその真意への警戒は広く残っている。?]協調組合主義的なドイツの中でも労組の形式的な自治を保つ「多元的」モデルを唱えることが、かえってシュライヒャーの仕事を容易にしている。
 
-[? if schleicher_spd_influence >= 6: Schleicher has also been quietly cultivating allies within the ADGB itself. Voices calling for the rejection of <span style="color: #9B0000;">Marxism</span> and a break with the <span style="color: #c00000;">**SPD**</span> are growing louder by the day. Damn it. ?]
+[? if schleicher_spd_influence >= 6: シュライヒャーはADGB内部でも、ひそかに協力者を育ててきた。<span style="color: #9B0000;">マルクス主義</span>の放棄と<span style="color: #c00000;">**SPD**</span>との決別を求める声は、日ごとに大きくなっている。くそっ。?]

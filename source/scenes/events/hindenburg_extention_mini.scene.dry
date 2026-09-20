@@ -1,5 +1,5 @@
-title: Resolution to Extend Hindenburg's Term
-subtitle: The [+ chancellor +] cabinet attempts to push through an extension...
+title: ヒンデンブルク任期延長決議
+subtitle: [+ chancellor +]内閣が任期延長を強行しようとしている……
 new-page: true
 on-arrival: {!
 Q.hindenburg_extension_seen = 1;
@@ -11,25 +11,25 @@ priority: 10
 face-image: img/portraits/Hindenburg.jpg
 max-visits: 1
 
-= Resolution to Extend Hindenburg's Term
+= ヒンデンブルク任期延長決議
 
-The <span style="color: #7A3C00;">**NSDAP**</span> seeks to amend the constitution to extend Hindenburg’s term by two years. But with a two-thirds majority required, they may need our votes to pull it off.
+<span style="color: #7A3C00;">**NSDAP**</span>は憲法を改正し、ヒンデンブルクの任期を2年間延長しようとしている。しかし成立には3分の2の多数が必要であり、我々の票を必要とするかもしれない。
 
-After witnessing Hindenburg try to appoint [+ chancellor +] of all people, why in hell would we lift a finger to help him? The choice is obvious.
+よりによって[+ chancellor +]を首相に任命しようとしたヒンデンブルクを目の当たりにして、なぜ我々が彼を助けるために指一本動かすというのか。選択は明白である。
 
-- @oppose_resolution: We will vote against the resolution, insisting that an election be held in accordance with the constitution.
+- @oppose_resolution: 憲法に従って選挙を行うべきだと主張し、決議に反対する。
 
 @oppose_resolution
 go-to: hindenburg_extended if goerdeler_right_coalition + nsdap_r >= 66.6; hindenburg_failed if goerdeler_right_coalition + nsdap_r < 66.6
 
-Of course, we will oppose this undemocratic act—the people should decide whether Hindenburg receives another term or not. 
+当然、この非民主主義的行為には反対する。ヒンデンブルクに次の任期を与えるかどうかは、国民が決めるべきだ。
 
 @hindenburg_extended
 on-arrival: hindenburg_term_extended = 1
 
-Despite opposition from the <span style="color: #c00000;">left-wing</span> parties, the resolution passes with the support of all parties to our right[? if not lvp_formed:, except for the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if not z_in_gov_mini: and <span style="color: #000000;">Center Party</span>?]?][? if lvp_formed and not z_in_gov_mini: except for the <span style="color: #000000;">Center Party</span>?].
+<span style="color: #c00000;">左翼</span>諸党の反対にもかかわらず、我々より右に位置する全政党[? if not lvp_formed:（ただし<span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if not z_in_gov_mini:と<span style="color: #000000;">中央党</span>?]を除く）?][? if lvp_formed and not z_in_gov_mini:（ただし<span style="color: #000000;">中央党</span>を除く）?]の支持によって決議は可決された。
 
 @hindenburg_failed
 on-arrival: hindenburg_term_extended = 0
 
-We’ve successfully defeated the motion in the Reichstag—elections will be held! The result has also sown dissent within the governing coalition.
+国会で動議を退けることに成功した。選挙が行われる！　この結果は連立与党内にも不和の種をまいた。

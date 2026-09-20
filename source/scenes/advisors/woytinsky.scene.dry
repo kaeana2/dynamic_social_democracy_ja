@@ -1,41 +1,41 @@
-title: Wladimir Woytinsky
+title: ヴラジーミル・ヴォイティンスキー
 is-pinned-card: true
 tags: advisor, labor
 card-image: img/portraits/WoytinskyWladimir.jpg
 view-if: woytinsky_advisor = 1
 new-page: true 
 
-= Wladimir Woytinsky
+= ヴラジーミル・ヴォイティンスキー
 
-Wladimir Woytinsky is a Russian <span style="color: #D50032;">Menshevik</span> in exile, and the chief economist of the <span style="color: #c00000;">socialist</span> trade union federation. His primary idea is to use massive government spending as a way of stimulating demand to extricate us from the depression.
+ヴラジーミル・ヴォイティンスキーは亡命ロシア人<span style="color: #D50032;">メンシェヴィキ</span>であり、<span style="color: #c00000;">社会主義系</span>労働組合連合の主任経済学者である。巨額の政府支出で需要を刺激し、恐慌から脱することを主張している。
 
 - @plan
 - @carry_out_policy
 - @depression
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @plan
-title: Adopt the WTB-plan!
-subtitle: Convincing the rest of the party to support the WTB-plan.
+title: WTB計画を採用する
+subtitle: 党内を説得してWTB計画への支持を固める。
 choose-if: advisor_action_timer <= 0 and wtb_adopted == 0 and wtb_concept and black_thursday_seen and ((labor_strength >= center_strength) and (labor_strength >= left_strength)) and wtb_points >= 160
 on-arrival: advisor_action_timer = 6;
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?][? if wtb_points < 160 : The WTB Plan is still being ironed out. ?][? if (labor_strength < center_strength or labor_strength < left_strength): The labor faction is not strong enough. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if black_thursday_seen == 0 : 現在は経済危機ではない。 ?][? if wtb_adopted > 0 : WTB計画はすでに採用されている。 ?][? if wtb_points < 160 : WTB計画はなお策定中である。 ?][? if (labor_strength < center_strength or labor_strength < left_strength): 労働組合派の勢力が足りない。 ?]
 go-to: wtb_proposed
 
 @carry_out_policy
-title: Carry out the economic plan.
-subtitle: If we are in government, we can carry out a public works program such as the WTB-Plan.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if wtb_adopted == 0 : We have not yet adopted an economic plan. ?][? if works_program >= 2 : We have already started implementing the plan. ?][? if economic_minister_party != "SPD" and finance_minister_party != "SPD" or not spd_in_government : The <span style="color: #c00000;">**SPD**</span> doesn't occupy the Finance or Economic ministry. ?]
+title: 経済計画を実施する
+subtitle: 政権に参加していれば、WTB計画のような公共事業計画を実施できる。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if wtb_adopted == 0 : 経済計画をまだ採用していない。 ?][? if works_program >= 2 : 計画の実施にはすでに着手している。 ?][? if economic_minister_party != "SPD" and finance_minister_party != "SPD" or not spd_in_government : <span style="color: #c00000;">**SPD**</span>は財務省も経済省も掌握していない。 ?]
 choose-if: advisor_action_timer <= 0 and wtb_adopted and wtb_implemented <= 1 and economic_minister_party == "SPD" or finance_minister_party == "SPD" and spd_in_government
 on-arrival: advisor_action_timer = 6; economic_policy_timer -= 12
 go-to: economic_policy
 
 
 @depression
-title: Addressing the economic crisis
-subtitle: Formulate a plan to get us out of the economic crisis.
+title: 経済危機への対処
+subtitle: 経済危機から脱するための計画を策定する。
 choose-if: advisor_action_timer <= 0 and wtb_adopted == 0 and black_thursday_seen == 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if black_thursday_seen == 0 : 現在は経済危機ではない。 ?][? if wtb_adopted > 0 : WTB計画はすでに採用されている。 ?]
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 5; wtb_points += 15
 
-[? if not wtb_concept: Woytinsky, Tarnow, and Baade, has been working together to draft a plan for getting us out of the depression. Woytinsky canvasses in favor of this policy through the <span style="color: #c00000;">**SPD**</span> and the unions. ?][? if wtb_concept: The WTB-plan, named for its primary supporters Woytinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Woytinsky canvasses in favor of this policy through the <span style="color: #c00000;">**SPD**</span> and the unions. ?]
+[? if not wtb_concept: ヴォイティンスキー、タルノフ、バーデは、恐慌から脱するための計画を共同で起草している。ヴォイティンスキーは<span style="color: #c00000;">**SPD**</span>と労働組合の内部でこの政策への支持を訴えている。 ?][? if wtb_concept: 主要な支持者であるヴォイティンスキー、タルノフ、バーデの名を冠したWTB計画は、恐慌から脱するための労働組合案として採用された。ヴォイティンスキーは<span style="color: #c00000;">**SPD**</span>と労働組合の内部でこの政策への支持を訴えている。 ?]

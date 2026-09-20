@@ -1,16 +1,16 @@
-title: Schleicher's Influence
+title: シュライヒャーの影響力
 new-page: true
 view-if: chancellor == "Schleicher" and schleicher_time >= 8 and schleicher_spd_influence >= 2
 max-visits: 1
 tags: event
 face-image: img/portraits/schleicher.jpg
 
-= Schleicher's Influence
+= シュライヒャーの影響力
 
-Although Schleicher insists he has no intention of establishing a military dictatorship and claims the Reichswehr is merely stabilizing the nation in its time of need, we suspect he is maneuvering to consolidate power.
+シュライヒャーは軍事独裁を樹立する意図などなく、国防軍は危機に瀕した国家を安定させているにすぎないと主張する。だが我々は、彼が権力の固定化に動いていると疑っている。
 
-This, of course, involves the infiltration of his supporters into the ADGB and the quiet persuasion of <span style="color: #c00000;">**SPD**</span> leaders through shady deals and under-the-table arrangements.
+その手段には当然、支持者をADGBへ浸透させ、疑わしい取引や密約を通じて<span style="color: #c00000;">**SPD**</span>指導部をひそかに取り込むことも含まれる。
 
-It is already evident that our decision-making is being compromised.
+我々の意思決定がすでに危うくなっていることは明らかだ。
 
-- @root: Ok.
+- @root: 確認する。

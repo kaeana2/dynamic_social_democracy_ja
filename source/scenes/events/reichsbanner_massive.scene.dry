@@ -1,5 +1,5 @@
-title: Excessive Militarization of the Reichsbanner
-subtitle: Many argue that its militarization is no longer necessary now that we have established dominance over the streets.
+title: 国旗団の過度な軍事化
+subtitle: 街頭で優位を確立した今、軍事化はもはや不要だとの声が多い。
 view-if: rb_militancy >= 0.15 and democracy_paramilitary_highest and year >= 1931 and not rb_massive
 new-page: true
 tags: event
@@ -16,30 +16,30 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Excessive Militarization of the Reichsbanner
+= 国旗団の過度な軍事化
 
-The argument that the militarization of the Reichsbanner is necessary to defend against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> <span style="color: #7A3C00;">**SA**</span> and <span style="color: #3E88B3;">**Stahlhelm**</span> no longer holds, given our dominance of the streets. With the threat now eliminated, the bourgeois parties fear it may instead function as a <span style="color: #c00000;">socialist</span> militia.
+我々が街頭で優位に立った以上、<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の<span style="color: #7A3C00;">**SA**</span>と<span style="color: #3E88B3;">**鉄兜団**</span>から身を守るため国旗団の軍事化が必要だという主張は、もはや成り立たない。脅威が消えた今、ブルジョワ諸党は国旗団が<span style="color: #c00000;">社会主義者</span>の民兵として機能するのではないかと恐れている。
 
-[? if not rb_exit: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] [? if not lvp_formed:and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>&nbsp;?][? if not lvp_leave_reichsbanner and lvp_formed:and <span style="color: #FFCC00;">**LVP**</span>&nbsp;?]have threatened drastic consequences if the Reichsbanner isn't disarmed.?]
-[? if rb_exit and not cvp_formed: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed: and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if not lvp_leave_reichsbanner and lvp_formed: and <span style="color: #FFCC00;">**LVP**</span>?] have condemned the organization as nothing more than a <span style="color: #c00000;">socialist</span> militia and have abandoned their strong opposition to the <span style="color: #3E88B3;">**Stahlhelm**</span>.?][? if (rb_exit or cvp_leave_reichsbanner) and cvp_formed: The <span style="color: #000000;">**CVP**</span> [? if not lvp_formed: and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if not lvp_leave_reichsbanner and lvp_formed: and <span style="color: #FFCC00;">**LVP**</span>?] have condemned the organization as nothing more than a <span style="color: #c00000;">socialist</span> militia and are getting noticeably friendly with the <span style="color: #3E88B3;">**Stahlhelm**</span>.?]
+[? if not rb_exit: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:と<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if not lvp_leave_reichsbanner and lvp_formed:と<span style="color: #FFCC00;">**LVP**</span>?]は、国旗団を武装解除しなければ重大な結果を招くと警告した。?]
+[? if rb_exit and not cvp_formed: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:と<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if not lvp_leave_reichsbanner and lvp_formed:と<span style="color: #FFCC00;">**LVP**</span>?]は、国旗団を単なる<span style="color: #c00000;">社会主義者</span>の民兵だと非難し、<span style="color: #3E88B3;">**鉄兜団**</span>への強硬な反対を取り下げた。?][? if (rb_exit or cvp_leave_reichsbanner) and cvp_formed: <span style="color: #000000;">**CVP**</span>[? if not lvp_formed:と<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if not lvp_leave_reichsbanner and lvp_formed:と<span style="color: #FFCC00;">**LVP**</span>?]は、国旗団を単なる<span style="color: #c00000;">社会主義者</span>の民兵だと非難し、<span style="color: #3E88B3;">**鉄兜団**</span>へ目に見えて接近している。?]
 
-If no action is taken, we risk permanently alienating the bourgeois parties.
+何も手を打たなければ、ブルジョワ諸党を永遠に遠ざける危険がある。
 
-- @let_go: Refuse to take any action, keeping the Reichsbanner the way it is.
-- @lower_militancy: We must lower the Reichsbanner's militancy.
+- @let_go: 何の措置も取らず、国旗団を現状のまま維持する。
+- @lower_militancy: 国旗団の戦闘性を下げなければならない。
 
 @let_go
-subtitle: The Reichsbanner is still needed, as the police cannot be trusted to do their job. [? if president == "Hindenburg" and spd_in_government: Hindenburg has threatened to sack our government if no action is taken. ?][? if spd_in_government and not in_left_front and not in_spd_majority and not sapd_toleration: Our coalition partners will call a vote of no confidence. ?] The bourgeois parties will be forever antagonistic.
-unavailable-subtitle: The reformist wing of the party is able to dissuade the party from endorsing this option.
+subtitle: 警察が役割を果たすとは信用できず、国旗団は依然として必要だ。[? if president == "Hindenburg" and spd_in_government: ヒンデンブルクは、措置を取らなければ我々の政府を罷免すると脅している。?][? if spd_in_government and not in_left_front and not in_spd_majority and not sapd_toleration: 連立相手は内閣不信任案を提出する。?]ブルジョワ諸党とは永久に敵対することになる。
+unavailable-subtitle: 党内改革派が、この選択肢への支持を思いとどまらせている。
 choose-if: left_strength + neorevisionist_strength >= reformist_strength
 on-arrival: rb_strength *= 0.8; z_relation -= 20; ddp_relation -= 20; lvp_relation -= 20; rb_exit = 1; left_strength += 10*(1-dissent); neorevisionist_strength += 20*(1-dissent); ddp_right += 8; lvp_right += 10; dvp_right += 10; ddp_cohesion -= 5; pro_republic -= 10; coalition_dissent += 5; rb_massive = 1; hindenburg_angry += 100
 
-We must not let our guard down; the Reichsbanner must remain militarized. Whether they like it or not, paramilitaries are here to stay.
+警戒を緩めてはならない。国旗団は軍事化を維持すべきだ。好むと好まざるとにかかわらず、準軍事組織は今後も存在し続ける。
 
-Unfortunately, the bourgeois parties[? if president == "Hindenburg":, and especially President Hindenburg?] now plainly see the Reichsbanner for what it is: our <span style="color: #c00000;">socialist</span> militia. Non-<span style="color: #c00000;">socialist</span> members of the paramilitary leave en masse, and the political establishment will be forever antagonistic to us.
+残念ながら、ブルジョワ諸党[? if president == "Hindenburg":、とりわけヒンデンブルク大統領?]は今や、国旗団の本質を我々の<span style="color: #c00000;">社会主義者</span>民兵だとはっきり見なしている。準軍事組織に属する非<span style="color: #c00000;">社会主義者</span>は大量に離脱し、政治支配層は永久に我々と敵対するだろう。
 
 @lower_militancy
-subtitle: The necessity for paramilitaries is over; we can now let the Prussian police do its job.
+subtitle: 準軍事組織が必要な時代は終わった。今後はプロイセン警察に役割を果たさせる。
 on-arrival: rb_militancy *= 0.5
 
-Bowing to the other parties' demands, we reduce the Reichsbanner's military training, thus inducing them to stay.
+他党の要求に譲歩し、国旗団の軍事訓練を縮小して残留を促した。

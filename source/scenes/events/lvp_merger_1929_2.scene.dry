@@ -1,5 +1,5 @@
-title: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> Congress
-subtitle: The future of the liberal movement will be decided here.
+title: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>党大会
+subtitle: 自由主義運動の将来がここで決まる。
 on-arrival: {!
 Q.lvp_formation_points = 0;
 if (Q.ddp_relation < 55) {
@@ -25,27 +25,27 @@ max-visits: 1
 face-image: img/ddp.jpg
 new-page: true
 
-=  <span style="color: #D3C24D;">**[+ ddp_name +]**</span> Congress
+=  <span style="color: #D3C24D;">**[+ ddp_name +]**</span>党大会
 
-The <span style="color: #C0A054;">**DVP**</span> has made its decision in favor of merging the two parties; now, the fate of the unification rests with the <span style="color: #D3C24D;">[+ ddp_name +]</span>. The most prominent proponents within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> in favor of the merger are those in the business wing, who have pursued this goal for years.
+<span style="color: #C0A054;">**DVP**</span>は両党の合併を支持すると決定した。統合の命運は今や<span style="color: #D3C24D;">[+ ddp_name +]</span>に委ねられている。<span style="color: #D3C24D;">**[+ ddp_name +]**</span>内で合併を最も強く推進しているのは、長年この目標を追求してきた実業界派である。
 
-On the other hand, leftists within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> strongly oppose the merger citing obvious concerns, as well as those who favor a potential merger with the <span style="color: #D3D3A9;">**VNR**</span> instead. A defeat in this decision would spell the end of liberal cooperation for the foreseeable future, severely demoralizing the German middle class, with the blame falling on the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
+一方、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>左派は当然予想される懸念を挙げて合併に強く反対し、代わりに<span style="color: #D3D3A9;">**VNR**</span>との合併を望む者も反対に回っている。ここで否決されれば、自由主義勢力の協力は当面終わりを告げ、ドイツの中間層は大きく意気消沈するだろう。その責任は<span style="color: #D3C24D;">**[+ ddp_name +]**</span>に帰せられることになる。
 
-- @ddp_success: The party votes...
-- @ddp_fail: The party votes...
+- @ddp_success: 採決が行われる……
+- @ddp_fail: 採決が行われる……
 
 @ddp_success
 view-if: lvp_formation_points >= 3
 on-arrival: ddp_relation -= 3; ddp_right += 1.5; lvp_trigger_1_time = time + 1
 face-image: img/weimar_coalition_3.jpg
 
-As expected, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has followed the <span style="color: #C0A054;">**DVP**</span>'s decision and affirmed their support for a united <span style="color: #FFCC00;">Liberal People's Party</span>. 
+予想どおり、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は<span style="color: #C0A054;">**DVP**</span>の決定に続き、統一政党である<span style="color: #FFCC00;">自由人民党</span>の結成を支持すると表明した。
 
-However, the leftists within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will wield little influence in the wider party, which will consist of twice as many <span style="color: #C0A054;">**DVP**</span> members as <span style="color: #D3C24D;">**[+ ddp_name +]**</span> members.
+しかし、統一後の政党では<span style="color: #D3C24D;">**[+ ddp_name +]**</span>左派の影響力は小さくなる。新党に加わる<span style="color: #C0A054;">**DVP**</span>党員は、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>党員の2倍に上るからである。
 
 @ddp_fail
 view-if: lvp_formation_points < 3
 on-arrival: dvp_right += 5; new_middle_ddp -= 4; old_middle_ddp -= 4; pro_republic -= 5; liberal_cooperation -= 10
 face-image: img/dstp.jpg
 
-Surprisingly, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> have rejected the plans to create a united <span style="color: #FFCC00;">Liberal People's Party</span>. It seems that the infighting that plagues the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> remains alive and well. This outcome has greatly demoralized the German middle and has forced the disbandment of the Liberal Association. 
+意外にも、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は統一政党である<span style="color: #FFCC00;">自由人民党</span>の結成計画を拒否した。<span style="color: #D3C24D;">**[+ ddp_name +]**</span>を悩ませてきた内紛は、相変わらず続いているようだ。この結果、ドイツの中間層は大きく意気消沈し、自由主義協会は解散を余儀なくされた。

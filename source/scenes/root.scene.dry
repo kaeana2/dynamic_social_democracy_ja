@@ -1,4 +1,4 @@
-title: Root Scene
+title: ルートシーン
 new-page: true
 go-to: post_event if started = 1; start_menu if started = 0
 
@@ -10,9 +10,9 @@ go-to: start_menu_2
 
 @start_menu_2
 
-- @start_1: Start game
-- @modinfo: Mod Info - Last Updated 2026/08/04
-- @credits: Credits
+- @start_1: ゲームを開始
+- @modinfo: MOD情報――最終更新 2026/08/04
+- @credits: クレジット
 - @game_over.achievements
 
 @start_1
@@ -22,9 +22,9 @@ go-to: start if achievement_game_completed; pls_player if not achievement_game_c
 
 @pls_player
 
-Read.
+必ず一読のこと。
 
-- @modinfo.infotext: Mod Info - Last Updated 2026/08/04
+- @modinfo.infotext: MOD情報――最終更新 2026/08/04
 
 
 @start
@@ -999,10 +999,10 @@ Q.papen_strength = 1;
 Q.meissner_strength = 2;
 Q.oskar_strength = 2;
 
-Q.papen_goal = "Nazi backing for his cabinet";
-Q.schleicher_goal = "Control Papen from the sidelines";
-Q.meissner_goal = "Become acquainted with the new chancellor";
-Q.oskar_goal = "Support the new chancellor";
+Q.papen_goal = "内閣へのナチの支持を取り付ける";
+Q.schleicher_goal = "パーペンを陰から操る";
+Q.meissner_goal = "新首相との関係を築く";
+Q.oskar_goal = "新首相を支持する";
 
 Q.industrial_z_backing = 0;
 Q.industrial_ddp_backing = 1;
@@ -1222,22 +1222,22 @@ if (Q.percentComplete >= 100) {
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *「このような全般的発展を、ある一党の誤った戦術や個々の指導者の過ちに帰することはできない。それどころか、個々の指導者の行動は、人民全体の感情によって大きく規定される。しかし、その時々の感情を、人民が本来備えている気質や性格の反映とみなすのも誤りであろう。それは、国民全体をここまで深く堕落させた特殊な状況が生んだ結果にすぎない。」*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ ――カール・カウツキー『ヒトラー主義と社会民主主義』、1934年
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+これは架空史ゲームである。史実への正確さは重視されているが、あくまで*ゲーム*であり、現実の歴史から分岐する以上、どうしても一定の創作が含まれる。明らかな誤りがあれば、作者まで知らせてほしい。
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+ドイツ共和国の政治と統治機構について詳しく知りたい場合は、左上の「資料室」を参照のこと。初めてプレイする場合は、少なくともその一部に目を通すことを強く勧める。
 
-**If you are playing this mod via the Mod Loader in base game, there will be various items missing (parliament colours, images, arrows, etc.). For the intended experience, please play using <a href="https://originn0.github.io/dynamic_social_democracy/" style="color: #0077FF">this</a> link.**
+**本編のMODローダーからこのMODをプレイすると、議会の配色・画像・矢印など、さまざまな要素が欠落する。本来の状態で楽しむには、<a href="https://originn0.github.io/dynamic_social_democracy/" style="color: #0077FF">こちら</a>のリンクからプレイしてほしい。**
 
-- @1928_mod_mode: Begin (<span style="color: #0077FF;">dynamic</span> mode)
-- @1928_easy: Begin (<span style="color: #5B9A8D;">easy</span> difficulty)
-- @1928_main: Begin (<span style="color: #C4B156;">normal</span> difficulty)
-- @1928_hard: Begin (<span style="color: #A05252;">hard</span> difficulty)
-- @1928_historical: Begin (<span style="color: #611813;">historical</span> mode)
-- @1928_challenge: Custom Modes
+- @1928_mod_mode: 開始（<span style="color: #0077FF;">ダイナミック</span>モード）
+- @1928_easy: 開始（<span style="color: #5B9A8D;">イージー</span>）
+- @1928_main: 開始（<span style="color: #C4B156;">ノーマル</span>）
+- @1928_hard: 開始（<span style="color: #A05252;">ハード</span>）
+- @1928_historical: 開始（<span style="color: #611813;">史実</span>モード）
+- @1928_challenge: カスタムモード
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 5; base_dues = 5; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; ddp_relation = 65; budget = 5;
@@ -1248,7 +1248,7 @@ on-arrival: difficulty = 1; resources = 0; dues = 3; base_dues = 3; rb_strength 
 go-to: 1928_main
 
 @1928_historical
-subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
+subtitle: セーブ、ロード、世論調査が無効になる。[? if not achievement_game_completed: 初回プレイには推奨しない。 ?]
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
@@ -1270,7 +1270,7 @@ this.state.disableSaves = true;
 go-to: 1928_main
 
 @1928_mod_mode
-subtitle: Intended way of experiencing this mod.
+subtitle: このMODで想定されている標準的なプレイ方法である。
 on-arrival: {!
 Q.difficulty = -1;
 Q.dynamic_mode = 1;
@@ -1287,7 +1287,7 @@ Q.budget = 2;
 go-to: 1928_main
 
 @1928_mod_mode_lite
-subtitle: Intended way of experiencing this mod.
+subtitle: このMODで想定されている標準的なプレイ方法である。
 on-arrival: {!
 Q.difficulty = -1;
 Q.resources = 3;
@@ -1305,17 +1305,17 @@ go-to: 1928_main
 @1928_challenge
 view-if: achievement_holy
 
-Here, you can test your skills.
+ここでは、自らの腕前を試すことができる。
 
 - @joever_mode
 - @hitler_mode
 - @unemployed_mode
-- @start: Go back.
+- @start: 戻る
 
 
 @joever_mode
-title: <div style="text-align: center;"><img src="img/joever.png" alt="Joever"></div>
-subtitle: The <span style="color: #c00000;">**SPD**</span> will start with 0% support.
+title: <div style="text-align: center;"><img src="img/joever.png" alt="終わりだ"></div>
+subtitle: <span style="color: #c00000;">**SPD**</span>の支持率が0％の状態で開始する。
 on-arrival: {!
 Q.workers_spd = 0;
 Q.new_middle_spd = 0;
@@ -1394,8 +1394,8 @@ for (var party of Q.parties) {
 go-to: 1928_mod_mode_lite
 
 @hitler_mode
-title: Democracy Under Siege
-subtitle: The <span style="color: #7A3C00;">**NSDAP**</span> will start with 40% support, and cannot peak.
+title: 包囲された民主主義
+subtitle: <span style="color: #7A3C00;">**NSDAP**</span>の支持率が40％の状態で開始し、支持率の頂点を迎えなくなる。
 on-arrival: {!
 Q.hitler_mode = 1;
 
@@ -1476,8 +1476,8 @@ for (var party of Q.parties) {
 go-to: 1928_mod_mode_lite
 
 @unemployed_mode
-title: <div style="text-align: center;"><img src="img/job.png" alt="Jobless Mode"></div>
-subtitle: Unemployment will start at 100%.
+title: <div style="text-align: center;"><img src="img/job.png" alt="完全失業モード"></div>
+subtitle: 失業率が100％の状態で開始する。
 on-arrival: {!
 Q.jobless_mode = 1;
 
@@ -1553,9 +1553,9 @@ for (var party of Q.parties) {
 go-to: 1928_mod_mode_lite
 
 @wacky_weimar
-title: Wacky Weimar Mode
-subtitle: Various unrealistic easter eggs and features will be unlocked. Bugs are part of the experience.
-unavailable-subtitle: 66% or higher achievement completion is required.
+title: 奇想天外ヴァイマル・モード
+subtitle: 非現実的な隠し要素や機能が各種解禁される。バグも体験の一部である。
+unavailable-subtitle: 実績達成率66％以上が必要である。
 choose-if: achievement_moly
 on-arrival: {!
 Q.wacky_weimar = 1;
@@ -1569,4 +1569,4 @@ new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 
-= 1928
+= 1928年

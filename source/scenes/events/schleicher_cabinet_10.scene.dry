@@ -1,5 +1,5 @@
-title: The <span style="color: #000000;">Center Party</span> Enters Government
-subtitle: Promises of a <i>Reichskonkordat</i> lures them into cooperation.
+title: <span style="color: #000000;">中央党</span>の入閣
+subtitle: <i>ライヒ政教条約</i>の約束が同党を協力へ引き入れる。
 view-if: chancellor == "Schleicher" and dsu_in_gov and not dsu_was_gov and not z_in_gov and z_relation < 70 and z_leader == "Kaas" and schleicher_post_time >= 2 and reichskonkordat = 0
 max-visits: 1
 new-page: true
@@ -17,20 +17,20 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #000000;">Center Party</span> Enters Government
+= <span style="color: #000000;">中央党</span>の入閣
 
-Schleicher has concluded that he needs broader popular and parliamentary support beyond the <span style="color: #6A1E1E;">**DSU**</span>, and has opened talks with Ludwig Kaas to secure the backing of the <span style="color: #000000;">Center Party</span>. Kaas has proven far more willing to cooperate with Schleicher than he ever was with Papen, and the party itself is eager to return to government.
+シュライヒャーは<span style="color: #6A1E1E;">**DSU**</span>を超える広範な国民・議会の支持が必要だと判断し、<span style="color: #000000;">中央党</span>の支持を得るためルートヴィヒ・カースとの協議を開始した。カースはパーペンに対してよりもはるかに協力的であり、党自体も政権復帰を望んでいる。
 
-The main obstacle, however, is the <span style="color: #000000;">Center Party</span>’s deep reservations about sharing a cabinet with the <span style="color: #7A3C00;">Nazis</span>. To overcome this, Schleicher and the <span style="color: #6A1E1E;">**DSU**</span> have signaled their readiness to fast-track a <i>Reichskonkordat</i> with the Vatican—an offer that Kaas, a longtime advocate of such, finds difficult to refuse.
+しかし最大の障害は、<span style="color: #7A3C00;">ナチ党</span>と同じ内閣に入ることに対する<span style="color: #000000;">中央党</span>の根強い懸念である。これを乗り越えるため、シュライヒャーと<span style="color: #6A1E1E;">**DSU**</span>はヴァティカンとの<i>ライヒ政教条約</i>締結を急ぐ用意があると示した。長年これを唱えてきたカースには拒みがたい提案である。
 
 - @z_in_gov
 
 @z_in_gov
-title: Schleicher has found a new puppet in Kaas.
+title: シュライヒャーはカースという新たな傀儡を手に入れた。
 on-arrival: kaas_puppet = 1; z_in_gov = 1; z_relation -= 20; pro_republic -= 5; schleicher_approval += 1; hindenburg_schleicher_r += 1
 
-The <span style="color: #000000;">Center Party</span> claims its ministerial positions, with Adam Stegerwald securing the Labor Ministry, and other members taking the Transport and Justice portfolios. The <span style="color: #000000;">Center Party</span> also brings the <span style="color: #A2D8E0;">**BVP**</span> into the fold, which is granted the Postal Ministry.
+<span style="color: #000000;">中央党</span>は閣僚職を確保し、アダム・シュテーガーヴァルトが労働相、ほかの党員が運輸相と司法相に就任した。さらに<span style="color: #A2D8E0;">**BVP**</span>を政権へ引き入れ、郵政相の地位を与えた。
 
-With Ludwig Kaas’s connections in Rome, the negotiation of a <i>Reichskonkordat</i> is fast-tracked and set to be ready for signing in a few weeks.
+ルートヴィヒ・カースのローマとの人脈により、<i>ライヒ政教条約</i>の交渉は急速に進められ、数週間後には調印の準備が整う見込みである。
 
-However, their entry into government has strained our relations, as they had previously stood in united opposition with us.
+しかし、以前は我々とともに統一野党を形成していたため、同党の入閣は我々との関係を悪化させた。

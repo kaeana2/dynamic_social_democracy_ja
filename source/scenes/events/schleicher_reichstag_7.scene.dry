@@ -1,5 +1,5 @@
-title: Reichstag Reconvenes
-subtitle: Schleicher faces a vote of no confidence!
+title: 国会の再開
+subtitle: シュライヒャーが不信任投票に直面する！
 view-if: chancellor = "Schleicher" and schleicher_time and schleicher_post_protests and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: reichstag_rubicon = 1
 new-page: true
@@ -7,14 +7,14 @@ tags: event
 max-visits: 1
 priority: 2
 
-= Reichstag Reconvenes
+= 国会の再開
 
-Let's cut to the chase.
+さっそく本題に入ろう。
 
 - @reichstag
 
 @reichstag
-title: A vote of no confidence is introduced against Schleicher.
+title: シュライヒャーに対する不信任動議が提出される。
 on-arrival: {!
 Q.reichstag_rubicon = 0;
 
@@ -35,6 +35,6 @@ if (Q.next_election_month > 12) {
 }
 !}
 
-It succeeds.
+動議は可決された。
 
-New Reichstag elections are scheduled for [+ next_election_month : month +] [+ next_election_year +], Week [+ next_election_week +].
+次回国会選挙は[+ next_election_year +]年[+ next_election_month : month +]（第[+ next_election_week +]週）に予定された。

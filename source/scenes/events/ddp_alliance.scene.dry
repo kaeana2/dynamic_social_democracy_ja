@@ -1,19 +1,19 @@
-title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s Proposal
-subtitle: Should we offer to help them?
+title: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>の提案
+subtitle: 支援を申し出るべきか？
 view-if: (year >= 1932 and not lvp_formed and not dstp_maintained and next_election_time - time < 3) and (((ddp_ideology == "Left" or ddp_leader == "Lemmer") and ddp_votes < 3.0) or (ddp_ideology == "Moderate" and ddp_votes < 2.0) or (ddp_ideology == "Right" and ddp_votes < 1.2))
 on-arrival: ddp_alliance_seen = 1;
 max-visits: 1
 tags: event
 new-page: true
 
-= The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s Proposal
+= <span style="color: #D3C24D;">**[+ ddp_name +]**</span>の提案
 
-Due to the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s declining electoral performance, threatening to wipe out their Reichstag delegation come next election, many within their party like the retired Koch-Weser have been lobbying for a technical list connection with the <span style="color: #c00000;">**SPD**</span>.
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は選挙での退潮が続き、次の選挙では国会から姿を消しかねない。引退したコッホ＝ヴェーザーをはじめ、党内の多くの者が<span style="color: #c00000;">**SPD**</span>との選挙技術上の名簿結合を働きかけている。
 
-Despite their electoral standing, many within their business wing like Theodor Heuss argue that allying with the <span style="color: #c00000;">socialists</span> would be detrimental to their stance of economic freedom, while many on their left wing such as Ernst Lemmer argue it's a necessity in order to save their party and democracy. We can either offer to help the dying party out, increasing their parliamentary presence, or leave them on their own.
+この苦境にもかかわらず、テオドール・ホイスら財界派は、<span style="color: #c00000;">社会主義者</span>との提携は経済的自由を擁護する党の立場を損なうと主張する。一方、エルンスト・レマーら左派は、党と民主主義を救うために不可欠だと訴える。我々は衰退する同党を助けて議席を増やすことも、見放すこともできる。
 
-- @ddp_alliance_yay: Offer to help the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
-- @ddp_alliance_reject: We are not saving the party of the bourgeoisie.
+- @ddp_alliance_yay: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>に支援を申し出る。
+- @ddp_alliance_reject: ブルジョワの党を救うつもりはない。
 
 @ddp_alliance_yay
 on-arrival: {!
@@ -68,9 +68,9 @@ go-to: ddp_alliance_yay_2 if ddp_alliance_points >= 5; ddp_alliance_nay_2 if ddp
 on-arrival: ddp_alliance = 1; ddp_alliance_glaze = 1 if ddp_ideology == "Left" and ddp_leader == "Lemmer"; liberal_cooperation -= 10; bourgeois_cooperation -= 3; ddp_relation += 20; pro_republic += ddp_votes; ddp_left += 6; ddp_cohesion -= 4; rural_ddp *= 0.5; old_middle_ddp *= 0.6; new_middle_ddp *= 0.8; workers_ddp += 3 if ddp_alliance_glaze; new_middle_ddp += 2 if ddp_alliance_glaze; old_middle_ddp -= 1 if ddp_alliance_glaze; rural_ddp -= 1 if ddp_alliance_glaze; pro_republic += 3 if ddp_alliance_glaze
 go-to: liberale_blocpartei if ddp_ideology == "Left" and ddp_leader == "Lemmer"
 
-After their internal vote, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> accepts our offer, despite the opposition from whatever remains of the business wing. The party suffers electorally from their association with us, even if many right-wingers stress it as nothing more than a technical list connection. Anyhow, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will receive more parliamentary seats now.
+党内投票の結果、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は残存する財界派の反対を押し切り、我々の提案を受け入れた。右派の多くは単なる選挙技術上の名簿結合だと強調するが、我々との提携によって支持票の一部を失う。それでも、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>が得られる議席は増えるだろう。
 
-[? if ddp_ideology == "Left" and ddp_leader == "Lemmer": Lemmer has decided to take things a step further, and has further increased electoral cooperation between our parties. Perhaps this alliance will last more than just one election? ?]
+[? if ddp_ideology == "Left" and ddp_leader == "Lemmer": レマーはさらに踏み込み、両党の選挙協力を強化した。この提携は一度の選挙で終わらないかもしれない。 ?]
 
 @liberale_blocpartei
 achievement: liberale_blocpartei
@@ -78,9 +78,9 @@ achievement: liberale_blocpartei
 @ddp_alliance_nay_2
 on-arrival: ddp_relation -= 3; ddp_right += 3; ddp_cohesion -= 3
 
-Unfortunately, despite our offer for help, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has rejected the list connection in an internal vote. Even in the state they're in currently, they still adamantly oppose any association with <span style="color: #c00000;">socialism</span>. Maybe they'll change their mind when the election results come through.
+残念ながら、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は党内投票で我々の名簿結合の提案を拒否した。この窮状にあっても、<span style="color: #c00000;">社会主義</span>とのいかなる結び付きにも頑なに反対している。選挙結果が出れば考えを変えるかもしれない。
 
 @ddp_alliance_reject
 on-arrival: ddp_relation -= 5; ddp_right += 5
 
-The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> are on their own. 
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span>には自力で切り抜けてもらう。

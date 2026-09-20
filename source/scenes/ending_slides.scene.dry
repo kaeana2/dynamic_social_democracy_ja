@@ -1,4 +1,4 @@
-title: Ending Slides
+title: エンディング
 view-if: (chancellor != "Hitler" and president != "Hitler" and president != "Göring" and (not total_defeat or papen_win)) or rubicon_mini
 on-arrival: {!
 const toolsWrapper = document.getElementById('tools_wrapper');
@@ -47,7 +47,7 @@ if (Q.weimar_win && (Q.president == "Rosenfeld" || Q.president == "Thälmann" ||
 set-bg: img/paper.jpg
 new-page: true
 
-A chapter in history closes.
+歴史の一章が幕を閉じる。
 
 - @taming_lose
 - @dnef_win
@@ -60,288 +60,288 @@ A chapter in history closes.
 - @left_win
 
 @taming_lose
-title: The <span style="color: #7A3C00;">Nazi</span> Beast Tamed?
-subtitle: Ending 0.5
+title: <span style="color: #7A3C00;">ナチ</span>の野獣は飼い慣らされたのか？
+subtitle: エンディング0.5
 view-if: rubicon_mini and not civil_war_seen and (chancellor == nsdap_chancellor or president == "Hitler" or president == "Göring")
 new-page: true
 
-With the appointment of [+ chancellor +] and the passage of the Enabling Act, Germany is lost. Schleicher, increasingly sidelined by health issues, fades into irrelevance. Following[? if president == "Hindenburg":&nbsp;President Hindenburg's and?] his[? if president == "Hindenburg":&nbsp;own?] death, General Werner von Blomberg assumes the presidency, marking the end of the failed taming experiment.
+[+ chancellor +]の任命と全権委任法の成立により、ドイツは失われた。健康問題で次第に脇へ追いやられたシュライヒャーは、無意味な存在へ消えていく。[? if president == "Hindenburg":ヒンデンブルク大統領と?]彼[? if president == "Hindenburg":自身?]の死後、ヴェルナー・フォン・ブロンベルク将軍が大統領に就任し、失敗に終わった飼い慣らし実験は幕を閉じた。
 
-The bourgeois establishment that once collaborated with the <span style="color: #7A3C00;">Nazis</span> is purged en masse during the Night of the Long Knives and offer no serious resistance thereafter, aside from the failed Oster conspiracy in 1938 by former Schleicher loyalists.
+かつて<span style="color: #7A3C00;">ナチ党</span>と協力したブルジョワ支配層は「長いナイフの夜」で一斉に粛清され、その後は旧シュライヒャー派による1938年の失敗したオスター陰謀を除き、まともな抵抗を見せなかった。
 
 - @go_back
 
 @dnef_win
-title: The Perfect Dictatorship
-subtitle: Ending 1
+title: 完璧な独裁制
+subtitle: エンディング1
 view-if: hammerstein_win and not civil_war_seen
 new-page: true
 audio: music/1930_1933/anthem.mp3
 
-[? if president != "Hindenburg": During [+ president +]’s term as President, the?][? if president == "Hindenburg": Following the death of Hindenburg from old age and Schleicher due to health complications, General Hammerstein is elected in a landslide in a heavily rigged election. The?] hated <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system is dismantled, and a new March Constitution is passed near-unanimously. The Reichstag is reduced to a rubber stamp for the regime. Germany formally adopts a presidential system, with both the Presidency and Chancellorship held by various <span style="color: #BFC8CC;">**DNEF**</span> members, who rise through bribes, patronage, and backroom deals. Corruption is endemic. Elections are stage-managed, dominated by fraud and manipulation.
+[? if president != "Hindenburg":[+ president +]の大統領在任中、?][? if president == "Hindenburg":ヒンデンブルクが老衰で、シュライヒャーが健康悪化で死去した後、露骨に不正操作された選挙でハンマーシュタイン将軍が地滑り的勝利を収めた。?]忌み嫌われた<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>体制は解体され、新たな三月憲法がほぼ全会一致で成立した。国会は体制の追認機関へ落とされる。ドイツは正式に大統領制を採用し、大統領職と首相職はいずれも、贈賄、縁故主義、密室取引で出世したさまざまな<span style="color: #BFC8CC;">**DNEF**</span>党員が占める。汚職は蔓延し、選挙は演出され、不正と操作に支配されている。
 
-The <span style="color: #c00000;">**SPD**</span> is never formally banned and endures as a powerless "loyal opposition," unable to influence national policy. Though tolerated, they face constant harassment and suppression by the ruling regime.
+<span style="color: #c00000;">**SPD**</span>は正式には禁止されず、国策へ影響を与えられない無力な「体制内野党」として存続する。存在を許されながらも、支配体制から絶えず嫌がらせと弾圧を受ける。
 
-Despite the regime’s authoritarianism, social discontent remains subdued. A <i>Wirtschaftswunder</i>—an economic miracle—emerges as the Great Depression fades. In 1935, Germany secures equality in armaments at Geneva and begins agitating for the return of the Polish Corridor separating East Prussia from the Reich.
+体制の権威主義にもかかわらず、社会的不満は抑え込まれたままである。世界恐慌が遠のくと、<i>Wirtschaftswunder</i>――経済の奇跡――が訪れる。1935年、ドイツはジュネーヴで軍備平等権を獲得し、東プロイセンを本土から隔てるポーランド回廊の返還を要求し始めた。
 
-In 1942, a "special military operation" is launched to seize Danzig. Poland refuses to cede territory, and with backing from <span style="color: #002654;">France</span> and a hesitant <span style="color: #C8102E;">Britain</span>, enters a state of war. A puppet regime is installed in occupied territories. A limited <span style="color: #002654;">French</span> offensive into the Saar fails, and the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span> remain at war only on paper.
+1942年、ダンツィヒ奪取のための「特別軍事作戦」が開始された。ポーランドは領土割譲を拒み、<span style="color: #002654;">フランス</span>と及び腰の<span style="color: #C8102E;">イギリス</span>の支援を受けて戦争状態に入る。占領地には傀儡政権が置かれた。<span style="color: #002654;">フランス</span>によるザールへの限定攻勢は失敗し、<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>は書類上の交戦状態にとどまる。
 
-Sensing German isolation, the <span style="color: #750e0e;">Soviet Union</span> invades eastern Poland, citing abuses against native Belarusians and Ukrainians under military occupation. A new German–<span style="color: #750e0e;">Soviet</span> war erupts. Defense Minister Hammerstein cultivates ties with the "Little Entente"—states facing their own <span style="color: #750e0e;">Soviet</span>-backed revolutionary threats. An unofficial Mitteleuropa bloc emerges, with Germany at its core, squeezed between a Western capitalist bloc and the Eastern state-<span style="color: #c00000;">socialist</span> order.
+ドイツの孤立を見た<span style="color: #750e0e;">ソビエト連邦</span>は、軍事占領下で現地のベラルーシ人とウクライナ人が虐待されているとしてポーランド東部へ侵攻した。新たな独ソ戦争が勃発する。ハンマーシュタイン国防相は、<span style="color: #750e0e;">ソ連</span>の支援を受けた革命の脅威に直面する「小協商」諸国との関係を築く。ドイツを中核とする非公式の中欧圏が生まれ、西側資本主義圏と東側の国家<span style="color: #c00000;">社会主義</span>秩序に挟まれる。
 
-In 1946, the war ends in stalemate. Poland is partitioned at the Vistula River. Romania and Bulgaria fall under <span style="color: #700000;">Communist</span> control. Western Europe grows closer to the <span style="color: #B31942;">United</span> <span style="color: #0A3161;">States</span>, and a tripolar global order takes shape.
+1946年、戦争は膠着状態のまま終結した。ポーランドはヴィスワ川を境に分割され、ルーマニアとブルガリアは<span style="color: #700000;">共産党</span>の支配下に入る。西欧は<span style="color: #B31942;">アメリカ</span><span style="color: #0A3161;">合衆国</span>へ接近し、三極構造の世界秩序が形づくられた。
 
-By the late 1960s, economic stagnation and renewed domestic unrest—driven by the Red Army Faction and neo-Nazi agitation—force Chancellor Kurt Georg Kiesinger to begin relaxing the dictatorship. The corporatist house of cards that had maintained the regime's stability for decades begins to crumble as independent unions discreetly form. However, Germany remains far from a free and democratic country, the Reichswehr maintains constant watch over politics, exercising real control behind the scenes.
+1960年代末までに、赤軍派とネオナチの扇動がもたらした経済停滞と国内騒乱の再燃により、クルト・ゲオルク・キージンガー首相は独裁制の緩和を始めざるを得なくなった。独立労組が密かに結成されるにつれ、数十年にわたり体制の安定を支えたコーポラティズムの砂上の楼閣は崩れ始める。しかしドイツは自由で民主的な国家にはほど遠く、国防軍が政治を常時監視し、舞台裏で実権を握っている。
 
-Today, the <span style="color: #BFC8CC;">**DNEF**</span> operates as a conventional big-tent political party. Though still marred by corruption, it remains the third major force in German politics, behind the <span style="color: #000000;">**CVP**</span> and <span style="color: #d24a00;">**VSPD**</span>. The Mitteleuropa bloc persists as a fragile intermediary between the West and the East—neither liberal nor <span style="color: #c00000;">socialist</span>, but something in between.
+今日、<span style="color: #BFC8CC;">**DNEF**</span>は通常の包括政党として活動している。いまだ汚職にまみれているが、<span style="color: #000000;">**CVP**</span>と<span style="color: #d24a00;">**VSPD**</span>に次ぐドイツ政界第三の勢力である。中欧圏は西側と東側の脆弱な仲介者として存続している。自由主義でも<span style="color: #c00000;">社会主義</span>でもなく、その中間にある。
 
 - @go_back
 
 @weimar_win
-title: The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic Limps Forward
-subtitle: Ending 2
+title: <span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>共和国は足を引きずり進む
+subtitle: エンディング2
 view-if: (weimar_win and not return_to_normalcy and spd_votes < 50 and spd_r < 50 and pro_republic < 80 and nsdap_votes >= 8 and not civil_war_seen) or (weimar_win and (return_to_normalcy or spd_votes >= 50 or spd_r >= 50 or pro_republic >= 80 or nsdap_votes < 8) and not civil_war_seen and rubicon)
 new-page: true
 
-Following the scarring experience of the <span style="color: #7A3C00;">Nazi</span> movement’s rapid rise and implosion, the flaws of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system became impossible to ignore. But in the end, the <span style="color: #7A3C00;">fascists</span> and <span style="color: #700000;">communists</span> who once battled in the streets now stand together in soup lines. Though a number of neo-<span style="color: #7A3C00;">Nazi</span> movements would emerge after [+ nsdap_leader +]’s mask of sanity slipped, the ideology itself remains irrevocably discredited.
+<span style="color: #7A3C00;">ナチ</span>運動の急伸と自壊という傷痕を残す経験により、<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>体制の欠陥はもはや無視できなくなった。だが結局、かつて街頭で争った<span style="color: #7A3C00;">ファシスト</span>と<span style="color: #700000;">共産主義者</span>は、今や同じ炊き出しの列に並んでいる。[+ nsdap_leader +]の正気の仮面が剝がれた後もいくつかのネオ<span style="color: #7A3C00;">ナチ</span>運動が現れたが、その思想は取り返しのつかないほど信用を失った。
 
-No war as destructive as the Great War would come again. Slowly, Germany and the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span> began to rebuild relations, choosing to forget and forgive. <span style="color: #7A3C00;">Fascism</span> never takes root as a dominant force, and the primary threat to European democracy becomes the resurgent <span style="color: #750e0e;">Soviet Union</span>. The Spanish Civil War ends in 1936 with a Republican victory. [? if austria_defeat: In 1939, Austria's <span style="color: #7A3C00;">Austrofascist</span> regime collapses under popular revolt.?][? if sdapo_win or force_peace: In 1938, Austria's ruling <span style="color: #A50034;">**SDAPÖ**</span> successfully holds a referendum confirming their <i>Anschluss</i> into Germany. ?][? if long_war_2: The war in Austria is eventually won by the <span style="color: #7A3C00;">Austrofascists</span>, who receive generous aid from a <span style="color: #7A3C00;">fascist</span> Italy.?]  Isolated and denied any success in his expansionist aims in Yugoslavia and Greece, Mussolini is deposed in a royalist coup led by King Victor Emmanuel III, and Italy returns to democratic governance[? if long_war_2:, leading to Austria’s government democratizing as a consequence of losing its benefactor?].
+大戦に匹敵する破壊的な戦争は二度と起こらなかった。ドイツと<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>は忘却と赦しを選び、ゆっくりと関係を再建する。<span style="color: #7A3C00;">ファシズム</span>が支配的勢力として根づくことはなく、復活した<span style="color: #750e0e;">ソビエト連邦</span>が欧州民主主義への最大の脅威となった。スペイン内戦は1936年に共和国派の勝利で終わる。[? if austria_defeat: 1939年、オーストリアの<span style="color: #7A3C00;">オーストロファシズム</span>体制は民衆蜂起によって崩壊した。?][? if sdapo_win or force_peace: 1938年、オーストリアを支配する<span style="color: #A50034;">**SDAPÖ**</span>は国民投票を実施し、ドイツへの<i>アンシュルス</i>を承認させた。?][? if long_war_2: オーストリア戦争は、<span style="color: #7A3C00;">ファシスト</span>・イタリアから潤沢な援助を受けた<span style="color: #7A3C00;">オーストロファシスト</span>が最終的に勝利した。?]ユーゴスラビアとギリシャへの拡張主義的野望をことごとく阻まれて孤立したムッソリーニは、国王ヴィットーリオ・エマヌエーレ3世が主導する王党派クーデターで追放され、イタリアは民主政治へ復帰した[? if long_war_2:。後ろ盾を失ったオーストリア政府もその結果民主化した?]。
 
-Africa remains colonized until the 1970s and 80s. Independence, when it comes, is negotiated largely on the terms of the colonizers. Exploitation persists under a different guise. The Cold War unfolds along different lines, as a "state capitalist" <span style="color: #750e0e;">Soviet Union</span> remains intact, forming a bloc with the authoritarian <span style="color: #000099;">Kuomintang</span>-ruled Republic of China and post-independence India, which fought a bloody war to escape <span style="color: #C8102E;">British</span> rule in the 1950s. This tri-polar alliance has solidified into a global axis of its own.
+アフリカは1970年代から80年代まで植民地のまま残る。独立は実現しても、その条件は主として植民地支配者側が定め、搾取は姿を変えて続く。冷戦は異なる構図を取り、「国家資本主義」の<span style="color: #750e0e;">ソビエト連邦</span>は存続し、権威主義的な<span style="color: #000099;">国民党</span>支配下の中華民国、そして1950年代に<span style="color: #C8102E;">イギリス</span>支配から脱するため血みどろの戦争を戦った独立後のインドと陣営を組む。この三極同盟は独自の世界的枢軸へ固まった。
 
-[? if not (pro_republic < 50 and spd_votes < 25 and z_ideology == "Right" and z_relation < 35 and dnvp_ideology == "Radical"): Today, Germany is governed by a stable two-and-a-half party system, rotating power between a non-<span style="color: #9B0000;">Marxist</span> <span style="color: #c00000;">**SPD**</span>, the centrist <span style="color: #000000;">**CVP**</span>, and the liberal <span style="color: #FFCC00;">**LDPD**</span>. However, a surging <span style="color: #D79E2A;">**NDPD**</span> has emerged on the far right, capitalizing on public discontent over a refugee crisis driven by wars in an impoverished and unstable Africa. ?]
+[? if not (pro_republic < 50 and spd_votes < 25 and z_ideology == "Right" and z_relation < 35 and dnvp_ideology == "Radical"): 今日のドイツでは、非<span style="color: #9B0000;">マルクス主義</span>化した<span style="color: #c00000;">**SPD**</span>、中道派の<span style="color: #000000;">**CVP**</span>、自由主義の<span style="color: #FFCC00;">**LDPD**</span>が政権を交代する、安定した二大半政党制が機能している。しかし、貧困と不安定に苦しむアフリカでの戦争が引き起こした難民危機への不満を利用し、極右の<span style="color: #D79E2A;">**NDPD**</span>が急伸している。?]
 
 - @weimar_win_a
 - @go_back_2
 
 @weimar_win_a
-Title: Subending A - The World's Most Unstable Republic
+Title: サブエンディングA――世界で最も不安定な共和国
 view-if: pro_republic < 50 and spd_votes < 25 and z_ideology == "Right" and z_relation < 35 and dnvp_ideology == "Radical"
 
-The political deadlock that defined the gravest crisis of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic has persisted over the years. The <span style="color: #3E88B3;">**DNVP**</span> has never been fully reconciled with a system it was fundamentally opposed to from the start. Meanwhile, the estrangement of the <span style="color: #000000;">Center Party</span> from the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition has only deepened right-wing hostility toward the <span style="color: #c00000;">**SPD**</span>.
+<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>共和国最大の危機を特徴づけた政治的膠着は、何年も続いた。そもそも体制へ根本的に反対していた<span style="color: #3E88B3;">**DNVP**</span>が完全に和解することはなかった。一方、<span style="color: #000000;">中央党</span>と<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>連立の疎遠化は、右翼の<span style="color: #c00000;">**SPD**</span>への敵意をさらに深めた。
 
-The presidency has remained out of reach for the <span style="color: #c00000;">**SPD**</span>, with successors to Hindenburg's worldview continuing to preside over Germany and obstruct our return to executive power. In 1939, a recession—sparked by European instability and rising tensions with the <span style="color: #750e0e;">Soviet Union</span>—triggered another wave of extremism. The Reichswehr was forced to step in to prevent a "March on Berlin" by both <span style="color: #700000;">communists</span> and <span style="color: #7A3C00;">fascism</span>.
+大統領職は<span style="color: #c00000;">**SPD**</span>の手が届かないままで、ヒンデンブルクの世界観を継ぐ人物がドイツの大統領を務め、我々の政権復帰を妨げ続けた。1939年には、欧州の不安定と<span style="color: #750e0e;">ソビエト連邦</span>との緊張激化が引き金となった不況が、新たな急進主義の波を呼んだ。国防軍は<span style="color: #700000;">共産主義者</span>と<span style="color: #7A3C00;">ファシスト</span>双方の「ベルリン進軍」を阻止するため介入を余儀なくされた。
 
-Though real democracy was formally restored in the 1960s following massive public discontent, the <span style="color: #6A1E1E;">**DSU**</span> has remained a persistent force on the far-right. Recently rebranding itself as the <span style="color: #D79E2A;">**NDPD**</span>, it has capitalized on growing public anger over a refugee crisis driven by continued war and instability across Africa. 
+大規模な民衆の不満を受け、1960年代に真の民主政治が正式に復活したものの、<span style="color: #6A1E1E;">**DSU**</span>は極右の恒常的勢力として残った。近年<span style="color: #D79E2A;">**NDPD**</span>へ改称し、アフリカ全土で続く戦争と不安定が生んだ難民危機への怒りを利用している。
 
 - @go_back
 
 @weimar_mega_win
-title: The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic Marches On
-subtitle: Ending 3
+title: <span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>共和国は歩み続ける
+subtitle: エンディング3
 view-if: weimar_win and (return_to_normalcy or spd_votes >= 50 or spd_r >= 50 or pro_republic >= 80 or nsdap_votes < 8) and not civil_war_seen and not rubicon
 new-page: true
 
-At the turn of the decade, the Great Depression and widespread disillusionment with the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system left few optimists in Germany. Yet, the Republic—forged by the will of the people all those years ago—has weathered a crisis of unprecedented proportions. <span style="color: #c00000;">Social Democracy</span> endures, as do its detractors.
+1930年代を迎える頃、世界恐慌と<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>体制への広範な幻滅により、ドイツには楽観論者がほとんど残っていなかった。それでも、かつて民意によって築かれた共和国は、未曾有の危機を切り抜けた。<span style="color: #c00000;">社会民主主義</span>は、その反対者とともに存続している。
 
-No war as destructive as the Great War would come again. Slowly, Germany and the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span> began to rebuild relations, choosing to forget and forgive. <span style="color: #7A3C00;">Fascism</span> never takes root as a dominant force, and the primary threat to European democracy becomes the resurgent <span style="color: #750e0e;">Soviet Union</span>. The Spanish Civil War ends in 1936 with a Republican victory. [? if austria_defeat: In 1939, Austria's <span style="color: #7A3C00;">Austrofascist</span> regime collapses under popular revolt.?][? if sdapo_win or force_peace: In 1938, Austria's ruling <span style="color: #A50034;">**SDAPÖ**</span> successfully holds a referendum confirming their <i>Anschluss</i> into Germany. ?][? if long_war_2: The war in Austria is eventually won by the <span style="color: #7A3C00;">Austrofascists</span>, who receive generous aid from a <span style="color: #7A3C00;">fascist</span> Italy.?] Isolated and denied any success in his expansionist aims in Yugoslavia and Greece, Mussolini is deposed in a royalist coup led by King Victor Emmanuel III, and Italy returns to democratic governance[? if long_war_2:, leading to Austria’s government democratizing as a consequence of losing its benefactor?].
+世界大戦ほど破壊的な戦争が再び起こることはなかった。ドイツと<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>は忘却と赦しを選び、ゆっくりと関係を再建した。<span style="color: #7A3C00;">ファシズム</span>は支配的勢力として根づかず、復活した<span style="color: #750e0e;">ソビエト連邦</span>がヨーロッパ民主主義への最大の脅威となる。スペイン内戦は1936年に共和国派の勝利で終結した。[? if austria_defeat: 1939年、オーストリアの<span style="color: #7A3C00;">オーストロファシズム</span>体制は民衆反乱によって崩壊した。?][? if sdapo_win or force_peace: 1938年、オーストリア与党<span style="color: #A50034;">**SDAPÖ**</span>はドイツへの<i>アンシュルス</i>を承認する国民投票を成功させた。?][? if long_war_2: オーストリア戦争は、<span style="color: #7A3C00;">ファシスト</span>・イタリアから潤沢な援助を受けた<span style="color: #7A3C00;">オーストロファシスト</span>の勝利に終わった。?]ユーゴスラヴィアとギリシャへの拡張目標を何一つ達成できず孤立したムッソリーニは、国王ヴィットーリオ・エマヌエーレ3世率いる王党派のクーデターで失脚し、イタリアは民主政へ復帰した[? if long_war_2:。その結果、後ろ盾を失ったオーストリア政府も民主化した?]。
 
-Africa remains colonized until the 1970s and 80s. Independence, when it comes, is negotiated largely on the terms of the colonizers. Exploitation persists under a different guise. The Cold War unfolds along different lines, as a "state capitalist" <span style="color: #750e0e;">Soviet Union</span> remains intact, forming a bloc with the authoritarian <span style="color: #000099;">Kuomintang</span>-ruled Republic of China and post-independence India, which fought a bloody war to escape <span style="color: #C8102E;">British</span> rule in the 1950s. This tri-polar alliance has solidified into a global axis of its own.
+アフリカでは1970年代から80年代まで植民地支配が続いた。独立も、実現時にはおおむね植民地宗主国側の条件で交渉され、搾取は姿を変えて残存する。「国家資本主義」の<span style="color: #750e0e;">ソビエト連邦</span>が存続したことで、冷戦は異なる構図をたどる。ソ連は、権威主義的な<span style="color: #000099;">国民党</span>支配下の中華民国、そして1950年代に<span style="color: #C8102E;">イギリス</span>支配から逃れるため血みどろの戦争を戦った独立後のインドと陣営を組んだ。この三極同盟は、それ自体が世界的な一大枢軸として固まっている。
 
 - @weimar_mega_win_a
 - @weimar_mega_win_b
 
 @weimar_mega_win_a
-Title: Subending A - One and a Half Party system
+Title: サブエンディングA――一大半政党制
 view-if: spd_votes >= 50 or spd_r >= 50
 
-The <span style="color: #c00000;">**SPD**</span>'s rule over Germany has endured for decades, following its sublime management of the Great Depression and successful expansion of support beyond the urban working class. To this day, the <span style="color: #c00000;">**SPD**</span> retains its status as the "natural governing party," having only been out of office during brief stints in times of crisis. Only a united coalition of all parties from the <span style="color: #FF5349;">**SRPD**</span> to the <span style="color: #3E88B3;">**DNVP**</span> has ever managed to take power—only to quickly collapse, paving the way for yet more years of <span style="color: #c00000;">**SPD**</span> rule.
+世界恐慌への見事な対応と都市労働者階級を越えた支持拡大に成功した後、<span style="color: #c00000;">**SPD**</span>によるドイツ統治は数十年に及んだ。今日まで<span style="color: #c00000;">**SPD**</span>は「自然な政権党」の地位を保ち、野党へ下ったのは危機時の短期間だけである。政権を奪えたのは<span style="color: #FF5349;">**SRPD**</span>から<span style="color: #3E88B3;">**DNVP**</span>まで全党を束ねた連立だけだったが、それもたちまち崩壊し、さらに長い<span style="color: #c00000;">**SPD**</span>統治への道を開いた。
 
 - @go_back
 
 @weimar_mega_win_b
-Title: Subending B - Bloc Politics
+Title: サブエンディングB――ブロック政治
 view-if: spd_votes < 50 and spd_r < 50
 
-The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition has begun to fracture, as the <span style="color: #000000;">Center Party</span> exits the alliance and repositions itself as a center-right force. However, lingering animosity toward the parties further to the right prevents any formal unification. Instead, the newly formed <span style="color: #000000;">Christian People's Party</span> has opted to form a new electoral alliance—the "People's Bloc"—alongside the <span style="color: #3E88B3;">**DNVP**</span> and the newly established <span style="color: #98C22C;">**NLP**</span>—which is essentially a renamed continuation of its predecessor.
+<span style="color: #000000;">中央党</span>が同盟を離れて中道右派勢力へ転じたため、<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>連立は分裂し始めた。しかし、さらに右の諸党への根強い敵意が正式な統合を妨げる。そこで新設の<span style="color: #000000;">キリスト教人民党</span>は、<span style="color: #3E88B3;">**DNVP**</span>、そして実質的に前身政党を改称しただけの新党<span style="color: #98C22C;">**NLP**</span>と、新たな選挙同盟「人民ブロック」を結成した。
 
-We are only able to enter government as part of a "left bloc" with the <span style="color: #E0B0FF;">**RDP**</span>, <span style="color: #FF7F00;">**CSRP**</span>, and <span style="color: #BE3075;">**LSPD**</span>. This has continued to this day, but the inclusion of the purportedly neo-<span style="color: #7A3C00;">Nazi</span> <span style="color: #D79E2A;">**NDPD**</span> into the People's Bloc—capitalizing on public discontent over a refugee crisis sparked by wars in an impoverished and unstable Africa—is deeply concerning.
+我々が政権へ参加できるのは、<span style="color: #E0B0FF;">**RDP**</span>、<span style="color: #FF7F00;">**CSRP**</span>、<span style="color: #BE3075;">**LSPD**</span>と「左翼ブロック」を組む場合だけである。この構図は今日まで続いているが、貧困と不安定に苦しむアフリカの戦争が引き起こした難民危機への不満を利用する、ネオ<span style="color: #7A3C00;">ナチ</span>と目される<span style="color: #D79E2A;">**NDPD**</span>が人民ブロックへ加わったことは、深刻な懸念材料である。
 
 - @go_back
 
 @civil_war_win
-title: Bürgerkrieg
-subtitle: Ending 4
+title: 内戦
+subtitle: エンディング4
 view-if: civil_war_seen and republic_victory
 new-page: true
 
-Following a brief civil war between <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> forces and the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>, we’ve been given a blank slate to rebuild Germany on a truly democratic and social foundation—free, for now, from the fear of reactionary reprisals. A minor coup attempt by General Bredow is foiled, and with it, the Reichswehr is finally brought under the banner of the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ic</span>.
+<span style="color: #000000;">共和</span><span style="color: #DD0000;">国</span><span style="color: #FFCC00;">派</span>と<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の短い内戦を経て、反動派の報復を当面恐れることなく、真に民主的で社会的な基盤の上にドイツを再建する白紙の機会を得た。ブレドウ将軍による小規模なクーデターも阻止され、国防軍はついに<span style="color: #000000;">共和</span><span style="color: #DD0000;">国</span><span style="color: #FFCC00;">派</span>の旗の下へ入った。
 
-But it is not all sunshine and rainbows. The civil war has devastated countless lives, and the costs of reconstruction and welfare have triggered the return of hyperinflationary nightmares. Hunger now exceeds levels seen during the Great Depression, and many are already growing disillusioned with their supposed saviors. Though the reactionary and far-right forces were defeated on the battlefield, it's only a matter of years before a new right-wing movement emerges and takes root among the weary and discontented populace.
+だが、何もかもが順風満帆ではない。内戦は無数の人々の暮らしを破壊し、復興と福祉の費用がハイパーインフレーションの悪夢を再来させた。飢餓は世界恐慌時を上回り、多くの人々が早くも自称救世主たちに幻滅している。反動派と極右勢力は戦場で敗れたが、疲弊し不満を抱く民衆の間に新たな右翼運動が生まれ、根を下ろすまで数年とかからないだろう。
 
-No war as destructive as the Great War would come again. Slowly, Germany and the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span> began to rebuild relations, but the <span style="color: #002654;">French</span> reoccupation of the Rhineland has complicated efforts. <span style="color: #7A3C00;">Fascism</span> never takes root as a dominant force, and the primary threat to European democracy becomes the resurgent <span style="color: #750e0e;">Soviet Union</span>. The Spanish Civil War ends in 1936 with a Republican victory. [? if austria_defeat: In 1939, Austria's <span style="color: #7A3C00;">Austrofascist</span> regime collapses under popular revolt.?][? if sdapo_win or force_peace: In 1938, Austria's ruling <span style="color: #A50034;">**SDAPÖ**</span> successfully holds a referendum confirming their <i>Anschluss</i> into Germany. ?][? if long_war_2: The war in Austria is eventually won by the <span style="color: #7A3C00;">Austrofascists</span>, who receive generous aid from a <span style="color: #7A3C00;">fascist</span> Italy.?] Isolated and denied any success in his expansionist aims in Yugoslavia and Greece, Mussolini is deposed in a royalist coup led by King Victor Emmanuel III, and Italy returns to democratic governance[? if long_war_2:, leading to Austria’s government democratizing as a consequence of losing its benefactor?]..
+世界大戦ほど破壊的な戦争が再び起こることはなかった。ドイツと<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>はゆっくりと関係を再建したが、<span style="color: #002654;">フランス</span>によるラインラント再占領がその努力を複雑にした。<span style="color: #7A3C00;">ファシズム</span>は支配的勢力として根づかず、復活した<span style="color: #750e0e;">ソビエト連邦</span>がヨーロッパ民主主義への最大の脅威となる。スペイン内戦は1936年に共和国派の勝利で終結した。[? if austria_defeat: 1939年、オーストリアの<span style="color: #7A3C00;">オーストロファシズム</span>体制は民衆反乱によって崩壊した。?][? if sdapo_win or force_peace: 1938年、オーストリア与党<span style="color: #A50034;">**SDAPÖ**</span>はドイツへの<i>アンシュルス</i>を承認する国民投票を成功させた。?][? if long_war_2: オーストリア戦争は、<span style="color: #7A3C00;">ファシスト</span>・イタリアから潤沢な援助を受けた<span style="color: #7A3C00;">オーストロファシスト</span>の勝利に終わった。?]ユーゴスラヴィアとギリシャへの拡張目標を何一つ達成できず孤立したムッソリーニは、国王ヴィットーリオ・エマヌエーレ3世率いる王党派のクーデターで失脚し、イタリアは民主政へ復帰した[? if long_war_2:。その結果、後ろ盾を失ったオーストリア政府も民主化した?]。
 
-Africa remains colonized until the 1970s and 80s. Independence, when it comes, is negotiated largely on the terms of the colonizers. Exploitation persists under a different guise. The Cold War unfolds along different lines, as a "state capitalist" <span style="color: #750e0e;">Soviet Union</span> remains intact, forming a bloc with the authoritarian <span style="color: #000099;">Kuomintang</span>-ruled Republic of China and post-independence India, which fought a bloody war to escape <span style="color: #C8102E;">British</span> rule in the 1950s. This tri-polar alliance has solidified into a global axis of its own.
+アフリカでは1970年代から80年代まで植民地支配が続いた。独立も、実現時にはおおむね植民地宗主国側の条件で交渉され、搾取は姿を変えて残存する。「国家資本主義」の<span style="color: #750e0e;">ソビエト連邦</span>が存続したことで、冷戦は異なる構図をたどる。ソ連は、権威主義的な<span style="color: #000099;">国民党</span>支配下の中華民国、そして1950年代に<span style="color: #C8102E;">イギリス</span>支配から逃れるため血みどろの戦争を戦った独立後のインドと陣営を組んだ。この三極同盟は、それ自体が世界的な一大枢軸として固まっている。
 
 - @civil_war_win_a
 - @civil_war_win_b
 
 @civil_war_win_a
-Title: Subending A - A False Victory
+Title: サブエンディングA――偽りの勝利
 view-if: pro_republic < 70 or spd_votes < 30
 
-The fracturing of the <span style="color: #c00000;">**SPD**</span> into the <span style="color: #f0456a;">**SVD**</span> and the <span style="color: #9B0000;">**SED**</span> in the wake of post-war optimism deeply divided the German left. As in 1920, leftist disunity once again produced a scenario where a "New <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition"—composed of the <span style="color: #f0456a;">**SVD**</span>, <span style="color: #FFCC00;">LVP</span>, and <span style="color: #FF7F00;">**CSRP**</span>—was unable to secure a majority. This led to repeated snap elections, ultimately fueling another resurgence of extremism.
+戦後の楽観論が広がるなか、<span style="color: #c00000;">**SPD**</span>が<span style="color: #f0456a;">**SVD**</span>と<span style="color: #9B0000;">**SED**</span>へ分裂し、ドイツ左翼は深く割れた。1920年と同じく、左派の不統一により、<span style="color: #f0456a;">**SVD**</span>、<span style="color: #FFCC00;">LVP</span>、<span style="color: #FF7F00;">**CSRP**</span>からなる「新<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>連立」は過半数を確保できなかった。解散総選挙が繰り返され、ついには急進主義の再台頭を招いた。
 
-It was only through the formation of the <span style="color: #BFC8CC;">German National Unity Front</span>—a broad alliance of all bourgeois parties—and the election of Otto Gessler as president that Germany finally escaped its political deadlock. The resulting coalition of the <span style="color: #000000;">**ZCA**</span>, <span style="color: #FFCC00;">**LVP**</span>, and <span style="color: #38C538;">**DBP**</span> emerged as the new “natural governing bloc,” as persistent ideological rifts continued to paralyze the left. The <span style="color: #f0456a;">**SVD**</span>, increasingly marginalized, was at times compelled to tolerate these centrist cabinets in the name of stability—abandoning its <span style="color: #9B0000;">Marxist</span> roots in the process and ceding leadership of the left to the more radical <span style="color: #9B0000;">**SED**</span>.
+全ブルジョワ政党の広範な同盟である<span style="color: #BFC8CC;">ドイツ国民統一戦線</span>の結成と、オットー・ゲスラーの大統領当選によって、ドイツはようやく政治的膠着を脱した。根深い思想対立で左派が麻痺し続けるなか、<span style="color: #000000;">**ZCA**</span>、<span style="color: #FFCC00;">**LVP**</span>、<span style="color: #38C538;">**DBP**</span>の連立が新たな「自然な政権ブロック」となる。周縁化を深めた<span style="color: #f0456a;">**SVD**</span>は、安定の名の下にこれら中道内閣への閣外協力を強いられることもあり、その過程で<span style="color: #9B0000;">マルクス主義</span>の根を捨て、左派の主導権をより急進的な<span style="color: #9B0000;">**SED**</span>へ譲った。
 
-Only with the third wave of democratization in the 1990s did the long-divided German left begin to reunify. The gradual moderation and eventual merger of the <span style="color: #9B0000;">**SED**</span> and the <span style="color: #f0456a;">**SVD**</span> culminated in the formation of the <span style="color: #c00000;">**VSPD**</span>, which at last returned to government after decades in opposition.
+長く分裂していたドイツ左翼が再統一へ向かったのは、1990年代の第三次民主化の波を待ってからだった。<span style="color: #9B0000;">**SED**</span>と<span style="color: #f0456a;">**SVD**</span>は徐々に穏健化して最終的に合併し、<span style="color: #c00000;">**VSPD**</span>を結成した。同党は数十年の野党生活を経て、ついに政権へ復帰した。
 
 - @go_back
 
 @civil_war_win_b
-Title: Subending B - The Socialist Dream
+Title: サブエンディングB――社会主義の夢
 view-if: pro_republic >= 70 and spd_votes >= 30
 
-Despite the blank slate granted to the <span style="color: #c00000;">**SPD**</span> to reshape Germany in its image, the country has faced relentless challenges: the hyperinflationary crisis of the 1930s, the resurgence of the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> in the 1940s, and a series of counterproductive bans that only emboldened reactionary forces. Yet, step by step, Germany rebuilds.
+<span style="color: #c00000;">**SPD**</span>には自らの理想に沿ってドイツを作り直す白紙の機会が与えられたが、国は絶え間ない難題に直面した。1930年代のハイパーインフレーション危機、1940年代の<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>復活、そして反動勢力を勢いづかせただけの逆効果な禁止措置の数々である。それでもドイツは一歩ずつ再建されていく。
 
-Even following the <span style="color: #c00000;">**SPD**</span>’s splintering into the <span style="color: #9B0000;">**SED**</span> and <span style="color: #f0456a;">**SVD**</span> due to foreign policy disputes in the 1940s, both parties cooperated to construct a comprehensive welfare state—one that could stand alongside the Nordic models in its scope and ambition.
+1940年代の外交論争で<span style="color: #c00000;">**SPD**</span>が<span style="color: #9B0000;">**SED**</span>と<span style="color: #f0456a;">**SVD**</span>へ分裂した後も、両党は協力して包括的な福祉国家を建設した。その規模と野心は北欧モデルに比肩しうるものだった。
 
-The bourgeois opposition—comprising the <span style="color: #000000;">**ZCA**</span>, <span style="color: #FFCC00;">**LVP**</span>, and <span style="color: #38C538;">**DBP**</span>—was relegated to a state of permanent irrelevance, unable to halt the wave of reforms: the rise of workplace councils, sweeping nationalizations, and the assertion of state control over the Reichsbank.
+<span style="color: #000000;">**ZCA**</span>、<span style="color: #FFCC00;">**LVP**</span>、<span style="color: #38C538;">**DBP**</span>からなるブルジョワ野党は恒久的に無力な立場へ追いやられ、事業所評議会の台頭、広範な国有化、ライヒスバンクへの国家統制という改革の波を止められなかった。
 
-However, the stagflation of the 1970s marked the beginning of the end for traditional leftist dominance. As the middle class expanded at the expense of the working class, the foundations of class politics began to erode—giving rise to a new multiparty system and ending the era of unchallenged <span style="color: #c00000;">socialist</span> rule.
+しかし1970年代のスタグフレーションは、伝統的な左派優位の終わりの始まりとなった。労働者階級が縮小して中間層が拡大すると、階級政治の土台は崩れ始める。新たな多党制が生まれ、対抗勢力なき<span style="color: #c00000;">社会主義</span>統治の時代は終わった。
 
 - @go_back
 
 @civil_war_long
-title: Germany Divided
-subtitle: Ending 5
+title: 分断されたドイツ
+subtitle: エンディング5
 view-if: civil_war_seen and long_war and not (president = "Hergt" and chancellor == "Seldte")
 new-page: true
 
-As the frontlines settle, a <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> state—committed to the continuation of <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Germany—takes root in the West, while a newly formed Ruhr Red Army establishes <span style="color: #700000;">**Communist**</span> control over the Rhineland. The fragile alliance of <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> forces soon fractures, with the <span style="color: #3E88B3;">**Stahlhelm**</span> and the <span style="color: #7A3C00;">**SA**</span> turning against one another in violent internal conflict.
+戦線が固まると、西部には<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>・ドイツの存続を掲げる<span style="color: #000000;">共和</span><span style="color: #DD0000;">国</span><span style="color: #FFCC00;">派</span>国家が根づく一方、新設のルール赤軍がラインラントを<span style="color: #700000;">**共産主義**</span>支配下に置いた。<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>勢力の脆い同盟はほどなく分裂し、<span style="color: #3E88B3;">**鉄兜団**</span>と<span style="color: #7A3C00;">**SA**</span>が激しい内紛で互いに牙をむく。
 
-Ernst Röhm eventually reduces [+ nsdap_leader +] to a puppet, seizing full control and unleashing unspeakable atrocities against the local <span style="color: #005EB8;">Jewish</span> and Polish populations in the territories under their control. A renewed offensive by <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> forces exploits the chaos on the Right, culminating in the defeat of the reactionary militias. However, a brutal campaign continues in the Ruhr, where every town exacts a death toll of thousands.
+エルンスト・レームはついに[+ nsdap_leader +]を傀儡へ落とし、全権を掌握して支配地域の<span style="color: #005EB8;">ユダヤ人</span>とポーランド人住民に言語を絶する残虐行為を加えた。<span style="color: #000000;">共和</span><span style="color: #DD0000;">国</span><span style="color: #FFCC00;">派</span>軍は右翼の混乱に乗じて攻勢を再開し、反動派民兵を打ち破る。しかしルールでは残酷な戦役が続き、町を一つ奪うたび数千人の死者が出る。
 
-By 1936, Germany remains fractured. Poland has seized the moment to occupy parts of East Prussia and Silesia, citing the protection of ethnic Poles. Meanwhile, the <span style="color: #002654;">French</span> dispatch a "peacekeeping" force into the Rhineland. In the end, it is not so much a victory for the Republic as it is a decisive collapse of the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.
+1936年になってもドイツは分裂している。ポーランドは機に乗じ、ポーランド系住民の保護を名目に東プロイセンとシュレージエンの一部を占領した。一方、<span style="color: #002654;">フランス</span>はラインラントへ「平和維持軍」を派遣する。結局、これは共和国の勝利というより、<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の決定的な崩壊だった。
 
-No war as destructive as the Great War would come again. Slowly, Germany and the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span> began to rebuild relations, but the <span style="color: #002654;">French</span> reoccupation of the Rhineland has complicated efforts. <span style="color: #7A3C00;">Fascism</span> never takes root as a dominant force, and the primary threat to European democracy becomes the resurgent <span style="color: #750e0e;">Soviet Union</span>. The Spanish Civil War ends in 1936 with a Republican victory. [? if austria_defeat: In 1939, Austria's <span style="color: #7A3C00;">Austrofascist</span> regime collapses under popular revolt.?][? if sdapo_win or force_peace: In 1938, Austria's ruling <span style="color: #A50034;">**SDAPÖ**</span> successfully holds a referendum confirming their <i>Anschluss</i> into Germany. ?][? if long_war_2: The war in Austria is eventually won by the <span style="color: #7A3C00;">Austrofascists</span>, who receive generous aid from a <span style="color: #7A3C00;">fascist</span> Italy.?] Isolated and denied any success in his expansionist aims in Yugoslavia and Greece, Mussolini is deposed in a royalist coup led by King Victor Emmanuel III, and Italy returns to democratic governance[? if long_war_2:, leading to Austria’s government democratizing as a consequence of losing its benefactor?].
+世界大戦ほど破壊的な戦争が再び起こることはなかった。ドイツと<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>はゆっくりと関係を再建したが、<span style="color: #002654;">フランス</span>によるラインラント再占領がその努力を複雑にした。<span style="color: #7A3C00;">ファシズム</span>は支配的勢力として根づかず、復活した<span style="color: #750e0e;">ソビエト連邦</span>がヨーロッパ民主主義への最大の脅威となる。スペイン内戦は1936年に共和国派の勝利で終結した。[? if austria_defeat: 1939年、オーストリアの<span style="color: #7A3C00;">オーストロファシズム</span>体制は民衆反乱によって崩壊した。?][? if sdapo_win or force_peace: 1938年、オーストリア与党<span style="color: #A50034;">**SDAPÖ**</span>はドイツへの<i>アンシュルス</i>を承認する国民投票を成功させた。?][? if long_war_2: オーストリア戦争は、<span style="color: #7A3C00;">ファシスト</span>・イタリアから潤沢な援助を受けた<span style="color: #7A3C00;">オーストロファシスト</span>の勝利に終わった。?]ユーゴスラヴィアとギリシャへの拡張目標を何一つ達成できず孤立したムッソリーニは、国王ヴィットーリオ・エマヌエーレ3世率いる王党派のクーデターで失脚し、イタリアは民主政へ復帰した[? if long_war_2:。その結果、後ろ盾を失ったオーストリア政府も民主化した?]。
 
-Africa remains colonized until the 1970s and 80s. Independence, when it comes, is negotiated largely on the terms of the colonizers. Exploitation persists under a different guise. The Cold War unfolds along different lines, as a "state capitalist" <span style="color: #750e0e;">Soviet Union</span> remains intact, forming a bloc with the authoritarian <span style="color: #000099;">Kuomintang</span>-ruled Republic of China and post-independence India, which fought a bloody war to escape <span style="color: #C8102E;">British</span> rule in the 1950s. This tri-polar alliance has solidified into a global axis of its own.
+アフリカでは1970年代から80年代まで植民地支配が続いた。独立も、実現時にはおおむね植民地宗主国側の条件で交渉され、搾取は姿を変えて残存する。「国家資本主義」の<span style="color: #750e0e;">ソビエト連邦</span>が存続したことで、冷戦は異なる構図をたどる。ソ連は、権威主義的な<span style="color: #000099;">国民党</span>支配下の中華民国、そして1950年代に<span style="color: #C8102E;">イギリス</span>支配から逃れるため血みどろの戦争を戦った独立後のインドと陣営を組んだ。この三極同盟は、それ自体が世界的な一大枢軸として固まっている。
 
 - @civil_war_long_a
 - @civil_war_long_b
 
 @civil_war_long_a
-Title: Subending A - The Black Spot of Europe
+Title: サブエンディングA――欧州の黒点
 view-if: not west_aid
 
-Despite the Republic’s paper victory, revanchist sentiment over the loss of Eastern and Western territories, coupled with mass radicalization from the staggering death toll, destruction, hyperinflation, widespread hunger, and the absence of meaningful foreign aid, has deeply discredited the political establishment. Under pressure from the Reichswehr, martial law remains in place for years, with the military increasingly intruding into civilian governance.
+共和国は書類上勝利したものの、東西の領土喪失への報復主義と、膨大な死者、破壊、ハイパーインフレーション、広範な飢餓、有意な外国援助の欠如がもたらした大衆の急進化により、既成政治勢力は深刻に信用を失った。国防軍の圧力で戒厳令は何年も維持され、軍は文民統治への介入を強めていく。
 
-By 1939, a global recession—triggered by escalating instability across Europe and threats from the <span style="color: #750e0e;">Soviet</span> Union—obliterates the reconstruction progress made by the ruling <span style="color: #c00000;">**SPD**</span>, plunging the country into yet another crisis. Following a March on Berlin, a "Third Positionist" regime seizes power, led by a new political party composed of former <span style="color: #7A3C00;">Nazis</span> and disillusioned <span style="color: #c00000;">socialists</span>.
+1939年までに、欧州全域の不安定化と<span style="color: #750e0e;">ソビエト</span>連邦の脅威が引き金となった世界不況が、与党<span style="color: #c00000;">**SPD**</span>の復興成果を消し去り、国を再び危機へ陥れた。「ベルリン進軍」の後、元<span style="color: #7A3C00;">ナチ党員</span>と幻滅した<span style="color: #c00000;">社会主義者</span>からなる新党が率いる「第三の位置」体制が権力を握る。
 
-Germany pivots toward autarky and radical self-reliance, sealing its borders to foreigners. The regime earns the moniker "Black Spot of Europe," ruling from 1940 to 1996. During this period, it successfully coerces the withdrawal of foreign troops from the Rhineland and reclaims its lost eastern territories—including the Polish Corridor—in 1946, capitalizing on Poland's distraction with the <span style="color: #750e0e;">Soviet</span> threat and the shifting priorities of the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span> as they fight war with Japan.
+ドイツはアウタルキーと徹底した自力更生へ転じ、外国人に国境を閉ざした。「欧州の黒点」と呼ばれた体制は1940年から1996年まで続く。この間、ラインラントからの外国軍撤退を強要し、ポーランドが<span style="color: #750e0e;">ソ連</span>の脅威に気を取られ、対日戦争中の<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>が優先順位を変えた隙を突き、1946年にはポーランド回廊を含む失地を東方で回復した。
 
-Today, Germany remains largely isolated from the rest of the world, with the successor to the dictatorship of old being not much better, being ruled by oligarchs and the wealthy who are relicts of the past regime. Now, the task of <span style="color: #c00000;">Social Democracy</span> is to prepare for the next election. The incumbent government of Wolfgang Schäuble is unpopular, and we stand to gain. Perhaps the next government will have a <span style="color: #c00000;">socialist</span> plurality.
+今日もドイツは世界からほぼ孤立し、旧独裁体制の後継政権も大差なく、旧体制の遺物である寡頭支配者と富裕層に統治されている。今や<span style="color: #c00000;">社会民主主義</span>の任務は次回選挙への準備である。現職のヴォルフガング・ショイブレ政権は不人気であり、我々には躍進の余地がある。次の政府では<span style="color: #c00000;">社会主義者</span>が比較第一党になるかもしれない。
 
 - @go_back
 
 @civil_war_long_b
-Title: Subending B - A <span style="color: #001489;">European</span> <span style="color: #FFDD00;">Future</span>
+Title: サブエンディングB――<span style="color: #001489;">欧州</span>の<span style="color: #FFDD00;">未来</span>
 view-if: west_aid
 
-In exchange for the return of the Rhineland and the lifting of its post-war reparations burden, Germany is compelled to enter a defensive pact with <span style="color: #002654;">France</span> and <span style="color: #C8102E;">Britain</span>. With assistance from the <span style="color: #10069f;">League</span> of <span style="color: #10069f;">Nations</span> and the <span style="color: #B31942;">United</span> <span style="color: #0A3161;">States</span>, the so-called "Morgenthau Plan", funded by the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span>, successfully facilitates German reconstruction and ushers in a <i>Wirtschaftswunder</i> under the leadership of Chancellor Konrad Adenauer.
+ラインラント返還と戦後賠償負担の免除と引き換えに、ドイツは<span style="color: #002654;">フランス</span>、<span style="color: #C8102E;">イギリス</span>との防衛協定へ加入させられた。<span style="color: #10069f;">国際</span><span style="color: #10069f;">連盟</span>と<span style="color: #B31942;">アメリカ</span><span style="color: #0A3161;">合衆国</span>の協力を得て、<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>が資金を拠出する、いわゆる「モーゲンソー・プラン」がドイツ復興を成功へ導き、コンラート・アデナウアー首相の下で<i>Wirtschaftswunder</i>をもたらした。
 
-By the end of the decade, the economies of the <span style="color: #0A3161;">West</span> become increasingly interconnected. Further integration into a nascent "<span style="color: #001489;">European</span> <span style="color: #FFDD00;">Union</span>"—featuring free trade and the free movement of people—is negotiated by the internationalist <span style="color: #c00000;">**SPD**</span> and the <span style="color: #FFCC00;">**LVP**</span>. Renewed <span style="color: #750e0e;">Soviet</span> threats to Eastern European nations like Finland and Poland, alongside the democratization of Austria and Italy, have once again galvanized a united European response to <span style="color: #750e0e;">Bolshevik</span> aggression.
+1940年代末までに<span style="color: #0A3161;">西側</span>諸国の経済的結びつきは強まった。国際主義を掲げる<span style="color: #c00000;">**SPD**</span>と<span style="color: #FFCC00;">**LVP**</span>は、自由貿易と人の自由移動を備えた萌芽期の「<span style="color: #001489;">欧州</span><span style="color: #FFDD00;">連合</span>」へのさらなる統合を交渉する。フィンランドやポーランドなど東欧諸国への<span style="color: #750e0e;">ソ連</span>の脅威再燃と、オーストリア及びイタリアの民主化により、<span style="color: #750e0e;">ボリシェヴィキ</span>の侵略へ対抗する欧州の結束が再び生まれた。
 
-Today, Germany remains a pillar of a federal <span style="color: #001489;">European</span> <span style="color: #FFDD00;">Union</span> stretching from Lisbon to Athens. Now, the task of <span style="color: #f0456a;">Social Democracy</span> is to prepare for the next election. The incumbent government of Klaus Schwab is unpopular, and we stand to gain. Perhaps the next government will have a <span style="color: #f0456a;">socialist</span> plurality.
+今日、ドイツはリスボンからアテネまで広がる連邦制の<span style="color: #001489;">欧州</span><span style="color: #FFDD00;">連合</span>を支える柱である。今や<span style="color: #f0456a;">社会民主主義</span>の任務は次回選挙への準備である。現職のクラウス・シュワブ政権は不人気であり、我々には躍進の余地がある。次の政府では<span style="color: #f0456a;">社会主義者</span>が比較第一党になるかもしれない。
 
 - @go_back
 
 @monarchy_win
-title: Return of the Kaiserreich
-subtitle: Ending 6
+title: ドイツ帝国の復活
+subtitle: エンディング6
 view-if: president = "Hergt" and chancellor == "Seldte"
 new-page: true
 
-With the <span style="color: #7A3C00;">Nazi</span> movement in decline following the end of the economic depression and an internal leadership struggle, and with the election of the <span style="color: #3E88B3;">nationalist</span> Hergt alongside the appointment of the <span style="color: #3E88B3;">**Stahlhelm**</span>'s Seldte, it appears that <span style="color: #808080;">reaction</span> has triumphed over <span style="color: #7A3C00;">revolution</span>. Although various neo-<span style="color: #7A3C00;">Nazi</span> splinters emerged after [+ nsdap_leader +]’s final descent into delusion, the ideology itself remains irrevocably discredited.
+経済恐慌の終息と党内指導権争いで<span style="color: #7A3C00;">ナチ</span>運動が衰退し、<span style="color: #3E88B3;">国民主義者</span>ヘルクトの当選と<span style="color: #3E88B3;">**鉄兜団**</span>のゼルテの任命により、<span style="color: #808080;">反動</span>が<span style="color: #7A3C00;">革命</span>に勝利したようだ。[+ nsdap_leader +]がついに妄想へ沈んだ後、さまざまなネオ<span style="color: #7A3C00;">ナチ</span>分派が現れたものの、その思想は取り返しのつかないほど信用を失った。
 
-Following the peaceful return of the Saarland via referendum in 1935, the Reichswehr suppressed an attempted uprising by the <span style="color: #7A3C00;">**SA**</span> and purged the remaining <span style="color: #7A3C00;">Nazi</span> elements from government. In the heavily managed 1936 elections, under the watch of "electoral monitors", the <span style="color: #808080;">monarchist</span> parties secured a manufactured mandate. Soon after, a secret rearmament program was launched, and shortly after, the crowning of Wilhelm III—blessed by his father—restores Germany's constitutional monarchy.
+1935年の国民投票でザールラントが平和裏に復帰すると、国防軍は<span style="color: #7A3C00;">**SA**</span>の蜂起未遂を鎮圧し、政府に残る<span style="color: #7A3C00;">ナチ</span>分子を粛清した。「選挙監視員」が見張る厳重に管理された1936年選挙で、<span style="color: #808080;">君主主義</span>諸党は捏造された信任を得る。ほどなく秘密再軍備計画が始まり、父帝の祝福を受けたヴィルヘルム3世の戴冠によってドイツの立憲君主制が復活した。
 
-With ambitions focused on reclaiming lost territories in the East and Alsace-Lorraine in the West, Germany began courting allies for its revisionist aims. The restoration of Habsburg rule in Austria and the toppling of Mussolini in a royalist coup led by King Victor Emmanuel III drastically altered the balance of power in Europe. When Poland refused to return former imperial lands, the <span style="color: #C8102E;">British</span>, and more reluctantly the <span style="color: #002654;">French</span>, turned a blind eye to escalating German border skirmishes. The <span style="color: #700000;">Communist</span> victory in Spain, and the wave of revolutions it triggered across the continent, forced the imperial powers to prioritize containment of the <span style="color: #700000;">Soviet</span> threat above all else.
+東方の失地と西方のアルザス＝ロレーヌ奪還を野望の中心に据え、ドイツは修正主義的目標を支える同盟国を求め始めた。オーストリアでのハプスブルク家復位と、国王ヴィットーリオ・エマヌエーレ3世率いる王党派クーデターによるムッソリーニ打倒は、欧州の勢力均衡を劇的に変える。ポーランドが旧帝国領返還を拒むと、<span style="color: #C8102E;">イギリス</span>は、より消極的ながら<span style="color: #002654;">フランス</span>も、激化するドイツ国境紛争を黙認した。スペインでの<span style="color: #700000;">共産党</span>勝利と、それが大陸全土に引き起こした革命の波により、帝国主義諸国は何よりも<span style="color: #700000;">ソ連</span>の脅威封じ込めを優先した。
 
-Africa remains colonized until the 1980s and 90s. Independence, when it comes, is negotiated largely on the terms of the colonizers. Exploitation persists under a different guise. The Cold War unfolds along different lines, as a "state capitalist" <span style="color: #750e0e;">Soviet Union</span> remains intact, forming a bloc with the authoritarian <span style="color: #000099;">Kuomintang</span>-ruled Republic of China and post-independence India, which fought a bloody war to escape <span style="color: #C8102E;">British</span> rule in the 1950s. This tri-polar alliance evolved into a global axis of its own, encompassing numerous <span style="color: #700000;">Communist</span> regimes worldwide.
+アフリカは1980年代から90年代まで植民地のまま残る。独立は実現しても、その条件は主として植民地支配者側が定め、搾取は姿を変えて続く。冷戦は異なる構図を取り、「国家資本主義」の<span style="color: #750e0e;">ソビエト連邦</span>は存続し、権威主義的な<span style="color: #000099;">国民党</span>支配下の中華民国、そして1950年代に<span style="color: #C8102E;">イギリス</span>支配から脱するため血みどろの戦争を戦った独立後のインドと陣営を組む。この三極同盟は、世界各地の多数の<span style="color: #700000;">共産主義</span>体制を包含する独自の世界的枢軸へ発展した。
 
-Today, Germany is a dominant party state, ruled by the elites of the <span style="color: #3E88B3;">**DNVP**</span>, who have maintained control for nearly a century. Although dissatisfaction with the monarchy and the growing strength of the opposition have forced some minor reforms, each new election consistently delivers a majority for the incumbent coalition. However, cracks are beginning to show in the system. New, young, and popular <span style="color: #c00000;">**SPD**</span> leaders are making inroads despite state repression, with Sahra Wagenknecht being the first to achieve a significant victory, having been elected Minister-President of Thuringia. Perhaps the next government will have a mere <span style="color: #3E88B3;">nationalist</span> plurality.
+今日のドイツは、一世紀近く支配を維持してきた<span style="color: #3E88B3;">**DNVP**</span>エリートが統治する一党優位国家である。君主制への不満と野党の伸長により小規模な改革を強いられたものの、選挙のたび現職連立が必ず過半数を得る。しかし体制には亀裂が現れ始めた。国家の弾圧にもかかわらず、若く人気のある新世代の<span style="color: #c00000;">**SPD**</span>指導者が勢力を伸ばし、ザーラ・ヴァーゲンクネヒトがテューリンゲン州首相に選ばれて初の大きな勝利を収めた。次の政府では<span style="color: #3E88B3;">国民主義者</span>が過半数に届かず、比較第一党にとどまるかもしれない。
 
 - @go_back
 
 @papen_win
-title: The Imperfect Dictatorship
-subtitle: Ending 7
+title: 不完全な独裁制
+subtitle: エンディング7
 view-if: papen_win
 new-page: true
 
-Despite being hated by nearly 90% of the population, Franz von Papen's surprising victory—secured through the backing of the elites and the Reichswehr—brought him to power in a deeply fractured Germany. However, consolidating that power proved difficult. Despite the eradication of organized <span style="color: #700000;">communist</span> and <span style="color: #c00000;">social democratic</span> resistance, the Ruhr remains ablaze with unrest. Meanwhile, ongoing conflict between Papen and Kurt von Schleicher, who still maintains significant influence within the military, further destabilizes his regime.
+国民の9割近くから憎まれていたにもかかわらず、エリート層と国防軍の支援で意外な勝利を得たフランツ・フォン・パーペンは、深く分裂したドイツで権力を握った。しかし、その権力固めは困難だった。組織的な<span style="color: #700000;">共産主義</span>者と<span style="color: #c00000;">社会民主主義</span>者の抵抗を根絶しても、ルール地方は騒乱の炎に包まれたままである。軍内になお大きな影響力を持つクルト・フォン・シュライヒャーとパーペンの抗争も続き、体制をさらに不安定にした。
 
-Papen's nationalist foreign policy has won him few friends abroad, and his goal of unshackling Germany from the chains of Versailles remains distant. In an effort to restore order, Papen forms a "National Regeneration Government", rooted in conservative Christian values, militarism, and monarchism. Following the death of President Paul von Hindenburg, Wilhelm III is crowned as a figurehead monarch, while real power remains concentrated in the hands of the political elite and industrial magnates. Germany is transformed into a dictatorship, with the "New State" envisioned by Papen centralizing authority in the executive.
+パーペンの国民主義外交は国外にほとんど友を得られず、ドイツをヴェルサイユの鎖から解き放つ目標は遠いままである。秩序回復を目指し、パーペンは保守的キリスト教価値観、軍国主義、君主主義に根ざす「国民再生政府」を組織する。パウル・フォン・ヒンデンブルク大統領の死後、ヴィルヘルム3世が名目的君主として戴冠する一方、実権は政治エリートと産業界の大立者に集中した。ドイツは独裁国家へ変わり、パーペンが構想した「新国家」は行政権へ権力を集中させる。
 
-After a period of economic recovery in the late 1930s, Papen turns his attention toward foreign policy, seeking to broker an entente with the <span style="color: #002654;">French</span> to combat <span style="color: #700000;">Bolshevism</span> in the East. When these efforts failed, he turned to cooperate with <span style="color: #7A3C00;">Austrofascist</span> Austria and Mussolini’s Italy, who remained among Germany’s few continental allies.
+1930年代後半の景気回復期を経て、パーペンは外交へ目を向け、東方の<span style="color: #700000;">ボリシェヴィズム</span>に対抗するため<span style="color: #002654;">フランス</span>との協商を模索した。この試みが失敗すると、ドイツに残された数少ない大陸の同盟国である<span style="color: #7A3C00;">オーストロファシズム</span>体制のオーストリアとムッソリーニのイタリアとの協力へ転じた。
 
-However by the 1950s, however, the regime begins to decay. Corruption, unrest, and economic stagnation—coupled with Papen’s death—trigger a political thaw. The "Prussian Spring" ushers in a wave of democratic reforms, but the entrenched elites of the old system work to protect their interests. The military retains an active and unofficial role in politics, making it impossible for the reconstituted <span style="color: #c00000;">**SPD**</span> to assume power without risking a coup.
+しかし1950年代までに体制は腐敗し始める。汚職、騒乱、経済停滞にパーペンの死が重なり、政治的雪解けが始まった。「プロイセンの春」は民主改革の波をもたらすが、旧体制に根を張るエリート層は既得権益の保護に動く。軍は政治で非公式ながら積極的な役割を保ち、再建された<span style="color: #c00000;">**SPD**</span>はクーデターの危険を冒さずに政権へ就けない。
 
-Africa remains colonized until the 1980s and 90s. Independence, when it comes, is negotiated largely on the terms of the colonizers. Exploitation persists under a different guise. The Cold War unfolds along different lines, as a <span style="color: #750e0e;">Soviet Union</span> surviving intact but slightly liberalized, serving as the key pillar in a global alliance encompassing the <span style="color: #700000;">Communist</span> regimes worldwide. 
+アフリカは1980年代から90年代まで植民地のまま残る。独立は実現しても、その条件は主として植民地支配者側が定め、搾取は姿を変えて続く。冷戦は異なる構図を取り、わずかに自由化されながらも存続した<span style="color: #750e0e;">ソビエト連邦</span>が、世界各地の<span style="color: #700000;">共産主義</span>体制を包含する世界同盟の中核となる。
 
-Today, Germany is a multiparty democracy, following the ousting of the successor conservative party founded by figures of the former regime. Yet all is not well in the republic. Friedrich Merz, now President, has drawn criticism for invoking nostalgia for the old system, sparking fears of democratic backsliding and concentration of power in favor of the oligarchs. Now, the task of <span style="color: #f0456a;">Social Democracy</span> is to prepare for the next presidential election. Our Sahra Wagenknecht is considering running for another non-consecutive term; perhaps she is our only hope to topple Merz.
+旧体制の人物が創設した後継保守政党の追放を経て、今日のドイツは多党制民主国家となった。だが共和国のすべてが順調なわけではない。現大統領フリードリヒ・メルツは旧体制への郷愁を煽るとして批判を浴び、民主主義の後退と寡頭支配者に有利な権力集中への懸念を呼んでいる。今や<span style="color: #f0456a;">社会民主主義</span>の任務は次期大統領選挙への準備である。我らがザーラ・ヴァーゲンクネヒトは、連続しない形での再出馬を検討している。彼女こそメルツを倒す唯一の希望かもしれない。
 
 - @go_back
 
 @left_win
-title: The Left Front Triumphs!
-subtitle: Ending 8
+title: 左翼戦線の勝利！
+subtitle: エンディング8
 view-if: left_win
 new-page: true
 audio: music/1930_1933/Einheitsfrontlied.mp3
 
-The United Front Government, under President [? if president == "Rosenfeld": Kurt Rosenfeld?][? if president == "Thälmann": Ernst Thälmann?][? if president == "Münzenberg": Willi Münzenberg?][? if president == "Ossietzky": Carl von Ossietzky?][? if president == "Mann": Heinrich Mann?], withstood everything thrown its way—<span style="color: #C0A054;">capitalist</span> treachery, <span style="color: #3E88B3;">institutional</span> sabotage, and constant subversion by <span style="color: #808080;">reactionaries</span>. In 1937, after winning a second election and slightly increasing its majority, the government faced a coup attempt led by the <span style="color: #808080;">reactionary</span> elements of the Reichswehr and increasingly radicalized <span style="color: #3E88B3;">nationalists</span> and <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> forces. 
+[? if president == "Rosenfeld": クルト・ローゼンフェルト?][? if president == "Thälmann": エルンスト・テールマン?][? if president == "Münzenberg": ヴィリー・ミュンツェンベルク?][? if president == "Ossietzky": カール・フォン・オシエツキー?][? if president == "Mann": ハインリヒ・マン?]大統領率いる統一戦線政府は、<span style="color: #C0A054;">資本家</span>の裏切り、<span style="color: #3E88B3;">体制側</span>の妨害、<span style="color: #808080;">反動派</span>の絶え間ない転覆活動というあらゆる攻撃に耐えた。1937年、二度目の選挙に勝利して過半数をわずかに上積みした後、政府は国防軍内の<span style="color: #808080;">反動派</span>と、急進化を深めた<span style="color: #3E88B3;">国民主義者</span>及び<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>勢力によるクーデター未遂に直面した。
 
-The coup failed. The abortive putsch was crushed by the proletarian masses and shattered the political landscape of <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>. The far left of the [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]—splinters from their parties who maintained ambiguity towards the coup—split off to form the <span style="color: #E0B0FF;">**RDP**</span> and <span style="color: #FF7F00;">**CSRP**</span>, both of which soon joined the United Front.
+クーデターは失敗した。未遂一揆はプロレタリア大衆に粉砕され、<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>の政治地図を一変させた。クーデターへ曖昧な態度を取り続けた[? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]と[? if z_party_name != "CVP":<span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP":<span style="color: #000000;">**CVP**</span>?]から最左派が離脱して<span style="color: #E0B0FF;">**RDP**</span>と<span style="color: #FF7F00;">**CSRP**</span>を結成し、両党はほどなく統一戦線へ加わった。
 
-With the bourgeois center increasingly marginalized, the botched coup gave the United Front the momentum needed to finally purge the Republic of <span style="color: #808080;">reactionary</span> forces and initiate a <span style="color: #9B0000;">socialist</span> economy. Eventually a constitutional convention was called to begin a <span style="color: #9B0000;">Socialist Republic</span>.
+ブルジョワ中道派が一層周縁化するなか、失敗したクーデターは統一戦線に勢いを与え、共和国から<span style="color: #808080;">反動</span>勢力を一掃して<span style="color: #9B0000;">社会主義</span>経済へ着手することを可能にした。やがて<span style="color: #9B0000;">社会主義共和国</span>建設を始めるため、憲法制定会議が招集された。
 
 - @left_win_a
 - @left_win_b
 
 @left_win_a
-Title: Subending A - Spartakus Rises Again
+Title: サブエンディングA――スパルタクス再び立つ
 view-if: not kpd_win
 
-The convention is called, and with overwhelming support, it dismantles the old bourgeois institutions. At last, after all these years, the German <span style="color: #750e0e;">Soviet Republic</span> is formed—and this time, "All Power to the <span style="color: #750e0e;">Soviets</span>" is more than just a slogan. The <span style="color: #c00000;">**SPD**</span> takes the lead in constructing the <span style="color: #750e0e;">Soviet Republic</span>. Though the process is complex and at times byzantine, born of compromise among many factions, it is unmistakably <span style="color: #700000;">revolutionary</span>.
+憲法制定会議が招集され、圧倒的支持の下で旧ブルジョワ制度を解体した。長い年月を経て、ついにドイツ<span style="color: #750e0e;">評議会共和国</span>が成立する。今度こそ「すべての権力を<span style="color: #750e0e;">評議会</span>へ」は単なる標語ではない。<span style="color: #c00000;">**SPD**</span>が<span style="color: #750e0e;">評議会共和国</span>建設を主導する。多くの党派の妥協から生まれた過程は複雑で、時に錯綜するが、紛れもなく<span style="color: #700000;">革命的</span>である。
 
-No war as destructive as the Great War would come again. The Spanish Civil War ends in 1936 with a Republican victory. [? if austria_defeat: In 1939, Austria's <span style="color: #7A3C00;">Austrofascist</span> regime collapses under popular revolt.?][? if sdapo_win or force_peace: In 1938, Austria's ruling <span style="color: #A50034;">**SDAPÖ**</span> successfully holds a referendum confirming their <i>Anschluss</i> into Germany. ?][? if long_war_2: The war in Austria is eventually won by the <span style="color: #7A3C00;">Austrofascists</span>, who receive generous aid from a <span style="color: #7A3C00;">fascist</span> Italy.?] Isolated and denied any success in his expansionist aims in Yugoslavia and Greece, Mussolini is deposed in a royalist coup led by King Victor Emmanuel III, and Italy returns to democratic governance[? if long_war_2:, leading to Austria’s government democratizing as a consequence of losing its benefactor?]. 
+世界大戦ほど破壊的な戦争が再び起こることはなかった。スペイン内戦は1936年に共和国派の勝利で終結した。[? if austria_defeat: 1939年、オーストリアの<span style="color: #7A3C00;">オーストロファシズム</span>体制は民衆反乱によって崩壊した。?][? if sdapo_win or force_peace: 1938年、オーストリア与党<span style="color: #A50034;">**SDAPÖ**</span>はドイツへの<i>アンシュルス</i>を承認する国民投票を成功させた。?][? if long_war_2: オーストリア戦争は、<span style="color: #7A3C00;">ファシスト</span>・イタリアから潤沢な援助を受けた<span style="color: #7A3C00;">オーストロファシスト</span>の勝利に終わった。?]ユーゴスラヴィアとギリシャへの拡張目標を何一つ達成できず孤立したムッソリーニは、国王ヴィットーリオ・エマヌエーレ3世率いる王党派のクーデターで失脚し、イタリアは民主政へ復帰した[? if long_war_2:。その結果、後ろ盾を失ったオーストリア政府も民主化した?]。
 
-In a world largely hostile to <span style="color: #9B0000;">socialism</span>, we stand as a shining example: the economy is <span style="color: #c00000;">socialized</span>, and economic control is placed directly in the hands of the <span style="color: #c00000;">proletariat</span>. The <span style="color: #750e0e;">Soviet Union</span> remains distant, as does the <span style="color: #0A3161;">West</span>. We emerge as a beacon of socialism amid the growing tensions of a Cold War—between the <span style="color: #750e0e;">**Soviets**</span>, an authoritarian <span style="color: #000099;">Kuomintang</span>-led China, and an independent India on one side, and the capitalist <span style="color: #0A3161;">West</span> on the other.
+<span style="color: #9B0000;">社会主義</span>におおむね敵対的な世界で、我々は輝かしい模範となる。経済は<span style="color: #c00000;">社会化</span>され、経済統制は<span style="color: #c00000;">プロレタリアート</span>の手へ直接委ねられた。<span style="color: #750e0e;">ソビエト連邦</span>とも<span style="color: #0A3161;">西側</span>とも距離を置く。<span style="color: #750e0e;">**ソ連**</span>、権威主義的な<span style="color: #000099;">国民党</span>支配の中国、独立インドの陣営と、資本主義の<span style="color: #0A3161;">西側</span>との冷戦が緊張を増すなか、我々は社会主義の灯台として現れた。
 
-We maintain a strictly neutral stance, offering principled opposition to both blocs. In doing so, we inspire many nations to follow our political and geopolitical path. Our shining <span style="color: #9B0000;">socialist republic</span> manages to survive, until the end of an inconclusive Cold War in détente.
+我々は厳格な中立を保ち、両陣営へ原則的に反対する。この姿勢は多くの国に、我々の政治的・地政学的な道を歩ませた。輝かしい<span style="color: #9B0000;">社会主義共和国</span>は、決着のつかない冷戦がデタントによって終わるまで生き延びる。
 
-As a key neutral player throughout the Cold War, we reap the benefits—becoming a center for dialogue and commerce. With the arrival of détente, more and more nations join us in non-alignment.
+冷戦を通じて中立陣営の要となった我々は恩恵を受け、対話と交易の中心地となる。デタントの到来とともに、非同盟へ加わる国は増え続けた。
 
-All is not golden though. Our republic is prone to infighting, as the various proletarian groups represented in the economy often clash over resource allocation. Additionally, our council-centered system faces criticism for its inability to adapt to modern conditions, with growing signs of bureaucratic inefficiency. Nevertheless, as we enter the 2000s, the Deutsche Räterepublik remains a bastion of <span style="color: #c00000;">socialism</span> and <span style="color: #9B0000;">orthodoxy</span>.
+とはいえ、すべてが黄金色ではない。経済を代表するさまざまなプロレタリア集団が資源配分をめぐって頻繁に争い、共和国は内紛に陥りやすい。評議会中心の体制も現代状況へ適応できないと批判され、官僚的非効率の兆候が強まっている。それでも2000年代を迎えたドイツ評議会共和国は、なお<span style="color: #c00000;">社会主義</span>と<span style="color: #9B0000;">正統主義</span>の砦である。
 
-Our politics, culture, and economy are still deeply proletarian. Albeit <span style="color: #f0456a;">third way</span> and even <span style="color: #98C22C;">capitalist</span> parties remain on our right—and hardline <span style="color: #700000;">vanguardists</span> on our left—the <span style="color: #c00000;">**SPD**</span> and its successor parties maintain a firm hold on the Republic.
+我々の政治、文化、経済は今も深くプロレタリア的である。右には<span style="color: #f0456a;">第三の道</span>や<span style="color: #98C22C;">資本主義</span>政党さえ残り、左には強硬な<span style="color: #700000;">前衛主義者</span>がいるが、<span style="color: #c00000;">**SPD**</span>とその後継諸党は共和国を堅固に掌握し続ける。
 
 - @go_back
 
 @left_win_b
-Title: Subending B - The Vanguard Takes the Helm
+Title: サブエンディングB――前衛党が舵を取る
 view-if: kpd_win
 
-As the Constitutional Assembly convenes, it is gradually decided that the new <span style="color: #700000;">socialist</span> state will take inspiration from the Russian Revolution and the <span style="color: #750e0e;">Soviet Union</span>’s <span style="color: #700000;">vanguardist</span> model. The <span style="color: #c00000;">**SPD**</span>—whether convinced, divided, or simply powerless to stop the shift—accepts it. The two <span style="color: #9B0000;">**socialist**</span> parties rapidly merge into a single party that monopolizes power in the new state, while allowing some minor parties to remain as bloc parties. The <span style="color: #DC241F;">**Socialist Unity Party**</span> (<span style="color: #DC241F;">**SED**</span>) takes the helm.
+憲法制定会議が開かれると、新たな<span style="color: #700000;">社会主義</span>国家はロシア革命と<span style="color: #750e0e;">ソビエト連邦</span>の<span style="color: #700000;">前衛主義</span>モデルを範とすることが次第に決まっていく。説得されたのか、分裂していたのか、単に阻止する力がなかったのか、<span style="color: #c00000;">**SPD**</span>はこれを受け入れた。二つの<span style="color: #9B0000;">**社会主義**</span>政党は急速に合併し、小政党の一部を衛星政党として残しながら、新国家の権力を独占する単一政党となる。<span style="color: #DC241F;">**社会主義統一党**</span>（<span style="color: #DC241F;">**SED**</span>）が舵を取った。
 
-The regime immediately begins aligning with the <span style="color: #750e0e;">Soviet Union</span> and puts forth its first *Gosplans*. Soon, the State becomes a member of the Eastern Bloc. World War II breaks out as a massive conflict between the <span style="color: #0A3161;">capitalist</span> and <span style="color: #700000;">communist</span> worlds. It ends with a vast Eastern Bloc stretching from Lisbon to Arkhangelsk. A Cold War begins against the <span style="color: #B31942;">United</span> <span style="color: #0A3161;">States</span>, <span style="color: #C8102E;">Britain</span>, <span style="color: #000099;">Kuomintang</span>-led China, and the <span style="color: #002654;">French</span> government in exile.
+体制は直ちに<span style="color: #750e0e;">ソビエト連邦</span>へ接近し、最初の「ゴスプラン」を打ち出す。ほどなく国家は東側陣営へ加わった。第二次世界大戦は<span style="color: #0A3161;">資本主義</span>世界と<span style="color: #700000;">共産主義</span>世界の大規模な戦争として勃発し、リスボンからアルハンゲリスクまで広がる巨大な東側陣営を残して終結する。<span style="color: #B31942;">アメリカ</span><span style="color: #0A3161;">合衆国</span>、<span style="color: #C8102E;">イギリス</span>、<span style="color: #000099;">国民党</span>支配の中国、<span style="color: #002654;">フランス</span>亡命政府との冷戦が始まった。
 
-The <span style="color: #DC241F;">**SED**</span> assumes an important role in the <span style="color: #750e0e;">Soviet</span> Bloc as the leader of the second most industrialized country. Germany experiences decades of growth under the economic plans, calming most dissent within the country. To combat the remaining opposition, the Party establishes the Stasi, inspired by the <span style="color: #750e0e;">Soviet Union</span>’s NKVD.
+第二の工業国を率いる<span style="color: #DC241F;">**SED**</span>は、<span style="color: #750e0e;">ソ連</span>圏で重要な役割を担う。ドイツは経済計画の下で数十年にわたり成長し、国内の不満の大半は収まった。残る反対派に対抗するため、党は<span style="color: #750e0e;">ソビエト連邦</span>のNKVDを手本にシュタージを設立する。
 
-Alongside the <span style="color: #750e0e;">Soviet</span> Bloc, the <span style="color: #750e0e;">Soviet Republic</span> of Germany largely wins the Cold War. Key factors include the collapse of <span style="color: #001489;">European</span> Africa, the Chinese Civil War ending with an unaligned <span style="color: #960000;">socialist</span> China, and the <span style="color: #B31942;">United</span> <span style="color: #0A3161;">States</span> and <span style="color: #C8102E;">Britain</span> shifting towards isolationism.
+ドイツ<span style="color: #750e0e;">評議会共和国</span>は<span style="color: #750e0e;">ソ連</span>圏とともに冷戦でほぼ勝利する。<span style="color: #001489;">欧州</span>諸国のアフリカ支配崩壊、中国内戦が非同盟の<span style="color: #960000;">社会主義</span>中国を生んだこと、<span style="color: #B31942;">アメリカ</span><span style="color: #0A3161;">合衆国</span>と<span style="color: #C8102E;">イギリス</span>の孤立主義化が主な要因だった。
 
-However, by the 1990s, economic problems worsen: inflation rises, corruption grows, and the <span style="color: #750e0e;">People’s Democracies</span> begin to decay. Dissent grows to levels even the harshest Stasi measures fail to contain.
+しかし1990年代までに経済問題は悪化し、インフレと汚職が進み、<span style="color: #750e0e;">人民民主主義諸国</span>は衰退し始める。不満は、シュタージの最も苛烈な措置さえ抑えられない水準へ高まった。
 
-Amid these conditions, General Secretary Gorbachev of the <span style="color: #750e0e;">Soviet Union</span> initiates a controlled transition toward genuine <span style="color: #9B0000;">democratic socialism</span> inspired by the Chinese model. Today, Germany holds its first elections under this new system. The political spectrum is dazzling and complex, though heavily weakened and under state supervision. The quasi-capitalist <span style="color: #87CEFA;">**CNVP**</span> and <span style="color: #FFD700;">**LSV**</span> form a coalition against the <span style="color: #DC241F;">socialists</span> and are gaining momentum.
+この状況下で、<span style="color: #750e0e;">ソビエト連邦</span>のゴルバチョフ書記長は中国モデルに触発され、真の<span style="color: #9B0000;">民主社会主義</span>への管理された移行を始める。今日、ドイツでは新体制下初の選挙が行われている。政治勢力は目も眩むほど多彩で複雑だが、著しく弱体化し国家の監督下にある。準資本主義の<span style="color: #87CEFA;">**CNVP**</span>と<span style="color: #FFD700;">**LSV**</span>は<span style="color: #DC241F;">社会主義者</span>に対抗して連立し、勢いを増している。
 
-New socialist parties emerge as the <span style="color: #DC241F;">**SED**</span> fractures between <span style="color: #700000;">hardliners</span> and <span style="color: #f0456a;">reformers</span>. Perhaps the next government will have a <span style="color: #c00000;">**SEPD**</span> majority.
+<span style="color: #DC241F;">**SED**</span>が<span style="color: #700000;">強硬派</span>と<span style="color: #f0456a;">改革派</span>へ分裂し、新たな社会主義政党が生まれている。次の政府では<span style="color: #c00000;">**SEPD**</span>が過半数を握るかもしれない。
 
 - @go_back
 
 @go_back
-title: Go back.
+title: 戻る。
 on-arrival: {!
 const toolsWrapper = document.getElementById('tools_wrapper');
 if (toolsWrapper) {
@@ -356,7 +356,7 @@ set-bg: img/map_2.jpg
 go-to: game_over.eg_menu
 
 @go_back_2
-title: Go back.
+title: 戻る。
 view-if: not (pro_republic < 50 and spd_votes < 25 and z_ideology == "Right" and z_relation < 35 and dnvp_ideology == "Radical")
 on-arrival: {!
 const toolsWrapper = document.getElementById('tools_wrapper');

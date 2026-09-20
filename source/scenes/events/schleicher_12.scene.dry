@@ -1,16 +1,16 @@
-title: The <span style="color: #000000;">Center Party</span> joins the <span style="color: #BFC8CC;">**DNEF**</span>
-subtitle: Schleicher consolidates further.
+title: <span style="color: #000000;">中央党</span>が<span style="color: #BFC8CC;">**DNEF**</span>に参加
+subtitle: シュライヒャーがさらに権力を固める。
 view-if: chancellor = "Schleicher" and (z_in_gov or in_schleicher_majority_coalition) and z_in_gov_time >= 10 and ((z_leader == "Bracht" and not z_dnef and bracht_time >= 8) or republicans_schleicher >= 8 and z_leader == "Stegerwald" or republicans_schleicher >= 10) and dnef_formed
 new-page: true
 priority: 1
 tags: event
 max-visits: 1
 
-= <span style="color: #000000;">Center Party</span> joins the <span style="color: #BFC8CC;">**DNEF**</span>
+= <span style="color: #000000;">中央党</span>が<span style="color: #BFC8CC;">**DNEF**</span>に参加
 
-The end is near.
+終わりは近い。
 
-- @schleicher_2: The <span style="color: #BFC8CC;">German National Unity Front</span> welcomes its newest member.
+- @schleicher_2: <span style="color: #BFC8CC;">ドイツ国民統一戦線</span>が新たな参加者を迎える。
 
 @schleicher_2
 on-arrival: {!
@@ -25,7 +25,7 @@ Q.z_r = 0;
 Q.bvp_r = 0;
 !}
 
-Current composition of the <span style="color: #BFC8CC;">German National Unity Front</span>:
+<span style="color: #BFC8CC;">ドイツ国民統一戦線</span>の現在の構成：
 
 [? if dnef_formed: - <span style="color: #BFC8CC;">**DNEF**</span> ?]
 
@@ -33,13 +33,13 @@ Current composition of the <span style="color: #BFC8CC;">German National Unity F
 
 [? if lvp_dnef: - <span style="color: #FFCC00;">**LVP**</span> ?]
 
-[? if z_dnef: - <span style="color: #000000;">Center Party</span> ?]
+[? if z_dnef: - <span style="color: #000000;">中央党</span> ?]
 
 [? if z_dnef: - <span style="color: #A2D8E0;">**BVP**</span> ?]
 
 [? if dvp_dnef: - <span style="color: #C0A054;">**DVP**</span> ?]
 
-[? if other_dnef: - **Others** ?]
+[? if other_dnef: - **その他** ?]
 
 [? if kvp_dnef: - <span style="color: #0087DC;">**KVP**</span> ?]
 

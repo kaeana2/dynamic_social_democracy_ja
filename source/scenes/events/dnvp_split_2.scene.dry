@@ -1,5 +1,5 @@
-title: <span style="color: #3E88B3;">**DNVP**</span> Moderates split!
-subtitle: Westarp had enough of Hugenberg's antics.
+title: <span style="color: #3E88B3;">**DNVP**</span>穏健派が離党！
+subtitle: ヴェスタルプはフーゲンベルクの振る舞いに愛想を尽かした。
 view-if: year = 1930 and month = 7 and dnvp_leader = "Hugenberg" and not dnvp_split_2 and not hugenberg_reinstated and not kvp_formed and bruning_event_timer == 0
 priority: -1
 max-visits: 1
@@ -7,17 +7,17 @@ tags: event
 face-image: img/dnvp2.jpg
 new-page: true
 
-= <span style="color: #3E88B3;">**DNVP**</span> Moderates split!
+= <span style="color: #3E88B3;">**DNVP**</span>穏健派が離党！
 
-The moderate anti-Hugenberg wing of the <span style="color: #3E88B3;">**DNVP**</span> had already decided to break with the party, and it was only a matter of finding the right pretext. This opportunity came when Hugenberg passed a resolution to strengthen his <i>Führerprinzip</i> over the party, making the decisions of the party executive committee and leader binding on all members of the party’s delegations to the Reichstag and state parliaments.
+<span style="color: #3E88B3;">**DNVP**</span>の反フーゲンベルク穏健派はすでに離党を決めており、あとは適切な口実を見つけるだけだった。その機会は、フーゲンベルクが党内の<i>指導者原理</i>を強化する決議を可決させたことで訪れた。党執行部と党首の決定が、国会および州議会の所属議員全員を拘束することになったのである。
 
-The moderates within the party were powerless to stop the adoption of the resolution, which led to Westarp and the remaining moderates [? if not kvp_formed: splitting off into various parties on the moderate German right?][? if kvp_formed: to join their friends in the newly founded <span style="color: #0087DC;">**KVP**</span>?].
+党内穏健派には決議の採択を阻止する力がなく、ヴェスタルプと残る穏健派は[? if not kvp_formed: 離党してドイツの穏健右派の諸党に分かれた?][? if kvp_formed: 新たに結成された<span style="color: #0087DC;">**KVP**</span>の同志に合流した?]。
 
-- @dnvp_split: About time.
+- @dnvp_split: ようやくだ。
 
 
 @dnvp_split
 on-arrival: other_r += dnvp_r*0.3 if not kvp_formed; kvp_r += dnvp_r*0.3 if kvp_formed; dnvp_r = dnvp_r*0.7; rural_dnvp -= 4; new_middle_dnvp -= 4; old_middle_dnvp -= 4; rural_other += 4 if not kvp_formed; new_middle_other += 4 if not kvp_formed; old_middle_other += 4 if not kvp_formed; rural_kvp += 4 if kvp_formed; new_middle_kvp += 4 if kvp_formed; old_middle_kvp += 4 if kvp_formed; dnvp_split_2 = 1; dnvp_split_2_timer = 1 if not kvp_formed
 face-image: img/portraits/Kuno_von_Westarp.jpg
 
-Unfortunately, the party district organizations remain loyal to Hugenberg, who has worked to fill the party bureaucracy with his own supporters. As a result, the defection of the entire moderate wing of the <span style="color: #3E88B3;">**DNVP**</span> is less impactful than it would have been. Furthermore, many on the right believe that an internal resolution is not a strong enough pretext to break with the party and may choose to remain with Hugenberg.
+残念ながら、党の地区組織は依然としてフーゲンベルクに忠実である。彼は党官僚機構を自らの支持者で固めてきた。そのため、<span style="color: #3E88B3;">**DNVP**</span>穏健派全体の離党も、本来ほどの打撃にはならない。さらに、右派には党内決議を離党の十分な理由とは認めない者も多く、彼らはフーゲンベルクの下にとどまるかもしれない。

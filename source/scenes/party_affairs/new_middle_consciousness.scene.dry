@@ -1,4 +1,4 @@
-title: Class Consciousness of the New Middle Class
+title: 新中間層の階級意識
 new-page: true
 is-card: true
 tags: party_affairs
@@ -8,13 +8,13 @@ card-image: img/new-middle-conscious.jpg
 face-image: img/new-middle-conscious.jpg
 max-visits: 1
 
-= Class Consciousness of the New Middle Class
+= 新中間層の階級意識
 
-Due to our investments in media, socialism is becoming more popular, including among the new middle class. [? if peoples_party == 0: <span style="color: #9B0000;">Marxist</span> intellectuals such as Bernstein and Kautsky have long debated about the status of the new middle class and whether they constitute a different class from the proletariat. ?][? if peoples_party == 1: Despite becoming a people’s party, our party has traditionally prioritised the industrial working class. ?] Our propagandizing has meant that the new middle class are increasingly considering themselves part of the proletariat, or at least having more in common with them. Whilst they’re more moderate than the industrial proletariat, we could awaken their class consciousness as a way to expand the <span style="color: #c00000;">**SPD**</span>’s base [? if peoples_party == 0: without diluting its class character ?] and to build solidarity with all workers.
+メディアへの投資により、新中間層の間でも社会主義の人気が高まっている。[? if peoples_party == 0: ベルンシュタインやカウツキーら<span style="color: #9B0000;">マルクス主義</span>知識人は、新中間層の位置づけと、それがプロレタリアートとは異なる階級なのかを長年論じてきた。 ?][? if peoples_party == 1: 人民政党となった後も、わが党は伝統的に産業労働者階級を優先してきた。 ?]宣伝活動の結果、新中間層は自らをプロレタリアートの一部、少なくとも彼らと多くを共有する存在と考え始めている。産業プロレタリアートより穏健ではあるが、階級意識を目覚めさせれば、<span style="color: #c00000;">**SPD**</span>の基盤を[? if peoples_party == 0: 階級的性格を薄めることなく?]拡大し、全労働者の連帯を築ける。
 
-- @awaken: Awaken their class consciousness!
-- @refute: No, we will not do this.
-- @return_hand: Return card to hand.
+- @awaken: 階級意識を目覚めさせる！
+- @refute: いや、実施しない。
+- @return_hand: カードを手札に戻す。
 - @cancel_advisor_action
 
 @return_hand
@@ -23,14 +23,14 @@ go-to: easy_discard
 
 @awaken
 choose-if: aufhauser_advisor or radio >= 2 or commercialized_media >=2
-subtitle: [? if aufhauser_advisor: Aufhäuser can use the AfA-bund to do this. ?] [? if radio >= 2 and not aufhauser_advisor: We can use our existing radio program for this. ?] [? if commercialized_media >= 2 and not aufhauser_advisor: We can use our existing newspapers for this. ?] 
-unavailable-subtitle: [? if radio < 2 and not aufhauser_advisor: Aufhäuser's role as the Chairman of the AfA-bund would be quite helpful for this. Alternatively, we might want to consider investing in radio. ?] [? if commercialized_media < 2 and not aufhauser_advisor: Aufhäuser's role as the Chairman of the AfA-bund would be quite helpful for this. Alternatively, we might want to consider commercializing our newspapers. ?]
+subtitle: [? if aufhauser_advisor: アウフホイザーはAfA同盟を活用できる。 ?] [? if radio >= 2 and not aufhauser_advisor: 既存のラジオ番組を活用できる。 ?] [? if commercialized_media >= 2 and not aufhauser_advisor: 既存の新聞を活用できる。 ?]
+unavailable-subtitle: [? if radio < 2 and not aufhauser_advisor: AfA同盟議長アウフホイザーの力があれば有用だ。さもなくばラジオへの投資を検討すべきだろう。 ?] [? if commercialized_media < 2 and not aufhauser_advisor: AfA同盟議長アウフホイザーの力があれば有用だ。さもなくば新聞の商業化を検討すべきだろう。 ?]
 on-arrival: new_middle_spd += 10*(1-dissent); reformist_dissent += 2; labor_dissent += 3; left_strength += 5; reformist_strength += 5; labor_strength += 5; socialism += 4*(1 - dissent); new_middle_conscious = 1
 
-We have taken advantage of the situation and have awoken the class consciousness of the white collar workers. Increasingly, they flock to our party and [? if aufhauser_advisor: thanks to Aufhäuser's skills, ?] more white collar workers have joined the AfA-bund.
+この状況を生かし、ホワイトカラー労働者の階級意識を目覚めさせた。彼らは次第にわが党へ集まり、[? if aufhauser_advisor: アウフホイザーの手腕もあって、?]AfA同盟へ加入する者も増えている。
 
-By awakening the class consciousness of the new middle class, they have been removed from the secondary burdens. Pro-labor policies and radical left-wing policies, with the exception of raising taxes, can win their support. In addition, our media campaigning and rallies will have more of an effect amongst the new middle class, now that they are conscious. 
+新中間層の階級意識を目覚めさせたことで、彼らは副次的負担の対象から外れた。増税を除き、労働者寄りの政策と急進左派政策で支持を獲得できる。さらに、意識を得た新中間層にはメディア運動や集会がより大きな効果を発揮する。
 
 @refute
 
-We will not do this.
+これは実施しない。

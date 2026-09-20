@@ -1,5 +1,5 @@
-title: Papen's Scheme Reaches a Dead End
-subtitle: Perhaps Schleicher is secure?
+title: パーペンの策謀、行き詰まる
+subtitle: シュライヒャーの地位は安泰なのだろうか？
 view-if: chancellor = "Schleicher" and schleicher_time == 7 and not schleicher_explode
 new-page: true
 tags: event
@@ -18,18 +18,18 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Papen's Scheme Reaches a Dead End
+= パーペンの策謀、行き詰まる
 
-Despite Oskar and Meissner’s willingness to entertain Papen’s schemes to end the political deadlock, Schleicher’s strengthened position has made it harder to instill a sense of urgency in Hindenburg—at least enough to convince him to do the impossible. Papen, meanwhile, refuses to abandon his demand for the chancellorship, arguing that the <span style="color: #7A3C00;">Nazis</span> are quickly collapsing and that he, not they, should be the senior partner.
+オスカーとマイスナーは政治的膠着を打開しようとするパーペンの策謀に耳を貸していたが、シュライヒャーの地位が強まったため、ヒンデンブルクに危機感を抱かせることは難しくなった――少なくとも、不可能な決断を下させるほどの危機感はない。一方のパーペンは首相職への要求を取り下げず、<span style="color: #7A3C00;">ナチ</span>は急速に崩壊しつつあり、主導権を握るべきは彼らではなく自分だと主張している。
 
-A furious [+ nsdap_leader +] has rejected Papen’s call for a meeting between his movement and the Camarilla, and negotiations have since collapsed. Although Papen’s desire for revenge against Schleicher remains undimmed, he increasingly sees [+ nsdap_chancellor +]’s appointment as impossible—and himself as the only viable alternative. A belief that [+ nsdap_leader +] refuses to believe in.
+激怒した[+ nsdap_leader +]は、自らの運動と側近集団の会談を求めるパーペンの提案を拒否し、交渉は決裂した。パーペンのシュライヒャーへの復讐心は衰えていないが、[+ nsdap_chancellor +]の首相就任はもはや不可能であり、現実的な選択肢は自分しかいないとの思いをますます強めている。しかし、[+ nsdap_leader +]はそれを断じて認めようとしない。
 
 - @nazi_2
 
 @nazi_2
-title: The chancellor is safe, for now.
-on-arrival: papen_goal = "Push for his own reappointment"; meissner_goal = "Reconcile Schleicher and Hindenburg"; oskar_goal = "Push for Papen's reappointment"
+title: ひとまず、首相の地位は安泰だ。
+on-arrival: papen_goal = "自らの首相再任を働きかける"; meissner_goal = "シュライヒャーとヒンデンブルクを和解させる"; oskar_goal = "パーペンの首相再任を働きかける"
 
-Papen's constant nagging remains a thorn in Schleicher's side, especially given that the former chancellor lives just meters from the President's residence—and with Oskar von Hindenburg continuing to influence his father.
+パーペンの絶え間ない横槍は、依然としてシュライヒャーの悩みの種である。まして前首相の住居は大統領官邸からわずか数メートルの距離にあり、オスカー・フォン・ヒンデンブルクも父への影響力を保っている。
 
-Meissner, however, has come to a realization: Schleicher is here to stay. He is not driven by ideology—having served under Ebert beforehand; he was simply trying to do what he believed was best for the nation—an aim that now means supporting Schleicher and his policies.
+しかしマイスナーは、シュライヒャーがこのまま政権にとどまると悟った。かつてエーベルトの下でも仕えた彼を動かすのはイデオロギーではない。彼はただ、自らが国家にとって最善と信じることを実行しようとしてきたのであり、今やその目的はシュライヒャーとその政策を支持することを意味している。

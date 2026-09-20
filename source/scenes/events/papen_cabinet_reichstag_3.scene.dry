@@ -1,5 +1,5 @@
-title: Papen Faces a Vote of No Confidence!
-subtitle: His first test of strength before the Reichstag.
+title: パーペン、不信任投票に直面！
+subtitle: 国会を前にした最初の力試しである。
 view-if: chancellor = "Papen" and papen_time and next_reichstag_time == rubicon_time and next_reichstag_time > 0 and reichstag_decree_rubicon
 on-arrival: reichstag_rubicon = 1
 new-page: true
@@ -18,18 +18,18 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Vote of No Confidence
+= 不信任投票
 
-The Reichstag has reconvened after its brief adjournment, prepared to address the issue of the Papen cabinet. Von Papen has lost all hope of gaining the <span style="color: #7A3C00;">**NSDAP**</span>'s toleration, especially after their stubborn insistence on making [+ nsdap_chancellor +] chancellor. All parties, except for the [? if not true_christian_democracy: <span style="color: #3E88B3;">**DNVP**</span>?][? if not true_christian_democracy and dnvp_ideology == "Moderate":, and?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>,?][? if dvp_exist and not lvp_formed:&nbsp;and <span style="color: #C0A054;">**DVP**</span>,?] have made their opposition to Papen clear, making his dismissal nearly certain.
+短い休会を終えた国会が再開され、パーペン内閣の処遇を審議する準備が整った。フォン・パーペンは<span style="color: #7A3C00;">**NSDAP**</span>から閣外協力を得る望みを完全に失っている。とりわけ同党は、[+ nsdap_chancellor +]の首相任命を頑として要求していた。[? if not true_christian_democracy: <span style="color: #3E88B3;">**DNVP**</span>?][? if not true_christian_democracy and dnvp_ideology == "Moderate":と?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?][? if dvp_exist and not lvp_formed:、さらに<span style="color: #C0A054;">**DVP**</span>?]を除く全政党がパーペンへの反対を明言しており、その罷免はほぼ確実である。
 
-Yet, von Papen holds a card up his sleeve. Hindenburg has already secured a decree allowing him to suspend elections beyond the constitutionally mandated 60 days. All he needs now is to present it to the Reichstag before the vote of no confidence begins.
+しかし、フォン・パーペンには奥の手がある。ヒンデンブルクはすでに、憲法が定める60日を越えて選挙を延期できる緊急令を用意していた。あとは不信任投票が始まる前に、それを国会へ提示するだけである。
 
 # TODO
 
 - @reichstag
 
 @reichstag
-title: The Reichstag goes into session.
+title: 国会が開会する。
 on-arrival: {!
 Q.papen_votes = 0;
 Q.anti_papen_votes = 0;
@@ -106,17 +106,17 @@ go-to: reichstag_1 if papen_votes < 14; reichstag_1_alt if papen_votes >= 14
 
 @reichstag_1
 
-As expected, the <span style="color: #700000;">**Communists**</span> have secured unanimous approval for a change in the order of business to allow an immediate vote on a motion of no confidence against Papen, and not even the <span style="color: #3E88B3;">**DNVP**</span> was willing to lift a finger to prevent this. 
+予想どおり<span style="color: #700000;">**共産主義者**</span>は議事日程変更への全会一致の承認を取りつけ、パーペンに対する不信任動議を直ちに採決できるようにした。<span style="color: #3E88B3;">**DNVP**</span>でさえ、これを阻むために指一本動かそうとしなかった。
 
-With no objection, the vote was to begin just as Chancellor von Papen has arrived inside the Reichstag to present his emergency decree to the chamber, disrupting his plans to present both decrees at once. He had placed the folder on Reichstag President [? if reichstag_president == "Göring": Hermann Göring?][? if reichstag_president == "Löbe": Paul Löbe?][? if reichstag_president == "Eßer": Thomas Eßer?]'s desk, and demanded him to read it to the floor. However, [+ reichstag_president +] has trick up his sleeve: he could pretend he didn't see it and proceed with the no confidence motion anyway.
+異議が出なかったため採決が始まろうとしたまさにその時、フォン・パーペン首相が緊急令を国会へ提示するため議場に到着した。二つの緊急令を同時に提示する計画は崩れてしまった。彼は国会議長[? if reichstag_president == "Göring": ヘルマン・ゲーリング?][? if reichstag_president == "Löbe": パウル・レーベ?][? if reichstag_president == "Eßer": トーマス・エッサー?]の机に書類を置き、議場で読み上げるよう要求した。しかし[+ reichstag_president +]にも策があった。書類を見なかったふりをして、そのまま不信任動議を進められるのである。
 
-In the end, Papen is defeated by a humiliating margin with [+ anti_papen_votes +]% of the Reichstag voting against him, only supported by the [? if dnvp_papen or dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if (dnvp_ideology == "Moderate" and dnvp_papen) or kvp_papen:, ?][? if dnvp_ideology == "Moderate":<span style="color: #003755;">**DNF**</span>?][? if kvp_papen: <span style="color: #0087DC;">**KVP**</span>?][? if hugenberg_dvp:&nbsp;and <span style="color: #C0A054;">**DVP**</span>?]. They're expected to benefit from disillusioned conservative <span style="color: #7A3C00;">Nazi</span> voters, who had backed them under the impression they would support the Papen cabinet.
+結局、国会の[+ anti_papen_votes +]％が反対票を投じ、パーペンは屈辱的な大差で敗北した。支持したのは[? if dnvp_papen or dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if (dnvp_ideology == "Moderate" and dnvp_papen) or kvp_papen:、?][? if dnvp_ideology == "Moderate":<span style="color: #003755;">**DNF**</span>?][? if kvp_papen: <span style="color: #0087DC;">**KVP**</span>?][? if hugenberg_dvp:、さらに<span style="color: #C0A054;">**DVP**</span>?]だけである。これらの党はパーペン内閣を支持すると思って投票したものの幻滅した、保守的な<span style="color: #7A3C00;">ナチ</span>支持者から利益を得ると見込まれる。
 
 - @reichstag_2
 
 @reichstag_1_alt
 on-arrival: {!
-Q.papen_goal = "Maintain public order";
+Q.papen_goal = "治安を維持する";
 Q.marburg_time = 0;
 Q.marburg_trigger = 1;
 Q.hindenburg_papen_r += 1;
@@ -141,20 +141,20 @@ if (Q.next_election_month > 12) {
 }
 !}
 
-As expected, the <span style="color: #700000;">**Communists**</span> have attempted to secure approval for a change in the order of business to allow an immediate vote on a motion of no confidence against Papen, but however, the [? if dnvp_papen: <span style="color: #3E88B3;">**DNVP**</span>?][? if not dnvp_papen and dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?][? if not dnvp_papen and dnvp_ideology == "Radical": <span style="color: #0087DC;">**KVP**</span>?] had objected to the motion, delaying it.
+予想どおり<span style="color: #700000;">**共産主義者**</span>は議事日程を変更し、パーペンに対する不信任動議を直ちに採決する承認を得ようとした。しかし[? if dnvp_papen: <span style="color: #3E88B3;">**DNVP**</span>?][? if not dnvp_papen and dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?][? if not dnvp_papen and dnvp_ideology == "Radical": <span style="color: #0087DC;">**KVP**</span>?]が動議に異議を唱え、採決を遅らせた。
 
-Before the vote was to begin, Chancellor von Papen has arrived inside the Reichstag to present his emergency decree to the chamber, one to dissolve it and one to postpone future elections. He had placed the folder on Reichstag President [? if reichstag_president == "Göring": Hermann Göring?][? if reichstag_president == "Löbe": Paul Löbe?][? if reichstag_president == "Eßer": Thomas Eßer?]'s desk, who read it to the floor. The chamber erupted in uproar, prompting police on standby to detain numerous Reichstag members involved in the violence, primarily from the <span style="color: #700000;">**Communists**</span>.
+採決が始まる前に、フォン・パーペン首相が二つの緊急令を国会へ提示するため議場に到着した。一つは国会を解散し、もう一つは今後の選挙を延期するものだった。彼は国会議長[? if reichstag_president == "Göring": ヘルマン・ゲーリング?][? if reichstag_president == "Löbe": パウル・レーベ?][? if reichstag_president == "Eßer": トーマス・エッサー?]の机に書類を置き、議長はそれを議場で読み上げた。議場は騒然となり、待機していた警察は暴力に関与した多数の国会議員、主に<span style="color: #700000;">**共産主義者**</span>を拘束した。
 
-News has quickly spread, and Papen has only narrowly escaped from the area before violent mobs assembled all across Berlin were formed to protest the violation of the constitution. Brüning and the <span style="color: #000000;">Center Party</span> vow to impeach President Hindenburg, if the Reichstag ever convenes. Germany's in for a violent civil war, and Papen shows no sign of backing down.
+知らせは瞬く間に広まり、憲法蹂躙へ抗議する激昂した群衆がベルリン全域で集結する寸前に、パーペンは辛うじて現場を脱出した。ブリューニングと<span style="color: #000000;">中央党</span>は、国会が再び開かれることがあればヒンデンブルク大統領を弾劾すると誓っている。ドイツは凄惨な内戦へ向かっているが、パーペンに退く気配はない。
 
 - @reichstag_2_alt
 
 @reichstag_2
-title: The Reichstag is dissolved for new elections.
-subtitle: The cabinet can still sign the decree though...
+title: 新選挙に向けて国会が解散される。
+subtitle: それでも内閣は緊急令に署名できる……
 on-arrival: {!
 Q.papen_explode = 1;
-Q.papen_goal = "Rule in a presidential government";
+Q.papen_goal = "大統領内閣で統治する";
 Q.hindenburg_papen_r -= 1;
 Q.reichstag_rubicon = 0;
 
@@ -175,13 +175,13 @@ if (Q.next_election_month > 12) {
 }
 !}
 
-With the vulnerability and widespread opposition to the Papen cabinet now fully exposed in parliament, Schleicher’s plan for Papen to sign the decree postponing elections indefinitely has been put on hold. The <span style="color: #000000;">Center Party</span> has also threatened to impeach Hindenburg should he proceed with such an action.
+パーペン内閣の脆弱さと広範な反対が議会で完全に露呈したため、選挙を無期限に延期する緊急令へパーペンに署名させるというシュライヒャーの計画は棚上げされた。<span style="color: #000000;">中央党</span>も、この措置を実行すればヒンデンブルクを弾劾すると警告している。
 
-The time is not yet right for the government to openly violate the constitution, and doing so could spark a civil war. The Reichswehr would not be able to withstand the opposition of 90% of the nation.
+政府が公然と憲法を破るには、まだ時機が早い。強行すれば内戦を引き起こしかねず、国防軍に国民の90％を敵に回して耐え抜く力はない。
 
-A minor constitutional crisis erupts when Reichstag President [+ reichstag_president +] disputes the validity of Papen's dissolution decree. [+ reichstag_president +] argues that the Reichstag remains in session, contending that the decree is invalid as it was countersigned by a government that had just been overthrown by a vote of no confidence. [+ reichstag_president +] ultimately concedes the issue before the courts were to decide, and new Reichstag elections are scheduled for [+ next_election_month : month +] [+ next_election_year +], Week [+ next_election_week +].
+国会議長[+ reichstag_president +]がパーペンの解散令の有効性に異議を唱え、小規模な憲法危機が生じた。[+ reichstag_president +]は、不信任投票で倒されたばかりの政府が副署した緊急令は無効であり、国会は依然として会期中だと主張した。最終的に[+ reichstag_president +]は裁判所の判断が出る前に争いを取り下げ、新たな国会選挙は[+ next_election_year +]年[+ next_election_month : month +]（第[+ next_election_week +]週）に予定された。
 
 @reichstag_2_alt
-title: The government cannot adequately suppress unrest, civil war is inevitable.
-subtitle: We will fight, whether we choose to or not.
+title: 政府には騒乱を十分に鎮圧できず、内戦は避けられない。
+subtitle: 望むと望まざるとにかかわらず、我々は戦うことになる。
 go-to: papen_civil_war

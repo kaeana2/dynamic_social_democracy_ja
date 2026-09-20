@@ -1,5 +1,5 @@
-title: Papen Faces a Vote of No Confidence!
-subtitle: His first test of strength before the Reichstag.
+title: パーペン、不信任投票に直面！
+subtitle: 国会を前にした最初の力試しである。
 view-if: chancellor = "Papen" and papen_time and next_reichstag_time == rubicon_time and next_reichstag_time > 0 and papen_back
 on-arrival: reichstag_rubicon = 1
 new-page: true
@@ -18,18 +18,18 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Vote of No Confidence
+= 不信任投票
 
-Papen once again faces the Reichstag, unfortunate to have taken power just a day before its scheduled reconvocation. It remains unclear whether he has secured a decree authorizing the Reichstag’s dissolution, as he may still be banking on the <span style="color: #7A3C00;">**NSDAP**</span>’s toleration. One thing, however, is certain: Papen has grown disillusioned with the prospect of a [+ nsdap_chancellor +] chancellorship, and now that he holds power again, he has no intention of giving it up on their terms.
+パーペンは再び国会と対峙する。運悪く、予定された国会再開のわずか前日に政権へ復帰したのである。彼はなお<span style="color: #7A3C00;">**NSDAP**</span>の閣外協力を当てにしている可能性があり、国会解散を認める緊急令を確保したかどうかは不明だ。ただし一つだけ確かなことがある。パーペンは[+ nsdap_chancellor +]首相という構想に幻滅しており、再び権力を握った今、彼らの条件に従って手放すつもりはない。
 
-However, Papen, and President Hindenburg himself, believe that a forced adjournment of the Reichstag may be necessary, with it only reconvening if a parliamentary majority could agree on a constructive course. This is only a bit less provocative than outright postponing elections, and a threat of civil war is omnipresent.
+しかしパーペンとヒンデンブルク大統領本人は、国会を強制休会とし、議会多数派が建設的な方針で合意した場合にだけ再開させる必要があると考えている。これは選挙を露骨に延期するよりわずかに挑発的でないだけであり、内戦の脅威は至る所に存在する。
 
 # TODO
 
 - @reichstag
 
 @reichstag
-title: The Reichstag goes into session.
+title: 国会が開会する。
 on-arrival: {!
 const contentElement = document.getElementById('content');
 contentElement.style.backgroundColor = '#0A0A08';
@@ -43,42 +43,42 @@ const header = document.querySelector('header');
 header.style.color = '#ffffff';
 !}
 
-The Reichstag is forcibly adjourned! Police officers and Reichswehr soldiers prevent parliamentarians from entering the building, and fierce riots emerge across the country as news of this unconstitutional act reaches all corners of the nation. The <span style="color: #7A3C00;">**NSDAP**</span>, now convinced that this is all an elaborate plot by Papen to get back into power, firmly breaks with him and any chance of them entering government.
+国会は強制的に休会させられた！　警察官と国防軍兵士が議員の議事堂入場を阻み、この違憲行為の知らせが全国へ広がるにつれ、各地で激しい暴動が起きている。これがパーペンの復権を狙った周到な陰謀だと確信した<span style="color: #7A3C00;">**NSDAP**</span>は、彼との関係を断固として絶ち、入閣の可能性も消滅した。
 
-However, this time, the Reichswehr is much better equipped, internal conflict plagues the <span style="color: #7A3C00;">**SA**</span>, and Hugenberg, now friendly with Papen once more pressures the <span style="color: #3E88B3;">**Stahlhelm**</span> to fight against leftists instead of the government. 
+しかし今回は国防軍の装備がはるかに整っており、<span style="color: #7A3C00;">**SA**</span>は内紛に苦しんでいる。さらにパーペンと再び親しくなったフーゲンベルクは、<span style="color: #3E88B3;">**鉄兜団**</span>に政府ではなく左翼と戦うよう圧力をかけている。
 
-Now, it's on us. Shall we mobilize the Reichsbanner?
+今度は我々の番である。国旗団を動員すべきだろうか？
 
 - @reichstag_2
 - @reichstag_3
 
 @reichstag_2
-title: We know Papen's intentions, we must not allow him to consolidate! We must take to the barricades to stop Papen from ending democracy.
+title: パーペンの意図は明らかだ。権力を固めさせてはならない！　民主主義を終わらせる彼を阻むため、バリケードへ向かわねばならない。
 
-Do we realize that this means civil war, against the full force of the state?
+それが国家の全兵力を相手にする内戦を意味すると理解しているのか？
 
-- @papen_civil_war: Yes.
-- @reichstag_3: We are not ready for war. We must bide our time.
+- @papen_civil_war: その通りだ。
+- @reichstag_3: 戦争の準備はできていない。時機を待たねばならない。
 
 @reichstag_3
-title: Bide our time.
+title: 時機を待つ。
 on-arrival: workers_spd -= 5; new_middle_spd -= 5; unemployed_spd -= 5; pro_republic -= 15; rb_strength -= 500; rb_militancy *= 0.7; sa_strength += 50; rfb_strength += 200; rfb_militancy += 0.1; left_dissent += 60; center_dissent += 50; reformist_dissent += 40; labor_dissent += 40; neorevisionist_dissent += 40
 
-The <span style="color: #c00000;">**SPD**</span> is shocked at our decision! How can we allow such a blatant violation of the constitution go like that? Many radicalized Reichsbanner and party officials defeat to the <span style="color: #700000;">**Communists**</span> and the <span style="color: #700000;">**RFB**</span>, vowing to fight against Papen regardless of our instructions.
+<span style="color: #c00000;">**SPD**</span>は我々の決定に衝撃を受けている！　これほど露骨な憲法違反を、どうして見過ごせるというのか？　急進化した国旗団員や党幹部の多くが<span style="color: #700000;">**共産主義者**</span>と<span style="color: #700000;">**RFB**</span>へ離反し、我々の指示にかかわらずパーペンと戦うと誓っている。
 
 - @reichstag_4
 - @papen_civil_war_2
 
 @papen_civil_war_2
-title: The government cannot adequately suppress unrest, civil war is inevitable.
-subtitle: We will fight, whether we choose to or not.
+title: 政府には騒乱を十分に鎮圧できず、内戦は避けられない。
+subtitle: 望むと望まざるとにかかわらず、我々は戦うことになる。
 go-to: papen_civil_war
 
 @reichstag_4
-title: Martial law is declared. The Reichswehr quells pockets of unrest.
+title: 戒厳令が布告され、国防軍が各地の騒乱を鎮圧する。
 on-arrival: marburg_time = 0; marburg_trigger = 1; rb_strength -= 500; rb_militancy *= 0.7; sa_strength *= 0.5; rfb_strength *= 0.5; workers_kpd -= 5; unemployed_kpd -= 5; workers_nsdap -= 5; new_middle_nsdap -= 5; old_middle_nsdap -= 5; rural_nsdap -= 5; catholics_nsdap -= 5; unemployed_nsdap -= 5; unemployed += 2; economic_growth -= 1.5; pro_republic = 0
 view-if: reichswehr_strength*reichswehr_militancy*(1-reichswehr_loyalty) >= (sa_strength*sa_militancy + rfb_strength*rfb_militancy + unemployed_nsdap_normalized + unemployed_kpd_normalized + workers_kpd_normalized + unemployed_kpd_normalized)
 
-The disorganized <span style="color: #7A3C00;">**SA**</span> and <span style="color: #700000;">**RFB**</span> have failed to spark a mass uprising, and a civil war is averted. A widespread crackdown on paramilitaries have begun, with the Reichsbanner not even being spared. 
+統制を欠く<span style="color: #7A3C00;">**SA**</span>と<span style="color: #700000;">**RFB**</span>は大衆蜂起を引き起こせず、内戦は回避された。準軍事組織への大規模な弾圧が始まり、国旗団さえ例外ではない。
 
-- @root: Papen lives?
+- @root: パーペンは生き延びたのか？

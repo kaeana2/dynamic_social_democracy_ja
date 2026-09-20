@@ -1,13 +1,13 @@
-title: Streetfighting
+title: 街頭闘争
 new-page: true
 view-if: year >= 1930
 max-visits: 1
 tags: event
 
-= Streetfighting
+= 街頭闘争
 
-Battles rage on the streets between the <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span>, nationalist <span style="color: #3E88B3;">**Stahlhelm**</span>, communist <span style="color: #8B0000;">Rotfrontkämpferbund</span> (<span style="color: #8B0000;">**RFB**</span>), and our own Reichsbanner.
+街頭では、<span style="color: #7A3C00;">ナチ</span>の<span style="color: #7A3C00;">**SA**</span>、民族主義者の<span style="color: #3E88B3;">**鉄兜団**</span>、共産党の<span style="color: #8B0000;">赤色戦線戦士同盟</span>（<span style="color: #8B0000;">**RFB**</span>）、そして我々の国旗団が激突している。
 
-The economic crisis has radicalized many into joining the paramilitaries of the extremist parties. The Distribution of Power mechanic has been unlocked. Defense tab on the sidebar.
+経済危機によって多くの人々が急進化し、過激政党の準軍事組織へ加わっている。「勢力分布」の仕組みが解禁された。サイドバーの「防衛」タブを確認せよ。
 
-- @root: Ok.
+- @root: 確認する。

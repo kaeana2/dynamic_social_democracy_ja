@@ -1,5 +1,5 @@
-title: Goerdeler Unveils His Cabinet
-subtitle: A purely "temporary arrangement" until the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> can be brought into government.
+title: ゲルデラーが組閣を発表
+subtitle: <span style="color: #7A3C00;">国家主義</span><span style="color: #3E88B3;">反対派</span>を入閣させるまでの、純然たる「暫定措置」である。
 view-if: chancellor = "Goerdeler" and goerdeler_pre_time == 1
 on-arrival: finance_minister_party = "I"; interior_minister_party = "DNVP"; economic_minister_party = "I"; labor_minister_party = "I"; justice_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "DNVP"; reichswehr_minister = "I"
 new-page: true
@@ -7,45 +7,45 @@ tags: event
 max-visits: 1
 face-image: img/portraits/goerdeler.jpg
 
-= Goerdeler I
+= 第1次ゲルデラー内閣
 
-The country still needs to be governed, and Goerdeler is forced to announce new cabinet picks, who he stresses as purely caretaker until an agreement can be struck with the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span>. This has resulted in a cabinet dominated by independents, who sit in the seats of posts that Goerdeler intends to give up in a potential future government.
+国家の統治を止めるわけにはいかず、ゲルデラーは新閣僚を発表せざるを得ない。彼は、<span style="color: #7A3C00;">国家主義</span><span style="color: #3E88B3;">反対派</span>との合意が成立するまでの純然たる暫定内閣だと強調している。その結果、将来成立しうる政権でゲルデラーが譲り渡すつもりの閣僚職を無所属が占め、無所属中心の内閣となった。
 
-The <span style="color: #D3C24D;">left-liberal</span> ministers are sacked, signalling a break by Goerdeler. The <span style="color: #3E88B3;">**DNVP**</span> is given a sizable role in the government, with Wilhelm von Gayl holding the Interior Ministry, and Treviranus taking the Transport Ministry. Martin Schiele, who served under Marx, will serve as Agricultural minister once more. 
+<span style="color: #D3C24D;">左派自由主義</span>の閣僚は罷免され、ゲルデラーとの決裂が示された。<span style="color: #3E88B3;">**DNVP**</span>には政権内で大きな役割が与えられ、ヴィルヘルム・フォン・ガイルが内相、トレヴィラヌスが運輸相に就く。マルクス政権で閣僚を務めたマルティン・シーレが、再び農相となる。
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] has grown increasingly apprehensive about its role in the Goerdeler cabinet, refusing to commit ministers like Adam Stegerwald and Brüning to the Labor and Foreign Ministries, respectively. Their refusal to serve alongside the anti-social Hugenberg has thrown a wrench into ongoing negotiations.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]はゲルデラー内閣での役割に警戒を強め、アダム・シュテーガーヴァルトとブリューニングをそれぞれ労相・外相として送り込むことを拒んだ。反社会的なフーゲンベルクとともに閣僚を務めることへの拒否が、進行中の交渉を妨げている。
 
 - @goerdeler
 
 @goerdeler
-title: Schleicher will negotiate with Hugenberg.
+title: シュライヒャーがフーゲンベルクと交渉する。
 face-image: img/portraits/AlfredHugenberg.jpg
 
-General Kurt von Schleicher, now the most influential member of the Camarilla and increasingly entangled in political scheming, begins courting the intractable Hugenberg. With the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> divided, Schleicher concludes that the <span style="color: #7A3C00;">**NSDAP**</span> would have no choice but to fall in line.
+今や側近集団で最も影響力を持ち、政治的策謀へ深くのめり込むクルト・フォン・シュライヒャー将軍は、頑迷なフーゲンベルクの懐柔に乗り出す。<span style="color: #7A3C00;">国家主義</span><span style="color: #3E88B3;">反対派</span>が分裂している以上、<span style="color: #7A3C00;">**NSDAP**</span>も従うほかないと判断したのである。
 
-Hugenberg makes his demands clear: he wants the Vice-Chancellorship, control of the Economic Ministry, and sole authority over economic policy. This suits Goerdeler, a fellow fiscal conservative—but Hugenberg, emboldened by his leverage, overreaches. He adds that his former party rival, Martin Schiele, should resign in favor of Count Eberhard von Kalckreuth, a Hugenberg supporter within the <span style="color: #006400;">National Rural League</span> (<span style="color: #006400;">RLB</span>).
+フーゲンベルクは要求を明確にする。副首相の座、経済省の掌握、経済政策に対する専権である。同じ財政保守主義者のゲルデラーには好都合だが、交渉力を得て勢いづいたフーゲンベルクは要求を広げすぎる。かつての党内対立者マルティン・シーレを辞任させ、<span style="color: #006400;">全国農村同盟</span>（<span style="color: #006400;">RLB</span>）内のフーゲンベルク支持者エーバーハルト・フォン・カルクロイト伯爵に替えるよう求めた。
 
-An impasse forms, prompting Schleicher to turn to [+ nsdap_leader +], whose party is—surprisingly—now seen as more reasonable than Hugenberg’s.
+交渉は行き詰まり、シュライヒャーは[+ nsdap_leader +]へ目を向ける。驚くべきことに、その党の方がフーゲンベルク一派より話が通じると見られている。
 
-> *"I do not understand, Herr Geheimrat, how you cannot be satisfied with Schleicher’s concessions. You simply cannot demand a hundred percent change in the political system. A complete change in the political system cannot occur all at once but only gradually."*
+> *「枢密顧問官殿、シュライヒャーの譲歩になぜ満足できないのか、私には理解できない。政治体制を百パーセント変えよと要求することなどできない。政治体制の完全な変革は一挙には起こらず、段階的にしか進まないのだ」*
 
- - Theodor Duesterberg, to Hugenberg
+― テオドール・デュスターベルク、フーゲンベルクに対して
 
 - @goerdeler_2
 
 @goerdeler_2
-title: Schleicher will negotiate with [+ nsdap_leader +].
+title: シュライヒャーが[+ nsdap_leader +]と交渉する。
 face-image: img/portraits/hitler2.jpg
 
-With Brüning out of the way, Schleicher has vastly overestimated his ability to "tame" the <span style="color: #7A3C00;">Nazis</span>. [+ nsdap_leader +] has flatly rejected any government that includes Groener or Brüning, and has demanded that his party receive either the Chancellorship or the Defense Ministry—along with several other cabinet posts—arguing that only such control can guarantee the mass support the new government requires to function.
+ブリューニングを排除したシュライヒャーは、<span style="color: #7A3C00;">ナチ党</span>を「飼い慣らす」自らの能力を大幅に過信していた。[+ nsdap_leader +]はグレーナーまたはブリューニングを含む政権を断固拒否し、新政権が機能するのに必要な大衆支持を保証するにはそれだけの支配権が必要だと主張して、首相職か国防省のいずれかに加え、複数の閣僚職を自党へ渡すよう要求した。
 
-This is, however, entirely unacceptable to Goerdeler—and even more so to President Hindenburg, who categorically refuses to grant either the Chancellorship or the Defense Ministry to a member of [+ nsdap_leader +]’s party. Moreover, Hindenburg insists that Brüning and Groener remain in the cabinet, as Foreign and Defense Minister respectively, still valuing Brüning’s diplomatic expertise.
+しかしゲルデラーには到底受け入れられず、ヒンデンブルク大統領にはなおさらである。大統領は、[+ nsdap_leader +]の党員へ首相職または国防省を与えることを断固拒否する。さらにブリューニングの外交手腕をなお評価し、ブリューニングとグレーナーをそれぞれ外相・国防相として留任させるよう主張している。
 
 - @goerdeler_3
 
 @goerdeler_3
-title: What a mess.
-subtitle: No agreement is able to be reached.
+title: 何という混乱だ。
+subtitle: 合意には至らない。
 on-arrival: {!
 if (!Q.hitler_mode) Q.nazi_peak_triggered = 1;
 Q.nazi_peak_votes = Q.nsdap_votes;
@@ -108,6 +108,6 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-Brüning's point is proven: the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> is not sincere in their intentions of entering government and governing responsibly. 
+ブリューニングの主張が正しかったことが証明された。<span style="color: #7A3C00;">国家主義</span><span style="color: #3E88B3;">反対派</span>には、入閣して責任ある統治を行う真剣な意思などない。
 
-Perhaps an agreement can still be reached, but time is running out before the Reichstag reconvenes. The immediate fallout from the collapse in negotiations has led many <span style="color: #7A3C00;">Nazi</span> protest voters and disillusioned conservatives to abandon ship, convinced that the <span style="color: #7A3C00;">**NSDAP**</span> is incapable of actually governing.
+なお合意に達する可能性はあるが、国会再開会まで時間がない。交渉決裂の直接的影響により、<span style="color: #7A3C00;">**NSDAP**</span>には実際の統治能力がないと確信した多くの<span style="color: #7A3C00;">ナチ党</span>への抗議票層と幻滅した保守派が離反している。

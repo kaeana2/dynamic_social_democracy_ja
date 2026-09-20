@@ -1,5 +1,5 @@
-title: Fifth Emergency Decree for Economy and Finance
-subtitle: The public works program is presented.
+title: 経済・財政に関する第五次緊急令
+subtitle: 公共事業計画が提示される。
 view-if: (bruning_toleration_time >= 6 or bruning_toleration_lite_time >= 6) and ((year == 1932 and month >= 5) or year >= 1933) and unemployed >= 30 and time >= bruning_sigma_time and bruning_sigma_time and not works_program
 max-visits: 1
 tags: event
@@ -19,18 +19,18 @@ on-display: {!
 !}
 set-bg: img/map_2.jpg
 
-= Fifth Emergency Decree for Economy and Finance
+= 経済・財政に関する第五次緊急令
 
-With the abolishment of reparation payments and Brüning's government surviving the intrigues of [? if president == "Hindenburg": Hindenburg's inner circle?][? if president != "Hindenburg": his supporting parties?] for the time being, Dietrich's public works program has officially been granted its full billion-dollar funding!
+賠償支払いが廃止され、ブリューニング政権も[? if president == "Hindenburg": ヒンデンブルク側近の陰謀?][? if president != "Hindenburg": 政権支持諸党の策謀?]をひとまず生き延びたため、ディートリヒの公共事業計画に10億ドルの満額予算が正式に認められた！
 
-This marks a real turning point, and along with the abolishment of reparations, the radicalizing effects of sky-high unemployment and the Versailles Treaty are diminished. The set of conditions that have enabled the <span style="color: #7A3C00;">Nazis</span> meteoric rise begins to unravel, depriving them of the fuel that once drove their ascent.
+これは真の転換点である。賠償廃止と相まって、極端な高失業率とヴェルサイユ条約がもたらしてきた急進化作用は弱まりつつある。<span style="color: #7A3C00;">ナチ</span>の急伸を可能にした諸条件が崩れ始め、かつて彼らの台頭を促した燃料が失われている。
 
 - @public_works
 
 @public_works
-title: The decree is signed into law by President [+ president +].
+title: 大統領[+ president +]が緊急令に署名し、成立させる。
 on-arrival: labor_dissent -= 20; wtb_points += 200; lautenbach_adopted = 1; lautenbach_plan_time = time + 12; hindenburg_angry_bruning -= 75; dvp_left += 5; ddp_left += 3; lvp_left += 3; ddp_cohesion += 3; z_relation += 5 if wtb_adopted; ddp_relation += 5 if wtb_adopted; lvp_relation += 5 if wtb_adopted; inflation += 1; budget -= 2; economic_growth += 2; works_program += 1; workers_nsdap -= 4; workers_ddp += 2; workers_z += 2; workers_lvp += 2; workers_kvp += 2; unemployed -= 3; unemployed_nsdap -= 6; unemployed_z += 3; unemployed_ddp += 3; unemployed_lvp += 3; unemployed_kvp += 3
 
-Despite Brüning's belief that public works should come only after the economic depression has bottomed out, it seems like he finally believes that it has done so, with a global recovery on the horizon after the abolishment in Germany's reparations. The plan is similar to the previously proposed Lautenbach plan in many aspects, although with a more limited expansion of credit due to inflationary fears.
+公共事業は恐慌が底を打ってから行うべきだという信念にもかかわらず、ドイツ賠償の廃止後に世界的回復が見え始めたため、ブリューニングもついに底へ達したと考えたようだ。計画は以前に提案されたラウテンバッハ案と多くの点で似ているが、インフレへの恐怖から信用拡大はより限定されている。
 
-> Chancellor [+ chancellor +]'s response is, public works?
+> 首相[+ chancellor +]の答えは、公共事業なのか？

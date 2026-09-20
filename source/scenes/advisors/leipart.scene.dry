@@ -1,55 +1,55 @@
-title: Theodor Leipart
+title: テオドール・ライパルト
 is-pinned-card: true
 tags: advisor, labor
 card-image: img/portraits/LeipartTheodor.jpg
 view-if: leipart_advisor = 1
 new-page: true 
 
-= Theodor Leipart
+= テオドール・ライパルト
 
-Leipart is a leader of the ADGB, the largest federation of <span style="color: #c00000;">socialist</span> trade unions.
+ライパルトは、最大の<span style="color: #c00000;">社会主義系</span>労働組合連合であるADGBの指導者である。
 
 - @organizing
 - @depression
 - @schleicher
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 # leipart was one of the people who argued for union independence
 #- @union_unity
 
 @organizing
-title: Organizing workers
-subtitle: Improve our standing among the workers.
+title: 労働者の組織化
+subtitle: 労働者の間で党の立場を強化する。
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; workers_spd += 4*(1-dissent); workers_spd += 3*(1-dissent) if wtb_adopted == 1; labor_strength += 2;
 
-We have increased our organizing among the workers.
+労働者の組織化を強化した。
 
 @depression
-title: Addressing the economic crisis
-subtitle: Formulate a plan to get us out of this mess.
+title: 経済危機への対処
+subtitle: この窮境から脱するための計画を策定する。
 choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if black_thursday_seen == 0 : 現在は経済危機ではない。 ?][? if wtb_adopted > 0 : WTB計画はすでに採用されている。 ?]
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 5; wtb_points += 15
 
-[? if not wtb_concept: Woytinsky, Tarnow, and Baade, has been working together to draft a plan for getting us out of the depression. Leipart canvasses in favor of this policy throughout the party and the unions. ?][? if wtb_concept: The WTB-plan, named for its primary supporters Woytinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Leipart canvasses in favor of this policy throughout the party and the unions. ?]
+[? if not wtb_concept: ヴォイティンスキー、タルノフ、バーデは恐慌脱出計画を共同で起草している。ライパルトは党と労働組合でこの政策への支持を訴えている。 ?][? if wtb_concept: 三人の主要支持者の名を冠したWTB計画は、恐慌脱出のための労働組合案として採用された。ライパルトは党と労働組合でこの政策への支持を訴えている。 ?]
 
 @schleicher
-title: Negotiating with the Red General
-subtitle: Leipart will attempt to convince the <span style="color: #c00000;">**SPD**</span> to support Schleicher.
+title: 赤い将軍との交渉
+subtitle: ライパルトはシュライヒャー支持を<span style="color: #c00000;">**SPD**</span>に説得する。
 view-if: red_general_unlock and rubicon
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; red_general_timer -= 4 if not schleicher_spd_adopted; red_general_timer -= 6 if schleicher_spd_adopted; last_advisor_action = 1
 go-to: red_general
 
 
 @union_unity
-title: Union-party coordination
-subtitle: Reduce dissent among the unions.
+title: 労働組合と党の連携
+subtitle: 労働組合派の不満を抑える。
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
 
-We have reduced tensions with the Labor faction, and increased its strength in the party.
+労働組合派との緊張を緩和し、党内での勢力を拡大した。

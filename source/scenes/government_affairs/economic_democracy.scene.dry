@@ -1,4 +1,4 @@
-title: Economic Democracy
+title: 経済民主主義
 is-card: true
 new-page: true
 on-arrival: economic_democracy_timer += 10; month_actions += 1
@@ -8,68 +8,68 @@ max-visits: 8
 tags: govt_affairs, cabinet
 #subtitle: How can we give workers more control over the means of production?
 
-= Economic Democracy
+= 経済民主主義
 
-A key part of the <span style="color: #c00000;">social democratic</span> platform is that workers should have more control over the economy. This can be done either directly at the enterprise level, by giving works councils greater influence over management, or indirectly via the democratic government, by acquiring key industries from the capitalist class and placing them under democratic control.
+労働者が経済への統制を強めることは、<span style="color: #c00000;">社会民主主義</span>綱領の中核である。事業所評議会に経営への影響力を与えて企業単位で直接実現する方法もあれば、民主政府が資本家階級から基幹産業を取得し、民主的統制下へ置くことで間接的に実現する方法もある。
 
-As we control the Labor [? if economic_minister_party == "SPD" : and Economic ?][? if finance_minister_party == "SPD" : and Finance ?] ministries, we can finally begin to implement our long-standing goals. [? if in_grand_coalition or in_weimar_coalition: Our bourgeois coalition partners might not agree, however. ?]
+我々は労働省[? if economic_minister_party == "SPD" :、経済省?][? if finance_minister_party == "SPD" :、財務省?]を掌握しており、長年の目標をようやく実行に移せる。[? if in_grand_coalition or in_weimar_coalition: ただしブルジョワの連立相手は同意しないかもしれない。 ?]
 
 - @expand_councils
 - @expand_councils_2
 - @expand_councils_3
 - @nationalize_1
 - @cooperatives_1
-- @return: Do not enact any policies for now.
+- @return: 今は政策を実施しない。
 - @easy_discard
 - @cancel_advisor_action
 
 @expand_councils
-title: Support works councils.
-subtitle: Give works councils a greater influence in managing enterprises.
+title: 事業所評議会を支援する。
+subtitle: 企業経営に対する事業所評議会の影響力を強める。
 view-if: works_councils == 0
 on-arrival: economic_democracy += 1; workers_spd += 7*(1-dissent); new_middle_spd += 4*(1-dissent) if new_middle_conscious == 1; capital_strike_progress += 1; works_councils += 1; labor_dissent -= 6; labor_strength += 8; center_dissent -= 6; left_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6; dvp_relation -= 5; lvp_relation -= 5; ddp_relation -= 3; coalition_dissent += 1; dvp_right += 2; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 1; economy_goal_spd += 1; goal_spd_cancel_peoples += 1
 max-visits: 1
 
-The works councils, elected by workers at each major business, have been in place since the German Revolution of 1918, but they have been largely powerless in the face of capital. Now, we will have worker representation on the boards of companies, giving them more influence in management decisions.
+主要企業で労働者が選出する事業所評議会は、1918年のドイツ革命以来存在してきたが、資本を前にほとんど無力だった。今後は企業の取締役会に労働者代表を送り、経営判断への影響力を強める。
 
 
 @expand_councils_2
-title: Support national and sectorial works councils.
-subtitle: This is a step towards workers' control over the entire economy.
+title: 全国・産業別労働者評議会を支援する。
+subtitle: 経済全体に対する労働者統制への一歩となる。
 view-if: works_councils == 1
 on-arrival: economic_democracy += 1; workers_spd += 7*(1-dissent); new_middle_spd += 5*(1-dissent) if new_middle_conscious == 1; nationalization_support += 0.5; capital_strike_progress += 1; works_councils += 1; labor_dissent -= 6; labor_strength += 8; center_dissent -= 6; left_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6; dvp_relation -= 5; ddp_relation -= 3; lvp_relation -= 5; coalition_dissent += 1; dvp_right += 2; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 2; economy_goal_spd += 1; goal_spd_cancel_peoples += 1; economic_growth += 0.1 if economic_growth < 3
 max-visits: 1
 
-National and sectorial workers councils have been part of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, but they were disempowered in the past, acting as nothing more than advisory bodies. We can change that.
+全国・産業別労働者評議会は<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>憲法に規定されていたが、従来は権限を奪われ、単なる諮問機関にすぎなかった。今こそ変えられる。
 
 
 @expand_councils_3
-title: Empower sectorial works councils.
-subtitle: Give works councils a role in setting wage and price policy for entire industrial sectors.
+title: 産業別労働者評議会に権限を与える。
+subtitle: 産業全体の賃金・価格政策を決める役割を評議会に与える。
 view-if: works_councils == 2
 on-arrival: economic_democracy += 1; workers_spd += 7*(1-dissent); new_middle_spd += 6*(1-dissent) if new_middle_conscious == 1; nationalization_support += 0.5; capital_strike_progress += 1; works_councils += 1; labor_dissent -= 6; center_dissent -= 6; left_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6; labor_strength += 8; dvp_relation -= 5; ddp_relation -= 3; lvp_relation -= 5; coalition_dissent += 1; unemployed -= 2 if unemployed > 5; workers += 2; dvp_right += 2; ddp_right += 1; lvp_right += 2; economy_goal_spd += 1; goal_spd_cancel_peoples += 1; economic_growth += 0.1 if economic_growth < 3; economy_goal_completed += 1 if kpd_leader == "Conciliators"
 max-visits: 1
 
-Sectorial works councils can now negotiate wage and price policies for entire economic sectors, helping to both give workers more of a voice, and to rationalize the economy, smoothing over the anarchy of the market.
+産業別労働者評議会は、産業部門全体の賃金・価格政策を交渉できるようになった。労働者の発言力を高めるとともに、市場の無政府性を抑えて経済を合理化する助けとなる。
 
-[? if kpd_leader == "Conciliators" and kpd_ultimatum_timer: The Conciliators of the <span style="color: #700000;">**KPD**</span> are satisfied with our efforts, happy to count this as part of the 'substantial nationalization of the economy' demand. ?]
+[? if kpd_leader == "Conciliators" and kpd_ultimatum_timer: <span style="color: #700000;">**KPD**</span>の融和派は我々の努力に満足し、「経済の大規模な国有化」という要求の一部に数えることを喜んでいる。 ?]
 
 @nationalize_1
-title: Begin to socialize key industries.
-subtitle: -1 budget - we should buy out industries and govern them together with workers and consumers.
+title: 基幹産業の社会化に着手する。
+subtitle: 予算 -1 ― 企業を買収し、労働者・消費者と共同で運営する。
 on-arrival: economic_democracy += 1; capital_strike_progress += 1; budget -= 1; socializations += 1; workers_spd += 6*(1-dissent); new_middle_spd += 4*(1-dissent) if new_middle_conscious == 1; unemployed_spd += 3*(1-dissent); labor_strength += 8; labor_dissent -= 6; center_dissent -= 6; left_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6; nationalization_progress += 0.5; nationalization_support += 0.5; coalition_dissent += 1; capital_strike_progress += 1 if black_thursday_seen; unemployed -= 1 if unemployed > 9; dvp_relation -= 3; ddp_relation -= 3; lvp_relation -= 3; dvp_right += 1; lvp_right += 1; ddp_right += 1; ddp_cohesion -= 1; economy_goal_spd += 1; goal_spd_cancel_peoples += 1; economic_growth += 0.2 if economic_growth < 5; economy_goal_completed += 1 if socializations >= 2
 choose-if: budget >= 1
 max-visits: 3
 
-We have begun to socialize key industries by buying out the capitalist owners, and creating coordinated governing boards consisting of worker, consumer, and state representatives. The capitalists are not pleased at our intrusion into the economy.
+資本家所有者から企業を買収し、労働者・消費者・国家の代表で構成する共同運営委員会を設けることで、基幹産業の社会化に着手した。資本家は我々の経済介入に不満を抱いている。
 
-[? if kpd_leader == "Conciliators" and socializations >= 2 and kpd_ultimatum_timer: The Conciliators of the <span style="color: #700000;">**KPD**</span> are satisfied with our efforts, happy to count this as part of the 'substantial nationalization of the economy' demand. ?]
+[? if kpd_leader == "Conciliators" and socializations >= 2 and kpd_ultimatum_timer: <span style="color: #700000;">**KPD**</span>の融和派は我々の努力に満足し、「経済の大規模な国有化」という要求の一部に数えることを喜んでいる。 ?]
 
 @cooperatives_1
-title: Support worker and consumer cooperatives.
-subtitle: -1 budget 
+title: 労働者・消費者協同組合を支援する。
+subtitle: 予算 -1
 on-arrival: economic_democracy += 1; cooperatives += 1; workers_spd += 4*(1-dissent); new_middle_spd += 4*(1-dissent) if new_middle_conscious == 1; unemployed_spd += 4*(1-dissent); budget -= 1; unemployed -= 1 if unemployed > 9; economy_goal_spd += 1; economic_growth += 0.2
 choose-if: budget >= 1
 max-visits: 3
 
-We have enacted legislation that makes it easier to create cooperative enterprises of all sorts, and provide financial support to struggling cooperatives.
+あらゆる種類の協同組合企業を設立しやすくする法律を制定し、経営難にある協同組合へ資金援助を行った。

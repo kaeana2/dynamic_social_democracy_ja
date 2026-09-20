@@ -1,4 +1,4 @@
-title: Campaigning
+title: 選挙運動
 new-page: true
 view-if: not rubicon or campaigning_timer <= 0
 on-arrival: month_actions += 1; campaigning_timer += 2 if rubicon
@@ -7,75 +7,75 @@ card-image: img/flags.jpg
 frequency: 100
 tags: party_affairs
 
-= Campaigning
+= 選挙運動
 
-Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
+選挙期間中か否かを問わず、党は常に支持基盤の拡大を図っている。誰に運動を集中させるべきか。
 
-- @workers: The urban working class, our traditional support base.
-- @new_middle: The "new middle class" of government employees and white-collar workers.
-- @old_middle: The "old middle class" of small independent businessmen and artisans.
-- @rural: Rural workers and small farmers, who have felt neglected by us in the past.
-- @unemployed: The unemployed.
-- @bdf: We can sponsor *Bund Deutscher Frauenvereine* for an extensive campaign among women.
-- @catholics: Catholics, who typically support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
-- @root: We either don't want to or cannot campaign right now.
+- @workers: 伝統的な支持基盤である都市労働者階級。
+- @new_middle: 公務員やホワイトカラー労働者からなる「新中間層」。
+- @old_middle: 独立小商工業者や職人からなる「旧中間層」。
+- @rural: これまで党に軽視されてきたと感じる農村労働者と小農。
+- @unemployed: 失業者。
+- @bdf: ドイツ女性団体連合を支援し、女性を対象とする大規模運動を行う。
+- @catholics: 通常は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]を支持するカトリック教徒。
+- @root: 今は選挙運動を行わない、または行えない。
 - @easy_discard
 
 @workers
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
 
-We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract workers. ?]
+労働者への選挙運動を強化した。[? if unemployed >= 15: 高失業率によって運動は難しくなっている。 ?][? if wtb_adopted = 1 : WTB計画の採用は、労働者を引きつける新たな結集軸となった。 ?]
 
 @new_middle
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
 
-We have increased our campaigning among the new middle class. [? if socialism <= 49 and peoples_party == 0: The popular antipathy towards <span style="color: #c00000;">socialism</span> among this group makes our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?] [? if new_middle_conscious == 1: As we have awakened the class consciousness of the new middle class, we have an easier time increasing support amongst them. ?]
+新中間層への選挙運動を強化した。[? if socialism <= 49 and peoples_party == 0: この層に広がる<span style="color: #c00000;">社会主義</span>への反感が運動を難しくしている。 ?] [? if peoples_party > 0: 人民政党となったことで、中間層の支持を以前より得やすい。 ?] [? if new_middle_conscious == 1: 新中間層の階級意識を目覚めさせたため、支持を拡大しやすい。 ?]
 
 @old_middle
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
 
-We have increased our campaigning among the old middle class. [? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
+旧中間層への選挙運動を強化した。[? if nationalism >= 51 and peoples_party == 0: この層の強いナショナリズムが運動を難しくしている。 ?] [? if peoples_party > 0: 人民政党となったことで、中間層の支持を以前より得やすい。 ?]
 
 @rural
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0 and rural_conscious == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2 or rural_conscious == 1
 
-We have increased our campaigning among farmers. [? if peoples_party == 0: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?][? if rural_conscious == 1: As we have awakened the class consciousness of the peasantry and the rural working class, we have an easier time increasing support amongst them. ?]
+農民への選挙運動を強化した。[? if peoples_party == 0: 歴史的に農民への働きかけが乏しかったため、彼らは党を信用していない。 ?][? if peoples_party > 0: 人民政党となったことで、農民の支持を以前より得やすい。 ?][? if rural_policy >= 2 : 農村政策の成果により、農民の支持を築きやすい。 ?][? if rural_conscious == 1: 農民と農村労働者の階級意識を目覚めさせたため、支持を拡大しやすい。 ?]
 
 
 @unemployed
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd -= 2 if unemployed >= 30; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
 
-We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract support from the unemployed. ?]
+失業者への選挙運動を強化した。[? if welfare < 0: 福祉削減を実施した政権と結びつけられているため、削減と貧困が運動を難しくし、逆効果になる恐れさえある。 ?][? if wtb_adopted = 1 : WTB計画の採用は、失業者を引きつける新たな結集軸となった。 ?]
 
 @bdf
 view-if: bdf_cooperation
-subtitle: -1 resources.
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: resources -= 1; workers_spd += 4*(1-dissent); new_middle_spd += 4*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); catholics_spd += 1*(1-dissent);
 
-We have coordinated with BDF to campaign among women across all classes.
+BDFと連携し、あらゆる階級の女性を対象に運動した。
 
 @catholics
-subtitle: -1 resources
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 view-if: peoples_party == 1
 on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
 
-We have increased our campaigning among Catholics.
+カトリック教徒への選挙運動を強化した。

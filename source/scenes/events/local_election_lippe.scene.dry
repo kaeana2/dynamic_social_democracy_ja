@@ -1,29 +1,29 @@
-title: Lippe Landtag Election
-subtitle: 
+title: リッペ州議会選挙
+subtitle:
 view-if: rubicon and chancellor == "Schleicher" and year == 1933 and month == 1 and week == 3
 new-page: true
 tags: event
 on-arrival: lippe_election_seen = 1
 max-visits: 1
 priority: 3
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
+on-display: {!
+    var cardEl = document.createElement('div');
+    cardEl.className = "face-figure2";
 
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/states.png";  
+    var image = new Image();
+    image.className = "face-img";
+    image.src = "img/states.png";
 
-    cardEl.appendChild(image);  
+    cardEl.appendChild(image);
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
 
-= Elections, [+ month : month +] [+ year +]
+= [+ year +]年[+ month : month +]
 
-The state elections for the Free State of Lippe are to take place.
+リッペ自由州の州議会選挙が実施される。
 
-- @lippe: May we do our best...
+- @lippe: 最善を尽くそう...
 
 @lippe
 on-arrival: {!
@@ -330,10 +330,10 @@ if (Q.dnvp_ideology == "Moderate") {
 
 for (var party of Q.lippe_parties) {
     Q['change_' + party + '_r_lippe'] = Q[party + '_r_lippe'] - Q['old_' + party + '_r_lippe'];
-    var sign = Q['change_' + party + '_r_lippe'] > 0 
-               ? '<img src="img/arrowup.png"> ' 
-               : Q['change_' + party + '_r_lippe'] < 0 
-                 ? '<img src="img/arrowdown.png"> ' 
+    var sign = Q['change_' + party + '_r_lippe'] > 0
+               ? '<img src="img/arrowup.png"> '
+               : Q['change_' + party + '_r_lippe'] < 0
+                 ? '<img src="img/arrowdown.png"> '
                  : '<img src="img/steady.png"> ';
     Q['change_' + party + '_r_lippe'] = Math.abs(Q['change_' + party + '_r_lippe']);
     Q['str_change_' + party + '_lippe'] = sign + parseFloat(Q['change_' + party + '_r_lippe']).toFixed(1);
@@ -344,13 +344,13 @@ for (var party of Q.lippe_parties) {
         Q['change_' + party + '_votes_lippe'] = Q[party + '_lippe_elections_vote'];
     }
 
-    var sign2 = Q['change_' + party + '_votes_lippe'] > 0 
-                ? '<img src="img/arrowup.png"> ' 
-                : Q['change_' + party + '_votes_lippe'] < 0 
-                  ? '<img src="img/arrowdown.png"> ' 
+    var sign2 = Q['change_' + party + '_votes_lippe'] > 0
+                ? '<img src="img/arrowup.png"> '
+                : Q['change_' + party + '_votes_lippe'] < 0
+                  ? '<img src="img/arrowdown.png"> '
                   : '<img src="img/steady.png"> ';
     Q['str_votes_change_' + party + '_lippe'] = sign2 + Math.abs(Q['change_' + party + '_votes_lippe']).toFixed(1);
-}   
+}
 
 Q.change_nsdap_votes_lippe = (Q.change_nsdap_votes_lippe != undefined ? parseFloat(Q.change_nsdap_votes_lippe.toFixed(1)) : 0);
 
@@ -490,12 +490,12 @@ if (window && d3) {
 go-to: lippe_coalition_menu
 
 
-**Lippe results:**
+**リッペの結果：**
 
 {!<svg id="lippe_landtag" style="width: 500px; height: 250px;"> </svg>!}
-Vote % changes are compared to the last *Reichstag* election. <br> Seat % changes are compared to the last *Landtag* election.
-{!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td><td>Landtag Seats</td><td>% Change</td></tr>!}
+投票率の変動は前回の国会選挙と比較される。<br>議席率の変動は前回の州議会選挙と比較される。
+{!<table>!}
+{!<tr><td>政党</td><td>得票率</td><td>増減率</td><td>州議会議席率</td><td>増減率</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_lippe_elections_vote +]%** {!</td><td>!} **[+ str_votes_change_spd_lippe +]** {!</td><td>!} **[+ spd_r_lippe +]%** {!</td><td>!} **[+ str_change_spd_lippe +]** {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_lippe_elections_vote +]% {!</td><td>!} [+ str_votes_change_sapd_lippe +] {!</td><td>!} [+ sapd_r_lippe +]% {!</td><td>!} [+ str_change_sapd_lippe +] ?]
@@ -512,9 +512,9 @@ Vote % changes are compared to the last *Reichstag* election. <br> Seat % change
 
 [? if wp_lippe_elections_vote: {!<tr><td><div class="box" style='background-color:#b8996f'> </div> !} WP: {!</td><td>!} [+ wp_lippe_elections_vote +]% {!</td><td>!} [+ str_votes_change_wp_lippe +] {!</td><td>!} [+ wp_r_lippe +]% {!</td><td>!} [+ str_change_wp_lippe +] {! </td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#7FCEB1'> </div> !} LLV: {!</td><td>!} [+ farm_lippe_elections_vote +]% {!</td><td>!} [+ str_votes_change_farm_lippe +] {!</td><td>!} [+ farm_r_lippe +]% {!</td><td>!} [+ str_change_farm_lippe +] {! </td></tr>!}
+{!<tr><td><div class="box" style='background-color:#7FCEB1'> </div> !} LLV：{!</td><td>!} [+ farm_lippe_elections_vote +] % {!</td><td>!} [+ str_votes_change_farm_lippe +] {!</td><td>!} [+ farm_r_lippe +] % {!</td><td>!} [+ str_change_farm_lippe +] {! </td></tr>!}
 
-[? if csvd_formed: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD: {!</td><td>!} [+ csvd_lippe_elections_vote +]% {!</td><td>!} [+ str_votes_change_csvd_lippe +] {!</td><td>!} [+ csvd_r_lippe +]% {!</td><td>!} [+ str_change_csvd_lippe +] {! </td></tr>!}?]
+[? if csvd_formed: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD：{!</td><td>!} [+ csvd_lippe_elections_vote +] % {!</td><td>!} [+ str_votes_change_csvd_lippe +] {!</td><td>!} [+ csvd_r_lippe +] % {!</td><td>!} [+ str_change_csvd_lippe +] {! </td></tr>!}?]
 
 [? if kvp_formed : {!<tr><td><div class="box" style='background-color:#0087DC'> </div> !}KVP: {!</td><td>!} [+ kvp_lippe_elections_vote +]% {!</td><td>!} [+ str_votes_change_kvp_lippe +] {!</td><td>!} [+ kvp_r_lippe +]% {!</td><td>!} [+ str_change_kvp_lippe +] {! </td></tr>!} ?]
 
@@ -525,11 +525,11 @@ Vote % changes are compared to the last *Reichstag* election. <br> Seat % change
 {!<tr><td><div class="box" style='background-color:#7A3C00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_lippe_elections_vote +]% {!</td><td>!} [+ str_votes_change_nsdap_lippe +] {!</td><td>!} [+ nsdap_r_lippe +]% {!</td><td>!} [+ str_change_nsdap_lippe +] {! </td></tr>!}
 {!</table>!}
 <hr id="read-marker">
-Lippe has been governed for the past four years by a coalition of the <span style="color: #c00000;">**SPD**</span>, [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?], and <span style="color: #0075EB;">**VRP**</span>, with the local <span style="color: #c00000;">**SPD**</span> maintaining a more moderate image.
+リッペでは過去4年間、<span style="color: #c00000;">**SPD**</span>、[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]、<span style="color: #0075EB;">**VRP**</span>の連立が政権を担い、地元<span style="color: #c00000;">**SPD**</span>は比較的穏健な印象を保ってきた。
 <hr id="read-marker">
-But the real question isn’t the future of Lippe—it’s what the election says about the nation. A <span style="color: #7A3C00;">Nazi</span> victory could prove the party still has life. But a defeat, even after throwing everything into their campaign, would be a crushing blow. With no local elections until the fall, the <span style="color: #7A3C00;">Nazis</span> won’t get another moment like this to remotivate their party.
+だが、真の問題はリッペの将来ではない。選挙が国家について何を語るかだ。<span style="color: #7A3C00;">ナチ</span>の勝利は、党がまだ生きていることを証明するかもしれない。だが、敗北は、選挙戦に全てを賭けた後であっても、痛手となるだろう。秋まで地方選挙がないため、<span style="color: #7A3C00;">ナチ</span>は、党の士気を再高揚させるような機会をもう得られない。
 
-Who cares what coalition forms here?
+どの連合が結成されるかなど、誰が気にするか？
 
 @lippe_coalition_menu
 
@@ -540,95 +540,95 @@ Who cares what coalition forms here?
 - @nsdap_explode
 
 @nsdap_big_win
-title: The <span style="color: #7A3C00;">**NSDAP**</span> score a crushing victory.
+title: <span style="color: #7A3C00;">**NSDAP**</span>が痛快な勝利を収める。
 view-if: change_nsdap_votes_lippe >= 6
 on-arrival: lippe_big_win = 1; hindenburg_hitler_r += 2; hindenburg_schleicher_r -= 2; workers_nsdap += 2; unemployed_nsdap += 2; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 4; nazi_funds += 1; lippe_good = 1
 
-Unexpectedly, the <span style="color: #7A3C00;">**NSDAP**</span> matched their peak electoral performance—proof that the movement isn’t dying, but growing.
+予想外に、<span style="color: #7A3C00;">**NSDAP**</span>はピーク時の選挙実績に匹敵した。これは、運動が死んでいるのではなく、成長している証拠だ。
 
-This is a major propaganda win for the <span style="color: #7A3C00;">**NSDAP**</span>, sure to energize the party and reinforce the belief that [+ nsdap_leader +]’s all-or-nothing strategy is paying off. It’s only a matter of time before Hindenburg acknowledges the <span style="color: #7A3C00;">Nazi</span> surge.
+これは<span style="color: #7A3C00;">**NSDAP**</span>にとって大きな宣伝上の勝利であり、党を活気づけ、[+ nsdap_leader +]の全か無かの戦略が実を結びつつあるとの確信を強めるだろう。ヒンデンブルクが<span style="color: #7A3C00;">ナチ</span>の躍進を認めるのも時間の問題である。
 
 @nsdap_moderate_win
-title: The <span style="color: #7A3C00;">**NSDAP**</span> score a dubious triumph.
+title: <span style="color: #7A3C00;">**NSDAP**</span>は怪しい勝利を収める。
 view-if: change_nsdap_votes_lippe >= 3 and change_nsdap_votes_lippe < 6
 on-arrival: hindenburg_hitler_r += 1; hindenburg_schleicher_r -= 1; new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 2; lippe_good = 1
 
-The <span style="color: #7A3C00;">Nazis</span> fell short of their peak results—but still gained votes compared to the last election. To the casual observer, the <span style="color: #7A3C00;">**NSDAP**</span> looks like it’s back on the rise, and they’ve seized on the outcome as a cheap propaganda boost to reenergize their disillusioned base.
+<span style="color: #7A3C00;">ナチス</span>の得票は最盛期には及ばなかったが、前回選挙からは増加した。一見すると、<span style="color: #7A3C00;">**NSDAP**</span>は再び勢いを取り戻したように見える。同党はこの結果を手軽な宣伝材料として利用し、失望した支持者を再び奮い立たせようとしている。
 
-But if we were to look closer. The <span style="color: #7A3C00;">**NSDAP**</span> cannot replicate the scale of its Lippe campaign—conducted in a state with barely a quarter of a percent of Germany’s population—across the country, especially given its financial troubles. The victory feels artificial.
+しかし、実情は異なる。<span style="color: #7A3C00;">**NSDAP**</span>は、ドイツの人口のわずか0.25％ほどを占めるリッペ州で展開した規模の選挙運動を、全国で繰り広げることはできない。財政難を考えればなおさらだ。この勝利は、無理に作り上げられたものに見える。
 
-Still, pressure to bring [+ nsdap_chancellor +] into government is once again rising.
+それでも、[+ nsdap_chancellor +]を政府に入れるよう求める圧力は再び高まっている。
 
 - @hitler_good
 
 @nothing_ever_happens
-title: The <span style="color: #7A3C00;">**NSDAP**</span> fails to make a breakthrough.
+title: <span style="color: #7A3C00;">**NSDAP**</span>は突破口を開けない。
 view-if: change_nsdap_votes_lippe >= 0 and change_nsdap_votes_lippe < 3
 on-arrival: new_middle_nsdap -= 2; old_middle_nsdap -= 2; rural_nsdap -= 2; lippe_good = 1
 
-The <span style="color: #7A3C00;">**NSDAP**</span>, despite going all-out on this campaign, only managed to achieve gains of [+ change_nsdap_votes_lippe +]%. This serves as evidence that the movement is in decline, though slowly.
+<span style="color: #7A3C00;">**NSDAP**</span>は、この運動に全力を尽くしたにもかかわらず、わずか[+ change_nsdap_votes_lippe +]%の獲得に留まった。これは、その運動が衰退している証拠だが、緩やかである。
 
-Nevertheless, the <span style="color: #7A3C00;">**NSDAP**</span> continues to use their modest gains as cheap propaganda, though few are swayed. Replicating the success of their Lippe campaign—conducted in a state that comprises barely a quarter of a percent of Germany’s population—across the entire country is not feasible, particularly given their financial troubles. The victory feels artificial.
+それでも、<span style="color: #7A3C00;">**NSDAP**</span>はこのささやかな躍進を安易な宣伝に利用し続けているが、心を動かされる者は少ない。ドイツの人口のわずか0.25％ほどを占めるリッペ州での選挙運動の成功を全国で再現することは、財政難も考えれば現実的ではない。この勝利は、無理に作り上げられたものに見える。
 
 - @hitler_eh
 
 @nsdap_joever
-title: The <span style="color: #7A3C00;">**NSDAP**</span>'s suffers a crushing defeat!
+title: <span style="color: #7A3C00;">**NSDAP**</span>は壊滅的な敗北を喫した！
 view-if: change_nsdap_votes_lippe < 0 and change_nsdap_votes_lippe > -4
 on-arrival: hindenburg_hitler_r -= 1; workers_nsdap -= 2; unemployed_nsdap -= 2; new_middle_nsdap -= 4; old_middle_nsdap -= 4; rural_nsdap -= 4; catholics_nsdap -= 2; nazi_funds -= 1
 
-The <span style="color: #7A3C00;">**NSDAP**</span> has suffered a crushing defeat! Despite throwing everything into this campaign, their vote share has actually declined. This is clear evidence that the movement is collapsing rapidly—and that new elections would be disastrous for the <span style="color: #7A3C00;">Nazi</span> cause.
+<span style="color: #7A3C00;">**NSDAP**</span>は壊滅的な敗北を喫した！この運動に全てを賭けたにもかかわらず、彼らの得票率は実際に低下した。これは、その運動が急速に崩壊している明白な証拠であり、新たな選挙は<span style="color: #7A3C00;">ナチ</span>の運動にとって悲惨なものとなるだろう。
 
-Donations are drying up, party membership is plummeting, defections are soaring, and the political pressure on Schleicher has eased. Land is in sight.
+献金は枯渇し、党員数は急落し、離党は急増し、シュライヒラーへの政治的圧力は和らいだ。上陸が目前だ。
 
 - @hitler_bad
 
 @nsdap_explode
-title: The <span style="color: #7A3C00;">**NSDAP**</span> is rapidly imploding!
+title: <span style="color: #7A3C00;">**NSDAP**</span>は急速に崩壊している！
 view-if: change_nsdap_votes_lippe <= -4
 on-arrival: hindenburg_hitler_r -= 2; workers_nsdap -= 4; unemployed_nsdap -= 4; new_middle_nsdap -= 8; old_middle_nsdap -= 8; rural_nsdap -= 6; catholics_nsdap -= 4; nazi_funds -= 2
 
-The <span style="color: #7A3C00;">**NSDAP**</span> is in free fall! Despite throwing everything they had into this campaign, their vote share has actually declined—a humiliating blow that confirms the movement’s rapid implosion.
+<span style="color: #7A3C00;">**NSDAP**</span>は自由落下状態だ！この選挙運動に全てを注ぎ込んだにもかかわらず、彼らの得票率は実際に低下した。これは運動の急速な崩壊を裏付ける屈辱的な打撃だ。
 
-Donors are abandoning them, defections are accelerating, and local organizations are collapsing. Even fanatics at the highest levels of the party are starting to lose faith. The threat they once posed is rapidly fading, and with the pressure on Schleicher easing, the worst may finally be over.
+献金者は彼らを見捨て、離反は加速し、地方組織は崩壊している。党の最高幹部の中の狂信者でさえ、信頼を失いつつある。かつて彼らがもたらした脅威は急速に薄れ、シュライヒャーへの圧力が緩和されたことで、最悪の事態はついに終わるかもしれない。
 
 - @hitler_explode
 
 @hitler_good
-title: How will this affect [+ nsdap_leader +] and his party?
+title: これが[+ nsdap_leader +]と彼の党にどう影響するか？
 
-In a meeting between [+ nsdap_leader +] and the <span style="color: #7A3C00;">Nazi</span> gauleiters, immediately after the Lippe results were known, things could have turned disastrous if the results had been worse, with unrest already rising among the grassroots. However, the <span style="color: #7A3C00;">Nazi</span> gains have alleviated their concerns about his all-or-nothing strategy, and [+ nsdap_leader +] used the opportunity to finally address the Strasser issue.
+リッペの結果が判明した直後、[+ nsdap_leader +]と<span style="color: #7A3C00;">のナチ</span>州指導者たちの会合では、もし結果が悪ければ事態は破滅的になりかねなかった。草の根レベルではすでに動揺が高まっていたからだ。しかし、<span style="color: #7A3C00;">のナチ</span>の獲得は、彼の全てか無かかの戦略に対する懸念を和らげ、[+ nsdap_leader +]はこの機会を利用してついにシュトラッサーの問題に言及した。
 
-He unleashed the full force of his anger against Strasser, condemning the person responsible for his rise to power as a traitor and accusing him of numerous offenses stretching back many years. [+ nsdap_leader +] implied that anyone expressing doubts about his all-or-nothing strategy was an accomplice of the disgraced Strasser. This appears to have silenced dissent among the gauleiters.
+彼はシュトラッサーに対して怒りの全力を解き放ち、彼の権力上昇の原因を作った人物を裏切り者だと非難し、長年にわたる数々の罪で告発した。[+ nsdap_leader +]は、彼の全てか無かかの戦略に疑念を抱く者は、不名誉なシュトラッサーの共犯者であると示唆した。これは州指導者の間の異論を沈黙させたようだ。
 
-His denunciation of his former ally has been kept out of the press, deliberately by [+ nsdap_leader +] to shield the party from political fallout due to rumors of a split within its ranks. However, the bad news eventually reaches Chancellor von Schleicher, as the only person willing to cooperate with him in the party is, in fact, 'finished.'
+元同盟者への告発は、党内の分裂の噂による政治的余波から党を守るため、[+ nsdap_leader +]によって意図的に報道から遠ざけられた。しかし、悪い知らせは最終的にシュライヒャー首相に届く。なぜなら、党内で彼と協力する意思のある唯一の人物が、実際には「終わっている」からだ。
 
 @hitler_eh
-title: How will this affect [+ nsdap_leader +] and his party?
+title: これが[+ nsdap_leader +]と彼の党にどう影響するか？
 on-arrival: nazi_explode += 1
 
-In a meeting between [+ nsdap_leader +] and the <span style="color: #7A3C00;">Nazi</span> gauleiters, immediately after the Lippe results were known, things could have turned disastrous if the results had been worse, with unrest already rising among the grassroots. While the <span style="color: #7A3C00;">Nazi</span> gains somewhat mitigated the unrest, the gauleiters still voiced concerns about [+ nsdap_leader +]'s strategy. Leaks of discontent continue to reach the press.
+リッペの結果判明直後に開かれた[+ nsdap_leader +]と<span style="color: #7A3C00;">ナチ</span>の大管区指導者たちとの会合は、結果がさらに悪ければ破局を迎えかねなかった。党員の動揺はすでに高まっていた。<span style="color: #7A3C00;">ナチ</span>の伸長で動揺はいくらか和らいだものの、大管区指導者たちはなお[+ nsdap_leader +]の戦略へ懸念を示し、不満は引き続き報道機関へ漏れている。
 
-In an attempt to suppress dissent, he unleashed the full force of his anger against Strasser, condemning the person responsible for his rise to power as a traitor and accusing him of numerous offenses stretching back many years. [+ nsdap_leader +] implied that anyone expressing doubts about his all-or-nothing strategy was an accomplice of the disgraced Strasser. This appears to have silenced dissent among the gauleiters.
+反対意見を抑圧しようと、彼はシュトラッサーに対し怒りの全力を振るい、彼の権力上昇の責任者を裏切り者だと非難し、長年にわたる数々の罪で告発した。[+ nsdap_leader +]は、彼の全てか無かかの戦略に疑問を呈する者は誰であっても、失墜したシュトラッサーの共犯者だと示唆した。これはガウレターたちの間の反対意見を沈黙させたようだ。
 
-His denunciation of his former ally has been kept out of the press, deliberately by [+ nsdap_leader +] to shield the party from political fallout due to rumors of a split within its ranks. However, the bad news eventually reaches Chancellor von Schleicher, as the only person willing to cooperate with him in the party is, in fact, 'finished.'
+元同盟者への告発は、党内の分裂の噂から党を守るため、[+ nsdap_leader +]によって意図的に報道から遠ざけられてきた。しかし、悪い知らせはついにフォン・シュライヒャーの首相のもとに届く。なぜなら、党内で彼と協力する意思のある唯一の人物が、実際には「終わっている」からだ。
 
 @hitler_bad
-title: How will this affect [+ nsdap_leader +] and his party?
+title: これは[+ nsdap_leader +]とその党にどう影響するか？
 on-arrival: nazi_explode += 2
 
-In a meeting between [+ nsdap_leader +] and the <span style="color: #7A3C00;">Nazi</span> gauleiters immediately after the Lippe results became known, it was clear—they were not pleased. The consensus among the leadership was that [+ nsdap_leader +]’s all-or-nothing strategy is failing. They cannot simply wait for Hindenburg to have a sudden change of heart, nor can they rely on a victory at the ballot box.
+リッペの結果判明直後に開かれた[+ nsdap_leader +]と<span style="color: #7A3C00;">ナチ</span>の大管区指導者たちとの会合では、不満が明白だった。指導部は[+ nsdap_leader +]の全か無かの戦略が失敗していると判断した。ヒンデンブルクの突然の心変わりを待つことも、選挙での勝利を当てにすることもできない。
 
-In an attempt to crush dissent, [+ nsdap_leader +] unleashed the full force of his anger on Strasser—denouncing the man who once helped elevate him as a traitor and accusing him of long-standing subversion. He warned that anyone questioning his strategy was aligning themselves with the disgraced Strasser. But many in the room still sympathized with Strasser’s arguments, and the tirade only deepened their disillusionment with the man they had once seen as a prophet.
+反対意見を粉砕しようと、[+ nsdap_leader +]はシュトラッサーに怒りの全力を振るった。かつて彼を押し上げた手助けをした男を裏切り者だと非難し、長年の破壊活動で告発した。彼は、自分の戦略に疑問を呈する者は誰であっても、失墜したシュトラッサーと肩を並べるのだと警告した。しかし、部屋の多くの者は依然としてシュトラッサーの主張に同情しており、その激論は彼らがかつて預言者と見なしていた男への幻滅を深めるだけだった。
 
-The denunciation—and the evident unrest among the <span style="color: #7A3C00;">Nazi</span> leadership—quickly leaked to the press. Word soon reached Chancellor von Schleicher, who was elated at their collapse and hopeful that it might finally compel [+ nsdap_leader +] to act more rationally.
+この糾弾と<span style="color: #7A3C00;">ナチ</span>指導部の明白な動揺は、たちまち報道機関へ漏れた。知らせを受けたシュライヒャー首相は党の崩壊を喜び、ついに[+ nsdap_leader +]へ現実的な行動を迫れるかもしれないと期待した。
 
 @hitler_explode
-title: How will this affect [+ nsdap_leader +] and his party?
+title: これは[+ nsdap_leader +]とその党にどう影響するか？
 on-arrival: nazi_explode += 3
 
-In a meeting between [+ nsdap_leader +] and the <span style="color: #7A3C00;">Nazi</span> gauleiters immediately after the Lippe results became known, it was clear—they were outraged. The consensus among the leadership was that [+ nsdap_leader +]’s all-or-nothing strategy was failing, and the party was collapsing fast. They could no longer wait for Hindenburg to have a sudden change of heart, nor could they rely on a victory at the ballot box.
+[+ nsdap_leader +]と<span style="color: #7A3C00;">のナチ</span>ガウレターたちの会合で、リッペの結果が判明した直後、彼らは明白に憤慨していた。指導部の間では、[+ nsdap_leader +]の全てか無かかの戦略は失敗しており、党は急速に崩壊しているという認識が一致していた。彼らはヒンデンブルクが突然考えを変えるのを待つことも、投票箱での勝利に頼ることもできなくなっていた。
 
-In a fit of rage, [+ nsdap_leader +] launched into a long and incoherent tirade against Strasser—denouncing the man who once helped elevate him as a traitor and accusing him of long-standing subversion. Many in the room still sympathized with Strasser’s arguments, and the outburst only deepened their disillusionment with the man they had once regarded as a prophet.
+激怒のあまり、[+ nsdap_leader +]はシュトラッサーに対して長く支離滅裂な非難の嵐を巻き起こした。彼はかつて自分を地位向上させた人物を裏切り者だと非難し、長年の破壊工作の罪を着せた。部屋の多くの人々は依然としてシュトラッサーの主張に同情しており、その爆発は、かつて預言者と見なしていた人物に対する彼らの幻滅を深めるだけだった。
 
-After [+ nsdap_leader +] seemingly lost control, a growing minority within the party now openly call for a reconciliation with Strasser and the <span style="color: #7A3C00;">**NSDAP**</span> entering the Schleicher cabinet. The unrest within the party has quickly leaked to the press, with numerous local <span style="color: #7A3C00;">**NSDAP**</span> and <span style="color: #7A3C00;">**SA**</span> leaders now at each other’s throats, accelerating the party's collapse.
+[+ nsdap_leader +]が制御を失ったように見えた後、党内の勢力を増す少数派が、シュライヒャー内閣に参入したシュトラッサーと<span style="color: #7A3C00;">**NSDAP**</span>との和解を公然と求めている。党内の動揺はすぐに報道機関に漏れ出し、多数の地方<span style="color: #7A3C00;">**NSDAP**</span>と<span style="color: #7A3C00;">**SA**</span>の指導者たちが互いに敵対し、党の崩壊を加速させている。

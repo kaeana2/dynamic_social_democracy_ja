@@ -1,5 +1,5 @@
-title: Schleicher Founds a New Political Party!
-subtitle: He seeks to capitalize on his newfound popularity.
+title: シュライヒャーが新党を結成！
+subtitle: 新たに得た人気を政治的な力に変えようとしている。
 view-if: chancellor = "Schleicher" and schleicher_time >= 12
 new-page: true
 priority: 1
@@ -8,27 +8,27 @@ max-visits: 1
 face-image: img/portraits/schleicher.jpg
 audio: music/1930_1933/Ugly_American.mp3
 
-= A New Political Force
+= 新たな政治勢力
 
-Schleicher, once reviled by the public, is now hailed as Germany’s savior. Through his public works campaign and ruthlessly pragmatic ideology, he has managed to win support from across the political spectrum. But a key question remains: where can these grateful voters turn to express their support for the chancellor?
+かつて国民に忌み嫌われたシュライヒャーは、今やドイツの救世主と称賛されている。公共事業運動と徹底した現実主義によって、政治的立場を超えた支持を獲得した。しかし重要な疑問が残る。感謝する有権者は、どこに投票すれば首相への支持を示せるのだろうか。
 
-The <span style="color: #808080;">reactionary</span> right will never win over the workers, and the <span style="color: #c00000;">**SPD**</span> is seen as unreliable when it comes to backing Schleicher’s government.
+<span style="color: #808080;">反動的な</span>右派が労働者を引き付けることはなく、<span style="color: #c00000;">**SPD**</span>はシュライヒャー政権への支持という点では頼りにならないと見られている。
 
-In the past, Schleicher flirted with the idea of building a new "presidential party"—a direct vehicle for rallying public support behind his cabinet. Until now, he had taken no concrete steps. But with new ties to the working class and the moderate forces on the German Right, he now has an opportunity to bring such a party to life[? if next_election_time - time < 3: with the elections coming up?].
+かつてシュライヒャーは、国民の支持を内閣の背後に直接結集するため、新たな「大統領政党」の設立を考えていた。これまでは具体的な行動を取らなかったが、労働者階級とドイツ右派の穏健勢力との新たなつながりにより、今や実現の機会を得ている[? if next_election_time - time < 3:。しかも選挙は間近だ?]。
 
-- @schleicher_2: The <i>Deutschnationale Einheitsfront</i> (<span style="color: #BFC8CC;">German National Unity Front</span>, <span style="color: #BFC8CC;">**DNEF**</span>) is formed!
+- @schleicher_2: <i>Deutschnationale Einheitsfront</i>（<span style="color: #BFC8CC;">ドイツ国民統一戦線</span>、<span style="color: #BFC8CC;">**DNEF**</span>）が結成された！
 
 @schleicher_2
 on-arrival: dnef_formed = 1; chancellor_party = "DNEF"
 audio: shuffle music/1930_1933/Backroom_Deal.ogg music/1930_1933/Ugly_American.mp3
 go-to: dnef_formed
 
-In terms of ideology, the party offers no clear position on the traditional political spectrum. Its program is whatever Schleicher advocates: Germany’s rearmament, a return to great power status, and economic revival through public works.
+思想面では、従来の政治的な左右の枠組みのどこに立つかは明確でない。党綱領は、ドイツの再軍備、大国としての地位の回復、公共事業による経済再建など、シュライヒャーが主張することそのものである。
 
-The "Unity Front" portion of the name signals the party's openness to absorbing other groups, [? if kvp_formed: [? if schleicher_kvp: with the <span style="color: #0087DC;">**KVP**</span> approached as the prime candidate, especially given Schleicher's influence over the party. However, it prefers to retain a "sister party" status for now, similar to the <span style="color: #A2D8E0;">**BVP**</span>'s relationship with the <span style="color: #000000;">Center</span>. Schleicher approves, as his newly launched party has struggled to attract rural voters. ?][? if not schleicher_kvp: with the <span style="color: #0087DC;">**KVP**</span> approached as the prime candidate, given the close ties between its leaders and Schleicher. However, it seeks to maintain its independence for now. ?]?][? if not kvp_formed and dnvp_ideology == "Radical": with politically homeless former moderate <span style="color: #3E88B3;">**DNVP**</span> members forming the main recruits, and Treviranus taking a leading role in organizing the merger of the minuscule <span style="color: #0087DC;">**KVP**</span> into the front. ?][? if dnvp_ideology == "Moderate": with the <span style="color: #3E88B3;">**DNVP**</span> especially being courted to join, as they have supported both presidential governments in the past out of loyalty to the president. However, they refuse to offer more than continued support for the chancellor. ?]
+名称の「統一戦線」は、他の集団の吸収に前向きであることを示している。[? if kvp_formed: [? if schleicher_kvp: 特にシュライヒャーの影響力が強い<span style="color: #0087DC;">**KVP**</span>が最有力候補として打診を受けた。しかし同党は、<span style="color: #000000;">中央党</span>に対する<span style="color: #A2D8E0;">**BVP**</span>のように、当面は「姉妹政党」の立場を維持したいと考えている。新党が農村票の獲得に苦戦していることもあり、シュライヒャーはこれを認めた。?][? if not schleicher_kvp: 指導者とシュライヒャーの関係が深い<span style="color: #0087DC;">**KVP**</span>が最有力候補として打診を受けた。しかし同党は、当面は独立を保ちたいと考えている。?]?][? if not kvp_formed and dnvp_ideology == "Radical": 政治的な居場所を失った旧<span style="color: #3E88B3;">**DNVP**</span>穏健派が主な参加者となり、トレヴィラヌスが中心となって、小規模な<span style="color: #0087DC;">**KVP**</span>の戦線への合流をまとめた。?][? if dnvp_ideology == "Moderate": 特に<span style="color: #3E88B3;">**DNVP**</span>は、大統領への忠誠から過去二つの大統領内閣を支持したこともあり、参加を強く求められた。しかし同党は、首相への支持の継続以上の協力を拒んでいる。?]
 
-The front has also moved to recruit the moribund special-interest and bourgeois parties stranded between the <span style="color: #FFCC00;">liberals</span> and the <span style="color: #3E88B3;">right</span>, such as the <span style="color: #b8996f;">**WP**</span>[? if csvd_formed:,?][? if not csvd_formed:&nbsp;and?] <span style="color: #7FCEB1;">**CNBLP**</span>[? if csvd_formed:, and <span style="color: #8ED8E4;">**CSVD**</span>?]. [? if csvd_formed: The latter, in particular, stands out, having long advocated for a non-partisan presidential government over traditional party rule and for having a sizable political base. ?] 
+戦線は、<span style="color: #FFCC00;">自由主義勢力</span>と<span style="color: #3E88B3;">右派</span>の間で行き場を失った、衰退する利益代表政党やブルジョワ政党にも参加を働きかけている。<span style="color: #b8996f;">**WP**</span>[? if csvd_formed:、?][? if not csvd_formed:と?]<span style="color: #7FCEB1;">**CNBLP**</span>[? if csvd_formed:、そして<span style="color: #8ED8E4;">**CSVD**</span>?]などである。[? if csvd_formed: 特に後者は、従来の政党政治に代わる超党派の大統領内閣を長年主張してきたうえ、相当の支持基盤を持つ点で際立っている。?]
 
-[? if dstp_maintained: The <span style="color: #D3C24D;">[+ ddp_name +]</span> and the Young German Order have officially joined the front, citing their ideological similarity with the <span style="color: #BFC8CC;">**DNEF**</span>. They're both nationalist, corporatist, and socially pragmatic. The Young German Order coerced the party to join despite the objections of old-line members like Dietrich and Heuss. ?]
+[? if dstp_maintained: <span style="color: #D3C24D;">[+ ddp_name +]</span>と青年ドイツ騎士団は、<span style="color: #BFC8CC;">**DNEF**</span>との思想的な近さを理由に正式に戦線へ参加した。双方とも国家主義的・協調組合主義的で、社会政策では現実主義的である。ディートリヒやホイスら古参党員の反対にもかかわらず、青年ドイツ騎士団が党に参加を強いた。?]
 
-The <span style="color: #BFC8CC;">**DNEF**</span>, for its part, avoids calling itself a party at all, instead presenting as a mass movement open to everyone—from workers to industrial magnates—claiming to rise above partisan divides.
+<span style="color: #BFC8CC;">**DNEF**</span>自身は政党という呼称を避け、労働者から大実業家まで誰にでも開かれた大衆運動を名乗り、党派対立を超越すると主張している。

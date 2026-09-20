@@ -1,52 +1,52 @@
-title: Rudolf Breitscheid
+title: ルドルフ・ブライトシャイト
 is-pinned-card: true 
 tags: advisor, centrist
 card-image: img/portraits/BreitscheidRudolf.jpg
 new-page: true
 view-if: breitscheid_advisor = 1
 
-= Rudolf Breitscheid
+= ルドルフ・ブライトシャイト
 
-Breitscheid is a long-time <span style="color: #c00000;">**SPD**</span> leader, who was at one time part of the anti-war <span style="color: #D47B9B;">**USPD**</span>. He came from a working-class family, but has a doctorate degree and started his political career as a liberal.
+ブライトシャイトは長年<span style="color: #c00000;">**SPD**</span>を率い、一時は反戦派の<span style="color: #D47B9B;">**USPD**</span>に所属した。労働者階級の家庭に生まれたが博士号を持ち、自由主義者として政治活動を始めた。
 
 - @breitscheid_international
 - @breitscheid_foreign
 - @party_discipline
 - @snap_election
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @breitscheid_international
-title: International Party Relations
-subtitle: Breitscheid is one of our contacts with international <span style="color: #c00000;">socialist</span> parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 国際政党関係
+subtitle: ブライトシャイトは各国の<span style="color: #c00000;">社会主義</span>政党との連絡役の一人である。
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; international_relations_timer -= 12; last_advisor_action = 1
 go-to: international_relations
 
 @breitscheid_foreign
-title: Foreign Policy
-subtitle: As Foreign Minister, Breitscheid can set our foreign policy.
-unavailable-subtitle: [? if not spd_in_government: The <span style="color: #c00000;">SPD</span> is not in government. ?] [? if foreign_minister_party != "SPD" : The <span style="color: #c00000;">SPD</span> does not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 外交政策
+subtitle: ブライトシャイトは外相として外交政策を決定できる。
+unavailable-subtitle: [? if not spd_in_government: <span style="color: #c00000;">SPD</span>は政権に参加していない。 ?] [? if foreign_minister_party != "SPD" : <span style="color: #c00000;">SPD</span>は外務省を掌握していない。 ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 choose-if: advisor_action_timer == 0 and spd_in_government and foreign_minister_party == "SPD"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
 
 
 @party_discipline
-title: Party Discipline
-subtitle: Reduce dissent across the party.
+title: 党規律
+subtitle: 党内全派閥の不満を抑える。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; left_dissent -= 5; labor_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5
 
-We have enforced party discipline to reduce dissent across all factions.
+党規律を徹底し、全派閥の不満を抑えた。
 
 
 @snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Breitscheid" : Breitscheid must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 解散総選挙
+subtitle: 解散総選挙を実施する。
+unavailable-subtitle: [? if chancellor != "Breitscheid" : ブライトシャイトが首相でなければならない。 ?][? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?]
 choose-if: advisor_action_timer == 0 and chancellor == "Breitscheid"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+新たな選挙を[+ next_election_year +]年[+ next_election_month : month +]に実施することを決定した。

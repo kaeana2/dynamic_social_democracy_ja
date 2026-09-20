@@ -1,5 +1,5 @@
-title: "Agrarian Bolshevism"
-subtitle: A controversial policy involving settling unemployed workers on bankrupt estates in the east.
+title: 「農民ボリシェヴィズム」
+subtitle: 東部の破産した荘園に失業した労働者を定住させるという物議を醸す政策。
 view-if: bruning_toleration_time >= 6 and second_bruning_cabinet_seen and ((year == 1932 and month >= 5) or year >= 1933) and president == "Hindenburg" and hindenburg_angry_bruning >= 150
 max-visits: 1
 tags: event
@@ -19,19 +19,19 @@ on-display: {!
 !}
 on-arrival: unemployed -= 0.5; economic_growth += 0.4; hindenburg_angry_bruning += 50
 
-= "Agrarian Bolshevism"
+= 「農民ボリシェヴィズム」
 
-One of the [? if z_party_name != "CVP":<span style="color: #000000;">Center</span>?][? if z_party_name == "CVP":<span style="color: #000000;">CVP</span>?]'s Labor Minister Adam Stegerwald’s pet projects is the dismantling of hopelessly bankrupt eastern estates to carve them into peasant homesteads. The problem is that there haven’t been many young workers eager to turn themselves into peasants.
+[? if z_party_name != "CVP":<span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP":<span style="color: #000000;">CVP</span>?]の労働相アダム・シュテーガーヴァルトが温めてきた計画の一つは、救いようのないほど破綻した東部の荘園を解体し、農民の小農地に分割することである。問題は、自ら農民になろうとする若い労働者がほとんどいないことだ。
 
-Still, with [? if not kvp_formed and dnvp_ideology == "Radical": <span style="color: #7FCEB1;">**CNBLP**</span>?][? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?] member Hans Schlange-Schöningen newly sworn in as Commissar for Eastern Aid—following Treviranus’s move to the Transport Ministry—he’s struck a deal with Stegerwald: estates deemed “hopelessly bankrupt” will be handed over to the Labor Ministry. Backed by his promise to the unions, Stegerwald has pushed a decree that allows the government to purchase select estates at prices set by the Eastern Aid office.
+それでも、トレヴィラヌスが運輸相へ移った後、[? if not kvp_formed and dnvp_ideology == "Radical":<span style="color: #7FCEB1;">**CNBLP**</span>?][? if kvp_formed:<span style="color: #0087DC;">**KVP**</span>?][? if dnvp_ideology == "Moderate":<span style="color: #3E88B3;">**DNVP**</span>?]所属のハンス・シュランゲ＝シェーニンゲンが東部援助弁務官に就任すると、彼はシュテーガーヴァルトと取引を結んだ。「救いようのないほど破綻」した荘園を労働省へ移管するという内容である。労働組合への公約に後押しされたシュテーガーヴァルトは、東部援助局が定めた価格で政府が対象荘園を買収できるようにする布告を成立させた。
 
-Unfortunately for Brüning, a copy of the decree has been leaked to the <span style="color: #006400;">National Rural League</span> (<span style="color: #006400;">RLB</span>). Its lobbyists—deeply embedded in Hindenburg’s circle—have denounced it as "<span style="color: #385A38;">Agrarian</span> <span style="color: #9B0000;">Bolshevism</span>" slamming the measure as a descent into <span style="color: #9B0000;">state socialism</span>. They’ve made sure the President, who along with many friends owns eastern estates, see it as a personal attack.
+ブリューニングにとって不運なことに、布告の写しが<span style="color: #006400;">全国農村同盟</span>（<span style="color: #006400;">RLB</span>）へ漏れた。ヒンデンブルクの側近集団に深く食い込んだ同盟のロビイストは、布告を「<span style="color: #385A38;">農業</span><span style="color: #9B0000;">ボリシェヴィズム</span>」と非難し、この措置は<span style="color: #9B0000;">国家社会主義</span>への転落だと攻撃した。さらに、友人の多くと同じく東部に荘園を所有する大統領が、これを自分への攻撃と受け取るよう仕向けた。
 
 - @joever
 
 @joever
-title: Nice having you, Brüning.
+title: さらばだ、ブリューニング。
 
-The Agriculture Ministry, led by the respected Martin Schiele, does its best to defend the decree before Hindenburg—but to no avail.
+農業省は、名望あるマルティン・シーレの指導のもと、ヒンデンブルクに対して布告を擁護しようと尽力したが、徒労に終わる。
 
-In truth, policy disputes isn’t what will seal Brüning’s fate. Hindenburg had merely planned to give him a few more months to try his luck at Lausanne. But the scheming—and the sense of urgency—pushed by Schleicher, Meissner, and Oskar is forcing his hand toward an early, rash decision.
+実のところ、ブリューニングの運命を決するのは政策対立ではない。ヒンデンブルクは、ローザンヌで運を試すため、あと数か月の猶予を与えるつもりだった。だがシュライヒャー、マイスナー、オスカーが煽る策謀と切迫感が、大統領に早急で軽率な決断を迫っている。

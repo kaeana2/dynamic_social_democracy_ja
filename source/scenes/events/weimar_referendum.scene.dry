@@ -1,21 +1,21 @@
-title: Weimar Constitution Referendum
+title: ヴァイマル憲法国民投票
 new-page: true
-subtitle: The results have come in.
+subtitle: 結果が出た。
 tags: event
 view-if: year = 1929 and month >= 12 and weimar_ref_signatures >= 10
 max-visits: 1
 
-= Weimar Constitution Referendum
+= ヴァイマル憲法国民投票
 
-After months of campaigning and propaganda by both sides, the German people have come to vote on the referendum for the revision of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, which has taken the backseat in comparison to the devastating economic depression. 
+両陣営による数か月の運動と宣伝を経て、ドイツ国民は<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>憲法改正を問う国民投票の日を迎えた。もっとも、この争点は壊滅的な経済恐慌の前ですでに影を薄めていた。
 
-Passing the referendum would need to require the approval of more than 50% of those eligible to vote, rather than a majority of those that do vote [? if (dvp_relation_9 >= 40 and dvp_ideology_9 != "Right" and not lvp_formed) or ((lvp_ideology_9 != "Right" or lvp_relation_9 >= 40) and lvp_formed): This makes it impossible for the referendum to succeed, even with the recent economic depression?][? if (dvp_relation_9 < 40 and dvp_ideology_9 != "Left" and not lvp_formed) or ((lvp_ideology_9 == "Right" and lvp_relation_9 < 40) and lvp_formed): This has made it difficult for the referendum to succeed, however with the support of the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] and <span style="color: #A2D8E0;">**BVP**</span> has made it a distant possibility, with the recent economic depression?]. The <span style="color: #7A3C00;">far</span>-<span style="color: #003755;">right</span> parties are also abstaining from supporting this referendum.
+国民投票を成立させるには、投票者の過半数ではなく、全有権者の50%を超える賛成が必要である。[? if (dvp_relation_9 >= 40 and dvp_ideology_9 != "Right" and not lvp_formed) or ((lvp_ideology_9 != "Right" or lvp_relation_9 >= 40) and lvp_formed): この要件のため、経済恐慌のさなかであっても成立は事実上不可能である。?][? if (dvp_relation_9 < 40 and dvp_ideology_9 != "Left" and not lvp_formed) or ((lvp_ideology_9 == "Right" and lvp_relation_9 < 40) and lvp_formed): 成立は困難だが、[? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]と<span style="color: #A2D8E0;">**BVP**</span>の支持により、経済恐慌を背景としてわずかな可能性は残る。?] <span style="color: #7A3C00;">極</span><span style="color: #003755;">右</span>諸党もこの国民投票を支持している。
 
-- @results: The nation votes...
+- @results: 国民が投票する……
 
 @results
 on-arrival: rural_dnvp += 5 if weimar_ref_votes >= 40; rural_dvp += 3 if weimar_ref_votes >= 40; rural_lvp -= 3 if weimar_ref_votes >= 40; old_middle_dnvp += 3 if weimar_ref_votes >= 40; old_middle_dvp += 3 if weimar_ref_votes >= 40; old_middle_lvp -= 3 if weimar_ref_votes >= 40; new_middle_dnvp += 2 if weimar_ref_votes >= 40; new_middle_dvp += 2 if weimar_ref_votes >= 40; new_middle_dvp -= 2 if weimar_ref_votes >= 40; pro_republic -= 5 if weimar_ref_votes >= 40; dvp_relation -= 5; lvp_relation -= 3; z_relation -= 3; rural_dvp -= 3 if weimar_ref_votes < 30; rural_ddp += 3 if weimar_ref_votes < 30; old_middle_dvp -= 2 if weimar_ref_votes < 30; old_middle_ddp += 3 if weimar_ref_votes < 30; old_middle_lvp += 3 if weimar_ref_votes < 30; new_middle_dvp -= 2 if weimar_ref_votes < 30; new_middle_ddp += 2 if weimar_ref_votes < 30; new_middle_lvp += 2 if weimar_ref_votes < 30; rural_dnvp -= 2 if weimar_ref_votes < 30; new_middle_dnvp -= 2 if weimar_ref_votes < 30; old_middle_dnvp -= 2 if weimar_ref_votes < 30; rural_dnf += 2 if weimar_ref_votes < 30; new_middle_dnf += 2 if weimar_ref_votes < 30; old_middle_dnf += 2 if weimar_ref_votes < 30
 
-The referendum fails, with only around [+ weimar_ref_votes +]% of voters participating in it. It seems that the right is far more divided now than they were in supporting President Hindenburg four years ago. [? if weimar_ref_votes >= 40: However, the support for the referendum is higher than expected. ?][? if weimar_ref_votes < 30: The support for the referendum was lower than expected, this should weaken the right-wing parties. ?] The goal behind the referendum was not for it to succeed, but to rally the right-wing parties[? if (dvp_relation_9 >= 40 and dvp_ideology_9 != "Right" and not lvp_formed) or ((lvp_ideology_9 != "Right" or lvp_relation_9 >= 40) and lvp_formed):, which has failed since they've failed to recruit the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] [? if not lvp_formed: and <span style="color: #A2D8E0;">**BVP**</span>?][? if lvp_formed: and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?]?].
+国民投票は失敗し、参加した有権者は約[+ weimar_ref_votes +]%にとどまった。右派は、4年前にヒンデンブルク大統領を支持した時よりはるかに分裂しているようだ。[? if weimar_ref_votes >= 40: それでも国民投票への支持は予想を上回った。?][? if weimar_ref_votes < 30: 国民投票への支持は予想を下回り、右派諸党を弱体化させるだろう。?] そもそも国民投票の目的は成立そのものではなく、右派諸党を結集することだった[? if (dvp_relation_9 >= 40 and dvp_ideology_9 != "Right" and not lvp_formed) or ((lvp_ideology_9 != "Right" or lvp_relation_9 >= 40) and lvp_formed):。しかし[? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if not lvp_formed:と<span style="color: #A2D8E0;">**BVP**</span>?][? if lvp_formed:および[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?]を取り込めず、その企図も失敗した?]。
 
-[? if weimar_ref_votes >= 50: report to the dev if you got this, this shouldn't be possible. ?]
+[? if weimar_ref_votes >= 50: この結果が出た場合は開発者に報告してほしい。本来は起こり得ない。?]

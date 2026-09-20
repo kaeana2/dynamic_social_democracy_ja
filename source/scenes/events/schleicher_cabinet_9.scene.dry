@@ -1,5 +1,5 @@
-title: Schleicher Enacts Concessions to Labor!
-subtitle: The <span style="color: #000000;">Christian</span> and <span style="color: #c00000;">Free Unions</span> are ecstatic!
+title: シュライヒャーが労働者への譲歩を実施！
+subtitle: <span style="color: #000000;">キリスト教労組</span>と<span style="color: #c00000;">自由労組</span>は歓喜している！
 view-if: chancellor == "Schleicher" and schleicher_post and not schleicher_labor and next_reichstag_time == (rubicon_time + 1) and next_reichstag_time > 0
 max-visits: 1
 new-page: true
@@ -18,18 +18,18 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Schleicher Enacts Concessions to Labor!
+= シュライヒャーが労働者への譲歩を実施！
 
-Presumably aiming to win over the unions' affiliated parties—the <span style="color: #000000;">Center Party</span> and the <span style="color: #c00000;">SPD</span>—and to bolster public confidence in his leadership at the grassroots level, Schleicher has enacted a new decree.
+労組と結びつく<span style="color: #000000;">中央党</span>と<span style="color: #c00000;">SPD</span>を取り込み、草の根で自らの指導力への国民の信頼を高める狙いからか、シュライヒャーは新たな大統領令を施行した。
 
-An eight-hour workday is now mandated across most industries, intended to "spread out" employment among more workers. The means test for unemployment insurance has been abolished, and welfare funding has been increased to offset years of austerity.
+より多くの労働者へ雇用を「分配」するため、大半の産業で八時間労働制が義務づけられた。失業保険の資力調査は廃止され、長年の緊縮財政を埋め合わせるため福祉予算も増額された。
 
-The <span style="color: #c00000;">Social</span> General has lived up to his nickname. Yet, cynically, the cost is clear—Schleicher now wields significant leverage over the unions, and many workers are beginning to shift their loyalty toward the chancellor, who delivers results, rather than the opposition parties. His image as a strongman, standing above the old parties, is slowly conditioning the workers to accept a more authoritarian system.
+「<span style="color: #c00000;">社会派</span>将軍」はその異名に恥じぬ働きをした。だが皮肉にも、代償は明白である。シュライヒャーは労組に大きな影響力を持つようになり、多くの労働者は野党よりも、成果を出す首相へ忠誠を移し始めた。旧来の諸党を超越する強権的指導者という彼の像は、労働者がより権威主義的な体制を受け入れる土壌を徐々に作っている。
 
 - @labor
 
 @labor
-title: The decree is signed into law.
+title: 大統領令が署名され、施行される。
 on-arrival: {!
 Q.schleicher_labor = 1; 
 Q.schleicher_spd_influence += 3; 
@@ -63,6 +63,6 @@ Q.social_patriot_dissent += 20;
 Q.labor_strength += 5; 
 !}
 
-With Schleicher granting concessions to the workers on his own initiative—rather than under pressure from the <span style="color: #c00000;">SPD</span>—he alone reaps the political rewards. Even some radicalized <span style="color: #700000;">Communist</span> workers begin to drift away, as the less ideological and politically disengaged prioritize their livelihoods over loyalty to their traditional parties.
+<span style="color: #c00000;">SPD</span>の圧力ではなく、シュライヒャーが自らの発意で労働者へ譲歩したため、政治的利益は彼一人のものとなる。急進化した<span style="color: #700000;">共産党</span>支持の労働者の一部さえ離れ始めた。思想性が薄く政治に無関心な者は、伝統的な支持政党への忠誠より生計を優先したのである。
 
-But hey, at least the workers aren’t suffering as much anymore. This alone has led the ADGB to adopt a friendlier stance toward the chancellor, giving Schleicher growing influence within our party, using the unions as his middleman.
+とはいえ、少なくとも労働者の苦境は和らいだ。この一点だけでもADGBは首相に友好的な姿勢を取り、シュライヒャーは労組を仲介役として我が党内で影響力を強めている。

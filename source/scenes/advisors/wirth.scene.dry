@@ -1,63 +1,63 @@
-title: Joseph Wirth
+title: ヨーゼフ・ヴィルト
 is-pinned-card: true
 tags: advisor, neorevisionist
 card-image: img/portraits/wirth.jpg
 view-if: wirth_advisor = 1
 new-page: true 
 
-= Joseph Wirth
+= ヨーゼフ・ヴィルト
 
-Wirth is a former chancellor and figure of the <span style="color: #000000;">Center</span>'s left wing who has been devotedly <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span>, to the extent of angering his former party members. He is a strong supporter of maintaining democracy and building a broad popular base for the <span style="color: #c00000;">**SPD**</span>.
+ヴィルトは元首相で中央党左派の有力者であり、かつての党友を怒らせるほど熱烈な<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">者</span>である。民主主義の維持と、<span style="color: #c00000;">**SPD**</span>の広範な大衆基盤の構築を強く支持している。
 
 - @democratic_rally
 - @catholics_rally
 - @support_peoples_party
 - @build_peoples_party
 - @campaigning_peoples_party
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @democratic_rally
-title: Rally for democracy
-subtitle: Rally our party and the German people to defend democracy and freedom.
+title: 民主主義擁護の結集
+subtitle: 民主主義と自由を守るため、党とドイツ国民を結集させる。
 choose-if: advisor_action_timer == 0 
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; pro_republic += 8; democratization += 1; neorevisionist_strength += 5; reformist_strength += 5; workers_spd += 3*(1-dissent) if democratization >= 4; new_middle_spd += 2*(1-dissent) if democratization >= 4; catholics_spd += 4*(1-dissent) if democratization >= 3
 
-Wirth helps us to rally the people in defense of the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> system.
+ヴィルトは共和制を守るために国民を結集させた。
 
 @catholics_rally
-title: Organizing Catholics
-subtitle: Being a devoted Catholic and former <span style="color: #000000;">Center</span> member, he's particularly effective in winning votes from the <span style="color: #000000;">**[+ z_party_name +]**</span>.
+title: カトリック教徒の組織化
+subtitle: 敬虔なカトリック教徒で元中央党員でもあるため、<span style="color: #000000;">**[+ z_party_name +]**</span>から票を奪ううえで特に有効である。
 choose-if: advisor_action_timer == 0 
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; pro_republic += 4; catholics_spd += 8*(1-dissent)
 
-Wirth helps us rally the Catholic demographic back from the conservative <span style="color: #000000;">**[+ z_party_name +]**</span>.
+ヴィルトは保守的な<span style="color: #000000;">**[+ z_party_name +]**</span>からカトリック票を取り戻した。
 
 @support_peoples_party
-title: Build support for a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: 人民政党への支持を築く
+subtitle: 産業労働者階級を越えて党の支持を広げられるだろうか。
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party == 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if peoples_party_support > 4: 人民政党にはすでに相当な支持がある。 ?]
 on-arrival: advisor_action_timer = 6; peoples_party_support += 1
 
-We are building up support for the idea of a People's Party.
+人民政党構想への支持を築いている。
 
 @build_peoples_party
-title: Building a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: 人民政党を築く
+subtitle: 産業労働者階級を越えて党の支持を広げられるだろうか。
 view-if: peoples_party == 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if peoples_party_support < 3: この政策に対する党内の支持が足りない。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: peoples_party
 
 @campaigning_peoples_party
-title: Campaigning as a People's Party
-subtitle: Campaigning with some of our previously nontraditional demographics.
+title: 人民政党として選挙運動を行う
+subtitle: 従来は支持基盤でなかった社会集団にも働きかける。
 view-if: peoples_party = 1
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6;
 go-to: peoples_party_campaigning

@@ -1,5 +1,5 @@
-title: 1930 [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] Conference 
-subtitle: The party seeks to oust Jakob Kaiser...
+title: 1930年 [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党大会
+subtitle: 党がヤーコプ・カイザーの解任を図る……
 view-if: ((year == 1930 and month >= 11) or kaiser_time == time) and z_leader == "Kaiser"
 new-page: true
 on-arrival: pro_republic += 3
@@ -7,53 +7,53 @@ max-visits: 1
 tags: event
 face-image: img/zentrum_3.jpg
 
-= 1930 [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] Conference
+= 1930年 [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党大会
 
-The election of Jakob Kaiser to the leadership of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] has stalled any progress toward transforming the party into a true <span style="color: #000000;">Christian People's Party</span>. His left-leaning stances have alienated potential voters on the Protestant Right, leaving the party adrift—uncertain of its identity. Is it to remain a predominantly Catholic, left-leaning party of labor and social reform, or evolve into a broader, right-of-center *Volkspartei*?
+ヤーコプ・カイザーが[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首に選ばれたことで、真の<span style="color: #000000;">キリスト教人民党</span>への転換は停滞した。左寄りの立場がプロテスタント右派の潜在的支持者を遠ざけ、党は自らのあり方を定められずに漂流している。カトリックを主体とする左寄りの労働・社会改革政党にとどまるのか、それとも中道右派の幅広い*国民政党*へ発展するのか。
 
-Despite Kaiser himself supporting Stegerwald’s original vision of Christian unity, he has paradoxically become the chief obstacle in the eyes of the party’s right wing—figures like Stegerwald and Adenauer now seek to remove him, hoping to steer the party back toward its previous course. However, we retain significant influence within the party’s <span style="color: #FF7F00;">Christian Left</span> faction and its affiliated trade unions—leverage that could tip the scales back in Kaiser’s favor, should we choose to intervene.
+カイザー自身はシュテーガーヴァルトが当初掲げたキリスト教勢力統合の構想を支持しているが、皮肉にも党右派には最大の障害と見なされている。シュテーガーヴァルトやアデナウアーは彼を解任し、党を以前の路線へ戻そうとしている。しかし、我々は党の<span style="color: #FF7F00;">キリスト教左派</span>と系列労組に依然として強い影響力を持つ。介入すれば、形勢をカイザーに有利な方向へ動かせるかもしれない。
 
-- @adenauer: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] elects Konrad Adenauer as the party chair, ousting Kaiser.
-- @kaiser: Influence the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to select Jakob Kaiser as the party chair.
-- @kaiser_campaign: We will hold a campaign in support of Jakob Kaiser as party chair.
+- @adenauer: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]がカイザーを解任し、コンラート・アデナウアーを党首に選ぶ。
+- @kaiser: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]に働きかけ、ヤーコプ・カイザーを党首に選ばせる。
+- @kaiser_campaign: ヤーコプ・カイザーの党首選出を支持する運動を行う。
 
 @adenauer
-subtitle: The Mayor of Cologne, and a strong supporter of 'leaving the tower'. Situated on the right-wing of the party.
+subtitle: ケルン市長で、「塔から出る」ことを強く支持する党右派の人物。
 on-arrival: z_relation -= 15; z_ideology = "Right"; z_leader = "Adenauer"; workers_z -= 6; workers_spd += 6; unemployed_z -= 6; unemployed_spd += 6; rural_z += 6; old_middle_z += 10; rural_dnvp -= 4 if dnvp_ideology == "Moderate"; old_middle_dnvp -= 8 if dnvp_ideology == "Moderate"; catholics_dnvp -= 4 if dnvp_ideology == "Moderate"; rural_kvp -= 4 if kvp_formed; old_middle_kvp -= 8 if kvp_formed; catholics_kvp -= 4 if kvp_formed; rural_other -= 4 if not kvp_formed and dnvp_ideology == "Radical"; old_middle_other -= 8 if not kvp_formed and dnvp_ideology == "Radical"; catholics_other -= 4 if not kvp_formed and dnvp_ideology == "Radical"; z_party_name = "CVP"; stegerwald_skibidi_time = time + 11
 face-image: img/portraits/adenauer.jpg
 
-The influx of Protestant conservatives into the <span style="color: #000000;">Center Party</span> has rendered Jakob Kaiser’s leadership untenable. In a decisive internal vote of no confidence, Kaiser has been ousted—replaced by Stegerwald ally and long-serving Mayor of Cologne, Konrad Adenauer. Adenauer seeks to carry forward Stegerwald’s vision: transforming the party into the dominant force of the German Right.
+プロテスタント保守派の<span style="color: #000000;">中央党</span>への流入により、ヤーコプ・カイザーの党首続投は不可能となった。党内不信任投票で明確な敗北を喫して解任され、シュテーガーヴァルトの同志で長年ケルン市長を務めるコンラート・アデナウアーが後を継いだ。アデナウアーはシュテーガーヴァルトの構想を引き継ぎ、党をドイツ右派の中心勢力へ変えようとしている。
 
-Unsurprisingly, this development has sparked outrage among the <span style="color: #FF7F00;">Christian Left</span> and Kaiser’s supporters, many of whom have resigned their posts in protest. The party’s close ties to left-leaning unions have been severely strained, plunging the organization into temporary disarray as labor-aligned factions voice their anger. 
+予想どおり、この展開に<span style="color: #FF7F00;">キリスト教左派</span>とカイザー支持者は激怒し、多くが抗議して役職を辞任した。左寄りの労組との密接な関係は大きく傷つき、労働派が怒りを表明する中、党組織は一時的な混乱に陥っている。
 
-Yet despite this internal upheaval, the party remains poised to continue its cannibalization of the fragmented right—especially the beleaguered <span style="color: #3E88B3;">**DNVP**</span>. This shift is symbolized by the party's rebranding as the <i>Christliche Volkspartei</i> (<span style="color: #000000;">Christian People's Party</span>).
+それでも党は、分裂した右派、とりわけ苦境にある<span style="color: #3E88B3;">**DNVP**</span>の支持基盤を引き続き取り込もうとしている。その転換を象徴するのが、<i>Christliche Volkspartei</i>（<span style="color: #000000;">キリスト教人民党</span>）への改称である。
 
-[? if dnvp_ideology == "Moderate": Talks of a merger with the <span style='color: #3E88B3;'>**DNVP**</span> are becoming increasingly common—though support is limited to their <span style='color: #0087DC;'>People's Conservatives</span> and <span style='color: #6D5298;'>Christian Socials</span>. A merger remains impossible without one of those factions having strong, centralized leadership within their party. At the same time, we must prevent any government cooperation between them and the <span style='color: #000000;'>Center</span>—lest we allow conditions for such a union to emerge. ?]
+[? if dnvp_ideology == "Moderate": <span style='color: #3E88B3;'>**DNVP**</span>との合併話がますます頻繁になっているが、支持するのは同党の<span style='color: #0087DC;'>人民保守派</span>と<span style='color: #6D5298;'>キリスト教社会派</span>に限られる。どちらかの派閥が党内で強固な指導権を確立しない限り、合併は不可能である。同時に、我々は彼らと<span style='color: #000000;'>中央党</span>の政権での協力を阻まねばならない。そうしなければ、統合の条件を整えさせてしまう。?]
 
 @kaiser
 choose-if: z_relation >= 80 and pro_republic >= 80 and (in_weimar_coalition or in_popular_front) and (in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia)
-unavailable-subtitle: [? if z_relation < 80 : Our relations are not high enough. ?] [? if pro_republic < 80 : The party isn't left-wing enough for someone like him. ?] [? if not in_weimar_coalition and not in_popular_front : Our cooperation must be further strengthened in a federal <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> or Popular Front Coalition. ?] [? if not in_weimar_coalition_prussia and not in_grand_coalition_prussia and not in_popular_front_prussia: Our cooperation must be further strengthened by governing together in Prussia. ?]
+unavailable-subtitle: [? if z_relation < 80 : 我々との関係が十分に良好ではない。?] [? if pro_republic < 80 : 党は彼を受け入れるほど左寄りではない。?] [? if not in_weimar_coalition and not in_popular_front : 全国で<span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>連立か人民戦線を組み、協力をさらに強めねばならない。?] [? if not in_weimar_coalition_prussia and not in_grand_coalition_prussia and not in_popular_front_prussia: プロイセンで共同統治し、協力をさらに強めねばならない。?]
 on-arrival: z_relation += 5; z_ideology = "Left"; z_leader = "Kaiser"; liberal_cooperation += 2; workers_z += 4; unemployed_z += 4; workers_nsdap -= 2; unemployed_nsdap -= 4; rural_z -= 4; old_middle_z -= 6; rural_dnvp += 4 if dnvp_ideology == "Moderate"; old_middle_dnvp += 6 if dnvp_ideology == "Moderate"; rural_kvp += 4 if kvp_formed; old_middle_kvp += 6 if kvp_formed; rural_other += 4 if not kvp_formed and dnvp_ideology == "Radical"; old_middle_other += 6 if not kvp_formed and dnvp_ideology == "Radical"; catholics_z += 4; catholics_spd -= 4; z_party_name = "CVP"
 face-image: img/portraits/kaiser.jpg
 achievement: fur_gott_und_kaiser
 
-Through our grassroots connections and sheer determination, we have somehow managed to secure the reelection of Jakob Kaiser as chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. His removal had once seemed all but inevitable—yet, by some miracle, the present conditions have convinced a majority of the party to rally behind him once more.
+草の根のつながりと強い決意によって、我々は何とかヤーコプ・カイザーの[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首再選を実現した。解任はほぼ避けられないように見えたが、奇跡的にも、現在の状況が党内の多数派を再び彼の下に結集させた。
 
-As a gesture of compromise, however, Kaiser has agreed to officially rename the party to the <i>Christliche Volkspartei</i> (<span style="color: #000000;">Christian People's Party</span>). Beyond this cosmetic change—given the historic Catholic association with the '<span style="color: #000000;">Center</span>' label—the party's platform remains largely unchanged.
+ただし妥協のしるしとして、カイザーは党の正式名称を<i>Christliche Volkspartei</i>（<span style="color: #000000;">キリスト教人民党</span>）に変更することに同意した。「<span style="color: #000000;">中央党</span>」という名称とカトリックの歴史的な結びつきを考えれば外見上の変化ではあるが、党綱領はおおむね従来のままである。
 
-Even so, this outcome has enraged the party’s right wing. Many of its Protestant conservatives have resigned in protest, retreating to their party of <span class="tooltip-text" title="that's me! the modman!">origin</span>.
+それでも、この結果に党右派は激怒した。プロテスタント保守派の多くは抗議して離党し、<span class="tooltip-text" title="私だ！ MOD作者だ！">出身</span>政党へ戻った。
 
 @kaiser_campaign
 view-if: z_relation < 80
 choose-if: z_relation >= 70 and pro_republic >= 80 and resources >= 3 and (in_weimar_coalition or in_popular_front) and (in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia)
-subtitle: -3 resources.
-unavailable-subtitle: [? if z_relation < 70 : Our relations are not high enough. ?] [? if pro_republic < 80 : The party isn't left-wing enough for someone like him. ?] [? if not in_weimar_coalition and not in_popular_front : Our cooperation must be further strengthened in a federal <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> or Popular Front Coalition. ?] [? if not in_weimar_coalition_prussia and not in_grand_coalition_prussia and not in_popular_front_prussia: Our cooperation must be further strengthened by governing together in Prussia. ?] [? if resources < 3 : We do not have enough resources. ?]
+subtitle: 資源を3消費する。
+unavailable-subtitle: [? if z_relation < 70 : 我々との関係が十分に良好ではない。?] [? if pro_republic < 80 : 党は彼を受け入れるほど左寄りではない。?] [? if not in_weimar_coalition and not in_popular_front : 全国で<span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>連立か人民戦線を組み、協力をさらに強めねばならない。?] [? if not in_weimar_coalition_prussia and not in_grand_coalition_prussia and not in_popular_front_prussia: プロイセンで共同統治し、協力をさらに強めねばならない。?] [? if resources < 3 : 資源が足りない。?]
 on-arrival: resources -= 3; z_relation += 5; z_ideology = "Left"; z_leader = "Kaiser"; liberal_cooperation += 2; workers_z += 4; unemployed_z += 4; workers_nsdap -= 2; unemployed_nsdap -= 4; rural_z -= 4; old_middle_z -= 6; rural_dnvp += 4 if dnvp_ideology == "Moderate"; old_middle_dnvp += 6 if dnvp_ideology == "Moderate"; rural_kvp += 4 if kvp_formed; old_middle_kvp += 6 if kvp_formed; rural_other += 4 if not kvp_formed and dnvp_ideology == "Radical"; old_middle_other += 6 if not kvp_formed and dnvp_ideology == "Radical"; catholics_z += 4; catholics_spd -= 4; z_party_name = "CVP"
 face-image: img/portraits/kaiser.jpg
 achievement: fur_gott_und_kaiser
 
-Through our grassroots connections, and an official campaign, we have somehow managed to secure the reelection of Jakob Kaiser as chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. His removal had once seemed all but inevitable—yet, by some miracle, the present conditions have convinced a majority of the party to rally behind him once more.
+草の根のつながりと組織的な運動によって、我々は何とかヤーコプ・カイザーの[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首再選を実現した。解任はほぼ避けられないように見えたが、奇跡的にも、現在の状況が党内の多数派を再び彼の下に結集させた。
 
-As a gesture of compromise, however, Kaiser has agreed to officially rename the party to the <i>Christliche Volkspartei</i> (<span style="color: #000000;">Christian People's Party</span>). Beyond this cosmetic change—given the historic Catholic association with the '<span style="color: #000000;">Center</span>' label—the party's platform remains largely unchanged.
+ただし妥協のしるしとして、カイザーは党の正式名称を<i>Christliche Volkspartei</i>（<span style="color: #000000;">キリスト教人民党</span>）に変更することに同意した。「<span style="color: #000000;">中央党</span>」という名称とカトリックの歴史的な結びつきを考えれば外見上の変化ではあるが、党綱領はおおむね従来のままである。
 
-Even so, this outcome has enraged the party’s right wing. Many of its Protestant conservatives have resigned in protest, retreating to their party of <span class="tooltip-text" title="that's me! the modman!">origin</span>.
+それでも、この結果に党右派は激怒した。プロテスタント保守派の多くは抗議して離党し、<span class="tooltip-text" title="私だ！ MOD作者だ！">出身</span>政党へ戻った。

@@ -1,5 +1,5 @@
-title: <span style="color: #3E88B3;">**DNVP**</span> Splits!
-subtitle: Hugenberg and his supporters leave...
+title: <span style="color: #3E88B3;">**DNVP**</span>が分裂！
+subtitle: フーゲンベルクと支持者が離党する……
 view-if: year = 1928 and month = 11 and dnvp_leader = "Hergt"
 max-visits: 1
 tags: event
@@ -17,16 +17,16 @@ on-display: {!
 !}
 new-page: true
 
-= <span style="color: #003755;">Deutschnationale Front</span> founded
+= <span style="color: #003755;">ドイツ国家戦線</span>結成
 
-Hugenberg and his supporters have went through with his plans to organize a secession from the right of the <span style="color: #3E88B3;">**DNVP**</span> and formed his own political party, the <i>Deutschnationale Front</i> (<span style="color: #003755;">**DNF**</span>). Hugenberg has brought a considerable amount of party infrastructure into his own splinter party, however, it doesn't appear like the <span style="color: #003755;">**DNF**</span> would have much electoral appeal as the <span style="color: #3E88B3;">**DNVP**</span>. The <span style="color: #3E88B3;">**Stahlhelm**</span> paramilitary is caught between the two parties, but doesn't pledge support for either one. It may take some time until the <span style="color: #3E88B3;">**DNVP**</span> rebuilds to fill the hole Hugenberg's influence left behind.
+フーゲンベルクと支持者は、<span style="color: #3E88B3;">**DNVP**</span>右派を率いて離党する計画を実行し、独自の政党<i>ドイツ国家戦線</i>（<span style="color: #003755;">**DNF**</span>）を結成した。党組織の相当部分を新党に持ち込んだものの、<span style="color: #003755;">**DNF**</span>が<span style="color: #3E88B3;">**DNVP**</span>ほどの支持を選挙で得られるとは思えない。準軍事組織<span style="color: #3E88B3;">**鉄兜団**</span>は両党の板挟みになっているが、どちらにも支持を約束していない。<span style="color: #3E88B3;">**DNVP**</span>がフーゲンベルクの影響力の抜けた穴を埋め、組織を再建するには時間がかかるだろう。
 
-The <span style="color: #385A38;">agrarian</span>, industrialist, <span style="color: #6D5298;">Christian Social</span>, and the new 'Young Conservative' wings of the parties have largely remained in the <span style="color: #3E88B3;">**DNVP**</span>, and will hopefully change their attitude towards the republic. The small <span style="color: #7A3C00;">**NSDAP**</span> has gained among some radicalized <span style="color: #003755;">**DNF**</span> supporters.
+<span style="color: #385A38;">農業派</span>、産業界、<span style="color: #6D5298;">キリスト教社会派</span>、そして新興の「青年保守派」は、おおむね<span style="color: #3E88B3;">**DNVP**</span>にとどまった。共和制への態度を改めることを期待したい。小党の<span style="color: #7A3C00;">**NSDAP**</span>は、急進化した<span style="color: #003755;">**DNF**</span>支持者の一部を取り込んでいる。
 
-- @goodnews: We'll watch as the enemies of the republic tear themselves apart.
+- @goodnews: 共和制の敵が自ら分裂するさまを見守ろう。
 
 @goodnews
 on-arrival: dnf_formed = 1; dnf_decay_timer += 12
 go-to: dnf_formed
 
-The right has been considerably weakened, now is our chance to enact meaningful change without their disruption.
+右派は大きく弱体化した。彼らの妨害を受けずに実質的な改革を行う好機である。

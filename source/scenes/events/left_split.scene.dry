@@ -1,6 +1,6 @@
-title: Left-wing Split
+title: 左派が分裂
 new-page: true 
-subtitle: The Left's disagreements with our policies have grown too severe.
+subtitle: 左派と我々の政策との対立は、もはや修復できないほど深まった。
 tags: event
 view-if: left_dissent >= 60
 on-arrival: {!
@@ -71,9 +71,8 @@ if (Q.n_advisors < Q.n_advisors_start) Q.shuffle_leadership_timer = 0;
 go-to: sapd_formed if centrists_resign = 1 and not sapd_formed
 max-visits: 1
 
-= Left-wing members split
+= 左派が分裂
 
-Our policy choices have greatly offended the left, and many of their leaders have split to form a new party, the <span style="color: #9B0000;">**SAPD**</span>, or <span style="color: #9B0000;">Socialist Worker's Party</span>. They do not count a huge section of our membership, so this should be survivable.
+我々の政策選択は左派を激怒させた。指導者の多くは離党し、<span style="color: #9B0000;">**SAPD**</span>、すなわち<span style="color: #9B0000;">ドイツ社会主義労働者党</span>を結成した。彼らは党員の大部分を占めるわけではない。この危機は乗り切れるはずだ。
 
-[? if centrists_resign = 1 : Many former <span style="color: #c00000;">Centrist Marxists</span> have joined with the <span style="color: #9B0000;">**SAPD**</span>, the party formed by dissident leftists. They have brought their support base and organization skills to the party, leading to its growth as a nascent rival to the <span style="color: #c00000;">**SPD**</span> for the support of the working class. ?]
-
+[? if centrists_resign = 1 : 多くの元<span style="color: #c00000;">中央派マルクス主義者</span>も、反対派左翼の結成した<span style="color: #9B0000;">**SAPD**</span>へ合流した。彼らが支持基盤と組織力を持ち込んだことで、同党は労働者階級の支持をめぐって<span style="color: #c00000;">**SPD**</span>と争う新たな競争相手へ成長した。?]

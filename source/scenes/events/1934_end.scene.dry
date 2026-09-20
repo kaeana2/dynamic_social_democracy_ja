@@ -1,5 +1,5 @@
-title: A New Day in Germany
-subtitle: Has democracy finally triumphed?
+title: ドイツに新たな夜明け
+subtitle: 民主主義はついに勝利したのか？
 tags: event
 priority: 3
 view-if: hindenburg_dead = 1 and president != "Hitler" and president != "Göring" and president != "Seldte"
@@ -8,9 +8,9 @@ on-arrival: {!
 !}
 new-page: true
 
-= A New Day in Germany
+= ドイツに新たな夜明け
 
-After the death of Hindenburg and the presidential election of 1934, it seems as if an era of history is closing. The worst years of political and economic crisis are over, and <span style="color: #7A3C00;">Nazism</span>'s days are numbered. Perhaps Germany will finally enter into a new era of genuine peace...
+ヒンデンブルクの死と1934年の大統領選挙を経て、歴史の一時代が終わろうとしている。政治・経済危機の最悪期は過ぎ、<span style="color: #7A3C00;">ナチズム</span>の命運も尽きかけている。ドイツはついに、真の平和に満ちた新時代へ踏み出すのかもしれない……。
 
-- @game_over_1934: Trigger game over.
-- @root: Nah.
+- @game_over_1934: ゲームを終了する。
+- @root: まだだ。

@@ -1,13 +1,13 @@
-title: Papen Drafts Sweeping Amendments to the Constitution!
-subtitle: Despite his extreme unpopularity, the chancellor has ordered his cabinet to begin drafting sweeping constitutional amendments.
+title: パーペン、抜本的な憲法改正案を起草！
+subtitle: 極端な不人気にもかかわらず、首相は内閣に大規模な憲法改正案の起草を命じた。
 view-if: chancellor = "Papen" and papen_time and papen_post_2
 new-page: true
 tags: event
 max-visits: 1
 face-image: img/weimar_constitution.jpg
 
-= Constitutional Amendment
+= 憲法改正
 
-As part of Papen’s previously announced ambition to create a “New State”—a reform of the constitution aimed at transforming Germany into a dictatorship reminiscent of the former <span class="tooltip-text" title="good mod">Kaiserreich</span>—the continued political deadlock has led him to pursue changes to the system itself. Lacking both popular support and a parliamentary majority, it's unclear how Papen would institute such changes. Nonetheless, such a move would almost certainly provoke civil war—one the Reichswehr is in no position to easily win.
+パーペンは以前から「新国家」の建設を掲げていた。ドイツを旧<span class="tooltip-text" title="良好な補正">帝政</span>を思わせる独裁国家へ変えるための憲法改革である。政治的膠着が続いたため、彼は体制そのものの改変を追求し始めた。国民の支持も議会多数も欠くパーペンが、どのように改革を実現するのかは不明である。それでも、この動きがほぼ確実に内戦を引き起こすこと、そして国防軍が容易に勝てる状況にないことは明らかだ。
 
-Papen's increasing independence and assertiveness, distancing himself from Schleicher's control, has alarmed the latter, who had previously sought to manipulate him. His open calls for dictatorship, along with the risks involved in keeping such an unpopular chancellor by circumventing the constitution, would unite the legions of organized labor against the government—something Schleicher is anxious to avoid. After all, a civil war would severely impede Germany's rearmament.
+パーペンはシュライヒャーの統制から離れ、自立性と自己主張を強めている。かつて彼を操ろうとしたシュライヒャーは、この変化に危機感を抱いた。公然たる独裁の要求に加え、憲法を迂回してこれほど不人気な首相を留任させる危険は、組織労働者の大軍を政府への反対で結束させるだろう。シュライヒャーは何としてもそれを避けたい。内戦になれば、ドイツの再軍備が著しく妨げられるからである。

@@ -1,6 +1,6 @@
-title: Unions Declare Independence
+title: 労働組合が独立を宣言
 new-page: true 
-subtitle: Labor's disagreements with our policies have grown too severe.
+subtitle: 労働運動と我々の政策の対立は深刻になりすぎた。
 tags: event
 view-if: labor_dissent >= 60 and not unions_independent and chancellor == "Schleicher"
 on-arrival: {!
@@ -107,10 +107,10 @@ if (Q.n_advisors < Q.n_advisors_start) Q.shuffle_leadership_timer = 0;
 !}
 max-visits: 1
 
-= Unions Declare Independence
+= 労働組合が独立を宣言
 
-Our policy choices have greatly offended the labor movement. Union leaders have declared that they are independent of any political party, and some have been seen seeking accommodation with the <span style="color: #700000;">**KPD**</span> and even the <span style="color: #7A3C00;">**NSDAP**</span>. However, most unionists are now seeking an accommodation with Chancellor Schleicher[? if dnef_formed:&nbsp;and his <span style="color: #BFC8CC;">**DNEF**</span>?][? if not dnef_formed:, pressuring him to establish a political vehicle of his own?]. In doing so, they have stepped away from <span style="color: #9B0000;">Marxist</span> ideology and shifted toward a more pragmatic laborist stance.
+我々の政策選択は労働運動を大いに憤慨させた。労組指導者はあらゆる政党からの独立を宣言し、一部は<span style="color: #700000;">**KPD**</span>、さらには<span style="color: #7A3C00;">**NSDAP**</span>との協調さえ模索している。しかし組合員の大半は、シュライヒャー首相[? if dnef_formed:&nbsp;とその<span style="color: #BFC8CC;">**DNEF**</span>?][? if not dnef_formed: と協調し、独自の政治組織を設立するよう彼に圧力をかけている?]。その過程で<span style="color: #9B0000;">マルクス主義</span>思想から離れ、より実利的な労働主義へ移行した。
 
-Nonetheless, most workers remain loyal to the <span style="color: #c00000;">**SPD**</span>, although their affiliation is less solid. Many workers move left[? if sapd_formed:, to the <span style="color: #700000;">**KPD**</span> or the nascent <span style="color: #9B0000;">**SAPD**</span>?], while others are drawn in a nationalist direction, as the ADGB signals its readiness to cooperate with the <span style="color: #c00000;">Red</span> General to tackle the crisis.
+それでも労働者の大半は<span style="color: #c00000;">**SPD**</span>へ忠実だが、その結びつきは弱まった。多くの労働者は左へ[? if sapd_formed:、<span style="color: #700000;">**KPD**</span>や結成間もない<span style="color: #9B0000;">**SAPD**</span>へ?]移る一方、ADGBが危機克服のため「<span style="color: #c00000;">赤い</span>将軍」と協力する用意を示したことで、国家主義へ引き寄せられる者もいる。
 
-Much of our working-class base has defected, and labor's influence in our party has greatly diminished.
+労働者階級の支持基盤の多くが離反し、党内における労働運動の影響力は大幅に低下した。

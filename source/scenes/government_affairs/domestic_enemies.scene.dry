@@ -1,4 +1,4 @@
-title: Investigating Domestic Enemies
+title: 国内の敵対勢力を捜査
 on-arrival: month_actions += 1
 view-if: spd_in_government = 1 and interior_minister_party = "SPD"
 #card-image: img/portraits/SeveringCarl.jpg
@@ -7,85 +7,85 @@ view-if: spd_in_government = 1 and interior_minister_party = "SPD"
 
 # this is not a card...
 
-= Investigating Domestic Enemies
+= 国内の敵対勢力を捜査
 
-As we have control over the Interior Ministry, we can direct police and intelligence services to investigate internal enemies. We can proscribe various organizations.
+内務省を掌握しているため、警察と情報機関に国内の敵対勢力を捜査させられる。各種組織を禁止することも可能である。
 
 - @deport_hitler
-- @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>.
-- @unban_sa: Unban the <span style="color: #7A3C00;">**SA**</span>.
+- @ban_sa: <span style="color: #7A3C00;">**SA**</span>を禁止する。
+- @unban_sa: <span style="color: #7A3C00;">**SA**</span>の禁止を解除する。
 - @persecute_sa
-- @ban_sh: Ban the <span style="color: #3E88B3;">**Stahlhelm**</span>.
-- @unban_sh: Unban the <span style="color: #3E88B3;">**Stahlhelm**</span>.
+- @ban_sh: <span style="color: #3E88B3;">**鉄兜団**</span>を禁止する。
+- @unban_sh: <span style="color: #3E88B3;">**鉄兜団**</span>の禁止を解除する。
 - @persecute_sh
-- @ban_rfb: Ban the <span style="color: #700000;">Communist</span> <span style="color: #8B0000;">**RFB**</span>.
-- @unban_rfb: Unban the <span style="color: #8B0000;">**RFB**</span>.
+- @ban_rfb: <span style="color: #700000;">共産党</span>の<span style="color: #8B0000;">**RFB**</span>を禁止する。
+- @unban_rfb: <span style="color: #8B0000;">**RFB**</span>の禁止を解除する。
 - @persecute_rfb
-- @root: Take no action for now.
+- @root: 今は何もしない。
 
 @ban_sa
 view-if: nazi_urgency >= 3 and sa_banned == 0
 on-arrival: sa_strength *= 0.85; sa_strength *= 0.7 if interior_police_loyalty >= 0.7; sa_banned_pro = 1 if interior_police_loyalty >= 0.7; sa_banned_pro = 0 if interior_police_loyalty < 0.7; sa_banned = 1; dvp_relation -= 3; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; sa_militancy -= 0.05; sa_ban_timer = 6; sa_coup_progress = coup_progress; coup_progress -= 2 if coup_progress >= 6; interior_goal_prussia -= 1
 
-As it turns out, the <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> has many allies in the police and bureaucracy. Our relationship with the police weakens, and the <span style="color: #7A3C00;">**SA**</span> can still organize illegally, right under the police's noses. [? if sa_banned_pro : Nevertheless, the <span style="color: #7A3C00;">**SA**</span> is substantially weakened by our ban. ?]
+判明したところでは、<span style="color: #7A3C00;">ナチ</span>の<span style="color: #7A3C00;">**SA**</span>は警察と官僚機構に多数の協力者を抱えている。警察との関係は悪化し、<span style="color: #7A3C00;">**SA**</span>は警察の目の前でなお違法に組織活動を続けている。[? if sa_banned_pro : それでも禁止措置によって<span style="color: #7A3C00;">**SA**</span>は大幅に弱体化した。 ?]
 
-[? if coup_progress >= 6: There are reports of an imminent coup by the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>. We have disrupted some of these plans, but the threat is still present. ?]
+[? if coup_progress >= 6: <span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>によるクーデターが迫っているとの報告がある。計画の一部を妨害したが、脅威はなお残っている。 ?]
 
 @unban_sa
 view-if: sa_banned = 1 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
 on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05; coup_progress += 2 if sa_coup_progress >= 6
 
-The <span style="color: #7A3C00;">**SA**</span> is no longer banned. They immediately go on a recruiting spree.
+<span style="color: #7A3C00;">**SA**</span>への禁止は解除された。彼らはただちに大規模な人員募集を始めた。
 
 @persecute_sa
-title: Further persecute the <span style="color: #7A3C00;">**SA**</span>.
+title: <span style="color: #7A3C00;">**SA**</span>への弾圧を強化する。
 view-if: sa_banned = 1
 choose-if: judicial_reform >= 3 and interior_police_loyalty >= 0.7
-unavailable-subtitle: [? if judicial_reform < 3 : The judiciary would not allow this. ?] [? if interior_police_loyalty < 0.7 : The police are too disloyal to be trusted with this. ?]
+unavailable-subtitle: [? if judicial_reform < 3 : 司法府が認めない。 ?] [? if interior_police_loyalty < 0.7 : 警察の忠誠が低すぎて任せられない。 ?]
 on-arrival: sa_strength *= 0.7; sa_militancy -= 0.05; coup_progress -= 2 if coup_progress >= 4
 
-We have arrested more of the <span style="color: #7A3C00;">**SA**</span>'s leaders and confiscated their weapons.
+<span style="color: #7A3C00;">**SA**</span>の指導者をさらに逮捕し、武器を押収した。
 
-[? if coup_progress >= 4: There are reports of a planned coup by the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>. We have cracked down on some of these plans, but the threat still lingers. ?]
+[? if coup_progress >= 4: <span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>によるクーデター計画の報告がある。その一部を摘発したが、脅威はなお残っている。 ?]
 
 @ban_sh
 on-arrival: sh_strength *= 0.85; sh_strength *= 0.7 if interior_police_loyalty >= 0.7; sh_banned = 1; dvp_relation -= 5; prussian_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg"; coalition_dissent += 1 if in_social_catholic_coalition_prussia and cvp_formed; sh_ban_timer = 6; sh_coup_progress = coup_progress; coup_progress -= 1 if coup_progress >= 6; hindenburg_angry += 8; interior_goal_prussia -= 1
 view-if: sh_banned == 0
 
-[? if president == "Hindenburg": Banning the <span style="color: #3E88B3;">**Stahlhelm**</span> weakens our relationship with President Hindenburg, as well as the political right and the police. ?][? if president != "Hindenburg": Banning the <span style="color: #3E88B3;">**Stahlhelm**</span> weakens our relationship with the political right and the police. ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : It also weakens our coalition due to the influence of Hindenburg on the right wing of our coalition. ?] In addition, the <span style="color: #3E88B3;">**Stahlhelm**</span> still operates out of public sight.
+[? if president == "Hindenburg": <span style="color: #3E88B3;">**鉄兜団**</span>の禁止により、ヒンデンブルク大統領、政治的右派、警察との関係が悪化した。 ?][? if president != "Hindenburg": <span style="color: #3E88B3;">**鉄兜団**</span>の禁止により、政治的右派および警察との関係が悪化した。 ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : ヒンデンブルクが連立内右派に影響力を持つため、連立も弱体化した。 ?]さらに<span style="color: #3E88B3;">**鉄兜団**</span>は人目を避けて活動を続けている。
 
 @unban_sh
 view-if: sh_banned = 1 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
 on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_progress >= 6; hindenburg_angry -= 5
 
-The <span style="color: #3E88B3;">**Stahlhelm**</span> is no longer banned.
+<span style="color: #3E88B3;">**鉄兜団**</span>への禁止は解除された。
 
 @persecute_sh
-title: Further persecute the <span style="color: #3E88B3;">**Stahlhelm**</span>.
+title: <span style="color: #3E88B3;">**鉄兜団**</span>への弾圧を強化する。
 view-if: sh_banned = 1
 choose-if: judicial_reform >= 4 and interior_police_loyalty >= 0.7
-unavailable-subtitle: [? if judicial_reform < 4 : The judiciary would not allow this. ?] [? if interior_police_loyalty < 0.7 : The police are too disloyal to be trusted with this. ?]
+unavailable-subtitle: [? if judicial_reform < 4 : 司法府が認めない。 ?] [? if interior_police_loyalty < 0.7 : 警察の忠誠が低すぎて任せられない。 ?]
 on-arrival: sh_strength *= 0.7; sh_militancy -= 0.05; dvp_relation -= 5; lvp_relation -= 3; prussian_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg"; dvp_right += 1; coup_progress -= 1 if coup_progress >= 4; hindenburg_angry += 5
 
-We have arrested more of the <span style="color: #3E88B3;">**Stahlhelm**</span>'s leaders and confiscated their weapons.
+<span style="color: #3E88B3;">**鉄兜団**</span>の指導者をさらに逮捕し、武器を押収した。
 
-[? if coup_progress >= 4: There are reports of a planned coup by the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>. We have cracked down on some of these plans, but the threat still lingers. ?]
+[? if coup_progress >= 4: <span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>によるクーデター計画の報告がある。その一部を摘発したが、脅威はなお残っている。 ?]
 
 @ban_rfb
 view-if: communist_coalition < 3 and rfb_banned = 0 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
 on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; dvp_relation += 5; lvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; kpd_coalition_dissent += 2; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_banned = 0; n_rfb_banned += 1; hindenburg_angry -= 8
 
-The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The <span style="color: #700000;">Communists</span> take this as one more reason why the <span style="color: #c00000;">Socialists</span> are traitors to the left. However, the <span style="color: #000000;">moderate</span> and <span style="color: #C0A054;">center-right</span> parties approve, as do the police.
+禁止措置は警察によって熱心に、いや熱心すぎるほど徹底された。<span style="color: #700000;">共産主義者</span>は、<span style="color: #c00000;">社会主義者</span>が左翼への裏切り者である新たな証拠だと受け止めている。一方、<span style="color: #000000;">穏健派</span>と<span style="color: #C0A054;">中道右派</span>の諸党、そして警察は支持している。
 
 @unban_rfb
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; kpd_relation += 5; rfb_strength += 50; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; hindenburg_angry += 8; rfb_goal_prussia -= 1
 
-The <span style="color: #700000;">Communist</span> <span style="color: #8B0000;">**RFB**</span> is no longer banned.
+<span style="color: #700000;">共産党</span>の<span style="color: #8B0000;">**RFB**</span>への禁止は解除された。
 
 @persecute_rfb
-title: Further persecute the <span style="color: #8B0000;">**RFB**</span>.
+title: <span style="color: #8B0000;">**RFB**</span>への弾圧を強化する。
 view-if: rfb_banned = 1 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
 on-arrival: rfb_strength *= 0.7; rfb_militancy -= 0.05; kpd_relation -= 10; kpd_coalition_dissent += 1; z_relation += 2; dvp_relation += 2; lvp_relation += 2; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1; hindenburg_angry -= 5
 
-We have arrested more of the <span style="color: #8B0000;">**RFB**</span>'s leaders and confiscated their weapons.
+<span style="color: #8B0000;">**RFB**</span>の指導者をさらに逮捕し、武器を押収した。

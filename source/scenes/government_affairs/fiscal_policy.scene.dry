@@ -1,4 +1,4 @@
-title: Fiscal Policy
+title: 財政政策
 new-page: true
 is-card: true
 tags: govt_affairs, cabinet
@@ -8,132 +8,132 @@ card-image: img/portraits/HilferdingRudolf.jpg
 go-to: fiscal_menu
 #subtitle: Issues of taxation, budget, and tariffs.
 
-= Fiscal Policy
+= 財政政策
 
-Fiscal policy involves issues of taxation and budget.
+財政政策は租税と予算に関わる。
 
 
 @fiscal_menu
 
-Upper-income tax rates: [+ upper_tax_rates : taxation +]
+高所得者税率：[+ upper_tax_rates : taxation +]
 
-Lower-income tax rates: [+ lower_tax_rates : taxation +]
+低所得者税率：[+ lower_tax_rates : taxation +]
 
-- @raise_rich: Increase taxes on the rich.
+- @raise_rich: 富裕層への課税を増やす。
 - @raise_poor
-- @raise_overall: Increase overall taxes.
+- @raise_overall: 全体の税率を引き上げる。
 - @cut_rich
 - @cut_poor
-- @cut_overall: Cut overall taxes.
-- @raise_progressive: Make the tax system more progressive by raising taxes on the rich and cutting them for the poor.
+- @cut_overall: 全体の税率を引き下げる。
+- @raise_progressive: 富裕層を増税し貧困層を減税して、税制の累進性を高める。
 - @regressive
 - @tariffs
-- @root: Do not change the tax system.
+- @root: 税制を変更しない。
 - @easy_discard
 - @cancel_advisor_action
 
 @raise_progressive
-subtitle: This does not change overall revenue. [? if lower_tax_rates < -5 : Lower-class tax rates are too low to cut anymore. ?] [? if upper_tax_rates > 5 : Upper-class tax rates are too high to increase. ?]
+subtitle: 総税収は変わらない。[? if lower_tax_rates < -5 : 低所得者税率はこれ以上下げられない。 ?] [? if upper_tax_rates > 5 : 高所得者税率はこれ以上上げられない。 ?]
 choose-if: lower_tax_rates >= -5 and upper_tax_rates <= 5
 on-arrival: workers_spd += 6*(1-dissent); old_middle_spd -= 3; new_middle_spd -= 3 if new_middle_conscious == 0; new_middle_spd -= 2 if new_middle_conscious == 1; new_middle_ddp -= 1 if (in_grand_coalition or in_weimar_coalition); old_middle_ddp -= 1 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp -= 1 if in_weimar_coalition; old_middle_ddp -= 1 if in_weimar_coalition; new_middle_dvp -= 2 if in_grand_coalition; old_middle_dvp -= 2 if in_grand_coalition; new_middle_lvp -= 4 if (in_grand_coalition or in_weimar_coalition); old_middle_lvp -= 4 if (in_grand_coalition or in_weimar_coalition); new_middle_other += 3 if (in_grand_coalition or in_weimar_coalition); old_middle_other += 3 if (in_grand_coalition or in_weimar_coalition); coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); dvp_relation -= 4; lvp_relation -= 3; ddp_relation -= 2 if ddp_ideology != "Left"; finance_goal_completed += 1; upper_tax_rates += 1; lower_tax_rates -= 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; new_middle_spd -= 2 if upper_tax_rates > 1; old_middle_spd -= 2 if upper_tax_rates > 1; dvp_right += 1; ddp_left += 0.5; ddp_cohesion -= 0.5; lvp_right += 1; finance_goal_spd += 1; goal_spd_cancel_peoples += 1
 
-Making the tax system more progressive is popular among our base, but it upsets our bourgeois coalition partners, as well as our minimal number of bourgeois voters. [? if in_grand_coalition or in_weimar_coalition: Furthermore, the liberals in our governing coalition will also face backlash from their support base for participating in the government that increases their own taxes. ?]
+税制の累進性強化は支持基盤に歓迎されるが、ブルジョワの連立相手と、わずかに残る我が党のブルジョワ有権者を怒らせる。[? if in_grand_coalition or in_weimar_coalition: さらに連立内の自由主義派は、自らの支持層を増税する政府へ参加したことで反発を受ける。 ?]
 
 @raise_rich
-subtitle: +2 budget
-unavailable-subtitle: Tax rates are already too high.
+subtitle: 予算 +2
+unavailable-subtitle: 税率はすでに高すぎる。
 choose-if: upper_tax_rates <= 5
 on-arrival: upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; workers_spd += 4*(1-dissent); old_middle_spd -= 4; new_middle_spd -= 4 if new_middle_conscious == 0; new_middle_spd -= 2 if new_middle_conscious == 1; new_middle_ddp -= 1 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp -= 1 if in_weimar_coalition; old_middle_ddp -= 1 if (in_grand_coalition or in_weimar_coalition); old_middle_ddp -= 1 if in_weimar_coalition; new_middle_dvp -= 2 if in_grand_coalition; old_middle_dvp -= 2 if in_grand_coalition; new_middle_lvp -= 4 if (in_grand_coalition or in_weimar_coalition); old_middle_lvp -= 4 if (in_grand_coalition or in_weimar_coalition); new_middle_other += 3 if (in_grand_coalition or in_weimar_coalition); old_middle_other += 3 if (in_grand_coalition or in_weimar_coalition); coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; dvp_relation -= 4; unemployed += 1; finance_goal_completed += 1; inflation -= 0.6; dvp_right += 1; lvp_right += 1; ddp_relation -= 4; ddp_right += 1; ddp_cohesion -= 0.5; lvp_relation -= 4; finance_goal_spd += 1; goal_spd_cancel_peoples += 1; economic_growth -= 0.4; new_middle_spd -= 2 if upper_tax_rates > 1; old_middle_spd -= 2 if upper_tax_rates > 1; left_dissent -= 3; labor_dissent -= 3
 
-Raising taxes on the rich is popular among our base, but it alienates the bourgeoisie. Increasing taxes also decreases economic demand, which may lead to more unemployment. [? if in_grand_coalition or in_weimar_coalition: Furthermore, the liberals in our governing coalition will also face backlash from their support base for participating in the government that increases their own taxes. ?]
+富裕層への増税は支持基盤に歓迎されるが、ブルジョワジーを遠ざける。増税は総需要も減らし、失業増加につながりうる。[? if in_grand_coalition or in_weimar_coalition: さらに連立内の自由主義派は、自らの支持層を増税する政府へ参加したことで反発を受ける。 ?]
 
 
 @raise_poor
-title: Raise consumption taxes, which disproportionately affect the poor.
-subtitle: +2 budget
-unavailable-subtitle: Tax rates are already too high.
+title: 貧困層へ不均衡な負担を課す消費税を引き上げる。
+subtitle: 予算 +2
+unavailable-subtitle: 税率はすでに高すぎる。
 choose-if: lower_tax_rates <= 5
 on-arrival: budget += 2; workers_spd -= 4; unemployed_spd -= 4; goal_spd_cancel += 1; kpd_coalition_dissent += 1; lower_tax_rates += 1; workers_spd -= 6 if lower_tax_rates >= 2; unemployed_spd -= 6 if lower_tax_rates >= 2; labor_dissent += 10; left_dissent += 10
 
-We have raised taxes for the poor and working class. This hurts our support among the workers.
+貧困層と労働者階級への課税を増やした。労働者からの支持を傷つける。
 
 
 @cut_overall
-subtitle: -3 budget
-unavailable-subtitle: -3 budget - [? if upper_tax_rates < -5 or lower_tax_rates < -5 : Tax rates are already too low. ?]
+subtitle: 予算 -3
+unavailable-subtitle: 予算 -3 ― [? if upper_tax_rates < -5 or lower_tax_rates < -5 : 税率はすでに低すぎる。 ?]
 choose-if: budget >= 3 and upper_tax_rates >= -5 and lower_tax_rates >= -5
 on-arrival: budget -= 3; upper_tax_rates -= 1; lower_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); new_middle_ddp += 2 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp += 2 if in_weimar_coalition; new_middle_dvp -= 2 if in_weimar_coalition; old_middle_ddp += 2 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp += 2 if in_weimar_coalition; new_middle_dvp -= 2 if in_weimar_coalition; new_middle_dvp += 4 if in_grand_coalition; old_middle_dvp += 4 if in_grand_coalition; new_middle_lvp += 6 if (in_grand_coalition or in_weimar_coalition); old_middle_lvp += 6 if (in_grand_coalition or in_weimar_coalition); new_middle_other -= 4 if (in_grand_coalition or in_weimar_coalition); old_middle_other -= 4 if (in_grand_coalition or in_weimar_coalition); dvp_relation += 5*(1-dissent); z_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); unemployed -= 1.5 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 1; dvp_left += 2; ddp_cohesion += 1; lvp_left += 1; finance_goal_spd += 1; finance_goal_spd_peoples += 1; economic_growth += 0.6;
 
-Cutting taxes benefits most the rich and middle-class, who pay more taxes than the working class. Our coalition partners are happy at our orthodox economic course. [? if in_grand_coalition or in_weimar_coalition: Furthermore, the liberals within our governing coalition will benefit from their participation in the government. This will help dispel the notion that they fail to adequately represent the interests of the middle class while in power. ?]
+減税は労働者階級より多くの税を納める富裕層と中間層に最も恩恵を与える。連立相手は我々の正統派的な経済運営を喜んでいる。[? if in_grand_coalition or in_weimar_coalition: さらに連立内の自由主義派は政権参加から利益を得て、与党でありながら中間層の利益を十分に代表していないとの見方を払拭できる。 ?]
 
 @cut_poor
-title: Cut consumption taxes for the poor.
-subtitle: -2 budget
-unavailable-subtitle: -2 budget - [? if lower_tax_rates < -5: Tax rates are already too low. ?]
+title: 貧困層の消費税を引き下げる。
+subtitle: 予算 -2
+unavailable-subtitle: 予算 -2 ― [? if lower_tax_rates < -5: 税率はすでに低すぎる。 ?]
 choose-if: budget >= 2 and lower_tax_rates >= -5
 on-arrival: budget -= 2; lower_tax_rates -= 1; workers_spd += 5*(1-dissent); unemployed -= 0.7 if unemployed >= 5; inflation += 0.6; economic_growth += 0.4; finance_goal_completed += 1; finance_goal_spd += 1; labor_dissent -= 5; left_dissent -= 5
 
-Our tax cuts disproportionately benefit the poor and working class.
+この減税は貧困層と労働者階級に特に大きな恩恵を与える。
 
 
 @cut_rich
-title: Cut income taxes for the rich.
-subtitle: -2 budget
-unavailable-subtitle: -2 budget - [? if upper_tax_rates < -5: Tax rates are already too low. ?]
+title: 富裕層の所得税を引き下げる。
+subtitle: 予算 -2
+unavailable-subtitle: 予算 -2 ― [? if upper_tax_rates < -5: 税率はすでに低すぎる。 ?]
 choose-if: budget >= 2 and upper_tax_rates >= -5
 on-arrival: budget -= 2; upper_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); new_middle_ddp += 2 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp += 2 if in_weimar_coalition; new_middle_dvp -= 2 if in_weimar_coalition; old_middle_ddp += 2 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp += 2 if in_weimar_coalition; new_middle_dvp -= 2 if in_weimar_coalition; new_middle_dvp += 4 if in_grand_coalition; old_middle_dvp += 4 if in_grand_coalition; new_middle_lvp += 6 if (in_grand_coalition or in_weimar_coalition); old_middle_lvp += 6 if (in_grand_coalition or in_weimar_coalition); new_middle_other -= 4 if (in_grand_coalition or in_weimar_coalition); old_middle_other -= 4 if (in_grand_coalition or in_weimar_coalition); dvp_relation += 4*(1-dissent); lvp_relation += 4*(1-dissent); z_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); unemployed -= 0.7 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 0.6; economic_growth += 0.4; finance_goal_spd_peoples += 1; labor_dissent += 5; left_dissent += 5; dvp_left += 3; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 2
 
-We have reduced income and property taxes for the rich and middle class. The bourgeois parties approve of this orthodox economic course. [? if in_grand_coalition or in_weimar_coalition: Furthermore, the liberals within our governing coalition will benefit from their participation in the government. This will help dispel the notion that they fail to adequately represent the interests of the middle class while in power. ?]
+富裕層と中間層の所得税・財産税を減らした。ブルジョワ諸党はこの正統派的な経済運営を支持している。[? if in_grand_coalition or in_weimar_coalition: さらに連立内の自由主義派は政権参加から利益を得て、与党でありながら中間層の利益を十分に代表していないとの見方を払拭できる。 ?]
 
 
 @raise_overall
-subtitle: +3 budget
-unavailable-subtitle: Tax rates are already too high.
+subtitle: 予算 +3
+unavailable-subtitle: 税率はすでに高すぎる。
 choose-if: upper_tax_rates <= 5 and lower_tax_rates <= 5
 on-arrival: budget += 3; new_middle_spd -= 4; old_middle_spd -= 4; workers_spd -= 4; new_middle_ddp -= 2 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp -= 2 if in_weimar_coalition; old_middle_ddp -= 2 if (in_grand_coalition or in_weimar_coalition); old_middle_ddp -= 2 if in_weimar_coalition; new_middle_dvp -= 4 if in_grand_coalition; old_middle_dvp -= 4 if in_grand_coalition; new_middle_lvp -= 6 if (in_grand_coalition or in_weimar_coalition); old_middle_lvp -= 6 if (in_grand_coalition or in_weimar_coalition); new_middle_other += 5 if (in_grand_coalition or in_weimar_coalition); old_middle_other += 5 if (in_grand_coalition or in_weimar_coalition); unemployed += 2; kpd_coalition_dissent += 1; lower_tax_rates += 1; upper_tax_rates += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 2; workers_spd -= 5 if lower_tax_rates > 1; inflation -= 1.1; goal_spd_cancel += 1; goal_spd_cancel_peoples += 1; economic_growth -= 0.6; new_middle_spd -= 2 if upper_tax_rates > 1; old_middle_spd -= 2 if upper_tax_rates > 1
 
-Raising taxes hurts our support among all those who pay taxes. [? if in_grand_coalition or in_weimar_coalition : However, our coalition partners are more supportive of the idea of "shared sacrifice" than simply taxing the rich. ?] Increasing taxes also decreases economic demand, which may lead to more unemployment. [? if in_grand_coalition or in_weimar_coalition: The liberals in our governing coalition will also face backlash from their support base for participating in the government that increases their own taxes. ?]
+増税は納税者すべてからの支持を傷つける。[? if in_grand_coalition or in_weimar_coalition : ただし連立相手は富裕層だけへの増税より「痛みの分担」を支持する。 ?]増税は総需要も減らし、失業増加につながりうる。[? if in_grand_coalition or in_weimar_coalition: 連立内の自由主義派も、自らの支持層を増税する政府へ参加したことで反発を受ける。 ?]
 
 @regressive
-title: Lower taxes on the rich, while increasing consumption taxes (which affect the working class more).
-subtitle: This does not change overall revenue. [? if upper_tax_rates < -5 : Rich tax rates are too low to cut anymore. ?] [? if lower_tax_rates > 5 : Lower-class tax rates are too high to increase. ?]
+title: 富裕層を減税し、労働者階級への影響が大きい消費税を増やす。
+subtitle: 総税収は変わらない。[? if upper_tax_rates < -5 : 富裕層税率はこれ以上下げられない。 ?] [? if lower_tax_rates > 5 : 低所得者税率はこれ以上上げられない。 ?]
 choose-if: lower_tax_rates <= 5 and upper_tax_rates >= -5
 on-arrival: workers_spd -= 6; new_middle_spd += 5*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_ddp += 2 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp += 2 if in_weimar_coalition; new_middle_dvp -= 2 if in_weimar_coalition; old_middle_ddp += 2 if (in_grand_coalition or in_weimar_coalition); new_middle_ddp += 2 if in_weimar_coalition; new_middle_dvp -= 2 if in_weimar_coalition; new_middle_dvp += 4 if in_grand_coalition; old_middle_dvp += 4 if in_grand_coalition; new_middle_lvp += 6 if (in_grand_coalition or in_weimar_coalition); old_middle_lvp += 6 if (in_grand_coalition or in_weimar_coalition); new_middle_other -= 4 if (in_grand_coalition or in_weimar_coalition); old_middle_other -= 4 if (in_grand_coalition or in_weimar_coalition); dvp_relation += 5; lvp_relation += 5; z_relation += 4; coalition_dissent -= 1 if ((in_grand_coalition or (in_weimar_coalition and lvp_formed)) and coalition_dissent > 0); kpd_coalition_dissent += 1; upper_tax_rates -= 1; lower_tax_rates += 1; workers_spd -= 5 if lower_tax_rates >= 2; capital_strike_progress -= 1 if upper_tax_rates < 0; dvp_left += 3; ddp_cohesion -= 1; ddp_right += 2; lvp_left += 2; workers_nsdap += 2; goal_spd_cancel += 1; finance_goal_spd_peoples += 1; labor_dissent += 10; left_dissent += 10
 
-Our regressive taxation policy benefits the rich while hurting the poor and working-class. Our bourgeois coalition partners approve of this orthodox economic course. [? if in_grand_coalition or in_weimar_coalition: Furthermore, the liberals within our governing coalition will benefit from their participation in the government. This will help dispel the notion that they fail to adequately represent the interests of the middle class while in power. ?]
+逆進的な税制は富裕層を利し、貧困層と労働者階級を傷つける。ブルジョワの連立相手はこの正統派的な経済運営を支持している。[? if in_grand_coalition or in_weimar_coalition: さらに連立内の自由主義派は政権参加から利益を得て、与党でありながら中間層の利益を十分に代表していないとの見方を払拭できる。 ?]
 
 
 @tariffs
-title: Change tariffs instead.
+title: 代わりに関税を変更する。
 
-Tariffs, or taxes on international imports, are another way to finance our government.
+輸入品への税である関税も、政府財源を確保する手段である。
 
-Historically, <span style="color: #c00000;">socialists</span> have been in favor of free trade and a low-tariff regime. Workers in export-oriented industries benefit from free trade, and they also benefit from lower prices for imported necessities. Do the present economic circumstances change these calculations?
+歴史的に<span style="color: #c00000;">社会主義者</span>は自由貿易と低関税を支持してきた。輸出産業の労働者は自由貿易から利益を得て、輸入必需品の価格低下も享受する。現在の経済状況で、この計算は変わるだろうか？
 
-Current tariff level: [+ tariffs : taxation +]
+現在の関税水準：[+ tariffs : taxation +]
 
 - @raise_tariffs
 - @lower_tariffs
-- @fiscal_menu: Change domestic taxes instead of tariffs.
-- @root: Do not change tariffs or taxes.
+- @fiscal_menu: 関税ではなく国内税を変更する。
+- @root: 関税も国内税も変更しない。
 - @easy_discard
 
 @raise_tariffs
-title: Raise tariffs on imports.
-subtitle: +2 budget. Other countries will retaliate by increasing tariffs of their own. [? if tariffs > 5 : Further increases in tariffs will not raise revenue, as we have already nearly reached economic autarky. ?]
+title: 輸入関税を引き上げる。
+subtitle: 予算 +2。他国も報復関税を引き上げる。[? if tariffs > 5 : すでに経済的自給自足へ近づいており、これ以上の引き上げでは税収が増えない。 ?]
 choose-if: tariffs <= 5
 on-arrival: tariffs += 1; inflation += 1 if inflation > 0; inflation += 0.5 if inflation <= 0; unemployed += 1.5; budget += 2; workers_spd -= 7; unemployed_spd -= 7; new_middle_spd -= 5*(1-dissent); rural_spd += 4*(1-dissent); old_middle_spd += 3*(1-dissent); ddp_relation -= 4; dvp_relation -= 2; lvp_relation -= 3; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 2; eu_progress -= 1 if eu_progress > 0; peoples_party_support += 1; ddp_cohesion -= 1; rural_ddp -= 2 if in_grand_coalition or in_weimar_coalition or (in_popular_front and liberal_parliament = 0); tariff_goal_spd_peoples += 1; economic_growth -= 0.4;
 
-Increasing tariffs leads to higher prices for basic goods, increasing inflation and hurting consumption among the working class. Retaliatory tariffs reduce the competitiveness of German exports, raising unemployment among workers. They also lead to an atmosphere of international suspicion, reducing our ability to negotiate with other countries.
+関税引き上げは生活必需品を値上がりさせ、インフレを高めて労働者階級の消費を傷つける。報復関税はドイツ輸出品の競争力を下げ、失業を増やす。国際的な不信も招き、他国との交渉力を弱める。
 
-On the other hand, agricultural producers and some small businesses benefit from higher tariffs, as farmers can now command higher prices for grain, and formerly uncompetitive businesses are now able to function.
+一方、農産物生産者と一部の小企業は高関税から利益を得る。農民は穀物へ高値を要求でき、競争力を欠いていた企業も営業できるようになる。
 
 @lower_tariffs
-title: Lower tariffs on imports.
+title: 輸入関税を引き下げる。
 choose-if: budget >= 2 and tariffs > -5
-subtitle: -2 budget. [? if tariffs <= -5 : There are no tariffs left to cut. ?]
+subtitle: 予算 -2。[? if tariffs <= -5 : これ以上引き下げられる関税はない。 ?]
 on-arrival: tariffs -= 1; budget -= 2; inflation -= 0.5; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd -= 5; old_middle_spd -= 3; rural_dnvp += 4 if not kvp_formed; old_middle_dnvp += 2 if not kvp_formed; rural_kvp += 4 if kvp_formed; old_middle_kvp += 2 if kvp_formed; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; goal_spd_cancel_peoples += 1; economic_growth += 0.4;
 
-Lowering tariffs helps workers and the urban poor by reducing prices for basic necessities. In addition, other countries are pleased by lower tariffs, and are more willing to negotiate on many issues.
+関税引き下げは生活必需品の価格を下げ、労働者と都市貧困層を助ける。他国も歓迎し、さまざまな問題で交渉に応じやすくなる。
 
-Farmers are hurt by this policy, as cheap imported grain leads to ruin for some small producers. In general, cheap imports are detrimental for small-scale industries aimed at the domestic market. Those negatively affected have rallied behind the [? if not kvp_formed: <span style="color: #3E88B3;">**DNVP**</span>?][? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>?][? if dnvp_ideology == "Radical":, stoking their urgency to reenter government to act upon this?]. 
+安価な輸入穀物で一部の小農が破産し、農民は打撃を受ける。一般に安価な輸入品は国内市場向け小規模産業に不利である。被害を受けた人々は[? if not kvp_formed: <span style="color: #3E88B3;">**DNVP**</span>?][? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>?]へ結集した[? if dnvp_ideology == "Radical":。これを是正するため政権復帰を急ぐ声が強まっている?]。

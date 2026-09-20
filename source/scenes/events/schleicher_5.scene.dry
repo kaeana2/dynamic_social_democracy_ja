@@ -1,5 +1,5 @@
-title: A Political Truce with Schleicher?
-subtitle: We must either confirm or deny a supposed deal between the ADGB and the chancellor.
+title: シュライヒャーとの政治的休戦？
+subtitle: ADGBと首相の取引のうわさを、認めるか否定するか決めねばならない。
 view-if: chancellor = "Schleicher" and schleicher_time and schleicher_time < 6 and schleicher_spd_r >= 3 and schleicher_spd_support >= 6 and not schleicher_plan
 new-page: true
 tags: event
@@ -17,29 +17,29 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Political Truce with Schleicher
+= シュライヒャーとの政治的休戦
 
-With Theodor Leipart’s announcement that he would support a Schleicher cabinet if Papen were the only alternative, numerous leaks have surfaced to the public—much to the annoyance of those in the <span style="color: #c00000;">**SPD**</span>. Many workers still view Schleicher as merely a continuation of the despised Papen cabinet, and it remains in our electoral interest to uphold total opposition to him.
+テオドール・ライパルトが、ほかにパーペンしか選択肢がないならシュライヒャー内閣を支持すると表明したことで、多数の情報が公に漏れ、<span style="color: #c00000;">**SPD**</span>内に強い不満を招いている。多くの労働者はシュライヒャーを忌み嫌うパーペン内閣の延長としか見ておらず、選挙上は全面的な反対を貫く方が我々に有利だ。
 
-Meanwhile, the ADGB has sought to shape Schleicher’s proposed public works program and fears that a parliamentary ousting would pave the way for Papen’s return. The specifics of our negotiations have been exaggerated—and in many cases, outright misreported—creating a serious public relations crisis among the <span style="color: #c00000;">**SPD**</span>’s working-class base.
+一方、ADGBはシュライヒャーの公共事業構想に自らの意見を反映させようとしており、議会が首相を退陣させればパーペン復帰への道を開くことになると恐れている。我々の交渉内容は誇張され、多くの場合は全く誤って報じられた。その結果、<span style="color: #c00000;">**SPD**</span>を支持する労働者の間で深刻な信用の危機が生じている。
 
-What should our stance be moving forward?
+今後、どのような態度を取るべきか。
 
 - @yay
 - @nay
 
 @yay
-title: Let the unions talk.
-unavailable-subtitle: The party is too distrustful of Schleicher to allow this.
+title: 労組に交渉を任せる。
+unavailable-subtitle: 党のシュライヒャーへの不信が強すぎて、認められない。
 choose-if: schleicher_spd_support >= 6 and labor_strength >= (center_strength*2) + left_strength
 on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1 if schleicher_spd_r < 5; workers_spd -= 4; unemployed_spd -= 4; center_dissent += 10; neorevisionist_dissent += 10; schleicher_spd_adopted = 1; schleicher_approval += 1
 
-In a public statement, the ADGB stops short of denying rumors of a political truce, instead arguing that the chancellor should be given a few months free from parliamentary interference to implement his public works program. The move has been justified to the <span style="color: #c00000;">**SPD**</span> leadership by claiming it would peel voters away from both the <span style="color: #700000;">**Communists**</span> and the <span style="color: #7A3C00;">Nazis</span>, while benefiting the workers we represent.
+ADGBは声明で政治的休戦のうわさを明確には否定せず、公共事業計画を実行できるよう、首相に数か月は議会に妨げられない時間を与えるべきだと主張した。<span style="color: #c00000;">**SPD**</span>指導部には、我々が代表する労働者の利益となるだけでなく、<span style="color: #700000;">**共産党**</span>と<span style="color: #7A3C00;">ナチ党</span>の双方から支持者を引き離せるとして、この行動を正当化している。
 
-Needless to say, the union representing the very workers who suffered under his predecessor has lost credibility in their eyes.
+言うまでもなく、前任者の下で苦しんだ労働者を代表するはずの労組は、その労働者自身の信頼を失った。
 
 @nay
-title: Pure disinformation, we never discussed a 'political truce'.
+title: 全くの偽情報だ。「政治的休戦」など話し合っていない。
 on-arrival: schleicher_spd_r -= 1; labor_dissent += 5
 
-Such nonsense, we will deny the fake news and distance ourself from the chancellor to prevent more incidents.
+ばかげた話だ。虚報を否定し、これ以上の問題を防ぐため首相とは距離を置こう。

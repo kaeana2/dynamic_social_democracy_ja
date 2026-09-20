@@ -1,4 +1,4 @@
-title: Missing Report
+title: 報告書未着
 on-arrival: month_actions += 1
 view-if: chancellor == "Schleicher" and schleicher_time and schleicher_time >= 8 and schleicher_spd_influence >= 6
 card-image: img/black.jpg

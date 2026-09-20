@@ -1,5 +1,5 @@
-title: Schleicher Faces a Vote of No Confidence!
-subtitle: Without a decree at the ready, the chancellor is doomed.
+title: シュライヒャー、不信任決議に直面！
+subtitle: 緊急令を用意できなければ、首相の命運は尽きる。
 view-if: chancellor = "Schleicher" and schleicher_time and next_reichstag_time == rubicon_time and next_reichstag_time > 0 and not schleicher_post
 on-arrival: reichstag_rubicon = 1
 new-page: true
@@ -19,16 +19,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Vote of No Confidence
+= 不信任決議
 
-[? if schleicher_time == 7: Following a shortened holiday adjournment—cut short by Schleicher's own suicidal insistence—the Reichstag is finally reconvening to decide the fate of his government. With Hindenburg refusing to grant him the emergency decree that had previously allowed Papen to dissolve the chamber and delay elections, Schleicher's narrow base of support—comprising parties to the left of Hugenberg but to the right of the <span style="color: #000000;">Center Party</span>, along with the liberals—is nowhere near enough to salvage his cabinet. ?][? if schleicher_time > 7: Following the extended holiday adjournment—the Reichstag is finally reconvening to decide the fate of his government. With Hindenburg refusing to grant him the emergency decree that had previously allowed Papen to dissolve the chamber and delay elections, Schleicher's narrow base of support—comprising parties to the left of Hugenberg but to the right of the <span style="color: #000000;">Center Party</span>, along with the liberals—is nowhere near enough to salvage his cabinet. ?]
+[? if schleicher_time == 7: シュライヒャー自身の自滅的な強硬姿勢によって短縮された休会を終え、国会はついに再開会し、彼の政権の命運を決する。かつてパーペンが国会を解散して選挙を延期するために用いた緊急令を、ヒンデンブルクはシュライヒャーに与えようとしない。彼を支持するのは、フーゲンベルクより左、<span style="color: #000000;">中央党</span>より右に位置する諸党と自由主義者だけであり、この狭い支持基盤では内閣を救うには遠く及ばない。?][? if schleicher_time > 7: 長期の休会を終え、国会はついに再開会し、シュライヒャー政権の命運を決する。かつてパーペンが国会を解散して選挙を延期するために用いた緊急令を、ヒンデンブルクはシュライヒャーに与えようとしない。彼を支持するのは、フーゲンベルクより左、<span style="color: #000000;">中央党</span>より右に位置する諸党と自由主義者だけであり、この狭い支持基盤では内閣を救うには遠く及ばない。?]
 
-[? if schleicher_time == 7: Since Schleicher has already resigned, the vote will have little practical effect, serving only to underscore how deeply unpopular he has become. New elections must now be held, with the <span style="color: #7A3C00;">**NSDAP**</span> particularly vulnerable to losses due to their internal divisions and the recent rollout of public works programs. Still, they cannot oppose the vote for obvious reasons, even as they desperately seek to avoid facing the electorate again. ?][? if schleicher_time > 7: This vote will only underscore his deep unpopularity and cripple his chances of pursuing meaningful policy during his remaining time as caretaker. New elections must now be held, with the <span style="color: #7A3C00;">**NSDAP**</span> particularly vulnerable to losses due to their internal divisions and the recent success of public works programs. Still, they cannot oppose the vote for obvious reasons, even as they desperately seek to avoid facing the electorate again. ?]
+[? if schleicher_time == 7: シュライヒャーはすでに辞任しているため、決議に実際の効果はほとんどなく、彼がいかに深く不人気になったかを際立たせるだけである。今や新選挙は避けられず、内部分裂と最近始まった公共事業のために、<span style="color: #7A3C00;">**NSDAP**</span>はとりわけ議席減の危険にさらされている。それでも明白な理由から決議には反対できず、再び有権者の審判を受けることを必死に避けようとしている。?][? if schleicher_time > 7: この決議はシュライヒャーの深刻な不人気を浮き彫りにし、暫定首相として残された期間に有意義な政策を進める可能性を奪うだけである。今や新選挙は避けられず、内部分裂と公共事業の最近の成功のために、<span style="color: #7A3C00;">**NSDAP**</span>はとりわけ議席減の危険にさらされている。それでも明白な理由から決議には反対できず、再び有権者の審判を受けることを必死に避けようとしている。?]
 
 - @reichstag
 
 @reichstag
-title: The Reichstag goes into session.
+title: 国会が開会する。
 on-arrival: {!
 if (Q.dstp_maintained) {
     Q.papen_votes += Q.ddp_r;
@@ -68,8 +68,8 @@ if (Q.next_election_month > 12) {
 }
 !}
 
-Once again, the <span style="color: #700000;">**Communists**</span> push forward a vote of no confidence against Schleicher—and it passes, with [+ anti_schleicher_votes +]% of the Reichstag voting in favor. [? if dnvp_ideology == "Radical": He is backed only by the various bourgeois parties positioned between the <span style="color: #3E88B3;">**DNVP**</span> and the <span style="color: #FFCC00;">liberals</span>[? if dvp_exist and not lvp_formed:, along with the <span style="color: #C0A054;">**DVP**</span>, which seeks to gain by standing as the only "[? if not kvp_formed: relevant?][? if kvp_formed: middle?]" pro-government party?]. ?][? if dnvp_ideology == "Moderate": He is backed only by the <span style="color: #3E88B3;">**DNVP**</span>, along with the various right-wing parties situated between it and the <span style="color: #FFCC00;">liberals</span>[? if dvp_exist and not lvp_formed:, and the <span style="color: #C0A054;">**DVP**</span>?]. ?][? if dstp_maintained: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has also backed the chancellor, with significant overlap in their respective views potentially paving way for the integration of the Young German Order into the state. ?][? if dsu_exist and dsu_r: The <span style="color: #6A1E1E;">**DSU**</span>, casting their first vote in parliament, has also backed the chancellor—signaling their goodwill and potential future support. ?]
+再び<span style="color: #700000;">**共産主義者**</span>がシュライヒャーに対する不信任決議を提出し、国会の[+ anti_schleicher_votes +]%が賛成して可決された。[? if dnvp_ideology == "Radical": 彼を支持したのは、<span style="color: #3E88B3;">**DNVP**</span>と<span style="color: #FFCC00;">自由主義諸党</span>の間に位置する各種ブルジョワ政党[? if dvp_exist and not lvp_formed:と、唯一の「[? if not kvp_formed:有力な?][? if kvp_formed:中道の?]」与党として利益を得ようとする<span style="color: #C0A054;">**DVP**</span>?]だけである。?][? if dnvp_ideology == "Moderate": 彼を支持したのは<span style="color: #3E88B3;">**DNVP**</span>と、同党から<span style="color: #FFCC00;">自由主義諸党</span>までの間に位置する各種右翼政党[? if dvp_exist and not lvp_formed:、そして<span style="color: #C0A054;">**DVP**</span>?]だけである。?][? if dstp_maintained: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>も首相を支持した。両者の見解には大きな共通点があり、青年ドイツ騎士団を国家に統合する道を開く可能性がある。?][? if dsu_exist and dsu_r: 国会で初めて票を投じた<span style="color: #6A1E1E;">**DSU**</span>も首相を支持し、好意と将来の支援の可能性を示した。?]
 
-[? if not constructive_schleicher: Hindenburg will likely refuse to grant Schleicher additional emergency decrees, effectively reducing the chancellor to a lame duck. The President views Schleicher as a simple caretaker until negotiations between [+ nsdap_chancellor +] and the Camarilla concludes. ?][? if constructive_schleicher: Schleicher chooses to disregard the no-confidence vote, insisting he will only resign if a constructive majority unites behind an alternative candidate—something that has yet to occur. Fierce criticism follows from the <span style="color: #7A3C00;">**NSDAP**</span> and <span style="color: #700000;">**KPD**</span>, while the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> parties express cautious approval. Still, his survival hinges on the tolerance of an increasingly impatient Hindenburg, who remains susceptible to Papen's maneuvering. ?]
+[? if not constructive_schleicher: ヒンデンブルクは今後、シュライヒャーへの追加の緊急令交付を拒む可能性が高く、首相は事実上の死に体となる。大統領は、[+ nsdap_chancellor +]と側近集団の交渉が終わるまで、シュライヒャーを単なる暫定首相と見なしている。?][? if constructive_schleicher: シュライヒャーは不信任決議を無視し、代わりの候補を支持する建設的多数派が結集した場合にのみ辞任すると主張するが、そのような多数派はいまだ成立していない。<span style="color: #7A3C00;">**NSDAP**</span>と<span style="color: #700000;">**KPD**</span>は激しく非難する一方、<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">諸党</span>は慎重な賛意を示す。それでも彼の生き残りは、次第に苛立ちを募らせ、なおパーペンの策動に影響されやすいヒンデンブルクの忍耐にかかっている。?]
 
-New Reichstag elections are scheduled for [+ next_election_month : month +] [+ next_election_year +], Week [+ next_election_week +].
+新たな国会選挙は[+ next_election_year +]年[+ next_election_month : month +]（第[+ next_election_week +]週）に予定されている。

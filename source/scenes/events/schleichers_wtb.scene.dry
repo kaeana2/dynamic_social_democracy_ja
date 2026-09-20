@@ -1,5 +1,5 @@
-title: Schleicher's Proposal
-subtitle: General Kurt von Schleicher contacts our party...
+title: シュライヒャーの提案
+subtitle: クルト・フォン・シュライヒャー将軍が我が党へ接触する……
 view-if: year >= 1930 and president = "Hindenburg" and spd_in_government and not in_left_front and not sapd_toleration and not in_popular_front and not presidential_powers and wtb_adopted and not unions_independent and reformist_strength + labor_strength >= left_strength + center_strength and reichswehr_loyalty >= 0.2 and (not panzerkreuzer_no or panzerkreuser_seen) and not rearmament_exposed and reparations_negotiation >= 3 and not weltbuhne_dropped and kpd_relation < 35 and reichswehr_minister_party != "SPD" and pacifism < 5 and nationalization_progress < 5 and not works_program
 on-arrival: schleicher_wtb_proposal_seen = 1
 new-page: true
@@ -7,38 +7,38 @@ max-visits: 1
 #tags: event
 face-image: img/portraits/SchleicherKurt.jpg
 
-= Schleicher's Proposal
+= シュライヒャーの提案
 
-General Kurt von Schleicher, head of the Reichswehr's Office of Ministerial Affairs and a major member of President Hindenburg's inner circle, has requested a meeting with the <span style="color: #c00000;">**SPD**</span>'s leadership. The <span style="color: #c00000;">Red</span> General, as he is called, has established contact with our trade unions, supporting our public works projects over austerity and deflationary policies.
+国防軍官房長でヒンデンブルク大統領側近の有力者でもあるクルト・フォン・シュライヒャー将軍が、<span style="color: #c00000;">**SPD**</span>指導部との会談を求めてきた。「<span style="color: #c00000;">赤い</span>将軍」と呼ばれる彼は我が労働組合と接触し、緊縮・デフレ政策より我々の公共事業計画を支持している。
 
-He claims that he can put in a good word for us and our WTB Plan to President Hindenburg—perhaps even securing its passage through emergency powers. However, Schleicher is a known schemer and a staunch anti-leftist. Should we trust what he has to say?
+彼はヒンデンブルク大統領へ我々とWTB計画を取りなせると主張し、緊急権による実施さえ確保できるかもしれないという。しかしシュライヒャーは名うての策謀家であり、筋金入りの反左翼である。その言葉を信じるべきだろうか？
 
 - @schleicher_yay
 - @schleicher_nay
 
 @schleicher_yay
-title: Desperate times calls for desperate measures.
-subtitle: We'll hear him out and see what he has to offer.
+title: 非常時には非常手段が必要だ。
+subtitle: まず話を聞き、何を提示するか見極める。
 
-We have agreed to meet with Schleicher, who, alongside our affiliated trade unions, supports the WTB Plan. However, he has one key demand: a revitalization of the military industry and an increase in army funding.
+我々は、傘下労組と同じくWTB計画を支持するシュライヒャーとの会談に同意した。しかし、彼には一つの重大な要求がある。軍需産業の再活性化と陸軍予算の増額である。
 
-This would require shifting public work funds away from infrastructure and civic development toward military production and Germany’s rearmament. He also stipulates that the <span style="color: #c00000;">**SPD**</span> must support Hindenburg's reelection campaign. In his view, revitalizing both the economy and the Reichswehr is essential for Germany’s return to great power status. Schleicher claims that our progress in negotiating a pause in reparations—along with our willingness to turn a blind eye to militarism—has earned his trust. 
+そのためには公共事業資金を社会基盤と民生開発から軍需生産とドイツ再軍備へ振り向ける必要がある。さらに<span style="color: #c00000;">**SPD**</span>がヒンデンブルクの再選運動を支持することも条件とした。彼の考えでは、経済と国防軍の双方を再活性化することが、ドイツの大国復帰に不可欠である。賠償支払い停止交渉の進展と、軍国主義を黙認する我々の姿勢によって信頼するに足ると判断した、とシュライヒャーは主張している。
 
-Now, the decision is ours. Do we accept his offer?
+決断は我々に委ねられた。この提案を受け入れるべきか？
 
 - @schleicher_yay_2
 - @schleicher_nay
 
 @schleicher_yay_2
-title: We are defenseless—defenseless and without honor.
-subtitle: This is the point of no return.
+title: 我々は無防備だ――無防備で、名誉さえない。
+subtitle: これが後戻りできない一線である。
 on-arrival: schleicher_spd = 1; hindenburg_angry = 0; hindenburg_angry_pause_time = time + 12; nationalism += 20; pacifism -= 5; democratization -= 5; pro_republic -= spd_votes / 2; left_dissent += 50; center_dissent += 30; reformist_dissent += 10; nsdap_radicalization += 5; nsdap_strasser_time = time + 6; data_miner_detected = 1; kpd_relation -= 100; communist_coalition -= 5; reichswehr_loyalty += 0.05
 
-We have been given one year to implement the WTB Plan, and Schleicher—once an active schemer calling for Hindenburg to dismiss the [+ chancellor +] government—is now working to prevent Hindenburg from dismissing us. Unfortunately, Schleicher has failed to convince Hindenburg to grant us emergency powers.
+WTB計画の実施には1年の猶予が与えられた。かつてヒンデンブルクへ[+ chancellor +]政権の解任を働きかけた策謀家シュライヒャーが、今や我々の解任を阻止しようと動いている。残念ながら、緊急権を我々に与えるようヒンデンブルクを説得することには失敗した。
 
-The public hasn’t noticed—at least, not yet. We must immediately begin implementing the WTB Plan.
+国民はまだ気づいていない――少なくとも今のところは。直ちにWTB計画の実施へ着手しなければならない。
 
 @schleicher_nay
-title: Schleicher's words cannot be trusted, he'll backstab us at any moment.
+title: シュライヒャーの言葉は信用できない。いつ裏切られてもおかしくない。
 
-We have rejected Schleicher’s request for a meeting. His offer is simply too good to be true, and aligning ourselves with a militarist and reactionary like him would betray everything we stand for.
+シュライヒャーからの会談要請を拒否した。その提案はあまりに都合がよすぎるうえ、彼のような軍国主義者かつ反動主義者と手を組めば、我々が掲げるすべてを裏切ることになる。

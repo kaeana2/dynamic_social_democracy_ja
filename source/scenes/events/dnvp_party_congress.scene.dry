@@ -1,5 +1,5 @@
-title: <span style="color: #3E88B3;">**DNVP**</span> Congress
-subtitle: The <span style="color: #3E88B3;">DNVP</span> chooses their new leader...
+title: <span style="color: #3E88B3;">**DNVP**</span>党大会
+subtitle: <span style="color: #3E88B3;">DNVP</span>が新党首を選ぶ……
 view-if: year = 1928 and month = 10 and dnvp_leader = "Westarp"
 on-arrival: dnvp_westarp = 0
 max-visits: 1
@@ -18,13 +18,13 @@ on-display: {!
 !}
 new-page: true
 
-= <span style="color: #3E88B3;">**DNVP**</span> Congress
+= <span style="color: #3E88B3;">**DNVP**</span>党大会
 
-A leadership vote is being held at the <span style="color: #3E88B3;">German National People's Party</span>(<span style="color: #3E88B3;">**DNVP**</span>) congress following the resignation of former leader Kuno von Westarp. The in-fighting resulting from their electoral defeat last election, coupled with the question of governmental participation in a system they're fundamentally opposed to has come to a head at this congress.
+前党首クーノ・フォン・ヴェスタルプの辞任を受け、<span style="color: #3E88B3;">ドイツ国家人民党</span>（<span style="color: #3E88B3;">**DNVP**</span>）の党大会で党首選が行われている。前回選挙の敗北に端を発する内紛に加え、根本的に反対する体制の下で政権に参加すべきかという問題が、この大会で頂点に達した。
 
-On the right is Alfred Hugenberg, a prominent industrialist and head of a media empire. He is vehemently opposed by the left of the party for his "<i>Katastrophenpolitik</i>", as he prefers to see the republic fall than participate in parliamentary government. With Westarp's refusal to run for re-election, despite urgent pleas from the moderates within the party, they have convinced the reluctant Oskar Hergt, former leader of the <span style="color: #3E88B3;">**DNVP**</span> from 1918—1924, himself ousted by the right. The results of this congress may very well be a turning point in the history of the entire German nation.
+右派の候補は、有力な実業家でメディア帝国の主であるアルフレート・フーゲンベルクだ。議会政治に参加するより共和国の崩壊を望む「<i>破局政策</i>」を掲げ、党左派から激しく反対されている。穏健派の切実な要請にもかかわらずヴェスタルプが再出馬を拒んだため、彼らは難色を示すオスカー・ヘルクトを説得した。ヘルクトは1918～1924年に<span style="color: #3E88B3;">**DNVP**</span>党首を務め、自らも右派に追われた人物である。この大会の結果は、ドイツ国民全体の歴史の転換点となるかもしれない。
 
-- @resultsdnvp: The party votes...
+- @resultsdnvp: 採決が行われる……
 
 @resultsdnvp
 on-arrival: {!
@@ -45,22 +45,22 @@ go-to: hergt if hergt_win; hugenberg if hugenberg_win; triumvirate if triumvirat
 on-arrival: dnvp_leader = "Hergt"; dnvp_ideology = "Moderate"; workers_other -= 1; rural_other -= 1; new_middle_other -= 1; old_middle_other -= 1; ddp_left += 1; dvp_left += 1; lvp_left += 1; z_relation -= 3; ddp_relation -= 2; dvp_relation -= 5
 face-image: img/portraits/OskarHergt.jpg
 
-With opinions on the inflammatory Lambach article being surprisingly divided among party members, a general <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> sentiment across Germany, Alfred Hugenberg and his staunch anti-democratic beliefs struggling to convince moderate party members. More and more party members are beginning to blame their decline on the thesis of the Lambach article rather than their participation in a <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> government. [? if tariffs < 0: Furthermore, our decrease in tariffs have rallied the <span style="color: #385A38;">agrarian</span> wing against Hugenberg and his all-or-nothing policy. ?]
+論争を巻き起こしたランバッハ論文への評価が党内で意外なほど割れ、ドイツ全土に<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>支持の気運が広がる中、アルフレート・フーゲンベルクの頑強な反民主主義は穏健な党員を説得できずにいる。党勢衰退の原因を<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>の政府への参加ではなく、ランバッハ論文の指摘した問題に求める党員が増えている。[? if tariffs < 0: さらに、我々の関税引き下げによって<span style="color: #385A38;">農業派</span>はフーゲンベルクの「全か無か」の政策への反対で結集した。?]
 
-Oskar Hergt has been elected as the new leader of the <span style="color: #3E88B3;">**DNVP**</span> following a divisive congress. Hugenberg and his supporters have hinted towards a secession from the party's right wing, and Hugenberg himself is withholding financial support to the party.
+対立の激しい党大会を経て、オスカー・ヘルクトが<span style="color: #3E88B3;">**DNVP**</span>の新党首に選ばれた。フーゲンベルクと支持者は党右派の離党をほのめかしており、フーゲンベルク自身も党への資金援助を停止している。
 
 @triumvirate
 on-arrival: dnvp_leader = "Triumvirate"; dnvp_ideology = "Radical"; workers_dnvp -= 1; rural_dnvp -= 2; catholics_other += 1; workers_other += 1; new_middle_dvp += 2; new_middle_lvp += 2; new_middle_dnvp -= 2; pro_republic -= 2; dvp_right += 1; ddp_right += 1; lvp_right += 1
 face-image: img/portraits/Kuno_von_Westarp.jpg
 
-Both Hugenberg and Hergt lack the majority of votes needed within the party, and now are seeking a compromise solution between the two factions. A group of party members on the fence between the two, have suggested a triumvirate between Westarp, Hugenberg, and a representative from Prussia as a compromise, a proposal Hugenberg himself is supportive of, where he can control the party from the sidelines.
+フーゲンベルクもヘルクトも党内で必要な過半数を得られず、両派の妥協を模索している。どちらを支持するか決めかねていた党員の一団は、ヴェスタルプ、フーゲンベルク、プロイセン代表による三頭体制を提案した。表立たずに党を支配できるこの案を、フーゲンベルク自身も支持している。
 
-Westarp is not enthusiastic of such a proposal but agreed to take part in it for the sake of party unity. However, this arrangement is unstable and will not last long.
+ヴェスタルプは乗り気ではなかったが、党の結束のために参加を承諾した。しかし、この体制は不安定で長続きしないだろう。
 
 @hugenberg
 on-arrival: dnvp_leader = "Hugenberg"; dnvp_ideology = "Radical"; workers_dnvp -= 1; new_middle_dvp += 2; new_middle_lvp += 2; new_middle_dnvp -= 2; catholics_other += 2; workers_other += 2; pro_republic -= 3; dvp_right += 1; ddp_right += 1; lvp_right += 1
 face-image: img/portraits/AlfredHugenberg.jpg
 
-Alfred Hugenberg, channelling the anger created by the inflammatory Lambach article, which criticized the party's monarchist direction, the electoral defeat, and their participation in a system they fundamentally oppose, has won over the moderates in a simple majority vote for his candidacy. Hugenberg is set to alienate the left of his party and cause a possible secession due to his uncompromising stances on just about everything. Hugenberg is expected to bring about an end to internal party democracy and instill a <i>Führerprinzip</i> within the party. The former conservative catch-all party will be transformed into a party for his own goals.
+アルフレート・フーゲンベルクは、君主主義路線を批判したランバッハの論文、選挙の敗北、そして根本的に反対する体制への参加が生んだ怒りを利用し、穏健派を取り込んで過半数を獲得した。ほぼあらゆる問題で妥協を拒むため、党左派の反発と離党を招く可能性がある。党内民主主義を終わらせ、<i>指導者原理</i>を導入すると見られる。かつて幅広い層を取り込んだ保守政党は、彼自身の目的のための党へと変貌するだろう。
 
-Westarp remains as the chairman for the <span style="color: #3E88B3;">**DNVP**</span>'s Reichstag delegation for now, and will try his best to prevent a secession from the party, even with Hugenberg leading.
+ヴェスタルプは当面、<span style="color: #3E88B3;">**DNVP**</span>の国会議員団長にとどまり、フーゲンベルクの下でも離党を防ぐために力を尽くすだろう。

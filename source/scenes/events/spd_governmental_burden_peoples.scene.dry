@@ -1,49 +1,49 @@
-title: Burden of Government
+title: 政府の負担
 view-if: spd_government_burden_trigger == 1 and (peoples_party or (new_middle_spd_normalized >= 30 or (new_middle_spd_normalized + old_middle_spd_normalized >= 40) or rural_spd_normalized >= 20 or catholics_spd_normalized >= 40 or spd_votes >= 40))
 new-page: true
 tags: event
 on-arrival: goal_spd_cancel_peoples = 0; economy_goal_spd_peoples = 0; finance_goal_spd_peoples = 0; tariff_goal_spd_peoples = 0; education_goal_spd_peoples = 0; labor_goal_spd_peoples = 0; agriculture_goal_spd_peoples = 0; foreign_goal_spd_peoples = 0; spd_government_burden_trigger = 0; spd_government_burden_seen = 1; spd_government_burden_peoples = 1; spd_government_burden_timer = 6; workers_spd -= 3 if labor_minister_party != "SPD"
 
-= Burden of Government
+= 政府の負担
 
-The weight of governance now falls upon our shoulders. It is our responsibility to maintain the delicate balance of appeasing our coalition partners while advancing our party's agenda. Our voter base consists of a broad array of different classes, but mainly consists of the working-class and the unemployed. They expect us to enact the following policies during our tenure, or we will suffer consequences. [? if labor_minister_party != "SPD": So far, ceding control of the Labor Ministry to the bourgeois parties has left a poor impression with the workers. ?]
+統治の重荷は今、我々の肩にかかっている。連立パートナーをなだめつつ、我々の党の政策を推し進めるという、繊細なバランスを維持することが我々の責任だ。我々の有権者層は多様な階級から成り立っているが、主に労働者階級と失業者で構成されている。彼らは我々に、任期中に以下の政策を実行することを期待しており、さもなければ我々は代償を払うことになる。[? if labor_minister_party != "SPD": これまで、労働省の権限をブルジョワ政党に譲ったことは、労働者たちに悪い印象を与えている。?]
 
-**Primary Goals**
+**主要目標**
 
-[? if spd_in_government : - Expand social welfare programs. ?]
+[? if spd_in_government : - 社会福祉プログラムを拡大する。 ?]
 
-[? if spd_in_government : - Promote worker ownership of industries. ?]
+[? if spd_in_government : - 産業の労働者による所有権を促進する。 ?]
 
-[? if spd_in_government : - Lower taxes or shift the tax burden to the wealthy. ?]
+[? if spd_in_government : - 税金を減らすか、富裕層に税負担を移す。 ?]
 
-[? if spd_in_government : - Support workers in labor disputes. ?]
+[? if spd_in_government : - 労働争議における労働者への支援。 ?]
 
-[? if spd_in_government : - Fund unemployment insurance through employers. ?]
+[? if spd_in_government : - 雇用主を通じて失業保険基金を設立する。 ?]
 
-[? if spd_in_government: - Advance women's rights. ?]
+[? if spd_in_government: - 女性の権利を前進させる。?]
 
-[? if spd_in_government: - Reform or expand education for workers. ?]
+[? if spd_in_government: - 労働者のための教育を改革するか拡大する。 ?]
 
-[? if spd_in_government and black_thursday_seen : - Institute an economic plan. ?]
+[? if spd_in_government and black_thursday_seen : - 経済計画を樹立する。?]
 
-[? if spd_in_government : - Secure low food prices for workers. ?]
+[? if spd_in_government : - 労働者のための食料価格を安定させる。 ?]
 
-[? if spd_in_government : - Reduce funding for the Reichswehr. ?]
+[? if spd_in_government : - 国防軍への資金を削減する。 ?]
 
-**Secondary Goals**
+**副次的目標**
 
-[? if spd_in_government and black_thursday_seen : - Promote the moderate reformist plan. ?]
+[? if spd_in_government and black_thursday_seen : - 中道改革派の計画を推進する。 ?]
 
-[? if spd_in_government : - Cut taxes. ?]
+[? if spd_in_government : - 税金を削減する。?]
 
-[? if spd_in_government : - Be neutral in labor affairs. ?]
+[? if spd_in_government : - 労働問題では中立を保つ。?]
 
-[? if spd_in_government : - Raise tariffs. ?]
+[? if spd_in_government : - 関税を引き上げる。?]
 
-[? if spd_in_government : - Increase science funding. ?]
+[? if spd_in_government : - 科学資金を増額する。?]
 
-[? if spd_in_government : - Take steps towards the <span style="color: #001489;">European</span> <span style="color: #FFDD00;">Union</span> or national concordat. ?]
+[? if spd_in_government : - <span style="color: #001489;">ヨーロッパ</span> <span style="color: #FFDD00;">連合</span>へ、あるいは国家協定に向けて一歩踏み出す。 ?]
 
-[? if spd_in_government : - Assist the rural working class. ?]
+[? if spd_in_government : - 農村労働者階級を支援する。?]
 
-They will expect to see at least two primary and one secondary goal fulfilled every six months, or we will lose some of their support. Committing to austerity or conservative policies will automatically fail the primary goal. Committing to radical left-wing policies will automatically fail the secondary goal.
+半年ごとに少なくとも二つの主要目標と一つの副次目標を達成することを期待される。さもなければ、彼らの支持を失うだろう。緊縮財政や保守的な政策に固執すれば、主要目標は自動的に失敗する。急進的な左翼政策に固執すれば、副次目標は自動的に失敗する。

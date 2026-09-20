@@ -1,5 +1,5 @@
-title: Papen Lifts the Ban on the <span style="color: #7A3C00;">**SA**</span>!
-subtitle: Political violence has made a resurgence...
+title: パーペン、<span style="color: #7A3C00;">**SA**</span>禁止令を解除！
+subtitle: 政治暴力が再び激化した……
 view-if: chancellor = "Papen" and papen_time == 2 and sa_nationwide_ban
 new-page: true
 tags: event
@@ -17,16 +17,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= <span style="color: #7A3C00;">**SA**</span> Ban Lifted
+= <span style="color: #7A3C00;">**SA**</span>禁止令の解除
 
-The ban on the <span style="color: #7A3C00;">**SA**</span>, instituted by the previous cabinet, has been lifted in an emergency decree. This is doubtlessly apart of the conditions the [+ nsdap_leader +] attached for the <span style="color: #7A3C00;">**NSDAP**</span>'s support of the cabinet, as its paramilitary plays a large role in disrupting political meetings and creating an oppressive atmosphere on the streets.
+前内閣が実施した<span style="color: #7A3C00;">**SA**</span>禁止措置が、緊急令によって解除された。これは間違いなく、[+ nsdap_leader +]が<span style="color: #7A3C00;">**NSDAP**</span>による内閣支持の条件として求めたものの一つである。同党の準軍事組織は政治集会を妨害し、街頭に威圧的な空気を作り出すうえで大きな役割を果たしている。
 
-This is met with an instant increase in political violence, with the lifting of the ban being opposed by everyone except the <span style="color: #7A3C00;">Nazis</span>. This also eliminates the last rationale for continued <span style="color: #7A3C00;">Nazi</span> support for the unpopular Papen.
+政治暴力は直ちに増加し、<span style="color: #7A3C00;">ナチ</span>を除くあらゆる勢力が禁止解除に反対している。同時に、不人気なパーペンを<span style="color: #7A3C00;">ナチ</span>が支持し続ける最後の口実も失われた。
 
 - @papen
 
 @papen
-title: The decree is signed by President Hindenburg.
+title: ヒンデンブルク大統領が緊急令に署名する。
 on-arrival: sa_strength *= 2; sa_militancy += 0.1; coup_progress += 2; pro_republic -= 5; sa_ban_repealed = 1; sa_nationwide_ban = 0; sa_banned = 0
 
-The <span style="color: #7A3C00;">**SA**</span> immediately returns to mass recruiting and arming. This is too much for the Prussian police to handle.
+<span style="color: #7A3C00;">**SA**</span>は直ちに大規模な人員募集と武装を再開した。もはやプロイセン警察の手には負えない。

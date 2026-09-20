@@ -1,44 +1,44 @@
-title: Hermann Müller
+title: ヘルマン・ミュラー
 is-pinned-card: true 
 tags: advisor, centrist
 card-image: img/portraits/MüllerHermann.jpg
 new-page: true
 view-if: muller_advisor = 1
 
-= Hermann Müller
+= ヘルマン・ミュラー
 
 
-Müller is a former [? if chancellor = "Müller": and current ?] Chancellor, and is a long-time <span style="color: #c00000;">**Social Democratic**</span> leader.
+ミュラーは元首相[? if chancellor = "Müller": であり、現在も首相を務める人物?]で、長年にわたる<span style="color: #c00000;">**社会民主党**</span>の指導者である。
 
 - @coalition
 - @toleration
 - @snap_election
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @coalition
-title: Negotiating with the Coalition
-subtitle: Müller can improve our relationships with our coalition partners.
+title: 連立交渉
+subtitle: ミュラーは連立相手との関係を改善できる。
 choose-if: advisor_action_timer <= 0 and spd_in_government = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The <span style="color: #c00000;">SPD</span> is not in government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_in_government: <span style="color: #c00000;">SPD</span>は政権に参加していない。 ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 4; ddp_relation += 4; dvp_relation += 2; dvp_relation += 2 if in_grand_coalition; lvp_relation += 4; dvp_left += 0.5 if in_grand_coalition; lvp_left += 0.5; ddp_left += 0.25
 
-We have improved our relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:, and <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>?], and reduced tensions with the coalition.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:、<span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed:、<span style="color: #FFCC00;">**LVP**</span>?]との関係を改善し、連立内の緊張を緩和した。
 
 
 @toleration
-title: Defending Toleration
-subtitle: Müller supports the toleration arrangement with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The <span style="color: #c00000;">SPD</span> is not in toleration. ?]
+title: 閣外協力を擁護する
+subtitle: ミュラーはブルジョワ諸党の政権への閣外協力を支持する。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_toleration: <span style="color: #c00000;">SPD</span>は閣外協力を行っていない。 ?]
 choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
 
-We have reduced dissent among the anti-toleration factions. 
+閣外協力に反対する派閥の不満を抑えた。
 
 @snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Müller" : Müller must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 解散総選挙
+subtitle: 解散総選挙を実施する。
+unavailable-subtitle: [? if chancellor != "Müller" : ミュラーが首相でなければならない。 ?][? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?]
 choose-if: advisor_action_timer == 0 and chancellor == "Müller"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+新たな選挙を[+ next_election_year +]年[+ next_election_month : month +]に実施することを決定した。

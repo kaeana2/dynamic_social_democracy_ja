@@ -1,4 +1,4 @@
-title: Confronting Antisemitism
+title: 反ユダヤ主義との対決
 new-page: true
 is-card: true
 view-if: iron_front_formed == 1 and nazi_urgency >= 3
@@ -7,23 +7,23 @@ card-image: img/iron_front.png
 tags: party_affairs, antifascism
 max-visits: 1
 
-= Confronting Antisemitism
+= 反ユダヤ主義との対決
 
-Antisemitism has long been a latent feature of German society, but since the beginning of the economic depression, it has grown to a horrifying extent. The <span style="color: #7A3C00;">Nazis</span> are the worst of it, but all the right-wing parties are deeply antisemitic. Regarding the <span style="color: #c00000;">**SPD**</span> specifically, our right-wing enemies love to deploy their racist rhetoric against our many <span style="color: #005EB8;">Jewish</span> comrades, magnifying criticism of any minor transgression, and they call the entire <span style="color: #c00000;">**SPD**</span> a <span style="color: #005EB8;">Jewish</span> party. We are a favorite target of their invectives.
+反ユダヤ主義は長らくドイツ社会に潜在していたが、恐慌の始まり以来、恐るべき規模にまで拡大した。最悪なのは<span style="color: #7A3C00;">ナチ</span>だが、右派諸党はいずれも強い反ユダヤ主義を抱えている。とりわけ<span style="color: #c00000;">**SPD**</span>に対して、右派の敵は多数の<span style="color: #005EB8;">ユダヤ人</span>同志へ人種差別的言辞を浴びせ、ささいな過失まで大げさに非難し、党全体を<span style="color: #005EB8;">ユダヤ人</span>政党と呼ぶ。われわれは彼らの罵倒の格好の標的である。
 
-- @socialism_of_fools: Antisemitism is the "<span style="color: #c00000;">socialism</span> of <span style="color: #7A3C00;">fools</span>". We will defeat them with real <span style="color: #c00000;">socialism</span>.
-- @if: Antisemitism is a crisis. Direct the full force of the <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span> against antisemitism.
-- @all: All Germans will suffer from <span style="color: #7A3C00;">fascism</span>, not just the <span style="color: #005EB8;">Jews</span>. We do not need a separate policy for them.
+- @socialism_of_fools: 反ユダヤ主義は「<span style="color: #7A3C00;">愚者</span>の<span style="color: #c00000;">社会主義</span>」だ。真の<span style="color: #c00000;">社会主義</span>で打ち破る。
+- @if: 反ユダヤ主義は危機である。<span style="color: #c00000;">鉄の</span><span style="color: #1A1A1A;">戦線</span>の全力を反ユダヤ主義との闘争へ向ける。
+- @all: <span style="color: #7A3C00;">ファシズム</span>に苦しむのは<span style="color: #005EB8;">ユダヤ人</span>だけでなく全ドイツ人だ。個別の政策は必要ない。
 
 @socialism_of_fools
 
-The best policy to deal with this sort of irrational, senseless hatred is to ignore it. Few are swayed by racist rhetoric; the best way to combat it is to provide economic security so that people do not turn to antisemitism.
+この種の非合理で無意味な憎悪には、無視するのが最善である。人種差別的言辞に動かされる者は少ない。人々が反ユダヤ主義へ向かわぬよう経済的安定を与えることこそ、最良の対抗策だ。
 
 @if
 on-arrival: confronting_antisemitism += 2; sa_strength -= 20; democratization += 1; pacifism += 1; nationalism -= 5*(1-dissent); workers_nsdap -= 6*(1-dissent);
 
-We develop an entire campaign against antisemitism under the auspices of the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>. Hopefully our campaign can sway the workers away from <span style="color: #7A3C00;">Nazism</span>.
+<span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>のもとで、反ユダヤ主義に対する全面的な運動を展開する。この運動によって労働者を<span style="color: #7A3C00;">ナチズム</span>から引き離せるはずだ。
 
 @all
 
-We do not need any special treatment for minorities.
+少数者に特別な対応は必要ない。

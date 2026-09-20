@@ -1,5 +1,5 @@
-title: Lippe Landtag Campaigning
-subtitle: A minuscule Free State prepares for its election next week.
+title: リッペ州議会選挙運動
+subtitle: 小さな自由州が翌週の選挙に備える。
 new-page: true
 tags: event
 view-if: rubicon and chancellor == "Schleicher" and year == 1933 and month == 1 and week == 2
@@ -18,15 +18,15 @@ on-display: {!
 !}
 go-to: campaign_menu
 
-= Lippe Landtag Campaigning
+= リッペ州議会選挙運動
 
-Being the only state election between Schleicher's appointment and Strasser’s resignation, which, alongside several local elections, has painted a picture of the <span style="color: #7A3C00;">Nazi Party</span>'s rapid decline, the <span style="color: #7A3C00;">Nazis</span> are eager to pour all their resources into a victory in this microstate. The intensity of their campaign is unprecedented, with [+ nsdap_chancellor +] and dozens of nationally prominent <span style="color: #7A3C00;">Nazi</span> leaders holding rallies as many as a dozen times per day.
+シュライヒャーの首相就任からシュトラッサーの辞任までに行われる唯一の州選挙である。複数の地方選挙とともに<span style="color: #7A3C00;">ナチ党</span>の急速な衰退を印象づけてきただけに、<span style="color: #7A3C00;">ナチ党</span>はこの小州での勝利へ全資源を注ぎ込もうとしている。運動の激しさは前例がなく、[+ nsdap_chancellor +]と全国的に著名な<span style="color: #7A3C00;">ナチ党</span>指導者数十名が、1日に十数回もの集会を開いている。
 
-A defeat here would cement the growing belief that the party is collapsing—and deny them a much-needed propaganda victory to revitalize their flagging morale. The local <span style="color: #c00000;">**SPD**</span> remains strong, having secured 39% of the vote in the last election and winning a majority of the urban vote. Meanwhile, the various bourgeois parties that once dominated the rural areas have become irrelevant and are likely to crumble under the weight of the <span style="color: #7A3C00;">**NSDAP**</span> campaign.
+ここで敗北すれば党が崩壊しつつあるとの見方が定着し、低下した士気を立て直すために必要な宣伝上の勝利も得られない。地元の<span style="color: #c00000;">**SPD**</span>はなお強く、前回選挙で39％を獲得し、都市部では過半数の票を得ている。一方、かつて農村部を支配したさまざまなブルジョワ政党は存在感を失い、<span style="color: #7A3C00;">**NSDAP**</span>の運動に押し潰される可能性が高い。
 
-The odds favor the <span style="color: #7A3C00;">Nazis</span>: the near-total absence of Catholics, a 60% rural population, and the fact that this state constitutes just a quarter of a percent of Germany’s population—all make it possible for them to blanket the area with propaganda and demonstrations at minimal cost.
+情勢は<span style="color: #7A3C00;">ナチ党</span>に有利である。カトリック信徒がほぼ皆無で、人口の60％が農村部に住み、州人口がドイツ全体のわずか0.25％にすぎないため、最小限の費用で全域を宣伝とデモで覆える。
 
-This is a high-stakes campaign: if the <span style="color: #7A3C00;">Nazis</span> fail to make a strong showing despite their all-out effort, the consequences will be enormously magnified. Given the state’s tiny size, the real question isn’t whether we can afford to campaign—but how much we’re willing to invest in it.
+この選挙運動に懸かるものは大きい。<span style="color: #7A3C00;">ナチ党</span>が総力を挙げたにもかかわらず好成績を収められなければ、その影響は途方もなく増幅される。州が極めて小さいため、問題は運動を行う余裕があるかではなく、どれだけ投じる意思があるかである。
 
 @campaign_menu
 
@@ -36,44 +36,44 @@ This is a high-stakes campaign: if the <span style="color: #7A3C00;">Nazis</span
 - @campaign_high
 
 @schleicher
-title: Chancellor Schleicher offers to lend supporting parties state funding.
-unavailable-subtitle: And that includes no one at the moment, not even the <span style="color: #3E88B3;">DNVP</span>.
+title: シュライヒャー首相が支持政党へ国費の提供を申し出る。
+unavailable-subtitle: 現時点では<span style="color: #3E88B3;">DNVP</span>を含め、該当する政党はない。
 choose-if: schleicher_spd_r >= 3
 on-arrival: resources += 2; schleicher_spd_support += 1; schleicher_spd_lippe = 1; nsdap_lippe -= 0.05; schleicher_spd_influence += 1
 max-visits: 1
 go-to: campaign_menu
 
-Schleicher, in recognition of the <span style="color: #c00000;">**SPD**</span>'s relative support for his cabinet, has granted us access to secret state funding for the campaign. This move is also likely to improve the party's perception of the chancellor.
+シュライヒャーは<span style="color: #c00000;">**SPD**</span>が内閣を比較的支持していることに報い、選挙運動用の秘密国費を我々に利用させた。この措置により、党内での首相への評価も改善する可能性が高い。
 
 @campaign_low
-title: Leave campaigning to the local <span style="color: #c00000;">**SPD**</span>.
-subtitle: This is the default option.
+title: 選挙運動を地元の<span style="color: #c00000;">**SPD**</span>に任せる。
+subtitle: これが標準の選択肢である。
 view-if: not schleicher_spd_lippe
 on-arrival: campaign_low_lippe = 1
 
-We don't need to worry about Lippe. Local campaigning efforts are left to the historically popular local <span style="color: #c00000;">**SPD**</span> and Minister-President, who seek to maintain the loyalty of the state's working-class.
+リッペを心配する必要はない。地元で歴史的に人気のある<span style="color: #c00000;">**SPD**</span>と州首相に選挙運動を任せ、州の労働者階級の忠誠を維持させる。
 
-Our campaign pales in comparison to the <span style="color: #7A3C00;">Nazi</span> one by miles, who have received a welcome surprise by Hugenberg announcing a political truce with the <span style="color: #7A3C00;">**NSDAP**</span>, a step toward reconciliation. Therefore, their campaign has free rein over the rural 60% of the state.
+我々の運動は<span style="color: #7A3C00;">ナチ党</span>と比べてはるかに見劣りする。フーゲンベルクが和解への一歩として<span style="color: #7A3C00;">**NSDAP**</span>との政治休戦を発表し、彼らに思わぬ追い風を与えたからだ。そのため州人口の60％を占める農村部では、彼らの運動を妨げるものがない。
 
 @campaign_med
-title: Launch a campaign among the urban sections of Lippe, focusing on the working-class.
-subtitle: -1 resource
+title: リッペの都市部で労働者階級を重視した運動を行う。
+subtitle: 資源 -1
 view-if: not schleicher_spd_lippe
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 資源が足りない。
 on-arrival: resources -= 1; spd_lippe += 0.1; spd_lippe -= 0.05 if not democracy_paramilitary
 
-Despite Lippe's small size, we must step up our ground game. Speakers are brought in from all over the country to preach to the workers about the dangers of <span style="color: #7A3C00;">Nazism</span>, and highlight the <span style="color: #c00000;">**SPD**</span>'s accomplishments on behalf of the working class. [? if democracy_paramilitary: Despite the <span style="color: #7A3C00;">**SA**</span>'s attempts at disruption, Reichsbanner units brought in from other parts of the country maintain order. ?][? if not democracy_paramilitary: However, the <span style="color: #7A3C00;">**SA**</span> has repeatedly disrupted our gatherings, and attacked many of our officials. ?]
+リッペが小さくとも、地上戦を強化しなければならない。全国から弁士を招き、労働者に<span style="color: #7A3C00;">ナチズム</span>の危険を説き、労働者階級のために<span style="color: #c00000;">**SPD**</span>が成し遂げた実績を強調する。[? if democracy_paramilitary: <span style="color: #7A3C00;">**SA**</span>が妨害を試みても、全国各地から投入された国旗団部隊が秩序を維持している。?][? if not democracy_paramilitary: しかし<span style="color: #7A3C00;">**SA**</span>は我々の集会を繰り返し妨害し、多くの党職員を襲撃している。?]
 
-Our campaign still pales in comparison to the <span style="color: #7A3C00;">Nazis</span>, who were given a significant boost when Hugenberg announced a political truce with the <span style="color: #7A3C00;">**NSDAP**</span>, marking a step toward reconciliation. As a result, their campaign now has free rein over the rural 60% of the state.
+我々の運動はなお<span style="color: #7A3C00;">ナチ党</span>と比べて見劣りする。フーゲンベルクが和解への一歩となる<span style="color: #7A3C00;">**NSDAP**</span>との政治休戦を発表し、彼らを大きく勢いづけたからだ。その結果、州人口の60％を占める農村部では、彼らの運動を妨げるものがない。
 
 @campaign_high
-title: Launch an extensive ground and propaganda campaign, reaching all corners of the state.
-subtitle: -2 resources
+title: 州全域に及ぶ大規模な地上・宣伝運動を行う。
+subtitle: 資源 -2
 choose-if: resources >= 2
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: 資源が足りない。
 on-arrival: resources -= 2; spd_lippe += 0.2; spd_lippe -= 0.05 if not democracy_paramilitary; spd_lippe -= 0.05 if not peoples_party
 
-Despite Lippe's small size, our campaign needs to rival the <span style="color: #7A3C00;">Nazis</span>. Speakers are brought in from all over the country to preach to the workers about the dangers of <span style="color: #7A3C00;">Nazism</span>, and highlight the <span style="color: #c00000;">**SPD**</span>'s accomplishments on behalf of the working class. We made efforts to campaign among the traditionally conservative rural areas of the state, [? if not peoples_party: however, we have not historically campaigned much among the farmers, and they do not trust us over the <span style="color: #7A3C00;">Nazis</span>. ?][? if peoples_party: with varying degrees of success. ?][? if democracy_paramilitary: Despite the <span style="color: #7A3C00;">**SA**</span>'s attempts at disruption, Reichsbanner units brought in from other parts of the country maintain order. ?][? if not democracy_paramilitary: However, the <span style="color: #7A3C00;">**SA**</span> has repeatedly disrupted our gatherings, and attacked many of our officials. ?]
+リッペが小さくとも、我々の運動は<span style="color: #7A3C00;">ナチ党</span>に対抗できる規模でなければならない。全国から弁士を招き、労働者に<span style="color: #7A3C00;">ナチズム</span>の危険を説き、労働者階級のために<span style="color: #c00000;">**SPD**</span>が成し遂げた実績を強調する。伝統的に保守的な州内農村部でも運動を試みたが、[? if not peoples_party: 我々は歴史的に農民の間でほとんど運動してこなかったため、彼らは<span style="color: #7A3C00;">ナチ党</span>より我々を信用してはいない。?][? if peoples_party: 成果は地域によって異なる。?][? if democracy_paramilitary: <span style="color: #7A3C00;">**SA**</span>が妨害を試みても、全国各地から投入された国旗団部隊が秩序を維持している。?][? if not democracy_paramilitary: しかし<span style="color: #7A3C00;">**SA**</span>は我々の集会を繰り返し妨害し、多くの党職員を襲撃している。?]
 
-Although our campaigning efforts may finally have caught up to the one of the <span style="color: #7A3C00;">Nazis</span>, they've received a welcome surprise by Hugenberg announcing a political truce with the <span style="color: #7A3C00;">**NSDAP**</span>, a step toward reconciliation. As a result, their campaign is free from bourgeois counter-campaigns in the rural 60% of the state.
+我々の運動はついに<span style="color: #7A3C00;">ナチ党</span>へ追いついたかもしれないが、フーゲンベルクが和解への一歩として<span style="color: #7A3C00;">**NSDAP**</span>との政治休戦を発表し、彼らに思わぬ追い風を与えた。その結果、州人口の60％を占める農村部では、ブルジョワ諸党の対抗運動に邪魔されず活動できる。

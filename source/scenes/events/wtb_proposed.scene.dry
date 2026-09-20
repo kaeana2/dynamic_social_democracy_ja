@@ -1,5 +1,5 @@
-title: The WTB Plan
-subtitle: Wladimir Woytinsky and the ADGB have presented a proposal.
+title: WTB計画
+subtitle: ヴラジーミル・ヴォイティンスキーとADGBが提案を提出した。
 view-if: black_thursday_seen and wtb_points >= 200 and not economic_plan and not wtb_proposed
 tags: event
 new-page: true
@@ -17,53 +17,53 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The WTB Plan
+= WTB計画
 
-Following Woytinsky's announcement of intentions to draft a national action plan to stimulate the economy through extensive public works, he, Tarnow, and Baade have presented the WTB Plan, named after them, to the ADGB and <span style="color: #c00000;">**SPD**</span> leadership. While the ADGB has shown enthusiasm and formally adopted the plan, the <span style="color: #c00000;">**SPD**</span>'s economic expert, Rudolf Hilferding, along with Rudolf Breitscheid and party leader Otto Wels, are much more resistant, showing significant skepticism.
+大規模公共事業による景気刺激の国家行動計画を策定すると表明した後、ヴォイティンスキーはタルノウ、バーデとともに、三人の姓の頭文字を冠したWTB計画をADGBと<span style="color: #c00000;">**SPD**</span>指導部へ提出した。ADGBは熱意を示して正式採択したが、<span style="color: #c00000;">**SPD**</span>の経済専門家ルドルフ・ヒルファディング、ルドルフ・ブライトシャイト、党首オットー・ヴェルスは強く抵抗し、深い懐疑を示した。
 
-The fear of inflation caused by funding the plan through public works, especially with hyperinflation still fresh in memory, and the unwillingness to "play doctor at the bedside of capitalism," are the main reasons for the Centrists' reluctance. Maybe they can be convinced?
+公共事業への支出がインフレを招くという恐れ、とりわけハイパーインフレの記憶がなお生々しいこと、そして「資本主義の病床で医者を演じる」ことへの抵抗感が、中央派のためらう主因である。彼らを説得できるだろうか。
 
-- @center_plan: Woytinsky is promising the workers false hope, retain our current policy.
-- @wtb_plan: Action is needed, and is needed now. We will attempt to convince the <span style="color: #c00000;">**SPD**</span> to formally adopt the plan.
+- @center_plan: ヴォイティンスキーは労働者に偽りの希望を抱かせている。現行路線を維持する。
+- @wtb_plan: 行動が必要だ。そして今すぐ必要だ。我々は<span style="color: #c00000;">**SPD**</span>に計画を正式に採択させるよう試みるだろう。
 
 @center_plan
 on-arrival: center_strength += 10; center_dissent -= 10; labor_dissent += 10; wtb_support += 1
 
-Woytinsky has good intentions, but Hilferding knows best. Nothing can be done to alleviate the depression. However, we have been increasingly under fire from the ADGB for our opposition, as they formally adopted the plan themselves and consolidated their demands at their "Crisis Congress." The Centrists are slowly losing their grip on the party.
+ヴォイティンスキーの意図は善良だが、ヒルファディングの判断が正しい。恐慌を緩和する手立てはない。しかしADGBは自ら計画を正式採択し、「危機大会」で要求を一本化したため、我々は反対姿勢をますます激しく批判されている。中央派は党内での主導権を徐々に失っている。
 
 @wtb_plan
 
-Alright, but what can we do? Hilferding is stubborn in his belief that nothing can be done and will try his best to rally the party against the WTB plan.
+だが、何ができるだろうか。ヒルファディングは、打つ手はないという信念に固執し、WTB計画への反対で党をまとめようと全力を尽くすだろう。
 
 - @labor_influence
 - @situation
 - @wtb_support
 
 @wtb_support
-title: Utilize the widespread support for the WTB Plan among the grassroots.
-unavailable-subtitle: Many workers haven't even heard of the WTB Plan.
+title: 草の根レベルでのWTB計画への広範な支持を利用する。
+unavailable-subtitle: 多くの労働者はまだWTB計画の存在すら知らない。
 choose-if: wtb_support >= 5
 on-arrival: wtb_adopted = 1; labor_dissent -= 20; reformist_dissent -= 15; labor_strength += 15; center_strength -= 10; center_dissent += 20; left_dissent += 5; economic_plan = 1
 
-An internal vote within the <span style="color: #c00000;">**SPD**</span>'s leadership is called to finally settle the matter. After a contentious debate, the majority of the party is convinced by Woytinsky's reasonings, and outnumbered, the Centrists under Hilferding are defeated.
+<span style="color: #c00000;">**SPD**</span>指導部で最終決着をつける党内投票が行われた。激論の末、党の大多数はヴォイティンスキーの主張に納得し、少数派となったヒルファディング率いる中央派は敗北した。
 
-With our hard work, we have finally convinced the majority of the party to adopt the WTB plan! [? if spd_in_government == 1 : We can begin implementing the plan as soon as possible, as long as we have the Economic and Finance ministries. ?][? if spd_in_government = 0 : We should emphasize the plan in our electoral propaganda. ?]
+我々の努力で、ついに党の過半数をWTB計画に納得させた！ [? if spd_in_government == 1 : 経済・財政省さえあれば、できるだけ早く計画の実施に取り掛かれる。?][? if spd_in_government = 0 : 選挙のプロパガンダで計画を強調すべきだ。?]
 
 @labor_influence
-title: Use the ADGB and the Labor faction's influence to force the party to accept the plan.
-subtitle: A confrontation will occur!
+title: ADGBと労働派の影響力を使い、党に計画を受け入れさせる。
+subtitle: 対決が起こる！
 on-arrival: wtb_adopted = 1; labor_dissent -= 15; reformist_dissent -= 10; labor_strength += 10; center_strength -= 15; center_dissent += 30; left_dissent += 5; economic_plan = 1
 
-An internal vote within the <span style="color: #c00000;">**SPD**</span>'s leadership is called to finally settle the matter. After a contentious debate, the majority of the party is convinced by Woytinsky's reasonings, and outnumbered, the Centrists under Hilferding are defeated.
+<span style="color: #c00000;">**SPD**</span>指導部で最終決着をつける党内投票が行われた。激論の末、党の大多数はヴォイティンスキーの主張に納得し、少数派となったヒルファディング率いる中央派は敗北した。
 
-With our hard work, we have finally convinced the majority of the party to adopt the WTB plan! [? if spd_in_government == 1 : We can begin implementing the plan as soon as possible, as long as we have the Economic and Finance ministries. ?][? if spd_in_government = 0 : We should emphasize the plan in our electoral propaganda. ?]
+我々の努力で、ついに党の過半数をWTB計画に納得させた！ [? if spd_in_government == 1 : 経済・財政省さえあれば、できるだけ早く計画の実施に取り掛かれる。?][? if spd_in_government = 0 : 選挙のプロパガンダで計画を強調すべきだ。?]
 
 @situation
-title: Point out the gains of the <span style="color: #7A3C00;">**NSDAP**</span>, who have capitalized on our lack of a program.
-unavailable-subtitle: The party still doesn't view the <span style="color: #7A3C00;">NSDAP</span> as a significant enemy, nor take them seriously.
+title: 我々の綱領不在に乗じた<span style="color: #7A3C00;">**NSDAP**</span>の伸長を指摘する。
+unavailable-subtitle: 党はまだ<span style="color: #7A3C00;">NSDAP</span>を重大な敵と見なさず、本気で警戒してもいない。
 choose-if: nsdap_votes >= 28 or nazi_urgency >= 4
 on-arrival: wtb_adopted = 1; labor_dissent -= 15; reformist_dissent -= 10; labor_strength += 10; center_strength -= 5; center_dissent += 10; left_dissent += 5; economic_plan = 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent)
 
-The collapse in our electoral performance and loss of voters to the <span style="color: #700000;">**KPD**</span> and <span style="color: #7A3C00;">**NSDAP**</span> have opened the party's eyes, and they are now ready to support our plan as a means to present a solution for the workers.
+我々の選挙実績の崩壊と、<span style="color: #700000;">**KPD**</span>および<span style="color: #7A3C00;">**NSDAP**</span>への有権者の流出は、党の目を開かせた。そして彼らは今や、労働者への解決策を提示する手段として、我々の計画を支持する準備が整った。
 
-With our hard work, we have finally convinced the majority of the party to adopt the WTB plan! [? if spd_in_government == 1 : We can begin implementing the plan as soon as possible, as long as we have the Economic and Finance ministries. ?][? if spd_in_government = 0 : We should emphasize the plan in our electoral propaganda. ?]
+我々の努力で、ついに党の過半数をWTB計画に納得させた！ [? if spd_in_government == 1 : 経済・財政省さえあれば、できるだけ早く計画の実施に取り掛かれる。?][? if spd_in_government = 0 : 選挙のプロパガンダで計画を強調すべきだ。?]

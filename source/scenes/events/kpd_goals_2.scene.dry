@@ -1,25 +1,25 @@
-title: The <span style="color: #700000;">**KPD**</span> presents its list of goals for the coalition.
+title: <span style="color: #700000;">**KPD**</span>が連立政権への新たな要求を提示
 view-if: (in_popular_front = 1 or in_left_front = 1) and kpd_goals_seen = 0 and kpd_coalition_success = 1 and next_election_time - time > 12 and spd_in_government
 on-arrival: kpd_demands_federal = 1; kpd_goals_seen = 1; agriculture_goal = 1; economy_goal = 1; labor_goal = 1; foreign_goal = 1; welfare_goal = 0; finance_goal = 0; kpd_ultimatum_timer = 16; kpd_ultimatum_timer = 20 if kpd_relation >= 60; kpd_ultimatum_timer = 24 if kpd_leader == "Conciliators"; kpd_ultimatum_timer = next_election_time - time - 1 if next_election_time - time <= 12;
 new-page: true
 tags: event
 
-= <span style="color: #700000;">**KPD**</span> Goals
+= <span style="color: #700000;">**KPD**</span>の要求
 
-The <span style="color: #700000;">**KPD**</span> presents us with a new list of goals for the coalition:
+<span style="color: #700000;">**KPD**</span>は連立政権に対し、次の新たな目標を提示した。
 
-[? if welfare_goal = 1 : - Expand social welfare programs. ?]
+[? if welfare_goal = 1 : - 社会福祉プログラムを拡大する。 ?]
 
-[? if agriculture_goal = 1 : - Continue the land reform program. ?]
+[? if agriculture_goal = 1 : - 土地改革計画を継続する。?]
 
-[? if economy_goal = 1 : - Further nationalization of the economy. ?]
+[? if economy_goal = 1 : - 経済の国有化をさらに進める。?]
 
-[? if finance_goal = 1 : - Make taxes more progressive. ?]
+[? if finance_goal = 1 : - 税制の累進性を強化する。 ?]
 
-[? if labor_goal = 1 : - Continue to support workers in labor disputes. ?]
+[? if labor_goal = 1 : - 労働争議における労働者への支援を継続する。 ?]
 
-[? if foreign_goal = 1 : - Improve our relations with the <span style="color: #750e0e;">Soviet Union</span>. ?]
+[? if foreign_goal = 1 : - <span style="color: #750e0e;">ソビエト連邦</span>との関係を改善する。 ?]
 
 #[? if interior_goal = 1 : - Ban the <span style="color: #7A3C00;">**SA**</span> and <span style="color: #3E88B3;">**Stahlhelm**</span>. ?]
 
-They say that they expect to see these goals fulfilled in [+ kpd_ultimatum_timer +] months. Otherwise, they will vote to dissolve the coalition.
+彼らは、これらの目標を[+ kpd_ultimatum_timer +]か月以内に達成するよう求めている。達成されなければ、連立政権の解消に賛成票を投じるという。

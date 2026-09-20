@@ -1,5 +1,5 @@
-title: Black Thursday
-subtitle: The great stock market crash...
+title: 暗黒の木曜日
+subtitle: 株式市場の大暴落……。
 new-page: true
 on-arrival: black_thursday_seen = 1; workers_kpd += 5; workers_nsdap += 3; workers_spd -= 3 if spd_in_government; new_middle_spd -= 3 if spd_in_government; workers_spd += 3 if not spd_in_government; new_middle_nsdap += 4; old_middle_nsdap += 5; rural_nsdap += 5; unemployed_kpd += 5; unemployed_nsdap += 3; unemployed += 2; budget -= 1; dues -= 1 if dues > 2; inflation -= 1; economic_growth -= 1;
 tags: event
@@ -19,19 +19,19 @@ on-display: {!
 !}
 priority: 1
 
-= Black Thursday
+= 暗黒の木曜日
 
-The stock market in America has had its biggest crash in history. It is too early to tell what the international effects will be, but it cannot be good. Our economy is already feeling the effects - unemployment will rise even more, and wages will fall. As always, it is the capitalists' crisis, and the workers' burden.
+アメリカの株式市場で史上最大の暴落が起きた。国際的な影響を見通すにはまだ早いが、好ましいものにはなりえない。我が国の経済にもすでに影響が及んでおり、失業はさらに増え、賃金は低下するだろう。いつものように、資本家が招いた危機の重荷を労働者が背負わされる。
 
 
-- @cap: It is the nature of capitalism...
-- @do_something: We must do something to stop the suffering...
+- @cap: これが資本主義の本質なのだ……。
+- @do_something: 苦難を食い止めるため、何かをしなければならない……。
 
 @cap
 
-Perhaps this is simply one of the periodic crises of capitalism. Perhaps this moment will simply pass.
+これは資本主義に周期的に訪れる危機の一つにすぎないのかもしれない。やがて過ぎ去るのかもしれない。
 
 @do_something
 on-arrival: crisis_urgency += 1
 
-What can we do to staunch the workers' suffering? It is becoming a hotly debated question.
+労働者の苦難を食い止めるために何ができるのか。この問いをめぐって激しい議論が始まっている。

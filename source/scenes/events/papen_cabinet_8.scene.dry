@@ -1,5 +1,5 @@
-title: The 'Potempa Five' Are Pardoned!
-subtitle: Murder excused in the name of politics.
+title: 「ポテンパの五人組」に恩赦！
+subtitle: 政治の名の下に殺人が許された。
 view-if: chancellor = "Papen" and papen_time == 13 and potempa_five_convicted and prussia_leader == "Papen"
 new-page: true
 tags: event
@@ -17,14 +17,14 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The 'Potempa Five' Are Pardoned!
+= 「ポテンパの五人組」に恩赦！
 
-In a bid to win <span style="color: #7A3C00;">Nazi</span> support for his government, Papen and his Justice Minister have bowed to pressure and commuted the murderers' sentences, using his power as Prussia's <i>Reichskommissar</i>. The hope is that the <span style="color: #7A3C00;">**NSDAP**</span> will back Papen in the upcoming confidence vote—but this capitulation has only strengthened the <span style="color: #7A3C00;">Nazis</span>, laying bare the government's unwillingness—or inability—to confront them.
+自らの政府に<span style="color: #7A3C00;">ナチ</span>の支持を取りつけようと、パーペンと司法相は圧力に屈し、プロイセン国家弁務官としての権限を使って殺人者たちの刑を減軽した。次の信任投票で<span style="color: #7A3C00;">**NSDAP**</span>がパーペンを支持することを期待しているのである。しかし、この屈服は<span style="color: #7A3C00;">ナチ</span>を強め、政府には彼らと対決する意志、あるいは能力がないことを露呈しただけだった。
 
 - @papen
 
 @papen
-title: Shameful.
+title: 恥ずべきことだ。
 on-arrival: pro_republic -= 3; new_middle_nsdap -= 2; old_middle_nsdap -= 2; rural_nsdap -= 2; sa_militancy += 0.02; sa_strength += 50
 
-Yet another disgraceful capitulation to the <span style="color: #7A3C00;">Nazis</span>. Still, their shameless defense of convicted murderers may alienate voters and cost them dearly at the next election.
+またしても<span style="color: #7A3C00;">ナチ</span>に恥ずべき屈服を示した。それでも、有罪となった殺人者を恥知らずにも擁護したことは有権者を遠ざけ、次の選挙で大きな代償を払わせるかもしれない。

@@ -1,5 +1,5 @@
-title: Schleicher and the <span style="color: #3E88B3;">**Stahlhelm**</span>
-subtitle: The veterans organization is integrated into the state.
+title: シュライヒャーと<span style="color: #3E88B3;">**鉄兜団**</span>
+subtitle: 退役軍人組織が国家に統合される。
 view-if: chancellor = "Schleicher" and dnef_formed and (nationalists_schleicher >= 10 and (dnvp_dnef or dnvp_dnef_alt)) and schleicher_post_time >= 6
 new-page: true
 priority: 2
@@ -18,13 +18,13 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Schleicher and the <span style="color: #3E88B3;">**Stahlhelm**</span>
+= シュライヒャーと<span style="color: #3E88B3;">**鉄兜団**</span>
 
-The <span style="color: #3E88B3;">**Stahlhelm**</span>, a veterans' and paramilitary organization that shares much of Schleicher's worldview and commands his respect, has long been courted by the chancellor for cooperation with the Reichswehr. To this end, Schleicher plans to subsidize the organization with state funds, gradually making it dependent on the state and available for use. Still, the general is irritated that its military exercises often overshadow the numerically inferior Reichswehr.
+<span style="color: #3E88B3;">**鉄兜団**</span>は、シュライヒャーと多くの世界観を共有し、彼の敬意を受ける退役軍人・準軍事組織である。首相は以前から、国防軍との協力を働きかけてきた。そのために国費で補助し、徐々に国家へ依存させ、利用できる組織にする計画だ。それでも将軍は、その軍事演習が、兵力の少ない国防軍の存在感をしばしばかすませることにいら立っている。
 
-Despite their shared views, <span style="color: #3E88B3;">**Stahlhelm**</span> leaders Franz Seldte and Theodor Duesterberg remain wary of Schleicher’s encroachments on their independence. But with the <span style="color: #3E88B3;">**DNVP**</span> now folded into the <span style="color: #BFC8CC;">**DNEF**</span>, the organization finds itself politically isolated, as even its rank-and-file begin to drift into subordination.
+見解を共有しながらも、<span style="color: #3E88B3;">**鉄兜団**</span>指導者フランツ・ゼルテとテオドール・デュスターベルクは、シュライヒャーによる独立性への侵害を警戒している。しかし<span style="color: #3E88B3;">**DNVP**</span>が今や<span style="color: #BFC8CC;">**DNEF**</span>へ組み込まれ、一般団員まで従属へ傾き始める中、組織は政治的に孤立している。
 
-- @schleicher_2: The <span style="color: #3E88B3;">**Stahlhelm**</span> is integrated into the state.
+- @schleicher_2: <span style="color: #3E88B3;">**鉄兜団**</span>が国家に統合される。
 
 @schleicher_2
 on-arrival: {!
@@ -48,6 +48,6 @@ Q.schleicher_spd_r -= 1;
 Q.schleicher_spd_support -= 2;
 !}
 
-Subordination is the last thing a self-proud veterans' organization like the <span style="color: #3E88B3;">**Stahlhelm**</span> would accept—but attempts by its leaders to resist have only backfired. At a leadership conference between national and local chapters, they conceded that the era of paramilitaries and political maneuvering is over, and agreed to align the organization with the state in service of the national interest.
+<span style="color: #3E88B3;">**鉄兜団**</span>のように誇り高い退役軍人組織にとって、従属は最も受け入れ難い。しかし指導者の抵抗は裏目に出るばかりだった。全国・地方支部の指導者会議で、準軍事組織と政治工作の時代は終わったと認め、国益のため組織を国家と一体化させることに合意した。
 
-In return, the <span style="color: #3E88B3;">**Stahlhelm**</span> is granted official status as a veterans' association, while sympathetic leaders are rewarded with government posts. Many of its seasoned fighters and officers are absorbed into the Reichswehr, where they will be tasked with training the next generation of recruits.
+見返りに、<span style="color: #3E88B3;">**鉄兜団**</span>は退役軍人団体として公的地位を与えられ、協力的な指導者には政府の役職が授けられる。経験豊かな戦闘員と将校の多くは国防軍に編入され、次世代の新兵の訓練を担うことになる。

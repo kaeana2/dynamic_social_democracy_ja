@@ -1,37 +1,37 @@
-title: Hjalmar Schacht against Hilferding
+title: ヒャルマル・シャハト対ヒルファディング
 new-page: true
 view-if: year = 1929 and month >= 11 and spd_in_government = 1 and finance_minister = "Hilferding" and finance_minister_party = "SPD"
 tags: event
 max-visits: 1
 face-image: img/portraits/SchachtHjalmar.jpg
 
-= Schacht against Hilferding
+= シャハト対ヒルファディング
 
-Reichsbank president Hjalmar Schacht has criticized Finance Minister Hilferding of the <span style="color: #c00000;">**SPD**</span> for his budget, which he claims is unbalanced and contains too much social welfare and not enough tax cuts for top earners and businesses. More importantly, he is refusing to release loans necessary for the functioning of the government unless Hilferding either massively changes his budget or resigns.
+ライヒスバンク総裁ヒャルマル・シャハトは、蔵相ルドルフ・ヒルファディング（<span style="color: #c00000;">**SPD**</span>）の予算案を批判した。不均衡で社会福祉に偏りすぎ、高所得者や企業への減税が足りないというのである。さらに重大なことに、ヒルファディングが予算案を大幅に改めるか辞任しない限り、政府運営に必要な融資を供給しないと通告している。
 
-Of course, this criticism is unfounded, but the bourgeois establishment does not care.
+もちろん、この批判は根拠がないが、ブルジョワの権力層は気にしていない。
 
-- @expose_him: Expose his <span style="color: #7A3C00;">reactionary</span> dealings!
-- @work_with: Work with him to shape the budget.
-- @hilferding_resign: Hilferding must resign.
+- @expose_him: 彼の<span style="color: #7A3C00;">反動派</span>との取引を暴け！
+- @work_with: 彼と協力して予算を編成する。
+- @hilferding_resign: ヒルファディングは辞任しなければならない。
 
 @expose_him
 on-arrival: schacht_exposed = 1
 view-if: investigate_far_right >= 1
 
-We expose to the public Schacht's dealings with the <span style="color: #7A3C00;">Nazis</span>. For better or worse, he is cowed, and refrains from taking further actions against us.
+我々はシャハトと<span style="color: #7A3C00;">ナチ</span>との取引を世間に暴露した。是非はともかく、彼はひるみ、我々へのさらなる攻撃を控えている。
 
 
 @work_with
 
-After a second budget proposal, Schacht still considers Hilferding's budget to be unacceptable, despite more regressive taxes and expenditure cuts.
+第二次予算案で税制をより逆進的にし、歳出も削減したにもかかわらず、シャハトはなおヒルファディング案を受け入れられないとしている。
 
-- @hilferding_resign: Hilferding must resign.
+- @hilferding_resign: ヒルファディングは辞任しなければならない。
 
 
 @hilferding_resign
 on-arrival: finance_minister_party = "DVP" if in_grand_coalition; finance_minister_party = "LVP" if (in_grand_coalition or in_weimar_coalition) and lvp_formed; finance_minister_party = "I" if (in_weimar_coalition and not lvp_formed) or in_popular_front or in_left_front or sapd_toleration; finance_minister = "Moldenhauer"; finance_minister = "Köhler" if (in_weimar_coalition and not lvp_formed) or in_popular_front; economic_minister_granted = 1 if economic_minister_party != "SPD"; economic_minister_party = "SPD" if economic_minister_party != "SPD"; economic_minister = "Schmidt" if economic_minister_party = "SPD"
 
-With no other choice, Hilferding has resigned as Finance Minister, to be replaced by a [? if (in_grand_coalition or (in_weimar_coalition and lvp_formed)): center-right ?][? if not in_grand_coalition: technocratic ?] candidate.
+ほかに選択肢はなく、ヒルファディングは蔵相を辞任し、後任には[? if (in_grand_coalition or (in_weimar_coalition and lvp_formed)):中道右派の?][? if not in_grand_coalition:官僚系の?]人物が就任する。
 
-[? if economic_minister_granted = 1: Our coalition partners have granted us the Economic Ministry to compensate. ?]
+[? if economic_minister_granted = 1: その埋合せとして、連立相手は経済省を我々に譲った。?]

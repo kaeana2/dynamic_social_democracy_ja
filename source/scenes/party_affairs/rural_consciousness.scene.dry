@@ -1,4 +1,4 @@
-title: Class Consciousness of the Peasantry and the Rural Working Class
+title: 農民と農村労働者階級の階級意識
 new-page: true
 is-card: true
 tags: party_affairs
@@ -9,14 +9,14 @@ face-image: img/rural-conscious.jpg
 max-visits: 1
 
 
-= Class Consciousness of the Peasantry and the Rural Working class
+= 農民と農村労働者階級の階級意識
 
-Due to our introduction of agrarian policies and the increased popularity of socialism, we now have a chance to raise the consciousness of the peasantry and the rural working class. [? if peoples_party == 0: As <span style="color: #9B0000;">Marxists</span>, we are predominantly a party of the industrial proletariat and believe that they are the driving force of the transition to socialism. Engels and Kautsky saw peasants as unreliable allies at best and as a relic of a bygone era, whilst Lenin's Bolsheviks saw revolutionary potential in the peasantry. Ideologically, we do not see the peasantry as a revolutionary class, though we could try to radicalise poorer peasants, small farmers, and agricultural workers against the Junkers and to sway them towards socialism. ?][? if peoples_party == 1: Despite becoming a people’s party, our party has traditionally neglected rural workers and peasants, with the industrial working class previously being our main focus. ?] We could awaken the class consciousness of the peasantry and the rural working class as a way to expand the <span style="color: #c00000;">**SPD**</span>’s base and to build urban-rural solidarity. [? if peoples_party == 0: After all, did Engels himself not advocate for some form of worker-peasant alliance? ?]
+農業政策の導入と社会主義の人気上昇により、農民と農村労働者階級の意識を高める機会が訪れた。[? if peoples_party == 0: <span style="color: #9B0000;">マルクス主義者</span>であるわれわれは主として産業プロレタリアートの党であり、彼らこそ社会主義への移行を推進する力だと考える。エンゲルスとカウツキーは農民を、よくても頼りにならない同盟者、過去の遺物とみなした一方、レーニンのボリシェヴィキは農民に革命的可能性を見いだした。思想上、農民を革命的階級とはみなさないが、貧農、小農、農業労働者をユンカーに対して急進化させ、社会主義へ引き寄せることはできる。 ?][? if peoples_party == 1: 人民政党となった後も、わが党は伝統的に農村労働者と農民を軽視し、産業労働者階級を主要な対象としてきた。 ?]農民と農村労働者階級の階級意識を目覚めさせれば、<span style="color: #c00000;">**SPD**</span>の基盤を広げ、都市と農村の連帯を築ける。[? if peoples_party == 0: そもそもエンゲルス自身も、何らかの労農同盟を唱えたのではなかったか。 ?]
 
-- @awaken_1: Awaken their class consciousness!
-- @awaken_2: Awaken their class consciousness by the power of the radio!
-- @refute: No, we will not do this.
-- @easy_discard_1: Return card to hand.
+- @awaken_1: 階級意識を目覚めさせる！
+- @awaken_2: ラジオの力で階級意識を目覚めさせる！
+- @refute: いや、実施しない。
+- @easy_discard_1: カードを手札に戻す。
 - @cancel_advisor_action
 
 @easy_discard_1
@@ -25,24 +25,24 @@ go-to: easy_discard
 
 @awaken_1
 choose-if: baade_advisor or commercialized_media >= 2
-subtitle: [? if baade_advisor: Baade, through his expertise on agriculture, can help us raise the consciousness of the rural workers and peasants. ?] [? if commercialized_media >= 2 and not baade_advisor: We can use our existing newspapers for this. ?]
-unavailable-subtitle: [? if not baade_advisor: Baade's expertise on agriculture can help us with this. ?][? if commercialized_media < 2 and not baade_advisor: We might want to consider commercialising our newspapers. ?]
+subtitle: [? if baade_advisor: バーデは農業の専門知識を生かし、農村労働者と農民の意識向上を支援できる。 ?] [? if commercialized_media >= 2 and not baade_advisor: 既存の新聞を活用できる。 ?]
+unavailable-subtitle: [? if not baade_advisor: バーデの農業に関する専門知識が役立つだろう。 ?][? if commercialized_media < 2 and not baade_advisor: 新聞の商業化を検討してもよい。 ?]
 on-arrival: rural_spd += 10*(1-dissent); left_strength += 3 if land_reform == 0; left_dissent += 3 if land_reform == 0; left_strength += 5 if land_reform >= 1; reformist_strength += 5; labor_strength += 4; socialism += 4*(1 - dissent); rural_conscious = 1
 
-We have taken advantage of the situation and have awoken the class consciousness of the peasantry and the rural working class. Increasingly, they flock to our party and more rural labourers have joined the DLV - the German Agrictulrural Workers' Union. 
+この状況を生かし、農民と農村労働者階級の階級意識を目覚めさせた。彼らは次第にわが党へ集まり、ドイツ農業労働者組合（DLV）へ加入する農村労働者も増えている。
 
-By awakening the class consciousness of the peasantry and the rural working class, failing a secondary burden will lessen the extent to which their support is reduced. In addition, our media campaigning and rallies will have more of an effect amongst rural voters, now that they are conscious. 
+農民と農村労働者階級の階級意識を目覚めさせたことで、副次的負担に失敗した際の支持低下が緩和される。さらに、意識を得た農村有権者にはメディア運動や集会がより大きな効果を発揮する。
 
 @awaken_2
 choose-if: radio >= 2 and spd_in_government = 1
-subtitle: We can invest 1 budget into building more powerful radio transmission stations so that we can expand our radio network to the countryside.
-unavailable-subtitle: [? if budget < 1: We sadly do not have enough budget for this. ?] [? if spd_in_government = 0: We need to be in government to do this. ?] [? if radio < 2: We might want to consider building up our radio network. ?]
+subtitle: 予算1を投じて高出力の送信所を建設し、ラジオ網を農村へ拡大する。
+unavailable-subtitle: [? if budget < 1: 残念ながら予算が足りない。 ?] [? if spd_in_government = 0: 実施するには政権に参加していなければならない。 ?] [? if radio < 2: ラジオ網の拡充を検討すべきだろう。 ?]
 on-arrival: rural_spd += 10*(1-dissent); budget -= 1; left_strength += 3 if land_reform == 0; left_dissent += 3 if land_reform == 0; left_strength += 5 if land_reform >= 1; reformist_strength += 5; labor_strength += 4; socialism += 4*(1 - dissent); rural_conscious = 1
 
-We have taken advantage of the situation and have awoken the class consciousness of the peasantry and the rural working class. Increasingly, they flock to our party and more rural labourers have joined the DLV - the German Agricultural Workers' Union. 
+この状況を生かし、農民と農村労働者階級の階級意識を目覚めさせた。彼らは次第にわが党へ集まり、ドイツ農業労働者組合（DLV）へ加入する農村労働者も増えている。
 
-By awakening the class consciousness of the peasantry and the rural working class, failing a secondary burden will lessen the extent to which their support is reduced. In addition, our media campaigning and rallies will have more of an effect amongst rural voters, now that they are conscious. 
+農民と農村労働者階級の階級意識を目覚めさせたことで、副次的負担に失敗した際の支持低下が緩和される。さらに、意識を得た農村有権者にはメディア運動や集会がより大きな効果を発揮する。
 
 @refute
 
-We will not do this.
+これは実施しない。

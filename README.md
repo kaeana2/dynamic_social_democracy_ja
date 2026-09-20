@@ -1,3 +1,19 @@
+# Dynamic Social Democracy — Japanese Translation
+
+Unofficial Japanese translation of Dynamic Social Democracy.
+This is an unofficial translation and is not maintained or endorsed by the original developer.
+
+『Dynamic Social Democracy』の非公式日本語訳です。原作者による保守や公認は行われていません。
+
+Original:
+https://github.com/originn0/dynamic_social_democracy
+
+Original author: Autumn Chen
+
+Japanese translation: kaeana2
+
+
+
 # Social Democracy: An Alternate History
 
 ## Included Libraries

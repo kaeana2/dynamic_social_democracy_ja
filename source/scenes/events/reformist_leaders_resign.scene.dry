@@ -1,6 +1,6 @@
-title: Reformist leaders resign
+title: 改革派指導者の辞任
 new-page: true 
-subtitle: Reformist disagreements with our policies have grown too severe.
+subtitle: 改革派と我々の政策との対立は、もはや修復できないほど深まった。
 tags: event
 view-if: reformist_dissent >= 60
 on-arrival: {!
@@ -48,6 +48,6 @@ if (Q.n_advisors < Q.n_advisors_start) Q.shuffle_leadership_timer = 0;
 !}
 max-visits: 1
 
-= Reformist leaders resign
+= 改革派指導者が辞任
 
-Our policy choices have greatly offended the reformist faction. Many of our most experienced leaders have resigned. 
+我々の政策選択は改革派を激怒させた。最も経験豊富な指導者の多くが辞任した。

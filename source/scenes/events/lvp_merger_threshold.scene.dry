@@ -1,30 +1,30 @@
-title: <span style="color: #C0A054;">**DVP**</span> & <span style="color: #D3C24D;">**[+ ddp_name +]**</span> Congress
-subtitle: The electoral threshold threatens to push both parties out of parliament.
+title: <span style="color: #C0A054;">**DVP**</span>・<span style="color: #D3C24D;">**[+ ddp_name +]**</span>党大会
+subtitle: 阻止条項により、両党とも議席を失うおそれがある。
 view-if: electoral_threshold >= 5 and not lvp_formed and dvp_exist
 max-visits: 1
 tags: event
 face-image: img/dvp.jpg
 new-page: true
 
-= <span style="color: #C0A054;">**DVP**</span> Congress
+= <span style="color: #C0A054;">**DVP**</span>党大会
 
-With the passage of a 5% electoral threshold, the two liberal parties now face the real risk of being shut out of parliament entirely—even with the influx of defectors from various bourgeois factions boosting their numbers. While current polling may look favorable, a single poor electoral cycle could wipe out their representation altogether.
+得票率5％の阻止条項が可決され、自由主義の両党は議会から完全に締め出される現実的な危険に直面している。ブルジョワ諸派からの離党者を受け入れて勢力を増しても、この危険は消えない。現在の世論調査は好調に見えるかもしれないが、一度でも選挙で振るわなければ、全議席を失いかねない。
 
-As a result, the two parties are being forced into cooperation, whether they like it or not. A new "Liberal Association" has already made significant strides toward unification, establishing a national framework and drafting a middle-class-oriented policy platform that commands broad support across both parties. 
+そのため両党は、好むと好まざるとにかかわらず、協力を余儀なくされている。新たな「自由主義協会」はすでに統合に向けて大きく前進し、全国組織の枠組みを整え、両党から幅広い支持を得る中間層重視の政策綱領を起草した。
 
-Industrial backers have also thrown their weight behind the project, reasoning that a party compromised by the <span style="color: #D3C24D;">[+ ddp_name +]</span>'s leftists is still preferable to no representation at all.
+産業界の後援者も、この構想を支持するに至った。<span style="color: #D3C24D;">[+ ddp_name +]</span>左派との妥協を強いられる政党であっても、議会での代表を完全に失うよりはましだという判断である。
 
-- @dvp_success: The <span style="color: #FFCC00;">**LVP**</span> is formed.
+- @dvp_success: <span style="color: #FFCC00;">**LVP**</span>が結成される。
 
 @dvp_success
 on-arrival: lvp_trigger_2_time = time; threshold_lvp = 1
 face-image: img/weimar_coalition_3.jpg
 
-The momentum towards liberal unity has proven too great for the holdouts within the <span style="color: #C0A054;">**DVP**</span>'s right wing to stand against. The party has officially voted to approve the merger with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, although the latter has yet to reach a final decision.
+自由主義勢力の統合に向けた機運は、<span style="color: #C0A054;">**DVP**</span>右派の抵抗派にも抑えきれないほど強まった。党は採決により、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>との合併を正式に承認した。ただし、相手側はまだ最終決定に至っていない。
 
-The aftermath of the congress has significantly diminished the influence of the <span style="color: #C0A054;">**DVP**</span>'s right wing, and will shape the ideology of the <span style="color: #FFCC00;">Liberal People's Party</span> if it is to form.
+この党大会を経て<span style="color: #C0A054;">**DVP**</span>右派の影響力は大きく低下した。この結果は、<span style="color: #FFCC00;">自由人民党</span>が結成された場合、その理念にも影響を及ぼすだろう。
 
-- @lvp_congress: First <span style="color: #FFCC00;">**LVP**</span> Congress
+- @lvp_congress: <span style="color: #FFCC00;">**LVP**</span>第1回党大会
 
 @lvp_congress
 go-to: lvp_party_congress_1930_0

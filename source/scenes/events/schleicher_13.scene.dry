@@ -1,22 +1,22 @@
-title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> joins the <span style="color: #BFC8CC;">**DNEF**</span>
-subtitle: The miniscule party can no longer survive on its own.
+title: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>が<span style="color: #BFC8CC;">**DNEF**</span>に参加
+subtitle: この小政党は、もはや単独では生き残れない。
 view-if: chancellor = "Schleicher" and schleicher_time >= 35 and republicans_schleicher >= 12 and not lvp_formed and ddp_r < 2 and dnef_formed
 new-page: true
 priority: 1
 tags: event
 max-visits: 1
 
-= <span style="color: #D3C24D;">**[+ ddp_name +]**</span> joins the <span style="color: #BFC8CC;">**DNEF**</span>
+= <span style="color: #D3C24D;">**[+ ddp_name +]**</span>が<span style="color: #BFC8CC;">**DNEF**</span>に参加
 
-With the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> effectively dead as a political force, many former politicians—especially on its right wing—have long advocated for its self-dissolution, believing only then could a new, unified force rise from its ashes.
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span>が政治勢力として事実上死に体となる中、かつての政治家の多く、特に右派は、以前から自主解散を主張してきた。そうして初めて、灰の中から新たな統一勢力が生まれると信じている。
 
-That belief has only strengthened with the rise of the <span style="color: #BFC8CC;">**DNEF**</span>. Now, more party members are calling for a formal merger into Schleicher's organization. His appeals to national unity have struck a psychological blow to the rank and file of a party that always championed the welfare and unity of the nation as a whole above all.
+<span style="color: #BFC8CC;">**DNEF**</span>の台頭により、この確信は一層強まった。今やシュライヒャーの組織への正式な合流を求める党員が増えている。国民全体の福祉と統合を何より重んじてきた党の一般党員にとって、彼の国民統合の訴えは心理的な打撃となった。
 
-Old-line <span style="color: #D3C24D;">democrats</span> like Dietrich and Heuss remain the most resistant, committed <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span> to the core. But figures like Lemmer and the party’s left wing are proving more susceptible to Schleicher’s calls for national unity.
+ディートリヒやホイスら古参の<span style="color: #D3C24D;">民主党員</span>は、根っからの<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>であり、最も強く抵抗している。しかしレマーらの人物や党左派は、シュライヒャーの国民統合の訴えに、より心を動かされている。
 
-Nonetheless, a vote is conducted, and the opposition wins.
+それでも採決は行われ、反対派が勝利した。
 
-- @schleicher_2: The <span style="color: #BFC8CC;">German National Unity Front</span> welcomes its new member.
+- @schleicher_2: <span style="color: #BFC8CC;">ドイツ国民統一戦線</span>が新たな参加者を迎える。
 
 @schleicher_2
 on-arrival: {!
@@ -36,9 +36,9 @@ Q.old_ddp_name = Q.ddp_name;
 Q.ddp_name = "DStP";
 !}
 
-Schleicher sees keeping the <span style="color: #D3C24D;">**[+ old_ddp_name +]**</span> as a separate but closely tied <i>Blocpartei</i> as more effective in attracting voters, and for now, maintains their nominal independence[? if not dstp_formed:, though under a new name to shed the old and ironic "Democratic" label?]. [+ ddp_leader +] has since been installed as leader of the now <i>Blocpartei</i>-aligned <span style="color: #D3C24D;">[+ ddp_name +]</span>.
+シュライヒャーは、<span style="color: #D3C24D;">**[+ old_ddp_name +]**</span>を別組織のまま密接に結びついた<i>衛星政党</i>として残す方が、票を集めるうえで有効だと考えている。そのため、当面は名目上の独立を維持する[? if not dstp_formed:が、もはや皮肉にしかならない古い「民主」の看板を捨てるため改称する?]。今や<i>衛星政党</i>となった<span style="color: #D3C24D;">[+ ddp_name +]</span>の党首には、[+ ddp_leader +]が据えられた。
 
-Current composition of the <span style="color: #BFC8CC;">German National Unity Front</span>:
+<span style="color: #BFC8CC;">ドイツ国民統一戦線</span>の現在の構成：
 
 [? if dnef_formed: - <span style="color: #BFC8CC;">**DNEF**</span> ?]
 
@@ -46,13 +46,13 @@ Current composition of the <span style="color: #BFC8CC;">German National Unity F
 
 [? if lvp_dnef: - <span style="color: #FFCC00;">**LVP**</span> ?]
 
-[? if z_dnef: - <span style="color: #000000;">Center Party</span> ?]
+[? if z_dnef: - <span style="color: #000000;">中央党</span> ?]
 
 [? if z_dnef: - <span style="color: #A2D8E0;">**BVP**</span> ?]
 
 [? if dvp_dnef: - <span style="color: #C0A054;">**DVP**</span> ?]
 
-[? if other_dnef: - **Others** ?]
+[? if other_dnef: - **その他** ?]
 
 [? if kvp_dnef: - <span style="color: #0087DC;">**KVP**</span> ?]
 

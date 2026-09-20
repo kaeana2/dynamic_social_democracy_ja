@@ -1,5 +1,5 @@
-title: An Expansion of Public Works
-subtitle: Additional funding is granted.
+title: 公共事業の拡大
+subtitle: 追加資金が認められる。
 view-if: chancellor == "Schleicher" and not dsu_in_gov and not dsu_was_gov and schleicher_post_time >= 4
 max-visits: 1
 new-page: true
@@ -18,19 +18,19 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Expansion of Public Works
+= 公共事業の拡大
 
-Adam Stegerwald at the Labor Ministry, working closely with Günther Gereke, has been formulating a massive billion-mark public works program to expand on Schleicher’s previously modest efforts. They recognize that large-scale public projects and state spending are Germany’s path out of the slump—and Schleicher is eager to approve more to propel the nation back to great power status.
+労働相アダム・シュテーガーヴァルトはギュンター・ゲーレケと緊密に協力し、シュライヒャーの従来の小規模な施策を拡張する10億マルク規模の公共事業計画を策定してきた。大規模公共事業と国家支出こそドイツが不況を脱する道だと認識しており、シュライヒャーも国家を再び大国の地位へ押し上げるため追加支出を承認することに熱心である。
 
-However, the chancellor has been persistently pressing his ministers to focus on rearmament and infrastructure that would support it—such as the construction of the Autobahn, a new nationwide highway system, and state funding for armament companies. To Schleicher’s frustration, however, most of the funds will still be directed toward civilian development.
+しかし首相は、再軍備とそれを支える社会基盤へ重点を置くよう閣僚へ執拗に求めてきた。全国的な新道路網アウトバーンの建設や、軍需企業への国家融資などである。だがシュライヒャーの苛立ちをよそに、資金の大半は依然として民生開発へ向けられる。
 
-Nonetheless, the economic recovery continues.
+それでも経済回復は続いている。
 
 - @reichsbank
 
 @reichsbank
-title: The cabinet still requires the Reichsbank’s approval, however.
-subtitle: Reichsbank President - [? if luther_reichsbank: Hans Luther?][? if not luther_reichsbank: Friedrich Dreyse?]
+title: ただし、内閣にはなおライヒスバンクの承認が必要である。
+subtitle: ライヒスバンク総裁――[? if luther_reichsbank: ハンス・ルター?][? if not luther_reichsbank: フリードリヒ・ドライゼ?]
 go-to: reichsbank_luther if luther_reichsbank; reichsbank_dreyse if not luther_reichsbank
 
 @reichsbank_luther
@@ -47,9 +47,9 @@ Q.mefo_bills_alt = 1;
 !}
 face-image: img/portraits/luther.jpg
 
-The Reichsbank, long known for its strict fiscal conservatism and obsessive anti-inflation stance, had already slashed Schleicher's initial public works decree by 15%. So, it was no surprise when news of even greater government spending met with their disapproval.
+厳格な財政保守主義と徹底した反インフレ姿勢で知られるライヒスバンクは、すでにシュライヒャーの最初の公共事業令を15％削減していた。さらなる政府支出の知らせが不承認に遭ったことに驚きはない。
 
-However, the endorsement of the campaign by Hjalmar Schacht—a respected banker and recently retired Reichsbank President credited with ending hyperinflation—has done much to calm the business community. Under government pressure, the Reichsbank is ultimately coerced into backing the plan, though not without forcing another 20% cut in funding.
+しかし、ハイパーインフレーション終息の功績を持つ高名な銀行家で前ライヒスバンク総裁のヒャルマル・シャハトが計画を支持したことで、実業界は大いに落ち着いた。政府の圧力を受け、ライヒスバンクは最終的に計画支持を強いられたが、さらに20％の予算削減を押しつけた。
 
 @reichsbank_dreyse
 on-arrival: {!
@@ -65,6 +65,6 @@ Q.mefo_bills_alt = 1;
 !}
 face-image: img/portraits/dreyse.jpg
 
-The Reichsbank, long known for its strict fiscal conservatism and obsessive anti-inflation stance, had already slashed Schleicher's initial public works decree by 15%. So, it was no surprise when news of even greater government spending met with their disapproval.
+厳格な財政保守主義と徹底した反インフレ姿勢で知られるライヒスバンクは、すでにシュライヒャーの最初の公共事業令を15％削減していた。さらなる政府支出の知らせが不承認に遭ったことに驚きはない。
 
-However, the endorsement of the campaign by Hjalmar Schacht—a respected banker and recently retired Reichsbank President credited with ending hyperinflation—has done much to calm the business community. Under government pressure, the Reichsbank is ultimately coerced into backing the plan, though not without forcing another 20% cut in funding.
+しかし、ハイパーインフレーション終息の功績を持つ高名な銀行家で前ライヒスバンク総裁のヒャルマル・シャハトが計画を支持したことで、実業界は大いに落ち着いた。政府の圧力を受け、ライヒスバンクは最終的に計画支持を強いられたが、さらに20％の予算削減を押しつけた。

@@ -1,4 +1,4 @@
-title: Rudolf Hilferding
+title: ルドルフ・ヒルファディング
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/HilferdingRudolf.jpg
@@ -6,46 +6,46 @@ view-if: hilferding_advisor = 1
 new-page: true
 #face-image: img/portraits/HilferdingRudolf.jpg
 
-= Rudolf Hilferding
+= ルドルフ・ヒルファディング
 
-Hilferding is an economist and a disciple of Karl Kautsky. Originating from Vienna, Austria, he trained as a medical doctor, but later became involved in Marxist economics as a discipline. He has been the lead ideologist of our party since the Heidelberg Program of 1925.
+ヒルファディングは経済学者で、カール・カウツキーの門弟である。オーストリアのウィーン出身で医師の教育を受けたが、のちにマルクス経済学の研究に転じた。1925年のハイデルベルク綱領以来、党の主要な理論家を務めている。
 
 - @against_right_and_left
 - @toleration
 - @finance_ministry_
 - @economic_democracy_
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @against_right_and_left
-title: Against Right and Left
-subtitle: As a Centrist, Hilferding seeks to steer a course between the party's factions.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 左右両派に抗して
+subtitle: 中央派のヒルファディングは党内諸派の中間を進もうとする。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 5; advisor_action_time = time; center_strength += 10; left_strength -= 5; labor_strength -= 5; neorevisionist_strength -= 5; center_dissent -= 10
 
-We have reduced the strength of the dissident factions in the party.
+党内の反対派閥の勢力を削いだ。
 
 @toleration
-title: Defending Toleration
-subtitle: Hilferding supports cooperation with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The <span style="color: #c00000;">SPD</span> is not in toleration. ?]
+title: 閣外協力を擁護する
+subtitle: ヒルファディングはブルジョワ諸党との協力を支持する。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_toleration: <span style="color: #c00000;">SPD</span>は閣外協力を行っていない。 ?]
 choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 10; neorevisionist_dissent -= 8; center_dissent -= 5
 
-We have reduced dissent among the anti-toleration factions.
+閣外協力に反対する派閥の不満を抑えた。
 
 @finance_ministry_
-title: Fiscal Policy
-subtitle: As Finance Minister, Hilferding can enact tax policies.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_in_government = 0 : <span style="color: #c00000;">SPD</span> not in government: ?] [? if finance_minister_party != "SPD" : The <span style="color: #c00000;">SPD</span> does not control the finance ministry. ?]
+title: 財政政策
+subtitle: ヒルファディングは財相として租税政策を実施できる。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?] [? if spd_in_government = 0 : <span style="color: #c00000;">SPD</span>は政権に参加していない。 ?] [? if finance_minister_party != "SPD" : <span style="color: #c00000;">SPD</span>は財務省を掌握していない。 ?]
 choose-if: advisor_action_timer == 0 and spd_in_government == 1 and finance_minister_party == "SPD"
 on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
 go-to: fiscal_policy
 
 @economic_democracy_
-title: Economic Democracy
-subtitle: Enact policies to build a more democratic economy.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_in_government = 0 : <span style="color: #c00000;">SPD</span> not in government: ?] [? if labor_minister_party != "SPD" or (finance_minister_party != "SPD" and economic_minister_party != "SPD") : We do not have the necessary government ministers. ?] [? if cvp_economy_accepted : Our coalition agreement stipulates against socialization. ?]
+title: 経済民主主義
+subtitle: より民主的な経済を築くための政策を実施する。
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?] [? if spd_in_government = 0 : <span style="color: #c00000;">SPD</span>は政権に参加していない。 ?] [? if labor_minister_party != "SPD" or (finance_minister_party != "SPD" and economic_minister_party != "SPD") : 必要な閣僚ポストを掌握していない。 ?] [? if cvp_economy_accepted : 連立協定により社会化は禁止されている。 ?]
 choose-if: advisor_action_timer == 0 and spd_in_government == 1 and (economic_minister_party == "SPD" or finance_minister_party == "SPD") and (labor_minister_party == "SPD")
 on-arrival: advisor_action_timer = 6; economic_democracy_timer -= 10; last_advisor_action = 1
 go-to: economic_democracy

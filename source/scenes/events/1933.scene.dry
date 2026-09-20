@@ -1,5 +1,5 @@
-title: 1933
-subtitle: A new year 
+title: 1933年
+subtitle: 新年
 on-arrival: {!
 if (Q.works_program && Q.works_program >= 2) {
     Q.unemployed -= 1;
@@ -11,5 +11,4 @@ view-if: year = 1933 and month = 1 and not rubicon
 priority: 2
 max-visits: 1
 
-A new year begins. [? if works_program = 0 : There is finally some good news in Germany. The economic depression has begun the early stages of global recovery. ?][? if works_program >= 1 and unemployed >= 20 : We have begun to launch a public works program, but unemployment is still stubbornly high. The people are beginning to finally have optimism, however, with the global recovery beginning. ?][? if works_program >= 1 and unemployed < 20 : We have begun to launch a public works program, and unemployment is finally starting to fall. The people are beginning to finally have optimism. The depression has begun the early stages of recovery across the world as well. ?]
-
+新たな年が始まる。[? if works_program = 0 : ようやくドイツにも明るい知らせが届いた。世界恐慌は回復の初期段階に入り始めている。?][? if works_program >= 1 and unemployed >= 20 : 公共事業計画を開始したものの、失業率はなお頑強に高止まりしている。しかし世界経済が回復し始め、国民の間にもようやく希望が芽生えつつある。?][? if works_program >= 1 and unemployed < 20 : 公共事業計画を開始し、失業率はようやく低下し始めた。国民の間にも希望が芽生えつつある。世界各地でも恐慌は回復の初期段階に入った。?]

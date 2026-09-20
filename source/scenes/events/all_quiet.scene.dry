@@ -1,5 +1,5 @@
-title: All Quiet on the Western Front
-subtitle: Censorship and violence over a movie...
+title: 西部戦線異状なし
+subtitle: 映画をめぐる検閲と暴力……。
 view-if: year = 1930 and month = 12 and spd_prussia and not all_quiet_seen
 on-arrival: all_quiet_seen = 1
 max-visits: 1
@@ -7,40 +7,39 @@ tags: event
 new-page: true
 face-image: img/All_Quiet.jpg
 
-= All Quiet on the Western Front
+= 西部戦線異状なし
 
-The American film *All Quiet on the Western Front*, based on the German novel *Im Westen nichts Neues* by Erich Maria Remarque, is a film about the experiences of German soldiers in the Great War, and how they gradually became disillusioned with the ideas of patriotism and nationalism. 
+アメリカ映画『西部戦線異状なし』は、エーリヒ・マリア・レマルクのドイツ小説『西部戦線異状なし』を原作とし、世界大戦に従軍したドイツ兵の体験と、愛国主義や民族主義への幻想を次第に失っていく姿を描いている。
 
-As an anti-war film, it is the target of major protest by <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> actors, especially the <span style="color: #7A3C00;">Nazis</span> and the <span style="color: #3E88B3;">**Stahlhelm**</span>. They are calling for the government to ban the film. If we do not ban it, the <span style="color: #7A3C00;">**SA**</span> threatens to violently stop the film from being shown or watched.
+反戦映画である本作は、<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>勢力、とりわけ<span style="color: #7A3C00;">ナチ</span>と<span style="color: #3E88B3;">**鉄兜団**</span>による激しい抗議の標的となった。彼らは政府に上映禁止を要求し、禁止しなければ<span style="color: #7A3C00;">**SA**</span>が暴力によって上映と鑑賞を阻止すると脅している。
 
-- @ban: Ban the film, to prevent <span style="color: #7A3C00;">Nazi</span> violence.
-- @allow: Allow the film to be shown.
-- @allow_protect: Allow the film to be shown, and use the Prussian police to prevent <span style="color: #7A3C00;">Nazi</span> disruptions.
-- @everyone: In fact, everyone needs to learn the lessons of this film. Give free tickets to students and government employees.
+- @ban: 映画を禁止し、<span style="color: #7A3C00;">ナチ</span>の暴力を防ぐ。
+- @allow: 映画の上映を許可する。
+- @allow_protect: 映画の上映を許可し、プロイセンの警察を使って<span style="color: #7A3C00;">ナチ</span>の混乱を防ぐ。
+- @everyone: 実際、誰もがこの映画から教訓を学ぶ必要がある。学生と政府職員には無料チケットを配る。
 
 @ban
 on-arrival: old_middle_nsdap += 5; new_middle_nsdap += 3; workers_nsdap += 2; unemployed_nsdap += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
 
-When we ban the film, the <span style="color: #7A3C00;">Nazis</span> immediately celebrate it as a major victory; they claim that even the red Marxists agree with them! It is a major boost to their morale.
+我々が映画を禁止すると、<span style="color: #7A3C00;">ナチ</span>は直ちに大勝利として祝った。「赤いマルクス主義者すら我々に同意した」と宣伝し、士気を大いに高めている。
 
 
 @allow
 on-arrival: nationalism += 3; old_middle_nsdap += 5; new_middle_nsdap += 3; workers_nsdap += 1; unemployed_nsdap += 1; sa_strength += 15; pro_republic -= 3; strife += 1
 
-While we allow the film, showings are marred by violence. Showings of the film eventually stop, and the <span style="color: #7A3C00;">Nazis</span> claim victory.
+上映は認められたものの、各地で暴力事件が相次いだ。やがて上映は中止され、<span style="color: #7A3C00;">ナチ</span>が勝利を宣言する。
 
 
 @allow_protect
 choose-if: prussian_police_loyalty >= 0.65 and ((prussia_leader = "Braun" or prussia_leader = "Rosenfeld") or z_relation >= 65)
-unavailable-subtitle: [? if prussian_police_loyalty < 0.65:The police are not willing to protect the film. ?] [? if not prussia_leader = "Braun" and not prussia_leader = "Rosenfeld" and z_relation < 65: Our coalition partners restrain us from policing actions. ?]
+unavailable-subtitle: [? if prussian_police_loyalty < 0.65: 警察は上映を守ろうとしない。 ?] [? if not prussia_leader = "Braun" and not prussia_leader = "Rosenfeld" and z_relation < 65: 連立相手が警察の出動を認めない。 ?]
 on-arrival: nationalism -= 4; pro_republic += 4*(1-dissent); strife += 1
 
-Under the protection of the police, the people are allowed to watch the film in peace. <span style="color: #7A3C00;">Nazi</span> disturbances are kept to a minimum.
+警察の保護のもと、人々は平和に映画を鑑賞できる。<span style="color: #7A3C00;">ナチ</span>の騒乱は最小限に抑えられている。
 
 @everyone
 choose-if: prussian_police_loyalty >= 0.75 and prussia_leader = "Braun" or prussia_leader = "Rosenfeld"
-unavailable-subtitle: [? if prussian_police_loyalty < 0.75: The police are unable to guarantee the safety of all the attendees. ?] [? if not prussia_leader = "Braun" and not prussia_leader = "Rosenfeld": Our coalition partners restrain us from this action. ?]
+unavailable-subtitle: [? if prussian_police_loyalty < 0.75: 警察は全出席者の安全を保証できない。 ?] [? if not prussia_leader = "Braun" and not prussia_leader = "Rosenfeld": 我々の連立パートナーがこの行動を抑制している。 ?]
 on-arrival: nationalism -= 5; pro_republic += 5*(1-dissent); workers_nsdap -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 3
 
-Under police protection, crowds throng the film's showings, as <span style="color: #7A3C00;">Nazis</span> protest outside. The reception is mixed, but a new national conversation develops, reexamining the right-wing histories of the war. Quietly, many minds are changed, or at least affected in subtle ways.
-
+警察の警護下で上映会には群衆が詰めかけ、外では<span style="color: #7A3C00;">ナチ</span>が抗議している。受け止め方はさまざまだが、右翼的な戦争観を問い直す全国的な議論が始まった。人々の考えは静かに変わり、少なくとも何らかの影響を受けている。

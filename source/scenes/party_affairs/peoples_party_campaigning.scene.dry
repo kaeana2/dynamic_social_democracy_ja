@@ -1,4 +1,4 @@
-title: Campaigning (People's Party)
+title: 選挙運動（人民政党）
 
 # basically, we can campaign as part of the people's party...
 
@@ -10,41 +10,40 @@ title: Campaigning (People's Party)
 - @campaign_catholics
 
 @campaign_workers
-title: Campaign among the workers, to assuage their doubts about our changes.
+title: 党の変化に対する疑念を和らげるため、労働者に働きかける。
 on-arrival: workers_spd += 5*(1-dissent);
 
-The workers are still a key part of our constituency, and we must not alienate them in the transformation of our party.
+労働者は今なお重要な支持基盤であり、党の変革によって彼らを遠ざけてはならない。
 
 @campaign_middle
-title: Campaign among the middle classes.
+title: 中間層に働きかける。
 on-arrival: old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent)
 
-As a people's party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
+人民政党として中間層の被用者と小規模事業者を代表し、彼らは党の訴えを受け入れ始めている。
 
 @campaign_rural
-title: Campaign in rural areas.
+title: 農村部で運動する。
 choose-if: rural_policy > 0
-unavailable-subtitle: We have not enacted any rural policies yet.
+unavailable-subtitle: 農村政策をまだ実施していない。
 on-arrival: rural_spd += 6*(1-dissent)
 
-As a people's party, we represent farmers and rural workers as well, and they are becoming receptive to our messages.
+人民政党として農民と農村労働者も代表し、彼らは党の訴えを受け入れ始めている。
 
 @campaign_unemployed
-title: Campaign among the unemployed.
+title: 失業者に働きかける。
 on-arrival: unemployed_spd += 5*(1-dissent);
 
-As a people's party, the urban poor are still a key part of our constituency.
+人民政党となっても、都市貧困層は重要な支持基盤である。
 
 @campaign_women
-title: Campaign among women of all classes.
+title: あらゆる階級の女性に働きかける。
 on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent);
 
-As a people's party, we represent women of all classes.
+人民政党として、あらゆる階級の女性を代表する。
 
 @campaign_catholics
-title: Campaign among political Catholics.
+title: 政治的カトリックに働きかける。
 on-arrival: catholics_spd += 5*(1-dissent);
 
-Catholics have historically been tied to the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], but there is no reason why our party cannot appeal to them. The Prussian Concordat in particular is a sign of our friendship with Catholicism.
-
+カトリック教徒は歴史的に[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と結びついてきたが、わが党が支持を訴えられない理由はない。とりわけプロイセン政教条約は、カトリックとの友好の証である。
 

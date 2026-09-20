@@ -1,6 +1,6 @@
-title: The Weltbühne Trial
+title: ヴェルトビューネ裁判
 new-page: true
-subtitle: A magazine is tried for revealing military secrets...
+subtitle: 軍事機密を漏らしたとして雑誌が訴追される...
 view-if: year = 1929 and (month = 8 or month = 9) and judicial_reform < 4
 max-visits: 1
 on-arrival: weltbuhne_seen = 1
@@ -11,45 +11,45 @@ tags: event
 # If in a grand coalition then the SPD can pressure the coalition to cancel the trial at the expense of dissent.
 # If the trial goes ahead, then reparations negotiation process gets set back by a few steps and relations with the west suffers.
 
-= The Weltbühne Trial
+= ヴェルトビューネ裁判
 
-The <span style="color: #c00000;">left-wing</span> news and literary magazine Weltbühne has been targeted by the national authorities for allegedly revealing state secrets. The magazine published articles alleging a secret rearmament program by the Reichswehr, in contravention of the Treaty of Versailles. The military authorities obviously do not want this information to be known. It does not help that the magazine's editor, Carl von Ossietzky, is a well-known pacifist.
+<span style="color: #c00000;">左翼</span>系の時事・文芸誌『ヴェルトビューネ』は、国家機密を漏洩したとして当局の標的となっている。同誌は、国防軍がヴェルサイユ条約に違反して秘密再軍備を進めていると告発する記事を掲載した。軍当局がこの事実の公表を嫌うのは明らかである。さらに、編集長カール・フォン・オシエツキーが著名な平和主義者であることも、当局の敵意を強めている。
 
-[? if spd_in_government and justice_minister_party = "SPD" : With our control of the Justice Ministry, we could simply drop the case. ?]
-[? if spd_in_government and justice_minister_party != "SPD" : The Justice Ministry is seeking to persecute the editor and journalist of Weltbühne. We can try to persuade our coalition partners to drop the case, but they will likely resist. ?]
+[? if spd_in_government and justice_minister_party = "SPD" : 法務省の掌握により、我々は単に事件を打ち切ることができた。?]
+[? if spd_in_government and justice_minister_party != "SPD" : 法務省は『ヴェルトビューネ』の編集者とジャーナリストを迫害しようとしている。我々は連立パートナーたちに訴えを撤回するよう説得できるが、彼らは抵抗するだろう。?]
 
-- @drop_case: Drop the case.
-- @let_persecute: Let justice take its course.
-- @pressure_drop: Pressure our coalition partners to drop the case.
-- @nothing: There is nothing we can do.
+- @drop_case: 訴訟を取り下げる。
+- @let_persecute: 正義が裁きを下すように。
+- @pressure_drop: 連立パートナーに訴訟を取り下げるよう圧力をかける。
+- @nothing: 何もできない。
 
 @drop_case
 view-if: spd_in_government
 choose-if: spd_in_government and justice_minister_party = "SPD"
-unavailable-subtitle: [? if not spd_in_government : <span style="color: #c00000;">SPD</span> not in government. ?] [? if spd_in_government and justice_minister_party != "SPD": The <span style="color: #c00000;">SPD</span> does not control the Justice Ministry. ?]
+unavailable-subtitle: [? if not spd_in_government : <span style="color: #c00000;">SPD</span>は政権に含まれない。 ?] [? if spd_in_government and justice_minister_party != "SPD": <span style="color: #c00000;">SPD</span>は司法省を掌握していない。 ?]
 on-arrival: weltbuhne_dropped = 1; dvp_relation -= 4; nationalism -= 3*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); reichswehr_loyalty -= 0.05; west_relation += 1; east_relation += 1; coup_progress += 1; reparations_negotiation += 1; pacifism += 1; ddp_relation += 3; ddp_left += 1; lvp_relation -= 2; hindenburg_angry += 5
 
-The Justice Ministry has dropped all persecution of Carl von Ossietzky and Walter Kreiser, the journalist responsible for the offending publication. In fact, some say that the Weltbühne journalists should be feted as heroes.
+司法省は、問題の記事に責任を負う記者カール・フォン・オシエツキーとヴァルター・クライザーへの訴追をすべて停止した。『ヴェルトビューネ』の記者たちは英雄として称賛されるべきだとさえ唱える者もいる。
 
-The Western powers and all countries that feel threatened by German militarism are pleased that we have turned a chapter in our history.
-[? if (in_grand_coalition or (in_weimar_coalition and lvp_formed)): On the other hand, the right-wing members of our governing coalition disapprove of this action, as does the Reichswehr. ?][? if not in_grand_coalition : On the other hand, the Reichswehr disapproves of dropping the case. ?]
+西側諸国およびドイツの軍国主義に脅威を感じる全ての国が、我々が歴史の一章を終えたことを喜んでいる。
+[? if (in_grand_coalition or (in_weimar_coalition and lvp_formed)): 一方で、我々の与党連合の右派メンバーは、国防軍も同様に、この行動に反対する。?][? if not in_grand_coalition : 一方で、国防軍は事件を降格させることに反対する。?]
 
 @let_persecute
 view-if: spd_in_government
 on-arrival: weltbuhne_dropped = 0; dvp_relation += 4; reichswehr_loyalty += 0.05; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4; left_dissent += 5; lvp_relation += 2; hindenburg_angry -= 5
 
-The case progresses slowly, given the military secrets involved, and there will be no determination made for a while. The Reichswehr is pleased of our loyalty. However, the affair has made the Western powers suspicious of our resurgent militarism, as well as displeasing the left wing of the party.
+軍事機密が関わるため、事態の進展は遅く、しばらく決定は出ないだろう。国防軍は我々の忠誠心を喜んでいる。しかし、この件は西側諸国に我々の再燃する軍国主義への疑念を抱かせ、党の左派を不快にさせている。
 
 @pressure_drop
 view-if: spd_in_government and justice_minister_party != "SPD"
 on-arrival: weltbuhne_dropped = 1; dvp_relation -= 5; lvp_relation -= 3; nationalism += 3*(1-dissent); coalition_dissent += 1; coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); reichswehr_loyalty -= 0.05; coup_progress += 1; west_relation += 1; east_relation += 1; reparations_negotiation += 1; ddp_left += 1; hindenburg_angry += 5
 
-We have pressured the Justice Ministry to drop the case against the Weltbühne, raising tensions with our coalition.
+司法省にヴェルトビューネに対する訴訟を取り下げるよう圧力をかけ、連立内の緊張を高めた。
 
-The Western powers and all countries that feel threatened by German militarism are pleased that we have turned a chapter in our history. On the other hand, the Reichswehr disapproves of dropping the case.
+西側諸国とドイツの軍国主義に脅威を感じる全ての国は、我々が歴史の一章を終えたことに満足している。一方で、国防軍はこの件の棚上げに反対している。
 
 @nothing
 view-if: not spd_in_government
 on-arrival: weltbuhne_dropped = 0; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4
 
-The case progresses slowly, given the military secrets involved, and there will be no determination made for a while. However, the affair has made the Western powers suspicious of our resurgent militarism.
+軍事機密が関わるため、事態の進展は遅く、しばらくは決定は出ないだろう。しかし、この件は西側諸国に我々の再燃する軍国主義への疑念を抱かせた。

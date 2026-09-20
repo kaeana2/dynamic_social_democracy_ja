@@ -1,4 +1,4 @@
-title: Neorevisionism: a new idea
+title: 新修正主義――新たな理念
 new-page: true
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
@@ -8,25 +8,25 @@ tags: party_affairs
 frequency: 400
 max-visits: 1
 
-= Neorevisionism: A New Idea
+= 新修正主義――新たな理念
 
-Several young <span style="color: #f0456a;">socialists</span>, led by Carlo Mierendorff, are calling for a "new revisionism" in response to the <span style="color: #7A3C00;">Nazi</span> threat. This political tendency calls for a mass movement in favor of democracy in order to counter the <span style="color: #7A3C00;">Nazi</span> and <span style="color: #700000;">**Communist**</span> movements, and to update our rhetoric and imagery to appeal to emotion and not just reason.
+カルロ・ミーレンドルフを中心とする若い<span style="color: #f0456a;">社会主義者</span>たちは、<span style="color: #7A3C00;">ナチ</span>の脅威に対抗する「新修正主義」を提唱している。この潮流は、<span style="color: #7A3C00;">ナチ</span>と<span style="color: #700000;">**共産主義**</span>運動に対抗するため、民主主義を擁護する大衆運動を求める。また理性だけでなく感情にも訴えるよう、党の言辞と図像を刷新しようとしている。
 
 #- @shuffle_leadership: It's time to change our advisors to take into account new ideas.
-- @support_neo: Support the neorevisionist movement.
-- @no_new_ideas: We don't need new ideas.
+- @support_neo: 新修正主義運動を支持する。
+- @no_new_ideas: 新たな理念は必要ない。
 - @easy_discard
 
 @support_neo
 on-arrival: neorevisionist_strength += 10; nazi_urgency += 1; neorevisionism = 1; peoples_party_support += 1
 
-We support the new leaders, and start using new-style propaganda techniques in our campaigns. The results are uncertain so far...
+新たな指導者たちを支持し、選挙運動に新様式の宣伝技法を導入した。今のところ成果は定かでない……。
 
-- @shuffle_leadership: We should use this opportunity to change the party's leadership.
-- @root: Continue...
+- @shuffle_leadership: この機会に党指導部を交代させるべきだ。
+- @root: 続ける……
 
 
 @no_new_ideas
 on-arrival: neorevisionist_strength -= 5; center_strength += 5; neorevisionism = -1
 
-We do not need these new ideas; they seem to imitate too closely those of the <span style="color: #7A3C00;">Nazis</span> and <span style="color: #700000;">**Communists**</span>.
+このような新理念は必要ない。<span style="color: #7A3C00;">ナチ</span>や<span style="color: #700000;">**共産主義者**</span>の手法をあまりにも露骨に模倣している。

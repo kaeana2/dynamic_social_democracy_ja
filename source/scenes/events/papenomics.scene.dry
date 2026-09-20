@@ -1,5 +1,5 @@
-title: Papen's Economic Plan
-subtitle: Tax cuts for the rich
+title: パーペンの経済計画
+subtitle: 富裕層への減税
 view-if: papenomics_timer = 0 and chancellor = "Papen" and unemployed > 20
 on-arrival: old_middle_dnvp += 5; new_middle_dnvp += 3; rural_dnvp += 3; upper_tax_rates -= 1; budget -= 1; unemployed -= 2; economic_growth += 0.6; inflation += 1.2 if inflation < 0; budget -= 1
 max-visits: 1
@@ -7,8 +7,8 @@ face-image: img/portraits/PapenFranz.jpg
 #tags: event
 new-page: true
 
-= Papen's Economic Plan
+= パーペンの経済計画
 
-Chancellor Franz von Papen and his "Cabinet of Barons" are pushing forward an economic plan consisting of tax cuts for the very wealthy. This plan has the potential to lead to more economic growth, especially in comparison to Brüning's austerity program, but it also enriches the upper class and does nothing directly for the needy workers and unemployed.
+フランツ・フォン・パーペン首相とその「男爵内閣」は、極めて裕福な人々への減税を柱とする経済計画を推進している。この計画は、特にブリューニングの緊縮政策と比べれば経済成長を促す可能性がある。しかし同時に上流階級をさらに富ませ、困窮する労働者や失業者には直接何の恩恵も与えない。
 
-- @root: The policy passes due to the emergency government; there is nothing we can do...
+- @root: 大統領内閣によって政策は成立する。我々にできることはない……

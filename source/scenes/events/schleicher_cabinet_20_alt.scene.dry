@@ -1,24 +1,24 @@
-title: The <span style="color: #BFC8CC;">**DNEF**</span> Falls Apart!
-subtitle: Without Schleicher, the <span style="color: #BFC8CC;">**DNEF**</span> is nothing.
+title: <span style="color: #BFC8CC;">**DNEF**</span>が崩壊！
+subtitle: シュライヒャーなき<span style="color: #BFC8CC;">**DNEF**</span>は無に等しい。
 view-if: chancellor == "Treviranus" and dnef_formed
 max-visits: 1
 new-page: true
 tags: event
 
-= The <span style="color: #BFC8CC;">**DNEF**</span> Falls Apart!
+= <span style="color: #BFC8CC;">**DNEF**</span>の崩壊！
 
-With Schleicher resigning in shame, the <span style="color: #BFC8CC;">**DNEF**</span> no longer has a god-like figure to rally around. The factions and politicians once held together by his influence have now decided it is best to go their separate ways.
+シュライヒャーが屈辱のうちに辞任し、<span style="color: #BFC8CC;">**DNEF**</span>にはもはや結集すべき神のごとき人物がいない。かつて彼の影響力でまとめられていた諸派と政治家は、今や別々の道を進むのが最善だと判断した。
 
-The <i>Blocparteis</i> are freed, and the bulk of the organization — those not drawn from their ranks — has splintered off in different directions. The right-wing, more nationalist section has salvaged the party's national structures and will continue on by merging into the [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Radical": <span style="color: #0087DC;">**KVP**</span>?], now rallying behind Treviranus.
+<i>ブロック政党</i>は解放され、その出身ではない組織の大部分も各方面へ分裂した。より国家主義的な右派は全国組織を確保し、今やトレヴィラヌスのもとに結集する[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Radical": <span style="color: #0087DC;">**KVP**</span>?]へ合流して活動を続ける。
 
-The more left-leaning—and quite frankly, eccentric—elements of the movement have formed a new <span style="color: #fe9e00;">Old Social Democratic Party</span> (<span style="color: #fe9e00;">**ASPD**</span>), grounded in class collaboration, nationalism, and laborism. They call for a "Volksocialism", whatever that means.
+運動内のより左寄りで、率直にいえば風変わりな勢力は、階級協調、国家主義、労働主義を基盤とする新たな<span style="color: #fe9e00;">旧社会民主党</span>（<span style="color: #fe9e00;">**ASPD**</span>）を結成した。彼らは「民族社会主義」を唱えているが、それが何を意味するのかは分からない。
 
-We cannot expect much cooperation from this group. Yet, oddly enough, the two splinter factions have found common ground—agreeing to tolerate, and even participate in, the Treviranus cabinet.
+この集団から多くの協力は期待できない。それでも奇妙なことに、二つの分派は共通点を見いだし、トレヴィラヌス内閣を容認し、さらには参加することで合意した。
 
 - @dnef_collapse
 
 @dnef_collapse
-title: This calls for celebration!
+title: これは祝うべきことだ！
 on-arrival: {!
 Q.dnef_collapse = 1;
 Q.dnef_formed = 0;

@@ -1,5 +1,5 @@
-title: Discontent in the <span style="color: #BFC8CC;">**DNEF**</span>
-subtitle: A test for the house of cards.
+title: <span style="color: #BFC8CC;">**DNEF**</span>内の不満
+subtitle: 砂上の楼閣が試される。
 view-if: (chancellor == "Bredow" and bredow_time >= 2) or (chancellor == "Goerdeler" and goerdeler_time >= 2) and dnef_formed
 on-arrival: {!
 Q.dnef_collapse_points = 0;
@@ -91,22 +91,22 @@ max-visits: 1
 new-page: true
 tags: event
 
-= Discontent in the <span style="color: #BFC8CC;">**DNEF**</span>
+= <span style="color: #BFC8CC;">**DNEF**</span>内の不満
 
-With Schleicher’s resignation, his wildly diverse <span style="color: #BFC8CC;">**DNEF**</span>—held together only by his personal authority—is beginning to splinter. Factions now vie to imprint their own version of "Schleicherism" onto the party’s platform, hoping to give the movement an identity beyond that of worshipping a soon-to-be-dead former Chancellor.
+シュライヒャーの辞任により、彼個人の権威だけで結束していた雑多な<span style="color: #BFC8CC;">**DNEF**</span>は分裂し始めた。各派は独自の「シュライヒャー主義」を党綱領に刻み込み、死期の迫る元首相への崇拝以上の独自性を運動に与えようと争っている。
 
-On the right, there are the <span style="color: #3E88B3;">nationalists</span> like Goerdeler, his Reichswehr allies, <span style="color: #808080;">monarchists</span>, <span style="color: #6D5298;">Christian Socials</span>, and an array of other smaller satellites.
+右派には、ゲルデラーら<span style="color: #3E88B3;">民族主義者</span>、国軍内の盟友、<span style="color: #808080;">君主主義者</span>、<span style="color: #6D5298;">キリスト教社会派</span>、そのほか多数の小勢力がいる。
 
-On the left, a more radical interpretation of Schleicher’s syncretism is gaining ground around the <span style="color: #fe9e00;">Social Patriot</span> faction—a gathering of bizarre personalities whose ideology is best described, for lack of a better word, as schizophrenic. However, they still hold some respect for parliamentary democracy—more than many of their colleagues on the party’s right.
+左派では、<span style="color: #fe9e00;">社会愛国派</span>を中心にシュライヒャーの折衷主義をさらに急進化した解釈が勢力を伸ばしている。奇妙な人物の寄せ集めであり、その思想は、ほかに言いようがなければ分裂症的としか形容できない。それでも議会制民主主義には一定の敬意を払い、党内右派の多くよりはましである。
 
 - @dnef_collapse
 - @dnef_discontent
 - @dnef_live
 
 @dnef_collapse
-title: The house of cards comes crashing down!
-subtitle: The situation is far more unstable than Schleicher would ever publicly admit.
-unavailable-subtitle:  The <span style="color: #BFC8CC;">**DNEF**</span> is stable enough for Schleicher to prevent full collapse.
+title: 砂上の楼閣が崩壊する！
+subtitle: 情勢はシュライヒャーが公に認めるよりはるかに不安定である。
+unavailable-subtitle: <span style="color: #BFC8CC;">**DNEF**</span>は十分に安定しており、シュライヒャーは全面崩壊を防げる。
 choose-if: dnef_collapse_points >= 30
 on-arrival: {!
 Q.dnef_collapse = 1;
@@ -566,17 +566,17 @@ if (Q.chancellor === "Bredow") {
 }
 !}
 
-The German people had only briefly united behind their so-called savior, General Kurt von Schleicher. Now, with a return to political normalcy looming, there is no place for an incoherent vehicle like the <span style="color: #BFC8CC;">**DNEF**</span> to rally the nation behind lofty abstractions like "non-partisanship" and the <i>Volksgemeinschaft</i>.
+ドイツ国民がいわゆる救世主、クルト・フォン・シュライヒャー将軍のもとに結集したのは束の間にすぎなかった。政治の常態化が目前に迫る今、「超党派」や<i>民族共同体</i>といった高尚な抽象概念のもとへ国民を集める、<span style="color: #BFC8CC;">**DNEF**</span>のような支離滅裂な器の居場所はない。
 
-With Schleicher nearing the end—both politically and personally—he is in no position to stop the unraveling of his own creation. Perhaps this will be remembered as his greatest blunder: that everything he built ends in anticlimax. Yet the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system has already been gutted over the past few years.
+政治的にも肉体的にも終焉を迎えつつあるシュライヒャーには、自ら生み出したものの崩壊を止める力がない。築き上げたすべてが尻すぼみに終わったことは、彼最大の失策として記憶されるかもしれない。だが<span style="color: #000000;">ワイ</span><span style="color: #DD0000;">マー</span><span style="color: #FFCC00;">ル</span>体制は、この数年間ですでに骨抜きにされている。
 
-The Blocparteis will return to their independent status, and it is primarily the [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Radical": <span style="color: #0087DC;">**KVP**</span>?] that will absorb the right wing. Meanwhile, the left wing has formed a new national party—the <span style="color: #fe9e00;">Old Social Democratic Party</span> (<span style="color: #fe9e00;">**ASPD**</span>)—anchored in class collaboration, nationalism, and laborism. They champion something they call “Volksocialism,” whatever that’s supposed to mean.
+ブロック政党は独立した地位へ戻り、右派は主として[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Radical": <span style="color: #0087DC;">**KVP**</span>?]に吸収される。一方、左派は階級協調、民族主義、労働主義を柱とする新たな全国政党、<span style="color: #fe9e00;">旧社会民主党</span>（<span style="color: #fe9e00;">**ASPD**</span>）を結成した。彼らは「民族社会主義」なるものを掲げているが、それが何を意味するのかは判然としない。
 
 - @dnef_collapse_2
 
 @dnef_collapse_2
-title: Now what? 
-subtitle: The new parties do not seem very happy with the current chancellor.
+title: さて、どうする？
+subtitle: 新党は現首相にあまり満足していないようだ。
 on-display: {!  
     // Crear el div contenedor
     var cardEl = document.createElement('div');  
@@ -607,13 +607,13 @@ on-display: {!
     // idk this code, it was added in a pull request
 !}
 
-Following the collapse of the <span style="color: #BFC8CC;">**DNEF**</span>, a vote of no confidence is immediately filed against [+ chancellor +], which is successful.
+<span style="color: #BFC8CC;">**DNEF**</span>崩壊後、直ちに[+ chancellor +]への不信任案が提出され、可決された。
 
 - @dnef_collapse_3
 
 @dnef_collapse_3
-title: Kuno von Westarp -[? if dnvp_ideology == "Radical":&nbsp;Former?] <span style="color: #3E88B3;">**DNVP**</span>
-subtitle: Hindenburg's preferred choice once again, and [? if dnvp_leader != "Westarp":former?] <span style="color: #3E88B3;">**DNVP**</span> party leader.
+title: クーノ・フォン・ヴェスタープ ― [? if dnvp_ideology == "Radical":元?]<span style="color: #3E88B3;">**DNVP**</span>
+subtitle: 再びヒンデンブルクの第一候補となった、[? if dnvp_leader != "Westarp":元?]<span style="color: #3E88B3;">**DNVP**</span>党首。
 face-image: img/portraits/Treviranus.jpg
 on-arrival: {!
 Q.chancellor = "Treviranus";
@@ -651,18 +651,18 @@ if (Q.next_reichstag_month > 12) {
 }
 !}
 
-Without a clear governing majority, [+ old_chancellor +] loses the little confidence that [+ president +] had given him, which was no longer much after the collapse of the <span style="color: #BFC8CC;">**DNEF**</span> a few weeks ago.
+明確な統治多数派を確保できず、[+ old_chancellor +]は[+ president +]から寄せられていたわずかな信任も失った。それは数週間前の<span style="color: #BFC8CC;">**DNEF**</span>崩壊ですでに大きく損なわれていた。
 
-Westarp, despite being once again begged by an older and increasingly sick Hindenburg, has declined the offer. Instead, he recommends the appointment of rising star and <span style="color: #0087DC;">Volkskonservativ</span> leader Gottfried Treviranus. With deep ties to German industry, the Right, and a pseudo-<span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> veneer, Treviranus is a candidate aimed at stabilizing Germany’s worsening crisis.
+高齢化し病状を悪化させるヒンデンブルクに再び懇願されたものの、ヴェスタープは要請を辞退した。代わりに新進気鋭の<span style="color: #0087DC;">国民保守派</span>指導者ゴットフリート・トレヴィラヌスの任命を推薦した。ドイツ産業界と右派に深い人脈を持ち、疑似<span style="color: #000000;">共</span><span style="color: #DD0000;">和主</span><span style="color: #FFCC00;">義</span>的な外観をまとうトレヴィラヌスは、悪化するドイツの危機を安定させるための候補者である。
 
-Much like Papen’s dismissal in favor of Schleicher, the political class breathes yet another sigh of relief. Even within the <span style="color: #c00000;">**SPD**</span>, many find it easier to confront the devil they know rather than face Schleicher’s dynamic and unpredictable rule.
+パーペンが解任されシュライヒャーに交代した時と同じく、政治階級は再び安堵の息をついた。<span style="color: #c00000;">**SPD**</span>内部でさえ、行動的で予測不能なシュライヒャーの支配より、勝手の分かる悪魔と対峙する方が容易だと考える者が多い。
 
-Treviranus will seek to construct a working majority via parliament. The Reichstag will convene on [+ next_reichstag_month : month +] [+ next_reichstag_year +], Week [+ next_reichstag_week +].
+トレヴィラヌスは議会を通じて実効的な多数派の形成を目指す。国会は[+ next_reichstag_year +]年[+ next_reichstag_month : month +]（第[+ next_reichstag_week +]週）に召集される。
 
 @dnef_discontent
-title: The <span style="color: #BFC8CC;">**DNEF**</span> undergoes a split. 
+title: <span style="color: #BFC8CC;">**DNEF**</span>が分裂する。
 choose-if: dnef_collapse_points >= 20 and dnef_collapse_points < 30
-unavailable-subtitle: [? if dnef_collapse_points >= 30: The situation is far more unstable than Schleicher would ever publicly admit. ?][? if dnef_collapse_points < 20: Even in his current state, Schleicher still holds influence over the party. ?]
+unavailable-subtitle: [? if dnef_collapse_points >= 30: 情勢はシュライヒャーが公に認めるよりはるかに不安定である。?][? if dnef_collapse_points < 20: 現状でもシュライヒャーはなお党への影響力を保っている。?]
 on-arrival: {!
 if (Q.reactionary_gang_points >= Q.weimar_gang_points) Q.right_dnef = 1;
 if (Q.weimar_gang_points > Q.reactionary_gang_points) Q.left_dnef = 1;
@@ -685,13 +685,13 @@ Q.old_left_dnef_r = 0;
 !}
 go-to: reichstag_view
 
-The two factions within the <span style="color: #BFC8CC;">**DNEF**</span> have effectively undergone a split, their differences proving too vast to reconcile. With no resolution in sight, the minority faction has broken away, taking a segment of the party with them.
+<span style="color: #BFC8CC;">**DNEF**</span>内の二派は事実上分裂した。相違はあまりに大きく、和解できなかった。解決の見通しが立たないまま、少数派は党の一部を伴って離脱した。
 
-[? if right_dnef: This unlucky minority is the <span style="color: #BFC8CC;">**DNEF**</span>’s right wing, which sought to transform the party into a vehicle for the restoration of the German monarchy. The ideological gulf was too great for the ailing Schleicher to bridge, leading to the formation of the <span style="color: #BFC8CC;">DNEF-Fatherland League</span> (<span style="color: #BFC8CC;">**DNEF-VLB**</span>)—perhaps an echo of the German Fatherland Party of old. ?]
+[? if right_dnef: 不運な少数派となったのは、党をドイツ君主制復古の器へ変えようとした<span style="color: #BFC8CC;">**DNEF**</span>右派である。病に伏すシュライヒャーには思想的隔たりを埋められず、<span style="color: #BFC8CC;">DNEF祖国同盟</span>（<span style="color: #BFC8CC;">**DNEF-VLB**</span>）が結成された。かつてのドイツ祖国党の残響なのかもしれない。?]
 
-[? if left_dnef: This unlucky minority is the <span style="color: #BFC8CC;">**DNEF**</span>’s left wing, which hoped to redirect the party toward addressing social inequality and defending the welfare of the German worker. Disputes over monarchism and the role of labor in the new corporatist order proved irreconcilable for Schleicher, resulting in their secession and the founding of the <span style="color: #B86558;">DNEF-Social Bloc</span> (<span style="color: #B86558;">**DNEF-SB**</span>). ?]
+[? if left_dnef: 不運な少数派となったのは、党を社会的不平等への対処とドイツ労働者の福祉擁護へ向け直そうとした<span style="color: #BFC8CC;">**DNEF**</span>左派である。君主主義と新たな協調主義秩序における労働者の役割をめぐる対立は、シュライヒャーにも調停できず、彼らは離脱して<span style="color: #B86558;">DNEF社会ブロック</span>（<span style="color: #B86558;">**DNEF-SB**</span>）を結成した。?]
 
-However, what is fascinating is that both factions now claim to be the “true” <span style="color: #BFC8CC;">**DNEF**</span>. Chancellor [+ chancellor +] has so far avoided taking sides, hoping to prevent further splintering of an already fragile alliance. Perhaps this is Schleicher’s influence at work—a political truce between two perfectly normal, merely “disagreeing” factions.
+興味深いことに、両派はいずれも自らこそ「真の」<span style="color: #BFC8CC;">**DNEF**</span>だと主張している。[+ chancellor +]首相は、すでに脆弱な同盟のさらなる分裂を防ごうと、今のところどちらにも与していない。これもシュライヒャーの影響なのだろう。ごく普通に「意見が異なる」だけの二派の間に政治的休戦が成立している。
 
 @reichstag_view
 on-arrival: {!
@@ -776,8 +776,8 @@ if (Q.lvp_r && Q.lvp_formed) {
 if (Q.z_minus_bvp_r) {
     data.push({
         "id": "z",
-        "legend": "Center",
-        "name": "Center",
+        "legend": "中央党",
+        "name": "中央党",
         "seats": Math.round(Q.z_minus_bvp_r * Q.reichstag_size),
     });
 }
@@ -875,8 +875,8 @@ if (Q.csvd_r && Q.csvd_formed) {
 if (Q.other_r) {
     data.push({
         "id": "other",
-        "legend": "Other",
-        "name": "Other",
+        "legend": "その他",
+        "name": "その他",
         "seats": Math.round(Q.true_other_r * Q.reichstag_size),
     });
 }
@@ -987,7 +987,7 @@ if (d3 && window) {
     var lines = d3.linegraph(false, false,
             Q.parties_graph,
             {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00', 'dnef': '#BFC8CC', 'fkp': '#00C0FF'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP', 'dnef': 'DNEF', 'fkp': 'FKP'});
+            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'その他', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP', 'dnef': 'DNEF', 'fkp': 'FKP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -1000,7 +1000,7 @@ if (d3 && window) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties_graph,
             {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00', 'dnef': '#BFC8CC', 'fkp': '#00C0FF'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP', 'dnef': 'DNEF', 'fkp': 'FKP'});
+            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'その他', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP', 'dnef': 'DNEF', 'fkp': 'FKP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -1010,14 +1010,14 @@ if (d3 && window) {
     var maxUnemployment = d3.max(Q.economic_records, d => d.unemployment);
     var lines_3 = d3.linegraph(true, true, ['inflation', 'unemployment'],
             {'inflation': '#0000FF', 'unemployment': '#FF0000'},
-            {'inflation': 'Inflation', 'unemployment': 'Unemployment'},
+            {'inflation': 'インフレ率', 'unemployment': '失業率'},
             maxUnemployment + 5, minInflation - 5, 21);
     lines_3.width(width).height(300);
     d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
 }
 !}
 
-= Reichstag composition
+= 国会の構成
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -1035,7 +1035,7 @@ if (d3 && window) {
 
 [? if not lvp_formed and dvp_exist and dvp_dnef: {!<tr><td><div class="box2" style='background-color:#AA861F'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!} ?]
 
-[? if other_dnef: {!<tr><td><div class="box2" style='background-color:#707070'> </div></td><td>!} Others: {!</td><td>!} [+ other_r +]% {!</td></tr>!} ?]
+[? if other_dnef: {!<tr><td><div class="box2" style='background-color:#707070'> </div></td><td>!} その他: {!</td><td>!} [+ other_r +]% {!</td></tr>!} ?]
 
 [? if kvp_formed and not cvp_kvp_formed and kvp_dnef: {!<tr><td><div class="box2" style='background-color:#0072C0'> </div></td><td>!} KVP: {!</td><td>!} [+ kvp_r +]% {!</td></tr>!} ?]
 
@@ -1061,7 +1061,7 @@ if (d3 && window) {
 
 [? if not lvp_formed and dvp_exist and not dvp_dnef: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!} ?]
 
-[? if not other_dnef: {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +]% {!</td></tr>!} ?]
+[? if not other_dnef: {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} その他の政党: {!</td><td>!} [+ other_r +]% {!</td></tr>!} ?]
 
 [? if dnvp_dvp_formed: {!<tr><td><div class="box" style='background-color:#00C0FF'> </div></td><td>!} FKP: {!</td><td>!} [+ kvp_r +]% {!</td></tr>!} ?]
 
@@ -1080,8 +1080,8 @@ if (d3 && window) {
 {!</table>!}
 
 @dnef_live
-title: The <span style="color: #BFC8CC;">**DNEF**</span> weathers the storm.
-unavailable-subtitle: The situation is far more unstable than Schleicher would ever publicly admit.
+title: <span style="color: #BFC8CC;">**DNEF**</span>は嵐を切り抜ける。
+unavailable-subtitle: 情勢はシュライヒャーが公に認めるよりはるかに不安定である。
 choose-if: dnef_collapse_points < 20
 
-The two factions within the <span style="color: #BFC8CC;">**DNEF**</span> have been reconciled—by none other than Schleicher himself. Despite being weakened by illness, he has managed to pull strings behind the scenes, halting the party’s internal confrontation. For now, the ideology of "Schleicherism" has re-united the movement, and it appears that [+ chancellor +] will inherit much of the authority Schleicher once wielded.
+<span style="color: #BFC8CC;">**DNEF**</span>内の二派を和解させたのは、ほかならぬシュライヒャー本人であった。病に衰えながらも舞台裏で糸を引き、党内対立を停止させたのである。今のところ「シュライヒャー主義」という思想が運動を再統合し、[+ chancellor +]はシュライヒャーがかつて振るった権威の多くを継承するようだ。

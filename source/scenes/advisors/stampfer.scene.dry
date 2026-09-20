@@ -1,77 +1,77 @@
-title: Friedrich Stampfer
+title: フリードリヒ・シュタンプファー
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/StampferFriedrich.jpg
 view-if: stampfer_advisor = 1
 new-page: true 
 
-= Friedrich Stampfer
+= フリードリヒ・シュタンプファー
 
-Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper, and also a Reichstag member. He was historically part of the Majority <span style="color: #c00000;">**SPD**</span> that supported our participation in the Great War, but also supports cooperation with the <span style="color: #700000;">**KPD**</span> to save the Republic. 
+フリードリヒ・シュタンプファーは党機関紙『フォアヴェルツ』の長年の編集長であり、国会議員でもある。歴史的には第一次世界大戦への参戦を支持した多数派<span style="color: #c00000;">**SPD**</span>に属したが、共和国を救うための<span style="color: #700000;">**KPD**</span>との協力も支持している。
 
-[? if kpd_truce: Since such a SPD-KPD cooperation can be considered achieved through a truce with the RFB, Stampfer is emboldened to direct Vorwärts fully towards placating internal dissent by supporting a Center position. ?]
+[? if kpd_truce: RFBとの休戦によってSPD・KPD間の協力が実現したとみなせるため、シュタンプファーは『フォアヴェルツ』を中間派支持に徹しさせ、党内不満の沈静化を図る自信を得ている。 ?]
 
 - @media_
 - @faction_support_
 - @kpd_cooperation
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 
 @media_
-title: Media
-subtitle: Manage our party's newspapers and media.
+title: メディア
+subtitle: 党の新聞・広報媒体を管理する。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
 go-to: media
 
 
 @faction_support_
-title: Editorial Line
-subtitle: We can change the editorial line of Vorwärts to support a particular faction.
+title: 編集方針
+subtitle: 『フォアヴェルツ』の編集方針を変更し、特定派閥を支持できる。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6
 
-Which faction should we support?
+どの派閥を支持するか。
 
-- @support_left: Left
-- @support_center: Center
-- @support_labor: Labor
-- @support_reform: Reformists
-- @support_neorev: Neorevisionists
+- @support_left: 左派
+- @support_center: 中間派
+- @support_labor: 労働派
+- @support_reform: 改革派
+- @support_neorev: 新修正主義派
 
 @support_left
 on-arrival: left_dissent -= 8; left_strength += 8; editorial_line = "Left"
 
-Vorwärts prints editorials in support of Left positions.
+『フォアヴェルツ』は左派の立場を支持する社説を掲載した。
 
 @support_center
 on-arrival: center_dissent -= 8; center_strength += 8; editorial_line = "Center"
 
-Vorwärts prints editorials in support of centrist positions.
+『フォアヴェルツ』は中間派の立場を支持する社説を掲載した。
 
 @support_labor
 on-arrival: labor_dissent -= 8; labor_strength += 8; editorial_line = "Labor"
 
-Vorwärts prints editorials in support of the policies of the trade unions.
+『フォアヴェルツ』は労働組合の政策を支持する社説を掲載した。
 
 @support_reform
 on-arrival: reformist_dissent -= 8; reformist_strength += 8; editorial_line = "Reformists"
 
-Vorwärts prints editorials in support of the reformist policies.
+『フォアヴェルツ』は改革派の政策を支持する社説を掲載した。
 
 @support_neorev
 view-if: neorevisionism
 on-arrival: neorevisionist_dissent -= 8; neorevisionist_strength += 8; editorial_line = "Neorevisionists"; nazi_urgency += 1
 
-Vorwärts prints editorials in support of neorevisionist ideas.
+『フォアヴェルツ』は新修正主義の理念を支持する社説を掲載した。
 
 @kpd_cooperation
-title: Cooperation with the <span style="color: #700000;">**KPD**</span>
-subtitle: Could we build closer ties with the <span style="color: #700000;">**KPD**</span>?
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: <span style="color: #700000;">**KPD**</span>との協力
+subtitle: <span style="color: #700000;">**KPD**</span>との関係をさらに緊密化できるだろうか。
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 2; kpd_relation += 4*(1-dissent); reformist_dissent += 2
 
-Stampfer works towards closer ties with the <span style="color: #700000;">**KPD**</span> through our media.
+シュタンプファーは党のメディアを通じ、<span style="color: #700000;">**KPD**</span>との関係緊密化に努めた。

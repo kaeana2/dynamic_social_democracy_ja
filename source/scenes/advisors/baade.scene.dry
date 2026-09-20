@@ -1,52 +1,52 @@
-title: Fritz Baade
+title: フリッツ・バーデ
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/BaadeFritz.jpg
 view-if: baade_advisor = 1
 new-page: true 
 
-= Fritz Baade
+= フリッツ・バーデ
 
-Baade is one of the few agricultural experts in the <span style="color: #c00000;">**SPD**</span>, and an unorthodox economist. [? if land_reform > 0: He currently has considerable support among party factions due to the <span style="color: #c00000;">SPD</span> successfully enacting land reform. ?]
+バーデは<span style="color: #c00000;">**SPD**</span>では数少ない農業専門家で、非正統派の経済学者である。[? if land_reform > 0: <span style="color: #c00000;">SPD</span>が土地改革に成功したため、現在は党内諸派から相当な支持を得ている。 ?]
 
 - @agriculture
 - @rural_campaign
 - @depression
 - @radicalize_rural
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @agriculture
-title: Agricultural Policy
-subtitle: Baade is the Minister of Agriculture.
+title: 農業政策
+subtitle: バーデは農相である。
 choose-if: advisor_action_timer <= 0 and spd_in_government and agriculture_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not in government. ?][? if agriculture_minister_party != "SPD": The <span style="color: #c00000;">SPD</span> does not have the Agriculture Ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if not spd_in_government : <span style="color: #c00000;">SPD</span>は政権に参加していない。 ?][? if agriculture_minister_party != "SPD": <span style="color: #c00000;">SPD</span>は農業省を掌握していない。 ?]
 on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6; last_advisor_action = 1
 go-to: agricultural_policy
 
 
 @rural_campaign
-title: Rural Campaign
-subtitle: Try to campaign among the rural populace.
+title: 農村運動
+subtitle: 農村住民に向けた選挙運動を行う。
 choose-if: advisor_action_timer == 0 and rural_policy > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if rural_policy == 0 : We have not enacted any rural policies. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if rural_policy == 0 : 農村政策をまだ実施していない。 ?]
 on-arrival: advisor_action_timer = 6; rural_spd += 5*(1-dissent); peoples_party_support += 1
 
-We have increased our campaigning among farmers and the rural populace.
+農民と農村住民に対する選挙運動を強化した。
 
 @depression
-title: Addressing the economic crisis
-subtitle: Formulate a plan to rescue us from the economic crisis.
+title: 経済危機への対処
+subtitle: 経済危機から脱するための計画を策定する。
 choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if black_thursday_seen == 0 : 現在は経済危機ではない。 ?][? if wtb_adopted > 0 : WTB計画はすでに採用されている。 ?]
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 5; wtb_points += 15
 
-[? if not wtb_concept: Woytinsky, Tarnow, and Baade, has been working together to draft a plan for getting us out of the depression. Baade canvasses in favor of this plan throughout the party. ?][? if wtb_concept: The WTB-plan, named for its primary supporters Woytinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Baade canvasses in favor of this plan throughout the party. ?]
+[? if not wtb_concept: ヴォイティンスキー、タルノフ、バーデは恐慌脱出計画を共同で起草している。バーデは党内で計画への支持を訴えている。 ?][? if wtb_concept: 三人の主要支持者の名を冠したWTB計画は、恐慌脱出のための労働組合案として採用された。バーデは党内で計画への支持を訴えている。 ?]
 
 @radicalize_rural
-title: Awaken the class consciousness of the peasantry and the rural working class. 
-subtitle: As our expert on agriculture, Baade can help awaken the class consciousness of peasants and rural workers.
+title: 農民・農村労働者の階級意識を覚醒させる
+subtitle: 農業専門家のバーデは、農民と農村労働者の階級意識を覚醒させる助けとなる。
 choose-if: socialism >= 51 and rural_spd_normalized >= 15 and rural_policy >= 1 and rural_conscious == 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if socialism < 51: We must seek to make socialism more popular. ?][? if rural_spd_normalized < 15: We sadly do not have enough support amongst rural voters. ?][? if rural_policy == 0: We have not enacted any rural policies. ?][? if rural_conscious == 1: We have already awoken the class consciousness of the peasantry and the rural working class. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if socialism < 51: 社会主義への支持をさらに高めなければならない。 ?][? if rural_spd_normalized < 15: 残念ながら農村有権者から十分な支持を得ていない。 ?][? if rural_policy == 0: 農村政策をまだ実施していない。 ?][? if rural_conscious == 1: 農民・農村労働者の階級意識はすでに覚醒している。 ?]
 max-visits: 1
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: rural_consciousness

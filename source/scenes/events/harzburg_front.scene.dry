@@ -1,25 +1,25 @@
-title: The Harzburg Front
-subtitle: The right-wing forces unite against the incumbent government.
+title: ハルツブルク戦線
+subtitle: 右翼勢力が現政権に対抗して結集する。
 new-page: true
 on-arrival: harzburg_front_seen = 1; harzburg_front_time = time; sa_strength += 50; sa_militancy += 0.1; sh_militancy += 0.1; old_middle_nsdap += 3; unemployed_nsdap += 3; rural_nsdap += 3; nazi_urgency += 1; iron_front_timer = 0; dvp_right += 3 if dvp_leader == "Dingeldey"; lvp_right += 1; hindenburg_angry += 15; hindenburg_angry_bruning += 15
 tags: event
 view-if: year = 1931 and month >= 10 and chancellor != "Schleicher" and chancellor != "Papen" and dnvp_ideology == "Radical"
 max-visits: 1
 
-= The Harzburg Front
+= ハルツブルク戦線
 
-The <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> parties and paramilitaries - the <span style="color: #7A3C00;">**NSDAP**</span> (and its paramilitary the <span style="color: #7A3C00;">**SA**</span>), the <span style="color: #3E88B3;">**Stahlhelm**</span> paramilitary group, and the <span style="color: #3E88B3;">**DNVP**</span> - have united to form the Harzburg Front, as a force dedicated to the overthrow of the current government. 
+<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の諸政党・準軍事組織――<span style="color: #7A3C00;">**NSDAP**</span>（およびその準軍事組織<span style="color: #7A3C00;">**SA**</span>）、準軍事組織<span style="color: #3E88B3;">**鉄兜団**</span>、そして<span style="color: #3E88B3;">**DNVP**</span>――は、現政権打倒を目的とする勢力として結集し、ハルツブルク戦線を結成した。
 
-However, this show of unity lacks substance, as Hugenberg, Hitler, and the <span style="color: #3E88B3;">**Stahlhelm**</span> compete against one another to assert themselves as the leader of the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span>. Hitler's erratic behavior—such as vanishing from the podium when <span style="color: #3E88B3;">**Stahlhelm**</span> detachments march by—has offended many conservatives[? if bruning_time:, and inter-party polemics may only serve to reinforce Brüning against their pressures?]. [? if dvp_leader == "Dingeldey" and dvp_exist: The <span style="color: #C0A054;">**DVP**</span> has worryingly some sympathies towards the national opposition, with some members even attending or sending congratulatory telegrams. ?][? if bruning_time: Luckily, the [? if dnvp_ideology == "Moderate":<span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Radical":<span style="color: #0087DC;">**KVP**</span>?]'s Treviranus has dissuaded many influential industrialists from taking part in this gathering ?]
+しかし、この統一の演出には実体がない。フーゲンベルク、ヒトラー、<span style="color: #3E88B3;">**鉄兜団**</span>は、いずれも自らが<span style="color: #7A3C00;">国民的</span><span style="color: #3E88B3;">反対派</span>の指導者だと示そうと競い合っている。<span style="color: #3E88B3;">**鉄兜団**</span>の部隊が行進すると演壇から姿を消すなど、ヒトラーの常軌を逸した振る舞いは多くの保守派を憤慨させた[? if bruning_time: うえ、党派間の論争は彼らの圧力に抗するブリューニングをかえって強めるだけかもしれない?]。[? if dvp_leader == "Dingeldey" and dvp_exist: 懸念すべきことに、<span style="color: #C0A054;">**DVP**</span>の一部は国民的反対派に共感し、集会へ出席したり祝電を送ったりした者すらいる。?][? if bruning_time: 幸い、[? if dnvp_ideology == "Moderate":<span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Radical":<span style="color: #0087DC;">**KVP**</span>?]のトレヴィラヌスが、多くの有力産業家に集会への参加を思いとどまらせた。?]
 
-- @strategy: We must develop a coherent strategy to combat the Right.
-- @confronting_nazis.iron_front: We must form the <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span>!
-- @iron_front: The <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span> will be our answer!
+- @strategy: 右翼に対抗する一貫した戦略を策定せねばならない。
+- @confronting_nazis.iron_front: <span style="color: #c00000;">鉄の</span><span style="color: #1A1A1A;">戦線</span>を結成せねばならない！
+- @iron_front: <span style="color: #c00000;">鉄の</span><span style="color: #1A1A1A;">戦線</span>こそ我々の回答だ！
 
 @strategy
 view-if: nazi_urgency < 3
 on-arrival: nazi_urgency += 1
 
-We do not yet have a coherent strategy for combatting the fascists. We must develop one as soon as possible.
+我々にはまだ、ファシストと戦う一貫した戦略がない。一刻も早く策定せねばならない。
 
 # TODO

@@ -1,4 +1,4 @@
-title: Media
+title: メディア
 new-page: true
 is-card: true
 tags: party_affairs
@@ -7,9 +7,9 @@ on-arrival: month_actions += 1; media_timer += 6;
 card-image: img/sangerbund.jpg
 #subtitle: Setting the direction for our newspapers and radio.
 
-= Media
+= メディア
 
-The <span style="color: #c00000;">**SPD**</span> runs a veritable media empire, with many newspapers throughout every German city and region. We could use the media for various purposes...
+<span style="color: #c00000;">**SPD**</span>はドイツ各地の都市・地方に多数の新聞を持ち、さながらメディア帝国を築いている。これらはさまざまな目的に利用できる……。
 
 - @commercial
 - @campaign
@@ -18,65 +18,65 @@ The <span style="color: #c00000;">**SPD**</span> runs a veritable media empire, 
 - @radio_2
 - @radio_3
 - @radio_4
-- @return: We should not do anything with media at the moment.
+- @return: 今はメディアに手を加えない。
 - @easy_discard
 - @cancel_advisor_action
 
 @commercial
-title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
-subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to <span style="color: #c00000;">socialist</span> views.
+title: 党支持者以外にも訴求するよう新聞を商業化する。
+subtitle: 思想的純粋主義者は反発するが、資金が増え、中間層を<span style="color: #c00000;">社会主義</span>思想に触れさせられるかもしれない。
 on-arrival: resources += 1; commercialized_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1-dissent); left_dissent += 10; labor_dissent += 10; socialism += 2*(1 - dissent); pro_republic += 1*(1-dissent); nationalism -= 1*(1 - dissent);
 
-Our commercialized newspapers are able to bring in more funds. However, the left and labor factions express their displeasure.
+商業化した新聞はより多くの資金を生んだが、左派と労働派は不満を表明した。
 
 @campaign
-title: The purpose of our media is to elect more <span style="color: #c00000;">Social Democrats</span>.
-subtitle: Our newspapers will focus on the electoral campaign.
+title: メディアの目的は、より多くの<span style="color: #c00000;">社会民主党員</span>を当選させることだ。
+subtitle: 新聞を選挙運動に集中させる。
 on-arrival: campaign_media += 1; workers_spd += 4*(1 - dissent); unemployed_spd += 2*(1-dissent); new_middle_spd += 4*(1-dissent) if new_middle_conscious == 1; rural_spd += 2*(1-dissent) if rural_conscious == 1
 
-Our campaign media is mostly reaching the workers [? if rural_conscious == 1: and peasants ?] who are already saturated with <span style="color: #c00000;">Socialist</span> propaganda, but it must be doing *something*, or at least that is what we hope.
+選挙メディアが届くのは、すでに<span style="color: #c00000;">社会主義</span>宣伝を浴び尽くした労働者[? if rural_conscious == 1: と農民?]が中心だ。それでも何らかの効果はあるはずだ――少なくとも、そう願っている。
 
 @ideological
-title: We will have vibrant ideological debate within our newspapers.
-subtitle: There will be space for all factions to air their views.
+title: 紙上で活発な思想論争を行う。
+subtitle: 全派閥が見解を表明できる場を設ける。
 on-arrival: left_dissent -= 6; labor_dissent -= 6; center_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
 
-This has been our media course historically, and it has successfully paved over the many tensions in our party.
+これは歴史的に党が取ってきたメディア方針であり、党内の多くの緊張を覆い隠すことに成功してきた。
 
 @radio
-title: Why not fund a radio station?
-subtitle: -2 resources
+title: ラジオ局へ資金を出してはどうか。
+subtitle: リソース－2
 choose-if: resources >= 2
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 view-if: radio = 0
 on-arrival: radio += 1; resources -= 2; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1 - dissent); workers_spd += 2*(1 - dissent); labor_dissent += 5; socialism += 3*(1 - dissent);  nationalism -= 1*(1 - dissent); nationalism -= 2*(1 - dissent) if pacifism > 1; pro_republic += 2*(1-dissent)
 
-Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of <span style="color: #c00000;">socialism</span> along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
+新設したラジオ局は、音楽や大衆向け番組と共に<span style="color: #c00000;">社会主義</span>の主張を伝え、人々とより身近に結びつける。現在、家庭用ラジオを購入できるプロレタリアは少ないため、主に中間層へ届いている。労働派の同志はその事実を痛感している。
 
 @radio_2
-title: We must keep on building up our radio network.
-subtitle: -1 resources
+title: ラジオ網の拡充を続ける。
+subtitle: リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 view-if: radio > 0 and radio <= 3
 on-arrival: radio += 1; resources -= 1; new_middle_spd += 5*(1 - dissent); old_middle_spd += 3*(1 - dissent); workers_spd += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 1*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)
 
-Our new radio network has a mix of popular and political programming, and is proving a success.
+新たなラジオ網は大衆番組と政治番組を織り交ぜ、成功を収めている。
 
 @radio_3
-title: We must keep on building up our radio network.
-subtitle: It is now financially self-sufficient, and does not require any more resources.
+title: ラジオ網の拡充を続ける。
+subtitle: 財政的に自立したため、追加リソースは不要である。
 view-if: radio > 3 and radio <= 5 and year <= 1931
 on-arrival: radio += 1; new_middle_spd += 5*(1 - dissent); old_middle_spd += 4*(1 - dissent); workers_spd += 4*(1 - dissent); rural_spd += 3*(1 - dissent); unemployed_spd += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 1*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)
 
-Our radio network has become a successful tool for spreading our message.
+ラジオ網は党の主張を広める有力な手段となった。
 
 @radio_4
-title: We should keep on supporting our radio network.
-subtitle: As radio becomes more common, the novelty is beginning to wear off, and radio is becoming saturated in society. -1 resources
+title: ラジオ網への支援を続ける。
+subtitle: ラジオの普及で新鮮味が薄れ、社会に行き渡りつつある。リソース－1
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 view-if: radio > 3 and (radio >= 6 or year >= 1932) and radio <= 9
 on-arrival: radio += 1; resources -= 1; new_middle_spd += 3*(1 - dissent); old_middle_spd += 2*(1 - dissent); workers_spd += 3*(1 - dissent); rural_spd += 2*(1 - dissent); unemployed_spd += 2*(1-dissent); socialism += 2*(1 - dissent); nationalism -= 1*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)
 
-We are continuing to invest in our radio stations. Both commercial and political radio are becoming more prevalent, making it harder to spread our message amidst the competition.
+ラジオ局への投資を継続した。商業放送も政治放送も普及し、競争のなかで党の主張を広めることは難しくなっている。

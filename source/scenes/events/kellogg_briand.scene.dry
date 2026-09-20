@@ -1,19 +1,19 @@
-title: Kellogg-Briand Pact
+title: 不戦条約
 new-page: true
-subtitle: An international treaty for peace
+subtitle: 平和のための国際条約
 view-if: year = 1928 and month == 8
 max-visits: 1
 on-arrival: kellogg_briand_seen = 1; kellogg_briand_signed = 1 if foreign_minister_party = "DVP" or foreign_minister_party == "Z"
 tags: event
 #face-image: img/portraits/StresemannGustav.jpg
 
-= Kellogg-Briand Pact
+= 不戦条約（ケロッグ＝ブリアン条約）
 
-An international treaty has been negotiated which promises an end to war. The treaty, negotiated by American Secretary of State Frank Kellogg and French foreign minister Aristide Briand, promises that its signatories will renounce the use of war, and will promise to settle their disputes peacefully. Countries throughout the world are lining up to sign this idealistic agreement. Its detractors argue that it has no enforcement mechanism, and thus is merely a worthless piece of paper.
+戦争の終結を誓う国際条約がまとめられた。アメリカ国務長官フランク・ケロッグとフランス外相アリスティード・ブリアンが交渉したこの条約は、締約国が戦争を政策の手段として用いることを放棄し、紛争を平和的に解決すると約束するものである。世界各国がこの理想主義的な協定への署名に列をなしている。批判者は、条約には履行を強制する仕組みがなく、無価値な紙切れにすぎないと主張している。
 
-[? if foreign_minister_party = "DVP": Our foreign Minister Gustav Stresemann has signed the treaty. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty. Additionally, during [+ foreign_minister +]'s trip to Paris, there has been success in bringing the <span style="color: #002654;">French</span> to consider withdrawing from the Rhineland early and to agree to another review of our reparations by foreign experts. ?][? if foreign_minister_party = "Z": Our foreign Minister Joseph Wirth has signed the treaty. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty. Additionally, during [+ foreign_minister +]'s trip to Paris, there has been success in bringing the <span style="color: #002654;">French</span> to consider withdrawing from the Rhineland early and to agree to another review of our reparations by foreign experts. ?]
+[? if foreign_minister_party = "DVP": 我が国外相グスタフ・シュトレーゼマンは条約に署名した。反応は総じて鈍く、平和主義者も軍国主義者も条約の実効性に懐疑的である。さらに、[+ foreign_minister +]のパリ訪問では、<span style="color: #002654;">フランス</span>にラインラントからの早期撤兵を検討させ、外国人専門家による賠償問題の再検討にも同意させることに成功した。?][? if foreign_minister_party = "Z": 我が国外相ヨーゼフ・ヴィルトは条約に署名した。反応は総じて鈍く、平和主義者も軍国主義者も条約の実効性に懐疑的である。さらに、[+ foreign_minister +]のパリ訪問では、<span style="color: #002654;">フランス</span>にラインラントからの早期撤兵を検討させ、外国人専門家による賠償問題の再検討にも同意させることに成功した。?]
 
-- @sign_treaty: Foreign Minister Breitscheid will sign the treaty, of course.
+- @sign_treaty: 当然、ブライトシャイト外相が条約に署名する。
 - @step_forward
 - @not_enough
 
@@ -21,21 +21,21 @@ An international treaty has been negotiated which promises an end to war. The tr
 view-if: spd_in_government and foreign_minister_party = "SPD"
 on-arrival: kellogg_briand_signed = 1
 
-Foreign Minister Breitscheid will sign the treaty, of course. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty.
+当然、ブライトシャイト外相が条約に署名する。反応は総じて鈍く、平和主義者も軍国主義者も条約の実効性に懐疑的である。
 
-Additionally, during [+ foreign_minister +]'s trip to Paris, there has been success in bringing the <span style="color: #002654;">French</span> to consider withdrawing from the Rhineland early and to agree to another review of our reparations by foreign experts.
+さらに、[+ foreign_minister +]のパリ訪問では、<span style="color: #002654;">フランス</span>にラインラントからの早期撤兵を検討させ、外国人専門家による賠償問題の再検討にも同意させることに成功した。
 
 - @step_forward
 - @not_enough
 
 @step_forward
 view-if: kellogg_briand_signed
-title: The treaty is a step forward for peace.
+title: この条約は平和への一歩である。
 
-Despite our misgivings about the treaty, it still represents a step forward for the cause of international peace.
+条約への懸念は残るが、それでも国際平和の大義に向けた一歩である。
 
 @not_enough
 view-if: kellogg_briand_signed
-title: The treaty is not enough.
+title: この条約だけでは不十分だ。
 
-Despite the idealism behind the treaty, it is inadequate for its goal of preventing wars. There must be some enforcement mechanism, perhaps automatic trade sanctions, or an intervention force controlled by the League of Nations. As it stands, the League of Nations and this treaty is toothless.
+条約の背後にある理想は認めるが、戦争を防ぐという目的には不十分である。自動的な貿易制裁や、国際連盟が統制する介入部隊など、何らかの履行強制措置が必要だ。現状では、国際連盟もこの条約も実効性を欠いている。

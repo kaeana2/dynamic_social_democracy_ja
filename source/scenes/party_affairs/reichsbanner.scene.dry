@@ -1,4 +1,4 @@
-title: Reichsbanner
+title: 国旗団
 new-page: true
 is-card: true
 tags: party_affairs
@@ -8,16 +8,16 @@ on-arrival: month_actions += 1; reichsbanner_timer += 6; rb_militarization_cost 
 max-visits: 6
 #subtitle: Paramilitary organizing in defense of the republic.
 
-= Reichsbanner
+= 国旗団
 
-The *Reichsbanner* <span style="color: #000000;"><b><i>Schwarz</i></b></span>-<span style="color: #DD0000;"><b><i>Rot</i></b></span>-<span style="color: #FFCC00;"><b><i>Gold</i></b></span> is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the <span style="color: #c00000;">**SPD**</span>, [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, but by far the largest component is with the <span style="color: #c00000;">**SPD**</span>.
+国旗団<span style="color: #000000;"><b><i>黒</i></b></span>・<span style="color: #DD0000;"><b><i>赤</i></b></span>・<span style="color: #FFCC00;"><b><i>金</i></b></span>は、共和国を脅かす急進派から守る大衆組織である。準軍事組織と呼ぶ者もいるが、現在の実態は軍隊とはほど遠い。公式には民主派諸党、すなわち<span style="color: #c00000;">**SPD**</span>、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>と結びつくが、構成員の圧倒的多数は<span style="color: #c00000;">**SPD**</span>系である。
 
-[? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : The Reichsbanner is having a more difficult time recruiting, as the <span style="color: #c00000;">**SPD**</span> is no longer the dominant party among the workers. Many of its members have left. ?]
+[? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : <span style="color: #c00000;">**SPD**</span>がもはや労働者層の第一党ではないため、国旗団の募集は難しくなっている。多くの団員が離脱した。 ?]
 
-- @militant: Fund more military-style training and equipment for the Reichsbanner.
-- @militant_2: Use our existing resources to support more training for the Reichsbanner.
-- @same: Keep the Reichsbanner as it is.
-- @cut_rb: Cut funding for the Reichsbanner.
+- @militant: 国旗団の軍事式訓練と装備へ追加資金を出す。
+- @militant_2: 既存資源を使い国旗団の訓練を強化する。
+- @same: 国旗団を現状のまま維持する。
+- @cut_rb: 国旗団への資金を削減する。
 - @women_rb
 - @easy_discard
 - @cancel_advisor_action
@@ -26,39 +26,39 @@ The *Reichsbanner* <span style="color: #000000;"><b><i>Schwarz</i></b></span>-<s
 
 @militant
 choose-if: resources >= rb_militarization_cost
-unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
-subtitle: -[+ rb_militarization_cost +] resources
+unavailable-subtitle: リソースが足りない（[+ rb_militarization_cost +]必要）。
+subtitle: リソース－[+ rb_militarization_cost +]
 on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; reformist_dissent += 5; spd_militancy += 0.05; workers_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent); z_relation -= 3 if strife < 5; ddp_relation -= 3 if strife < 5; lvp_relation -= 3 if strife < 5
 
-Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating the <span style="color: #3E88B3;">right-wing nationalists</span> or the <span style="color: #700000;">communists</span>, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the <span style="color: #700000;">communists</span>.
+党内には国旗団の軍事化を非難する者もいる。<span style="color: #3E88B3;">右派国家主義者</span>や<span style="color: #700000;">共産主義者</span>の模倣であり、中間派政党の同盟者を遠ざける危険があるという。一方、より左寄りの急進派は<span style="color: #700000;">共産主義者</span>から離れ、こちらの組織へ引き寄せられている。
 
-[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] decries the militarization of the Reichsbanner, and its members are leaving the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> organization. ?][? if strife >= 5: Seeing the strife that has filled Germany's streets, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] seem to be convinced that it is necessary for the Reichsbanner to be militarized, and mute their criticisms. ?] ?]
+[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は国旗団の軍事化を非難し、同党の団員は<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">組織</span>から脱退している。 ?][? if strife >= 5: ドイツの街頭を覆う争乱を目にして、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と[? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]は国旗団の軍事化が必要だと納得したらしく、批判を控えている。 ?] ?]
 
 
 @militant_2
 view-if: funded_reichsbanner >= 1
 on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1
 
-As we have already funded resources towards the Reichsbanner, we can invest in building up their militancy. 
+すでに国旗団へ資源を投じているため、その戦闘性を高めることができる。
 
 
 @same
 
-The Reichsbanner is already serving the purpose it needs to serve. There is no reason to change what already works.
+国旗団はすでに必要な役割を果たしている。機能しているものを変える理由はない。
 
-- @return: Continue...
+- @return: 続ける……
 
 
 @cut_rb
-subtitle: +1 resources
+subtitle: リソース＋1
 on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 2; left_dissent -= 2; spd_militancy -= 0.05; workers_kpd += 2; unemployed_kpd += 2
 
-Cutting resources to the Reichsbanner causes a drop in the membership, and leads some would-be members to join the <span style="color: #700000;">Communists</span> instead.
+国旗団への資金削減で団員が減少し、加入見込みだった者の一部は代わりに<span style="color: #700000;">共産主義者</span>へ流れた。
 
 
 @women_rb
-title: Allow women to join the Reichsbanner.
-subtitle: -1 resources - This might cause a backlash from existing members.
+title: 女性の国旗団加入を認める。
+subtitle: リソース－1――既存団員の反発を招く可能性がある。
 choose-if: resources > 0
 view-if: womens_rights >= 4 and sender_advisor == 1 and iron_front_formed == 1
 on-arrival: resources -= 1; rb_militancy *= 0.85; rb_strength += 400; women_in_rb = 1; rb_militancy += 0.05 if repealed_175; rb_militancy += 0.04 if trans_rights; rb_militancy += 0.02 if reformed_183;
@@ -66,9 +66,9 @@ go-to: homosexual if trans_rights or repealed_175 or reformed_183
 max-visits: 1
 achievement: women_reichsbanner
 
-The suggestion to allow women into the Reichsbanner is ridiculed by most, except for Toni Sender. But this is an exceptional time, and we need anyone who is willing to join. Thus, we organize specialized units for women, [? if homosexual_rights > 0: and even some covert units for <span style="color: deepskyblue;">tran</span><span style="color: linen;">sse</span><span style="color: lightpink;">xuals</span> and <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">os</span><span style="color: green;">ex</span><span style="color: blue;">ua</span><span style="color: purple;">ls</span>?].
+女性の国旗団加入案はトーニ・ゼンダーを除く大半から嘲笑された。しかし非常時であり、加入意思のある者は誰でも必要だ。そこで女性専門部隊を組織し、[? if homosexual_rights > 0: <span style="color: deepskyblue;">トランス</span><span style="color: lightpink;">ジェンダー</span>や<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: green;">愛</span><span style="color: blue;">者</span>の秘密部隊さえ設けた?]。
 
-After allowing women to join, the number of comrades who leave is more than balanced out by the number of radicalized women and others who join. However, many of our departed members were veterans, and many of the new members have no experience with military-style training.
+女性の加入を認めると、離脱者を上回る数の急進化した女性らが参加した。しかし去った団員の多くは従軍経験者であり、新規団員の多くには軍事式訓練の経験がない。
 
 @homosexual
 achievement: anders_als_die_andern

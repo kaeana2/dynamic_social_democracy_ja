@@ -1,5 +1,5 @@
-title: Expansion of Public Works
-subtitle: The Brüning cabinet announces a job creation program.
+title: 公共事業の拡大
+subtitle: ブリューニング内閣が雇用創出計画を発表する。
 view-if: (bruning_time >= 6 or bruning_lite_time >= 6) and ((year == 1932 and month >= 5) or year >= 1933) and unemployed >= 30 and (in_center_right_coalition or in_right_coalition) and time >= bruning_skibidi_time and bruning_skibidi_time and not works_program
 max-visits: 1
 tags: event
@@ -19,19 +19,18 @@ on-display: {!
 !}
 set-bg: img/map_2.jpg
 
-= Expansion of Public Works
+= 公共事業の拡大
 
-With the abolishment of reparations at Lausanne, the Brüning cabinet finally feels comfortable to expand funding for its recently enacted public works program. A billion dollars in bonds released by the government is used to fund the program, and money begins to flow in the economy again.
+ローザンヌで賠償が廃止されたため、ブリューニング内閣はようやく、成立したばかりの公共事業計画への資金を安心して拡大できるようになった。政府が発行する10億ドル分の債券が計画の財源となり、経済へ再び資金が流れ始めている。
 
-This marks a real turning point, and along with the abolishment of reparations, the radicalizing effects of sky-high unemployment and the Versailles Treaty are diminished. The set of conditions that have enabled the <span style="color: #7A3C00;">Nazis</span>'s meteoric rise begins to unravel, depriving them of the fuel that once drove their ascent.
+これは真の転換点である。賠償廃止と相まって、極端な高失業率とヴェルサイユ条約がもたらしてきた急進化作用は弱まりつつある。<span style="color: #7A3C00;">ナチ</span>の急伸を可能にした諸条件が崩れ始め、かつて彼らの台頭を促した燃料が失われている。
 
 - @public_works
 
 @public_works
-title: Great news!
+title: 素晴らしい知らせだ！
 on-arrival: labor_dissent -= 5; hindenburg_angry_bruning -= 25; lautenbach_adopted = 1; lautenbach_plan_time = time + 12; public_works_name = "Dietrich"; dvp_left += 3; ddp_left += 2; lvp_left += 2; ddp_cohesion += 2; inflation += 2; budget -= 1; economic_growth += 2; workers_nsdap -= 3; workers_ddp += 1; workers_z += 1; workers_dnvp += 1; workers_lvp += 1; unemployed_nsdap -= 5; unemployed_z += 2; unemployed_ddp += 2; unemployed_dnvp += 2; unemployed_lvp += 2
 
-Despite Brüning’s longstanding belief that public works should follow the bottoming out of the depression, it appears he now sees that moment as having arrived—with the global recovery and the abolition of German reparations. Still, inflationary fears among the public have constrained any major expansion of the money supply, and the industrialists within the coalition have fought tooth and nail to gut the bill’s more expensive provisions. Fortunately, their votes are not required to pass it.
+公共事業は恐慌が底を打ってから行うべきだという長年の信念にもかかわらず、世界経済の回復とドイツ賠償の廃止を受け、ブリューニングもついにその時が来たと考えたようだ。それでも国民のインフレ恐怖は通貨供給量の大幅な拡大を制約し、連立内の産業資本家は法案の高額な条項を骨抜きにしようと徹底抗戦した。幸い、成立に彼らの票は必要ない。
 
-> Chancellor [+ chancellor +]'s response is— public works?
-
+> 首相[+ chancellor +]の答えは――公共事業なのか？

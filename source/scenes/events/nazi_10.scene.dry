@@ -1,5 +1,5 @@
-title: Dissent Within the <span style="color: #7A3C00;">**SA**</span>
-subtitle: The Stegmann dispute escalates once again...
+title: <span style="color: #7A3C00;">**SA**</span>内部の反乱
+subtitle: シュテークマン紛争が再び激化する……。
 view-if: chancellor = "Schleicher" and schleicher_time == 6 and nazi_funds <= 3 and not lippe_big_win
 new-page: true
 tags: event
@@ -18,26 +18,26 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Dissent Within the <span style="color: #7A3C00;">**SA**</span>
+= <span style="color: #7A3C00;">**SA**</span>内部の反乱
 
-Despite [+ nsdap_leader +] forcing <span style="color: #7A3C00;">**SA**</span> commander Wilhelm Stegmann to sign a statement of submission, the renegade has bolted once again. Proclaiming defiance against his state gauleiter, he’s formed an independent paramilitary group—taking some 7,000 loyal <span style="color: #7A3C00;">**SA**</span> men with him. [+ nsdap_leader +] retaliated by expelling him outright from the party.
+[+ nsdap_leader +]は<span style="color: #7A3C00;">**SA**</span>指揮官ヴィルヘルム・シュテークマンに服従声明へ署名させたが、反逆者は再び離反した。州大管区指導者への反抗を宣言して独立準軍事組織を結成し、忠実な<span style="color: #7A3C00;">**SA**</span>隊員およそ7,000人を引き連れた。[+ nsdap_leader +]は報復として彼を党から完全に除名した。
 
-In past cases, condemnation from [+ nsdap_leader +] was enough to snuff out dissent. But this time, Stegmann defied the ban and retained fierce loyalty among his ranks. Local <span style="color: #7A3C00;">Nazi</span> organizations are now split—forced to choose between backing their gauleiter or Stegmann—crippling their state organization.
+過去の事例では、[+ nsdap_leader +]の非難だけで反抗を鎮めるには十分だった。しかし今回はシュテークマンが禁止命令に逆らい、配下の強固な忠誠を維持している。地方の<span style="color: #7A3C00;">ナチ党</span>組織は今や、大管区指導者とシュテークマンのどちらを支持するか選択を迫られて分裂し、州組織は機能不全に陥った。
 
 - @nazi_2
 
 @nazi_2
-title: Is this the start of something greater?
+title: これはさらに大きな動きの始まりか？
 on-arrival: sa_strength -= 75; sa_militancy -= 0.1; rfb_strength += 30; unemployed_nsdap -= 4; unemployed_kpd += 2; nazi_explode += 1
 
-Although Stegmann is careful not to denounce [+ nsdap_leader +] directly, it is clear that his break stems from deep dissatisfaction with the party’s current strategy. He's called for a more violent seizure of power, arguing that the "movement’s historic moment has been missed", and that instead of clinging to the "mania of legality", they must act "in a more brutal and revolutionary fashion".
+シュテークマンは[+ nsdap_leader +]を直接非難しないよう注意しているが、離反が党の現戦略への深い不満に由来することは明らかである。彼は「運動の歴史的好機は失われた」と論じ、「合法性への妄執」に固執せず「より残忍かつ革命的な方法」で行動すべきだとして、より暴力的な権力奪取を要求した。
 
-Stegmann’s appeals to fellow <span style="color: #7A3C00;">**SA**</span> leaders across the country have met with favorable responses in several regions. In Hesse, many <span style="color: #7A3C00;">**SA**</span> men defected or were expelled en masse, forming their own paramilitary group that seized local headquarters and shut down party-run hostels and soup kitchens on claims of misappropriation.
+全国の<span style="color: #7A3C00;">**SA**</span>指導者へ向けたシュテークマンの呼びかけは、いくつかの地域で好意的に受け止められた。ヘッセンでは多数の<span style="color: #7A3C00;">**SA**</span>隊員が離反または一斉除名され、独自の準軍事組織を結成した。彼らは横領を理由に地方本部を占拠し、党営の宿泊所や無料食堂を閉鎖した。
 
-In Berlin, Strasser loyalists wait in vain for a signal from the man they once believed would challenge [+ nsdap_leader +], but none comes. Even so, small-scale defections and expulsions continue to spread across the country.
+ベルリンでは、シュトラッサー支持者が、かつて[+ nsdap_leader +]へ挑むと信じた男からの合図を空しく待っているが、何も来ない。それでも小規模な離反と除名は全国へ広がり続けている。
 
-Although this crisis has weakened the <span style="color: #7A3C00;">**SA**</span>, many of its frustrated members have instead channeled their fury into increasingly frequent and bloody street battles—against not just the Reichsbanner, but the <span style="color: #7A3C00;">**NSDAP**</span>'s own SS as well.
+この危機によって<span style="color: #7A3C00;">**SA**</span>は弱体化したが、不満を抱く多数の隊員は怒りを、ますます頻繁かつ流血を伴う街頭闘争へ向けた。その標的は国旗団だけでなく、<span style="color: #7A3C00;">**NSDAP**</span>直属のSSにも及んでいる。
 
-While discontent remains aimed at local party leaders, shielding [+ nsdap_leader +] for now, it's only a matter of time before the façade crumbles.
+不満は今のところ地方党指導者に向けられ、[+ nsdap_leader +]は守られている。しかし、この見せかけが崩れるのは時間の問題である。
 
 # TODO, more outcomes

@@ -1,16 +1,16 @@
-title: No confidence vote against the new government
-subtitle: Chancellor [+ chancellor +] faces a vote of no confidence.
+title: 新政府への不信任投票
+subtitle: [+ chancellor +]首相が不信任投票に直面している。
 new-page: true
 view-if: bruning_event_timer = 5 and cvp_formed
 on-arrival: bruning_event_seen = 1
 tags: event
 max-visits: 1
 
-= Vote of no confidence
+= 不信任投票
 
-Following the collapse of our coalition, President [+ president +] has appointed Heinrich Brüning from the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] Party to head a government supported by bourgeois forces. [? if center_right_coalition < 50: However, despite the size of his coalition, the <span style="color: #000000;">**[+ z_party_name +]**</span> lacks a majority, even with their preferred partner, the <span style="color: #FFCC00;">liberals</span>. ?][? if center_right_coalition >= 50: A majority is able to be found with the <span style="color: #000000;">**[+ z_party_name +]**</span> forming a coalition with their preferred partner, the <span style="color: #FFCC00;">liberals</span>. ?]
+我々の連立崩壊後、[+ president +]大統領は[? if z_party_name != "CVP":<span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP":<span style="color: #000000;">**CVP**</span>?]のハインリヒ・ブリューニングを、ブルジョワ勢力が支える政府の首班に任命した。[? if center_right_coalition < 50: しかし連立の規模にもかかわらず、<span style="color: #000000;">**[+ z_party_name +]**</span>は意中の相手である<span style="color: #FFCC00;">自由主義諸党</span>と組んでも過半数に届かない。?][? if center_right_coalition >= 50:<span style="color: #000000;">**[+ z_party_name +]**</span>が意中の相手である<span style="color: #FFCC00;">自由主義諸党</span>と連立を組めば、過半数を確保できる。?]
 
-Brüning has reorganized his cabinet to include the smaller parties to the right of us, such as the <span style="color: #b8996f;">**WP**</span> and various smaller bourgeois parties. [? if center_right_coalition < 50: We are now faced with the choice to either "tolerate" the government to prevent the gains of extremists in the Reichstag or vote to oust Brüning and push for new elections. ?]
+ブリューニングは内閣を改造し、<span style="color: #b8996f;">**WP**</span>など我々より右に位置する小政党と、その他の小ブルジョワ政党を加えた。[? if center_right_coalition < 50: 我々は今や、国会で急進派が伸長するのを防ぐため政府に「閣外協力」するか、ブリューニング追放に票を投じて総選挙へ進むかを選ばねばならない。?]
 
 - @vote_no
 - @vote_yes
@@ -18,37 +18,37 @@ Brüning has reorganized his cabinet to include the smaller parties to the right
 - @center_right
 
 @vote_no
-title: Support the vote of no confidence, voting against the government.
-subtitle: The government will collapse, and there will be new elections.
+title: 不信任決議を支持し、政府に反対票を投じる。
+subtitle: 政府は崩壊し、総選挙が行われる。
 view-if: cordon_sanitaire >= 50 and center_right_coalition < 50
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; in_right_coalition = 0; in_center_right_coalition = 0; pro_republic -= 3; bruning_event_timer = 0; z_relation -= 5
 call: set_next_election_time
 
-We have broken with the [+ chancellor +] government, and have voted against them in a vote of no confidence. We also repealed their emergency powers.
+我々は[+ chancellor +]政権と袂を分かち、不信任投票で反対票を投じた。政府の緊急権限も撤回した。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+総選挙は[+ next_election_year +]年[+ next_election_month : month +]に決まった。
 
 @vote_yes
-title: Oppose the vote of no confidence, voting for the government.
-subtitle: We would essentially provide "toleration" to a bourgeois government.
+title: 不信任決議に反対し、政府に賛成票を投じる。
+subtitle: 実質的にブルジョワ政府へ「閣外協力」することになる。
 view-if: cordon_sanitaire >= 50 and center_right_coalition < 50
 on-arrival: spd_toleration = 1; in_right_coalition = 0; in_center_right_coalition = 0; left_dissent += 10; labor_dissent += 10; workers_spd *= 0.9; unemployed_spd *= 0.9; unemployed_nsdap += 3; unemployed_kpd += 3; workers_nsdap += 3; workers_kpd += 1; workers_spd -= 2 if welfare < 0; unemployed_spd -= 4 if welfare < 0; pro_republic -= 4; kpd_relation -= 8
 
-We try to convince the workers that this policy is necessary in order to maintain a stable parliamentary government, and to deal with the fiscal consequences of the depression. Still, this policy provides excellent recruiting fodder for <span style="color: #7A3C00;">Nazis</span> and <span style="color: #700000;">**Communists**</span>.
+我々は、安定した議会政治を維持し、恐慌がもたらした財政問題に対処するためにこの政策が必要だと労働者を説得する。それでも、この政策は<span style="color: #7A3C00;">ナチ党</span>と<span style="color: #700000;">**共産党**</span>に格好の宣伝材料を与える。
 
 @no_matter
-title: It does not matter what we do.
-subtitle: The anti-government parties have over 50% of the vote, no matter our choices.
+title: 我々が何をしても変わらない。
+subtitle: どちらを選んでも反政府諸党が過半数を握っている。
 view-if: cordon_sanitaire < 50
 call: set_next_election_time
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 5; bruning_event_timer = 0
 
-The bourgeois cabinet has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+ブルジョワ内閣は崩壊した。総選挙は[+ next_election_year +]年[+ next_election_month : month +]に決まった。
 
 @center_right
-title: It does not matter what we do.
-subtitle: Brüning will form a center-right coalition.
+title: 我々が何をしても変わらない。
+subtitle: ブリューニングは中道右派連立を組む。
 view-if: center_right_coalition >= 50
 on-arrival: spd_in_government = 0; spd_toleration = 0; spd_toleration_right = 0; in_grand_coalition = 0; in_center_right_coalition = 1; in_right_coalition = 0; ddp_relation -= 5; dvp_relation -= 5; z_relation -= 5; lvp_relation -= 5; old_middle_dnf -= 2; ddp_right += 1; bourgeois_cooperation += 2; liberal_cooperation += 1
 
-The bourgeois has survived without our toleration, leaving us as an opposition party. 
+ブルジョワ政権は我々の閣外協力なしに存続し、我々は野党に追いやられた。

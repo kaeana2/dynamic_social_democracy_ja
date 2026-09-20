@@ -1,5 +1,5 @@
-title: Goerdeler I Collapses
-subtitle: Mission failed.
+title: 第1次ゲルデラー内閣が崩壊
+subtitle: 任務失敗。
 view-if: chancellor == "Goerdeler" and goerdeler_pre_time >= 3 and goerdeler_right_coalition < 50
 new-page: true
 tags: event
@@ -17,14 +17,14 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Goerdeler I Collapses
+= 第1次ゲルデラー内閣の崩壊
 
-With Hugenberg and [+ nsdap_leader +]'s intransigence—and their irreconcilable differences with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and President Hindenburg—Goerdeler’s position is untenable. In a vote of no confidence, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] has abandoned him, leaving only the minor parties between the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and the [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?] backing his government.
+フーゲンベルクと[+ nsdap_leader +]の頑迷さ、そして両者と[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]およびヒンデンブルク大統領との埋めがたい対立により、ゲルデラーの立場は維持不能となった。不信任採決では[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]にも見捨てられ、政権を支持するのは[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?]の間に位置する小政党だけとなった。
 
 - @goerdeler
 
 @goerdeler
-title: The Reichstag is dissolved.
+title: 国会が解散される。
 on-arrival: {!
 Q.next_election_month = Q.month + 2;
 Q.next_election_time = Q.time + 2;
@@ -61,6 +61,6 @@ Q.unemployed_kpd += 4;
 Q.unemployed_spd += 2;
 !}
 
-Despite this embarrassment and show of unpopularity by the Goerdeler government, Schleicher and the Camarilla see this as an opportunity. He expects that, with the exodus of voters from the <span style="color: #7A3C00;">**NSDAP**</span> and the certainty of their collapse next election, they will be forced to become more sensible. 
+ゲルデラー政権が醜態をさらし、不人気を露呈したにもかかわらず、シュライヒャーと側近集団はこれを好機と見ている。<span style="color: #7A3C00;">**NSDAP**</span>から有権者が離れ、次の選挙での崩壊が確実になれば、彼らも現実的にならざるを得ないと期待しているのだ。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新選挙は[+ next_election_year +]年[+ next_election_month : month +]に設定された。

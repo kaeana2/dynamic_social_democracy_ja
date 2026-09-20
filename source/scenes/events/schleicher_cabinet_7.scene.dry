@@ -1,5 +1,5 @@
-title: Reichswehr Militia Deployed!
-subtitle: Schleicher moves to end streetfighting.
+title: 国防軍民兵の展開！
+subtitle: シュライヒャーが街頭闘争の終結へ動く。
 view-if: chancellor == "Schleicher" and (schleicher_time == 11 and prussia_leader == "Schleicher") or (schleicher_post_time >= 4 and prussia_leader != "Braun" and prussia_leader != "Rosenfeld")
 on-arrival: {!
 Q.reichsbanner_disarm_cost = Math.round(Q.rb_militancy * 15);
@@ -24,28 +24,28 @@ max-visits: 1
 tags: event
 face-image: img/Reichswehr.jpg
 
-= Reichswehr Militia Deployed!
+= 国防軍民兵の展開！
 
-The <span style="color: #7A3C00;">**SA**</span>'s dramatic escalation of seemingly pointless violence has gripped the streets, with many innocent civilians caught in the crossfire. Their increasingly open clashes with leftist groups, driven by frustration and insubordination, have spiraled out of control.
+<span style="color: #7A3C00;">**SA**</span>による無意味に思える暴力が劇的に激化して街頭を覆い、多数の無辜の市民が巻き添えとなった。不満と反抗心に突き動かされた左翼集団との衝突はますます公然化し、制御不能に陥っている。
 
-Although Schleicher admires the patriotic militarism of the <span style="color: #7A3C00;">**SA**</span>, he now dismisses it as little more than Röhm's tool for a <span style="color: #c00000;">socialistic</span> "national revolution"—a gang of thugs turning their violence against ordinary citizens. Röhm's open agitation for such a revolution has left Schleicher no choice but to ban the organization outright.
+シュライヒャーは<span style="color: #7A3C00;">**SA**</span>の愛国的軍国主義を高く評価していたが、今やこれを、レームが<span style="color: #c00000;">社会主義的</span>「国民革命」を起こすための道具、すなわち一般市民へ暴力を向ける暴漢の集団にすぎないと切り捨てた。レームが公然と革命を扇動したため、シュライヒャーには組織を全面禁止するほかなくなった。
 
-But Schleicher's objective is already achieved: former "desirable" <span style="color: #7A3C00;">**SA**</span> fighters have been integrated into a newly built militia attached to the Reichswehr, composed of ex-fighters and the unemployed. This force has been deployed to maintain order in the streets, working alongside the local police. However, they remain lenient toward their former comrades and display significant bias against the Reichsbanner and <span style="color: #700000;">**RFB**</span>.
+だがシュライヒャーの目的はすでに達成されている。元戦闘員と失業者から成る国防軍付属の新民兵に、かつて「有望」とみなされた<span style="color: #7A3C00;">**SA**</span>隊員が編入されたのだ。この部隊は地元警察と連携し、街頭の秩序維持に投入された。しかし、かつての同志には寛大な一方、国旗団と<span style="color: #700000;">**RFB**</span>には著しく偏った態度を示している。
 
-Nonetheless, this has succeeded in shifting public opinion toward the "law and order" chancellor, and further against the parliamentary system that failed to protect them.
+それでも、世論を「法と秩序」の首相へ引き寄せ、市民を守れなかった議会制度からさらに遠ざけることには成功した。
 
 - @schleicher_2
 - @schleicher_3
 
 @schleicher_2
-title: Maintain the funding of the Reichsbanner.
+title: 国旗団への資金供給を維持する。
 
-It's good to maintain our own self-defense organization, just in case.
+万一に備え、自前の自衛組織を維持するに越したことはない。
 
 @schleicher_3
-title: Defund the Reichsbanner; the threat is no longer present.
-subtitle: +[+ reichsbanner_disarm_cost +] resources
+title: 国旗団への資金供給を打ち切る。もはや脅威は存在しない。
+subtitle: 資源 +[+ reichsbanner_disarm_cost +]
 view-if: reichsbanner_disarm_cost > 0
 on-arrival: rb_militancy *= 0.5; rb_strength -= 400; resources += reichsbanner_disarm_cost; unemployed_spd -= 4; unemployed_kpd += 2; rfb_strength += 100
 
-With the Reichswehr keeping order in the streets, we have no further need for the Reichsbanner's self-defense role. Better to spend our scarce funds on electoral propaganda rather than weapons.
+国防軍が街頭の秩序を維持している以上、国旗団の自衛機能はもはや必要ない。乏しい資金は武器より選挙宣伝へ投じる方がよい。

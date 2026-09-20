@@ -1,5 +1,5 @@
-title: Lausanne Conference Begins
-subtitle: On the question of reparations...
+title: ローザンヌ会議、開幕
+subtitle: 賠償問題をめぐって……
 view-if: chancellor == "Papen" and papen_time == 3 and not reparations_resolved
 new-page: true
 max-visits: 1
@@ -17,15 +17,15 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Lausanne Conference Begins
+= ローザンヌ会議、開幕
 
-At the Lausanne Conference, the Allies will meet with German representatives to settle the reparations question once and for all. With the global economic crisis still raging, most now accept that Germany cannot resume payments once the current moratorium expires.
+ローザンヌ会議では、連合国とドイツの代表が賠償問題を最終的に解決するため会談する。世界経済危機がなお猛威を振るうなか、現在の支払猶予が終わってもドイツは支払いを再開できないという認識が、今や大勢を占めている。
 
-But with the reactionary nationalist Papen at the helm, Germany’s negotiating hand is weakened. The absence of the internationally respected Brüning, coupled with Papen’s reckless ambition to press for rearmament and a deletion of the 'war guilt' clause, threatens to derail the entire process.
+しかし反動的国家主義者パーペンが政権を率いるため、ドイツの交渉力は弱まっている。国際的に尊敬されるブリューニングが不在であるうえ、再軍備と「戦争責任」条項の削除を迫るパーペンの無謀な野心により、交渉全体が頓挫しかねない。
 
 - @lausanne
 
 @lausanne
-title: Anyhow, the German delegation is off to Switzerland.
+title: ともあれ、ドイツ代表団はスイスへ向かう。
 
-At the opening session, our delegation demands the complete cancellation of reparations. This position has found sympathy from the <span style="color: #C8102E;">British</span> and the <span style="color: #B31942;">Amer</span><span style="color: #0A3161;">icans</span>. France’s new left-wing government has softened its stance as well—though they still insist that Germany enter a pact with the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span>, including provisions for military détente. Negotiations will continue in the coming weeks.
+開会会議で、我が代表団は賠償の完全撤廃を要求した。この立場は<span style="color: #C8102E;">イギリス</span>と<span style="color: #B31942;">アメリ</span><span style="color: #0A3161;">カ</span>から共感を得ている。フランスの新左派政権も態度を軟化させたが、それでも軍事的緊張緩和の規定を含む<span style="color: #0A3161;">西欧</span><span style="color: #C8102E;">連合国</span>との協定へドイツが加わるよう求めている。交渉は今後数週間にわたり続けられる。

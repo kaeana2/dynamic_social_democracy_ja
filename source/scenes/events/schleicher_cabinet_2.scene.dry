@@ -1,5 +1,5 @@
-title: Schleicher and the <span style="color: #385A38;">Agrarians</span>
-subtitle: The <span style="color: #006400;">RLB</span> is disappointed in Schleicher's agricultural policy.
+title: シュライヒャーと<span style="color: #385A38;">農本主義者</span>
+subtitle: <span style="color: #006400;">RLB</span>はシュライヒャーの農業政策に失望している。
 view-if: chancellor = "Schleicher" and schleicher_time == 5 and eastern_aid and dnvp_ideology == "Radical" and rlb_nazi
 new-page: true
 tags: event
@@ -18,25 +18,25 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Schleicher and the <span style="color: #385A38;">Agrarians</span>
+= シュライヒャーと<span style="color: #385A38;">農本主義者</span>
 
-Schleicher’s economic and agricultural ministers remain locked in a bitter struggle over tariffs—part of the broader conflict between industrialists and agrarians. Schleicher has refused to take a side, maintaining a façade of unity for the public. However, his failure to uphold a promise to continue Papen’s protectionist policies—meant to shield German farm products from cheap foreign imports—has led the increasingly right-wing <span style="color: #006400;">National Rural League</span> (<span style="color: #006400;">RLB</span>) to turn against him.
+シュライヒャー内閣の経済相と農相は、産業界と農業界の広範な対立の一部である関税問題をめぐり、激しく争い続けている。シュライヒャーはどちらにも与せず、国民の前では団結の外観を保った。しかし、安価な外国産品からドイツ農産物を守るパーペンの保護主義政策を継続するという約束を守らなかったため、右傾化を強める<span style="color: #006400;">全国農村同盟</span>（<span style="color: #006400;">RLB</span>）は彼に反旗を翻した。
 
-President Hindenburg, like many conservative Germans of his generation, viewed agriculture as the bedrock of national life—a source of tradition and moral strength. It was he who, of his own accord, summoned the economic and agricultural ministers, along with Schleicher, to a meeting with the <span style="color: #006400;">RLB</span>. The cabinet temporarily mollified the situation by promising future action.
+ヒンデンブルク大統領は、同世代の多くの保守的ドイツ人と同じく、農業を国民生活の基盤であり、伝統と道徳的力の源泉とみなしていた。自らの発意で経済相、農相、シュライヒャーを<span style="color: #006400;">RLB</span>との会談へ招集したのも大統領である。内閣は今後の措置を約束し、一時的に事態を宥めた。
 
-Yet Hindenburg and the <span style="color: #006400;">RLB</span> remained dissatisfied, particularly over the government’s failure to renew a decree shielding bankrupt farmers from foreclosure. In truth, however, the <span style="color: #006400;">RLB</span> had long since become a political instrument of the <span style="color: #7A3C00;">**NSDAP**</span>, more interested in toppling Schleicher than securing concessions. Despite the earlier agreement, they publicly attacked the chancellor—prompting an angry Schleicher to break off further talks. Hindenburg, under the influence of his *Junker* friends, voiced his disapproval.
+それでもヒンデンブルクと<span style="color: #006400;">RLB</span>の不満は収まらず、とりわけ破産農民を差し押さえから守る大統領令を政府が更新しなかったことを問題視した。しかし実のところ、<span style="color: #006400;">RLB</span>はとうに<span style="color: #7A3C00;">**NSDAP**</span>の政治的道具となり、譲歩を得ることよりシュライヒャー打倒に関心を向けていた。先の合意にもかかわらず首相を公然と攻撃したため、激怒したシュライヒャーは以後の交渉を打ち切った。*ユンカー*の友人に影響されたヒンデンブルクは不満を表明した。
 
-Eventually, Schleicher relented and agreed to issue a new measure protecting bankrupt farmers from foreclosure.
+最終的にシュライヒャーは折れ、破産農民を差し押さえから守る新措置の発令に同意した。
 
 - @schleicher
 
 @schleicher
-title: Eastern Aid Scandal Revealed!
-subtitle: Accusations of *Junker* misuse of government aid funds.
+title: 東部救済事業疑獄が発覚！
+subtitle: *ユンカー*による政府救済資金の不正利用疑惑。
 on-arrival: workers_spd += 2; workers_kpd += 1; workers_z += 1; hindenburg_hitler_r += 1; hindenburg_schleicher_r -= 1; schleicher_approval -= 1
 
-Although not directly related to recent negotiations, a scandal was revealed during a session of the Reichstag’s budget committee: a <span style="color: #000000;">Center Party</span> member leveled sweeping accusations of fraud against beneficiaries of the Eastern Aid program. Meant to rescue bankrupt estates, the funds were allegedly used instead for racehorses, luxury cars, and lavish holidays—at a time when millions of Germans were living in poverty.
+最近の交渉とは直接関係しないが、国会予算委員会の審議中に疑獄が発覚した。<span style="color: #000000;">中央党</span>議員が東部救済事業の受益者による大規模な不正を告発したのである。破産した所領を救済するはずの資金が、何百万人ものドイツ人が貧困に苦しむなか、競走馬、高級車、豪華な休暇へ流用されたという。
 
-President Hindenburg himself has been implicated. His *Neudeck* estate—a gift from right-wing industrialists and the <span style="color: #006400;">RLB</span> in 1927—was transferred into his son Oskar’s name to avoid taxes. Though not legally contestable, the revelation that many of Hindenburg’s close friends also benefited has deeply unsettled the President, who is now inundated with complaints from his old allies.
+ヒンデンブルク大統領自身にも疑惑が及んだ。1927年に右翼実業家と<span style="color: #006400;">RLB</span>から贈られた*ノイデック*の所領は、課税を逃れるため息子オスカー名義へ移されていた。法的に争える問題ではないものの、ヒンデンブルクの親しい友人の多くも利益を得ていた事実が明らかになり、旧来の盟友から苦情を浴びせられた大統領は大いに動揺している。
 
-Given Schleicher’s reputation for shadowy political maneuvering, and the fact that these revelations surfaced just a day after his break with the <span style="color: #006400;">RLB</span>, many suspect that he orchestrated the leak as an act of revenge.
+シュライヒャーが陰謀めいた政治工作で知られ、<span style="color: #006400;">RLB</span>と決裂した翌日に疑惑が浮上したことから、多くの者は彼が報復として情報漏洩を仕組んだと疑っている。

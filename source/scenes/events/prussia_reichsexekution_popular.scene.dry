@@ -1,5 +1,5 @@
-title: Coup in Prussia
-subtitle: The President attempts to overthrow the Prussian government.
+title: プロイセン・クーデター
+subtitle: 大統領がプロイセン政府の打倒を図る。
 view-if: president = "Hindenburg" and in_popular_front_prussia and reichsexekution >= 3 and not presidential_powers and prussian_coup_seen = 0 and prussian_reichsexekution = 0
 on-arrival: prussian_reichsexekution = 1; strife += 2; hindenburg_angry += 15
 new-page: true
@@ -7,23 +7,23 @@ tags: event
 max-visits: 1
 face-image: img/Reichswehr.jpg
 
-= Coup in Prussia
+= プロイセン・クーデター
 
-A crisis! President [+ president +] has invoked the <i>Reichsexekution</i> to dismiss the Prussian government, citing its "inability to maintain order" amidst escalating clashes between the <span style="color: #7A3C00;">**SA**</span>, Reichsbanner, and the increasingly militant <span style="color: #700000;">**RFB**</span>. However, the true motivation is clear: the left-wing coalition governing Prussia poses a direct threat to the conservative and nationalist establishment in Germany.
+危機だ！　大統領[+ president +]は<i>ライヒ執行</i>を発動し、プロイセン政府の罷免を命じた。<span style="color: #7A3C00;">**SA**</span>、国旗団、そして軍事化を強める<span style="color: #700000;">**RFB**</span>の衝突が激化するなか、州政府には「秩序を維持する能力がない」というのである。しかし真の動機は明白だ。プロイセンを統治する左派連立政権は、ドイツの保守・民族主義支配層にとって直接の脅威なのである。
 
-The legality of this action remains highly questionable. The left-wing coalition has vowed to resist, while the streets are descending into chaos with mass protests and rising political violence.
+この措置の合法性には重大な疑義が残る。左派連立政権は抵抗を誓う一方、街頭では大規模な抗議運動と政治的暴力が広がり、混乱が深まっている。
 
 - @defend
 - @surrender
 
 
 @defend
-title: Fight against the overthrow attempt!
-subtitle: Labor will call a general strike. The Reichsbanner and the loyal elements of the Prussian police will resist the coup. The <span style="color: #700000;">**KPD**</span> remains unwavering in its support.
+title: 政権打倒の企てと戦え！
+subtitle: 労働者はゼネストを宣言する。国旗団とプロイセン警察の忠実な部隊もクーデターに抵抗する。<span style="color: #700000;">**KPD**</span>の支持は揺るがない。
 
-The Reichswehr and <span style="color: #3E88B3;">**Stahlhelm**</span> are already surrounding Berlin, and the <span style="color: #7A3C00;">**SA**</span> is supporting them. This could be civil war. We do realize that, correct? 
+国防軍と<span style="color: #3E88B3;">**鉄兜団**</span>はすでにベルリンを包囲し、<span style="color: #7A3C00;">**SA**</span>も彼らを支援している。これは内戦になりかねない。そのことは理解しているはずだ。
 
-- @defend_2: We will fight, even if it leads to a civil war.
+- @defend_2: 内戦になろうとも戦う。
 - @surrender
 
 @defend_2
@@ -35,9 +35,9 @@ on-arrival: sa_strength *= 0.8; sh_strength *= 0.8; pro_republic += 6; workers_s
 achievement: bollwerk_der_demokratie
 go-to: defend_2_victory_2
 
-Our combined forces confront the government troops and their <span style="color: #808080;">reactionary</span> auxiliaries, and somehow, our enemies retreat without a fight! They were overwhelmed by our display of strength, and have chosen to slink away. President [+ president +] withdraws the dismissal of the Prussian government, at least for now.
+我々の連合部隊が政府軍と<span style="color: #808080;">反動派</span>の補助部隊に対峙すると、どういうわけか敵は戦わずして撤退した！　我々が示した力に圧倒され、尻尾を巻いて逃げる道を選んだのだ。大統領[+ president +]は、少なくとも当面、プロイセン政府の罷免を撤回した。
 
-The show of force has reinvigorated support for the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span>, and has weakened the <span style="color: #7A3C00;">fascists</span>.
+この示威行動は<span style="color: #c00000;">**SPD**</span>と<span style="color: #700000;">**KPD**</span>への支持を再び活気づけ、<span style="color: #7A3C00;">ファシスト</span>を弱体化させた。
 
 @defend_2_victory_2
 achievement: drei_pfeile
@@ -45,18 +45,18 @@ achievement: drei_pfeile
 
 @defend_2_civil_war
 
-Our forces confront the government troops and their supporters on the streets of Berlin, and armed fighting erupts. The <span style="color: #808080;">reactionaries</span> do not budge from their positions. We are caught at a disadvantage.
+ベルリンの街頭で我々の部隊が政府軍とその支持者に対峙し、武力衝突が始まった。<span style="color: #808080;">反動派</span>は陣地から一歩も退かない。我々は不利な状況に追い込まれている。
 
-- @civil_war: It is a civil war.
+- @civil_war: 内戦だ。
 
 
 
 
 @surrender
-title: Give up on the Prussian government.
-subtitle: The <span style="color: #700000;">**RFB**</span> will fight alone.
+title: プロイセン政府を諦める。
+subtitle: <span style="color: #700000;">**RFB**</span>は単独で戦うことになる。
 on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; prussia_leader = "Goerdeler"; workers_spd -= 5; workers_kpd -= 5; unemployed_kpd -= 5; unemployed_spd -= 5; left_dissent += 10; labor_dissent += 10; rb_militancy = rb_militancy/2; rb_strength -= 1000; rfb_banned = 1; rfb_strength -= 200; rfb_militancy -= 0.25; kpd_relation -= 30; communist_coalition -= 3; next_election_time_prussia = time + 48; next_election_year_prussia = year + 4
 
-The <span style="color: #700000;">communists</span> who resist are brutally suppressed, and without the support of the Reichsbanner, we are forced to surrender the Prussian government to the <span style="color: #808080;">reactionaries</span>. A pall of hopelessness and despair descends over <span style="color: #c00000;">Social Democracy</span>. We have failed. The <span style="color: #700000;">**KPD**</span> will never trust us again. Many in the Reichsbanner simply quit, demoralized by their leaders' lack of a call to action.
+抵抗した<span style="color: #700000;">共産党員</span>は容赦なく鎮圧され、国旗団の支援を欠いた我々は、プロイセン政府を<span style="color: #808080;">反動派</span>へ明け渡さざるをえなかった。絶望と失意の暗雲が<span style="color: #c00000;">社会民主主義</span>を覆う。我々は敗北した。<span style="color: #700000;">**KPD**</span>が再び我々を信頼することはないだろう。指導者が決起を呼びかけなかったことに落胆し、国旗団を去る者も相次いでいる。
 
-Hindenburg appoints the <span style="color: #3E88B3;">nationalist</span> Carl Friedrich Goerdeler, who renounces his party affiliation, to govern over Prussia as a <i>Reichskommissar</i>, charged with dismantling the democratic systems we worked hard to build.
+ヒンデンブルクは、党籍を離脱した<span style="color: #3E88B3;">民族主義者</span>カール・フリードリヒ・ゲルデラーをプロイセン国家弁務官に任命し、我々が苦労して築いた民主的制度の解体を命じた。

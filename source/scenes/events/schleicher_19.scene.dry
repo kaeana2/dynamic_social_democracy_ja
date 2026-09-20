@@ -1,5 +1,5 @@
-title: German Labor Front Formed
-subtitle: A state-controlled labor organization is established.
+title: ドイツ労働戦線の結成
+subtitle: 国家の管理下に置かれた労働組織が設立される。
 view-if: chancellor = "Schleicher" and dnef_formed and ((workers_schleicher >= 10 and (rb_force < 30 or unions_independent or labor_dissent >= 40)) or schleicher_spd_labor) and schleicher_post_time >= 14 and z_relation < 50 and not schleicher_pause
 on-arrival: {!
 Q.workers_schleicher_bonus += 2;
@@ -13,17 +13,17 @@ tags: event
 max-visits: 1
 face-image: img/beauty_of_labor.jpg
 
-= German Labor Front
+= ドイツ労働戦線
 
-Schleicher has been working intensively over the past weeks to forge a formal alliance between the trade unions and the state, focusing his efforts on the <span style="color: #000000;">Christian</span> associations. Their negotiations have now "succeeded"—with heavy doses of state intimidation and interference ensuring they accepted an offer that would have been unthinkable under normal circumstances.
+シュライヒャーはここ数週間、労組と国家の正式な同盟を築こうと精力的に動き、特に<span style="color: #000000;">キリスト教系</span>団体に力を注いできた。交渉は今や「成功」した。国家による強い威嚇と介入によって、通常なら考えられない提案を受け入れさせたのである。
 
-Under this agreement, the blue-collar <span style="color: #D3C24D;">Hirsch-Duncker</span>, <span style="color: #000000;">Christian</span>, and the Strasserist <span style="color: #7A3C00;">**NSBO**</span> unions are merged into the new German Labor Front (DAF). White-collar and civil servant unions, including the DHV, are folded into their own section within the Front. The right to strike is curtailed, and all members are made to pledge full loyalty to the so-called "national interest"—however the state chooses to define it.
+この合意により、ブルーカラーの<span style="color: #D3C24D;">ヒルシュ＝ドゥンカー</span>系、<span style="color: #000000;">キリスト教系</span>、シュトラッサー派の<span style="color: #7A3C00;">**NSBO**</span>の各労組は、新たなドイツ労働戦線（DAF）に統合される。DHVを含むホワイトカラーと公務員の労組は、戦線内の別部門に組み込まれる。ストライキ権は制限され、全組合員は、国家がどう定義しようとも、いわゆる「国益」への全面的な忠誠を誓わされる。
 
-Local union leaders who refuse to join are having their offices raided, their funds confiscated, and themselves imprisoned. While membership in the German Labor Front is technically voluntary, access to benefits—and even basic protections—is now locked behind it, making participation all but mandatory. Furthermore, a new department is established in the DAF, tasked solely with spreading state propaganda and binding the workers more tightly into the <i>Volksgemeinschaft</i>.
+加入を拒む地方労組指導者は、事務所を襲撃され、資金を没収され、投獄されている。ドイツ労働戦線への加入は建前上は任意だが、給付や基本的な保護すら加入しなければ得られず、参加は事実上の義務となった。さらにDAF内には、国家の宣伝を広め、労働者を<i>民族共同体</i>に一層強く結びつけることだけを任務とする新部門が設けられた。
 
-The chancellor is also able to palate the industrialists, by placing their power significantly above that of labor in the newly established corporatist framework.
+首相は、新たな協調組合主義の枠組みで実業界の権力を労働側より大幅に強くすることにより、実業家も満足させている。
 
-- @schleicher_2: What about the ADGB?
+- @schleicher_2: ADGBはどうなる？
 
 @schleicher_2
 go-to: schleicher_adgb_influence if schleicher_spd_influence >= 8; schleicher_adgb_choice if schleicher_spd_influence < 6 and schleicher_spd_r >= 5; schleicher_adgb_joever if schleicher_spd_influence < 6 and schleicher_spd_r < 5
@@ -49,25 +49,25 @@ Q.schleicher_spd_r -= 2;
 Q.schleicher_spd_support -= 5;
 !}
 
-Schleicher now wields extensive influence over the <span style="color: #c00000;">**SPD**</span>, and even greater sway within our affiliated trade union, the ADGB. Exploiting this grip—alongside a relentless psychological campaign among the rank-and-file and open intimidation by the Reichswehr militia, which threatens action if no decision is made before the deadline—Schleicher forces their submission to the German Labor Front—soon to be integrated.
+シュライヒャーは今や<span style="color: #c00000;">**SPD**</span>に広範な影響力を持ち、系列労組ADGBではさらに強い力を振るっている。この支配力に加え、一般組合員への執拗な心理工作と、期限までに決定しなければ実力行使に出ると脅す国防軍民兵の公然たる威嚇を用い、ADGBをドイツ労働戦線に屈服させた。統合は間もなく行われる。
 
-The new ADGB chairmen waste no time: they denounce all ties to political parties and pledge loyalty to nothing but the nation. <span style="color: #9B0000;">Marxist</span> doctrine is stamped out, and the radical <span style="color: #c00000;">**SPD**</span> members are purged without ceremony.
+ADGBの新議長らは直ちに、あらゆる政党との関係を否定し、国民以外には忠誠を誓わないと宣言した。<span style="color: #9B0000;">マルクス主義</span>の教義は一掃され、急進的な<span style="color: #c00000;">**SPD**</span>党員は容赦なく粛清される。
 
-The fall of the ADGB marks the beginning of the end. If even the workers no longer stand with us—what power do we really have left?
+ADGBの陥落は、終わりの始まりを告げる。労働者すら我々とともに立たないなら、一体どんな力が残っているというのか。
 
 @schleicher_adgb_choice
 
-Schleicher lacks the full leverage to force a <i>fait accompli</i> over the ADGB—at least for now. But we remain cornered, with few good options left. A sizable minority, perhaps even a plurality, of unionists have already fallen under his sway. And his threat is clear: the Reichswehr’s militia stands ready to act if no decision is reached before the deadline.
+シュライヒャーには、少なくとも今のところ、ADGBに<i>既成事実</i>を押し付けるだけの力はない。しかし我々は追い詰められ、良い選択肢はほとんど残っていない。組合員の相当な少数派、あるいは最大勢力が、すでに彼の影響下にある。脅しも明白だ。期限までに決定がなされなければ、国防軍民兵は実力行使に出る構えである。
 
-Our good relations have kept him from forcing the issue—so far—but his patience is running out.
+これまでは良好な関係のおかげで強行を避けさせてきたが、彼の忍耐は尽きかけている。
 
-What shall we do?
+どうするべきか。
 
 - @schleicher_adgb_choice_1
 - @schleicher_adgb_choice_2
 
 @schleicher_adgb_choice_1
-title: Approve the ADGB's entry into the DAF.
+title: ADGBのDAFへの加入を認める。
 on-arrival: {!
 Q.unions_independent = 1;
 Q.unions_independent_schleicher = 1;
@@ -90,20 +90,20 @@ Q.schleicher_spd_r -= 2;
 Q.schleicher_spd_support -= 4;
 !}
 
-The ADGB is now being absorbed into the DAF, with its new chairmen wasting no time denouncing all ties to political parties and pledging loyalty solely to the nation. <span style="color: #9B0000;">Marxist</span> doctrine is stamped out, and the radical <span style="color: #c00000;">**SPD**</span> elements are purged without ceremony.
+ADGBは今やDAFへ吸収されつつある。新議長らは直ちにあらゆる政党との関係を否定し、国民へのみ忠誠を誓った。<span style="color: #9B0000;">マルクス主義</span>の教義は一掃され、急進的な<span style="color: #c00000;">**SPD**</span>勢力は容赦なく粛清される。
 
-The fall of the ADGB marks the beginning of the end. If even the workers have abandoned us—what power do we have left?
+ADGBの陥落は、終わりの始まりを告げる。労働者すら我々を見捨てたなら、どんな力が残っているというのか。
 
 @schleicher_adgb_choice_2
-title: We will refuse.
+title: 拒否する。
 
-Are you sure? We have lost our opportunity a long time ago, resistance at this point will be frivolous.
+本当にいいのか。好機はとうに失われた。今となっては、抵抗しても無駄だろう。
 
 - @schleicher_adgb_choice_1
 - @schleicher_adgb_choice_2_pro
 
 @schleicher_adgb_choice_2_pro
-title: We are sure.
+title: 決意は固い。
 on-arrival: {!
 Q.schleicher_points = 0;
 Q.spd_points = 0;
@@ -166,13 +166,13 @@ Q.schleicher_fight = 1;
 
 !}
 
-We are alone. Nonetheless, we will do everything in our power to launch a general strike and fill the street with protesters. 
+我々は孤立している。それでも全力を尽くしてゼネストを起こし、抗議者で街頭を埋め尽くそう。
 
 - @spd_med
 - @spd_lose
 
 @spd_med
-title: Schleicher attempts to negotiate with us.
+title: シュライヒャーが我々との交渉を試みる。
 on-arrival: {!
 Q.schleicher_spd_influence = 0;
 Q.schleicher_spd_r = 0;
@@ -208,29 +208,29 @@ Q.labor_dissent -= 10;
 !}
 view-if: spd_med
 
-The nationwide general strike against Schleicher's authoritarian regime has brought the country to a standstill. The chancellor could unleash the Reichswehr and <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> paramilitaries to brutally crush the protests—but for now, that remains a last resort. Instead, Schleicher has chosen to open negotiations with the opposition.
+シュライヒャーの権威主義体制に対する全国ゼネストにより、国は機能を停止した。首相は国防軍と<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の準軍事組織を投入し、抗議を残虐に鎮圧することもできる。しかし今のところ、それは最後の手段である。代わりにシュライヒャーは、反対勢力との交渉を始めることを選んだ。
 
-Meanwhile, in defiance of the indefinite adjournment of the Reichstag, the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> parties have banded together to unofficially reconvene the chamber at a separate location, openly challenging federal authority.
+一方、<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>諸党は国会の無期限休会に抗し、結束して別の場所で非公式に議会を再開した。全国政府の権威への公然たる挑戦である。
 
-However, perhaps we have overestimated our strength—strikes rarely last with unemployment so high, especially with Schleicher’s sympathizers embedded within the unions themselves.
+しかし、我々は自らの力を過大評価したのかもしれない。これほど失業率が高く、しかも労組内部にシュライヒャー支持者が入り込んでいては、ストライキはめったに長続きしない。
 
 - @schleicher_cabinet_13_pre
 
 @schleicher_cabinet_13_pre
-title: Schleicher's Turn to Play
-subtitle: Will the general hold firm?
+title: 次はシュライヒャーの手番だ
+subtitle: 将軍は強硬姿勢を貫くだろうか。
 go-to: schleicher_cabinet_13
 
 @spd_lose
-title: Our protests are ineffective.
+title: 我々の抗議は効果を上げない。
 view-if: spd_lose
 on-arrival: hammerstein_win = 1
 
-The general strike proves short-lived. An endless supply of unemployed strikebreakers and Schleicher's own sympathizers within the unions render it largely ineffective. Protesters are shot, civilians killed. The Reichsbanner is no match for the Reichswehr.
+ゼネストは短命に終わった。失業者のスト破りが際限なく供給され、労組内部のシュライヒャー支持者も妨げとなり、ほとんど効果を上げられなかった。抗議者は銃撃され、市民が殺された。国旗団は国防軍に歯が立たない。
 
-Seizing the moment, Schleicher expands his crackdown, accusing the <span style="color: #c00000;">**SPD**</span> of conspiring with the <span style="color: #700000;">**Communists**</span> to incite revolution.
+機を捉えたシュライヒャーは、<span style="color: #c00000;">**SPD**</span>が<span style="color: #700000;">**共産党**</span>と共謀して革命を扇動していると非難し、弾圧を拡大した。
 
-Germany is lost.
+ドイツは失われた。
 
 - @game_over
 
@@ -263,8 +263,8 @@ Q.schleicher_spd_r -= 3;
 Q.schleicher_spd_support -= 5;
 !}
 
-With Schleicher lacking the influence to influence the ADGB chairmen personally, or having the adequate relations with us to negotiate a more peaceful solution, violence is the only option.
+シュライヒャーにはADGB議長らを直接動かす影響力がなく、より平和的な解決を交渉するための良好な関係も我々との間にない。残る選択肢は暴力だけだ。
 
-Across the country, ADGB offices are ransacked by the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> paramilitaries and the Reichswehr, arresting leaders, confiscating funds, and repurposing offices to be used for the DAF.
+全国で、<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の準軍事組織と国防軍がADGBの事務所を荒らし回り、指導者を逮捕し、資金を没収している。事務所はDAFのために転用される。
 
-The fall of the ADGB marks the beginning of the end. If even the workers have abandoned us—what power do we have left?
+ADGBの陥落は、終わりの始まりを告げる。労働者すら我々を見捨てたなら、どんな力が残っているというのか。

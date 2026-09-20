@@ -1,4 +1,4 @@
-title: Dealing with Toleration
+title: 閣外協力への対応
 new-page: true
 is-card: true
 card-image: img/portraits/BrüningHeinrich.jpg
@@ -7,75 +7,75 @@ on-arrival: dealing_with_toleration_timer += 6; month_actions += 1
 tags: govt_affairs
 #subtitle: Despite not being in government, we can still provide support.
 
-= Dealing with Toleration
+= 閣外協力への対応
 
-We are currently providing external support to the government of Chancellor [+ chancellor +], but our influence has been severely weakened due to the formation of the <span style="color: #000000;">**[+ z_party_name +]**</span> by former <span style="color: #3E88B3;">**DNVP**</span> members. Furthermore, the <span style="color: #000000;">**[+ z_party_name +]**</span> is actively trying to distance itself from our support. How should we use our position?
+現在、[+ chancellor +]首相の政府へ閣外協力しているが、旧<span style="color: #3E88B3;">**DNVP**</span>党員が<span style="color: #000000;">**[+ z_party_name +]**</span>を結成したことで、我々の影響力は著しく低下した。さらに<span style="color: #000000;">**[+ z_party_name +]**</span>は、我々の支持から積極的に距離を置こうとしている。この立場をどう利用すべきか？
 
 - @break_toleration
 - @urge_against_austerity_limited
 - @improve_relations
-- @stay_course: Stay the course, for stability's sake.
+- @stay_course: 安定のため、現方針を維持する。
 - @easy_discard
 
 @break_toleration
 view-if: not constructive_vonc
-title: End the toleration agreement with a vote of no confidence!
+title: 不信任投票で閣外協力を打ち切る！
 
-Are we sure about this? A vote of no confidence would trigger new elections, and potentially an increased vote-share for the extremist parties. [? if in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] also threatens a no-confidence vote against us in Prussia, pressuring us to stay the course.?]
+本当に実行するのか？ 不信任投票は新たな選挙を招き、過激派政党の得票を伸ばすおそれがある。[? if in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]もプロイセンで我々に対する不信任投票を行うと脅し、現方針の維持を迫っている。?]
 
-- @vonc: Yes, end this arrangement!
-- @stay_course: No, we should stay the course.
+- @vonc: ああ、この協力関係を終わらせる！
+- @stay_course: いや、現方針を維持すべきである。
 
 @vonc
 on-arrival: spd_in_government = 0; spd_toleration = 0; spd_toleration_right = 0; in_grand_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5; left_dissent -= 5; dvp_relation -= 4; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; ddp_right += 1; dvp_right += 2
 go-to: new_prussia_election if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and ((center_right_coalition_prussia < 50 and dnvp_ideology == "Moderate") or dnvp_ideology == "Radical"); center_right_coalition_prussia if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and (((center_right_coalition_prussia >= 50 or right_coalition_prussia >= 50) and dnvp_ideology == "Moderate") or bourgeois_coalition_prussia >= 50)
 
-We have called for a vote of no confidence, and have brought down this government. Chancellor [+ chancellor +] currently rules as acting chancellor.
+不信任投票を求め、この内閣を倒した。現在は[+ chancellor +]首相が暫定首相として統治している。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新たな選挙は[+ next_election_year +]年[+ next_election_month : month +]に設定された。
 
 @new_prussia_election
 on-arrival: z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; kpd_relation += 5; dvp_right += 3; ddp_right += 2; lvp_right += 2; pro_republic -= 3; new_middle_spd -= 2; rural_spd -= 2; old_middle_spd -= 2; catholics_spd -= 2; new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 2; catholics_nsdap += 2; in_right_coalition_prussia = 0; in_social_catholic_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; prussia_coalition_trigger = 0
 call: set_next_election_time_prussia
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] has called a retaliatory vote in Prussia, forcing the dissolution of the Landtag for new elections.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は報復としてプロイセンで採決を求め、州議会を解散させて新たな選挙へ追い込んだ。
 
-New Prussian elections have been set for [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
+新たなプロイセン州選挙は[+ next_election_year_prussia +]年[+ next_election_month_prussia : month +]に設定された。
 
-A double dissolution has shaken the people's faith in democracy, with the <span style="color: #7A3C00;">Nazis</span> exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
+二重の議会解散は民主主義への国民の信頼を揺るがした。<span style="color: #7A3C00;">ナチ</span>は混乱を利用し、民主主義は機能せずドイツには強力な指導者が必要だと主張している。
 
 @center_right_coalition_prussia
 on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; prussia_coalition_trigger = 0; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; new_middle_spd -= 3; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; dvp_right += 3; ddp_right += 2; pro_republic -= 3; prussian_police_loyalty -= 0.06; prussian_police_strength -= 8; 
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] has called a retaliatory no confidence vote in Prussia, replacing our government with a center-right coalition composed of all parties to our right, except for the <span style="color: #003755;">**DNF**</span> and <span style="color: #7A3C00;">**NSDAP**</span>. While this is a setback, it is not the worst possible outcome, as new elections could have led to significant gains for extremist parties.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は報復としてプロイセンで不信任投票を行い、我々の政府を<span style="color: #003755;">**DNF**</span>と<span style="color: #7A3C00;">**NSDAP**</span>を除く右側の全政党による中道右派連立へ置き換えた。これは後退だが、新たな選挙なら過激派政党が大幅に伸長した可能性もあり、最悪の結果ではない。
 
-[? if z_leader != "Stegerwald": Adam Stegerwald?][? if z_leader == "Stegerwald": Heinrich Brüning?] of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected to be the Minister-President of Prussia.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の[? if z_leader != "Stegerwald": アダム・シュテーガーヴァルト?][? if z_leader == "Stegerwald": ハインリヒ・ブリューニング?]がプロイセン州首相に選ばれた。
 
 @urge_failure
 on-arrival: dvp_relation -= 3; ddp_relation -= 3; lvp_relation -= 3; cvp_left += 1; workers_z -= 2; workers_spd += 2; unemployed_z -= 2; unemployed_spd += 2
 
-Unfortunately, the historically strict party discipline of the <span style="color: #000000;">Center Party</span> has carried over to its successor, which has successfully rallied the party against the bill. However, this is sure to spark discontent within the party, as it struggles to maintain its diverse coalition while also attempting to implement its fiscal reform policy.
+残念ながら、<span style="color: #000000;">中央党</span>の伝統的に厳格な党議拘束は後継政党にも受け継がれ、法案反対で党をまとめることに成功した。しかし多様な支持連合を維持しながら財政改革を実行しようとすれば、党内に不満が生じるのは確実である。
 
 @urge_against_austerity_limited
-title: Put forth a proposal to increase welfare spending and reverse austerity cuts.
-subtitle: This move will drive a wedge between the <span style="color: #000000;">**[+ z_party_name +]**</span> and their Labor and <span style="color: #FF7F00;">Christian Left</span> factions.
+title: 福祉支出を増額し、緊縮削減を撤回する案を提出する。
+subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span>指導部と労働派・<span style="color: #FF7F00;">キリスト教左派</span>の間に楔を打ち込む。
 go-to: urge_success_limited if z_relation >= 40; urge_failure if z_relation < 40
 
 @urge_success_limited
 on-arrival: bruning_austerity_limited += 1; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent) if bruning_austerity_limited >= 3; new_middle_ddp += 2; old_middle_ddp += 2; new_middle_dvp += 2; old_middle_dvp += 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; new_middle_lvp += 2; old_middle_lvp += 2; z_relation -= 3; reformist_dissent -= 5; center_dissent -= 3; labor_dissent -= 5; dvp_right += 1; ddp_right += 0.5; lvp_right += 1; hindenburg_angry_bruning += 10; economic_growth += 0.2; unemployed -= 0.2; cvp_left += 2
 
-The motion passes! Despite the historically strict party discipline within the former <span style="color: #000000;">Center</span>, the diverse base of the party has weakened the leadership’s control over its parliamentary delegation. However, this has left the incumbent cabinet vulnerable to strong attacks from the <span style="color: #7A3C00;">far</span>-<span style="color: #003755;">right</span>, as it further cements their association with the <span style="color: #c00000;">socialists</span> in the eyes of their industrial backers.
+動議は可決された！ 旧<span style="color: #000000;">中央党</span>には伝統的に厳格な党議拘束があったが、支持基盤の多様化によって議員団に対する指導部の統制は弱まっている。一方、産業界の後援者から見て現内閣と<span style="color: #c00000;">社会主義者</span>の結びつきがさらに強まったため、内閣は<span style="color: #7A3C00;">極</span><span style="color: #003755;">右</span>の激しい攻撃にさらされている。
 
-[? if bruning_austerity_limited == 1: We have successfully prevented Brüning from decreasing taxes on high earners, thus lessening the burden of compensatory tax increases on the lower strata. ?][? if bruning_austerity_limited == 2: We have successfully pressured Brüning into appeasing us by reinstating the 40-hour workweek, although wages remain suboptimal. ?][? if bruning_austerity_limited >= 3: We have successfully pressured Brüning into reversing some salary cuts for civil servants. ?]
+[? if bruning_austerity_limited == 1: ブリューニングによる高所得者減税を阻止し、その穴埋めとして下層へ課される増税負担を軽減した。 ?][? if bruning_austerity_limited == 2: ブリューニングに圧力をかけ、賃金はなお不十分ながら週40時間労働制を復活させた。 ?][? if bruning_austerity_limited >= 3: ブリューニングに圧力をかけ、公務員給与削減の一部を撤回させた。 ?]
 
 @improve_relations
-title: Improve relations with the parties of the coalition.
+title: 連立諸党との関係を改善する。
 on-arrival: z_relation += 4*(1-dissent); dvp_relation += 3*(1-dissent); ddp_relation += 3*(1-dissent); lvp_relation += 3*(1-dissent); left_dissent += 5; dvp_left += 1; ddp_left += 0.5; ddp_cohesion -= 0.5; lvp_left += 1; dnvp_angry += 1 if spd_toleration_right
 
-We have increased our level of contact and discussions with the parties of the coalition, primarily the [? if not lvp_formed and dvp_exist:and <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:and <span style="color: #FFCC00;">**LVP**</span>?] and, to some extent, the <span style="color: #000000;">**CVP**</span>. However, the <span style="color: #3E88B3;">nationalist</span> elements of the <span style="color: #000000;">**CVP**</span> continue to obstruct our efforts to foster constructive cooperation with Brüning.
+連立諸党、主として[? if not lvp_formed and dvp_exist:<span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]、そしてある程度は<span style="color: #000000;">**CVP**</span>との接触と協議を増やした。しかし<span style="color: #000000;">**CVP**</span>内の<span style="color: #3E88B3;">国家主義</span>勢力は、ブリューニングとの建設的な協力を育てる我々の試みを妨害し続けている。
 
-Our attempts to reach out to the center-right are met with disdain from the leftists within our party.
+中道右派へ接近する試みは、党内左派の軽蔑を招いた。
 
 @stay_course
 
-We will stay the course of toleration, for the sake of stability.
+安定のため、閣外協力の方針を維持する。

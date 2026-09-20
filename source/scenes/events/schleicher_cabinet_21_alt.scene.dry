@@ -1,25 +1,25 @@
-title: The Grandest of Coalitions
-subtitle: The Reichstag Reconvenes.
+title: 最大規模の大連立
+subtitle: 国会が再開される。
 view-if: chancellor == "Treviranus" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: pro_republic += 8
 max-visits: 1
 new-page: true
 tags: event
 
-= The Reichstag Reconvenes
+= 国会の再開
 
-With Hindenburg making it clear that he expects a parliamentary cabinet from Treviranus, the Chancellor has moved to significantly broaden the governing coalition—reaching well to the left. The biggest surprise is the return of Brüning as Foreign Minister.
+ヒンデンブルクがトレヴィラヌスに議会内閣を求めていると明言したため、首相は連立与党を左方へ大幅に拡大した。最大の驚きは、ブリューニングの外相復帰である。
 
-Though Treviranus and his allies are interested in taming the <span style="color: #7A3C00;">Nazis</span>, the <span style="color: #6A1E1E;">**DSU**</span> has no interest in becoming a junior partner in a partisan conservative government.
+トレヴィラヌスとその盟友は<span style="color: #7A3C00;">ナチ党</span>の懐柔に関心を持つが、<span style="color: #6A1E1E;">**DSU**</span>には党派的な保守政権の従属的な協力者となる意思がない。
 
-Treviranus inaugurated his new cabinet within the last week, drawing ministers from the <span style="color: #fe9e00;">**ASPD**</span> on the left to his own party on the right. Still, this patchwork coalition is unlikely to command a majority—and a vote of no confidence looms.
+トレヴィラヌスは先週、左の<span style="color: #fe9e00;">**ASPD**</span>から右の自党まで閣僚を集め、新内閣を発足させた。それでも、この寄せ集めの連立が過半数を得られる見込みは薄く、不信任投票が迫っている。
 
 - @reichstag_yay
 - @reichstag_nay
 
 @reichstag_yay
-title: Vote for the motion of no confidence, forcing new elections to be called.
-subtitle: New elections again?
+title: 不信任動議に賛成し、新選挙の実施を強いる。
+subtitle: また新選挙なのか？
 on-arrival: {!
 if (Q.prussia_leader == "Strasser") Q.prussia_leader = "Goerdeler";
 if (Q.vice_chancellor == "Strasser") Q.vice_chancellor = "Stegerwald";
@@ -41,14 +41,14 @@ if (Q.next_election_month > 12) {
 }
 !}
 
-As expected, Treviranus isn't able to conjure up a majority without the <span style="color: #c00000;">**SPD**</span> or <span style="color: #6A1E1E;">**DSU**</span>. His government remains a caretaker for the time being.
+予想どおり、トレヴィラヌスは<span style="color: #c00000;">**SPD**</span>か<span style="color: #6A1E1E;">**DSU**</span>のいずれかを欠いたまま過半数を生み出すことができなかった。その政権は当面、管理内閣として留まる。
 
-New Reichstag elections are scheduled for [+ next_election_month : month +] [+ next_election_year +], Week [+ next_election_week +].
+次回国会選挙は[+ next_election_year +]年[+ next_election_month : month +]（第[+ next_election_week +]週）に予定された。
 
 @reichstag_nay
-title: Vote against the motion of no confidence, and tolerate the cabinet.
-subtitle: The German parliamentary system desperately needs legitimacy. Forcing new elections now risks driving voters further into the extremes.
+title: 不信任動議に反対し、内閣を閣外から容認する。
+subtitle: ドイツ議会制度には正統性がどうしても必要だ。今新選挙を強行すれば、有権者をさらに両極へ追いやる危険がある。
 choose-if: super_secret_mode
-unavailable-subtitle: Our parliamentary delegation won't listen to us anyway.
+unavailable-subtitle: いずれにせよ、我が議員団は我々の言うことを聞かない。
 
-Damn.
+くそっ。

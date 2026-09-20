@@ -1,5 +1,5 @@
-title: The <i>Reichskonkordat</i> Is Signed!
-subtitle: Catholic rights across Germany are now formally guaranteed.
+title: <i>ライヒスコンコルダート</i>締結！
+subtitle: ドイツ全土のカトリック信徒の権利が正式に保障された。
 view-if: chancellor == "Schleicher" and z_in_gov and z_in_gov_time >= 6 and z_leader == "Kaas" and reichskonkordat = 0 
 max-visits: 1
 new-page: true
@@ -17,14 +17,14 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Reichskonkordat Signing
+= ライヒスコンコルダート締結
 
-During weeks of intense negotiations in Rome headed by Ludwig Kaas, the <i>Reichskonkordat</i> has officially been signed between Germany and the Roman Catholic Church. The treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the <span style="color: #000000;">Center Party</span>.
+ルートヴィヒ・カースが率いたローマでの数週間にわたる激しい交渉を経て、ドイツとローマ・カトリック教会の間で<i>ライヒスコンコルダート</i>が正式に締結された。この協約は教会とドイツ国家の公式な関係を定め、カトリック信徒の信教の自由と、教会が自ら聖職者を任命する権利を保障する。ドイツのカトリック信徒も、その代表である<span style="color: #000000;">中央党</span>も喜んでいる。
 
 - @reichskonkordat
 
 @reichskonkordat
-title: What will happen to the <span style="color: #000000;">Center Party</span>?
+title: <span style="color: #000000;">中央党</span>の行方は？
 on-arrival: {!
 Q.schleicher_approval += 1;
 Q.reichskonkordat = 1;
@@ -73,33 +73,33 @@ Q.bracht_points += Q.catholics_z_normalized / 10;
 !}
 face-image: img/portraits/KaasLudwig.jpg
 
-= Center Party Conference
+= 中央党大会
 
-Having achieved his lifelong goal, Kaas sees little reason to remain as leader of the <span style="color: #000000;">Center Party</span>—a position he had long described as a burden and expressed displeasure with. As a result, a new leadership race is set to take place within the party, with Schleicher able to influence the outcome through his connections with Kaas and the <span style="color: #000000;">Christian</span> Trade Unions.
+生涯の目標を達成したカースには、長らく重荷だと語り不満を示してきた<span style="color: #000000;">中央党</span>党首の座にとどまる理由がほとんどない。その結果、党内で新たな党首選が行われることになり、シュライヒャーはカースや<span style="color: #000000;">キリスト教</span>労働組合とのつながりを通じて結果に影響を及ぼせる。
 
-The candidate backed by the <span style="color: #000000;">Christian</span> unions and those advocating for a more interconfessional <span style="color: #000000;">Center Party</span> rallies around Stegerwald.
+<span style="color: #000000;">キリスト教</span>労働組合と、より超宗派的な<span style="color: #000000;">中央党</span>を唱える人々は、シュテーガーヴァルトのもとに結集している。
 
-Franz Bracht, Schleicher's [? if not dsu_in_gov: former ?]Interior Minister[? if prussia_coup_lose:&nbsp;of Prussia and the Reich?], has rejoined the party and is Schleicher’s preferred candidate. Bracht is a true believer in Schleicher's vision for a new Germany—one less entangled in parliamentarianism—and aligns with the <span style="color: #000000;">Center</span>'s right wing, though not as far right as Papen. However, due to his lack of influence within the party and limited prior experience, having served only as Mayor of Essen for eight years, it is Schleicher's backing that remains the key to elevating him to leadership.
+シュライヒャーの[? if not dsu_in_gov: 前?][? if prussia_coup_lose:プロイセンおよびライヒ?]内相フランツ・ブラハトは党に復帰し、シュライヒャーの推す候補となった。ブラハトは議会主義との関わりを薄めた新生ドイツというシュライヒャーの構想を心から信奉し、パーペンほど右ではないものの、<span style="color: #000000;">中央党</span>右派に属している。しかし党内での影響力に乏しく、過去の経歴もエッセン市長を8年間務めた程度に限られるため、彼を党首に押し上げる鍵はシュライヒャーの後ろ盾にある。
 
 - @bracht
 - @stegerwald
 
 @bracht
-title: Franz Bracht is installed as the <span style="color: #000000;">Center Party</span>'s new chairman.
-unavailable-subtitle: The <span style="color: #000000;">Center Party</span> is still rooted in <span style="color: #000000;">repub</span><span style="color: #DD0000;">lica</span><span style="color: #FFCC00;">nism</span>.
+title: フランツ・ブラハトが<span style="color: #000000;">中央党</span>の新党首に就任する。
+unavailable-subtitle: <span style="color: #000000;">中央党</span>にはなお<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span>が根づいている。
 choose-if: bracht_points > stegerwald_points
 on-arrival: z_leader = "Bracht"; workers_z -= 4; unemployed_z -= 2; new_middle_z -= 2; old_middle_z += 4; rural_z += 4; z_relation -= 15
 
-Undoubtedly thanks to Schleicher's meddling, Franz Bracht has been elected chairman of the <span style="color: #000000;">Center Party</span>. With Kaas’s endorsement and Schleicher's ability to "persuade" key party members to switch their votes, Bracht narrowly defeats Stegerwald and his more <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> support base.
+シュライヒャーの介入によることは疑いなく、フランツ・ブラハトが<span style="color: #000000;">中央党</span>党首に選出された。カースの支持と、シュライヒャーが党の要人を「説得」して票を翻させたことで、ブラハトはシュテーガーヴァルトとそのより<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">的な</span>支持基盤を僅差で破る。
 
-The internal reaction has been surprisingly muted. Perhaps the <span style="color: #000000;">Center Party</span>’s gradual shift to the right has made a <span style="color: #808080;">reactionary</span> like Bracht finally acceptable—or perhaps other forces are quietly at work.
+党内の反応は驚くほど静かである。<span style="color: #000000;">中央党</span>が徐々に右傾化したことで、ブラハトのような<span style="color: #808080;">反動主義者</span>もついに受け入れられるようになったのか、あるいは別の力が密かに働いているのかもしれない。
 
 @stegerwald
-title: Stegerwald wins the leadership vote!
-unavailable-subtitle: Stegerwald is unavailable.
+title: シュテーガーヴァルトが党首選に勝利！
+unavailable-subtitle: シュテーガーヴァルトを擁立できない。
 choose-if: stegerwald_points >= bracht_points
 on-arrival: z_leader = "Stegerwald"; catholics_z -= 8; catholics_spd += 2; catholics_dnvp += 2; catholics -= 5; workers_z += 4; new_middle_z += 2; old_middle_z += 2; rural_z += 2; z_relation -= 5
 
-Stegerwald has won the leadership vote! By rallying the <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span> behind his candidacy, he has successfully blocked Bracht from seizing control of the <span style="color: #000000;">Center Party</span>. Backing such a right-wing conservative proved unacceptable to the <span style="color: #000000;">Christian</span> unions, who continue to resist Schleicher's growing influence.
+シュテーガーヴァルトが党首選に勝利した！　<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">者</span>を自らの候補支持に結集させ、ブラハトによる<span style="color: #000000;">中央党</span>掌握を阻止したのである。このような右翼保守派を支持することは、シュライヒャーの影響力拡大に抵抗し続ける<span style="color: #000000;">キリスト教</span>労働組合には到底受け入れられなかった。
 
-Although Stegerwald favors immediately opening the <span style="color: #000000;">Center Party</span> to Protestants, the party simply lacks the funds to establish regional branches across Protestant Germany, with recent elections having already exhausted its resources.
+シュテーガーヴァルトは<span style="color: #000000;">中央党</span>を直ちにプロテスタントにも開放する考えだが、相次ぐ選挙ですでに資金を使い果たした党には、プロテスタント地域全土に地方支部を設けるだけの財力がない。

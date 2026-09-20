@@ -1,56 +1,56 @@
-title: Young Plan
+title: ヤング案
 new-page: true
-subtitle: The [? if in_right_coalition: right-wing ?][? if in_center_right_coalition: center-right ?] coalition has collapsed...
+subtitle: [? if in_right_coalition: 右翼?][? if in_center_right_coalition: 中道右派?]連立が崩壊した……。
 tags: event
 view-if: year = 1929 and month >= 7 and in_right_coalition or in_center_right_coalition and dnvp_ideology == "Moderate"
 on-arrival: was_in_center_right_coalition = 1
 max-visits: 1
 
-= The Young Plan and the fall of the coalition
+= ヤング案と連立政権の崩壊
 
-The Foreign Ministry under Gustav Stresemann has agreed to the Young Plan, an agreement with the Western powers to reduce Germany's reparation payments and give us more fiscal autonomy. Simultaneously, <span style="color: #002654;">France</span> will agree to withdraw its military occupation from the Rhineland.
+グスタフ・シュトレーゼマン率いる外務省は、西欧列強との協定であるヤング案に合意した。これによりドイツの賠償支払額は削減され、財政上の裁量も拡大する。同時に、<span style="color: #002654;">フランス</span>はラインラントから占領軍を撤退させることに同意する。
 
-While this seems to be a positive development for the country, the <span style="color: #3E88B3;">**DNVP**</span>, despite their moderation, opposes the plan, claiming that any reparations are a form of national slavery. They have called for a vote of no confidence against the government, supported by the <span style="color: #7A3C00;">**NSDAP**</span>, 
-<span style="color: #003755;">**DNF**</span> and the <span style="color: #700000;">**KPD**</span>, and for a referendum on the Young Plan.
+これは国家にとって前向きな進展に見えるが、穏健化したにもかかわらず<span style="color: #3E88B3;">**DNVP**</span>は、いかなる賠償も国家を奴隷化するものだと主張してヤング案に反対している。同党は<span style="color: #7A3C00;">**NSDAP**</span>、
+<span style="color: #003755;">**DNF**</span>、<span style="color: #700000;">**KPD**</span>の支持を得て政府不信任決議を提出し、ヤング案をめぐる国民投票を要求した。
 
-We can either vote to bring down the government and hold new elections, or "tolerate" a government led by the remaining bourgeois parties.
+我々は政府を倒して新たな選挙を行うか、残存するブルジョワ諸党が率いる政府を「閣外協力」で支えるかを選べる。
 
 - @vonc_yes
 - @vonc_no
 - @no_matter
 
 @vonc_yes
-title: Support the vote of no confidence, voting against the government.
-subtitle: The government will collapse, and there will be new elections.
+title: 不信任決議を支持し、政府に反対票を投じる。
+subtitle: 政府は崩壊し、新たな選挙が行われる。
 view-if: neo_weimar_coalition >= 50
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; dvp_relation -= 3; z_relation -= 3; ddp_relation -= 3; lvp_relation -= 3; dvp_right += 1; ddp_right += 0.5; lvp_right += 1
 call: set_next_election_time
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_coalition_prussia)
 
-The <span style="color: #000000;">bourgeois</span>-<span style="color: #3E88B3;">right</span> coalition has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+<span style="color: #000000;">ブルジョワ</span>・<span style="color: #3E88B3;">右翼</span>連立は崩壊した。新たな選挙は[+ next_election_year +]年[+ next_election_month : month +]に行われる。
 
 @vonc_no
-title: Support the rump [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]-led government, voting in favor of the government.
-subtitle: We would essentially provide "toleration" to a bourgeois government.
+title: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]主導の少数政府を支持し、政府に賛成票を投じる。
+subtitle: 実質的にブルジョワ政府へ「閣外協力」を与えることになる。
 view-if: neo_weimar_coalition >= 50
 on-arrival: spd_toleration = 1; in_right_coalition = 0; in_center_right_coalition = 0; left_dissent += 8; ddp_left += 0.5
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_coalition_prussia)
 
-By supporting the government, we have essentially entered into a "toleration" arrangement with the [+ chancellor +] government. We do not have a voice in the government, but we are responsible for its continued stability. The left of our party opposes this plan, and would rather that we hold new elections.
+政府を支持したことで、我々は実質的に[+ chancellor +]政権への「閣外協力」に踏み切った。政府内で発言権を持たないにもかかわらず、その安定を維持する責任を負うことになる。党内左派はこの方針に反対し、新たな選挙を望んでいる。
 
 @no_matter
-title: It does not matter what we do.
-subtitle: The anti-government parties have over 50% of the vote, no matter our choices.
+title: 我々が何をしようと結果は変わらない。
+subtitle: どの選択をしても、反政府諸党は過半数の票を握っている。
 view-if: neo_weimar_coalition < 50
 call: set_next_election_time
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 5
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_coalition_prussia)
 
-The <span style="color: #000000;">bourgeois</span>-<span style="color: #3E88B3;">right</span> coalition has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+<span style="color: #000000;">ブルジョワ</span>・<span style="color: #3E88B3;">右翼</span>連立は崩壊した。新たな選挙は[+ next_election_year +]年[+ next_election_month : month +]に行われる。
 
 @new_prussia_election
 on-arrival: prussia_coalition_trigger = 1
 
-The Prussian coalition isn't able to survive either, pressure from the national conservatives within the <span style="color: #3E88B3;">**DNVP**</span> forces them to exit from the <span style="color: #000000;">bourgeois</span>-<span style="color: #3E88B3;">right</span> coalition there as well.
+プロイセンの連立政権も存続できない。<span style="color: #3E88B3;">**DNVP**</span>内の民族保守派から圧力を受け、同党はプロイセンでも<span style="color: #000000;">ブルジョワ</span>・<span style="color: #3E88B3;">右翼</span>連立から離脱した。
 
-- @prussian_coalition_formation: Negotiate a new Prussian coalition.
+- @prussian_coalition_formation: 新たなプロイセン連立の交渉を行う。

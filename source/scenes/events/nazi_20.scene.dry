@@ -1,5 +1,5 @@
-title: Hitler Commits Suicide!
-subtitle: The <span style="color: #7A3C00;">**NSDAP**</span> disintegrates!
+title: ヒトラーが自殺！
+subtitle: <span style="color: #7A3C00;">**NSDAP**</span>が崩壊する！
 view-if: chancellor = "Schleicher" and schleicher_time == 9 and nsdap_leader == "Hitler"
 new-page: true
 tags: event
@@ -17,18 +17,18 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Hitler Commits Suicide!
+= ヒトラーが自殺！
 
-Hitler himself has lost belief in his previously unshakable determination that destiny is on his side, and his appointment to the chancellorship is an inevitability. Now, with the defections of Röhm and the majority of the <span style="color: #7A3C00;">**SA**</span>, and Strasser's resignation months back: the <span style="color: #7A3C00;">Nazi</span> movement has lost its chance. 
+ヒトラー自身、運命は自分の味方であり、首相任命は必然だという、かつて揺るがなかった確信を失った。レームと<span style="color: #7A3C00;">**SA**</span>の大半が離反し、その数か月前にはシュトラッサーも辞任した今、<span style="color: #7A3C00;">ナチ党</span>運動は好機を失った。
 
-Going through with the promise that he'll finish himself in three minutes if the party were to split apart, he has done exactly that.
+党が分裂すれば三分以内に自分を始末するという約束を実行し、彼は文字どおりそのとおりにした。
 
-- @nazi_2: Anyone can deal with victory.
+- @nazi_2: 勝利には誰でも耐えられる。
 
 @nazi_2
 on-arrival: nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; hitler_dead = 1; hindenburg_hitler_r -= 10; papen_strength -= 2; schleicher_strength += 1; nazi_funds -= 3
 achievement: hitler_tot
 
-Joseph Goebbels succeeds Hitler as party leader, with heavy influence from Hermann Göring. The movement has been badly crippled, and are likely to never regain prominence.
+ヨーゼフ・ゲッベルスがヒトラーの後継党首となったが、ヘルマン・ゲーリングの強い影響下にある。運動は深刻な打撃を受け、二度と勢力を取り戻せない可能性が高い。
 
-- @root: Only the mighty can bear defeat.
+- @root: 敗北に耐えられるのは強者だけだ。

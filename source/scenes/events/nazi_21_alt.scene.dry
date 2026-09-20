@@ -1,5 +1,5 @@
-title: The <span style="color: #7A3C00;">**NSDAP**</span> Splinters!
-subtitle: Their internal contradictions have finally caught up with them.
+title: <span style="color: #7A3C00;">**NSDAP**</span>、分裂！
+subtitle: ついに内部矛盾が彼ら自身を追い詰めた。
 view-if: chancellor = "Schleicher" and schleicher_time >= 10 and nazi_explode >= 4 and not hitler_dead
 new-page: true
 tags: event
@@ -17,15 +17,15 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #7A3C00;">**NSDAP**</span> Splinters!
+= <span style="color: #7A3C00;">**NSDAP**</span>、分裂！
 
-With Hitler isolated in Austria and unable to enforce unity through his *Führerprinzip*, the conflicting ideologies and ambitions within the movement have broken into open dispute. While Hitler continues to issue directives to [+ nsdap_leader +] and [+ nsdap_chancellor +], the failure of the all-or-nothing strategy is now blamed squarely on both. Increasingly withdrawn, Hitler has grown critical of the very men he once entrusted with power—though he keeps his discontent private.
+ヒトラーはオーストリアで孤立し、もはや自らの「指導者原理」によって運動の統一を強制できない。運動内部で対立する思想と野心は、ついに公然たる抗争へと発展した。ヒトラーは今なお[+ nsdap_leader +]と[+ nsdap_chancellor +]に指令を送り続けているが、全か無かの戦略が失敗した責任は、今や両名に真正面から向けられている。次第に内向的になったヒトラーは、かつて権限を託した者たちへの批判を強めている――もっとも、その不満を公にはしていない。
 
-Gregor Strasser, seeing the collapse of Goebbels and Göring’s reckless course, has reconsidered. He now believes the <span style="color: #7A3C00;">Nazi</span> movement still has a future—but only without the failed strategies of its current leadership. For the first time, Strasser is willing to defy the distant messiah in Austria and seize control.
+ゲッベルスとゲーリングの無謀な路線が破綻するのを目の当たりにしたグレゴール・シュトラッサーは、考えを改めた。<span style="color: #7A3C00;">ナチ</span>運動にはなお未来がある――ただし、現指導部の失敗した戦略を捨てることが条件だと、彼は確信している。シュトラッサーは初めて、オーストリアにいる遠き救世主に背いて実権を奪う覚悟を固めた。
 
-The result is a formal split within the <span style="color: #7A3C00;">**NSDAP**</span>: pragmatists like Strasser, Frick, and even Röhm now oppose the disastrous passivity of Goebbels and Göring. To give their faction a political home, they have founded the <span style="color: #6A1E1E;">German Social Union</span> (<span style="color: #6A1E1E;">**DSU**</span>), advocating a middle path—preparing for revolution, while participating in government to avoid total irrelevance.
+その結果、<span style="color: #7A3C00;">**NSDAP**</span>は正式に分裂した。シュトラッサー、フリック、さらにはレームまでもが、ゲッベルスとゲーリングの破滅的な無為に反旗を翻したのである。彼らは自派の政治的な受け皿として<span style="color: #6A1E1E;">ドイツ社会同盟</span>（<span style="color: #6A1E1E;">**DSU**</span>）を結成し、革命に備えつつ、完全な埋没を避けるため政権にも参加するという中間路線を掲げている。
 
-- @nazi_2: Without funds and without support. 
+- @nazi_2: 資金も支持もない。
 
 @nazi_2
 on-arrival: {!
@@ -38,6 +38,6 @@ Q.dsu_r = Math.round(Q.nsdap_r*0.4 * 10) / 10;
 Q.nsdap_hitler_r = Math.round((Q.nsdap_r - Q.dsu_r) * 10) / 10;
 !}
 
-The two parties are doomed to eternal infighting and, eventually, irrelevance. However, the polarization caused by this, coupled with the potential for participationist <span style="color: #7A3C00;">Nazis</span> entering the government, may still have far-reaching consequences.
+両党は果てしない内紛を続け、やがて取るに足らない存在になる運命にある。しかし、この分裂がもたらす政治的両極化と、政権参加派の<span style="color: #7A3C00;">ナチ</span>が入閣する可能性は、なお広範な影響を及ぼしうる。
 
-We must not get complacent.
+油断は禁物である。

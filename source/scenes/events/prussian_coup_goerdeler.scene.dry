@@ -1,20 +1,19 @@
-title: New State Consolidation
-subtitle: Goerdeler resigns the position to Papen.
+title: 「新国家」の権力統合
+subtitle: ゲルデラーが職をパーペンに譲る。
 view-if: chancellor == "Papen" and papen_time == 7 and prussia_leader == "Goerdeler"
 new-page: true
 tags: event
 max-visits: 1
 face-image: img/portraits/goerdeler.jpg
 
-= New State Consolidation
+= 「新国家」の権力統合
 
-Goerdeler, the <i>Reichskommissar</i> of Prussia, has announced his resignation in favor of Chancellor Papen, likely under pressure from both the chancellor and Schleicher as they move to consolidate power into the chancellery. Goerdeler, ever the conservative, sympathizes with these goals and steps down before Hindenburg can force the issue.
+プロイセン国家弁務官ゲルデラーは、パーペン首相へ職を譲るため辞任すると発表した。権力を首相府へ集中させようとするパーペンとシュライヒャーの双方から圧力を受けたものと見られる。根っからの保守主義者であるゲルデラーはこの目標に共感しており、ヒンデンブルクが強制するより先に身を引いた。
 
-It is clear this is part of Papen’s wider plan for a "New State"—a centralized, anti-democratic regime ruled by aristocrats and the rich. The upcoming Prussian elections have now been postponed indefinitely.
+これは、貴族と富裕層が支配する中央集権的・反民主的体制、すなわちパーペンの「新国家」構想の一環であることは明らかだ。予定されていたプロイセン州選挙は、無期限に延期された。
 
-- @surrender: How blatant can Papen be!?
+- @surrender: パーペンはどこまで露骨になれるのだ！？
 
 @surrender
 on-arrival: prussia_leader = "Papen"; workers_spd -= 2; unemployed_spd -= 2; rb_militancy *= 0.95; rb_strength -= 100; prussian_police_loyalty -= 0.1; next_election_time_prussia = time + 48; next_election_year_prussia = year + 4; papen_strength += 1
 go-to: root
-

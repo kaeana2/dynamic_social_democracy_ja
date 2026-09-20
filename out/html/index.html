@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,16 +27,16 @@
             <table>
                 <tr>
                     <td>
-                        Backgrounds:
+                        背景：
                     </td>
                     <td>
-                        <label for="backgrounds_yes">On</label>
+                        <label for="backgrounds_yes">オン</label>
                     </td>
                     <td>
                         <input type="radio" id="backgrounds_yes" name="backgrounds" value="1" onclick="window.enableBg();">
                     </td>
                     <td>
-                        <label for="backgrounds_no">Off</label>
+                        <label for="backgrounds_no">オフ</label>
                     </td>
                     <td>
                         <input type="radio" id="backgrounds_no" name="backgrounds" value="0" onclick="window.disableBg();">
@@ -47,15 +47,15 @@
                 </tr>
                 <tr>
                     <td>
-                        Event images:
+                        イベント画像：
                     <td>
-                        <label for="images_yes">On</label>
+                        <label for="images_yes">オン</label>
                     </td>
                     <td>
                         <input type="radio" id="images_yes" name="images" value="1" onclick="window.enableImages();">
                     </td>
                     <td>
-                        <label for="images_no">Off</label>
+                        <label for="images_no">オフ</label>
                     </td>
                     <td>
                         <input type="radio" id="images_no" name="images" value="0" onclick="window.disableImages();">
@@ -67,16 +67,16 @@
  
                 <tr>
                     <td>
-                        Animations:
+                        アニメーション：
                     </td>
                     <td>
-                        <label for="animate_yes">On</label>
+                        <label for="animate_yes">オン</label>
                     </td>
                     <td>
                         <input type="radio" id="animate_yes" name="animate" value="1" onclick="window.enableAnimate();">
                     </td>
                     <td>
-                        <label for="animate_no">Off</label>
+                        <label for="animate_no">オフ</label>
                     </td>
                     <td>
                         <input type="radio" id="animate_no" name="animate" value="0" onclick="window.disableAnimate();">
@@ -87,16 +87,16 @@
                 </tr>
                 <tr>
                     <td>
-                        Music:
+                        音楽：
                     </td>
                     <td>
-                        <label for="audio_yes">On</label>
+                        <label for="audio_yes">オン</label>
                     </td>
                     <td>
                         <input type="radio" id="audio_yes" name="audio" value="1" onclick="window.enableAudio();">
                     </td>
                     <td>
-                        <label for="audio_no">Off</label>
+                        <label for="audio_no">オフ</label>
                     </td>
                     <td>
                         <input type="radio" id="audio_no" name="audio" value="0" onclick="window.disableAudio();">
@@ -107,16 +107,16 @@
                 </tr>
                 <tr>
                     <td>
-                        Color scheme:
+                        配色：
                     </td>
                     <td>
-                        <label for="light_mode">Light mode</label>
+                        <label for="light_mode">ライトモード</label>
                     </td>
                     <td>
                         <input type="radio" id="light_mode" name="ld_mode" value="1" onclick="window.enableLightMode();">
                     </td>
                     <td>
-                        <label for="dark_mode">Dark mode</label>
+                        <label for="dark_mode">ダークモード</label>
                     </td>
                     <td>
                         <input type="radio" id="dark_mode" name="ld_mode" value="0" onclick="window.enableDarkMode();">
@@ -127,16 +127,16 @@
                 </tr>
                 <tr>
                     <td>
-                        Colored text:
+                        色付きテキスト：
                     </td>
                     <td>
-                        <label for="gray_on">Disable</label>
+                        <label for="gray_on">無効</label>
                     </td>
                     <td>
                         <input type="radio" id="gray_on" name="gray_mode" value="0" onclick="window.enableGrayMode();">
                     </td>
                     <td>
-                        <label for="gray_no">Enable</label>
+                        <label for="gray_no">有効</label>
                     </td>
                     <td>
                         <input type="radio" id="gray_no" name="gray_mode" value="1" onclick="window.disableGrayMode();">
@@ -144,14 +144,14 @@
                 </tr>
                 <tr>
                     <td>
-                        <button onclick="window.hideOptions();">Close</button>
+                        <button onclick="window.hideOptions();">閉じる</button>
                     </td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                    <td>
-                        <button onclick="window.showMods();">Mods</button>
+                        <button onclick="window.showMods();">MOD</button>
                     </td>
 
                 </tr>
@@ -162,7 +162,7 @@
     <div id="save" class="overlay" style="display: none;">
         <table id="saves_table" class="overlay_top">
             <tr>
-                <td>Auto-0</td>
+                <td>自動-0</td>
                 <td>
                     <button class="b save_button" id="save_button_a0">Save</button>
                 </td>
@@ -175,7 +175,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Auto-1</td>
+                <td>自動-1</td>
                 <td>
                     <button class="b save_button" id="save_button_a1">Save</button>
                 </td>
@@ -294,12 +294,12 @@
             </tr>
             <tr>
                 <td colspan="5">
-                    <label for="import_save">Import save file:</label> <input type="file" id="import_save" onchange="dendryUI.importSave('import_save');"></input>
+                    <label for="import_save">セーブファイルを読み込む：</label> <input type="file" id="import_save" onchange="dendryUI.importSave('import_save');"></input>
                 </td>
             </tr> 
             <tr>
                 <td>
-                    <button onclick="dendryUI.hideSaveSlots();">Close</button>
+                    <button onclick="dendryUI.hideSaveSlots();">閉じる</button>
                 </td>
             </tr>
         </table>
@@ -318,29 +318,30 @@
         <div id="mid_panel">
             <header>
                 <h1 id="game-title">Dynamic Social Democracy: An Alternate History</h1>
-                <h2 id="game-author">Autumn Chen, modded by originn0</h2>
+                <h2 id="game-author">Autumn Chen, modded by originn0, 非公式和訳 by kaeana2</h2>
+                <div id="translation-credit">This is an unofficial Japanese translation.</div>
 
                 <div id="header-links">
-                    <a id="stats-link" onclick="window.showStats();" href="#">Library</a>
-                    <a onclick="dendryUI.showSaveSlots();" href="#">Save/Load</a>
-                    <a onclick="window.showOptions();" href="#">Options</a>
+                    <a id="stats-link" onclick="window.showStats();" href="#">資料室</a>
+                    <a onclick="dendryUI.showSaveSlots();" href="#">セーブ／ロード</a>
+                    <a onclick="window.showOptions();" href="#">設定</a>
                 </div>
             </header>
             <div id="tools_wrapper">
                 <div id='stats_sidebar' class='tools left'>
                     <div class="tab_container">
-                        <button class="tab_button" id="emergency_tab" onclick="window.changeTab('status.emergency', 'emergency_tab');" style="display: none;">Emergency Status</button>
-                        <button class="tab_button active" id="main_tab" onclick="window.changeTab('status', 'main_tab');">Main</button>
-                        <button class="tab_button" id="politics_tab" onclick="window.changeTab('status.politics', 'politics_tab');">Politics</button>
-                        <button class="tab_button" id="paramilitary_tab" onclick="window.changeTab('status.paramilitaries', 'paramilitary_tab');">Defense</button>
-                        <button class="tab_button" id="poll_tab" onclick="window.changeTab('status.polls', 'poll_tab');">Polls</button>
+                        <button class="tab_button" id="emergency_tab" onclick="window.changeTab('status.emergency', 'emergency_tab');" style="display: none;">非常事態</button>
+                        <button class="tab_button active" id="main_tab" onclick="window.changeTab('status', 'main_tab');">概要</button>
+                        <button class="tab_button" id="politics_tab" onclick="window.changeTab('status.politics', 'politics_tab');">政治</button>
+                        <button class="tab_button" id="paramilitary_tab" onclick="window.changeTab('status.paramilitaries', 'paramilitary_tab');">防衛</button>
+                        <button class="tab_button" id="poll_tab" onclick="window.changeTab('status.polls', 'poll_tab');">世論調査</button>
                     </div>
                     <div id="qualities">
                     </div>
                 </div>
                 <div id='stats_sidebar_right' class='tools right'>
                     <div class="tab_container">
-                        <button class="tab_button active" id="scheming_tab" onclick="window.changeTab('status_right', 'scheming_tab', true);">Scheming</button>
+                        <button class="tab_button active" id="scheming_tab" onclick="window.changeTab('status_right', 'scheming_tab', true);">策謀</button>
                     </div>
                     <div id="qualities_right">
                     </div>

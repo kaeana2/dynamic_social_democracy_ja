@@ -1,5 +1,5 @@
-title: Prussian Police Dissolved
-subtitle: The <i>Staatsschutzamt</i> is formed in its stead.
+title: プロイセン警察の解体
+subtitle: 代わって<i>国家保安局</i>が設置される。
 view-if: chancellor == "Schleicher" and (dsu_in_gov or dsu_was_gov) and ((reichstag_joever_time >= 6 and not schleicher_post_protests) or (reichstag_joever_time >= 16 and schleicher_post_protests)) and not schleicher_rights and prussia_leader == "Strasser"
 max-visits: 1
 new-page: true
@@ -18,16 +18,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Prussian Police Dissolved
+= プロイセン警察の解体
 
-Frick, the <span style="color: #6A1E1E;">**DSU**</span>, and Schleicher have been coordinating closely to smooth Germany’s transition into a more authoritarian system. The Prussian police, still riddled with <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> sympathizers, remains a key obstacle—too entrenched to purge outright without crippling the force.
+フリック、<span style="color: #6A1E1E;">**DSU**</span>、シュライヒャーは、ドイツをより権威主義的な体制へ円滑に移行させるため緊密に連携してきた。<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">者</span>がなお多数残るプロイセン警察は重大な障害だが、根を深く張っており、組織を麻痺させずに全面粛清することはできない。
 
-But with the Reichswehr’s militia now patrolling the streets under Frick and Strasser’s oversight, there is no longer any need for this relic of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. In its place, the <i>Staatsschutzamt</i> (State Security Office) has been created, staffed by [? if dsu_in_gov: <span style="color: #7A3C00;">Nazis</span> and?] Schleicher loyalists.
+しかし今やフリックとシュトラッサーの監督下で国防軍民兵が街頭を巡回しており、<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>共和国の遺物はもはや必要ない。代わって<i>国家保安局</i>が設置され、[? if dsu_in_gov: <span style="color: #7A3C00;">ナチ党員</span>と?]シュライヒャー支持者が配属された。
 
 - @gestapo
 
 @gestapo
-title: Big brother watches.
+title: ビッグ・ブラザーが見ている。
 on-arrival: {!
 Q.state_police = 1;
 Q.pro_republic -= 5;
@@ -69,6 +69,6 @@ Q.catholics_dnef += 6;
 Q.unemployed_dnef += 8;
 !}
 
-For now, the organization remains confined to Prussia, but its presence is felt everywhere. Local party members whisper that their phones are tapped, and troublesome politicians vanish—never to be seen again. With the police now firmly under government control, they decide which crimes to overlook and coordinate raids hand-in-hand with the Reichswehr.
+今のところ、この組織の活動範囲はプロイセンに限られるが、その存在は至る所で感じられる。地方党員は電話が盗聴されていると囁き、政権にとって厄介な政治家は姿を消して二度と戻らない。警察は今や政府の確固たる支配下にあり、どの犯罪を見逃すかを選び、国防軍と手を携えて家宅捜索を行っている。
 
-Yet, their reach still depends on the willingness of people to betray their comrades by reporting them to the police.
+もっとも、その監視網がどこまで届くかは、仲間を裏切って警察へ密告する人々の意思に依存している。

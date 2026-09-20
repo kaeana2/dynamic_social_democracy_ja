@@ -1,5 +1,5 @@
-title: The Reichstag Reconvenes
-subtitle: The Reichstag hesitates to confront Schleicher and trigger yet another round of elections.
+title: 国会の再開
+subtitle: 国会はシュライヒャーとの対決と、再度の選挙実施をためらっている。
 view-if: chancellor = "Schleicher" and schleicher_time and schleicher_post and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: reichstag_rubicon = 1
 new-page: true
@@ -19,16 +19,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Reichstag Reconvenes
+= 国会の再開
 
-The Reichstag reconvenes under Schleicher, and nearly all parties present are unwilling to move against the popular chancellor on the chamber’s first day back. The opposition chooses to wait, looking for the inevitable misstep—a constitutional violation or a divisive policy—to use as a pretext and rallying point against him.
+シュライヒャー政権下で国会が再開されたが、初日から人気の高い首相に立ち向かおうとする政党はほとんどない。野党は、いずれ生じる失策――憲法違反や国民を分断する政策――を彼への攻撃材料と結集の旗印にするため、待つ道を選んだ。
 
-Meanwhile, Schleicher shows little concern over the threat of a no-confidence vote. He makes his position clear: unless a united bloc emerges with a viable successor, he will continue governing as usual, backed by Hindenburg.
+一方、シュライヒャーは不信任投票の脅威をほとんど意に介していない。現実的な後継首相を掲げる統一戦線が現れない限り、ヒンデンブルクの支持を背景に従来どおり統治を続けると明言した。
 
 - @reichstag
 
 @reichstag
-title: The <span style="color: #700000;">**Communists**</span> put forth a motion of no confidence.
+title: <span style="color: #700000;">**共産主義者**</span>が不信任動議を提出する。
 on-arrival: {!
 Q.pro_republic += 5;
 
@@ -56,6 +56,6 @@ if (Q.next_reichstag_month > 12) {
 }
 !}
 
-As before, the motion to place a vote of no confidence on the agenda is defeated—thanks to support from elements of the <span style="color: #7A3C00;">Nazis</span>, the <span style="color: #000000;">Center Party</span>, and various right-wing and bourgeois factions.
+以前と同様、不信任投票を議事日程に載せる動議は否決された。<span style="color: #7A3C00;">ナチ党</span>、<span style="color: #000000;">中央党</span>の一部、そして各種右翼・ブルジョワ会派の支持によるものである。
 
-With only a handful of bills scheduled, the agenda committee successfully pushes through a thirty-day adjournment, with the option for extension.
+予定された法案がわずかであることから、議事運営委員会は延長可能な30日間の休会を成立させた。

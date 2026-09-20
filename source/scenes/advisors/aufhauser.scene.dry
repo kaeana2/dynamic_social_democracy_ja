@@ -1,60 +1,60 @@
-title: Siegfried Aufhäuser
+title: ジークフリート・アウフホイザー
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/AufhäuserSiegfried.jpg
 view-if: aufhauser_advisor = 1
 new-page: true 
 
-= Siegfried Aufhäuser
+= ジークフリート・アウフホイザー
 
-Aufhäuser is a leader of the AfA-Bund, the federation of <span style="color: #c00000;">socialist</span> white-collar trade unions.
+アウフホイザーは、<span style="color: #c00000;">社会主義系</span>職員労働組合の連合体であるAfA同盟の指導者である。
 
 - @white_collar
 - @union_unity
 - @crisis
 - @moderate_economic_plan
 - @radicalize_new_middle
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @white_collar
-title: Organizing white-collar workers
-subtitle: Improve our standing among the new middle class.
+title: 職員労働者の組織化
+subtitle: 新中間層における党の立場を強化する。
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?]
 on-arrival: advisor_action_timer = 6; new_middle_spd += 6*(1-dissent);
 
-We have increased our organizing among white-collar workers.
+職員労働者の組織化を強化した。
 
 @union_unity
-title: Union-party coordination
-subtitle: Reduce dissent among the unions.
+title: 労働組合と党の連携
+subtitle: 労働組合派の不満を抑える。
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?]
 on-arrival: advisor_action_timer = 6; labor_dissent -= 10;
 
-We have reduced tensions with the Labor faction.
+労働組合派との緊張を緩和した。
 
 @crisis
-title: Addressing the economic crisis
-subtitle: Aufhäuser can help support a left-wing economic program.
+title: 経済危機への対処
+subtitle: アウフホイザーは左派経済計画への支持を広げられる。
 choose-if: advisor_action_timer <= 0 and nationalization_adopted == 0 and black_thursday_seen == 1 and nationalization_support <= 5
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if nationalization_adopted > 0 : We have already adopted the Left plan. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if black_thursday_seen == 0 : 現在は経済危機ではない。 ?][? if nationalization_adopted > 0 : すでに左派案を採用している。 ?]
 on-arrival: advisor_action_timer = 6; 
 go-to: crisis_program.support_left 
 
 @moderate_economic_plan
-title: Support the reformist economic plan
-subtitle: Aufhäuser can also support a moderate economic plan.
+title: 改革派経済計画を支持
+subtitle: アウフホイザーは穏健な経済計画も支持できる。
 choose-if: advisor_action_timer = 0 and moderate_plan_adopted = 0 and black_thursday_seen = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if moderate_economic_plan = 0 : We have already adopted the reformist economic plan. ?] [? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?] [? if moderate_economic_plan = 0 : すでに改革派経済計画を採用している。 ?] [? if black_thursday_seen == 0 : 現在は経済危機ではない。 ?]
 on-arrival: advisor_action_timer = 6
 go-to: crisis_program.support_moderate
 
 @radicalize_new_middle
-title: Awaken the class consciousness of the New Middle Class
-subtitle: As the Chairman of the AfA-bund, Aufhäuser can help us to awaken the class consciousness of the new middle class.
+title: 新中間層の階級意識を覚醒させる
+subtitle: AfA同盟議長のアウフホイザーは、新中間層の階級意識を覚醒させる助けとなる。
 choose-if: socialism >= 51 and new_middle_spd_normalized >= 15 and new_middle_conscious == 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if socialism < 51: We must seek to make socialism more popular. ?][? if new_middle_spd_normalized < 15: We sadly do not have enough support amongst the new middle class. ?][? if new_middle_conscious == 1: We have already awoken the class consciousness of the new middle class. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if socialism < 51: 社会主義への支持をさらに高めなければならない。 ?][? if new_middle_spd_normalized < 15: 残念ながら新中間層から十分な支持を得ていない。 ?][? if new_middle_conscious == 1: 新中間層の階級意識はすでに覚醒している。 ?]
 max-visits: 1
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: new_middle_consciousness

@@ -1,5 +1,5 @@
-title: "Social Patriotism" Emerges
-subtitle: A new faction takes shape within the <span style="color: #c00000;">**SPD**</span>...
+title: 「社会愛国主義」の台頭
+subtitle: <span style="color: #c00000;">**SPD**</span>内で新たな派閥が形成されつつある……
 view-if: chancellor = "Schleicher" and dnef_total_votes >= 20 and schleicher_spd_influence >= 6
 new-page: true
 priority: 1
@@ -7,14 +7,14 @@ tags: event
 max-visits: 1
 face-image: img/portraits/erdmann.jpg
 
-= Social Patriotism Emerges
+= 社会愛国主義の台頭
 
-A newer faction of young and old <span style="color: #f0456a;">socialists</span>, led by ADGB unionist Lothar Erdmann, is rallying under the banner of "Social Patriotism." This group calls for a renewed bond between the workers, <span style="color: #c00000;">socialism</span>, and the nation. Erdmann is the architect of the ADGB's nationalist shift in recent years, including its sharpened rhetoric against the Treaty of Versailles.
+ADGBの労組活動家ロータル・エルトマンが率いる、若手と古参の<span style="color: #f0456a;">社会主義者</span>からなる新派閥が、「社会愛国主義」の旗の下に結集している。この集団は、労働者と<span style="color: #c00000;">社会主義</span>、そして国民の結びつきを新たにするよう求めている。エルトマンは近年のADGBの国家主義への転換を主導した人物であり、ヴェルサイユ条約への非難を強めることにも関わってきた。
 
-This is plainly Schleicher’s handiwork—yet this emerging faction now holds real sway within our party, given the Chancellor’s grip on our more "patriotic" and loosely <span style="color: #9B0000;">Marxist</span> trade unions.
+明らかにシュライヒャーの仕業だ。それでも首相が、より「愛国的」で<span style="color: #9B0000;">マルクス主義</span>との結びつきも緩い我々の労組を掌握しているため、この新興派閥は今や党内で実質的な影響力を持っている。
 
-- @socpat_pro: Who said patriotism and <span style="color: #c00000;">socialism</span> aren't compatible?
-- @socpat_against: There's no war but the class war.
+- @socpat_pro: 愛国心と<span style="color: #c00000;">社会主義</span>が両立しないと、誰が言った？
+- @socpat_against: 闘うべきは階級闘争だけだ。
 
 @socpat_pro
 on-arrival: {!
@@ -44,9 +44,9 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-The Social Patriots advocate full support for Schleicher’s chancellorship and his rearmament program, believing that only through strength can Germany break free from the chains of Versailles and reclaim its rightful lands.
+社会愛国派はシュライヒャーの首相在任と再軍備計画への全面的な支持を主張している。ドイツがヴェルサイユの鎖を断ち切り、正当に自国に属する領土を取り戻すには、力を持つほかないと信じているのだ。
 
-Schleicher, predictably, is pleased with our acceptance of this new political current—but his influence within our party is growing alarmingly fast. Perhaps too fast.
+予想どおり、シュライヒャーは我々がこの新たな政治潮流を受け入れたことを喜んでいる。しかし党内での彼の影響力は、驚くべき速さで拡大している。速すぎるのかもしれない。
 
 @socpat_against
 on-arrival: {!
@@ -76,6 +76,6 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-The Social Patriots advocate full support for Schleicher’s chancellorship and his rearmament program, believing that only through strength can Germany break free from the chains of Versailles and reclaim its rightful lands.
+社会愛国派はシュライヒャーの首相在任と再軍備計画への全面的な支持を主張している。ドイツがヴェルサイユの鎖を断ち切り、正当に自国に属する領土を取り戻すには、力を持つほかないと信じているのだ。
 
-Schleicher is displeased with our moves to curb the influence of his loyalists within the <span style="color: #c00000;">**SPD**</span> — but for now, this ideology remains far from our party’s leadership. For now.
+シュライヒャーは、<span style="color: #c00000;">**SPD**</span>内の忠臣の影響力を抑えようとする我々の動きに不満を抱いている。しかし今のところ、この思想は党指導部から遠い位置にとどまっている。今のところは。

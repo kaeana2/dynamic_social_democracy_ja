@@ -1,6 +1,6 @@
-title: Suspension of the Austrian parliament
+title: オーストリア議会の停止
 new-page: true
-subtitle: Our southern neighbor is sliding into dictatorship.
+subtitle: 南の隣国が独裁へと傾いている。
 view-if: year = 1933 and month = 3 and ((spd_in_government and foreign_minister_party = "SPD") or (austria_relation >= 1))
 max-visits: 1
 on-arrival: austrian_parliament_seen = 1
@@ -20,47 +20,47 @@ tags: event
 
 # Must control foreign ministry or have made contact with Austrian socialists.
 
-= Suspension of the Austrian Parliament
+= オーストリア議会の停止
 
-Due to a controversial proposal regarding a railroad strike in the Austrian National Council, all three presidents of the National Council resigned, leaving it without any presiding officers. This is a constitutional crisis. Austrian chancellor Engelbert Dollfuß has taken advantage of this crisis by suspending the parliament and ruling by emergency decree, forming an "<span style="color: #7A3C00;">Austrofascist</span>" government. Dollfuß consolidates his power by persecuting his political opponents, especially our fellow <span style="color: #A50034;">Social Democrats</span> in the <span style="color: #A50034;">**SDAPÖ**</span> (<span style="color: #A50034;">Social Democratic Worker's Party of Austria</span>).
+オーストリア国民議会で鉄道ストライキをめぐる紛糾が起こり、議長団の三名全員が辞任したため、議会は議事を主宰する者を失った。これは憲法上の危機である。オーストリア首相エンゲルベルト・ドルフースはこの機会を利用して議会を停止し、緊急令による統治を開始して「<span style="color: #7A3C00;">オーストロファシスト</span>」政権を樹立した。ドルフースは政敵、とりわけ我々の同志である<span style="color: #A50034;">社会民主主義者</span>、すなわち<span style="color: #A50034;">**SDAPÖ**</span>（<span style="color: #A50034;">オーストリア社会民主労働党</span>）を弾圧し、権力を固めている。
 
-Is there anything we could do?
+何かできることはあるか？
 
 # - use EU to sanction Austria (will prevent civil war and restore democracy)
 # - apply diplomatic pressure to Austria (without EU)
 # - fund the Schutzbund
 # after this, supporting Austrians will raise sdapo_strength; if sdapo_strength >= 2, they'll enter a long civil war; if sdapo_strength >= 5, they'll win.
 
-- @eu_sanctions: Call upon the <span style="color: #001489;">European</span> <span style="color: #FFDD00;">Union</span> to sanction Austria, unless the National Council is restored.
-- @diplomatic_pressure: Apply diplomatic pressure to Austria to restore the National Council.
-- @fund_schutzbund: Support the <span style="color: #A50034;">**SDAPÖ**</span>'s underground organizing.
-- @nothing: Nothing can be done.
+- @eu_sanctions: 国民議会が再開されない限り、<span style="color: #001489;">ヨーロッパ</span><span style="color: #FFDD00;">連合</span>にオーストリアへの制裁を求める。
+- @diplomatic_pressure: オーストリアに外交圧力をかけ、国民議会を再開させる。
+- @fund_schutzbund: <span style="color: #A50034;">**SDAPÖ**</span>の地下組織活動を支援する。
+- @nothing: 何もできない。
 
 @eu_sanctions
 view-if: eu = 1
 on-arrival: sdapo_strength += 3; sdapo_strength += 1 if customs_union; eu_austria = 1
 
-The <span style="color: #001489;">European</span> <span style="color: #FFDD00;">Union</span> is a largely untested body, and from the beginning contained members that are at best quasi-democratic. Most of its members are more concerned by power politics than democratic values. However, as its founder, Germany holds a special influence in the <span style="color: #001489;">E</span><span style="color: #FFDD00;">U</span>, and we manage to persuade the other members to join in the pressure against <span style="color: #7A3C00;">Austrofascism</span>.
+<span style="color: #001489;">ヨーロッパ</span><span style="color: #FFDD00;">連合</span>は、まだ実績の乏しい組織であり、当初からせいぜい半民主的としかいえない加盟国も抱えている。加盟国の多くは民主主義の価値より勢力均衡を重視する。それでも創設国ドイツは<span style="color: #001489;">E</span><span style="color: #FFDD00;">U</span>内で特別な影響力を持ち、他の加盟国を<span style="color: #7A3C00;">オーストロファシズム</span>への圧力に加わらせることに成功した。
 
-The Dollfuß regime does not give in, but it is weakened and isolated.
+ドルフフス政権は屈しないが、弱体化し孤立している。
 
 @diplomatic_pressure
 view-if: foreign_minister_party = "SPD"
 on-arrival: sdapo_strength += 1; sdapo_strength += 2 if customs_union
 
-We still have much economic influence in Austria, and the threat of sanctions.
+オーストリアにはまだ大きな経済的影響力と制裁の脅威がある。
 
-The Dollfuß regime does not give in, but it is somewhat weakened.
+ドルフフス政権は屈しないが、いくらか弱体化している。
 
 @fund_schutzbund
 on-arrival: resources -= 1; sdapo_strength += 1; sdapo_strength += 1 if customs_union
-subtitle: -1 resource
+subtitle: -1リソース
 choose-if: resources >= 1
 
-It is somewhat of a breach of diplomatic protocol for the <span style="color: #c00000;">**SPD**</span> to so directly interfere in another country's affairs, supporting the <span style="color: #A50034;">Austrian social democrats</span>.
+<span style="color: #c00000;">**SPD**</span>が他国の内政へこれほど直接に介入し、<span style="color: #A50034;">オーストリアの社会民主主義者</span>を支援することは、外交儀礼にいささか反する。
 
-The Dollfuß regime does not give in, but its opponents have an added advantage. That may not be enough when dealing with the total force of the <span style="color: #7A3C00;">fascist</span> state.
+ドルフース政権は屈しないが、反対派は新たな足場を得た。もっとも、<span style="color: #7A3C00;">ファシスト</span>国家の全力に対抗するには足りないかもしれない。
 
 @nothing
 
-Unfortunately, there is nothing we can do for our Austrian comrades.
+残念ながら、我々のオーストリアの同志にできることは何もない。

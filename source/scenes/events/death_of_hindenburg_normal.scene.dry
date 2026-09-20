@@ -1,5 +1,5 @@
-title: The Death of Hindenburg
-subtitle: The Great War hero and one-time president has died...
+title: ヒンデンブルクの死
+subtitle: 大戦の英雄にして元大統領が死去した……。
 new-page: true
 view-if: year = 1934 and month >= 8 and president != "Hindenburg"
 on-arrival: hindenburg_dead = 1
@@ -18,13 +18,13 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The Death of Hindenburg
+= ヒンデンブルクの死
 
-Paul von Hindenburg has passed away at age 86.
+パウル・フォン・ヒンデンブルクが86歳で死去した。
 
-The nation engages in an outpouring of grief for its war hero and former president. Even for committed <span style="color: #c00000;">socialists</span> and <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">icans</span>, this is a bittersweet moment. Even though he was a manifestation of Prussian militarism and monarchism, he still led the nation through difficult times, without destroying democracy. It could always have been worse.
+大戦の英雄であり元大統領でもある彼の死を、国民は深い悲しみで悼んでいる。確固たる<span style="color: #c00000;">社会主義者</span>や<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">主義者</span>にとってさえ、これは哀惜の入り混じる瞬間である。彼はプロイセン軍国主義と君主主義の体現者ではあったが、民主主義を破壊することなく、困難な時代の国を率いた。もっと悪い結末もあり得たのだ。
 
-With the passing of Hindenburg, it seems as if an era of history is closing. The worst years of crisis are over, and <span style="color: #7A3C00;">Nazism</span>'s days are numbered. Perhaps Germany will finally enter into a new era of genuine peace...
+ヒンデンブルクの死とともに、歴史の一時代が終わろうとしている。危機の最悪期は過ぎ、<span style="color: #7A3C00;">ナチズム</span>の命運も尽きかけている。ドイツはついに、真の平和に満ちた新時代へ踏み出すのかもしれない……。
 
-- @game_over_1934: Trigger game over.
-- @root: Nah.
+- @game_over_1934: ゲームを終了する。
+- @root: まだだ。

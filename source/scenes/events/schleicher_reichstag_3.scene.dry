@@ -1,5 +1,5 @@
-title: The Reichstag Agenda Committee Discusses Reconvocation
-subtitle: Schleicher's new lease on life?
+title: 国会議事日程委員会、再開会を協議
+subtitle: シュライヒャーに新たな延命の機会か？
 view-if: chancellor = "Schleicher" and schleicher_time and (next_reichstag_time - 1) == rubicon_time
 on-arrival: {!
 if (((Q.reichswehr_strength*Q.reichswehr_militancy + Q.prussian_police_strength*Q.prussian_police_militancy)*2 < Q.total_force && Q.prussia_leader == "Schleicher") || (Q.reichswehr_strength*Q.reichswehr_militancy)*2 < (Q.total_force + Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty) && Q.prussia_leader != "Schleicher") {
@@ -25,15 +25,15 @@ on-display: {!
 !}
 go-to: schleicher_reichstag_menu
 
-= Reichstag Reconvocation Decision
+= 国会再開会の決定
 
-The Reichstag, which Schleicher had urged to reconvene as soon as possible, is set to revisit its earlier decision to reconvene next week. The outcome will determine when the inevitable confrontation between the Schleicher cabinet and a hostile parliament will occur. The <span style="color: #700000;">**KPD**</span> and <span style="color: #c00000;">**SPD**</span> spokesmen support reconvening the chamber as planned, while the <span style="color: #7A3C00;">**NSDAP**</span>'s spokesman, Wilhelm Frick, has adopted a noticeably less confrontational tone.
+シュライヒャーが可能な限り早い再開会を求めていた国会は、翌週に再開会するという先の決定を再検討する。結果次第で、シュライヒャー内閣と敵対的な議会との避けられない対決がいつ起きるかが決まる。<span style="color: #700000;">**KPD**</span>と<span style="color: #c00000;">**SPD**</span>の代表は予定どおりの再開会を支持する一方、<span style="color: #7A3C00;">**NSDAP**</span>代表ヴィルヘルム・フリックは、明らかに対決姿勢を弱めている。
 
-Frick shares many of Strasser’s concerns about [+ nsdap_leader +]’s all-or-nothing stance and fears that a new election would bring disastrous <span style="color: #7A3C00;">Nazi</span> losses. Yet even figures like Goebbels believe they need more time, and the top <span style="color: #7A3C00;">Nazi</span> leaders have pushed Frick to propose delaying the reconvening until the cabinet can present its budget in a few months.
+フリックは、[+ nsdap_leader +]の一か八かの姿勢に対するシュトラッサーの懸念の多くを共有し、新選挙が<span style="color: #7A3C00;">ナチ党</span>に壊滅的な敗北をもたらすことを恐れている。ゲッベルスのような人物でさえ、さらに時間が必要だと考えている。<span style="color: #7A3C00;">ナチ党</span>上層部はフリックに、数か月後に内閣が予算案を提出するまで再開会を延期するよう提案させた。
 
-[? if not schleicher_economy_time: Nevertheless, Schleicher appears determined to continue his unwise strategy of offense—pushing for an immediate showdown with the Reichstag in hopes that [+ nsdap_leader +] will shift position to avoid new elections or, failing that, that Hindenburg will grant him an emergency decree. ?][? if schleicher_economy_time: It is expected that Schleicher will reverse his earlier, unwise strategy of confrontation and instead lend his support to Frick's proposal. ?]
+[? if not schleicher_economy_time: それでもシュライヒャーは、無謀な攻勢策を続ける決意のようだ。直ちに国会との対決を迫り、新選挙を避けるために[+ nsdap_leader +]が方針を変えるか、それが駄目ならヒンデンブルクが緊急令を交付することに望みを託している。?][? if schleicher_economy_time: シュライヒャーは以前の無謀な対決路線を翻し、代わりにフリック案を支持すると見られている。?]
 
-In any case, there’s enough support among the other parties to pass Frick’s motion to extend the recess, rendering our vote irrelevant.
+いずれにせよ、他党にはフリックの休会延長動議を可決するだけの支持があり、我々の票は結果を左右しない。
 
 @schleicher_reichstag_menu
 
@@ -41,7 +41,7 @@ In any case, there’s enough support among the other parties to pass Frick’s 
 - @reichstag_2
 
 @reichstag_1
-title: Frick's proposal is shot down!
+title: フリック案は否決された！
 view-if: not schleicher_reichstag_smart
 on-arrival: {!
 Q.next_reichstag_time = Q.rubicon_time + 1;
@@ -67,18 +67,18 @@ if (Q.next_reichstag_month > 12) {
 }
 !}
 
-As expected, the objections raised by Schleicher’s spokesman—acting on direct orders—have sunk the <span style="color: #7A3C00;">Nazi</span> motion. In response, the <span style="color: #000000;">Center Party</span> has introduced a compromise: a one-week extension of the recess to allow for further negotiations. 
+予想どおり、シュライヒャーの直接命令を受けた代表の反対によって、<span style="color: #7A3C00;">ナチ党</span>の動議は否決された。これを受け、<span style="color: #000000;">中央党</span>は追加交渉のために休会を1週間延長する妥協案を提出した。
 
-Papen’s scheme has become considerably easier, as Schleicher is now forced to test the President’s support by requesting a decree to dissolve the Reichstag and postpone elections. But if Hindenburg denies the request, the question becomes unavoidable: who would succeed him? Papen? Hitler?
+パーペンの策謀は大幅に容易になった。シュライヒャーは国会の解散と選挙延期を命じる緊急令を求め、大統領の支持を試さざるを得ないからだ。しかしヒンデンブルクが拒めば、後継者は誰かという問いを避けられなくなる。パーペンか？　ヒトラーか？
 
-Schleicher has squandered a critical opportunity to salvage his cabinet—and perhaps Germany itself. Had the elections been postponed just a few months, his position would likely have improved significantly. He stood to gain from the launch of Gereke’s public works program and the natural recovery of the global economy. Meanwhile, the <span style="color: #7A3C00;">Nazis</span>, with no upcoming state elections to boost morale, would have been increasingly vulnerable to internal collapse—driven by mounting dissatisfaction with [+ nsdap_leader +] and the disintegration of the <span style="color: #7A3C00;">**SA**</span>.
+シュライヒャーは内閣を、ひいてはドイツそのものを救う決定的な機会を浪費した。選挙をほんの数か月延期していれば、彼の立場は大きく改善した可能性が高い。ゲーレケの公共事業計画の開始と世界経済の自然回復から恩恵を得られたはずである。一方、士気を高める州選挙を当面控えていない<span style="color: #7A3C00;">ナチ党</span>は、[+ nsdap_leader +]への不満の高まりと<span style="color: #7A3C00;">**SA**</span>の崩壊によって、内部崩壊の危険を一層強めていただろう。
 
-None of this is to be.
+だが、そのいずれも実現しない。
 
 @reichstag_2
-title: Schleicher approves Frick's proposal.
-subtitle: This is a turning point.
-unavailable-subtitle: Schleicher remains committed to his delusions.
+title: シュライヒャーがフリック案を承認する。
+subtitle: これは転機である。
+unavailable-subtitle: シュライヒャーはいまだ妄想に固執している。
 choose-if: schleicher_reichstag_smart
 on-arrival: {!
 Q.next_reichstag_time = Q.rubicon_time + 9;
@@ -104,6 +104,6 @@ if (Q.next_reichstag_month > 12) {
 }
 !}
 
-[? if not schleicher_economy_time: However, Schleicher, having learned about Frick's plans to delay the Reichstag's reconvocation, has had a sudden change of heart. A new round of war games—this time not rigged—has revealed that the Reichswehr cannot survive fighting against all paramilitaries[? if prussia_leader == "Schleicher":, even with the Prussian police?][? if prussia_leader != "Schleicher":, and the Prussian police force as well?]. Despite his efforts to strengthen the army with streetfighting equipment and training, the limited but well-trained force remains unable to withstand being heavily outnumbered. ?][? if schleicher_economy_time: Schleicher, seeking to benefit from his public works program before calling for confrontation in the Reichstag that'll likely lead to new elections, has decided that Frick's proposal is most prudent. ?]
+[? if not schleicher_economy_time: しかし国会再開会を遅らせるフリックの計画を知ると、シュライヒャーは突如として翻意した。今度は細工のない新たな兵棋演習により、国軍がすべての準軍事組織[? if prussia_leader == "Schleicher":を相手に、プロイセン警察の支援を得ても?][? if prussia_leader != "Schleicher":に加えてプロイセン警察まで相手にしては?]戦い抜けないことが判明したのである。市街戦装備と訓練による軍の強化を進めてきたにもかかわらず、規模は小さいが精鋭の部隊も、圧倒的な数的不利には耐えられない。?][? if schleicher_economy_time: シュライヒャーは、新選挙につながる可能性が高い国会との対決に踏み切る前に公共事業計画の成果を得ようと考え、フリック案が最も賢明だと判断した。?]
 
-[? if not schleicher_economy_time: The chancellor makes it clear that he still hopes [+ nsdap_leader +] might have a sudden change of heart, but with his backup plan no longer viable, he pushes for the adoption of Frick's proposal. ?] The Reichstag is now adjourned until [+ next_reichstag_month : month +] [+ next_reichstag_year +], Week [+ next_reichstag_week +], and Schleicher is expected to unveil his public works program during this time.
+[? if not schleicher_economy_time: 首相はなお[+ nsdap_leader +]の突然の翻意に期待していると明言するが、代替策がもはや実行不能となったため、フリック案の採択を推し進める。?]国会は[+ next_reichstag_year +]年[+ next_reichstag_month : month +]（第[+ next_reichstag_week +]週）まで休会となり、その間にシュライヒャーは公共事業計画を発表すると見込まれる。

@@ -1,5 +1,5 @@
-title: The 'Potempa Five' Stand Trial for Murder
-subtitle: The <span style="color: #7A3C00;">Nazis</span> are to exploit their conviction as a propaganda tool.
+title: 「ポテンパの五人組」、殺人罪で裁判へ
+subtitle: <span style="color: #7A3C00;">ナチ</span>は有罪判決を宣伝に利用しようとしている。
 view-if: chancellor = "Papen" and papen_time == 11
 new-page: true
 tags: event
@@ -17,16 +17,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The 'Potempa Five' Stand Trial for Murder
+= 「ポテンパの五人組」、殺人罪で裁判へ
 
-The so-called "Potempa Five"—the <span style="color: #7A3C00;">**SA**</span> men who broke into the home of a <span style="color: #700000;">**Communist**</span> miner and brutally beat him to death—are set to stand trial in Papen’s newly established special courts, designed to fast-track death penalty cases. The <span style="color: #7A3C00;">Nazis</span> have wasted no time in slandering the victim, referring to him as subhuman for being both <span style="color: #700000;">**Communist**</span> and Polish, in a vile attempt to sway public opinion in favor of the murderers.
+<span style="color: #700000;">**共産党員**</span>の鉱夫宅に押し入り、彼を残忍に殴り殺した<span style="color: #7A3C00;">**SA**</span>隊員、いわゆる「ポテンパの五人組」が、死刑事件の迅速処理を目的としてパーペンが新設した特別裁判所で裁かれることになった。<span style="color: #7A3C00;">ナチ</span>は早くも被害者を中傷し、<span style="color: #700000;">**共産党員**</span>かつポーランド人であるため人間以下だと呼び、殺人者に有利な世論を作ろうと卑劣な試みを続けている。
 
 - @papen
 
 @papen
-title: The verdict goes down...
+title: 判決が下される……
 on-arrival: sa_militancy += 0.05; rfb_strength += 25; rfb_militancy += 0.02; new_middle_nsdap -= 3; new_middle_dvp += 2; new_middle_lvp += 3; old_middle_nsdap -= 5; old_middle_dnvp += 5 if dnvp_ideology == "Radical"; old_middle_dvp += 2; old_middle_dnf += 3; rural_nsdap -= 3; rural_dnvp += 3 if dnvp_ideology == "Radical"; rural_dvp += 1; rural_dnf += 3; pro_republic -= 3; workers_kpd += 4; unemployed_kpd += 4; hindenburg_hitler_r -= 1; potempa_five_convicted = 1
 
-Convicted! The five <span style="color: #7A3C00;">**SA**</span> men have been sentenced to death for their atrocious crime. Yet the <span style="color: #7A3C00;">Nazis</span> have only intensified their propaganda, portraying the killers as national heroes and the murder as a patriotic act. This grotesque campaign has emboldened the <span style="color: #7A3C00;">**SA**</span>, with the <span style="color: #7A3C00;">**NSDAP**</span> now calling for an escalation in violence to render Germany "ungovernable."
+有罪！　5人の<span style="color: #7A3C00;">**SA**</span>隊員は、この凶悪な犯罪により死刑を言い渡された。しかし<span style="color: #7A3C00;">ナチ</span>は宣伝をいっそう激化させ、殺人者を国民的英雄、殺人を愛国的行為として描いている。この醜悪な運動は<span style="color: #7A3C00;">**SA**</span>を増長させ、<span style="color: #7A3C00;">**NSDAP**</span>は今やドイツを「統治不能」にするため暴力を激化させるよう訴えている。
 
-Rumors have arisen that Papen’s government may commute the sentences to win <span style="color: #7A3C00;">Nazi</span> support when the Reichstag reconvenes. But this has dealt a serious blow to [+ nsdap_chancellor +]’s so-called “oath of legality.” Public revulsion at the Potempa murders—and the <span style="color: #7A3C00;">Nazis</span>’ open approval—has triggered a backlash among their former supporters. Many religious and conservative voters are horrified, and even President Hindenburg is reportedly sickened by the affair.
+国会再開時に<span style="color: #7A3C00;">ナチ</span>の支持を得るため、パーペン政権が刑を減軽するとの噂が流れている。しかしこの事件は、[+ nsdap_chancellor +]のいわゆる「合法性の誓約」に深刻な打撃を与えた。ポテンパ殺人事件と、それを公然と是認する<span style="color: #7A3C00;">ナチ</span>への世論の嫌悪は、かつての支持者の間にも反発を引き起こした。宗教的・保守的な有権者の多くが恐怖を覚え、ヒンデンブルク大統領さえこの事件に嫌悪を示していると伝えられる。

@@ -1,5 +1,5 @@
-title: The Decision 2010
-subtitle: The fate of Germany rests in Hindenburg.
+title: 決断2010
+subtitle: ドイツの運命はヒンデンブルクにかかっている。
 view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode and not schleicher_coup
 new-page: true
 tags: event
@@ -19,48 +19,48 @@ on-display: {!
 !}
 on-arrival: nazi_16_triggered = 1
 
-= Negotiations, Pt. 3
+= 組閣交渉・第3部
 
-The details of a cabinet headed by [+ nsdap_chancellor +] have begun to take final shape, and Hindenburg took a major step in that direction by summoning General Werner von Blomberg to Berlin to be available to succeed Schleicher as Defense Minister. Hindenburg believed that he had selected an apolitical, professional officer, but he had instead chosen a man highly susceptible to the allures of <span style="color: #7A3C00;">Nazism</span>.
+[+ nsdap_chancellor +]を首班とする内閣の細部が最終的な形を取り始めた。ヒンデンブルクは、シュライヒャーの後任国防相に就けるようヴェルナー・フォン・ブロンベルク将軍をベルリンへ召還し、その方向へ大きく踏み出した。ヒンデンブルクは非政治的な職業軍人を選んだと考えたが、実際に選んだのは<span style="color: #7A3C00;">ナチズム</span>の誘惑に極めて弱い男であった。
 
-Meanwhile, [+ nsdap_chancellor +] gave in to Hindenburg's insistence that Papen become [? if prussia_leader == "Schleicher": both the Minister-President of Prussia and?] the Vice Chancellor, leading to Papen approving Wilhelm Frick's appointment to the national Interior Ministry, and Göring to the Prussian one. [+ nsdap_leader +] then introduced a new demand: the dissolution of the Reichstag so a new election could be held. And as Chancellor, he would also require the passage of an "enabling act", centralizing authority in the cabinet.
+一方、[+ nsdap_chancellor +]はパーペンを[? if prussia_leader == "Schleicher":プロイセン州首相兼?]副首相にするというヒンデンブルクの要求へ屈し、パーペンはヴィルヘルム・フリックの中央内相、ゲーリングのプロイセン内相就任を承認した。続いて[+ nsdap_leader +]は、新たな選挙を行うため国会を解散するという新要求を持ち出した。さらに首相として、権限を内閣へ集中させる「全権委任法」の成立も必要だという。
 
-Papen raised no objections to this new demand, although Hugenberg may raise his concerns in an upcoming meeting to secure his participation in the cabinet.
+パーペンはこの新要求に異議を唱えなかったが、入閣を確定するため近く会談するフーゲンベルクは懸念を示すかもしれない。
 
 - @nazi_2
 
 @nazi_2
-title: Hugenberg and the <span style="color: #3E88B3;">**Stahlhelm**</span> meet with Papen once again.
+title: フーゲンベルクと<span style="color: #3E88B3;">**鉄兜団**</span>がパーペンと再び会談する。
 on-arrival: hindenburg_hitler_r += 1
 
-The prospect of personal command over the country’s agriculture and economy is enticing to Hugenberg, who aims to eliminate all forms of <span style="color: #c00000;">socialism</span>, restructure Germany’s economy into a heavily capitalistic and laissez-faire system, and transfer power to an elite few. The offer proves too great for Hugenberg to maintain his stance. Franz Seldte of the <span style="color: #3E88B3;">**Stahlhelm**</span> is now also confirmed as the next Labor Minister.
+あらゆる形態の<span style="color: #c00000;">社会主義</span>を一掃し、ドイツ経済を徹底した資本主義・自由放任体制へ再編し、少数エリートへ権力を移すことを目指すフーゲンベルクにとって、国家の農業と経済を自ら指揮できる見通しは魅力的である。提示された条件はあまりに大きく、フーゲンベルクは従来の立場を維持できなかった。<span style="color: #3E88B3;">**鉄兜団**</span>のフランツ・ゼルテも次期労相に決まった。
 
-Papen has refrained from mentioning to Hugenberg [+ nsdap_leader +]’s demand for new elections, where the <span style="color: #7A3C00;">**NSDAP**</span> would have a decisive advantage over his own [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?]. However, despite Hugenberg’s willingness to join the cabinet, <span style="color: #3E88B3;">**Stahlhelm**</span> leader Theodor Duesterberg leads a group of prominent conservatives to vehemently oppose that step, and urge that he only support another Papen cabinet instead.
+パーペンは、新選挙を求める[+ nsdap_leader +]の要求をフーゲンベルクへ伝えることを控えた。その選挙では<span style="color: #7A3C00;">**NSDAP**</span>が、彼の[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?]に対して決定的な優位を持つからである。しかしフーゲンベルクに入閣意思がある一方、<span style="color: #3E88B3;">**鉄兜団**</span>指導者テオドール・デュースターベルクは有力保守派の一団を率いてこの動きに猛反対し、再度のパーペン内閣だけを支持するよう迫った。
 
-However, as is all too common, [+ nsdap_leader +] is underestimated once more. Hugenberg responds, "We’ll box Hitler in," and, "In two months we’ll have pushed Hitler so far into a corner that he’ll squeal." When another conservative warned that [+ nsdap_leader +] sought a dictatorship, Papen dismissively replied, "You’re mistaken. We’ve hired him!"
+しかし、あまりにもしばしば起きるように、[+ nsdap_leader +]はまたも過小評価された。フーゲンベルクは「ヒトラーを箱に閉じ込める」「二か月もすれば、ヒトラーを悲鳴が上がるほど隅へ追い詰めているだろう」と応じた。別の保守派が[+ nsdap_leader +]は独裁を目指していると警告すると、パーペンは「君は間違っている。我々が彼を雇ったのだ！」と一蹴した。
 
 - @schleicher_cabinet_6
 
 @nazi_3
 on-arrival: hindenburg_hitler_r += 3
 
-= Negotiations, Pt. 4
+= 組閣交渉・第4部
 
-Hindenburg and his son have suspected the worst of Schleicher and didn’t take the trouble to investigate the rumors. Taking advantage of this atmosphere of crisis, Papen finally secured Hindenburg’s agreement that tomorrow morning, he is to swear in a new cabinet headed by [+ nsdap_chancellor +].
+ヒンデンブルクと息子はシュライヒャーに最悪の疑いを抱き、噂を調べる手間さえ取らなかった。この危機的雰囲気を利用し、パーペンはついに、翌朝[+ nsdap_chancellor +]を首班とする新内閣を宣誓就任させるとの同意をヒンデンブルクから取りつけた。
 
-Hindenburg has approved the ministers proposed, but Papen, knowing that Hindenburg will never make [+ nsdap_chancellor +] the chancellor of a presidential cabinet, purposefully avoids disclosing that detail to him—though he knows Hindenburg will realize it soon enough.
+ヒンデンブルクは提案された閣僚を承認した。しかし、彼が[+ nsdap_chancellor +]を大統領内閣の首相には決してしないと知るパーペンは、その点を意図的に明かさなかった。いずれヒンデンブルクが気づくことは承知している。
 
-By leaving the Justice Ministry vacant on the list of cabinet members, Papen sought to create the impression that it was being reserved for a <span style="color: #000000;">Center Party</span> member, and that its appointment was pending final negotiations. This simple act of deception has convinced Hindenburg that he is appointing a parliamentary chancellor, with the [? if not stegerwald_path: Catholic?][? if stegerwald_path: Christian?] party’s earlier overtures lending credence to the scheme.
+パーペンは閣僚名簿で司法相を空席にし、<span style="color: #000000;">中央党</span>員のために留保され、最終交渉を待って任命されるとの印象を作ろうとした。この単純な欺瞞によって、ヒンデンブルクは自分が議会内閣の首相を任命するのだと信じ込んだ。[? if not stegerwald_path:カトリック?][? if stegerwald_path:キリスト教?]政党が先に接触していたことも、計略に信憑性を与えた。
 
-- @root: We await tomorrow.
+- @root: 明日を待つ。
 
 @nazi_4
 on-arrival: hindenburg_hitler_r += 1
 
-= Negotiations, Pt. 4
+= 組閣交渉・第4部
 
-That evening, Papen once again asked Hindenburg to appoint [+ nsdap_chancellor +] as Chancellor—preferably before Schleicher faces an embarrassing defeat in the Reichstag. However, Hindenburg feels no urgency to remove Schleicher so soon.
+その晩、パーペンは再びヒンデンブルクへ[+ nsdap_chancellor +]の首相任命を求めた。できればシュライヒャーが国会で屈辱的な敗北を喫する前に、という。しかしヒンデンブルクは、それほど早くシュライヒャーを罷免する必要性を感じていない。
 
-Hindenburg has since approved the proposed ministers, but Papen, fully aware that the President would never accept [+ nsdap_chancellor +] as the head of a presidential cabinet, deliberately withholds that detail—though he knows Hindenburg will realize it soon enough.
+その後ヒンデンブルクは提案された閣僚を承認した。しかし大統領が[+ nsdap_chancellor +]を大統領内閣の首班として決して受け入れないと熟知するパーペンは、その点を意図的に伏せた。いずれヒンデンブルクが気づくことは承知している。
 
-By leaving the Justice Ministry vacant on the cabinet list, Papen creates the illusion that the post is being reserved for a <span style="color: #000000;">Center Party</span> member and that final negotiations are still ongoing. This simple act of deception convinces Hindenburg that he is appointing a parliamentary Chancellor, with the [? if not stegerwald_path: Catholic?][? if stegerwald_path: Christian?] party’s earlier overtures lending credibility to the ruse.
+パーペンは閣僚名簿で司法相を空席にし、<span style="color: #000000;">中央党</span>員のために留保され、最終交渉が続いているかのように装った。この単純な欺瞞によって、ヒンデンブルクは自分が議会内閣の首相を任命するのだと信じ込んだ。[? if not stegerwald_path:カトリック?][? if stegerwald_path:キリスト教?]政党が先に接触していたことも、策略に信憑性を与えた。

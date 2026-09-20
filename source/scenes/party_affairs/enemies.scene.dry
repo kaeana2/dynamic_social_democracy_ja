@@ -1,4 +1,4 @@
-title: Choosing Our Enemies
+title: 敵を選ぶ
 new-page: true
 view-if: year <= 1930 and enemies_timer <= 0
 on-arrival: month_actions += 1; enemies_timer = 18
@@ -7,40 +7,40 @@ is-card: true
 card-image: img/poster_1.png
 tags: party_affairs
 
-= Choosing our enemies
+= 敵を選ぶ
 
-In our media and campaign materials, who should we consider as our main opponents?
+メディアと選挙運動では、誰を主要な敵とみなすべきか。
 
-[? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
+[? if enemies != 0 : これまでは[+ enemies +]を敵としてきた。方針転換は必要だろうか。 ?]
 
-- @anti_dem: The anti-democratic parties of the <span style="color: #7A3C00;">far</span>-[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">right</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">right</span>?] and <span style="color: #700000;">left</span> - the <span style="color: #700000;">**KPD**</span>, <span style="color: #7A3C00;">**NSDAP**</span>, and [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?].
-- @far_right: The <span style="color: #7A3C00;">far</span>-[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">right</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">right</span>?] - the <span style="color: #7A3C00;">**NSDAP**</span> and [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?].
-- @nsdap: The <span style="color: #7A3C00;">**NSDAP**</span> alone.
-- @kpd: The <span style="color: #700000;">**KPD**</span>.
-- @bourgeois: The bourgeois parties - the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**DVP**</span>?][? if not lvp_formed and not dvp_exist: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?].
+- @anti_dem: 反民主主義的な<span style="color: #7A3C00;">極</span>[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">右</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">右派</span>?]・<span style="color: #700000;">左派</span>政党――<span style="color: #700000;">**KPD**</span>、<span style="color: #7A3C00;">**NSDAP**</span>、[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?]。
+- @far_right: <span style="color: #7A3C00;">極</span>[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">右</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">右派</span>?]――<span style="color: #7A3C00;">**NSDAP**</span>と[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?]。
+- @nsdap: <span style="color: #7A3C00;">**NSDAP**</span>のみ。
+- @kpd: <span style="color: #700000;">**KPD**</span>。
+- @bourgeois: ブルジョワ諸党――[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と[? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**DVP**</span>?][? if not lvp_formed and not dvp_exist: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]。
 - @easy_discard
 
 @anti_dem
 on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 1.5; workers_nsdap -= 2; workers_dnvp -= 1 if dnvp_ideology == "Radical"; workers_dnf -= 1; unemployed_kpd -= 2; unemployed_nsdap -= 2; kpd_relation -= 10
 
-Attacking the <span style="color: #7A3C00;">far</span>-[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">right</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">right</span>?] and <span style="color: #700000;">left</span> is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the <span style="color: #700000;">**KPD**</span> in the future.
+反民主主義的な<span style="color: #7A3C00;">極</span>[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">右</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">右派</span>?]と<span style="color: #700000;">左派</span>への攻撃は、ブルジョワ諸党と闘うことを望む党内左派を除いて好評である。将来<span style="color: #700000;">**KPD**</span>と和解する余地は狭まるだろう。
 
 @far_right
 on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_dnvp -= 2 if dnvp_ideology == "Radical"; workers_dnf -= 2
 
-Attacking the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the <span style="color: #700000;">**KPD**</span>. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>への攻撃は党全体に好評だが、左派はブルジョワ諸党も同様に危険だと考え、右派は<span style="color: #700000;">**KPD**</span>への対応不足を批判している。ブルジョワ連立諸党も、反共主義への消極姿勢を疑問視している。
 
 @nsdap
 on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4; unemployed_nsdap -= 4; workers_nsdap += 8 if nsdap_votes < 8; unemployed_nsdap += 8 if nsdap_votes < 8
 
-[? if nazi_urgency == 0 or nsdap_votes < 10: The <span style="color: #7A3C00;">**NSDAP**</span> is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. [? if nsdap_votes < 8: Worst still, giving them too much attention might only end up helping them. ?] ?][? if nazi_urgency > 0 and nsdap_votes >= 10 : The <span style="color: #7A3C00;">Nazis</span> are the most urgent problem for us to deal with. ?]
+[? if nazi_urgency == 0 or nsdap_votes < 10: 現在の<span style="color: #7A3C00;">**NSDAP**</span>は、声ばかり大きい小政党にすぎない。党内ではこの選択を疑問視する者が多い。[? if nsdap_votes < 8: さらに悪いことに、注目を集めすぎれば彼らを利するだけかもしれない。 ?] ?][? if nazi_urgency > 0 and nsdap_votes >= 10 : <span style="color: #7A3C00;">ナチ</span>こそ最優先で対処すべき問題である。 ?]
 
 @kpd
 on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; ddp_relation += 3; z_relation += 5; lvp_relation += 5; workers_kpd -= 3; unemployed_kpd -= 4; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
 
-Attacking the <span style="color: #700000;">**KPD**</span> is supported by all but the most left-wing <span style="color: #c00000;">socialists</span>, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the <span style="color: #700000;">**KPD**</span>, this may not be the best choice.
+<span style="color: #700000;">**KPD**</span>への攻撃は最左派の<span style="color: #c00000;">社会主義者</span>を除いて支持され、ブルジョワ諸党からも一定の評価を得る。しかし<span style="color: #700000;">**KPD**</span>との和解を目指すなら最善の選択ではない。
 
 @bourgeois
 on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; new_middle_dvp -= 2; workers_dvp -= 1; workers_ddp -= 0.5; workers_ddp -= 0.5 if not dvp_exist; coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1
 
-Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
+反ブルジョワの言辞は左派に好評だが、将来の政権に必要な連立形成を難しくする恐れがある。

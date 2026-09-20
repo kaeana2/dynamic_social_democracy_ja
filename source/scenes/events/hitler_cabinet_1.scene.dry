@@ -1,4 +1,4 @@
-title: The Enabling Act
+title: 全権委任法
 view-if: chancellor_party == "NSDAP" and rubicon_mini_time == 2
 new-page: true
 tags: event
@@ -16,70 +16,70 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The Enabling Act
+= 全権委任法
 
-As the Reichstag gets back to business once again, the bill on debate is not one of no-confidence, but rather an "Enabling Act" proposed by [+ nsdap_chancellor +] and the <span style="color: #7A3C00;">**NSDAP**</span>. With Schleicher's blessing, the cabinet believes that certain elements of the constitution will have to suspended in order to crush the <span style="color: #700000;">**Communists**</span> and Reichsbanner. 
+国会が再び審議を始めるなか、議題に上ったのは内閣不信任案ではなく、[+ nsdap_chancellor +]と<span style="color: #7A3C00;">**NSDAP**</span>が提出した「全権委任法」である。シュライヒャーの承認を得た内閣は、<span style="color: #700000;">**共産主義者**</span>と国旗団を粉砕するためには、憲法の一部を停止する必要があると考えている。
 
-However, this is not something the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] can easily swallow...
+しかし、これは[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が容易に受け入れられるものではない……
 
 - @hitler
 - @hitler_2
 
 @hitler
-title: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] votes in favor.
+title: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が賛成票を投じる。
 view-if: (z_in_gov_mini and pro_republic < 30) or far_right_coalition >= 50
 
-[? if not cvp_formed: [+ z_leader +]?][? if cvp_formed: [+ cvp_formed +]?] is personally assured significant constitutional safeguards by Schleicher, though he fails to extract a written commitment from [+ chancellor +]. It proves meaningless—[+ chancellor +] never intended to honor them.
+シュライヒャーは[? if not cvp_formed: [+ z_leader +]?][? if cvp_formed: [+ cvp_formed +]?]本人に、重要な憲法上の保障を約束した。しかし、[+ chancellor +]から書面による確約を取り付けることはできなかった。結局、その約束に意味はなかった――[+ chancellor +]には初めから守るつもりなどなかったのである。
 
-Hitler has promised a campaign of revenge against the <span style="color: #c00000;">socialists</span>, and the <span style="color: #7A3C00;">Nazis</span> have already spilled much blood on the streets. In his published manifesto, he promises a campaign of <span style="color: #7e0000;">**unspeakable**</span> <span style="color: #3f0000;">**horror**</span> against our <span style="color: #005EB8;">Jews</span>, and endless wars of violent expansion that will ruin all of Europe.
+ヒトラーは<span style="color: #c00000;">社会主義者</span>への復讐を公言し、<span style="color: #7A3C00;">ナチ</span>はすでに街頭で多くの血を流してきた。公刊された綱領のなかで、彼はわが国の<span style="color: #005EB8;">ユダヤ人</span>に対する<span style="color: #7e0000;">**言語を絶する**</span><span style="color: #3f0000;">**恐怖**</span>の迫害と、全ヨーロッパを破滅させる果てしない武力膨張戦争を予告している。
 
-What are we to do now?
+今、我々はどうすべきなのか？
 
-- @fight: We will fight on the streets to prevent Hitler from taking power.
-- @give_up: We will vote against the <span style="color: #7A3C00;">Nazis</span> in the Reichstag.
+- @fight: ヒトラーの権力掌握を阻むため、街頭で戦う。
+- @give_up: 国会で<span style="color: #7A3C00;">ナチ</span>に反対票を投じる。
 
 @fight
 
-Do we realize that this means civil war, against the full force of the state?
+それが国家の全兵力を相手にする内戦を意味すると理解しているのか？
 
-- @civil_war: Yes.
-- @give_up: We are not ready for war. Instead, we will vote against the <span style="color: #7A3C00;">Nazis</span> in the Reichstag.
+- @civil_war: その通りだ。
+- @give_up: 戦争の準備はできていない。代わりに国会で<span style="color: #7A3C00;">ナチ</span>に反対票を投じる。
 
 @give_up
 
-Speeches are made. Votes are held. Bullets fly in the streets. Some <span style="color: #c00000;">socialists</span> are killed or jailed. Others flee the country. What can votes even do at this juncture?
+演説が行われ、投票が実施される。街頭では銃弾が飛び交う。<span style="color: #c00000;">社会主義者</span>の一部は殺され、あるいは投獄され、別の者たちは国外へ逃れた。この段階で、投票にいったい何ができるというのか？
 
-The Reichstag is burned, ostensibly by a foreign <span style="color: #700000;">communist</span>. In the wake, the <span style="color: #7A3C00;">Nazis</span> pass decrees giving them unlimited power. They, combined with the [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?], will win a majority at the next elections.
+国会議事堂が炎上した。表向きは外国人の<span style="color: #700000;">共産主義者</span>による犯行とされた。事件を受け、<span style="color: #7A3C00;">ナチ</span>は自らに無制限の権力を与える緊急令を成立させた。次の選挙では、彼らと[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]を合わせた勢力が過半数を獲得するだろう。
 
-Germany is lost.
+ドイツは失われた。
 
-- @game_over: Game over.
+- @game_over: ゲームオーバー。
 
 @hitler_2
-title: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] votes against!
+title: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が反対票を投じる！
 view-if: (not z_in_gov_mini or pro_republic >= 30) and far_right_coalition < 50
 on-arrival: rubicon_mini = 0; rubicon_mini_leave = 1;
 
-[? if not cvp_formed: [+ z_leader +]?][? if cvp_formed: [+ cvp_formed +]?] is personally assured significant constitutional safeguards by Schleicher, though he fails to extract a written commitment from [+ chancellor +]. [? if not cvp_formed: [+ z_leader +]?][? if cvp_formed: [+ cvp_formed +]?] is able to see through these lies, and whips the party's parliamentary delegation to vote against the Enabling Act. 
+シュライヒャーは[? if not cvp_formed: [+ z_leader +]?][? if cvp_formed: [+ cvp_formed +]?]本人に、重要な憲法上の保障を約束した。しかし、[+ chancellor +]から書面による確約を取り付けることはできなかった。[? if not cvp_formed: [+ z_leader +]?][? if cvp_formed: [+ cvp_formed +]?]はこの虚言を見抜き、党の国会議員団に全権委任法への反対投票を徹底させた。
 
-Schleicher regards this development as a betrayal, yet his options are limited. President Hindenburg remains the true deciding factor. He now views the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]’s refusal to support [+ chancellor +] has only deepened his impatience. Disillusioned, Hindenburg no longer considers [+ chancellor +]’s ambition to lead as a parliamentary chancellor to be credible.
+シュライヒャーはこれを裏切りと見なすが、彼に残された選択肢は限られている。最終的な決定権を握るのは、依然としてヒンデンブルク大統領である。[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が[+ chancellor +]への支持を拒んだことで、大統領の苛立ちはいっそう深まった。幻滅したヒンデンブルクは、議会に基盤を置く首相として政権を率いるという[+ chancellor +]の野心を、もはや現実的とは考えていない。
 
 - @hitler_3
 
 @hitler_3
-title: [+ chancellor +] refuses to resign!
+title: [+ chancellor +]、辞任を拒否！
 
-In an act of defiance to President Hindenburg, Chancellor [+ chancellor +] has simply refused to acknowledge the president's power to dismiss the incumbent chancellor. The <span style="color: #7A3C00;">**SA**</span> mobilize on the streets, and things could get bloody.
+ヒンデンブルク大統領に反抗し、首相[+ chancellor +]は現職首相を罷免する大統領の権限そのものを認めようとしなかった。<span style="color: #7A3C00;">**SA**</span>は街頭に動員され、流血の事態が迫っている。
 
-What are we to do now?
+今、我々はどうすべきなのか？
 
-- @fight: We will fight on the streets to prevent Hitler from retaining power.
-- @give_up_2: We will trust in the president's abilities.
+- @fight: ヒトラーが権力を維持するのを阻むため、街頭で戦う。
+- @give_up_2: 大統領の力量を信じる。
 
 @give_up_2
 go-to: give_up_3 if sa_force < 50; give_up_4 if sa_force >= 50
 
-The President may be on our side, but the <span style="color: #7A3C00;">**SA**</span> can simply intimidate their way around him.
+大統領は我々の側に立っているかもしれない。だが、<span style="color: #7A3C00;">**SA**</span>は威圧によって彼を容易に押し切りうる。
 
 @give_up_3
 on-arrival: {!
@@ -132,16 +132,16 @@ Q.rubicon_mini_leave = 1;
 Q.z_in_gov_mini = 0;
 !}
 
-The Reichswehr has placed more trust in [+ president +] than in Chancellor [+ old_chancellor +], and under this influence, [+ old_chancellor +] was forced to accept his defeat. His removal, along with the replacement of many <span style="color: #7A3C00;">Nazi</span> cabinet ministers, has stopped Germany's slippery slope into dictatorship.
+国防軍は首相[+ old_chancellor +]よりも[+ president +]を信頼し、その圧力を受けた[+ old_chancellor +]は敗北を受け入れざるをえなかった。彼の罷免と、多くの<span style="color: #7A3C00;">ナチ</span>閣僚の更迭によって、ドイツが独裁へ転落する流れは食い止められた。
 
-Heinrich Brüning of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected as interim chancellor. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]のハインリヒ・ブリューニングが暫定首相に選ばれた。次回選挙は[+ next_election_year +]年[+ next_election_month : month +]に予定されている。
 
 @give_up_4
 
-Unfortunately, President Hindenburg is forced to concede defeat after a war game orchestrated by Schleicher reveals that the Reichswehr and Police cannot prevail in a civil war against the <span style="color: #7A3C00;">**SA**</span> and other paramilitary forces.
+しかし不幸にも、シュライヒャーが実施させた兵棋演習により、国防軍と警察は<span style="color: #7A3C00;">**SA**</span>などの準軍事組織を相手にした内戦では勝利できないと判明した。ヒンデンブルク大統領は敗北を認めざるをえない。
 
-Reduced to little more than a figurehead, Hindenburg remains in office—signing off on every decree, fully aware that any resistance would plunge his beloved nation into civil war.
+名目上の存在に等しくなったヒンデンブルクは、それでも大統領職にとどまる。抵抗すれば愛する祖国が内戦に陥ると知りながら、あらゆる緊急令に署名するのである。
 
-Germany is lost.
+ドイツは失われた。
 
-- @game_over: Game over.
+- @game_over: ゲームオーバー。

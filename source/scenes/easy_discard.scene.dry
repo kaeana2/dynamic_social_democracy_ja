@@ -1,4 +1,4 @@
-title: Return card to hand.
+title: カードを手札に戻す。
 view-if: difficulty <= 0 and last_advisor_action = 0 and last_cabinet_action = 0
 go-to: root
 on-arrival: {!

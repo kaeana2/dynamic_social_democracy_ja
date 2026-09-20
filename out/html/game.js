@@ -213,8 +213,8 @@ window.disableGrayMode = function() {
 
   window.changeTab = function(newTab, tabId, isRight) {
       if (tabId == 'poll_tab' && (dendryUI.dendryEngine.state.qualities.historical_mode || dendryUI.dendryEngine.state.qualities.rubicon)) {
-          if (dendryUI.dendryEngine.state.qualities.historical_mode && !dendryUI.dendryEngine.state.qualities.rubicon) window.alert('Polls are not available in historical mode.');
-          if (dendryUI.dendryEngine.state.qualities.rubicon) window.alert('Polls are not available after crossing the rubicon.');
+          if (dendryUI.dendryEngine.state.qualities.historical_mode && !dendryUI.dendryEngine.state.qualities.rubicon) window.alert('史実モードでは世論調査を利用できません。');
+          if (dendryUI.dendryEngine.state.qualities.rubicon) window.alert('ルビコンを越えた後は世論調査を利用できません。');
           return;
       }
       var tabButton = document.getElementById(tabId);
@@ -275,10 +275,10 @@ window.disableGrayMode = function() {
       elements.forEach(function (element) {
           if (element.style.display !== 'block') {
               element.style.display = 'block';
-              button.innerHTML = "View Other News";
+              button.innerHTML = "その他のニュースを見る";
           } else {
               element.style.display = 'none';
-              button.innerHTML = "View Right-Wing News";
+              button.innerHTML = "右翼のニュースを見る";
           }
       });
 
@@ -333,13 +333,22 @@ window.disableGrayMode = function() {
 
   window.onload = function() {
     window.dendryUI.loadSettings({show_portraits: true});
+    document.querySelectorAll('.save_button').forEach(function(button) {
+        button.textContent = 'セーブ';
+    });
+    document.querySelectorAll('.delete_button').forEach(function(button) {
+        button.textContent = '削除';
+    });
+    document.querySelectorAll('.export_button').forEach(function(button) {
+        button.textContent = '書き出し';
+    });
     if (window.dendryUI.dark_mode) {
         document.body.classList.add('dark-mode');
     }
     if (window.dendryUI.gray_mode) {
         document.body.classList.add('gray-mode');
     }
-    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
+    window.pinnedCardsDescription = "顧問カード――各アクションは6か月に一度だけ使用できます。";
     window.statusTab = "status";
     window.updateSidebar();
     window.statusTabRight = "status_right";

@@ -1,4 +1,4 @@
-title: The Death of Paul Levi
+title: パウル・レヴィの死
 view-if: year == 1930 and month >= 2
 frequency: 1000
 max-visits: 1
@@ -7,6 +7,6 @@ tags: event
 new-page: true
 face-image: img/portraits/LeviPaul.jpg
 
-= The Death of Paul Levi
+= パウル・レヴィの死
 
-Paul Levi, a leader of the left wing of our party, has died in an unfortunate accident. He will be missed.
+我が党左派の指導者パウル・レヴィが、不慮の事故で死去した。彼の死は惜しまれる。

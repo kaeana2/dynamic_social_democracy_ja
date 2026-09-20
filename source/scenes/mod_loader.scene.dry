@@ -64,8 +64,8 @@ Curated mods:
 
 {!<div id="mods_list"></div>!}
 
-Enter a mod's URL:
+MODのURLを入力：
 
 {!<input type="text" size="25" id="mod_url" name="mod_url"/> <button id="submit">Submit</button>!}
 
-- @backSpecialScene: Back
+- @backSpecialScene: 戻る

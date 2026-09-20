@@ -1,5 +1,5 @@
-title: Hermann Dietrich resigns!
-subtitle: The [? if ddp_ideology != "Left": electoral decline?][? if ddp_ideology == "Left": shifting ideologies?] of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> forces him to resign.
+title: ヘルマン・ディートリヒが辞任！
+subtitle: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>の[? if ddp_ideology != "Left":選挙での退潮?][? if ddp_ideology == "Left":思想的変化?]が辞任を余儀なくさせる。
 view-if: year >= 1931 and not lvp_formed and not bruning_time and ((ddp_votes >= 1.8 and (previous_ddp_last_election_votes - ddp_votes > 1 or change_ddp_votes < -1)) or ddp_ideology == "Left") and not dstp_maintained and ddp_leader == "Dietrich"
 on-arrival: {!
 Q.dietrich_resign = 1;
@@ -108,11 +108,11 @@ tags: event
 new-page: true
 face-image: img/portraits/dietrich.jpg
 
-= Hermann Dietrich resigns!
+= ヘルマン・ディートリヒが辞任！
 
-[? if ddp_ideology != "Left": Hermann Dietrich has failed to meet the expectations of many within the party, with only the local organizations in Hamburg, Baden, and Württemberg showing any real signs of activity. Theodor Heuss has been particularly eager to find a replacement for Dietrich, but so far, no one has been willing to take on the leadership of this struggling party. Both Hermann Höpker-Aschoff, the party’s former leader in Prussia, and his successor have declined the role. ?][? if ddp_ideology == "Left": Since Dietrich's election to the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s leadership, the party has shifted to the left, making him—the candidate of the business wing—increasingly unpopular within the party. As a result, a vote of no confidence has been put forth, aiming to replace him with a more left-wing and energetic leader. ?]
+[? if ddp_ideology != "Left": ヘルマン・ディートリヒは党内の期待に応えられず、実際に活動している地方組織はハンブルク、バーデン、ヴュルテンベルクほどしか残っていない。テオドール・ホイスは特に熱心に後任を探しているが、この衰退する党を率いることに応じる者はいない。かつてプロイセンの党組織を率いたヘルマン・ヘプカー＝アショフも、その後任も就任を断った。 ?][? if ddp_ideology == "Left": ディートリヒの党首就任以来、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は左傾化し、財界派の候補だった彼の人気は低下し続けている。より左派的で活力ある指導者への交代を求め、不信任投票が提案された。 ?]
 
-[? if ddp_ideology != "Left": The only viable option left would be Heuss himself, but he remains reluctant, preferring to focus on his family. With no prominent politician willing to take leadership, Dietrich remains as acting chairman until they do. ?][? if ddp_ideology == "Left": If the vote succeeds, which seems likely, Lemmer has shown reluctance about running for leadership again and may choose to endorse someone else for the position. ?]
+[? if ddp_ideology != "Left": 有力な選択肢はホイス自身しか残っていないが、本人は家庭を優先したいと消極的である。著名な政治家が引き受けるまで、ディートリヒが党首代行を務める。 ?][? if ddp_ideology == "Left": 不信任案は可決されそうだが、レマーは再出馬に消極的であり、別の候補を支持するかもしれない。 ?]
 
 - @maier
 - @heuss
@@ -121,67 +121,67 @@ face-image: img/portraits/dietrich.jpg
 - @deadlock
 
 @heuss
-title: Theodor Heuss is elected!
-subtitle: He finally has the motivation to step up, and be the change he wants to see in the world.
-unavailable-subtitle: He prefers to focus on family, and his party respects that.
+title: テオドール・ホイスが選出される！
+subtitle: 自ら立ち上がり、望む変革を実現する決意を固めた。
+unavailable-subtitle: 本人は家庭を優先したいと考えており、党もその意向を尊重している。
 choose-if: heuss_lead_ddp
 view-if: not dietrich_resign_ddp_left
 on-arrival: ddp_leader = "Heuss"; ddp_cohesion += 3; pro_republic += (ddp_votes*2); ddp_relation += 5; ddp_left += 2 if ddp_ideology == "Right"; ddp_right += 2 if ddp_ideology == "Left"; liberal_cooperation += 1; new_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); new_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); rural_ddp += 1; workers_ddp += 0.5
 face-image: img/portraits/heuss.jpg
 
-Theodor Heuss a journalist turned politician and a rising star has been elected as the chairman of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. Although affiliated with the business wing of the party, his determined and genuine support for <span style="color: #FFCC00;">liberal</span> <span style="color: #586593;">democracy</span> has earned him support from the party's left wing. 
+ジャーナリストから政治家に転じ、頭角を現してきたテオドール・ホイスが<span style="color: #D3C24D;">**[+ ddp_name +]**</span>の党首に選出された。財界派に属するものの、<span style="color: #FFCC00;">自由</span><span style="color: #586593;">民主主義</span>を断固として誠実に擁護する姿勢が、党内左派の支持を得た。
 
-Heuss's victory strengthens the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s cooperation with us, as he has urged his party members that it is crucial to save German democracy. A visible revival in party activities has already been seen, but funding still remains a major obstacle. Perhaps the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> isn't <span style="color: #ff0000;">moribund</span> after all?
+ホイスはドイツの民主主義を救うことが肝要だと党員に訴えており、その勝利は<span style="color: #D3C24D;">**[+ ddp_name +]**</span>と我々の協力を強める。党活動にはすでに目に見える復調があるが、資金難はなお大きな障害である。<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は、まだ<span style="color: #ff0000;">瀕死</span>ではないのかもしれない。
 
 @maier
-title: Reinhold Maier is elected!
-subtitle: A youthful and energetic rising star, free from helplessness, defeatism, and rigid dogma.
-unavailable-subtitle: Maier is the preferred candidate of the business wing, and it appears they don't have enough power over the <span style="color: #D3C24D;">[+ ddp_name +]</span>.
+title: ラインホルト・マイアーが選出される！
+subtitle: 無力感や敗北主義、硬直した教条にとらわれない、若々しく活力ある新星。
+unavailable-subtitle: マイアーを推す財界派には、<span style="color: #D3C24D;">[+ ddp_name +]</span>を動かすだけの力がないようだ。
 choose-if: maier_lead
 view-if: not dietrich_resign_ddp_left
 on-arrival: ddp_leader = "Maier"; ddp_relation -= 3; ddp_right += 3; new_middle_ddp *= 1.5; old_middle_ddp *= 1.5; rural_ddp += 2; pro_republic += 3; liberal_cooperation += 3; bourgeois_cooperation += 2
 face-image: img/portraits/maier.jpg
 
-Reinhold Maier, a major figure in Württemberg politics and a rising star in the dying party, has been elected chairman of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. Youthful and energetic, he is not bound by traditional liberal principles like many veteran members of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, making him a strong choice for a party plagued by defeatism and internal strife.
+ヴュルテンベルク政界の有力者で、衰退する党の新星ラインホルト・マイアーが<span style="color: #D3C24D;">**[+ ddp_name +]**</span>党首に選出された。若々しく活力に富み、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>の古参党員のように伝統的な自由主義の原則に縛られない彼は、敗北主義と内紛に悩む党に適した人選である。
 
-For us, however, his position within the business wing means we have yet to see significant improvements in cooperation compared to Dietrich’s tenure. Anyhow, a visible revival in party activities is already underway, though funding remains a persistent obstacle. Perhaps the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> isn't <span style="color: #ff0000;">moribund</span> after all?
+ただし財界派に属するため、我々との協力はディートリヒ時代に比べて大きく改善していない。それでも党活動は目に見えて復調しつつある。資金難は依然として障害だが、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>はまだ<span style="color: #ff0000;">瀕死</span>ではないのかもしれない。
 
 @stolper
-title: Gustav Stolper is elected!
-subtitle: Creator of the famed Stolper Program, and a <span style="color: #005EB8;">Jew</span>.
-unavailable-subtitle: The <span style="color: #D3C24D;">[+ ddp_name +]</span> prefers not to exacerbate their reputation as the party for <span style="color: #005EB8;">Jews</span>.
+title: グスタフ・シュトルパーが選出される！
+subtitle: 名高いシュトルパー綱領の起草者で、<span style="color: #005EB8;">ユダヤ人</span>である。
+unavailable-subtitle: <span style="color: #D3C24D;">[+ ddp_name +]</span>は「<span style="color: #005EB8;">ユダヤ人</span>の党」という評判がさらに強まることを避けたい。
 choose-if: stolper_lead
 view-if: not dietrich_resign_ddp_left
 on-arrival: ddp_leader = "Stolper"; ddp_relation += 3; ddp_left += 1; ddp_cohesion -= 3; rural_ddp *= 0.7; rural_nsdap += 1; new_middle_ddp *= 2; old_middle_ddp *= 1.5; pro_republic += 5
 face-image: img/portraits/stolper.jpg
 
-Gustav Stolper, a German-Austrian economist and the son of <span style="color: #005EB8;">Jewish</span> immigrants from Poland, has been elected chairman of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, reinforcing a stereotype the party has long struggled to dispel. Despite this, Stolper—renowned for the economic program bearing his name—could be exactly what the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> needs to revitalize its middle-class support.
+ポーランドからの<span style="color: #005EB8;">ユダヤ系</span>移民を両親に持つドイツ・オーストリアの経済学者、グスタフ・シュトルパーが<span style="color: #D3C24D;">**[+ ddp_name +]**</span>党首に選出された。党が長く払拭しようとしてきた固定観念を強める人事ではある。しかし、自らの名を冠した経済綱領で知られる彼こそ、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>が中間層の支持を取り戻すために必要な人物かもしれない。
 
-Relations have improved compared to Dietrich’s tenure, as Stolper's strained ties with parties to the right of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>—due to anti-Semitism—have made cooperation with us easier. Meanwhile, a visible revival in party activities is already underway, though funding remains a persistent obstacle. Perhaps the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> isn’t <span style="color: #ff0000;">moribund</span> after all?
+シュトルパーと<span style="color: #D3C24D;">**[+ ddp_name +]**</span>より右の諸党との関係は、反ユダヤ主義のために険悪である。その分、我々との協力は容易になり、ディートリヒ時代より関係が改善した。党活動も目に見えて復調しつつある。資金難はなお障害だが、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>はまだ<span style="color: #ff0000;">瀕死</span>ではないのかもしれない。
 
 @luders
-title: Marie-­Elisabeth Lüders is elected!
-subtitle: The most active woman within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and strongly internationalist. Associated with the party's left wing.
+title: マリー＝エリーザベト・リューダースが選出される！
+subtitle: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>で最も活動的な女性で、強い国際主義者。党内左派に近い。
 view-if: dietrich_resign_ddp_left
 on-arrival: ddp_leader = "Lüders"; ddp_relation += 15; ddp_left += 5; ddp_cohesion -= 3; nationalism -= 5; rural_ddp *= 0.5; old_middle_ddp *= 0.5; old_middle_dvp += 5; rural_dvp += 3; catholics_ddp *= 0.5; catholics_z += 2; new_middle_ddp *= 2; new_middle_spd -= 10; workers_ddp += 6; workers_spd -= 4; workers_kpd -= 2; pro_republic += ddp_votes + 2; eu_progress += 1; west_relation += 1
 face-image: img/portraits/luders.jpg
 
-Marie-Elisabeth Lüders, the second most important woman in the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and easily the most active advocate for the rights and wellbeing of women, children, and the workers of Germany, is elected to the leadership of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. This victory comes with the backing of Ernst Lemmer and his liberal trade unions, who have gained significant influence in recent months.
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span>で女性として第二の重鎮であり、女性・子供・労働者の権利と福祉を最も精力的に擁護してきたマリー＝エリーザベト・リューダースが、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>の指導者に選出された。この勝利を支えたのは、最近数か月で影響力を強めたエルンスト・レマーと自由主義労組である。
 
-Our relationship with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has greatly improved compared to how it was under Dietrich. Lüders is a strong internationalist and has previously advocated for Pan-European cooperation, which will benefit us in future negotiations. She was also one of the strongest opponents of the merger with the Young German Order, arguing against their antisemitism. However, it remains to be seen whether she will gain more votes than she loses due to her feminism, as many refuse to support her purely out of misogyny.
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span>との関係はディートリヒ時代より大きく改善した。リューダースは強い国際主義者で、汎ヨーロッパ協力を以前から唱えており、今後の交渉でも我々に有利に働くだろう。青年ドイツ団との合併にも、同団の反ユダヤ主義を理由に強く反対した。ただし、女性嫌悪だけを理由に彼女への支持を拒む者も多く、フェミニズムによって失う票以上の票を獲得できるかは未知数である。
 
 @deadlock
-title: The vote has been deadlocked!
-subtitle: No candidate is able to gather a sufficient amount of votes.
+title: 投票が膠着！
+subtitle: 十分な票を集められる候補がいない。
 view-if: ddp_deadlock and not dietrich_resign_ddp_left
 on-arrival: ddp_leader = "Hitler"; ddp_name = "NPD"
 
-With no candidate able to secure a majority, everyone has unanimously agreed to dissolve the party, because no one wants to deal with this. However, the local organizations have reconstituted themselves as the "National Democratic Party of Germany", not wanting the party to die so easily.
+過半数を得る候補がおらず、誰も面倒を見たがらないため、全会一致で解党が決まった。しかし地方組織は、そう簡単に党を死なせてたまるかと「ドイツ国家民主党」を再結成した。
 
 - @ha
 
 @ha
-title: Very funny, please revert the changes.
+title: 冗談はそのくらいにして、元に戻してくれ。
 on-arrival: ddp_leader = "Stolper"; ddp_relation += 3; ddp_left += 1; ddp_cohesion -= 3; rural_ddp *= 0.7; rural_nsdap += 1; new_middle_ddp *= 2; old_middle_ddp *= 1.5; pro_republic += 5; ddp_name = "DStP" if dstp_formed; ddp_name = "DDP" if not dstp_formed
 
-You are no fun. Stolper is eventually chosen as a compromise candidate.
+つまらないやつだ。結局、妥協候補としてシュトルパーが選ばれた。

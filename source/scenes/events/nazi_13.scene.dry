@@ -1,5 +1,5 @@
-title: Papen Proposes his Plan to Hindenburg
-subtitle: The old man will never appoint [+ nsdap_chancellor +]! This will go nowhere.
+title: パーペンがヒンデンブルクに計画を提案
+subtitle: 老大統領が[+ nsdap_chancellor +]を任命するはずはない！　何の成果もないだろう。
 view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode
 new-page: true
 tags: event
@@ -18,18 +18,18 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Papen and Hindenburg
+= パーペンとヒンデンブルク
 
-At the meeting between [+ nsdap_leader +], Göring, Papen, Meissner, and Hindenburg’s son, everyone—except Oskar—backs the appointment of [+ nsdap_chancellor +] as Chancellor. Meissner’s shift is especially significant; once wary, he now lends weight to the schemers’ influence. The President, who once vowed never to appoint [+ nsdap_chancellor +], begins to waver.
+[+ nsdap_leader +]、ゲーリング、パーペン、マイスナー、ヒンデンブルクの息子による会談では、オスカーを除く全員が[+ nsdap_chancellor +]の首相任命を支持した。とりわけマイスナーの転向は重要である。かつて警戒していた彼が、今や陰謀者たちの影響力に重みを加えている。[+ nsdap_chancellor +]を決して任命しないと誓った大統領も揺らぎ始めた。
 
-The next morning, Papen presents his plan to Hindenburg. His call for Schleicher’s dismissal meets no resistance. But when he names [+ nsdap_chancellor +] as the preferred successor—rather than himself, as Hindenburg would prefer—the old man recoils. He remains scornful and deeply distrustful of [+ nsdap_chancellor +], deeming him fit, at best, to oversee the postal ministry.
+翌朝、パーペンはヒンデンブルクに計画を提示した。シュライヒャー罷免の要求には何の抵抗もなかった。しかしヒンデンブルクの望むパーペン自身ではなく、[+ nsdap_chancellor +]を後継首相に挙げると、老大統領は身を引いた。彼はなお[+ nsdap_chancellor +]を軽蔑し、深く信用しておらず、よくても郵政省を任せる程度の人物だと考えている。
 
 - @nazi_2
 
 @nazi_2
-title: Meissner and Oskar are called in.
+title: マイスナーとオスカーが呼び入れられる。
 on-arrival: hindenburg_hitler_r += 1
 
-The President summons his chief of staff Meissner and his son Oskar to join the discussion. Meissner backs Papen’s proposal that [+ nsdap_chancellor +] be appointed Chancellor, with Papen serving as Vice Chancellor. He argues that this arrangement is the only viable path out of the political deadlock—and the best way to tame the <span style="color: #7A3C00;">Nazis</span>, pointing to the considerable number of cabinet posts [+ nsdap_leader +] has agreed to hand over to conservatives.
+大統領は大統領府長官マイスナーと息子オスカーを呼び、協議に加えた。マイスナーは、[+ nsdap_chancellor +]を首相に、パーペンを副首相にする提案を支持した。この取り決めこそ政治的膠着を脱する唯一の現実的な道であり、<span style="color: #7A3C00;">ナチ党</span>を飼い慣らす最善の方法だと論じ、[+ nsdap_leader +]が保守派へ譲ることに同意した閣僚職の多さを指摘した。
 
-By the meeting’s end, however, both Hindenburg and his son remain unconvinced. They continue to press for Papen’s own return to the chancellorship instead.
+しかし会談が終わっても、ヒンデンブルクと息子は納得していなかった。二人は代わりにパーペン自身の首相復帰を求め続けた。

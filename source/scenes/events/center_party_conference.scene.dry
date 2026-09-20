@@ -1,58 +1,58 @@
-title: [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] Conference
-subtitle: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] chooses their new leader...
+title: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党大会
+subtitle: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が新党首を選ぶ……
 view-if: year = 1928 and month = 12 and z_leader = "Marx"
 max-visits: 1
 tags: event
 new-page: true
 
-= [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] Conference
+= [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党大会
 
 # reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
 
-Wilhelm Marx, former [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] chancellor and presidential candidate, has chosen to resign from leadership of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. Now, the party holds a conference to replace him.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]出身の元首相で、大統領候補にもなったヴィルヘルム・マルクスが、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首の辞任を決めた。党は今、後任を選ぶ大会を開いている。
 
-The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the <span style="color: #c00000;">**SPD**</span> than most of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. [? if not prussia_leader == "Stegerwald": Christian labor union chairman Adam Stegerwald has fallen to a distant third, making it highly unlikely that he will win the leadership.?][? if prussia_leader == "Stegerwald": Christian labor union chairman and Minister-President Adam Stegerwald has lost some ground, but he retains strong support from the Prussian branch of the party, effectively securing him the nomination. ?]
+右派が一致して推すのは、党の伝統主義者を代表するカトリック司祭ルートヴィヒ・カースである。対するヨーゼフ・ヨースはカトリック労働組合の指導者であり、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]内の多くの者よりも<span style="color: #c00000;">**SPD**</span>との協力に積極的である。[? if not prussia_leader == "Stegerwald": キリスト教労働組合の議長アダム・シュテーガーヴァルトは大きく離された3位に落ち込み、党首に選ばれる見込みは極めて薄い。?][? if prussia_leader == "Stegerwald": キリスト教労働組合の議長で州首相でもあるアダム・シュテーガーヴァルトはやや後退したが、党のプロイセン支部から強い支持を保ち、事実上の指名を確実にしている。?]
 
-- @kaas: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] elects Ludwig Kaas as the party chair.
-- @joos: Influence the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to select Joseph Joos as the party chair.
-- @joos_campaign: We must hold a campaign in support of Joseph Joos as party chair.
-- @stegerwald: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] elects Adam Stegerwald as the party chair.
+- @kaas: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]がルートヴィヒ・カースを党首に選ぶ。
+- @joos: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]に働きかけ、ヨーゼフ・ヨースを党首に選ばせる。
+- @joos_campaign: ヨーゼフ・ヨースの党首選出を支持する運動を行う。
+- @stegerwald: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]がアダム・シュテーガーヴァルトを党首に選ぶ。
 
 @kaas
 view-if: not prussia_leader == "Stegerwald"
 on-arrival: z_leader = "Kaas"; z_relation -= 5; prussian_concordat_progress += 1; z_ideology = "Right"
 face-image: img/portraits/Ludwig_Kaas.jpg
 
-Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+ルートヴィヒ・カースが[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首に選ばれた。マルクスより右寄りの路線を取ると見られ、彼の下で[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は左派との妥協に消極的になるだろう。
 
-Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
+それでも、カースは現行の憲法秩序と共和制を支持している。駐独教皇大使エウジェニオ・パチェッリと親交が深く、政教条約の交渉で役立つかもしれない。
 
 @joos
-unavailable-subtitle: Our relations are not good enough.
-subtitle: Joos is likely to be friendlier to us than Kaas.
+unavailable-subtitle: 我々との関係が十分に良好ではない。
+subtitle: ヨースはカースより我々に友好的だろう。
 view-if: not prussia_leader == "Stegerwald"
 choose-if: z_relation >= 70
 on-arrival: z_leader = "Joos"; z_ideology = "Left"; catholics_z -= 3; catholics_dnvp += 2; catholics_other += 2; catholics_spd += 5; workers_z += 5; z_relation += 4; zentrum_disintegration += 1; dvp_left += 1; ddp_left += 1; ddp_cohesion += 1; lvp_left += 1
 face-image: img/portraits/Joseph_Joos.jpg
 
-With our grassroots connections, we have been able to influence the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] delegates to support Joseph Joos as the new [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] chairman. He has long been a friend of the <span style="color: #c00000;">**SPD**</span>, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to the working class, though it comes at the cost of deepening the social and economic divisions once held together by religion.
+草の根のつながりを通じて[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の代議員に働きかけ、ヨーゼフ・ヨースを新たな[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首として支持させることができた。彼は長年<span style="color: #c00000;">**SPD**</span>に友好的であり、カースよりも我々との協力に前向きだろう。また、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の労働者階級への訴求力を高める一方、これまで宗教がつなぎとめてきた社会的・経済的な亀裂を深めることにもなる。
 
 @joos_campaign
 choose-if: z_relation >= 60 and resources >= 1 
 view-if: z_relation < 70 and not prussia_leader == "Stegerwald"
-unavailable-subtitle: [? if z_relation <= 60 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
-subtitle: -1 resource. Joos is likely to be friendlier to us than Kaas.
+unavailable-subtitle: [? if z_relation <= 60 : 我々との関係が十分に良好ではない。?] [? if resources < 1 : 資源が足りない。?]
+subtitle: 資源を1消費する。ヨースはカースより我々に友好的だろう。
 on-arrival: resources -= 1; z_leader = "Joos"; z_ideology = "Left"; catholics_dnvp += 2; catholics_other += 2; catholics_spd += 5; workers_z += 5; z_relation += 4; zentrum_disintegration += 1; dvp_left += 1; ddp_left += 1; ddp_cohesion += 1; lvp_left += 1
 face-image: img/portraits/Joseph_Joos.jpg
 
-With our grassroots connections as well as a professional campaign, we have been able to influence the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] delegates to support Joseph Joos as the new [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] chairman. He has long been a friend of the <span style="color: #c00000;">**SPD**</span>, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to the working class, though it comes at the cost of deepening the social and economic divisions once held together by religion.
+草の根のつながりと専門的な運動を通じて[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の代議員に働きかけ、ヨーゼフ・ヨースを新たな[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首として支持させることができた。彼は長年<span style="color: #c00000;">**SPD**</span>に友好的であり、カースよりも我々との協力に前向きだろう。また、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の労働者階級への訴求力を高める一方、これまで宗教がつなぎとめてきた社会的・経済的な亀裂を深めることにもなる。
 
 @stegerwald
 choose-if: prussia_leader == "Stegerwald"
-unavailable-subtitle: Stegerwald lacks the influence necessary to have a real chance.
+unavailable-subtitle: シュテーガーヴァルトには、当選を狙えるほどの影響力がない。
 on-arrival: z_leader = "Stegerwald"; z_ideology = "Right"; stegerwald_path = 1; z_relation -= 8; zentrum_disintegration += 2; new_middle_z -= 5; old_middle_z -= 3; rural_z -= 1; catholics_z -= 5; workers_z += 5; unemployed_z += 3; catholics_spd += 8; catholics_other += 4; catholics_dnvp += 2 if dnvp_ideology == "Moderate"; catholics_dvp += 4; catholics_ddp += 2; catholics_lvp += 4; dvp_right += 1; ddp_left += 1; ddp_cohesion += 1; liberal_cooperation += 1; bourgeois_cooperation += 1; catholics -= 5; new_middle_dnvp -= 2 if dnvp_ideology == "Radical"; old_middle_dnvp -= 3 if dnvp_ideology == "Radical"; rural_dnvp -= 3 if dnvp_ideology == "Radical"; new_middle_z += 2 if dnvp_ideology == "Radical"; old_middle_z += 3 if dnvp_ideology == "Radical"; rural_z += 3 if dnvp_ideology == "Radical"; prussia_leader = "Brüning" if prussia_leader == "Stegerwald"
 face-image: img/portraits/stegerwald.jpg
 
-Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, despite his trade union background, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. He views the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a prototype for a <span style="color: #000000;">Christian</span>, <span style="color: #586593;">democratic</span>, <span style="color: #000000;">German</span>, and <span style="color: #c00000;">social</span> party, and aims to transform it according to the principles laid out in his proposed "Essen program" eight years prior. 
+アダム・シュテーガーヴァルトが[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]党首に選ばれた。労働組合出身ではあるが、マルクスより右寄りの路線を取ると見られ、彼の下で[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は左派との妥協に消極的になるだろう。彼は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]を、<span style="color: #000000;">キリスト教的</span>、<span style="color: #586593;">民主的</span>、<span style="color: #000000;">ドイツ的</span>、そして<span style="color: #c00000;">社会的</span>な政党の原型と見なし、8年前に提案した「エッセン綱領」の原則に従って改造しようとしている。
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s middle class wing are in uproar over the vote, despite Stegerwald conceding his leadership of the Reichstag delegation and the Minister-Presidency to his protege Heinrich Brüning. [? if dnvp_ideology == "Radical": His election also attracts some Protestant <span style="color: #3E88B3;">**DNVP**</span> dissidents and industrialists, who may result in a shift of the party towards the right. ?]
+シュテーガーヴァルトは国会議員団長と州首相の座を子飼いのハインリヒ・ブリューニングに譲ったが、それでも[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の中間層派は投票結果に激しく反発している。[? if dnvp_ideology == "Radical": 彼の選出は、プロテスタントの<span style="color: #3E88B3;">**DNVP**</span>反主流派や産業界の一部も引きつけており、彼らが党を右傾化させる可能性がある。?]

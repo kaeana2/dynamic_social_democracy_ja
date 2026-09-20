@@ -1,13 +1,13 @@
-title: Otto Wels
+title: オットー・ヴェルス
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/WelsOtto.jpg
 view-if: wels_advisor = 1
 new-page: true
 
-= Otto Wels
+= オットー・ヴェルス
 
-Wels is the long-time chairman of the <span style="color: #c00000;">**SPD**</span>. He is a gifted organizer and a member of the centrist faction.
+ヴェルスは長年にわたり<span style="color: #c00000;">**SPD**</span>党首を務めてきた。有能な組織者であり、中間派に属する。
 
 - @clear_agenda
 - @party_discipline
@@ -15,13 +15,13 @@ Wels is the long-time chairman of the <span style="color: #c00000;">**SPD**</spa
 - @money_printer
 - @stimulation
 - @snap_election
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @clear_agenda
-title: Clear the agenda
-subtitle: Removes all cards from the hand.
+title: 議題を一掃する
+subtitle: 手札のカードをすべて取り除く。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: {!
 Q.advisor_action_timer = 6;
 if (Q.difficulty >= 0) {
@@ -31,41 +31,41 @@ if (Q.difficulty >= 0) {
 }
 !}
 
-All items from our agenda have been cleared.
+議題をすべて一掃した。
 
 @party_discipline
-title: Party Discipline
-subtitle: Reduce dissent across the party.
+title: 党規律
+subtitle: 党内全派閥の不満を抑える。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; left_dissent -= 5; labor_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5
 
-We have enforced party discipline to reduce dissent across all factions.
+党規律を徹底し、全派閥の不満を抑えた。
 
 @emergency_fundraising
-title: Emergency Fundraising
+title: 緊急募金
 view-if: difficulty < 1
-subtitle: An emergency infusion of resources.
+subtitle: 緊急にリソースを調達する。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; emergency_used += 1; resources += 2; workers_spd -= 2 if emergency_used > 1; labor_dissent += 5 if emergency_used > 1; unemployed_spd -= 2 if emergency_used > 1; workers_spd -= 2 if emergency_used > 2; unemployed_spd -= 2 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2
 
-[? if emergency_used <= 1: Wels has leveraged his position as party chairman to pull in donations and arrange quick loans. ?][? if emergency_used > 1 and emergency_used < 3: Discontent is brewing among the <span style="color: #c00000;">**SPD**</span>'s rank and file due to our persistent attempts at begging for money. ?][? if emergency_used > 2: We’re really scraping the barrel now—committed members are pressured into selling their valuables, while many others leave in frustration. ?]
+[? if emergency_used <= 1: ヴェルスは党首としての地位を利用して寄付を集め、短期融資を手配した。 ?][? if emergency_used > 1 and emergency_used < 3: 度重なる資金集めにより、<span style="color: #c00000;">**SPD**</span>一般党員の間で不満が高まっている。 ?][? if emergency_used > 2: もはや出せるものまで搾り取っている。献身的な党員は貴重品の売却を迫られ、多くの者が失望して離党している。 ?]
 
-We have gained +2 resources.
+リソースを2獲得した。
 
 @money_printer
-title: Print a SPDillion dollars.
+title: SPD億マルクを刷る
 view-if: achievement_moly and ((difficulty == -1 and not dynamic_mode) or difficulty == 0)
-subtitle: This may have inflationary effects.
+subtitle: インフレーションを引き起こす可能性がある。
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 and not rubicon : [+ advisor_action_timer +] months before next advisor action. ?][? if advisor_action_timer > 0 and rubicon : [+ advisor_action_timer +] weeks before next emergency fundraising. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 and not rubicon : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if advisor_action_timer > 0 and rubicon : 次の緊急募金まで[+ advisor_action_timer +]週間。 ?]
 on-arrival: advisor_action_timer = 6; resources += 10; inflation += 1; data_miner_detected = 1; ip_grabber = 1
 
-We have gained +10 resources.
+リソースを10獲得した。
 
 @stimulation
-title: Toggle Stimulation.
+title: 刺激モードを切り替える
 view-if: achievement_moly
 on-arrival: {!
 if (Q.stimulation) {
@@ -75,14 +75,14 @@ if (Q.stimulation) {
 }
 !}
 
-Ok.
+了解。
 
 @snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Wels" and president != "Wels" : Wels must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: 解散総選挙
+subtitle: 解散総選挙を実施する。
+unavailable-subtitle: [? if chancellor != "Wels" and president != "Wels" : ヴェルスが首相または大統領でなければならない。 ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 choose-if: advisor_action_timer == 0 and (chancellor == "Wels" or president == "Wels")
 on-arrival: advisor_action_timer = 6; time_to_election = 3
 call: set_next_election_time
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+新たな選挙を[+ next_election_year +]年[+ next_election_month : month +]に実施することを決定した。

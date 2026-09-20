@@ -1,4 +1,4 @@
-title: The <span style="color: #700000;">**KPD**</span> checks upon our progress in accomplishing the coalition's goals in Prussia...
+title: <span style="color: #700000;">**KPD**</span>がプロイセン連立の目標達成状況を確認
 view-if: (in_popular_front_prussia or in_left_front_prussia) and kpd_ultimatum_prussia_timer = 0 and kpd_goals_seen_prussia = 1
 on-arrival: {!
 Q.kpd_goals_completed_prussia = 0;
@@ -20,35 +20,35 @@ new-page: true
 tags: event
 go-to: goals_success if kpd_goals_completed_prussia >= 4; goals_failed if kpd_goals_completed_prussia < 4
 
-= <span style="color: #700000;">**KPD**</span> Goals
+= <span style="color: #700000;">**KPD**</span>の要求
 
-At the start of this government, the <span style="color: #700000;">**KPD**</span> presented a list of goals for the Prussian coalition:
+政権発足時、<span style="color: #700000;">**KPD**</span>はプロイセン連立に次の目標を提示した。
 
-[? if interior_goal_seen_prussia = 1 : - Ban the <span style="color: #7A3C00;">**SA**</span> and <span style="color: #3E88B3;">**Stahlhelm**</span>. - [? if interior_goal_prussia <= 0 : success ?][? if interior_goal_prussia >= 1: failed ?] ?]
+[? if interior_goal_seen_prussia = 1 : - <span style="color: #7A3C00;">**SA**</span>と<span style="color: #3E88B3;">**鉄兜団**</span>を禁止する――[? if interior_goal_prussia <= 0 : 成功 ?][? if interior_goal_prussia >= 1: 失敗 ?] ?]
 
-[? if rfb_goal_seen_prussia = 1 : - Unban the <span style="color: #700000;">**RFB**</span>. - [? if rfb_goal_prussia <= 0: success ?][? if rfb_goal_prussia >= 1: failed ?] ?]
+[? if rfb_goal_seen_prussia = 1 : - <span style="color: #700000;">**RFB**</span>の禁止を解除する――[? if rfb_goal_prussia <= 0: 成功 ?][? if rfb_goal_prussia >= 1: 失敗 ?] ?]
 
-[? if bureaucracy_goal_seen_prussia = 1 : - Purge the bureaucracy. - [? if bureaucracy_goal_prussia <= 0: success ?][? if bureaucracy_goal_prussia >= 1: failed ?] ?]
+[? if bureaucracy_goal_seen_prussia = 1 : - 官僚機構を粛清する――[? if bureaucracy_goal_prussia <= 0: 成功 ?][? if bureaucracy_goal_prussia >= 1: 失敗 ?] ?]
 
-[? if free_kpd_goal_seen_prussia = 1 : - Protect <span style="color: #700000;">communist</span> demonstrations. - [? if free_kpd_goal_prussia <= 0: success ?][? if free_kpd_goal_prussia >= 1: failed ?] ?]
+[? if free_kpd_goal_seen_prussia = 1 : - <span style="color: #700000;">共産党</span>の示威行動を保護する――[? if free_kpd_goal_prussia <= 0: 成功 ?][? if free_kpd_goal_prussia >= 1: 失敗 ?] ?]
 
 @goals_failed
 on-arrival: kpd_relation -= 8; workers_spd -= 4; unemployed_spd -= 4; workers_kpd += 4; rfb_strength += 100; rfb_militancy += 0.05; in_popular_front_prussia = 0; in_left_front_prussia = 0; prussia_leader = "Braun"; kpd_coalition_dissent += 2; kpd_demands_prussia = 0
 
-Unfortunately, we have failed to accomplish all of the goals the <span style="color: #700000;">**KPD**</span> set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
+残念ながら、<span style="color: #700000;">**KPD**</span>の掲げた目標をすべて達成することはできなかった。彼らは政府不信任決議を提出する構えを見せ、労働者の目から我々の政権の正統性を奪う宣伝運動をすでに始めている。
 
-- @new_elections: New elections will be called.
-- @skibidi: Could we form a new government based on the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: (and possibly <span style="color: #C0A054;">**DVP**</span>)?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]?
+- @new_elections: 新たな選挙を行う。
+- @skibidi: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:（場合によっては<span style="color: #C0A054;">**DVP**</span>も）?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]を軸に、新政権を組めないだろうか？
 
 @goals_success
 on-arrival: workers_spd += 4; unemployed_spd += 4; kpd_relation += 6; workers_kpd += 4; kpd_coalition_success += 1; rfb_strength += 150; rfb_militancy += 0.1; reichsexekution += 1; kpd_demands_prussia = 0
 
-As expected, we have completed the goals set by the <span style="color: #700000;">**KPD**</span>. [? if president == "Hindenburg": However, over the past few months, President Hindenburg's concerns over our coalition government have grown... ?]
+予想通り、<span style="color: #700000;">**KPD**</span>の掲げた目標を達成した。[? if president == "Hindenburg": しかし、この数か月でヒンデンブルク大統領は我々の連立政権への懸念を強めている……。 ?]
 
 @skibidi
-subtitle: modman is lazy and doesn't want to code this
+subtitle: 作者が実装を省略したため、この経路は利用できない。
 
 @new_elections
 call: set_next_election_time_prussia
 
-New Prussian elections have been set for [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
+新たなプロイセン州議会選挙は[+ next_election_year_prussia +]年[+ next_election_month_prussia : month +]に行われる。

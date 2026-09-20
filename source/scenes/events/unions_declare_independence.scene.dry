@@ -1,6 +1,6 @@
-title: Unions Declare Independence
+title: 労組が独立を宣言
 new-page: true 
-subtitle: Labor's disagreements with our policies have grown too severe.
+subtitle: 我々の政策に対する労働運動の反発が、もはや看過できないほど強まった。
 tags: event
 view-if: labor_dissent >= 60 and dnvp_leader != "Lambach" and not unions_independent and chancellor != "Schleicher"
 on-arrival: {!
@@ -82,10 +82,10 @@ if (Q.n_advisors < Q.n_advisors_start) Q.shuffle_leadership_timer = 0;
 !}
 max-visits: 1
 
-= Unions Declare Independence
+= 労組が独立を宣言
 
-Our policy choices have greatly offended the labor movement. Union leaders have declared that they are independent of any political party, and some have been seen seeking accommodation with the <span style="color: #700000;">**KPD**</span> and even the <span style="color: #7A3C00;">**NSDAP**</span>.
+我々の政策選択は労働運動の強い反発を招いた。労組指導者はあらゆる政党からの独立を宣言し、一部は<span style="color: #700000;">**KPD**</span>、さらには<span style="color: #7A3C00;">**NSDAP**</span>との協調を模索している。
 
-Most workers remain loyal to the <span style="color: #c00000;">**SPD**</span>, although their affiliation is less solid. Many workers move left[? if sapd_formed:, to the <span style="color: #700000;">**KPD**</span> or the nascent <span style="color: #9B0000;">**SAPD**</span>?]. Others move in a more nationalist direction, as the ADGB signals its willingness to work with the right to solve the economic crisis. [? if dnvp_ideology == "Moderate": This also has the effect of strengthening the Christian Labor movement within the <span style="color: #3E88B3;">**DNVP**</span>. ?]
+労働者の大半は<span style="color: #c00000;">**SPD**</span>に忠実なままだが、結びつきは弱まっている。多くの労働者は左へ[? if sapd_formed:、すなわち<span style="color: #700000;">**KPD**</span>や新生<span style="color: #9B0000;">**SAPD**</span>へ?]と移っている。一方、ADGBが経済危機の解決に向けて右派とも協力する意向を示す中、より国家主義的な方向へ進む者もいる。[? if dnvp_ideology == "Moderate": この動きは<span style="color: #3E88B3;">**DNVP**</span>内のキリスト教労働運動をも強めている。?]
 
-Much of our working-class base has defected, and labor's influence in our party has greatly diminished.
+労働者階級の支持基盤の多くが離反し、党内における労働運動の影響力は大きく低下した。

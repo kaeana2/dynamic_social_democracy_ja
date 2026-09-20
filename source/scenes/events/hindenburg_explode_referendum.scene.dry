@@ -1,5 +1,5 @@
-title: Referendum to Recall President Hindenburg
-subtitle: The results have come in.
+title: ヒンデンブルク大統領罷免国民投票
+subtitle: 結果が判明した。
 new-page: true
 tags: event
 view-if: impeachment_ref_week == week and impeachment_ref_month == month and impeachment_ref_year == year
@@ -24,13 +24,13 @@ Q.hindenburg_ref_votes = parseFloat(Q.hindenburg_ref_votes.toFixed(1));
 !}
 max-visits: 1
 
-= Referendum to Recall President Hindenburg
+= ヒンデンブルク大統領罷免国民投票
 
-After a month of intense, violence-filled campaigning and relentless propaganda from both sides, the German people now vote on Hindenburg’s fate—a decision that may determine the future of the Republic itself.
+暴力に満ちた1か月の激しい選挙運動と双方の絶え間ない宣伝を経て、ドイツ国民はヒンデンブルクの運命に票を投じる。この決定は共和国そのものの将来を左右しかねない。
 
-Unlike previous referendums, this one requires only a majority of those voting—not of all eligible voters—to succeed.
+過去の国民投票とは異なり、成立に必要なのは全有権者ではなく、実際の投票者の過半数だけである。
 
-- @results: The nation votes...
+- @results: 国民が票を投じる……
 
 @results
 go-to: hindenburg_ref_win if hindenburg_ref_votes >= 50; hindenburg_ref_lose if hindenburg_ref_votes < 50
@@ -70,22 +70,22 @@ if (Q.aspd_other) {
 }
 !}
 
-The referendum succeeds with [+ hindenburg_ref_votes +]% of the vote—Germany is saved! If the current coalition holds, we may finally elect a democratic president capable of guiding the nation out of the chaos left by Hindenburg and Schleicher.
+国民投票は[+ hindenburg_ref_votes +]%の賛成で成立した。ドイツは救われた！　現在の連立が維持されれば、ヒンデンブルクとシュライヒャーが残した混乱から国家を導き出せる民主的な大統領を、ついに選出できるかもしれない。
 
-Disgraced and isolated, Hindenburg is forced to resign from the presidency. In his place, [? if president == "Bumke (acting)": Erwin Bumke?][? if president == "Großmann (acting)": Hermann Großmann?], President of the Reich Court, has been elevated to acting president until new elections are held.
+面目を失い孤立したヒンデンブルクは、大統領辞任を余儀なくされた。代わってライヒ裁判所長官[? if president == "Bumke (acting)": エルヴィン・ブムケ?][? if president == "Großmann (acting)": ヘルマン・グロースマン?]が、新選挙まで大統領代行に昇格した。
 
-Presidential elections are scheduled for Week [+ rubicon_president_week +] of [+ rubicon_president_month : month +], [+ rubicon_president_year +].
+大統領選挙は[+ rubicon_president_year +]年[+ rubicon_president_month : month +]（第[+ rubicon_president_week +]週）に予定されている。
 
 @hindenburg_ref_lose
 
-Unfortunately, the referendum has failed with [+ hindenburg_ref_votes +]% of the vote. So much for nothing.
+残念ながら、国民投票は賛成[+ hindenburg_ref_votes +]%で否決された。すべては徒労に終わった。
 
-Hindenburg has been agitated by the weakness of the incumbent government and, under the influence of his Camarilla, will decide on Treviranus's successor himself, as he considers another set of Reichstag elections unacceptable.
+ヒンデンブルクは現政権の弱さに苛立ち、再度の国会選挙は容認できないとして、側近集団の影響下でトレヴィラヌスの後継者を自ら決める。
 
 - @schizo
 
 @schizo
-title: Crown Prince Wilhelm...?
+title: ヴィルヘルム皇太子……？
 on-arrival: {!
 Q.chancellor = "Hohenzollern";
 Q.vice_chancellor = "Papen";
@@ -103,10 +103,10 @@ const header = document.querySelector('header');
 header.style.color = '#ffffff';
 !}
 
-Under the influence of Franz von Papen—and apparently Schleicher as well—Hindenburg has appointed Wilhelm III, eldest son of the last German Emperor, as Chancellor, reportedly with his father’s blessing.
+フランツ・フォン・パーペン、そしてどうやらシュライヒャーの影響も受け、ヒンデンブルクは最後のドイツ皇帝の長男ヴィルヘルム3世を首相に任命した。父親の承認も得たと伝えられる。
 
-It is clear the chaos of the past year has taken its toll. In the end, Hindenburg now trusts no one but his dearest friend, Papen. It's unknown of the former chancellor's reasoning behind such a pick, but perhaps he would've hoped that reinstating a monarchy, the people can rally around him as they once rallied around Hindenburg. 
+この1年の混乱がヒンデンブルクを蝕んだことは明らかである。結局、今の彼が信頼するのは最も親しい友人パーペンだけだ。前首相がなぜこの人選を勧めたのかは不明だが、王政を復活させれば、かつて国民がヒンデンブルクのもとに結集したように、新君主のもとにも結集すると期待したのかもしれない。
 
-A bloody three-way civil war is inevitable.
+血なまぐさい三つ巴の内戦は避けられない。
 
 - @papen_civil_war

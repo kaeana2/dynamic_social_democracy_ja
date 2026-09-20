@@ -1,43 +1,42 @@
-title: Gustav Radbruch
+title: グスタフ・ラートブルフ
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/RadbruchGustav.jpg
 view-if: radbruch_advisor = 1
 new-page: true 
 
-= Gustav Radbruch
+= グスタフ・ラートブルフ
 
-Gustav Radbruch is a renowned legal scholar and long-time <span style="color: #c00000;">**SPD**</span> justice minister. [? if judicial_reform >= 2: He currently has considerable support among party factions due to the <span style="color: #c00000;">SPD</span>'s success in judicial reforms. ?]
+グスタフ・ラートブルフは著名な法学者で、長年<span style="color: #c00000;">**SPD**</span>の法相を務めてきた。[? if judicial_reform >= 2: <span style="color: #c00000;">SPD</span>が司法改革に成功したため、現在は党内諸派から相当な支持を得ている。 ?]
 
 
 - @judiciary_major
 - @judiciary_minor
 - @constitutional_reform_
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 
 @judiciary_major
-title: Enact major judicial reforms.
-subtitle: -1 budget
+title: 大規模な司法改革を実施する
+subtitle: 予算-1
 choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "SPD" and budget > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not currently in government. ?][? if justice_minister_party != "SPD" : We do not have the Justice Ministry. ?] [? if budget <= 0: Not enough budget. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_in_government : <span style="color: #c00000;">SPD</span>は現在政権に参加していない。 ?][? if justice_minister_party != "SPD" : 法務省を掌握していない。 ?] [? if budget <= 0: 予算が足りない。 ?]
 on-arrival: advisor_action_timer = 6;
 go-to: judiciary.reform
 
 @judiciary_minor
-title: Enact minor judicial reforms.
-subtitle: Gradually remove corrupt and biased jurists.
+title: 小規模な司法改革を実施する
+subtitle: 腐敗し偏向した司法官を段階的に排除する。
 choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not currently in government. ?][? if justice_minister_party != "SPD" : We do not have the Justice Ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_in_government : <span style="color: #c00000;">SPD</span>は現在政権に参加していない。 ?][? if justice_minister_party != "SPD" : 法務省を掌握していない。 ?]
 on-arrival: advisor_action_timer = 6;
 go-to: judiciary.minor_reforms
 
 
 @constitutional_reform_
-title: Constitutional Reform
-subtitle: Pursue reforms of the inadequate <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution.
+title: 憲法改革
+subtitle: 不備の多い<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>憲法の改革を進める。
 choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "SPD" and ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front) or (sapd_toleration)) and judicial_reform >= 2 and neorevisionism
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?] [? if justice_minister_party != "SPD" : We do not have the Justice Ministry. ?] [? if not neorevisionism: We do not have ideological support for constitutional reform yet - new ideas are needed. ?] [? if judicial_reform < 2: The judiciary is unlikely to tolerate progressive constitutional changes. ?] [? if not ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front) or (sapd_toleration)) : Our current governing coalition will not support constitutional reforms. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_in_government : SPDは現在政権に参加していない。 ?] [? if justice_minister_party != "SPD" : 法務省を掌握していない。 ?] [? if not neorevisionism: 憲法改革を支える思想的基盤がまだない。新しい理念が必要である。 ?] [? if judicial_reform < 2: 司法界は進歩的な憲法改正を容認しそうにない。 ?] [? if not ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front) or (sapd_toleration)) : 現在の連立政権は憲法改革を支持しない。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; constitutional_reform_timer -= 12
 go-to: constitutional_reform
-

@@ -1,4 +1,4 @@
-title: The Iron Front
+title: 鉄の戦線
 new-page: true
 is-card: true
 view-if: iron_front_formed == 1 and iron_front_timer = 0
@@ -19,50 +19,50 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>
+= <span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>
 
-The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> is our new anti-<span style="color: #7A3C00;">fascists</span> coordination front, consisting of the <span style="color: #c00000;">**SPD**</span>, the trade unions, and the Reichsbanner. How should we use the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>?
+<span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>は、<span style="color: #c00000;">**SPD**</span>、労働組合、国旗団からなる新たな反<span style="color: #7A3C00;">ファシズム</span>統一戦線である。これをどう活用すべきか。
 
-[? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : Unfortunately, the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>'s effectiveness is dragged down by the <span style="color: #c00000;">**SPD**</span>'s unpopularity, as the <span style="color: #c00000;">**SPD**</span> is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
+[? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : 残念ながら<span style="color: #c00000;">**SPD**</span>はもはや労働者層の第一党ではなく、その不人気が<span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>の効果を損なっている。多くの国旗団員が離脱し、労働者の関心も薄い。 ?]
 
-- @defense: Rally for defense against the <span style="color: #7A3C00;">fascists</span> with the Reichsbanner.
-- @pacifism: Rally for pacifism, against nationalism and war.
-- @republic: Rally to save the democratic republic against <span style="color: #7A3C00;">dictatorship</span>.
-- @wtb: Rally for economic change and the WTB-Plan.
+- @defense: 国旗団と共に<span style="color: #7A3C00;">ファシスト</span>から共和国を守るよう訴える。
+- @pacifism: ナショナリズムと戦争に反対し、平和主義を訴える。
+- @republic: <span style="color: #7A3C00;">独裁</span>から民主共和国を守るよう訴える。
+- @wtb: 経済変革とWTB計画への支持を訴える。
 - @antisemitism
 - @easy_discard
 
 @defense
-subtitle: -[+ rb_militarization_cost +] resources
+subtitle: リソース－[+ rb_militarization_cost +]
 choose-if: resources >= rb_militarization_cost
 view-if: not rb_explode
 on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 3 if strife < 5; ddp_relation -= 3 if strife < 5; lvp_relation -= 3 if strife < 5
 
-The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies for the militant defense of the republic against the <span style="color: #7A3C00;">fascists</span> paramilitaries, strengthening the Reichsbanner.
+<span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>は<span style="color: #7A3C00;">ファシスト</span>準軍事組織に対する共和国の実力防衛を訴え、国旗団を強化した。
 
-[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] decries the militarization of the Reichsbanner, and its members are leaving the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> organization. ?][? if strife >= 5: Seeing the strife that has filled Germany's streets, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] seem to be convinced that it is necessary for the Reichsbanner to be militarized, and mute their criticisms. ?] ?]
+[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は国旗団の軍事化を非難し、同党の団員は<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">組織</span>から脱退している。 ?][? if strife >= 5: ドイツの街頭を覆う争乱を目にして、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]は国旗団の軍事化が必要だと納得したらしく、批判を控えている。 ?] ?]
 
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 5 if pacifism >= 3; workers_spd += 5*(1-dissent) if pacifism >= 4; unemployed_spd += 4*(1-dissent) if pacifism >= 4; new_middle_spd += 4*(1-dissent) if pacifism >= 4
 
-The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies against nationalism and war.
+<span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>はナショナリズムと戦争への反対を訴えた。
 
 @republic
 on-arrival: pro_republic += 3*(1-dissent); democratization += 1; workers_spd += 3*(1-dissent) if democratization >= 4; unemployed_spd += 2*(1-dissent) if democratization >= 4; new_middle_spd += 3*(1-dissent) if democratization >= 4; ddp_left += 0.5 if democratization >= 4; lvp_left += 0.5 if democratization >= 4
 
-The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies in defense of the democratic republic and against <span style="color: #7A3C00;">dictatorship</span>.
+<span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>は民主共和国の擁護と<span style="color: #7A3C00;">独裁</span>への反対を訴えた。
 
 @wtb
 view-if: wtb_adopted == 1
 choose-if: return_to_normalcy = 0 and (wtb_implemented >= wtb_rally or (not spd_in_government and not spd_toleration))
-unavailable-subtitle: [? if return_to_normalcy == 1: The economic crisis is largely over now, and the public is no longer interested in hearing about it. ?] [? if wtb_rally > wtb_implemented: Rhetoric alone has its limits; further implementation of the WTB plan is necessary to continue an effective campaign. ?]
+unavailable-subtitle: [? if return_to_normalcy == 1: 経済危機はほぼ終息し、国民はもはやこの話題に関心を示さない。 ?] [? if wtb_rally > wtb_implemented: 言辞だけでは限界がある。効果的な運動を続けるにはWTB計画をさらに実施しなければならない。 ?]
 on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 2*(1-dissent); old_middle_spd += 1*(1-dissent); rural_spd += 1*(1-dissent); workers_spd += 4*(1-dissent) if wtb_implemented; unemployed_spd += 4*(1-dissent) if wtb_implemented; rural_spd += 2*(1-dissent) if wtb_implemented; new_middle_spd += 3*(1-dissent) if wtb_implemented; old_middle_spd += 2*(1-dissent) if wtb_implemented; wtb_rally += 1
 
-The WTB-Plan is the rallying point for the entire <span style="color: #c00000;">**SPD**</span> and its affiliated organizations, including the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>. [? if not wtb_implemented: However, many still believe that the plan is merely an empty slogan and will remain skeptical until we actually implement it. ?]
+WTB計画は<span style="color: #c00000;">**SPD**</span>全体と、<span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>を含む系列組織の結集点である。[? if not wtb_implemented: しかし計画は空疎な標語にすぎないと考える者も多く、実施するまでは懐疑的なままだろう。 ?]
 
 @antisemitism
-title: Rally against antisemitism and in defense of <span style="color: #005EB8;">Jewish</span> Germans.
+title: 反ユダヤ主義に反対し、<span style="color: #005EB8;">ユダヤ系</span>ドイツ人を擁護する。
 view-if: confronting_antisemitism > 1
 on-arrival: nationalism -= 4*(1-dissent); pro_republic += 1.5*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent); ddp_left += 0.5; lvp_left += 1
 
-The <span style="color: #7A3C00;">Nazis</span> and other <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> political movements are increasingly turning their hatred against the <span style="color: #005EB8;">Jewish</span> community of Germany. The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies in defense of individual <span style="color: #005EB8;">Jews</span> and the broader community against violence.
+<span style="color: #7A3C00;">ナチ</span>などの<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>政治運動は、ドイツの<span style="color: #005EB8;">ユダヤ人</span>共同体へ憎悪を向けている。<span style="color: #c00000;">**鉄の**</span><span style="color: #1A1A1A;">**戦線**</span>は、個々の<span style="color: #005EB8;">ユダヤ人</span>と共同体全体を暴力から守るよう訴えた。

@@ -1,5 +1,5 @@
-title: <span style="color: #C0A054;">**DVP**</span> Party Vote
-subtitle: The <span style="color: #C0A054;">**DVP**</span> chooses their new leader...
+title: <span style="color: #C0A054;">**DVP**</span>党内投票
+subtitle: <span style="color: #C0A054;">**DVP**</span>が新党首を選ぶ……。
 view-if: year = 1929 and month = 12 and dvp_reform = 0 and not lvp_formed and not (lvp_timer_1_trigger and (lvp_merger_1_timer or lvp_trigger_1_time))
 on-arrival: dvp_right += 3 if dvp_relation < 30; dvp_left += 2 if dvp_relation >= 50; dvp_right += 2 if not in_grand_coalition
 max-visits: 1
@@ -7,13 +7,13 @@ tags: event
 face-image: img/dvp.jpg
 new-page: true
 
-= <span style="color: #C0A054;">**DVP**</span> Congress
+= <span style="color: #C0A054;">**DVP**</span>党大会
 
-The <span style="color: #C0A054;">**DVP**</span> are having an internal party vote to elect a successor to former party leader and statesman Gustav Stresemann. Both the party and its electorate have been shifted significantly to the right in recent years. [? if not in_grand_coalition: The left of the <span style="color: #C0A054;">**DVP**</span> has also been diminished by the current absence of a coalition including both parties. ?]
+<span style="color: #C0A054;">**DVP**</span>は、前党首で政治家のグスタフ・シュトレーゼマンの後継者を選ぶ党内投票を行う。近年、党も支持者も大きく右へ動いてきた。[? if not in_grand_coalition: 現在、我々との連立が成立していないことも、<span style="color: #C0A054;">**DVP**</span>左派の弱体化につながっている。 ?]
 
-The candidate on the right is current party leader Ernst Scholz. Scholz has heavy ties to industry and a record of opposing bourgeois unity. [? if foreign_minister_party = "DVP" and economic_minister_party != "DVP": On the left is Foreign Minister Julius Curtius, who succeeded Stresemann for the position. However, Curtius has taken himself out of the running by taking the position. A movement to draft former Chancellor Hans Luther is met with his own personal reluctance, effectively leaving Scholz as the only suitable choice.?][? if foreign_minister_party != "DVP" and economic_minister_party = "DVP": On the left is Economic Minster Julius Curtius, who has favor among the youth groups. However, Curtius has taken himself out of the running by retaining his position. A movement to draft former Chancellor Hans Luther is met with his own personal reluctance, effectively leaving Scholz as the only suitable choice.?][? if foreign_minister_party != "DVP" and economic_minister_party != "DVP": On the left is Julius Curtius, who has favor among the youth groups. A movement to draft former Chancellor Hans Luther has failed to gain momentum, and the factions of the party have rallied behind their own prospective candidate.?]
+右派の候補は現在の党首エルンスト・ショルツである。産業界と深く結び付き、ブルジョワ諸党の統一にも反対してきた。[? if foreign_minister_party = "DVP" and economic_minister_party != "DVP": 左派にはシュトレーゼマンの後任の外相ユリウス・クルティウスがいるが、外相就任に伴い出馬を辞退した。元首相ハンス・ルターを擁立する動きにも本人が消極的で、事実上ショルツだけが有力候補として残った。?][? if foreign_minister_party != "DVP" and economic_minister_party = "DVP": 左派には青年組織に人気のある経済相ユリウス・クルティウスがいるが、閣僚職にとどまるため出馬を辞退した。元首相ハンス・ルターを擁立する動きにも本人が消極的で、事実上ショルツだけが有力候補として残った。?][? if foreign_minister_party != "DVP" and economic_minister_party != "DVP": 左派には青年組織に人気のあるユリウス・クルティウスがいる。元首相ハンス・ルターの擁立運動は盛り上がらず、各派はそれぞれの候補の下に結集した。?]
 
-- @resultsdvp: The party votes...
+- @resultsdvp: 党内投票が行われる……。
 
 @resultsdvp
 on-arrival: {!
@@ -31,22 +31,22 @@ go-to: curtius if (economic_minister_party != "DVP" and foreign_minister_party !
 on-arrival: dvp_leader = "Curtius"; liberal_cooperation += 3; bourgeois_cooperation += 3; dvp_left += 5; dvp_relation += 5; new_middle_dvp += 3; workers_dvp += 1; pro_republic += 3; ddp_left += 1; ddp_cohesion += 1
 face-image: img/portraits/curtius.jpg
 
-Julius Curtius has surprisingly won the vote to succeed Stresemann for the chairmanship. The right-wing of the party have created a special vice-chairmanship position to maintain their influence on the party however. The Reichstag delegation are also able to act independently with Scholz remaining as their leader.
+意外にも、ユリウス・クルティウスがシュトレーゼマンの後継党首に選出された。ただし右派は影響力を維持するため、特別な副党首職を新設した。国会議員団もショルツを団長に据えたまま、独自に行動できる。
 
-Nonetheless, this is still excellent news for us and our relations with the <span style="color: #C0A054;">**DVP**</span>. [? if in_grand_coalition: We have noticed a decrease in coalition tensions. ?]
+それでも、我々と<span style="color: #C0A054;">**DVP**</span>の関係にとっては大変な朗報である。[? if in_grand_coalition: 連立内の緊張も和らいだ。 ?]
 
 @scholz
 on-arrival: dvp_leader = "Scholz"; dvp_right += 5; dvp_relation -= 5; old_middle_dvp -= 2; new_middle_dvp -= 2; pro_republic -= 3; ddp_right += 1; ddp_cohesion -= 0.5; liberal_cooperation -= 2; bourgeois_cooperation -= 2
 face-image: img/portraits/ernst_scholz.jpg
 
-Ernst Scholz has won the vote to succeed Stresemann for the chairmanship. The left-wing of the <span style="color: #C0A054;">**DVP**</span> is left increasingly isolated and powerless in party affairs. The industrialists now possesses full control of the former liberal party, and will now oversee its decline in the face of the depression.
+エルンスト・ショルツがシュトレーゼマンの後継党首に選出された。<span style="color: #C0A054;">**DVP**</span>左派はますます孤立し、党務への影響力を失っている。かつて自由主義を掲げたこの党を産業界が完全に掌握し、恐慌の中でその衰退を見届けることになる。
 
-This is bad news for our relationship with the <span style="color: #C0A054;">**DVP**</span>, and makes the formation of future governments involving us nearly impossible[? if in_grand_coalition:, and the current government untenable?].
+我々と<span style="color: #C0A054;">**DVP**</span>の関係にとって悪い知らせであり、今後我々を含む政権を組むことはほぼ不可能となる[? if in_grand_coalition:うえ、現政権の存続も困難になる?]。
 
 @luther
 on-arrival: dvp_leader = "Luther"; dvp_left += 3; liberal_cooperation += 5; bourgeois_cooperation += 5; dvp_relation += 3; new_middle_dvp += 3; old_middle_dvp += 3; pro_republic += 3; ddp_left += 1; ddp_cohesion += 1.5
 face-image: img/portraits/luther.jpg
 
-Hans Luther has surprisingly won the vote to succeed Stresemann for the chairmanship. Luther has support among the industrialists and the left of the party, and commands strong influence over the party. Perhaps he's what the <span style="color: #C0A054;">**DVP**</span> needs in order to survive this crisis of German democracy.
+意外にも、ハンス・ルターがシュトレーゼマンの後継党首に選出された。産業界と党内左派の双方に支持され、党に強い影響力を持つ。ドイツ民主主義の危機を乗り切るため、<span style="color: #C0A054;">**DVP**</span>が必要としていた人物なのかもしれない。
 
-Luther is particularly supportive of uniting the liberal parties and even for the creation of a broad bourgeois party. [? if in_grand_coalition: He has also voiced support for maintaining the Grand coalition and cooperation between the two parties. ?][? if not in_grand_coalition: He has voiced support for a coalition government involving us and cooperation between the two parties. ?]
+ルターは自由主義諸党の統一を強く支持し、さらに幅広いブルジョワ政党の結成にも賛成している。[? if in_grand_coalition: 大連立の維持と両党の協力も支持すると表明した。 ?][? if not in_grand_coalition: 我々を含む連立政権と両党の協力を支持すると表明した。 ?]

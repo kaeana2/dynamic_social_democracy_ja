@@ -1,53 +1,53 @@
-title: Otto Braun
+title: オットー・ブラウン
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/BraunOtto.jpg
 view-if: braun_advisor = 1
 new-page: true 
 
-= Otto Braun
+= オットー・ブラウン
 
-Braun [? if prussia_leader = "Braun": is ?][? if prussia_leader != "Braun" : was ?] the Minister-President of Prussia, the largest state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
+ブラウンはドイツ最大の州であるプロイセンの州首相を[? if prussia_leader = "Braun": 務めている?][? if prussia_leader != "Braun" : 務めていた?]。ブルジョワ諸党との協力を目指す改革派指導者である。
 
 - @coalition
 - @coalition_president
 - @prussian_bulwark
 - @snap_election
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @coalition
-title: Negotiating with the Coalition
-subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
+title: 連立交渉
+subtitle: ブラウンはプロイセンと国会の双方で、中間派・中道右派の連立相手との関係を改善できる。
 view-if: president != "Braun"
 choose-if: advisor_action_timer <= 0 and (spd_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front or prussia_leader == "Braun")
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not spd_prussia : The <span style="color: #c00000;">SPD</span> does not control the Prussian government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?] [? if not spd_prussia : <span style="color: #c00000;">SPD</span>はプロイセン政府を掌握していない。 ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 4; ddp_relation += 4; dvp_relation += 2; lvp_relation += 4; dvp_relation += 2 if in_grand_coalition; dvp_relation += 2 if in_grand_coalition_prussia; dvp_left += 1 if in_grand_coalition_prussia; z_relation += 2 if prussia_leader = "Braun"; ddp_relation += 2 if prussia_leader = "Braun"; lvp_relation += 2 if prussia_leader = "Braun"; lvp_left += 0.5; ddp_left += 0.25;
 
-We have improved our relations with the [? if in_grand_coalition : [? if z_party_name != "CVP": <span style="color: #000000;">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>?], ?][? if not in_grand_coalition and not in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:&nbsp;and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>,?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>,?]?][? if not in_grand_coalition and in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>?] ?] and reduced tensions with the coalition. [? if spd_prussia and not prussia_leader = "Braun": Braun's resignation from the head of the Prussian government has hindered this ability. ?]
+以下の連立諸党との関係を改善した：[? if in_grand_coalition : [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?][? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>、<span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;<span style="color: #FFCC00;">**LVP**</span>?], ?][? if not in_grand_coalition and not in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?][? if not lvp_formed:&nbsp;<span style="color: #D3C24D;">**[+ ddp_name +]**</span>,?][? if lvp_formed:&nbsp;<span style="color: #FFCC00;">**LVP**</span>,?]?][? if not in_grand_coalition and in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?][? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>、<span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;<span style="color: #FFCC00;">**LVP**</span>?] ?]。連立内の緊張も緩和した。 [? if spd_prussia and not prussia_leader = "Braun": ブラウンがプロイセン政府首班を辞任したため、この能力は妨げられている。 ?]
 
 @coalition_president
-title: Negotiating with the Coalition
-subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in the Reichstag as President.
+title: 連立交渉
+subtitle: 大統領ブラウンは国会の中間派・中道右派の連立相手との関係を改善できる。
 view-if: president == "Braun"
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 6; ddp_relation += 6; dvp_relation += 4; lvp_relation += 6; dvp_relation += 2 if in_grand_coalition; dvp_relation += 2 if in_grand_coalition_prussia; dvp_left += 1 if in_grand_coalition_prussia; z_relation += 2 if prussia_leader = "Braun"; ddp_relation += 2 if prussia_leader = "Braun"; lvp_relation += 2 if prussia_leader = "Braun"; lvp_left += 0.5; ddp_left += 0.25;
 
-We have improved our relations with the [? if in_grand_coalition : [? if z_party_name != "CVP": <span style="color: #000000;">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>?], ?][? if not in_grand_coalition and not in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:&nbsp;and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>,?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>,?]?][? if not in_grand_coalition and in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>?] ?] and reduced tensions with the coalition. [? if spd_prussia and not prussia_leader = "Braun": Braun's resignation from the head of the Prussian government has hindered this ability. ?]
+以下の連立諸党との関係を改善した：[? if in_grand_coalition : [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?][? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>、<span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;<span style="color: #FFCC00;">**LVP**</span>?], ?][? if not in_grand_coalition and not in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?][? if not lvp_formed:&nbsp;<span style="color: #D3C24D;">**[+ ddp_name +]**</span>,?][? if lvp_formed:&nbsp;<span style="color: #FFCC00;">**LVP**</span>,?]?][? if not in_grand_coalition and in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?][? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>、<span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;<span style="color: #FFCC00;">**LVP**</span>?] ?]。連立内の緊張も緩和した。 [? if spd_prussia and not prussia_leader = "Braun": ブラウンがプロイセン政府首班を辞任したため、この能力は妨げられている。 ?]
 
 @prussian_bulwark
-title: The Prussian Bulwark
-subtitle: As the Minister-President of Prussia, Braun has power over the Prussian bureaucracy and security services.
+title: プロイセンの防壁
+subtitle: プロイセン州首相として、ブラウンは官僚機構と治安機関を掌握している。
 choose-if: advisor_action_timer <= 0 and prussia_leader = "Braun"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if prussia_leader != "Braun": Braun doesn't control Prussia anymore. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if prussia_leader != "Braun": ブラウンはもはやプロイセンを統治していない。 ?]
 on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
 go-to: prussian_affairs if not in_grand_coalition_prussia and not in_spd_majority_prussia; prussian_affairs_majority if in_spd_majority_prussia or sapd_toleration_prussia; prussian_affairs_dvp if in_grand_coalition_prussia
 
 @snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Braun" and president != "Braun" : Braun must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if president = "Braun" and presidential_powers : We have removed this power from the president with a constitutional reform. ?]
+title: 解散総選挙
+subtitle: 解散総選挙を実施する。
+unavailable-subtitle: [? if chancellor != "Braun" and president != "Braun" : ブラウンが首相または大統領でなければならない。 ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?] [? if president = "Braun" and presidential_powers : 憲法改正により大統領からこの権限を剥奪している。 ?]
 choose-if: advisor_action_timer == 0 and (chancellor == "Braun" or (president == "Braun" and not presidential_powers))
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+新たな選挙を[+ next_election_year +]年[+ next_election_month : month +]に実施することを決定した。

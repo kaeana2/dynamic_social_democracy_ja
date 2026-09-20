@@ -1,4 +1,4 @@
-title: Feminism Beyond Suffrage?
+title: 参政権の先にある女性解放？
 new-page: true
 is-card: true
 tags: party_affairs
@@ -8,15 +8,15 @@ card-image: img/frauen-freiheit-frieden.jpg
 face-image: img/frauen-freiheit-frieden.jpg
 max-visits: 1
 
-= Feminism beyond suffrage?
+= 参政権の先にある女性解放？
 
-Our party has been a vehement defender of the constitutional rights of women to be treated the same as men. By this point, we have made great progress both in addressing wage disparity and the restrictions marriage pushes upon both employed and unemployed women[? if abortion_rights: , and even pushed through a bill to legalize abortion despite the conservative opposition ?]. However, all our efforts show that it is not enough: our enemy ought to be the patriarchal culture so prevalent in Germany: without tackling this foundation, no Constitution can overcome the misogynistic sentiments entrenched this deep.
+わが党は、女性が男性と同等に扱われる憲法上の権利を断固として擁護してきた。賃金格差への対処と、婚姻が就業女性・非就業女性の双方に課す制約の緩和において、大きな進歩を遂げている[? if abortion_rights: 。保守派の反対を押し切り、人工妊娠中絶を合法化する法案さえ成立させた?]。しかし、これまでの努力だけでは不十分だ。真に闘うべき相手は、ドイツ社会に広く根を張る家父長制文化である。この土台に手をつけない限り、いかなる憲法も深く定着した女性蔑視を克服できない。
 
-We would need to take into account the needs of both "traditional" and "new" women: a solution that would only suit one group will be a half-measure. Perhaps cooperating with <span class="tooltip-text" title="Federation of German Women's Associations">**Bund Deutscher Frauenvereine**</span> — an umbrella organization of many disparate feminist organizations — would aid us in finding the way to reconcile the needs of all women in Germany. Unfortunately, as of right now, its rules explicitly bar leftist organizations from joining, but given our efforts we might gain a foothold to urge it to rethink its stance.
+「伝統的」女性と「新しい」女性の双方の要求を考慮しなければならない。一方だけに適した解決策では不十分である。多様な女性団体を束ねる<span class="tooltip-text" title="ドイツ女性団体連合">**ドイツ女性団体連合**</span>と協力すれば、ドイツのあらゆる女性の要求を調和させる道を見いだせるかもしれない。現在、その規約は左派組織の加盟を明確に禁じているが、これまでの取り組みを足掛かりに方針の再考を促せる可能性がある。
   
-- @bdf: We stand together with the feminist movement.
-- @deny: This isn't our fight.
-- @return_hand: Return card to hand.
+- @bdf: 女性解放運動と共に立つ。
+- @deny: これはわれわれの闘争ではない。
+- @return_hand: カードを手札に戻す。
 - @cancel_advisor_action
 
 @return_hand
@@ -24,17 +24,17 @@ view-if: last_advisor_action = 0
 go-to: easy_discard
 
 @bdf
-subtitle: We will need to extensively lubricate the gears of negotiation. (-2 resources)
+subtitle: 交渉を円滑に進めるには多額の費用が要る。（リソース－2）
 choose-if: resources >= 2
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: リソースが足りない。
 on-arrival: workers_spd += 8*(1-dissent); workers_ddp += 4; workers_lvp += 4; workers_ddp += 4 if ddp_leader = "Lüders"; workers_lvp += 4 if lvp_leader = "Bäumer"; new_middle_spd += 8*(1-dissent); new_middle_ddp += 4; new_middle_lvp += 4; new_middle_ddp += 4 if ddp_leader = "Lüders"; new_middle_lvp += 4 if lvp_leader = "Bäumer"; unemployed_spd += 8*(1-dissent); old_middle_spd += 4*(1-dissent); rural_spd += 4*(1-dissent); catholics_spd += 1*(1-dissent); ddp_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent) if ddp_leader = "Lüders"; ddp_left += 1; ddp_left += 3 if ddp_leader = "Lüders"; lvp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent) if lvp_leader = "Bäumer"; lvp_left += 1; lvp_left += 3 if lvp_leader = "Bäumer"; reformist_dissent -= 5; reformist_strength += 5; left_dissent += 5; left_strength -= 5; center_dissent += 5; center_strength -= 5; labor_dissent -= 5; labor_strength += 5; neorevisionist_dissent -= 10 if neorevisionism; neorevisionist_strength += 10 if neorevisionism; socialism += 2*(1 - dissent); nationalism -= 6*(1 - dissent); bdf_cooperation = 1; resources -= 2
 
-Through Marie Juchacz's work in our Frauensekretariat, we negotiate with **Bund Deutscher Frauenvereine** to urge them to reconcile their past opposition to leftist organization, and start negotiating our further cooperation to hold extensive campaigns, promoting women's rights at work and at home, seeking to offer a common ground to both "traditional" and "new" women to incentivize their participation in social life beyond the Imperial <span class="tooltip-text" title="children, kitchen, church">"Kinder, Küche, Kirche"</span>. We make accent on the livelihoods of widows and mothers who have lost their family in the Great War, those women who belong to the working poor, and aim to shift the blame in the popular perception of domestic abuse from influence of alcohol to present power imbalances.
+マリー・ユハチの女性事務局での活動を通じ、**ドイツ女性団体連合**と交渉した。左派組織への従来の反対姿勢を改めさせ、職場と家庭における女性の権利を訴える大規模運動での協力を協議している。「伝統的」女性と「新しい」女性の共通基盤を示し、帝政期の<span class="tooltip-text" title="子ども、台所、教会">「子ども、台所、教会」</span>を越えて社会生活へ参加するよう促す。大戦で家族を失った寡婦や母親、働く貧困層の女性の暮らしを重視し、家庭内暴力の原因を酒ではなく現存する権力の不均衡に求めるよう世論の転換を図る。
 
-While some prominent conservative activists, like Annagrete Lehmann of [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?], oppose our efforts out of a principle, even the most traditional women have grievances our rhetoric can appeal to.
+[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?]のアンナグレーテ・レーマンのように、原則論からわれわれの取り組みに反対する著名な保守活動家もいる。しかし最も伝統的な女性でさえ、われわれの訴えが取り上げうる不満を抱えている。
 
-(We can now sponsor BDF campaigns.)
+（今後、BDFの運動を支援できる。）
 
 @deny
 
-We are a party of the working class, and we do not have a responsibility to show preferential treatment.
+われわれは労働者階級の党であり、特定集団を優遇する責任はない。

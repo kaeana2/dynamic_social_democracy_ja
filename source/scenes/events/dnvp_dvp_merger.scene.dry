@@ -1,5 +1,5 @@
-title: The <span style="color: #C0A054;">**DVP**</span> merges with the <span style="color: #3E88B3;">**DNVP**</span>!
-subtitle: Dingeldey and [+ dnvp_leader +] has reached an agreement.
+title: <span style="color: #C0A054;">**DVP**</span>が<span style="color: #3E88B3;">**DNVP**</span>と合併！
+subtitle: ディンゲルダイと[+ dnvp_leader +]が合意に達した。
 view-if: year == 2000
 max-visits: 1
 tags: event
@@ -18,18 +18,18 @@ on-display: {!
 !}
 new-page: true
 
-= <span style="color: #C0A054;">**DVP**</span> merges with the <span style="color: #3E88B3;">**DNVP**</span>
+= <span style="color: #C0A054;">**DVP**</span>が<span style="color: #3E88B3;">**DNVP**</span>と合併
 
-The electoral decline of the bourgeois right, the significant shift of the <span style="color: #C0A054;">**DVP**</span> toward the right, and their shared fear of the <span style="color: #7A3C00;">Nazis</span> and <span style="color: #c00000;">socialists</span> have compelled the two parties to unite. The <span style="color: #3E88B3;">**DNVP**</span>, as the larger party, will absorb the <span style="color: #C0A054;">**DVP**</span>, making key concessions to facilitate the merger.
+ブルジョワ右派の選挙での後退、<span style="color: #C0A054;">**DVP**</span>の大幅な右傾化、そして<span style="color: #7A3C00;">ナチス</span>と<span style="color: #c00000;">社会主義者</span>への共通の恐怖が、両党を統合へと追い込んだ。大きい側の<span style="color: #3E88B3;">**DNVP**</span>が<span style="color: #C0A054;">**DVP**</span>を吸収するが、合併を進めるため重要な譲歩を行う。
 
-Internal reactions within the <span style="color: #C0A054;">**DVP**</span> are mixed. The Stresemannites and left wing vehemently oppose the merger, while the right-industrial faction supports it as a necessary step. Within the <span style="color: #3E88B3;">**DNVP**</span>, opposition comes from its <span style="color: #385A38;">agrarian</span> and <span style="color: #6D5298;">Christian Social</span> factions, who resist unification with the industrial-capitalist <span style="color: #C0A054;">**DVP**</span>. Additionally, the party’s old guard, led by Westarp, remains skeptical due to major differences on the "national questions".
+<span style="color: #C0A054;">**DVP**</span>内の反応は割れている。シュトレーゼマン派と左派は強く反対する一方、産業界右派は必要な措置として支持している。<span style="color: #3E88B3;">**DNVP**</span>内では、産業資本家の党である<span style="color: #C0A054;">**DVP**</span>との統合を拒む<span style="color: #385A38;">農業派</span>と<span style="color: #6D5298;">キリスト教社会派</span>が反対している。また、ヴェスタルプ率いる古参幹部も「民族問題」をめぐる大きな相違から懐疑的である。
 
-- @dnvp_dvp: Regardless, an agreement has been reached.
+- @dnvp_dvp: いずれにせよ、合意には達した。
 
 @dnvp_dvp
 face-image: img/dvpposter.jpg
 go-to: dnvp_dvp_formed
 
-Many on the <span style="color: #C0A054;">**DVP**</span>'s left, such as Luther and Curtius, along with their supporters, have defected to the flourishing <span style="color: #D3C24D;">[+ ddp_name +]</span>, seeing it as the last bastion of liberalism.
+<span style="color: #C0A054;">**DVP**</span>左派のルターやクルティウスをはじめ、多くの者が支持者とともに、勢いを増す<span style="color: #D3C24D;">[+ ddp_name +]</span>へ移った。自由主義の最後の砦と見なしているのだ。
 
-If Stresemann were alive, he would be quite disappointed in what has become of his party.
+シュトレーゼマンが生きていたなら、自らの党の成れの果てに深く失望しただろう。

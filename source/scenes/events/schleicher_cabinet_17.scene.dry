@@ -1,5 +1,5 @@
-title: Streetfighting Comes to an End
-subtitle: Paramilitaries are a thing of the past.
+title: 街頭闘争の終結
+subtitle: 準軍事組織は過去のものとなった。
 view-if: chancellor == "Schleicher" and schleicher_post_time >= 10 and state_force >= 70
 max-visits: 1
 new-page: true
@@ -17,16 +17,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Streetfighting Over
+= 街頭闘争の終結
 
-With the Reichswehr being deployed to quell political violence, streetfighting between the rivaling paramilitaries have died down in intensity, and the situation is effectively resolved.
+政治暴力を鎮圧するため国防軍が展開されたことで、敵対する準軍事組織間の街頭闘争は沈静化し、事態は事実上収束した。
 
-The mechanic is disabled.
+街頭闘争の仕組みは無効化された。
 
 - @streetfighting_joever
 
 @streetfighting_joever
-title: Hooray?
+title: 万歳……なのか？
 on-arrival: {!
 Q.streetfighting_joever = 1;
 

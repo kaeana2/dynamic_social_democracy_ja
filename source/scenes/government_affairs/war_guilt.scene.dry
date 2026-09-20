@@ -1,4 +1,4 @@
-title: War Guilt Inquiry
+title: 戦争責任調査
 new-page: true
 is-card: true
 tags: govt_affairs
@@ -7,29 +7,29 @@ view-if: spd_in_government = 1 and war_guilt_timer = 0
 card-image: img/reichstag_1.jpg
 max-visits: 1
 
-= Reichstag War Guilt Inquiry
+= 国会戦争責任調査委員会
 
-The War Guilt Inquiry has been an intermittent Reichstag committee for investigating the causes of the Great War and the German defeat. So far, it has faced massive resistance from the military establishment[? if president == "Hindenburg":&nbsp;up to President Hindenburg?].
+戦争責任調査委員会は、世界大戦の原因とドイツ敗戦の経緯を調査するため、国会に断続的に設置されてきた。これまで軍部から激しい抵抗を受けており[? if president == "Hindenburg":、その妨害はヒンデンブルク大統領にまで及んでいる?]。
 
-- @restart: Restart the inquiry.
-- @root: Do nothing.
+- @restart: 調査を再開する。
+- @root: 何もしない。
 - @easy_discard
 - @cancel_advisor_action
 
 @restart
 on-arrival: war_guilt += 1
 
-What is the goal of this tribunal?
+この調査委員会の目的をどこに置くべきか？
 
-- @pure_history: To provide a historical record of the events of the war.
-- @rewrite: To revise the popular German histories and finally put to rest the "stabbed in the back" myth.
+- @pure_history: 戦争の経緯を歴史的記録として残す。
+- @rewrite: ドイツで流布する歴史観を改め、「背後からの一突き」伝説に終止符を打つ。
 
 @pure_history
 on-arrival: hindenburg_angry -= 5
 
-The history is being compiled, as it always has been.
+従来どおり、戦争史の編纂が進められている。
 
 @rewrite
 on-arrival: pacifism += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coup_progress += 1; dvp_left += 1; ddp_left += 0.5; lvp_left += 1; hindenburg_angry += 10
 
-Destroying the "stabbed in the back" myth, in addition to finally correcting the historical record, would do a great deal to improve our party's reputation. This is why it would be resisted by the military establishment every step of the way.
+「背後からの一突き」伝説を打破すれば、歴史的記録を正すだけでなく、党の評判も大きく改善するだろう。だからこそ、軍部はあらゆる段階で抵抗するはずである。

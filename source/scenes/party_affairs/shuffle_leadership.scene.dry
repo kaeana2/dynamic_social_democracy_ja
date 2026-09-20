@@ -1,4 +1,4 @@
-title: Shuffle Leadership
+title: 指導部を再編
 new-page: true
 is-card: true
 tags: party_affairs
@@ -7,16 +7,16 @@ on-arrival: month_activities += 1; shuffle_leadership_timer = 10;
 card-image: img/vorwarts_2.jpg
 go-to: rm_main
 
-- @rm_main: Remove advisors
-- @add_advisors: Add advisors
-- @remove_none: Don't change advisors.
+- @rm_main: 顧問を外す
+- @add_advisors: 顧問を加える
+- @remove_none: 顧問を変更しない。
 - @easy_discard
 
 
 ###################### removing leaders
 
 @rm_main
-title: Remove advisors.
+title: 顧問を外す。
 tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
 on-arrival: {!
 Q.last_time_check = Q.time;
@@ -34,25 +34,25 @@ console.log(Q.advisor_1)
 frequency: 1
 go-to: rm_main_menu
 
-The <span style="color: #c00000;">**SPD**</span> is a diverse and <span class="tooltip-text" title="good mod">dynamic</span> party, but its internal divisions cause factional dissent to gradually increase over time. [? if nsdap_votes >= 20: However, the threat posed by the <span style="color: #7A3C00;">**NSDAP**</span> to the Republic has quieted much of the internal bickering. ?]
+<span style="color: #c00000;">**SPD**</span>は多様で<span class="tooltip-text" title="良質なMOD">動的</span>な政党だが、内部対立によって各派閥の不満は時間とともに増加する。[? if nsdap_votes >= 20: ただし共和国に対する<span style="color: #7A3C00;">**NSDAP**</span>の脅威により、党内の言い争いの多くは沈静化している。 ?]
 
-Appointing individual advisors will boost their respective faction’s loyalty and influence, at the cost of increasing resentment among the sidelined factions. 
+顧問を任命すると所属派閥の忠誠と影響力が高まる一方、取り残された派閥の不満が増加する。
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="左派は急進的・変革的政策とKPDとの協力を重視する。">左派</span>!} 勢力：[+ left_strength : strength +]、不満：[+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="中間派は改革と革命の間に位置する中間派マルクス主義者の派閥である。">中間派</span>!} 勢力：[+ center_strength : strength +]、不満：[+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="労働派は経済改革と組織労働者の利益を目標とする。">労働派</span>!} 勢力：[+ labor_strength : strength +]、不満：[+ labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="改革派は現実的な政権参加者で、福祉国家の拡充と民主主義の擁護を目指す。">改革派</span>!} 勢力：[+ reformist_strength : strength +]、不満：[+ reformist_dissent : dissent +]
 
 @rm_main_menu
 
 - #remove_advisor
-- @add_advisors: Add advisors
+- @add_advisors: 顧問を加える
 
 @remove_none
-title: Stop changing advisors.
+title: 顧問の変更を終える。
 on-arrival: {!
 Q.advisor_2 = [];
 
@@ -83,167 +83,167 @@ tags: remove_advisor
 
 
 @remove_hilferding
-title: Remove Hilferding
+title: ヒルファディングを顧問から外す
 view-if: hilferding_advisor = 1
 on-arrival: hilferding_advisor = 0; center_dissent += 10; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main_menu
 
-Hilferding has been removed as an advisor. The Centrist faction disapproves.
+ヒルファディングを顧問から外した。中間派は反発している。
 
 @remove_wels
-title: Remove Wels
+title: ヴェルスを顧問から外す
 view-if: wels_advisor = 1
 tags: remove_advisor
 on-arrival: wels_advisor = 0; center_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Wels has been removed as an advisor. The Centrist faction disapproves.
+ヴェルスを顧問から外した。中間派は反発している。
 
 @remove_muller
-title: Remove Müller
+title: ミュラーを顧問から外す
 view-if: muller_advisor = 1
 tags: remove_advisor
 on-arrival: muller_advisor = 0; center_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Müller has been removed as an advisor. The Centrist faction disapproves.
+ミュラーを顧問から外した。中間派は反発している。
 
 
 @remove_breitscheid
-title: Remove Breitscheid
+title: ブライトシャイトを顧問から外す
 view-if: breitscheid_advisor = 1
 tags: remove_advisor
 on-arrival: breitscheid_advisor = 0; center_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+ブライトシャイトを顧問から外した。中間派は反発している。
 
 # reformists
 
 
 @remove_severing
-title: Remove Severing
+title: ゼーフェリンクを顧問から外す
 view-if: severing_advisor = 1
 tags: remove_advisor
 on-arrival: severing_advisor = 0; reformist_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Severing has been removed as an advisor. The Reformist faction disapproves.
+ゼーフェリンクを顧問から外した。改革派は反発している。
 
 @remove_braun
-title: Remove Braun
+title: ブラウンを顧問から外す
 view-if: braun_advisor = 1
 tags: remove_advisor
 on-arrival: braun_advisor = 0; reformist_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Braun has been removed as an advisor. The Reformist faction disapproves.
+ブラウンを顧問から外した。改革派は反発している。
 
 @remove_juchacz
-title: Remove Juchacz
+title: ユハチを顧問から外す
 view-if: juchacz_advisor = 1
 tags: remove_advisor
 on-arrival: juchacz_advisor = 0; reformist_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Juchacz has been removed as an advisor. The Reformist faction disapproves.
+ユハチを顧問から外した。改革派は反発している。
 
 @remove_pfulf
-title: Remove Pfülf
+title: プフュルフを顧問から外す
 view-if: pfulf_advisor = 1
 tags: remove_advisor
 on-arrival: pfulf_advisor = 0; reformist_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Pfülf has been removed as an advisor. The Reformist faction disapproves.
+プフュルフを顧問から外した。改革派は反発している。
 
 
 # labor
 
 @remove_leipart
-title: Remove Leipart
+title: ライパルトを顧問から外す
 view-if: leipart_advisor = 1
 tags: remove_advisor
 on-arrival: leipart_advisor = 0; labor_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Leipart has been removed as an advisor. The Labor faction disapproves.
+ライパルトを顧問から外した。労働派は反発している。
 
 @remove_aufhauser
-title: Remove Aufhäuser
+title: アウフホイザーを顧問から外す
 view-if: aufhauser_advisor = 1
 tags: remove_advisor
 on-arrival: aufhauser_advisor = 0; labor_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Aufhäuser has been removed as an advisor. The Labor faction disapproves.
+アウフホイザーを顧問から外した。労働派は反発している。
 
 @remove_wissell
-title: Remove Wissell
+title: ヴィッセルを顧問から外す
 view-if: wissell_advisor = 1
 tags: remove_advisor
 on-arrival: wissell_advisor = 0; labor_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Wissell has been removed as an advisor. The Labor faction disapproves.
+ヴィッセルを顧問から外した。労働派は反発している。
 
 
 @remove_woytinsky
-title: Remove Woytinsky
+title: ヴォイティンスキーを顧問から外す
 view-if: woytinsky_advisor = 1
 tags: remove_advisor
 on-arrival: woytinsky_advisor = 0; labor_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Woytinsky has been removed as an advisor. The Labor faction disapproves.
+ヴォイティンスキーを顧問から外した。労働派は反発している。
 
 # left
 
 @remove_levi
-title: Remove Levi
+title: レヴィを顧問から外す
 view-if: levi_advisor = 1
 tags: remove_advisor
 on-arrival: levi_advisor = 0; left_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Levi has been removed as an advisor. The Leftist faction disapproves.
+レヴィを顧問から外した。左派は反発している。
 
 @remove_sender
-title: Remove Sender
+title: ゼンダーを顧問から外す
 view-if: sender_advisor = 1
 tags: remove_advisor
 on-arrival: sender_advisor = 0; left_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Sender has been removed as an advisor. The Leftist faction disapproves.
+ゼンダーを顧問から外した。左派は反発している。
 
 @remove_rosenfeld
-title: Remove Rosenfeld
+title: ローゼンフェルトを顧問から外す
 view-if: rosenfeld_advisor = 1
 tags: remove_advisor
 on-arrival: rosenfeld_advisor = 0; left_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Rosenfeld has been removed as an advisor. The Leftist faction disapproves.
+ローゼンフェルトを顧問から外した。左派は反発している。
 
 @remove_seydewitz
-title: Remove Seydewitz
+title: ザイデヴィッツを顧問から外す
 view-if: seydewitz_advisor = 1
 tags: remove_advisor
 on-arrival: seydewitz_advisor = 0; left_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Seydewitz has been removed as an advisor. The Leftist faction disapproves.
+ザイデヴィッツを顧問から外した。左派は反発している。
 
 @remove_siemsen
-title: Remove Siemsen
+title: ジームゼンを顧問から外す
 view-if: siemsen_advisor = 1
 tags: remove_advisor
 on-arrival: siemsen_advisor = 0; left_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Siemsen has been removed as an advisor. The Leftist faction disapproves.
+ジームゼンを顧問から外した。左派は反発している。
 
 
 
@@ -251,40 +251,40 @@ Siemsen has been removed as an advisor. The Leftist faction disapproves.
 # neorevisionists
 
 @remove_mierendorff
-title: Remove Mierendorff
+title: ミーレンドルフを顧問から外す
 view-if: mierendorff_advisor = 1
 tags: remove_advisor
 on-arrival: mierendorff_advisor = 0; neorevisionist_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Mierendorff has been removed as an advisor. The Neorevisionist faction disapproves.
+ミーレンドルフを顧問から外した。新修正主義派は反発している。
 
 @remove_leber
-title: Remove Leber
+title: レーバーを顧問から外す
 view-if: leber_advisor = 1
 tags: remove_advisor
 on-arrival: leber_advisor = 0; neorevisionist_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Leber has been removed as an advisor. The Neorevisionist faction disapproves.
+レーバーを顧問から外した。新修正主義派は反発している。
 
 @remove_schumacher
-title: Remove Schumacher
+title: シューマッハーを顧問から外す
 view-if: schumacher_advisor = 1
 tags: remove_advisor
 on-arrival: schumacher_advisor = 0; neorevisionist_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Schumacher has been removed as an advisor. The Neorevisionist faction disapproves.
+シューマッハーを顧問から外した。新修正主義派は反発している。
 
 @remove_wirth
-title: Remove Wirth
+title: ヴィルトを顧問から外す
 view-if: wirth_advisor = 1
 tags: remove_advisor
 on-arrival: wirth_advisor = 0; neorevisionist_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
-Wirth has been removed as an advisor. The Neorevisionist faction disapproves.
+ヴィルトを顧問から外した。新修正主義派は反発している。
 
 
 ## nonfactional
@@ -292,43 +292,43 @@ Wirth has been removed as an advisor. The Neorevisionist faction disapproves.
 # tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
 
 @remove_baade
-title: Remove Baade
+title: バーデを顧問から外す
 view-if: baade_advisor = 1
 tags: remove_advisor
 on-arrival: baade_advisor = 0; n_advisors -= 1
 go-to: rm_main_menu
 
-Baade has been removed as an advisor.
+バーデを顧問から外した。
 
 #The Reformist faction disapproves.
 
 
 @remove_hirschfeld
-title: Remove Hirschfeld
+title: ヒルシュフェルトを顧問から外す
 view-if: hirschfeld_advisor = 1
 tags: remove_advisor
 on-arrival: hirschfeld_advisor = 0; n_advisors -= 1
 go-to: rm_main_menu
 
-Hirschfeld has been removed as an advisor. 
+ヒルシュフェルトを顧問から外した。
 
 @remove_stampfer
-title: Remove Stampfer
+title: シュタンプファーを顧問から外す
 view-if: stampfer_advisor = 1 and not stampfer_killed
 tags: remove_advisor
 on-arrival: stampfer_advisor = 0; n_advisors -= 1
 go-to: rm_main_menu
 
-Stampfer has been removed as an advisor. 
+シュタンプファーを顧問から外した。
 
 @remove_radbruch
-title: Remove Radbruch
+title: ラートブルフを顧問から外す
 view-if: radbruch_advisor = 1
 tags: remove_advisor
 on-arrival: radbruch_advisor = 0; n_advisors -= 1
 go-to: rm_main_menu
 
-Radbruch has been removed as an advisor. 
+ラートブルフを顧問から外した。
 
 
 
@@ -337,28 +337,28 @@ Radbruch has been removed as an advisor.
 ####################### adding advisors
 
 @add_advisors
-title: Add advisors
+title: 顧問を加える
 choose-if: n_advisors < 3
-unavailable-subtitle: Maximum of 3 advisors.
+unavailable-subtitle: 顧問は最大3名。
 go-to: advisor_menu
 
 @advisor_menu
-title: Add other advisors.
+title: その他の顧問を加える。
 tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 
-- @centrist: Add Centrists
-- @left: Add Leftists
-- @reformist: Add Reformists
-- @labor: Add Labor
-- @neorev: Add Neorevisionists
-- @nonfactional: Add non-factional advisors
-- @rm_main: Remove advisors instead.
-- @remove_none: Stop changing advisors.
+- @centrist: 中間派を加える
+- @left: 左派を加える
+- @reformist: 改革派を加える
+- @labor: 労働派を加える
+- @neorev: 新修正主義派を加える
+- @nonfactional: 無派閥の顧問を加える
+- @rm_main: 代わりに顧問を外す。
+- @remove_none: 顧問の変更を終える。
 
 @centrist
-subtitle: The glue holding the party together. Reduces faction loyalty decay by 30% for each advisor appointed.
+subtitle: 党をまとめる接着剤である。任命した顧問1人につき派閥忠誠度の低下を30％軽減する。
 view-if: n_advisors < 3
 
 - #center_advisor
@@ -384,14 +384,14 @@ view-if: neorevisionism > 0 and n_advisors < 3
 - #neorev_advisor
 
 @nonfactional
-subtitle: Generally disinterested in internal struggles. Reduces faction loyalty decay by 10% for each advisor appointed.
+subtitle: 通常は党内闘争に関心を持たない。任命した顧問1人につき派閥忠誠度の低下を10％軽減する。
 view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
 @add_hilferding
-title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+title: ルドルフ・ヒルファディング
+subtitle: ルドルフ・ヒルファディングは経済学者であり、党を代表するマルクス主義理論家の一人である。{!<br><br>!}[? if difficulty < 0 : 行動――左右両派への対抗、閣外協力の擁護、財政政策、経済民主主義 ?]
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
 tags: center_advisor
@@ -399,11 +399,11 @@ view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: hilferding_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
 go-to: advisor_menu
 
-Rudolf Hilferding is now an advisor.
+ルドルフ・ヒルファディングを顧問に任命した。
 
 @add_wels
-title: Otto Wels
-subtitle: Otto Wels is a long-time party organizer and member of the leadership, serving under Friedrich Ebert. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
+title: オットー・ヴェルス
+subtitle: オットー・ヴェルスは長年の党組織者・指導部員で、フリードリヒ・エーベルトのもとで活動した。{!<br><br>!}[? if difficulty < 0 : 行動――議題の一掃、党規律、緊急募金 ?]
 is-card: true
 card-image: img/portraits/WelsRudolf.jpg
 tags: center_advisor
@@ -411,11 +411,11 @@ view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: wels_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
 go-to: advisor_menu
 
-Otto Wels is now an advisor.
+オットー・ヴェルスを顧問に任命した。
 
 @add_muller
-title: Hermann Müller
-subtitle: Hermann Müller is the last <span style="color: #c00000;">Social Democratic</span> Chancellor. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
+title: ヘルマン・ミュラー
+subtitle: ヘルマン・ミュラーは最後の<span style="color: #c00000;">社会民主党</span>首相である。{!<br><br>!}[? if difficulty < 0 : 行動――連立交渉、閣外協力の擁護 ?]
 is-card: true
 card-image: img/portraits/MüllerHermann.jpg
 tags: center_advisor
@@ -423,11 +423,11 @@ view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists
 on-arrival: muller_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
 go-to: advisor_menu
 
-Hermann Müller is now an advisor.
+ヘルマン・ミュラーを顧問に任命した。
 
 @add_breitscheid
-title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+title: ルドルフ・ブライトシャイト
+subtitle: ルドルフ・ブライトシャイトは高い教育を受けた経歴を持ち、党の外交指導者の一人である。{!<br><br>!}[? if difficulty < 0 : 行動――国際関係、外交政策、党規律 ?]
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
@@ -435,14 +435,14 @@ on-arrival: breitscheid_advisor = 1; n_advisors += 1; center_dissent -= 7; cente
 go-to: advisor_menu
 tags: center_advisor
 
-Rudolf Breitscheid is now an advisor.
+ルドルフ・ブライトシャイトを顧問に任命した。
 
 # reformist
 
 
 @add_severing
-title: Carl Severing
-subtitle: Carl Severing is a one-time Prussian interior minister and police reformer. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+title: カール・ゼーフェリンク
+subtitle: カール・ゼーフェリンクは元プロイセン内相で、警察改革者である。{!<br><br>!}[? if difficulty < 0 : 行動――プロイセンの防壁、警察問題 ?]
 is-card: true
 card-image: img/portraits/SeveringCarl.jpg
 tags: reformist_advisor
@@ -450,11 +450,11 @@ view-if: severing_advisor = 0 and n_advisors < 3
 on-arrival: severing_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
 go-to: advisor_menu
 
-Carl Severing is now an advisor.
+カール・ゼーフェリンクを顧問に任命した。
 
 @add_braun
-title: Otto Braun
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known <span style="color: #c00000;">Social Democratic</span> leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+title: オットー・ブラウン
+subtitle: オットー・ブラウンはプロイセン州首相であり、最も著名な<span style="color: #c00000;">社会民主党</span>指導者の一人である。{!<br><br>!}[? if difficulty < 0 : 行動――プロイセンの防壁、連立交渉 ?]
 is-card: true
 card-image: img/portraits/BraunOtto.jpg
 tags: reformist_advisor
@@ -462,11 +462,11 @@ view-if: braun_advisor = 0 and n_advisors < 3
 on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
 go-to: advisor_menu
 
-Otto Braun is now an advisor.
+オットー・ブラウンを顧問に任命した。
 
 @add_juchacz
-title: Marie Juchacz
-subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
+title: マリー・ユハチ
+subtitle: マリー・ユハチは相互扶助組織「労働者福祉会」の創設者である。{!<br><br>!}[? if difficulty < 0 : 行動――緊急募金、労働者福祉、女性の組織化 ?]
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
 view-if: juchacz_advisor = 0 and n_advisors < 3
@@ -474,11 +474,11 @@ on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5; refor
 go-to: advisor_menu
 tags: reformist_advisor
 
-Marie Juchacz is now an advisor.
+マリー・ユハチを顧問に任命した。
 
 @add_pfulf
-title: Antonie Pfülf
-subtitle: Antonie Pfülf is a leader in social policy and women's rights. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
+title: アントニー・プフュルフ
+subtitle: アントニー・プフュルフは社会政策と女性の権利を主導する人物である。{!<br><br>!}[? if difficulty < 0 : 行動――人民政党への支持、女性の権利 ?]
 is-card: true
 card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 0 and n_advisors < 3
@@ -486,15 +486,15 @@ on-arrival: pfulf_advisor = 1; n_advisors += 1; reformist_strength += 5; reformi
 go-to: advisor_menu
 tags: reformist_advisor
 
-Antonie Pfülf is now an advisor.
+アントニー・プフュルフを顧問に任命した。
 
 
 
 # left
 
 @add_levi
-title: Paul Levi
-subtitle: Paul Levi is a former <span style="color: #700000;">**KPD**</span> leader who was purged for criticizing <span style="color: #700000;">**Communist**</span> policies. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the <span style="color: #700000;">**KPD**</span> ?]
+title: パウル・レヴィ
+subtitle: パウル・レヴィは元<span style="color: #700000;">**KPD**</span>指導者で、<span style="color: #700000;">**共産党**</span>の政策を批判して除名された。{!<br><br>!}[? if difficulty < 0 : 行動――左派の強化、<span style="color: #700000;">**KPD**</span>との協力 ?]
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
 view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
@@ -502,11 +502,11 @@ on-arrival: levi_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent 
 go-to: advisor_menu
 tags: left_advisor
 
-Paul Levi is now an advisor.
+パウル・レヴィを顧問に任命した。
 
 @add_sender
-title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
+title: トーニ・ゼンダー
+subtitle: トーニ・ゼンダーは反戦・女性権利運動家であり、国会議員でもある。{!<br><br>!}[? if difficulty < 0 : 行動――左派・中間派の団結、女性の組織化、閣外協力への反対、経済危機への対処 ?]
 is-card: true
 card-image: img/portraits/SenderToni.jpg
 view-if: sender_advisor = 0 and n_advisors < 3
@@ -514,11 +514,11 @@ on-arrival: sender_advisor = 1; n_advisors += 1; left_strength += 5; left_dissen
 go-to: advisor_menu
 tags: left_advisor
 
-Toni Sender is now an advisor.
+トーニ・ゼンダーを顧問に任命した。
 
 @add_rosenfeld
-title: Kurt Rosenfeld
-subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the <span style="color: #700000;">**KPD**</span>, Against Toleration ?]
+title: クルト・ローゼンフェルト
+subtitle: クルト・ローゼンフェルトは弁護士、反軍国主義運動家、国会議員である。{!<br><br>!}[? if difficulty < 0 : 行動――左派の強化、<span style="color: #700000;">**KPD**</span>との協力、閣外協力への反対 ?]
 is-card: true
 card-image: img/portraits/RosenfeldKurt.jpg
 view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -526,11 +526,11 @@ on-arrival: rosenfeld_advisor = 1; n_advisors += 1; left_strength += 5; left_dis
 go-to: advisor_menu
 tags: left_advisor
 
-Kurt Rosenfeld is now an advisor.
+クルト・ローゼンフェルトを顧問に任命した。
 
 @add_seydewitz
-title: Max Seydewitz
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the <span style="color: #c00000;">**SPD**</span>, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
+title: マックス・ザイデヴィッツ
+subtitle: マックス・ザイデヴィッツは青年組織の元指導者で、現在は<span style="color: #c00000;">**SPD**</span>左派を支持し、階級闘争を唱えている。{!<br><br>!}[? if difficulty < 0 : 行動――階級闘争への結集、社会主義青年団、閣外協力への反対 ?]
 is-card: true
 card-image: img/portraits/SeydewitzMax.jpg
 view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -538,11 +538,11 @@ on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5; left_dis
 go-to: advisor_menu
 tags: left_advisor
 
-Max Seydewitz is now an advisor.
+マックス・ザイデヴィッツを顧問に任命した。
 
 @add_siemsen
-title: Anna Siemsen
-subtitle: Anna Siemsen is an and educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+title: アンナ・ジームゼン
+subtitle: アンナ・ジームゼンは教育改革運動家・平和主義者で、戦前に博士号を得た数少ないドイツ人女性の一人である。{!<br><br>!}[? if difficulty < 0 : 行動――平和主義への結集、教育課程、教育制度 ?]
 is-card: true
 card-image: img/portraits/SiemsenAnna.jpg
 view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -550,15 +550,15 @@ on-arrival: siemsen_advisor = 1; n_advisors += 1; left_strength += 5; left_disse
 go-to: advisor_menu
 tags: left_advisor
 
-Anna Siemsen is now an advisor.
+アンナ・ジームゼンを顧問に任命した。
 
 
 
 # labor
 
 @add_leipart
-title: Theodor Leipart
-subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis[? if red_general_unlock and rubicon:, Negotiating with the Red General?]?]
+title: テオドール・ライパルト
+subtitle: テオドール・ライパルトはドイツ労働総同盟ADGBの指導者である。{!<br><br>!}[? if difficulty < 0 : 行動――労働者の組織化、経済危機への対処[? if red_general_unlock and rubicon:、赤い将軍との交渉?]?]
 is-card: true
 card-image: img/portraits/LeipartTheodor.jpg
 tags: labor_advisor
@@ -566,11 +566,11 @@ view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5; labor_dissent -= 8
 go-to: advisor_menu
 
-Theodor Leipart is now an advisor.
+テオドール・ライパルトを顧問に任命した。
 
 @add_aufhauser
-title: Siegfried Aufhäuser
-subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
+title: ジークフリート・アウフホイザー
+subtitle: ジークフリート・アウフホイザーはホワイトカラー労組連盟AfA同盟の指導者である。{!<br><br>!}[? if difficulty < 0 : 行動――ホワイトカラー労働者の組織化、労組・党間調整、経済危機への対処 ?]
 is-card: true
 card-image: img/portraits/AufhäuserSiegfried.jpg
 tags: labor_advisor
@@ -578,11 +578,11 @@ view-if: aufhauser_advisor = 0 and n_advisors < 3
 on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5; labor_dissent -= 8
 go-to: advisor_menu
 
-Siegfried Aufhäuser is now an advisor.
+ジークフリート・アウフホイザーを顧問に任命した。
 
 @add_wissell
-title: Rudolf Wissell
-subtitle: Rudolf Wissell is an economist who has been the Labor Minister, and is an advocate for the interests of labor within the government. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
+title: ルドルフ・ヴィッセル
+subtitle: ルドルフ・ヴィッセルは元労働相の経済学者で、政府内における労働者の利益を擁護する。{!<br><br>!}[? if difficulty < 0 : 行動――労組・党間調整、労働者の権利 ?]
 is-card: true
 card-image: img/portraits/WissellRudolf.jpg
 tags: labor_advisor
@@ -590,12 +590,12 @@ view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: wissell_advisor = 1; n_advisors += 1; labor_strength += 3; labor_dissent -= 4
 go-to: advisor_menu
 
-Rudolf Wissell is now an advisor.
+ルドルフ・ヴィッセルを顧問に任命した。
 
 
 @add_woytinsky
-title: Wladimir Woytinsky
-subtitle: Wladimir Woytinsky is a former Russian Menshevik who is now the lead trade union economist. {!<br><br>!}[? if difficulty < 0 : Actions - Addressing the Economic Crisis, Carrying Out the Economic Plan ?]
+title: ヴラジーミル・ヴォイティンスキー
+subtitle: ヴラジーミル・ヴォイティンスキーは元ロシア・メンシェヴィキで、現在は労働組合の主任経済学者である。{!<br><br>!}[? if difficulty < 0 : 行動――経済危機への対処、経済計画の実施 ?]
 is-card: true
 card-image: img/portraits/WoytinskyWladimir.jpg
 tags: labor_advisor
@@ -603,14 +603,14 @@ view-if: woytinsky_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: woytinsky_advisor = 1; n_advisors += 1; labor_strength += 3; labor_dissent -= 4
 go-to: advisor_menu
 
-Wladimir Woytinsky is now an advisor.
+ヴラジーミル・ヴォイティンスキーを顧問に任命した。
 
 
 # neorevisionist leaders
 
 @add_mierendorff
-title: Carlo Mierendorff
-subtitle: Carlo Mierendorff is one of the youngest members of the Reichstag, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist. {!<br><br>!}[? if difficulty < 0 : Actions - Build the <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span>, Warning About the <span style="color: #7A3C00;">Nazis</span> ?]
+title: カルロ・ミーレンドルフ
+subtitle: カルロ・ミーレンドルフは最年少級の国会議員で、「新修正主義」運動の創始者である。対ナチ戦略家でもある。{!<br><br>!}[? if difficulty < 0 : 行動――<span style="color: #c00000;">鉄の</span><span style="color: #1A1A1A;">戦線</span>の結成、<span style="color: #7A3C00;">ナチ</span>への警告 ?]
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 0 and n_advisors < 3
@@ -618,11 +618,11 @@ on-arrival: mierendorff_advisor = 1; n_advisors += 1; neorevisionist_strength +=
 go-to: advisor_menu
 tags: neorev_advisor
 
-Carlo Mierendorff is now an advisor.
+カルロ・ミーレンドルフを顧問に任命した。
 
 @add_schumacher
-title: Kurt Schumacher
-subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the <span style="color: #c00000;">social-democratic</span> cause, and favors reformist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Building the Reichsbanner, Addressing the Economic Crisis ?]
+title: クルト・シューマッハー
+subtitle: クルト・シューマッハーは大戦の従軍者で、<span style="color: #c00000;">社会民主主義</span>を力強く訴える演説家であり、改革派政策を支持する。{!<br><br>!}[? if difficulty < 0 : 行動――緊急募金、国旗団の強化、経済危機への対処 ?]
 is-card: true
 card-image: img/portraits/SchumacherKurt.jpg
 tags: neorev_advisor
@@ -630,11 +630,11 @@ view-if: schumacher_advisor = 0 and n_advisors < 3
 on-arrival: schumacher_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 4
 go-to: advisor_menu
 
-Kurt Schumacher is now an advisor.
+クルト・シューマッハーを顧問に任命した。
 
 @add_leber
-title: Julius Leber
-subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition to the Kapp coup attempt. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Democracy, Military Affairs, Building a People's Party ?]
+title: ユリウス・レーバー
+subtitle: ユリウス・レーバーは元国防軍将校で、カップ一揆への反対から辞職した。{!<br><br>!}[? if difficulty < 0 : 行動――民主主義擁護の結集、軍事問題、人民政党の建設 ?]
 is-card: true
 card-image: img/portraits/LeberJulius.jpg
 view-if: leber_advisor = 0 and n_advisors < 3
@@ -642,13 +642,13 @@ on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; ne
 go-to: advisor_menu
 tags: neorev_advisor
 
-Julius Leber is now an advisor.
+ユリウス・レーバーを顧問に任命した。
 
 # Nonfactional advisors
 
 @add_wirth
-title: Joseph Wirth
-subtitle: Joseph Wirth is a former member of the <span style="color: #000000;">Center</span>'s left wing and a former chancellor, known for his ardent <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> convictions.
+title: ヨーゼフ・ヴィルト
+subtitle: ヨーゼフ・ヴィルトは元<span style="color: #000000;">中央党</span>左派・元首相で、熱烈な<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">的</span>信念で知られる。
 is-card: true
 card-image: img/portraits/wirth.jpg
 view-if: wirth_advisor = 0 and wirth_spd and n_advisors < 3
@@ -656,13 +656,13 @@ on-arrival: wirth_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; ne
 go-to: advisor_menu
 tags: neorev_advisor
 
-Joseph Wirth is now an advisor.
+ヨーゼフ・ヴィルトを顧問に任命した。
 
 # Nonfactional advisors
 
 @add_baade
-title: Fritz Baade
-subtitle: Fritz Baade is one of the few agricultural policy experts in the <span style="color: #c00000;">**SPD**</span>. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
+title: フリッツ・バーデ
+subtitle: フリッツ・バーデは<span style="color: #c00000;">**SPD**</span>では数少ない農業政策の専門家である。{!<br><br>!}[? if difficulty < 0 : 行動――農業政策、農村選挙運動、経済危機への対処 ?]
 is-card: true
 card-image: img/portraits/BaadeFritz.jpg
 view-if: baade_advisor = 0 and n_advisors < 3
@@ -670,12 +670,12 @@ on-arrival: baade_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Fritz Baade is now an advisor.
+フリッツ・バーデを顧問に任命した。
 
 
 @add_hirschfeld
-title: Magnus Hirschfeld
-subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
+title: マグヌス・ヒルシュフェルト
+subtitle: マグヌス・ヒルシュフェルトは性科学研究所の創設者で、性的少数者の権利を擁護する。{!<br><br>!}[? if difficulty < 0 : 行動――同性愛者の権利、女性の権利、科学予算 ?]
 is-card: true
 card-image: img/portraits/HirschfeldMagnus.jpg
 view-if: hirschfeld_advisor = 0 and n_advisors < 3
@@ -683,12 +683,12 @@ on-arrival: hirschfeld_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Magnus Hirschfeld is now an advisor.
+マグヌス・ヒルシュフェルトを顧問に任命した。
 
 
 @add_radbruch
-title: Gustav Radbruch
-subtitle: Gustav Radbruch is a renowned legal scholar and long-time <span style="color: #c00000;">**SPD**</span> justice minister. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
+title: グスタフ・ラートブルフ
+subtitle: グスタフ・ラートブルフは著名な法学者で、長年<span style="color: #c00000;">**SPD**</span>の司法相を務めた。{!<br><br>!}[? if difficulty < 0 : 行動――司法問題、憲法改正 ?]
 is-card: true
 card-image: img/portraits/RadbruchGustav.jpg
 view-if: radbruch_advisor = 0 and n_advisors < 3
@@ -696,12 +696,12 @@ on-arrival: radbruch_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Gustav Radbruch is now an advisor.
+グスタフ・ラートブルフを顧問に任命した。
 
 
 @add_stampfer
-title: Friedrich Stampfer
-subtitle: Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper. {!<br><br>!}[? if difficulty < 0 : Actions - Media, Editorial Line, Cooperation with the <span style="color: #700000;">KPD</span> ?]
+title: フリードリヒ・シュタンプファー
+subtitle: フリードリヒ・シュタンプファーは党機関紙『フォアヴェルツ』の長年の編集長である。{!<br><br>!}[? if difficulty < 0 : 行動――メディア、編集方針、<span style="color: #700000;">KPD</span>との協力 ?]
 is-card: true
 card-image: img/portraits/StampferFriedrich.jpg
 view-if: stampfer_advisor = 0 and n_advisors < 3 and not stampfer_killed
@@ -709,6 +709,4 @@ on-arrival: stampfer_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Friedrich Stampfer is now an advisor.
-
-
+フリードリヒ・シュタンプファーを顧問に任命した。

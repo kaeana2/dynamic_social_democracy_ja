@@ -1,23 +1,23 @@
-title: The <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> Ascendant?
-subtitle: The beginning of the end.
+title: <span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の台頭？
+subtitle: 終焉の始まり。
 view-if: chancellor == "Seldte"
 on-arrival: spd_in_government = 0
 tags: event
 new-page: true
 
-With Seldte and Hergt in charge of Germany, presiding over a <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> "New Harzburg" Coalition ruling by presidential decree, the beginning of the end is near. 
+ゼルテとヘルクトがドイツの実権を握り、大統領緊急令によって統治する<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>の「新ハルツブルク」連立を率いている。終焉の始まりが近づいている。
 
-However, the two coalition parties have irreparable differences over the German <span style="color: #808080;">monarchy</span> and next steps, and with the <span style="color: #3E88B3;">nationalists</span> having an edge over their <span class="tooltip-text" title="good mod">dynamic</span> peers, it seems that this arrangement won't last. Furthermore, it is anticipated that the current government will avoid any moves to restore the monarchy until after the 1935 referendum, and the cabinet must survive until then.
+しかし連立二党は、ドイツ<span style="color: #808080;">君主制</span>と今後の方針をめぐって修復不能な対立を抱えている。<span style="color: #3E88B3;">国家主義者</span>が<span class="tooltip-text" title="良好な補正">躍動的</span>な相手より優位に立つなか、この体制は長続きしそうにない。さらに現政権は、1935年の国民投票が終わるまで君主制復古への動きを避けると予想されており、内閣はそれまで存続しなければならない。
 
-What are we to do now?
+今、我々はどうすべきなのか？
 
-- @fight: We will fight on the streets to prevent Seldte from consolidating power.
-- @game_over: We will vote against the government in the Reichstag.
+- @fight: ゼルテの権力確立を阻むため、街頭で戦う。
+- @game_over: 国会で政府に反対票を投じる。
 
 
 @fight
 
-Do we realize that this means civil war, against the full force of the state?
+それが国家の全兵力を相手にする内戦を意味すると理解しているのか？
 
-- @civil_war: Yes.
-- @game_over: We are not ready for war. Instead, we will vote against the government in the Reichstag.
+- @civil_war: その通りだ。
+- @game_over: 戦争の準備はできていない。代わりに国会で政府に反対票を投じる。

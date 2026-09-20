@@ -1,5 +1,5 @@
-title: Banking Crisis
-subtitle: The collapse of the German banking system...
+title: 銀行危機
+subtitle: ドイツ銀行制度の崩壊……。
 new-page: true
 on-arrival: banking_crisis_seen = 1; workers_kpd += 2; unemployed_kpd += 5; workers_nsdap += 3 if chancellor != "Hitler"; new_middle_nsdap += 5 if chancellor != "Hitler"; old_middle_nsdap += 5 if chancellor != "Hitler"; rural_nsdap += 3 if chancellor != "Hitler"; unemployed += 3; crisis_urgency += 1; workers_spd -= 4 if spd_in_government; new_middle_spd -= 5 if spd_in_government; old_middle_spd -= 5 if spd_in_government; rural_spd -= 4 if spd_in_government; economic_growth -= 1.4; hindenburg_angry_bruning += 20; hindenburg_angry += 40; dnvp_angry += 1 if spd_toleration_right; banking_crisis_fallout_time = time + 6
 tags: event
@@ -8,75 +8,75 @@ max-visits: 1
 priority: 1
 face-image: img/danat_bank.jpg
 
-= Banking Crisis
+= 銀行危機
 
-The Darmstädter und Nationalbank, or Danat Bank, has collapsed! Along with it goes much of the German banking system. The cause seemed to be due to the government's pursuit of a customs union with Austria, which led to de facto international sanctions. This has set off a global ripple effect, deepening the depression and driving foreign banks into bankruptcy.
+ダルムシュタット・国民銀行、通称ダナート銀行が破綻した！　これに伴い、ドイツの銀行制度の大半も崩壊しつつある。政府がオーストリアとの関税同盟を追求した結果、事実上の国際制裁を招いたことが原因と見られる。この衝撃は世界中へ波及し、恐慌を深刻化させ、外国の銀行までも破綻へ追い込んでいる。
 
-This is a bourgeois dispute, but the costs will be borne by the proletariat. The people are facing ever-increasing hunger and poverty, and perhaps we are partly to blame.
+これはブルジョワ同士の争いだが、その代償を負うのはプロレタリアートである。国民はますます深刻な飢えと貧困に直面しており、その責任の一端は我々にもあるのかもしれない。
 
-- @nothing_to_do: There is nothing we can do.
-- @stabilization: Take action to stabilize the economy!
-- @austerity_toleration: Chancellor Brüning's response is, as always, more austerity.
-- @austerity_majority: Chancellor Brüning's response is, as always, more austerity.
-- @austerity_snaps: Chancellor Brüning's response is, as always, more austerity.
-- @austerity_goerdeler: Chancellor Goerdeler's response is, as always, more austerity.
-- @austerity_hitler: Chancellor Hitler's response is more austerity.  With extra racism, of course.
-- @austerity_wirth: Chancellor Wirth's response is, reluctantly, more austerity.
-- @end_toleration: We are tired of austerity. End the toleration arrangement!
+- @nothing_to_do: 我々にできることはない。
+- @stabilization: 経済を安定させるために行動する！
+- @austerity_toleration: ブリューニング首相の対応は、いつものように一層の緊縮だ。
+- @austerity_majority: ブリューニング首相の対応は、いつものように一層の緊縮だ。
+- @austerity_snaps: ブリューニング首相の対応は、いつものように一層の緊縮だ。
+- @austerity_goerdeler: ゲルデラー首相の対応は、いつものように一層の緊縮だ。
+- @austerity_hitler: ヒトラー首相の対応は一層の緊縮だ。当然、人種差別も上乗せされる。
+- @austerity_wirth: ヴィルト首相の対応は、不承不承ながらも一層の緊縮だ。
+- @end_toleration: 緊縮にはうんざりだ。閣外協力を打ち切る！
 
 @nothing_to_do
 view-if: spd_in_government = 1
 on-arrival: welfare -= 1; workers_spd -= 3; unemployed_spd -= 3; pro_republic -= 3
 
-There is, essentially, nothing we can do.
+要するに、我々にできることは何もない。
 
 @stabilization
 view-if: spd_in_government = 1
-subtitle: -1 budget 
-unavailable-subtitle: We do not have the necessary budget. [? if budget <= 0 and budget >= -3 and wtb_adopted = 1: The <span style="color: #C0A054;">**DVP**</span> will call a pre-emptive vote of no confidence.?] [? if wtb_adopted = 0: Our own party doesn't support running a budget deficit.?] [? if budget <= 0 and economic_minister_party != "SPD": Our current coalition's economic minister refuses to support this course of action.?]
+subtitle: 予算 -1
+unavailable-subtitle: 必要な予算がない。[? if budget <= 0 and budget >= -3 and wtb_adopted = 1: <span style="color: #C0A054;">**DVP**</span>が先手を打って不信任決議を提出する。?] [? if wtb_adopted = 0: 我が党が財政赤字を容認していない。?] [? if budget <= 0 and economic_minister_party != "SPD": 現連立の経済相がこの方針への支持を拒んでいる。?]
 choose-if: budget >= 1 or (wtb_adopted = 1 and budget >= -3 and (in_spd_majority = 1 or in_social_catholic_coalition = 1 or in_weimar_coalition = 1 or in_left_front = 1 or in_popular_front = 1 or sapd_toleration = 1) and economic_minister_party = "SPD")
 on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_nsdap -= 3; economic_growth += 1; coalition_dissent += 1 if budget <= 0 and (in_social_catholic_coalition = 1 or in_weimar_coalition = 1 or in_popular_front = 1)
 
-In the face of the banking crisis, we have taken emergency action to stabilize the economy by injecting money into the banking system. It might not be enough, but it temporarily staunches the bleeding.
+銀行危機を前に、我々は銀行制度へ資金を注入し、経済を安定させる緊急措置を講じた。十分ではないかもしれないが、当面の出血は抑えられる。
 
 @austerity_toleration
 view-if: spd_toleration = 1 and chancellor = "Brüning"
 on-arrival: welfare -= 1 if budget <= 0; workers_spd -= 3; workers_spd += 2 if budget > 0; workers_nsdap -= 2 if budget > 0; unemployed_spd -= 3; unemployed_spd += 2 if budget > 0; pro_republic -= 3; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare.?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?]
+[? if budget <= 0: [+ chancellor +]首相は銀行危機に対し、福祉のさらなる削減で応じた。?][? if budget > 0: 驚くべきことに、[+ chancellor +]首相は財政黒字を理由に社会支出の削減を見送り、経済と銀行制度を安定させる措置を講じた。?]
 
 @austerity_majority
 view-if: spd_in_government = 0 and spd_toleration = 0 and (in_right_coalition = 1 or in_center_right_coalition = 1 or in_bourgeois_coalition = 1)
 on-arrival: welfare -= 1 if budget <= 0; unemployed_spd += 3 if budget <= 0; workers_nsdap -= 2 if budget > 0; pro_republic -= 3; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare.?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?]
-[? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
+[? if budget <= 0: [+ chancellor +]首相は銀行危機に対し、福祉のさらなる削減で応じた。?][? if budget > 0: 驚くべきことに、[+ chancellor +]首相は財政黒字を理由に社会支出の削減を見送り、経済と銀行制度を安定させる措置を講じた。?]
+[? if budget <= 0: 我々は現内閣に断固反対しているため、この緊縮措置を思う存分攻撃できる。?]
 
 @austerity_snaps
 view-if: spd_in_government = 0 and spd_toleration = 0 and in_right_coalition = 0 and in_center_right_coalition = 0 and secret_mode = 0 and chancellor = "Brüning"
 on-arrival: welfare -= 1 if budget <= 0; workers_spd -= 1; workers_spd += 1 if budget > 0; workers_nsdap -= 2 if budget > 0; unemployed_spd -= 1; unemployed_spd += 1 if budget > 0; pro_republic -= 3; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare.?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?]
+[? if budget <= 0: [+ chancellor +]首相は銀行危機に対し、福祉のさらなる削減で応じた。?][? if budget > 0: 驚くべきことに、[+ chancellor +]首相は財政黒字を理由に社会支出の削減を見送り、経済と銀行制度を安定させる措置を講じた。?]
 
 @austerity_goerdeler
 view-if: chancellor = "Goerdeler"
 on-arrival: welfare -= 1 if budget <= 0; unemployed_spd += 3 if budget <= 0; workers_nsdap -= 2 if budget > 0; pro_republic -= 3; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare.?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?]
-[? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
+[? if budget <= 0: [+ chancellor +]首相は銀行危機に対し、福祉のさらなる削減で応じた。?][? if budget > 0: 驚くべきことに、[+ chancellor +]首相は財政黒字を理由に社会支出の削減を見送り、経済と銀行制度を安定させる措置を講じた。?]
+[? if budget <= 0: 我々は現内閣に断固反対しているため、この緊縮措置を思う存分攻撃できる。?]
 
 @austerity_hitler
 view-if: chancellor = "Hitler"
 on-arrival: welfare -= 1 if budget <= 0; unemployed_spd += 3 if budget <= 0; workers_nsdap -= 5; workers_nsdap += 4 if budget > 0; unemployed_nsdap -= 5; unemployed_nsdap += 4 if budget > 0; pro_republic -= 5; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare. He blames the crisis on a "Judeo-Bolshevik plot" and argues his hand has been forced here, but nevertheless, this move has damaged his credibility as an anti-austerity figure. ?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?] 
-[? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
+[? if budget <= 0: [+ chancellor +]首相は銀行危機に対し、福祉のさらなる削減で応じた。彼は危機を「ユダヤ＝ボリシェヴィキの陰謀」のせいにし、やむをえない措置だと主張している。それでも、この決定によって反緊縮を掲げる政治家としての信頼は損なわれた。?][? if budget > 0: 驚くべきことに、[+ chancellor +]首相は財政黒字を理由に社会支出の削減を見送り、経済と銀行制度を安定させる措置を講じた。?]
+[? if budget <= 0: 我々は現内閣に断固反対しているため、この緊縮措置を思う存分攻撃できる。?]
 
 @austerity_wirth
 view-if: spd_toleration = 1 and chancellor = "Wirth"
 on-arrival: welfare -= 1 if budget <= 0; workers_spd -= 3; workers_spd += 2 if budget > 0; workers_nsdap -= 2 if budget > 0; unemployed_spd -= 3; unemployed_spd += 2 if budget > 0; pro_republic -= 3; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Under pressure from the right wing of the coalition, chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare.?][? if budget > 0: Thankfully, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?]
+[? if budget <= 0: 連立内の右翼から圧力を受け、[+ chancellor +]首相は銀行危機に対して福祉のさらなる削減で応じた。?][? if budget > 0: 幸いにも、[+ chancellor +]首相は財政黒字を理由に社会支出の削減を見送り、経済と銀行制度を安定させる措置を講じた。?]
 
 @end_toleration
 view-if: spd_toleration = 1
@@ -84,23 +84,23 @@ on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0;
 call: set_next_election_time
 go-to: new_prussia_election if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and ((center_right_coalition_prussia < 50 and dnvp_ideology == "Moderate") or dnvp_ideology == "Radical"); center_right_coalition_prussia if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and (((center_right_coalition_prussia >= 50 or right_coalition_prussia >= 50) and dnvp_ideology == "Moderate") or bourgeois_coalition_prussia >= 50)
 
-We are tired of [+ chancellor +]'s policy of austerity. After [+ chancellor +]'s attempt to use emergency powers to pass another welfare cut, we have worked with the other parties to reverse this policy. In response, the Reichstag has been dissolved, and new elections called.
+我々は[+ chancellor +]の緊縮政策にうんざりしている。[+ chancellor +]が緊急権限を使ってさらなる福祉削減を成立させようとしたため、我々は他党と協力してこの政策を覆した。これを受けて国会は解散され、新たな選挙が実施されることとなった。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新たな選挙は[+ next_election_year +]年[+ next_election_month : month +]に行われる。
 
 @new_prussia_election
 on-arrival: z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; kpd_relation += 5; dvp_right += 3; ddp_right += 2; lvp_right += 2; pro_republic -= 3; new_middle_spd -= 2; rural_spd -= 2; old_middle_spd -= 2; catholics_spd -= 2; new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 2; catholics_nsdap += 2; in_right_coalition_prussia = 0; in_social_catholic_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; prussia_coalition_trigger = 0
 call: set_next_election_time_prussia
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] has called a retaliatory vote in Prussia, forcing the dissolution of the Landtag for new elections.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は報復としてプロイセンで投票を要求し、州議会を解散へ追い込んで新たな選挙を実施させた。
 
-New Prussian elections have been set for [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
+新たなプロイセン州議会選挙は[+ next_election_year_prussia +]年[+ next_election_month_prussia : month +]に行われる。
 
-A double dissolution has shaken the people's faith in democracy, with the <span style="color: #7A3C00;">Nazis</span> exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
+二重の議会解散は国民の民主主義への信頼を揺るがした。<span style="color: #7A3C00;">ナチ</span>はこの混乱を利用し、民主主義は機能せず、ドイツには強力な指導者が必要だと主張している。
 
 @center_right_coalition_prussia
 on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; prussia_coalition_trigger = 0; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; new_middle_spd -= 3; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; dvp_right += 3; ddp_right += 2; pro_republic -= 3; prussian_police_loyalty -= 0.06; prussian_police_strength -= 8; 
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] has called a retaliatory no confidence vote in Prussia, replacing our government with a center-right coalition composed of all parties to our right, except for the <span style="color: #003755;">**DNF**</span> and <span style="color: #7A3C00;">**NSDAP**</span>. While this is a setback, it is not the worst possible outcome, as new elections could have led to significant gains for extremist parties.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は報復としてプロイセンで不信任決議を提出し、我々の政府を<span style="color: #003755;">**DNF**</span>と<span style="color: #7A3C00;">**NSDAP**</span>を除く右派諸党による中道右派連立へ置き換えた。これは後退ではあるが、最悪の結果ではない。新たな選挙なら急進政党の大幅な伸長を招いた恐れがある。
 
-[? if z_leader != "Stegerwald": Adam Stegerwald?][? if z_leader == "Stegerwald": Heinrich Brüning?] of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected to be the Minister-President of Prussia.
+[? if z_leader != "Stegerwald": アダム・シュテーガーヴァルト?][? if z_leader == "Stegerwald": ハインリヒ・ブリューニング?]が[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]からプロイセン州首相に選出された。

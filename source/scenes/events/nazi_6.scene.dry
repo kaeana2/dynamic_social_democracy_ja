@@ -1,5 +1,5 @@
-title: Dissent Within the <span style="color: #7A3C00;">**SA**</span>
-subtitle: A lone incident, or the beginning of the end?
+title: <span style="color: #7A3C00;">**SA**</span>内部の反乱
+subtitle: 単発の事件か、それとも終わりの始まりか？
 view-if: chancellor = "Schleicher" and schleicher_time == 5 and nazi_funds <= 3
 new-page: true
 tags: event
@@ -18,20 +18,20 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Dissent Within the <span style="color: #7A3C00;">**SA**</span>
+= <span style="color: #7A3C00;">**SA**</span>内部の反乱
 
-With the <span style="color: #7A3C00;">**NSDAP**</span>'s funds running low and the <span style="color: #7A3C00;">**SA**</span>'s frustration over the party's lack of action, tensions between the party and its paramilitary are rising. Financial support for the <span style="color: #7A3C00;">**SA**</span> is decreasing, and as morale dips, discipline weakens. Violent terrorist acts are on the rise, alarming party officials who fear it’s driving away voters. A high-ranking <span style="color: #7A3C00;">**SA**</span> commander has even publicly condemned [+ nsdap_leader +]'s legal approach and called for more 'direct' methods.
+<span style="color: #7A3C00;">**NSDAP**</span>の資金が底をつき始め、党が行動を起こさないことへの<span style="color: #7A3C00;">**SA**</span>の不満が高まるにつれ、党とその準軍事組織の緊張も増している。<span style="color: #7A3C00;">**SA**</span>への財政支援は減少し、士気の低下とともに規律も緩んでいる。暴力的なテロ行為が増え、党幹部は有権者が離反することを恐れて警戒している。ある<span style="color: #7A3C00;">**SA**</span>高級指揮官は、[+ nsdap_leader +]の合法路線を公然と非難し、より「直接的な」手段を求めさえした。
 
-Since then, a major conflict has erupted between the <span style="color: #7A3C00;">**SA**</span> and the <span style="color: #7A3C00;">**NSDAP**</span>'s gauleiter in northern Bavaria. Wilhelm Stegmann, an <span style="color: #7A3C00;">**SA**</span> commander with Strasserist sympathies, clashed with the autocratic gauleiter over a broken promise to reimburse the <span style="color: #7A3C00;">**SA**</span>. Despite the national <span style="color: #7A3C00;">**SA**</span> siding with the gauleiter, Stegmann defied the order to resign by retaining the loyalty of his stormtroopers.
+その後、北バイエルンで<span style="color: #7A3C00;">**SA**</span>と<span style="color: #7A3C00;">**NSDAP**</span>大管区指導者の間に大きな対立が勃発した。シュトラッサー派に同情的な<span style="color: #7A3C00;">**SA**</span>指揮官ヴィルヘルム・シュテークマンは、<span style="color: #7A3C00;">**SA**</span>への費用弁済の約束が破られたことをめぐり、独裁的な大管区指導者と衝突した。全国の<span style="color: #7A3C00;">**SA**</span>指導部は大管区指導者側についたが、突撃隊員の忠誠を保ったシュテークマンは辞任命令に背いた。
 
 - @nazi_2
 
 @nazi_2
-title: The dispute escalates...
+title: 対立が激化する……。
 on-arrival: sa_strength -= 25; sa_militancy -= 0.03; unemployed_nsdap -= 4; workers_nsdap -= 2
 
-One of Stegmann's aides infiltrated the <span style="color: #7A3C00;">**SA**</span> headquarters, locking up a stormtrooper loyal to the gauleiter and seizing official files. This then sparked a bloody brawl between Stegmann’s followers and the gauleiter’s supporters within the party headquarters.
+シュテークマンの側近の一人が<span style="color: #7A3C00;">**SA**</span>本部へ侵入し、大管区指導者に忠実な突撃隊員を監禁して公文書を押収した。これをきっかけに、党本部内でシュテークマン派と大管区指導者派の血みどろの乱闘が始まった。
 
-In response, [+ nsdap_leader +] stripped Stegmann of all authority and, invoking the *Führerprinzip*, forced him to sign a statement of submission to the party leader. However, this resolution is expected to be temporary.
+これに対し[+ nsdap_leader +]はシュテークマンの全権限を剥奪し、*指導者原理*を持ち出して党首への服従声明に署名させた。しかし、この決着は一時的なものにすぎないとみられる。
 
-- @root: It's our chance to reclaim control of the streets.
+- @root: 街頭の支配を取り戻す好機だ。

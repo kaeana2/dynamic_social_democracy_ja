@@ -1,5 +1,5 @@
-title: The Camarilla Joins the Conspiracy
-subtitle: Oskar von Hindenburg and Otto Meissner meet with [+ nsdap_leader +] and Papen.
+title: 側近集団が陰謀に加わる
+subtitle: オスカー・フォン・ヒンデンブルクとオットー・マイスナーが[+ nsdap_leader +]、パーペンと会談する。
 view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode
 new-page: true
 tags: event
@@ -18,20 +18,20 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Camarilla Joins the Conspiracy
+= 側近集団が陰謀に加わる
 
-In Berlin, another meeting is scheduled between [+ nsdap_leader +] and Papen in Ribbentrop's villa in the evening, this time also joined by Hindenburg's son Oskar, and his chief of staff Otto Meissner. Goring and two other important <span style="color: #7A3C00;">Nazis</span> are also in attendance. This meeting has been organized by Papen himself, and reached the most momentous decision of his life: his most promising way to return to power and get revenge against Schleicher was to concede the chancellorship to [+ nsdap_chancellor +].
+ベルリンでは夕刻、リッベントロップ邸で[+ nsdap_leader +]とパーペンの新たな会談が予定され、今回はヒンデンブルクの息子オスカーと大統領府長官オットー・マイスナーも加わった。ゲーリングとほか二人の<span style="color: #7A3C00;">ナチ党</span>要人も出席している。会談を自ら組織したパーペンは、生涯で最も重大な決断に至った。権力へ復帰しシュライヒャーへ復讐する最も有望な道は、[+ nsdap_chancellor +]に首相職を譲ることだった。
 
-Despite his eagerness to depose Schleicher, Oskar is no <span style="color: #7A3C00;">Nazi</span>, and even warns his father of the dangers of appointing [+ nsdap_chancellor +], pointing out that he rarely keeps his promises and his appointment would inevitably lead to a one-party dictatorship. 
+シュライヒャーを追放したがっているとはいえ、オスカーは<span style="color: #7A3C00;">ナチ党員</span>ではない。彼は父に[+ nsdap_chancellor +]任命の危険を警告し、あの男はほとんど約束を守らず、任命は必然的に一党独裁へ至ると指摘した。
 
-Meissner, recognizing that the chancellor's hold on power was slipping decided that it was time to ingratiate himself with Schleicher's most likely successor, whether it be Papen or [+ nsdap_chancellor +].
+首相の権力掌握が弱まりつつあると見たマイスナーは、パーペンであれ[+ nsdap_chancellor +]であれ、シュライヒャーの最有力後継者に取り入る時機だと判断した。
 
 - @nazi_2
 
 @nazi_2
-title: The talks conclude...
-on-arrival: meissner_goal = "Advocate for a Hitler chancellorship"; oskar_goal = "Advocate for a Papen chancellorship"; papen_goal = "Advocate for a Hitler chancellorship"; schleicher_strength -= 1
+title: 協議が終わる……。
+on-arrival: meissner_goal = "ヒトラーの首相就任を支持する"; oskar_goal = "パーペンの首相就任を支持する"; papen_goal = "ヒトラーの首相就任を支持する"; schleicher_strength -= 1
 
-[+ nsdap_leader +] seeks a private conversation with Hindenburg’s son, while Göring speaks separately with Meissner. [+ nsdap_leader +]’s effort to sway the reluctant Oskar to back his appointment as presidential chancellor fails—prompting Goebbels to describe Oskar as “the personification of stupidity.” In contrast, Göring, now serving as [+ nsdap_leader +]’s spokesman, takes a more measured approach. Leveraging his reputation as a respected war hero and his skilled social ability, he assures Meissner that the <span style="color: #7A3C00;">**NSDAP**</span> would demand only a single cabinet post, with the President retaining control over the crucial Foreign and Defense Ministries.
+[+ nsdap_leader +]はヒンデンブルクの息子との個別会談を求め、ゲーリングは別にマイスナーと話した。[+ nsdap_leader +]は、消極的なオスカーに自らの大統領内閣首相への任命を支持させようとしたが失敗し、ゲッベルスはオスカーを「愚鈍の化身」と評した。対照的に、[+ nsdap_leader +]の代弁者となったゲーリングは、より慎重な手法を取った。尊敬される戦争英雄としての評判と巧みな社交術を利用し、<span style="color: #7A3C00;">**NSDAP**</span>が要求する閣僚職は一つだけで、重要な外務省と国防省は大統領の統制下に残るとマイスナーへ保証した。
 
-By the end of the day’s talks, consensus forms around a single point: Schleicher must go. An unspoken deal takes shape—Papen signals his willingness to accept the vice-chancellorship under [+ nsdap_chancellor +], and [+ nsdap_leader +], through Göring, makes it clear he is ready to offer major concessions in a cabinet led by him.
+この日の協議が終わるまでに、一点について合意が形成された。シュライヒャーは辞任しなければならない。暗黙の取引が形を取り、パーペンは[+ nsdap_chancellor +]の下で副首相を受け入れる意思を示し、[+ nsdap_leader +]はゲーリングを通じ、自らが率いる内閣で大幅な譲歩を行う用意があると明確にした。

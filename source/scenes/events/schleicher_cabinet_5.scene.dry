@@ -1,5 +1,5 @@
-title: Schleicher Concedes
-subtitle: The chancellor has all but given up attempts to stay in power.
+title: シュライヒャーの敗北受諾
+subtitle: 首相は政権維持の試みをほぼ断念した。
 view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode and not constructive_schleicher
 new-page: true
 tags: event
@@ -18,47 +18,47 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Schleicher Concedes
+= シュライヒャーの敗北受諾
 
-Schleicher, having willfully avoided any serious effort to preserve his chancellorship—for reasons known only to himself—has now resigned himself to the inevitable loss of a position he never truly desired.
+本人にしか分からない理由から首相職を守る真剣な努力を意図的に避けてきたシュライヒャーは、心から望んだことのない地位を失う避けがたい結末を今や受け入れている。
 
-In what is likely his final cabinet meeting, he informs his ministers that he will request a decree to dissolve the Reichstag, as a no-confidence vote is now inevitable. He fully expects his request to be denied and is prepared to submit both his and the cabinet's resignation.
+おそらく最後となる閣議で、不信任投票はもはや避けられないとして、国会解散の大統領令を要請すると閣僚へ伝えた。要請が拒否されることを十分予期し、自身と内閣の辞表を提出する用意も整えている。
 
-In his final days, he turns his focus to opposing a Papen restoration, even going so far as to express a preference for a [+ nsdap_chancellor +] government—believing, perhaps naively, that he might retain his post as Defense Minister under such an arrangement.
+最後の日々、彼はパーペン復権の阻止に力を注ぎ、[+ nsdap_chancellor +]政権の方がよいとまで口にした。そのような政権でも自分は国防相に留まれると、おそらくは甘く考えているのだ。
 
-- @schleicher_2: Schleicher meets with President Hindenburg, perhaps for the last time.
+- @schleicher_2: シュライヒャーは、おそらく最後となるヒンデンブルク大統領との会談に臨む。
 
 @schleicher_2
 
-Schleicher lays out four scenarios before the President:
+シュライヒャーは大統領に四つの構想を示す。
 
-1. A [+ nsdap_chancellor +] cabinet supported by the Reichstag—unlikely.
+1. 国会に支持される[+ nsdap_chancellor +]内閣――可能性は低い。
 
-2. A presidential cabinet led by [+ nsdap_chancellor +]—even more implausible.
+2. [+ nsdap_chancellor +]率いる大統領内閣――さらに非現実的である。
 
-3. His own cabinet continuing under presidential emergency powers—his recommendation.
+3. 大統領緊急権の下で自身の内閣を存続させる――彼の推奨案である。
 
-4. A disastrous cabinet led by Papen and Hugenberg—likely to provoke civil war.
+4. パーペンとフーゲンベルク率いる破滅的な内閣――内戦を引き起こしかねない。
 
-He does not request a postponement of elections this time—only a commitment from Hindenburg to dissolve the chamber upon reconvening.
+今回は選挙延期を求めず、国会再開と同時に解散するというヒンデンブルクの確約だけを求めた。
 
-He is denied. Hindenburg acknowledges Schleicher’s efforts to win over the <span style="color: #7A3C00;">Nazis</span>, but with that effort having failed, the President declares it time to explore “another possibility.”
+要請は拒否された。ヒンデンブルクは<span style="color: #7A3C00;">ナチ党</span>を取り込もうとしたシュライヒャーの努力を認めたが、それが失敗した以上、「別の可能性」を探る時だと宣言した。
 
 - @schleicher_3
 
 @schleicher_3
-title: Schleicher resigns.
+title: シュライヒャーが辞任する。
 
-Schleicher returns to his waiting ministers and relays the outcome. An announcement of his resignation—prepared weeks in advance—is released to the press.
+シュライヒャーは待機する閣僚のもとへ戻り、結果を伝えた。数週間前から用意されていた辞任声明が報道機関へ発表される。
 
-At this stage, the options have narrowed to two: a return of Papen, or the ascension of [+ nsdap_chancellor +]. Both promise disaster for Germany—and the latter, disaster for all of humanity.
+この段階で選択肢は二つに絞られた。パーペンの復帰か、[+ nsdap_chancellor +]の登壇である。どちらもドイツに災厄をもたらし、後者は全人類に災厄をもたらすだろう。
 
 - @schleicher_4
 
 @schleicher_4
-title: The cabinet's last order of business.
+title: 内閣最後の案件。
 on-arrival: unemployed -= 2; economic_growth += 1; inflation += 2; schleicher_approval += 1
 
-After weeks of delay, Gereke finally presents his public works program to the cabinet. Though too late to save Schleicher’s tenure, it is approved by the chancellor and signed by Hindenburg without objection. The plan allocates half a billion marks to infrastructure projects across the Reich.
+数週間の遅延を経て、ゲーレケはついに公共事業計画を閣議へ提出した。シュライヒャーの在任を救うには遅すぎたが、首相は承認し、ヒンデンブルクも異議なく署名した。計画はライヒ全土の社会基盤事業に5億マルクを割り当てる。
 
-In the coming months, as millions of unemployed Germans return to work, it is not Schleicher, but his successor, who will reap the political rewards.
+今後数か月で何百万人ものドイツ人失業者が職場へ戻るが、その政治的利益を得るのはシュライヒャーではなく後継者である。

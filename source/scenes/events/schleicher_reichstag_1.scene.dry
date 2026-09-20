@@ -1,5 +1,5 @@
-title: The Reichstag Reconvenes
-subtitle: Schleicher's first test has come.
+title: 国会の再開
+subtitle: シュライヒャーに最初の試練が訪れた。
 view-if: chancellor = "Schleicher" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: reichstag_rubicon = 1; reichstag_schleicher_seen = 1
 new-page: true
@@ -19,26 +19,26 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Reichstag Reconvenes
+= 国会の再開
 
-Schleicher’s first test with the Reichstag comes immediately after his appointment, and he's expected to lose by a wide margin. To head off defeat, he offered Gregor Strasser of the <span style="color: #7A3C00;">**NSDAP**</span> the vice chancellorship and control of Prussia, hoping Strasser could persuade the party to tolerate his government. However, [+ nsdap_leader +] would only accept the obedient Göring as leader.
+就任直後、シュライヒャーは国会で最初の試練を迎え、大差で敗れると予想されている。敗北を避けるため、<span style="color: #7A3C00;">**NSDAP**</span>のグレゴール・シュトラッサーに副首相職とプロイセンの支配権を提示し、党に政権を閣外から容認させるよう求めた。しかし[+ nsdap_leader +]は、従順なゲーリングを指導者とする場合しか受け入れようとしなかった。
 
-Nonetheless, despite the <span style="color: #7A3C00;">**NSDAP**</span>’s uncompromising stance, they are seeking a respite—pushing for an early holiday recess and delaying any immediate showdown with the newly appointed cabinet.
+それでも<span style="color: #7A3C00;">**NSDAP**</span>は強硬姿勢を崩さない一方、休息も求めている。休暇休会を早め、新たに発足した内閣との即時対決を先送りしようとしているのだ。
 
 - @reichstag
 
 @reichstag
-title: The <span style="color: #700000;">**Communists**</span> put forth a motion of no confidence.
+title: <span style="color: #700000;">**共産主義者**</span>が不信任動議を提出する。
 on-arrival: pro_republic += 5
 
-The motion is defeated! In a surprise to the public, the <span style="color: #700000;">**Communist**</span> proposal to prioritize a no-confidence vote is voted down—thanks to support from the <span style="color: #7A3C00;">Nazis</span>. But this is no act of reconciliation; it’s certainly not the toleration Schleicher deludes himself into believing stems from his connections with Strasser.
+動議は否決された！ 国民が驚くなか、不信任投票を優先する<span style="color: #700000;">**共産党**</span>の提案は、<span style="color: #7A3C00;">ナチ党</span>の助力によって退けられた。しかし、これは和解の意思表示ではない。シュライヒャーはシュトラッサーとの関係による閣外協力だと思い込んでいるが、断じてそうではない。
 
-In any case, after clearing a few remaining bills, the chamber agrees to a holiday recess of indefinite duration.
+いずれにせよ、残る少数の法案を処理した後、議会は期限を定めない休暇休会に入ることで合意した。
 
 - @reichstag_2
 
 @reichstag_2
-title: Papen's decree on wages is repealed!
-on-arrival: workers_kpd -= 4; unemployed_kpd -= 4; workers_z += 2; workers_spd += 2; unemployed_spd += 4; pro_republic += 3; reichstag_break = 1; reichstag_rubicon = 0; oskar_goal = "Scheme against Schleicher"; papen_goal = "Scheme against Schleicher"; schleicher_approval += 1
+title: パーペンの賃金令が廃止される！
+on-arrival: workers_kpd -= 4; unemployed_kpd -= 4; workers_z += 2; workers_spd += 2; unemployed_spd += 4; pro_republic += 3; reichstag_break = 1; reichstag_rubicon = 0; oskar_goal = "シュライヒャー失脚を画策する"; papen_goal = "シュライヒャー失脚を画策する"; schleicher_approval += 1
 
-Schleicher has given his consent for the Reichstag to repeal one of Papen's more egregious decrees that had particulary offended the labor unions, as part of his prior promise and to calm their fury against the government. 
+シュライヒャーは以前の約束を果たし、政府に対する労働組合の憤激を和らげるため、組合をとりわけ激怒させたパーペンの悪名高い大統領令の一つを国会が廃止することに同意した。

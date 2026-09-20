@@ -1,4 +1,4 @@
-title: Republican Coordination
+title: 共和派の連携
 new-page: true
 is-card: true
 view-if: rubicon and weimar_rally and rb_stay and weimar_rally_timer <= 0 and z_relation >= 50 and (ddp_relation > 50 or lvp_relation >= 40)
@@ -6,34 +6,34 @@ on-arrival: month_actions += 1; weimar_rally_timer += 6
 card-image: img/weimar_coalition_3.jpg
 tags: party_affairs
 
-= Republican Coordination
+= 共和派の連携
 
-Thanks to our historically strong ties with the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition parties, they have once again rallied to defend the republic we helped establish. The *Deutscher Republikanischer Reichsbund* (German Republican Reich League), once a non-partisan alliance of figures from all three parties, has now been restructured into an active political organization—intended to complement the efforts of the Reichsbanner.
+<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>連合諸党との歴史的に強い結びつきにより、各党はわれわれが樹立に寄与した共和国を守るため再び結集した。かつて三党の人物による超党派同盟だった「ドイツ共和主義全国同盟」は、国旗団の活動を補完する積極的な政治組織へ再編された。
 
-Membership has surged, and fresh funding has arrived from all three coalition parties. The question now is: what will we do with control of this new organization?
+会員は急増し、連合三党から新たな資金も届いている。問題は、この新組織を掌握して何を行うかである。
 
-- @nazi: Focus attacks on the <span style="color: #7A3C00;">Nazis</span>—currently the greatest threat to Germany.
-- @rally: Conduct joint rallies and deepen electoral cooperation between the parties.
-- @republic: Launch a mass propaganda campaign in support of the republic and in opposition to <span style="color: #808080;">dictatorship</span>.
-- @relation: Strengthen ties with the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition parties.
+- @nazi: 現在ドイツ最大の脅威である<span style="color: #7A3C00;">ナチ</span>への攻撃に集中する。
+- @rally: 合同集会を開催し、各党の選挙協力を深める。
+- @republic: 共和国を支持し、<span style="color: #808080;">独裁</span>に反対する大規模宣伝運動を行う。
+- @relation: <span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>連合諸党との関係を強化する。
 - @easy_discard
 
 @nazi
 on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; catholics_nsdap -= 2
 
-The organization’s main effort is to steer people away from the allure of the <span style="color: #7A3C00;">Nazis</span> and expose the contradictions and demagoguery inherent in their politics.
+組織の活動を、国民を<span style="color: #7A3C00;">ナチ</span>の誘惑から遠ざけ、その政治に内在する矛盾と扇動を暴くことへ集中させた。
 
 @rally
 on-arrival: workers_spd += (pro_republic / 15); new_middle_spd += (pro_republic / 15); old_middle_spd += (pro_republic / 20); rural_spd += (pro_republic / 20); workers_ddp += (pro_republic / 40); new_middle_ddp += (pro_republic / 20); old_middle_ddp += (pro_republic / 20); rural_ddp += (pro_republic / 30); workers_lvp += (pro_republic / 30); new_middle_lvp += (pro_republic / 15); old_middle_lvp += (pro_republic / 15); rural_lvp += (pro_republic / 25); workers_z += (pro_republic / 50); new_middle_z += (pro_republic / 40); old_middle_z += (pro_republic / 40); rural_z += (pro_republic / 40); catholics_z += (pro_republic / 15); peoples_party_support += 1; neorevisionist_strength += 5; left_dissent += 3; kpd_relation -= 5
 
-We rally alongside politicians from the <span style="color: #000000;">Center</span> and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?], united in our commitment to the Republic.
+共和国への献身で団結し、<span style="color: #000000;">中央党</span>および[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]の政治家と共に集会を開いた。
 
 @republic
 on-arrival: pro_republic += 6
 
-The <span style="color: #7A3C00;">Nazi</span> and <span style="color: #700000;">Communist</span> propaganda machines have poisoned the public’s view of the Republic. Our goal is to counter their narrative with propaganda of our own.
+<span style="color: #7A3C00;">ナチ</span>と<span style="color: #700000;">共産主義者</span>の宣伝機構は、共和国に対する国民の見方を毒してきた。われわれ独自の宣伝によって彼らの物語に対抗する。
 
 @relation
 on-arrival: z_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); ddp_left += 1; lvp_left += 1
 
-We’ve been able to strengthen our relations with the involved parties through the participation of figures like Heuss and Wirth—members of the [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] and the <span style="color: #000000;">Center Party</span>, respectively.
+[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]のホイスや<span style="color: #000000;">中央党</span>のヴィルトらが参加したことで、関係諸党との結びつきを強化できた。

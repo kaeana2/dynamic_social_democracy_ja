@@ -1,27 +1,27 @@
-title: Schleicher and the Trade Unions
-subtitle: The General meets with the ADGB once more.
+title: シュライヒャーと労働組合
+subtitle: 将軍が再びADGBと会談する。
 view-if: chancellor == "Papen" and papen_time == 24 and papen_post_2 and red_general_unlock
 new-page: true
 tags: event
 max-visits: 1
 face-image: img/portraits/schleicher.jpg
 
-= Schleicher and the Trade Unions
+= シュライヒャーと労働組合
 
-A few months back, a line of communication was opened between the General and the ADGB's leadership, with the understanding of further meetings.
+数か月前、今後も会談を続けるという了解の下、将軍とADGB指導部の連絡経路が開かれた。
 
-Following the results of the last election, von Schleicher has reached out to the various <span style="color: #000000;">Christian</span> and <span style="color: #c00000;">socialist</span> unions once again, presumably in an attempt to broker a political truce.
+前回の選挙結果を受け、フォン・シュライヒャーは<span style="color: #000000;">キリスト教系</span>と<span style="color: #c00000;">社会主義系</span>の各労組に再び接触した。おそらく政治的休戦を取り付けるためだろう。
 
 - @schleicher
 
 @schleicher
-title: Hear what the general has to say.
+title: 将軍の話を聞こう。
 on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1
 
-ADGB leaders Theodor Leipart and Wilhelm Eggert have met with Chancellor-designate Schleicher, who promised to rescind Papen’s most offensive emergency wage decrees, launch a public works program, and abandon the former chancellor’s plans to impose his “New State” via presidential decree.
+ADGB指導者テオドール・ライパルトとヴィルヘルム・エッゲルトが、次期首相シュライヒャーと会談した。シュライヒャーは、パーペンの賃金に関する緊急令のうち特に反発の強いものを撤回し、公共事業計画を始めると約束した。また、大統領令によって「新国家」を押し付けようとした前首相の構想も放棄するという。
 
-We are pleasantly surprised by these concessions, and Schleicher has earned some goodwill among the union leadership. Still, deep distrust remains—after all, he was the one controlling Papen when those very decrees and the unconstitutional postponement of elections were proposed.
+この譲歩はうれしい驚きであり、シュライヒャーは労組指導部に一定の好感を与えた。それでも深い不信は残っている。あの緊急令や違憲の選挙延期が提案された際、パーペンを操っていたのは彼なのだから。
 
-> *"Republic or monarchy is not the question now, but rather what should this republic look like."*
+> *「今の問題は共和制か君主制かではなく、この共和国をどのようなものにすべきかである。」*
 
- - Kurt von Schleicher
+ - クルト・フォン・シュライヒャー

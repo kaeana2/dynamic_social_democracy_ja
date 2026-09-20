@@ -1,4 +1,4 @@
-title: The Death of Gustav Stresemann
+title: グスタフ・シュトレーゼマンの死
 view-if: year = 1929 and month >= 10 and not lvp_formed
 frequency: 1000
 max-visits: 1
@@ -8,10 +8,10 @@ priority: -1
 face-image: img/portraits/Stresemann.jpg
 new-page: true
 
-= The Death of Gustav Stresemann
+= グスタフ・シュトレーゼマンの死
 
-Gustav Stresemann, leader of the <span style="color: #C0A054;">**DVP**</span> and longtime foreign minister, has died at the tragically young age of 51. He was the primary force driving his party to support democracy; without him, the democratic forces in the Republic will be so much weaker.
+<span style="color: #C0A054;">**DVP**</span>党首で、長年にわたり外相を務めたグスタフ・シュトレーゼマンが、わずか51歳で早世した。彼こそが党を民主主義支持へ導く最大の原動力であった。彼を失った共和国の民主勢力は、大きく弱体化するだろう。
 
-A hole has been left within the liberal movement at the worse possible time, and it is likely that the industrial wing of the party will complete their takeover and subsequently end cooperation with us. 
+最悪の時期に自由主義運動へ大きな空白が生じた。党内の産業界派が支配を固め、やがて我々との協力を打ち切る可能性が高い。
 
-[? if dvp_leader == "Scholz": Ernst Scholz, his arch enemy on the right wing has succeeded him as leader of the <span style="color: #C0A054;">**DVP**</span>, and leadership election will be conducted in two months.?][? if dvp_leader == "Curtius": Julius Curtius, his successor in foreign affairs, and ally in the left wing of the party, has succeeded him as leader of the <span style="color: #C0A054;">**DVP**</span>, and leadership election will be conducted in two months.?]
+[? if dvp_leader == "Scholz": 右派に属する宿敵エルンスト・ショルツが<span style="color: #C0A054;">**DVP**</span>党首の座を継いだ。党首選挙は2か月後に行われる。?][? if dvp_leader == "Curtius": 外相の後継者であり、党内左派の盟友でもあるユリウス・クルティウスが<span style="color: #C0A054;">**DVP**</span>党首の座を継いだ。党首選挙は2か月後に行われる。?]

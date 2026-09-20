@@ -1,5 +1,5 @@
-title: Goerdeler I Survives?
-subtitle: Hugenberg saves the cabinet?
+title: 第1次ゲルデラー内閣が存続？
+subtitle: フーゲンベルクが内閣を救うのか？
 view-if: chancellor = "Goerdeler" and goerdeler_pre_time >= 2 and goerdeler_right_coalition >= 50
 on-arrival: finance_minister_party = "I"; finance_minister_party = "DNVP"; agriculture_minister_party = "DNVP"
 new-page: true
@@ -7,28 +7,28 @@ tags: event
 max-visits: 1
 face-image: img/portraits/AlfredHugenberg.jpg
 
-= Goerdeler I Survives
+= 第1次ゲルデラー内閣の存続
 
-A parliamentary coalition composed of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and all parties to its right—excluding the <span style="color: #7A3C00;">**NSDAP**</span>—somehow holds a majority. Hugenberg, emboldened by an electoral boost from an influx of more "reactionary" <span style="color: #7A3C00;">Nazi</span> voters, has once again grown overconfident, now believing he no longer needs the <span style="color: #7A3C00;">**NSDAP**</span> to enter government.
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と、その右側にある<span style="color: #7A3C00;">**NSDAP**</span>以外の全政党からなる議会連立が、どういうわけか過半数を握っている。より「反動的」な<span style="color: #7A3C00;">ナチ党</span>支持者の流入で選挙勢力を増したフーゲンベルクはまたも自信過剰となり、もはや<span style="color: #7A3C00;">**NSDAP**</span>なしでも入閣できると考えている。
 
-He assumes that [+ nsdap_leader +], increasingly pressured by senior figures like Strasser and Frick, will eventually cave to preserve party unity and join the government on his terms. In the meantime, Hugenberg has taken the first step—accepting appointments as Vice-Chancellor and Finance Minister. Martin Schiele has been removed, replaced by the more conservative Kalckreuth.
+シュトラッサーやフリックら幹部から圧力を強められる[+ nsdap_leader +]は、やがて党の結束を守るため屈服し、自分の条件で入閣すると踏んでいる。その間にフーゲンベルクは第一歩を踏み出し、副首相兼財務相への就任を受け入れた。マルティン・シーレは更迭され、より保守的なカルクロイトが後任となった。
 
 - @goerdeler
 
 @goerdeler
-title: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] refuses to work with Hugenberg!
+title: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]がフーゲンベルクとの協力を拒否！
 face-image: img/portraits/BrüningHeinrich.jpg
 
-As expected, the majority of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] refuses to entertain the idea of governing alongside a figure like Hugenberg—especially after his remarks on <span class="tooltip-text" title="good game">the campaign trail</span> calling for the outright abolition of welfare. Furthermore, it is unlikely that Goerdeler would stop this, as he himself has proposed gutting unemployment insurance to cut costs.
+予想どおり、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]の大多数はフーゲンベルクのような人物との連立を検討することさえ拒む。とりわけ彼が<span class="tooltip-text" title="お見事">選挙運動中</span>に福祉の全面廃止を唱えた後ではなおさらである。さらに、ゲルデラー自身も費用削減のため失業保険を骨抜きにする案を示しており、これを止める見込みはない。
 
-Even Brüning, the de-facto leader of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s parliamentary delegation believes that their planned austerity has gone too far. 
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]議員団の事実上の指導者ブリューニングでさえ、彼らの緊縮計画は行きすぎだと考えている。
 
-Yet Hugenberg and Goerdeler refuse to accept the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s demands for economic policy guarantees. Once again, a deadlock has taken hold.
+それでもフーゲンベルクとゲルデラーは、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が要求する経済政策上の保証を拒む。交渉はまたしても行き詰まった。
 
 - @goerdeler_2
 
 @goerdeler_2
-title: The Reichstag is dissolved.
+title: 国会が解散される。
 on-arrival: {!
 Q.next_election_month = Q.month + 2;
 Q.next_election_time = Q.time + 2;
@@ -40,6 +40,6 @@ if (Q.next_election_month > 12) {
 }
 !}
 
-Before the Reichstag was to convene, Goerdeler presents a decree to dissolve it. He expects that, with the exodus of voters from the <span style="color: #7A3C00;">**NSDAP**</span> and the certainty of their collapse next election, they will be forced to become more sensible. 
+国会の開会を前に、ゲルデラーは解散令を提示する。<span style="color: #7A3C00;">**NSDAP**</span>から有権者が離れ、次の選挙での崩壊が確実になれば、彼らも現実的にならざるを得ないと期待しているのだ。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新選挙は[+ next_election_year +]年[+ next_election_month : month +]に設定された。

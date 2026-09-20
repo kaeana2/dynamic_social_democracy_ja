@@ -1,5 +1,5 @@
-title: Lausanne Conference Concludes
-subtitle: Germany's reparations payments are virtually abolished!
+title: ローザンヌ会議、閉幕
+subtitle: ドイツの賠償支払いは事実上廃止された！
 view-if: chancellor == "Papen" and papen_time == 5 and not reparations_resolved
 new-page: true
 max-visits: 1
@@ -17,16 +17,16 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Lausanne Conference Concludes
+= ローザンヌ会議、閉幕
 
-After weeks of difficult negotiations with the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span>, the German delegation at the Lausanne Conference has finally secured a result—though not the one it had hoped for. When talks hit a snag, Papen made a dramatic offer: a military alliance with <span style="color: #002654;">France</span>, sealed by an exchange of general staff officers. This only outraged the <span style="color: #C8102E;">British</span> and deepened <span style="color: #002654;">French</span> mistrust.
+<span style="color: #0A3161;">西欧</span><span style="color: #C8102E;">連合国</span>との困難な交渉を数週間続けた末、ローザンヌ会議のドイツ代表団はついに成果を得た。ただし、望んでいたものではない。協議が行き詰まると、パーペンは参謀将校の交換を伴う<span style="color: #002654;">フランス</span>との軍事同盟という劇的な提案を行った。これは<span style="color: #C8102E;">イギリス</span>を激怒させ、<span style="color: #002654;">フランス</span>の不信を深めただけだった。
 
-<span style="color: #C8102E;">British</span> Prime Minister Ramsay MacDonald tried to salvage the negotiations by proposing the repeal of disarmament clauses. But <span style="color: #002654;">French</span> Prime Minister Édouard Herriot rejected this outright—refusing any political discussions and treating Germany’s offer as an admission it could still pay. Backed into a corner, Papen’s delegation was left with no option but to offer a final payment of three billion marks—in exchange for nothing.
+<span style="color: #C8102E;">イギリス</span>首相ラムゼイ・マクドナルドは、軍備制限条項の廃止を提案して交渉を救おうとした。しかし<span style="color: #002654;">フランス</span>首相エドゥアール・エリオはこれを断固拒否した。政治問題の協議を拒み、ドイツの提案を支払能力がなお存在するとの自認として扱ったのである。追い詰められたパーペンの代表団には、見返りなしで30億マルクの最終支払いを申し出るほか選択肢がなかった。
 
 - @lausanne
 
 @lausanne
-title: At least we walked away with something.
+title: 少なくとも手ぶらでは終わらなかった。
 on-arrival: {!
 Q.reparations = -2;
 Q.budget += 1;
@@ -48,8 +48,8 @@ Q.old_middle_nsdap -= 2;
 Q.rural_nsdap -= 2;
 !}
 
-Germany’s reparations burden has been slashed by 90%, with no payments due for another three years. This eases the strain on the national budget and gives the government new room to maneuver on monetary and fiscal policy.
+ドイツの賠償負担は90％削減され、今後3年間は支払いも不要となった。国家予算への圧力が和らぎ、政府は金融・財政政策で新たな裁量を得た。
 
-Unfortunately for Papen, this does little to ease the near-universal hatred of his government. The <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> has denounced the treaty as a failure, outraged by his inability to secure any political or military concessions. Meanwhile, the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> parties and press have handed the credit to Brüning, who laid the groundwork for the conference in the first place. This development would've certainly been more impactful if Brüning had remained in office.
+パーペンにとって不幸なことに、この成果も政府へのほぼ普遍的な憎悪を和らげる役には立たない。政治的・軍事的譲歩を何一つ獲得できなかったことに憤る<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>は、条約を失敗だと非難した。一方、<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>の諸政党と新聞は、そもそも会議の基礎を築いたブリューニングの功績としている。彼が政権にとどまっていれば、この進展は間違いなくさらに大きな効果を持っただろう。
 
-Papen’s tarnished reputation among the <span style="color: #0A3161;">Western</span> <span style="color: #C8102E;">Allies</span> has severely undermined Germany’s standing at the Geneva Disarmament Conference. With many now convinced that militarism has triumphed in Berlin, Schleicher’s efforts to negotiate military parity are likely to face steep resistance.
+<span style="color: #0A3161;">西欧</span><span style="color: #C8102E;">連合国</span>の間でパーペンの評判が傷ついたため、ジュネーヴ軍縮会議におけるドイツの立場は著しく弱まった。ベルリンでは軍国主義が勝利したと多くの国が確信する今、軍備平等権を求めるシュライヒャーの交渉は強い抵抗に直面するだろう。

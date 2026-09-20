@@ -1,32 +1,32 @@
-title: <span style="color: #700000;">**KPD**</span> Party Conference
-subtitle: The <span style="color: #700000;">**KPD**</span> chooses their new central committee - will the Wittorf Affair have an influence on their choice?
+title: <span style="color: #700000;">**KPD**</span>党大会
+subtitle: <span style="color: #700000;">**KPD**</span>が新中央委員会を選出する――ヴィットルフ事件は人事を左右するか？
 new-page: true
 view-if: kpd_relation >= 50 and wittorf_soviet_union = 1 and year = 1929 and month >= 6 and month <= 8
 max-visits: 1
 on-arrival: kpd_party_conference_seen = 1
 tags: event
 
-= <span style="color: #700000;">**KPD**</span> Party Conference
+= <span style="color: #700000;">**KPD**</span>党大会
 
-Now is the <span style="color: #700000;">**KPD**</span>'s national party conference, where they will choose their new leadership. The shadow of the Wittorf Affair hangs over it. On one hand are the hardline supporters of Thälmann, who support a "<span style="color: #c00000;">social</span> <span style="color: #7A3C00;">fascists</span>" policy that places the <span style="color: #c00000;">**SPD**</span> as equivalent to the <span style="color: #7A3C00;">Nazis</span>. On the other hand is the "Conciliator" faction, who support a more cooperative policy towards the <span style="color: #c00000;">**SPD**</span>.
+<span style="color: #700000;">**KPD**</span>の全国党大会が開かれ、新指導部が選出される。大会にはヴィットルフ事件の影が落ちている。一方には、<span style="color: #c00000;">**SPD**</span>を<span style="color: #7A3C00;">ナチ</span>と同列に置く「<span style="color: #c00000;">社会</span><span style="color: #7A3C00;">ファシズム</span>」論を支持する、テールマン派の強硬派がいる。他方には、<span style="color: #c00000;">**SPD**</span>との協調路線を唱える「調停派」がいる。
 
-After our discussion with the <span style="color: #940000;">Soviets</span>, we are inclined to believe that <span style="color: #8B0000;">Stalin</span> is at least open to the Conciliators. In order to affect the <span style="color: #700000;">**KPD**</span>'s leadership elections, we have to influence both the <span style="color: #D50000;">Comintern</span> leaders as as well as the <span style="color: #700000;">**KPD**</span> membership.
+<span style="color: #940000;">ソビエト側</span>との協議を経て、我々は<span style="color: #8B0000;">スターリン</span>も少なくとも調停派を受け入れる余地があると見ている。<span style="color: #700000;">**KPD**</span>の指導部選挙を左右するには、<span style="color: #D50000;">コミンテルン</span>指導部と<span style="color: #700000;">**KPD**</span>党員の双方に働きかけねばならない。
 
 - @conciliator_success
 - @conciliator_fail
 
 
 @conciliator_success
-title: The Conciliators are the new leadership of the <span style="color: #700000;">**KPD**</span>.
+title: 調停派が<span style="color: #700000;">**KPD**</span>の新指導部となる。
 choose-if: (levi_advisor or rosenfeld_advisor) and (left_strength >= reformist_strength) and (kpd_relation >= 50) 
-unavailable-subtitle: [?  if not levi_advisor and not rosenfeld_advisor: Our party leadership is not left-wing enough. ?] [? if left_strength < reformist_strength: The <span style="color: #D50000;">Comintern</span> doubts our commitment to <span style="color: #c00000;">socialism</span>. ?]
+unavailable-subtitle: [?  if not levi_advisor and not rosenfeld_advisor: 我々の党指導部は十分に左派的ではない。 ?] [? if left_strength < reformist_strength: <span style="color: #D50000;">コミンテルン</span>は、我々の<span style="color: #c00000;">社会主義</span>への献身を疑っている。 ?]
 on-arrival: kpd_leader = "Conciliators"; communist_coalition += 3; kpd_relation += 10*(1-dissent); left_strength += 5; left_dissent -= 8; pro_republic += (kpd_votes / 2)
 achievement: versohnler
 
-With our support, the Conciliators have won the leadership contest! The new leadership is a group of Conciliators, including Arthur Ewert, Hugo Eberlein, and Ernst Meyer. Thälmann remains, but largely as a figurehead only, it seems. We hope that the new leadership will be more inclined towards cooperation.
+我々の支援により、調停派が指導部選挙に勝利した！ アルトゥール・エーヴェルト、フーゴー・エーベルライン、エルンスト・マイヤーら調停派が新指導部を構成する。テールマンも残留するが、ほぼ名目的な存在にすぎないようだ。新指導部が協調路線へ傾くことを期待しよう。
 
 
 @conciliator_fail
-title: Thälmann retains his leadership position.
+title: テールマンが指導的地位を維持する。
 
-Unfortunately, we could not influence the <span style="color: #700000;">**KPD**</span> leadership election against the hardliners. Thälmann quickly moves to consolidate absolute leadership, expelling or exiling his opponents.
+残念ながら、強硬派に抗して<span style="color: #700000;">**KPD**</span>の指導部選挙を左右することはできなかった。テールマンは直ちに絶対的な指導権を固め、反対派を除名または国外追放に追い込む。

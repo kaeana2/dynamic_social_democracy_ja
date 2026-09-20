@@ -1,4 +1,4 @@
-title: Relations with the Red General
+title: 赤い将軍との関係
 on-arrival: month_actions += 1; red_general_timer += 4 if not schleicher_spd_adopted; red_general_timer += 6 if schleicher_spd_adopted; red_general_timer -= 2 if chancellor == "Schleicher"
 view-if: (rubicon and red_general_unlock and red_general_timer <= 0 and not schleicher_fight) and not schleicher_dead
 card-image: img/portraits/schleicher.jpg
@@ -7,127 +7,127 @@ new-page: true
 tags: govt_affairs
 go-to: schleicher_menu if not schleicher_spd_adopted; schleicher_spd_established if schleicher_spd_adopted
 
-= Relations with the Red General
+= 赤い将軍との関係
 
-[? if chancellor_party == "SPD": While the <span style="color: #c00000;">**SPD**</span> remains in full control of the government for the time being, we must not get complacent. Kurt von Schleicher certainly has more tricks up his sleeve — it is too early to ignore his ability to further influence the environment. ?][? if chancellor_party != "SPD": While the <span style="color: #c00000;">**SPD**</span> remains steadfast in its commitment to a united front against the incumbent <span style="color: #808080;">reactionary</span> government, the ADGB, our union, has shown some openness to an accommodation with General Kurt von Schleicher. He has also shown interest in winning over the union through his support for public works. ?]
+[? if chancellor_party == "SPD": 当面は<span style="color: #c00000;">**SPD**</span>が政府を完全に掌握しているが、油断はできない。クルト・フォン・シュライヒャーにはまだ策があり、情勢へ影響する力を無視するには早すぎる。 ?][? if chancellor_party != "SPD": <span style="color: #c00000;">**SPD**</span>は現<span style="color: #808080;">反動</span>政府に対する統一戦線を断固として堅持しているが、傘下労組ADGBはクルト・フォン・シュライヒャー将軍との妥協に一定の姿勢を示した。将軍も公共事業への支持を通じ、労組を取り込もうとしている。 ?]
 
 @schleicher_menu
 
-- @spd_schleicher_adopted: Adopt a policy of cooperation with the Red General!
-- @convince_spd_schleicher: Push the party toward a more cooperative line with von Schleicher.
-- @united_front: Reiterate our opposition against the <span style="color: #808080;">reactionaries</span>.
-- @united_front_majority: Reiterate our opposition against the <span style="color: #808080;">reactionaries</span>.
+- @spd_schleicher_adopted: 赤い将軍との協力方針を採用する！
+- @convince_spd_schleicher: フォン・シュライヒャーとの協力へ党を動かす。
+- @united_front: <span style="color: #808080;">反動派</span>への反対を改めて表明する。
+- @united_front_majority: <span style="color: #808080;">反動派</span>への反対を改めて表明する。
 - @easy_discard
 - @cancel_advisor_action
 
 @spd_schleicher_adopted
-subtitle: The unions have firmly decided, but convincing the party is a whole another matter.
-unavailable-subtitle: The pro-Schleicher factions aren't strong enough to have an impact on ADGB policy.
+subtitle: 労組の意思は固まったが、党の説得はまったく別問題である。
+unavailable-subtitle: 親シュライヒャー派はADGBの方針へ影響するほど強くない。
 view-if: schleicher_spd_support >= 10
 choose-if: labor_strength + reformist_strength + social_patriot_strength >= (center_strength*1.5) + left_strength
 on-arrival: schleicher_spd_adopted = 1; schleicher_spd_r += 1 if schleicher_spd_r < 5; center_dissent += 5; left_dissent += 10; labor_strength += 10; reformist_strength += 5; schleicher_approval += 2
 max-visits: 1
 
-The ADGB leadership has now officially—although only in private—taken a stance in favor of cooperating with the "Red General." The union will attempt to leverage its influence over the <span style="color: #c00000;">**SPD**</span> to push our hesitant party leadership toward adopting the same position.
+ADGB指導部は非公開ながら正式に「赤い将軍」との協力を支持した。労組は<span style="color: #c00000;">**SPD**</span>への影響力を使い、ためらう党指導部にも同じ立場を採らせようとする。
 
-Gradually, a shift in opinion is becoming visible within the party. Otto Braun has now come out in support of making deals with the General.
+党内でも徐々に意見の変化が見え始めた。オットー・ブラウンは将軍との取引を公然と支持している。
 
 @convince_spd_schleicher
-subtitle: [? if chancellor == "Papen": It's almost impossible to argue to the party to pursue this line, at least with Papen as chancellor. ?][? if chancellor == "Schleicher": Cooperation with the General himself is not unthinkable, with his concessions made toward the unions. ?]
-unavailable-subtitle: The pro-Schleicher factions aren't strong enough to have an impact on ADGB policy.
+subtitle: [? if chancellor == "Papen": 少なくともパーペンが首相である限り、この方針を党に説くのはほぼ不可能である。 ?][? if chancellor == "Schleicher": 労組への譲歩を考えれば、将軍本人との協力も考えられないことではない。 ?]
+unavailable-subtitle: 親シュライヒャー派はADGBの方針へ影響するほど強くない。
 view-if: schleicher_spd_support < 10
 choose-if: labor_strength + reformist_strength + social_patriot_strength >= (center_strength*1.5) + left_strength
 on-arrival: schleicher_spd_support += 3; schleicher_spd_support += 1 if wtb_adopted; schleicher_spd_support -= 1 if chancellor == "Papen"; schleicher_spd_support -= 1 if otl_prussian_coup_seen; workers_spd -= 1; unemployed_spd -= 1; workers_kpd += 1; unemployed_kpd += 1; center_dissent += 5; left_dissent += 5
 
-Slowly but surely, the ADGB leadership is beginning to warm to the idea of constructive cooperation with the so-called "Red General." However, much work remains to be done—many within the union, and the overwhelming majority of the <span style="color: #c00000;">**SPD**</span>, remain firmly opposed to cooperating with the man [? if chancellor == "Papen": propping up the widely despised Papen cabinet?][? if chancellor == "Schleicher": who now heads a widely unpopular government?]. [? if wtb_adopted: Our adoption of the WTB Plan—and Schleicher’s public support for similar public works initiatives—has modestly increased the party’s willingness to consider cooperation. ?]
+ゆっくりだが確実に、ADGB指導部は「赤い将軍」との建設的協力へ好意を持ち始めた。しかし課題は多い。労組内の多数と<span style="color: #c00000;">**SPD**</span>の圧倒的多数は、[? if chancellor == "Papen": 広く憎まれるパーペン内閣を支える人物?][? if chancellor == "Schleicher": 不人気な政府を率いる人物?]との協力に断固反対している。[? if wtb_adopted: WTB計画の採用と、同様の公共事業構想をシュライヒャーが公然と支持したことで、党内では協力を検討する姿勢がわずかに強まった。 ?]
 
-[? if otl_prussian_coup_seen: Furthermore, his role in the coup against our Prussian government has only deepened the animosity toward both him and the <span style="color: #c00000;">**SPD**</span>. ?] Rumors about our cooperation has damaged our standing among the working class.
+[? if otl_prussian_coup_seen: さらに、我々のプロイセン州政府に対するクーデターで彼が果たした役割は、彼と<span style="color: #c00000;">**SPD**</span>への敵意を深めた。 ?]協力の噂は労働者階級における我々の立場を傷つけた。
 
 @united_front
 view-if: chancellor_party != "SPD"
-subtitle: The consensus view within the <span style="color: #c00000;">**SPD**</span>: we are, afer all, a democratic party.
+subtitle: <span style="color: #c00000;">**SPD**</span>内の総意である。結局、我々は民主政党なのだ。
 on-arrival: schleicher_spd_support -= 2 if schleicher_spd_support > 0; schleicher_spd_r -= 1 if schleicher_spd_r > 0; schleicher_spd_influence -= 1 if schleicher_spd_influence > 0; workers_spd += 2; workers_kpd -= 1; left_dissent -= 5; center_dissent -= 5
 
-We continue to argue for a united opposition of the democratic parties against the unpopular [+ chancellor +] government, and win support among the people for doing so. 
+民主諸党が不人気な[+ chancellor +]政府へ共同で反対するよう訴え続け、それによって国民の支持を得た。
 
 @united_front_majority 
 view-if: chancellor_party == "SPD"
-subtitle: Given our absolute majority in the government, we have no need of cooperating with Schleicher — and can instead aim to widen the united front against those who would bring the Republic down.
+subtitle: 政府で絶対多数を持つ以上、シュライヒャーと協力する必要はない。共和国を倒そうとする者への統一戦線を広げればよい。
 on-arrival: schleicher_spd_support -= 2 if schleicher_spd_support > 0; schleicher_spd_r -= 1 if schleicher_spd_r > 0; schleicher_spd_influence -= 1 if schleicher_spd_influence > 0; workers_spd += 2; workers_kpd -= 1; left_dissent -= 5; center_dissent -= 5
 
-We continue to decry the anti-democratic opposition as ruinous to the Republic, highlighting the role chancellor [+ chancellor +] plays in stabilizing the situation. This helps our support among the people.
+反民主的な反対派は共和国を破滅させると非難し、情勢安定における[+ chancellor +]首相の役割を強調し続けた。国民の支持が高まった。
 
 @schleicher_spd_established
 
-- @schleicher_ties: Cultivate closer ties with the Red General.
-- @schleicher_distance: Distance ourselves from Schleicher.
-- @concessions: Using our influence, demand concessions on the government.
+- @schleicher_ties: 赤い将軍との関係を深める。
+- @schleicher_distance: シュライヒャーと距離を置く。
+- @concessions: 影響力を使い、政府へ譲歩を要求する。
 - @easy_discard
 
 @schleicher_ties
-subtitle: More regular meetings will be held between the two groups.
+subtitle: 双方の定期会合を増やす。
 on-arrival: schleicher_spd_r += 1; schleicher_spd_support += 1; schleicher_spd_influence += 1
 
-Regular secret meetings between the ADGB, the <span style="color: #c00000;">**SPD**</span>, and von Schleicher are being held. This will aid in reducing the mutual distrust between the party and the government.
+ADGB、<span style="color: #c00000;">**SPD**</span>、フォン・シュライヒャーの定期秘密会合が開かれている。党と政府の相互不信を和らげる助けとなる。
 
 @schleicher_distance
-subtitle: We will sideline his sympathizers.
+subtitle: 将軍の同調者を脇へ追いやる。
 on-arrival: schleicher_spd_r -= 1; schleicher_spd_support -= 2; schleicher_spd_influence -= 1; labor_dissent += 8; reformist_dissent += 8; social_patriot_dissent += 8; center_dissent -= 5; left_dissent -= 5; neorevisionist_dissent -= 5; reformist_strength -= 4; labor_strength -= 4; social_patriot_strength -= 4
 
-In recent months, Schleicher has gained significant sympathizers within the Reformist and Labor factions of the <span style="color: #c00000;">**SPD**</span>. Sidelining them would provoke Schleicher’s distrust and stir dissent within their factions affected.
+近月、シュライヒャーは<span style="color: #c00000;">**SPD**</span>の改革派と労働派で多くの同調者を得た。彼らを排除すれば将軍の不信を招き、該当派閥の不満を煽るだろう。
 
 @concessions
 view-if: chancellor == "Schleicher" and schleicher_time >= 8 and schleicher_spd_concession < 2
-subtitle: There's a limit to what we can demand, but we can look at our options.
+subtitle: 要求には限度があるが、選択肢を検討できる。
 
-[? if prussia_leader == "Schleicher": Braun demands the restoration of his government in Prussia. ?]
+[? if prussia_leader == "Schleicher": ブラウンはプロイセン州政府の復活を要求している。 ?]
 
-Labor demands the restoration of their rights and welfare.
+労働者は権利と福祉の回復を要求している。
 
-The <span style="color: #c00000;">**SPD**</span> a cabinet reshuffle.
+<span style="color: #c00000;">**SPD**</span>は内閣改造を要求している。
 
-We may only demand one, as to not push our luck.
+無理を通さないため、要求できるのは一つだけである。
 
 - @prussia
 - @labor
 - @cabinet_reshuffle
 
 @prussia
-title: Demand the reinstatement of our government in Prussia.
-subtitle: Regain control over the Prussian police and secure participation in state government.
-unavailable-subtitle: [? if schleicher_spd_r < 5: We must improve our relations with Schleicher first. ?][? if hindenburg_schleicher_r < 5: Hindenburg is extremely reluctant to give back Prussia in the hands of the <span style="color: #c00000;">socialists</span>. ?][? if not schleicher_post: Schleicher urges us to wait until the next elections. ?][? if dsu_in_gov or dsu_was_gov: Schleicher is firmly committed to keeping the[? if dsu_was_gov:&nbsp;former?] <span style="color: #7A3C00;">Nazis</span> in government. ?]
+title: プロイセンで我々の政府を復活させるよう要求する。
+subtitle: プロイセン警察の統制を取り戻し、州政府への参加を確保する。
+unavailable-subtitle: [? if schleicher_spd_r < 5: まずシュライヒャーとの関係を改善する必要がある。 ?][? if hindenburg_schleicher_r < 5: ヒンデンブルクはプロイセンを<span style="color: #c00000;">社会主義者</span>の手へ戻すことに強く反対している。 ?][? if not schleicher_post: シュライヒャーは次の選挙まで待つよう求めている。 ?][? if dsu_in_gov or dsu_was_gov: シュライヒャーは[? if dsu_was_gov:旧?]<span style="color: #7A3C00;">ナチ</span>を政権に残す決意を固めている。 ?]
 choose-if: schleicher_post and schleicher_spd_r >= 7 and hindenburg_schleicher_r >= 5 and not dsu_in_gov and not dsu_was_gov
 view-if: prussia_leader == "Schleicher"
 on-arrival: schleicher_spd_concession += 1; schleicher_spd_influence += 4; schleicher_spd_support += 2; schleicher_spd_r -= 2; prussia_returned = 1; prussia_leader = older_prussia_leader; in_weimar_coalition_prussia = 1 if pre_in_weimar_coalition_prussia; in_grand_coalition_prussia = 1 if pre_in_grand_coalition_prussia; in_minority_weimar_coalition_prussia = 1 if in_weimar_coalition_prussia and weimar_coalition_prussia < 50; in_minority_grand_coalition_prussia = 1 if in_grand_coalition_prussia and grand_coalition_prussia < 50; pro_republic += 10; workers_spd += 5; new_middle_spd += 5; unemployed_spd += 3; new_middle_ddp += 3; labor_dissent -= 15; reformist_dissent -= 15; reformist_strength += 15; left_dissent -= 15; prussian_police_loyalty += 0.3; rb_strength *= 1.1; rb_militancy *= 1.1; papen_strength += 1; schleicher_strength -= 1; hindenburg_schleicher_r -= 2; schleicher_approval += 1; nationalists_schleicher_bonus -= 2; industrialists_schleicher_bonus -= 1; republicans_schleicher_bonus += 2
 
-Despite rejecting Braun’s offer a few months ago, Schleicher has since reconsidered. With such a popular statesman on his side, his rule will gain legitimacy in the eyes of the <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span> and the public. Braun, in turn, will tirelessly advocate for a pro-Schleicher policy within the party.
+数か月前にブラウンの提案を拒絶したシュライヒャーは、その後考え直した。これほど人気のある政治家を味方につければ、<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>と国民の目に統治の正統性が増す。ブラウンも党内で親シュライヒャー方針を精力的に唱えるだろう。
 
-Now, with control over the democratic bulwark once again, we can reassert democratic oversight over the bureaucracy and the Prussian police force, reversing the purges enacted under Papen and Schleicher.
+民主主義の防壁を再び掌握し、官僚機構とプロイセン警察への民主的監督を回復して、パーペンとシュライヒャーによる粛清を覆せる。
 
 - @prussian_affairs
 - @prussian_affairs_dvp
 
 @labor
-title: Demand more concessions for the trade unions, and restoration of the German welfare system.
-subtitle: Push for higher wages, the repeal of Papen’s decrees, and the restoration of the eight-hour workday.
-unavailable-subtitle: [? if schleicher_spd_r < 5: We must improve our relations with Schleicher first. ?][? if hindenburg_schleicher_r < 3: Schleicher insists Hindenburg would block such a decree, unwilling to undo Papen’s measures. ?]
+title: 労組へのさらなる譲歩とドイツ福祉制度の回復を要求する。
+subtitle: 賃上げ、パーペン政令の廃止、8時間労働制の復活を求める。
+unavailable-subtitle: [? if schleicher_spd_r < 5: まずシュライヒャーとの関係を改善する必要がある。 ?][? if hindenburg_schleicher_r < 3: シュライヒャーは、パーペンの措置を覆したくないヒンデンブルクが政令を阻止すると主張している。 ?]
 choose-if: schleicher_spd_r >= 5 and hindenburg_schleicher_r >= 3
 view-if: not schleicher_labor
 on-arrival: schleicher_spd_concession += 1; schleicher_labor = 1; schleicher_spd_influence += 4; schleicher_spd_support += 2; schleicher_spd_r -= 2; hindenburg_schleicher_r -= 1; unemployed -= 1.8; economic_growth += 0.8; inflation += 1.4; budget -= 1; workers_kpd -= 6; unemployed_kpd -= 6; workers_nsdap -= 2; unemployed_nsdap -= 2; workers_spd += 6; unemployed_spd += 6; workers_z += 2; unemployed_z += 2; workers_dnef += 4; unemployed_dnef += 2; workers_dnef_bonus += 4; unemployed_dnef_bonus += 2; pro_republic += 5; labor_dissent -= 40; labor_strength += 15; social_patriot_strength += 10; schleicher_approval += 2; industrialists_schleicher_bonus -= 1
 
-The <span style="color: #c00000;">Social</span> General has lived up to his nickname: the means test for unemployment insurance has been abolished, and an eight-hour workday has been reinstated in select industries to "spread out" the work among more people. Funding for the Labor Ministry, gutted under Papen, has been restored, and welfare levels are climbing back from their absolute lows.
+<span style="color: #c00000;">社会派</span>将軍は異名に応えた。失業保険の資力調査は廃止され、仕事をより多くの人へ「分配」するため一部産業で8時間労働制が復活した。パーペン政権下で削られた労働省予算も回復し、福祉水準は最低点から上昇している。
 
-The downside is clear—Schleicher now holds significant leverage over the unions, and many workers are beginning to place their loyalty in the chancellor, rather than the party that fought to make this possible.
+代償は明白である。シュライヒャーは今や労組へ大きな影響力を持ち、多くの労働者が実現のため闘った党ではなく首相へ忠誠を寄せ始めた。
 
 @cabinet_reshuffle
-title: Demand a reshuffle of the cabinet.
-subtitle: Schleicher’s cabinet remains dominated by deeply <span style="color: #808080;">reactionary</span> holdovers from the Papen cabinet of barons.
-unavailable-subtitle: [? if schleicher_spd_r < 7: We must improve our relations with Schleicher first. ?][? if hindenburg_schleicher_r < 5: Schleicher insists Hindenburg would block a reorganization of the cabinet away from his <span style="color: #808080;">reactionary</span> favorites. ?][? if not schleicher_post: Schleicher insists his government is merely a caretaker, and we must wait until after the next election. ?][? if dsu_in_gov or dsu_was_gov: Schleicher is firmly committed to keeping the[? if dsu_was_gov:&nbsp;former?] <span style="color: #7A3C00;">Nazis</span> in government. ?][? if z_leader == "Bracht": It’s too late now, with Bracht of the <span style="color: #000000;">Center Party</span> refusing any move toward more moderate representation. ?]
+title: 内閣改造を要求する。
+subtitle: シュライヒャー内閣は、貴族内閣たるパーペン内閣から残った極めて<span style="color: #808080;">反動的</span>な人物に支配されている。
+unavailable-subtitle: [? if schleicher_spd_r < 7: まずシュライヒャーとの関係を改善する必要がある。 ?][? if hindenburg_schleicher_r < 5: シュライヒャーによれば、ヒンデンブルクはお気に入りの<span style="color: #808080;">反動派</span>を外す内閣改造を阻止するという。 ?][? if not schleicher_post: シュライヒャーは自らの内閣が単なる選挙管理内閣だと主張し、次の選挙後まで待つよう求めている。 ?][? if dsu_in_gov or dsu_was_gov: シュライヒャーは[? if dsu_was_gov:旧?]<span style="color: #7A3C00;">ナチ</span>を政権に残す決意を固めている。 ?][? if z_leader == "Bracht": もはや手遅れである。<span style="color: #000000;">中央党</span>のブラハトが、穏健派の閣僚を増やすいかなる動きも拒んでいる。 ?]
 choose-if: schleicher_post and schleicher_spd_r >= 7 and z_in_gov and not dsu_in_gov and not dsu_was_gov and hindenburg_schleicher_r >= 5 and z_leader != "Bracht"
 on-arrival: schleicher_spd_concession += 1; schleicher_spd_influence += 2; schleicher_spd_support += 2; schleicher_spd_r -= 2; papen_strength += 2; schleicher_strength -= 1; hindenburg_schleicher_r -= 3; schleicher_cabinet_weak = 1; unemployed -= 0.4; economic_growth += 0.2; workers_spd += 2; unemployed_spd += 2; workers_kpd -= 2; unemployed_kpd -= 2; pro_republic += 8; reformist_dissent -= 10; reformist_strength += 5; schleicher_approval += 1
 
-Although many <span style="color: #808080;">reactionary</span> figures in the cabinet have already been replaced by <span style="color: #000000;">Center Party</span> appointees, further reform is needed to nudge Schleicher’s government toward a more democratic appearance.
+内閣の多くの<span style="color: #808080;">反動的</span>人物はすでに<span style="color: #000000;">中央党</span>の任命者へ交代したが、シュライヒャー政府をより民主的な外観へ近づけるにはさらなる改革が必要である。
 
-The Finance Ministry, previously held by Schwerin von Krosigk, is handed over to a more neutral, non-partisan banker. The Interior Ministry and the Minister without Portfolio post are assigned to the [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Radical": <span style="color: #0087DC;">**KVP**</span>?] moderate, Gottfried Treviranus. The Agricultural Ministry is granted to Hans Schlange-Schöningen, a [? if not kvp_formed and dnvp_ideology == "Radical": <span style="color: #7FCEB1;">**CNBLP**</span>?][? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?] <span style="color: #385A38;">agrarian</span> in support of peasant homesteads.
+シュヴェリーン・フォン・クロージクが率いていた財務省は、より中立的な無党派銀行家へ渡った。内務相と無任所相には[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Radical": <span style="color: #0087DC;">**KVP**</span>?]穏健派のゴットフリート・トレヴィラヌスが就任する。農相には、農民自作地を支持する[? if not kvp_formed and dnvp_ideology == "Radical": <span style="color: #7FCEB1;">**CNBLP**</span>?][? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**DNVP**</span>?]の<span style="color: #385A38;">農本主義者</span>ハンス・シュランゲ＝シェーニンゲンが就く。
 
-Though these shifts may seem minor on the surface, the entry of more democratic-leaning ministers into the cabinet makes our continued support more palatable to both the party and our electorate—and subtly shifts the balance in key cabinet votes.
+表面上は小さな変更に見えるが、より民主的な閣僚の入閣により継続支持は党にも有権者にも受け入れやすくなり、重要な閣議採決の均衡もわずかに変わった。

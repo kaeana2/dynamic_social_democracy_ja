@@ -1,5 +1,5 @@
-title: The Lautenbach Plan
-subtitle: A potential step away from deflationary policy?
+title: ラウテンバッハ案
+subtitle: デフレ政策から離れる一歩となるのか？
 view-if: bruning_toleration_time >= 6 and (unemployed + (inflation*-1) + (economic_growth*-1) + (cvp_economy_keynes*10) >= 50) and ((year >= 1931 and month >= 9) or year >= 1932) and not works_program and not bruning_skibidi_time and not bruning_sigma_time
 max-visits: 1
 tags: event
@@ -22,43 +22,43 @@ if (Q.budget >= 2 && Q.inflation < -8 && Q.unemployed >= 30 && Q.reparations <= 
 if (!Q.lautenbach_adopted) Q.lautenbach_failed = 1;
 !}
 
-= The Lautenbach Plan
+= ラウテンバッハ案
 
-Brüning's deflationary and austerity policy, aimed at boosting Germany's competitiveness on the global stage after the crisis[? if reparations > -2: through a pause in reparations, which is Brüning's main objective?], has shown to have disastrous consequences for nearly everyone, exacerbating the current situation. Brüning and his cabinet believe that resolving the economic crisis internally is impossible; instead, they hope to achieve 'ignition'—accelerating recovery once the crisis has passed[? if reparations > -2:, through deliberately allowing the economic suffering to worsen to convince foreign powers that Germany couldn't afford to pay reparations. ?]. This bitter medicine has guided all of Brüning's economic policies, with the expectation that after the crisis, Germany will emerge stronger with lower labor costs[? if reparations > -2: and a reduction in reparations?][? if reparations == -2: and the fiscal autonomy provided by the pause in reparations?].
+ブリューニングのデフレ・緊縮政策は、危機後の国際市場におけるドイツの競争力を高めること[? if reparations > -2: と、彼の最大目標である賠償支払いの猶予?]を狙ったものだが、ほぼすべての人々に破滅的な結果をもたらし、現状を悪化させている。ブリューニングと内閣は、国内政策だけで経済危機を解決するのは不可能だと考えている。その代わり、危機が過ぎた後の回復を加速させる「点火」を期待している[? if reparations > -2:。経済的苦境を意図的に悪化させ、ドイツには賠償支払能力がないと外国に納得させようとしているのである?]。この苦い薬がブリューニングの全経済政策を導いてきた。危機後には労働費用が低下し[? if reparations > -2:、賠償も削減され?][? if reparations == -2:、賠償猶予による財政上の自由も得て?]、ドイツがより強くなると見込んでいる。
 
-Wilhelm Lautenbach, a German economist, has proposed a job creation program focused on expanding credit availability, improving liquidity, and investing in infrastructure. He presented this plan during in a secret meeting with economic ministers in Brüning’s cabinet, independent experts, Reichsbank President Hans Luther, and our economic expert, Rudolf Hilferding, who personally supports Brüning's deflationary approach. This is how we are able to listen on their secret discussions. However, the widespread fear of inflation in Germany has strongly influenced many participants against this policy, serving as the primary obstacle to the actual enactment of this plan. 
+ドイツの経済学者ヴィルヘルム・ラウテンバッハは、信用供与の拡大、流動性の改善、インフラ投資を柱とする雇用創出計画を提案した。彼はブリューニング内閣の経済関係閣僚、独立専門家、ライヒスバンク総裁ハンス・ルター、そしてブリューニングのデフレ路線を個人的に支持する我が党の経済専門家ルドルフ・ヒルファディングが出席する秘密会議で、この案を提示した。ヒルファディングがいるため、我々も秘密協議の内容を知ることができた。しかし、ドイツ社会に広がるインフレへの恐怖は、多くの出席者をこの政策への反対へ強く傾け、計画実施の最大の障害となっている。
 
-Those in opposition to the deflationary policy and are open to public works include the [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]'s Vice Chancellor and Finance Minister Hermann Dietrich, and the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s Labor Minister Adam Stegerwald. 
+デフレ政策に反対し、公共事業に前向きな人物には、[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]所属の副首相兼蔵相ヘルマン・ディートリヒと、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]所属の労相アダム・シュテーガーヴァルトがいる。
 
-> *"The central bank cannot create money."*
+> *「中央銀行は貨幣を創造できない」*
 
- - Rudolf Hilferding, <span style="color: #c00000;">**SPD**</span>'s lead economist, defending the Reichsbank, 1931.
+― ルドルフ・ヒルファディング、<span style="color: #c00000;">**SPD**</span>の首席経済専門家。ライヒスバンクを擁護して、1931年。
 
-- @lautenbach_adopted: Surprisingly, the Brüning cabinet abandons fiscal conservatism!
-- @lautenbach_fail: As expected, Brüning and his government retains economic orthodoxy.
+- @lautenbach_adopted: 驚くべきことに、ブリューニング内閣が財政保守主義を放棄する！
+- @lautenbach_fail: 予想どおり、ブリューニング政権は経済的正統主義を守る。
 
 @lautenbach_adopted
 choose-if: lautenbach_adopted
-unavailable-subtitle: [? if budget < 2: The government lacks sufficient funds to implement the plan. ?] [? if inflation >= -8: Economic experts believe that deflation is still in its initial, beneficial phase, helping to eliminate inefficient companies. ?] [? if unemployed < 30: A job creation program is not deemed necessary, as the worst of the depression has not yet arrived. ?] [? if reparations > -2: An expansive monetary policy would complicate Brüning's efforts to renegotiate reparations. ?]
+unavailable-subtitle: [? if budget < 2: 政府には計画実施に必要な資金がない。?] [? if inflation >= -8: 経済専門家は、デフレがなお非効率な企業の淘汰に役立つ初期の有益な段階にあると考えている。?] [? if unemployed < 30: 恐慌の最悪期はまだ訪れておらず、雇用創出計画は不要だと判断されている。?] [? if reparations > -2: 拡張的金融政策は、賠償再交渉を目指すブリューニングの試みを困難にする。?]
 on-arrival: labor_dissent -= 20; wtb_points += 200; lautenbach_plan_time = time + 12; hindenburg_angry_bruning -= 75; dvp_left += 5; ddp_left += 3; lvp_left += 3; ddp_cohesion += 3; z_relation += 5 if wtb_adopted; ddp_relation += 5 if wtb_adopted; lvp_relation += 5 if wtb_adopted; inflation += 3; budget -= 2; economic_growth += 2; works_program += 1; unemployed_nsdap -= 5; unemployed_z += 3; unemployed_ddp += 2
 achievement: ankurbelung
 
-The pause in reparation payments, a budgetary surplus, and a struggling economy have created the conditions necessary to persuade both the Brüning cabinet and many economic experts that a stimulus plan is essential. The economy has hit rock bottom, deflation is in its damaging second phase, and the Lautenbach Plan is considered crucial for a rapid 'ignition' of the German economy, especially as reparations have already been paused. However, due to the German public's fear of inflation, announcing any dramatic expansion of the money supply has proven impossible. As a result, the Reichsbank is forced to scale back the plan to avoid any potential scandal that could threaten the Brüning government.
+賠償支払いの猶予、財政黒字、苦境にある経済が重なり、景気刺激策は不可欠だとブリューニング内閣と多くの経済専門家を説得する条件が整った。経済は底を打ち、デフレは有害な第二段階に入っている。とりわけ賠償支払いがすでに猶予された今、ラウテンバッハ案はドイツ経済を急速に「点火」するため重要だと見なされた。しかしドイツ国民のインフレ恐怖のため、通貨供給量の劇的拡大を公表することは不可能だった。ブリューニング政権を脅かしかねない醜聞を避けるため、ライヒスバンクは計画縮小を余儀なくされた。
 
-Labor Minister Adam Stegerwald and Finance Minister Hermann Dietrich have devised a plan to allocate a billion dollars for public works, along with efforts to reduce 'sticky' wages to restore investor confidence. The plan also includes the purchasing of foreign debts to increase liquidity, expanding credit, and reducing interest rates. The deficit generated by these measures is also somewhat offset by the need to pay less unemployment benefits. With these measures, money is beginning to flow once again into the German economy.
+アダム・シュテーガーヴァルト労相とヘルマン・ディートリヒ蔵相は、投資家の信頼回復に向けて硬直的な賃金を引き下げる一方、公共事業へ10億ドルを配分する計画をまとめた。流動性を高めるための外国債務買い入れ、信用拡大、金利引き下げも含まれる。これらの措置によって生じる赤字は、失業給付の支出減少によって一部相殺される。この政策により、ドイツ経済へ再び資金が流れ始めた。
 
-> Chancellor [+ chancellor +]'s response is, public works?
+> 首相[+ chancellor +]の答えは、公共事業なのか？
 
 @lautenbach_fail
 choose-if: lautenbach_failed
 on-arrival: reichsbank_policy_time = time + 12
 
-Expectedly, the Lautenbach Plan has failed due to strong opposition from those who adhere to fiscal orthodoxy, which holds that deflation, despite its pain, is healthy because it weeds out inefficient producers. This contrasts with the Keynesian belief that a destructive second phase occurs, where economic recovery becomes possible but fails because of a collapse in investor confidence.
+予想どおり、ラウテンバッハ案は財政的正統主義を守る人々の強い反対によって潰えた。彼らは、デフレには痛みが伴うものの、非効率な生産者を淘汰するため健全だと考えている。これは、景気回復が可能になっても投資家の信頼崩壊によって実現しない、破壊的な第二段階が訪れるというケインズ派の見方と対照的である。
 
-Reichsbank President Hans Luther, who personally sympathizes with increasing the money supply and expanding credit, has shelved the idea. The conference only reached two unanimous conclusions: the German people's fear of inflation made it impossible to announce any dramatic program to expand the money supply, meaning the government would have to act secretly if it ever decided to implement Lautenbach's plan, and the government must continue its campaign to lower wages bound by long-term collective labor contracts and prices set by cartel agreements.
+通貨供給量の増加と信用拡大に個人的な理解を示すライヒスバンク総裁ハンス・ルターも、この案を棚上げした。会議で全会一致となったのは二点だけである。第一に、ドイツ国民のインフレ恐怖により通貨供給量を劇的に増やす計画は公表できず、ラウテンバッハ案を実施するなら政府は秘密裏に動かねばならない。第二に、長期労働協約に拘束された賃金とカルテル協定で定められた価格を引き下げる運動を、政府は継続しなければならない。
 
-However, Luther has made concessions to the Keynesians, quietly expanding the money supply and increasing credit availability, even abandoning the rule that 40% of money in circulation must be covered by gold and foreign exchange. Furthermore, generous financing of exports to the <span style="color: #750e0e;">Soviet Union</span> has helped counteract the effects of the withdrawal of foreign credits on both the money supply and the job market.
+それでもルターはケインズ派に譲歩し、ひそかに通貨供給量と信用供与を拡大した。流通貨幣の40％を金・外貨で裏づけるという規則さえ放棄している。さらに<span style="color: #750e0e;">ソビエト連邦</span>向け輸出への手厚い融資が、外国信用の引き揚げによる通貨供給と雇用市場への悪影響を相殺する助けとなった。
 
-> *"Stimulation can only help if we are already at the bottom....I do not believe that we are that far yet."*
+> *「刺激策が役立つのは、すでに底へ達している場合だけだ……私はまだそこまで来ていないと考える」*
 
- - Ernst Trendelenburg, Reich Minister of Economics, 1931.
+― エルンスト・トレンデレンブルク、ライヒ経済相、1931年。

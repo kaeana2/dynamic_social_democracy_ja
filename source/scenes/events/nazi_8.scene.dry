@@ -1,5 +1,5 @@
-title: [+ nsdap_leader +] and Hugenberg
-subtitle: The Harzburg Front is dead, but perhaps the spirit isn't?
+title: [+ nsdap_leader +]とフーゲンベルク
+subtitle: ハルツブルク戦線は死んだが、その精神はまだ生きているのか？
 view-if: chancellor = "Schleicher" and hindenburg_hitler_r >= 1 and (lippe_good or not lippe_election_seen)
 new-page: true
 tags: event
@@ -7,19 +7,19 @@ priority: 1
 max-visits: 1
 face-image: img/hugenberg_hitler.jpg
 
-= [+ nsdap_leader +] and Hugenberg
+= [+ nsdap_leader +]とフーゲンベルク
 
-[? if lippe_election_seen: With the <span style="color: #7A3C00;">Nazi</span> gains in Lippe?][? if not lippe_election_seen: With the <span style="color: #7A3C00;">Nazi</span>'s still influentially high support?]—and [+ nsdap_leader +] in control of his party—he has turned to courting an old "friend": Hugenberg. Since the collapse of the Harzburg Front, their relationship has been rocky at best, but both men recognize each other's utility: the <span style="color: #7A3C00;">**NSDAP**</span> for its ability to stir up mass support to dismantle the Republic, and the [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?] for its deep connections in influential conservative circles.
+[? if lippe_election_seen:リッペで<span style="color: #7A3C00;">ナチ党</span>が伸長し?][? if not lippe_election_seen:<span style="color: #7A3C00;">ナチ党</span>がなお高い影響力を持つ支持を保ち?]、[+ nsdap_leader +]が党を掌握するなか、彼は古い「友人」フーゲンベルクの取り込みに転じた。ハルツブルク戦線崩壊後、二人の関係は良くて不安定という有様だったが、互いの利用価値は認めている。<span style="color: #7A3C00;">**NSDAP**</span>には共和国解体に向けて大衆支持を煽る力があり、[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span>?]には有力な保守層との深い結びつきがある。
 
-Following their electoral truce in [? if lippe_election_seen: Lippe?][? if not lippe_election_seen: many local elections?], goodwill has been restored just enough to arrange a meeting between [+ nsdap_leader +] and Hugenberg.
+[? if lippe_election_seen:リッペ?][? if not lippe_election_seen:多くの地方選挙?]で選挙休戦を結んだことで、[+ nsdap_leader +]とフーゲンベルクの会談を設定できる程度には友好関係が回復した。
 
 - @nazi
 
 @nazi
-title: What could those two be doing this time?
+title: 今度は二人で何を企んでいるのか？
 
-Before this meeting, Hugenberg had already spoken with Chancellor von Schleicher, floating the idea of an arrangement that would give him control over national economic policy. As a result, he was hesitant to flip on the chancellor and side with a man who had repeatedly lied to him in the past.
+この会談に先立ち、フーゲンベルクはすでにフォン・シュライヒャー首相と話し合い、国家経済政策の主導権を自分に与える取り決めを提案していた。このため、首相を裏切って過去に何度も自分を欺いた男の側につくことをためらった。
 
-Instead, Hugenberg proposed a joint entry into Schleicher’s cabinet—an alliance to transform Germany into a dictatorship. But [+ nsdap_leader +] refused to budge, insisting on nothing less than the chancellorship for himself, and claiming that Hindenburg’s “handlers,” not the president himself, were the real obstacle to his appointment.
+代わりにフーゲンベルクはシュライヒャー内閣への共同入閣、すなわちドイツを独裁国家へ変える同盟を提案した。しかし[+ nsdap_leader +]は譲らず、自らの首相就任以外は受け入れないと主張し、任命を阻んでいるのはヒンデンブルク本人ではなく、大統領を操る「取り巻き」だと言い張った。
 
-- @root: The two leaders remain far apart.
+- @root: 両指導者の隔たりはなお大きい。

@@ -1,5 +1,5 @@
-title: 1931
-subtitle: A new year 
+title: 1931年
+subtitle: 新年
 on-arrival: {!
 // increase NSDAP vote share 
 // historical: -7.7%
@@ -18,4 +18,4 @@ view-if: year = 1931 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. [? if works_program = 0 : Unemployment continues to spiral upwards. The strength of the <span style="color: #7A3C00;">**NSDAP**</span> continues to rise. ?][? if works_program > 0 : A works program has been enacted in order to reduce unemployment. ?] [? if works_program > 0 and unemployed > 15 : However, unemployment remains too high for comfort. ?]
+新たな年が始まる。[? if works_program = 0 : 失業者は際限なく増え続け、<span style="color: #7A3C00;">**NSDAP**</span>もなお勢力を伸ばしている。?][? if works_program > 0 : 失業を減らすため、公共事業計画が施行された。?] [? if works_program > 0 and unemployed > 15 : しかし失業率は依然として安心できないほど高い。?]

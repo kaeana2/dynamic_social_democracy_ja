@@ -1,23 +1,23 @@
-title: We can deport Hitler.
-subtitle: He is a foreign citizen and a criminal, after all.
-unavailable-subtitle: [? if judicial_reform < 2 : Unfortunately, the <span style="color: #808080;">reactionary</span> judiciary will not cooperate. ?] [? if hitler_citizen : Hitler has already been made a citizen of Germany, in the run-up to the presidential election. ?] [? if not spd_prussia : We cannot do this without the cooperation of the Prussian police, who are not currently in our control. ?]
+title: ヒトラーを国外追放できる。
+subtitle: 何しろ彼は外国人であり、犯罪者でもある。
+unavailable-subtitle: [? if judicial_reform < 2 : 残念ながら、<span style="color: #808080;">反動的</span>な司法府は協力しない。 ?] [? if hitler_citizen : ヒトラーは大統領選挙に先立ち、すでにドイツ国籍を取得している。 ?] [? if not spd_prussia : 現在我々の統制下にないプロイセン警察の協力なしには実行できない。 ?]
 view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Papen" and chancellor != "Schleicher" and investigate_far_right >= 2
 choose-if: judicial_reform >= 2 and not hitler_citizen and spd_prussia == 1
 
-Is it really that simple? Won't his supporters react violently to this suggestion? And even if the deportation does succeed, won't he just re-enter the country, or perhaps organize from Austria? And, some people consider this to be an anti-democratic abuse of power, using the law in order to target a political opponent.
+本当にそれほど単純だろうか？ この提案に支持者が暴力で応じるのではないか？ 追放に成功しても再入国するか、オーストリアから組織を指揮するだけではないか？ さらに、法律を利用して政敵を狙い撃ちにする反民主的な権力濫用だと考える者もいる。
 
-- @deport: Deport him!
-- @no_deport: No, we must not.
+- @deport: 追放せよ！
+- @no_deport: いや、追放すべきではない。
 
 @deport
 go-to: deport_violence if sa_strength >= 200; deport_success if sa_strength < 200
 
 @deport_violence
 
-When the police approach, he is surrounded by his <span style="color: #7A3C00;">**SA**</span> guards, preventing him from being extricated! We can attempt to force a confrontation, but that may have negative consequences. The Reichsbanner may also attempt to draw off the <span style="color: #7A3C00;">**SA**</span>.
+警察が接近すると、ヒトラーは護衛の<span style="color: #7A3C00;">**SA**</span>に取り囲まれ、身柄を確保できない！ 強行突破を試みることはできるが、悪い結果を招くおそれがある。国旗団を使って<span style="color: #7A3C00;">**SA**</span>を引き離す手もある。
 
-- @force_approach: Force the approach!
-- @no_deport: Cancel the deportation.
+- @force_approach: 強行突破せよ！
+- @no_deport: 国外追放を中止する。
 
 @force_approach
 on-arrival: {!
@@ -37,25 +37,25 @@ go-to: force_fail if deportation_success == 0; force_success if deportation_succ
 @force_fail
 on-arrival: sa_strength += 50; workers_nsdap += 5; unemployed_nsdap += 5; new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5; coup_progress += 3; pro_republic -= 5
 
-Unfortunately, our forces fail to dislodge the <span style="color: #7A3C00;">**SA**</span> from their positions surrounding Hitler. He is seen as both a strong and powerful leader and a victim, further reinforcing his image. The <span style="color: #7A3C00;">Nazis</span> are left stronger than ever.
+残念ながら、我々の部隊はヒトラーを囲む<span style="color: #7A3C00;">**SA**</span>を排除できなかった。ヒトラーは強力な指導者であると同時に被害者とも見なされ、そのイメージはいっそう強まった。<span style="color: #7A3C00;">ナチ</span>はかつてないほど勢力を増している。
 
 @force_success
 on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; pro_republic += 10
 achievement: deport_hitler
 
-The confrontation ends with the police and Reichsbanner prevailing, capturing Hitler so he can be deported! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the <span style="color: #7A3C00;">Nazi</span> effort to win more votes.
+衝突は警察と国旗団の勝利に終わり、ヒトラーの身柄を確保して国外追放できた！ この一件はナチの弱さを示し、ヒトラーが遠方に置かれたことで組織運営も難しくなり、<span style="color: #7A3C00;">ナチ</span>の得票拡大を妨げている。
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the <span style="color: #7A3C00;">Nazi</span> party, with substantial influence from Hermann Göring.
+ヒトラー不在の間、ヨーゼフ・ゲッベルスが<span style="color: #7A3C00;">ナチ党</span>の臨時指導者となり、ヘルマン・ゲーリングも大きな影響力を及ぼしている。
 
 @deport_success
 on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; pro_republic += 10
 achievement: deport_hitler
 
-Somehow, the plan worked! There was minimal resistance to Hitler's deportation. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the <span style="color: #7A3C00;">Nazi</span> effort to win more votes.
+驚くべきことに計画は成功した！ ヒトラーの国外追放に対する抵抗はごくわずかだった。この一件はナチの弱さを示し、ヒトラーが遠方に置かれたことで組織運営も難しくなり、<span style="color: #7A3C00;">ナチ</span>の得票拡大を妨げている。
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the <span style="color: #7A3C00;">Nazi</span> party, with substantial influence from Hermann Göring.
+ヒトラー不在の間、ヨーゼフ・ゲッベルスが<span style="color: #7A3C00;">ナチ党</span>の臨時指導者となり、ヘルマン・ゲーリングも大きな影響力を及ぼしている。
 
 @no_deport
 go-to: root
 
-We will not be deporting Hitler.
+ヒトラーの国外追放は行わない。

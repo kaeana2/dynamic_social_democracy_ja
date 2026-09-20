@@ -1,6 +1,6 @@
-title: The <span style="color: #3E88B3;">**DNVP**</span> breaks with Brüning
+title: <span style="color: #3E88B3;">**DNVP**</span>、ブリューニングと決裂
 new-page: true
-subtitle: They're finally made up their mind.
+subtitle: ついに決断を下した。
 tags: event
 view-if: total_bruning_time >= 6 and spd_toleration_right and dnf_votes + nsdap_votes + dnvp_angry >= (dnvp_votes * 5) and moderate_dnvp_hitler and bruning_time >= 3 and not cvp_formed
 on-arrival: pro_republic -= dnvp_votes / 2; hindenburg_angry_bruning += 10
@@ -18,15 +18,15 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #3E88B3;">**DNVP**</span> breaks with Brüning
+= <span style="color: #3E88B3;">**DNVP**</span>、ブリューニングと決裂
 
-The continued rise of the <span style="color: #003755;">**DNF**</span> and <span style="color: #7A3C00;">**NSDAP**</span> following the failed attempt of more radical <span style="color: #3E88B3;">**DNVP**</span> members to bring down the Brüning government has forced even the most pro-Brüning politicians to reconsider their prior decision. 
+急進的な<span style="color: #3E88B3;">**DNVP**</span>党員によるブリューニング政権打倒の試みが失敗した後も、<span style="color: #003755;">**DNF**</span>と<span style="color: #7A3C00;">**NSDAP**</span>は伸長を続けた。そのため、ブリューニング支持が最も強かった政治家さえ、以前の判断を再考せざるを得なくなった。
 
 - @vonc_yes
 
 @vonc_yes
-title: Brüning's government collapses. 
-subtitle: President [+ president +] will decide if new elections are necessary.
+title: ブリューニング政権崩壊。
+subtitle: 総選挙が必要かどうかは[+ president +]大統領が決める。
 on-arrival: {!
 Q.bruning_coalition = Q.neo_weimar_coalition;
 Q.bruning_coalition_loss += Q.dnvp_r;
@@ -39,20 +39,20 @@ go-to: election_set if hindenburg_angry_bruning >= 100 or bruning_coalition < 50
 on-arrival: spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 1; spd_toleration_right = 0
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_coalition_prussia)
 
-President [+ president +] has allowed Brüning to reshuffle his cabinet, replacing the <span style="color: #3E88B3;">**DNVP**</span>-affiliated ministers with bourgeois ones. At least this is a step up from what we had previously.
+[+ president +]大統領はブリューニングに内閣改造を認め、<span style="color: #3E88B3;">**DNVP**</span>系閣僚をブルジョワ系閣僚に置き換えさせた。少なくとも以前の内閣よりはましである。
 
 @election_set
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0
 call: set_next_election_time
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_coalition_prussia)
 
-President [+ president +], tired of this instability, has forced Brüning's resignation to pave the way for new elections, hoping that the gains of the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span> will persuade him to enter a coalition with them.
+この不安定さにうんざりした[+ president +]大統領は、総選挙への道を開くためブリューニングを辞任させた。<span style="color: #7A3C00;">国民的</span><span style="color: #003755;">反対派</span>が議席を伸ばせば、連立参加へ応じるよう説得できるとの期待からである。
 
-The <span style="color: #000000;">bourgeois</span>-<span style="color: #3E88B3;">right</span> coalition has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+<span style="color: #000000;">ブルジョワ</span><span style="color: #3E88B3;">右派</span>連立は崩壊した。総選挙は[+ next_election_year +]年[+ next_election_month : month +]に決まった。
 
 @new_prussia_election
 on-arrival: prussia_coalition_trigger = 1
 
-The Prussian coalition isn't able to survive either, pressure from the national conservatives within the <span style="color: #3E88B3;">**DNVP**</span> forces them to exit from the <span style="color: #000000;">bourgeois</span>-<span style="color: #3E88B3;">right</span> coalition there as well.
+プロイセンの連立も存続できない。<span style="color: #3E88B3;">**DNVP**</span>内の国民保守派から圧力を受け、同党は同州の<span style="color: #000000;">ブルジョワ</span><span style="color: #3E88B3;">右派</span>連立からも離脱した。
 
-- @prussian_coalition_formation: Negotiate a new Prussian coalition.
+- @prussian_coalition_formation: 新たなプロイセン連立を交渉する。

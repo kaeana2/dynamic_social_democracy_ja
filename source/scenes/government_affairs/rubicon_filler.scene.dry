@@ -1,4 +1,4 @@
-title: Biding our Time
+title: 時機を待つ
 on-arrival: month_actions += 1
 view-if: rubicon
 card-image: img/hourglass.jpg
@@ -6,38 +6,38 @@ is-card: true
 new-page: true
 go-to: blank if schleicher_spd_influence >= 6
 
-= Biding our Time
+= 時機を待つ
 
-The reality is, there is not much we can do. We cannot simply do nothing either.
+現実には、できることはそう多くない。とはいえ、ただ手をこまねいているわけにもいかない。
 
-- @money: Raise funds.
-- @dissent: Reduce party dissent.
-- @campaign: Restore faith in the Republic.
-- @protest: Protest against the government.
+- @money: 資金を集める。
+- @dissent: 党内の不満を和らげる。
+- @campaign: 共和国への信頼を回復する。
+- @protest: 政府に抗議する。
 - @easy_discard
 
 @money
-subtitle: +1 resource
+subtitle: 資源 +1
 view-if: resources < 2
 on-arrival: resources += 1
 
-We have gained one additional resource.
+資源を1獲得した。
 
 @dissent
-subtitle: We mustn't be divided, not in a time like this.
+subtitle: このような時に分裂している場合ではない。
 on-arrival: left_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; reformist_dissent -= 5
 
-We have reduced dissent across all factions.
+全派閥の不満を軽減した。
 
 @campaign
-subtitle: We must defend our creation.
+subtitle: 我々が築いた共和国を守らねばならない。
 on-arrival: pro_republic += 2
 
-In a few years time, the German people will thank us.
+数年もすれば、ドイツ国民は我々に感謝するだろう。
 
 @protest
-subtitle: The [+ chancellor +] cabinet must not be allowed to stand.
+subtitle: [+ chancellor +]内閣を存続させてはならない。
 view-if: papen_post_2
 on-arrival: pro_republic -= 2; workers_spd += 1; new_middle_spd += 1
 
-Labor has taken to the streets.
+労働者は街頭へ繰り出した。

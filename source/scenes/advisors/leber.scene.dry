@@ -1,62 +1,62 @@
-title: Julius Leber
+title: ユリウス・レーバー
 is-pinned-card: true
 tags: advisor, neorevisionist
 card-image: img/portraits/LeberJulius.jpg
 view-if: leber_advisor = 1
 new-page: true 
 
-= Julius Leber
+= ユリウス・レーバー
 
-Leber is a former army officer who turned against the military leaders of the Kapp Putsch in 1920, helping us put down the army's attempted coup. He is in favor of expanded democracy and building a broad popular base for the <span style="color: #c00000;">**SPD**</span>.
+レーバーは元陸軍将校であり、1920年のカップ一揆では軍指導部に反対し、軍部によるクーデターの鎮圧に協力した。民主主義の拡充と、<span style="color: #c00000;">**SPD**</span>の広範な大衆基盤の構築を支持している。
 
 - @democratic_rally
 - @military_affairs
 - @support_peoples_party
 - @build_peoples_party
 - @campaigning_peoples_party
-- @root: Return to main
+- @root: メイン画面へ戻る
 
 @democratic_rally
-title: Rally for democracy
-subtitle: Rally our party and the German people to defend democracy and freedom.
+title: 民主主義擁護の結集
+subtitle: 民主主義と自由を守るため、党とドイツ国民を結集させる。
 choose-if: advisor_action_timer == 0 
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; neorevisionist_strength += 5; reformist_strength += 3; workers_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 3*(1-dissent) if democratization >= 4
 
-Leber helps us to rally the people in defense of democracy.
+レーバーは民主主義を守るために国民を結集させた。
 
 @military_affairs
-title: Military affairs
-subtitle: We can set our military policy.
+title: 軍事問題
+subtitle: 軍事政策を定める。
 choose-if: advisor_action_timer == 0 and spd_in_government and reichswehr_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not in government. ?][? if reichswehr_minister_party != "SPD": The <span style="color: #c00000;">SPD</span> does not have the Reichswehr ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if not spd_in_government : <span style="color: #c00000;">SPD</span>は政権に参加していない。 ?][? if reichswehr_minister_party != "SPD": <span style="color: #c00000;">SPD</span>は国防相を確保していない。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: military_policy
 
 @support_peoples_party
-title: Build support for a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: 人民政党への支持を築く
+subtitle: 産業労働者階級を越えて党の支持を広げられるだろうか。
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party == 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if peoples_party_support > 4: 人民政党にはすでに相当な支持がある。 ?]
 on-arrival: advisor_action_timer = 6; peoples_party_support += 1
 
-We are building up support for the idea of a People's Party.
+人民政党構想への支持を築いている。
 
 @build_peoples_party
-title: Building a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: 人民政党を築く
+subtitle: 産業労働者階級を越えて党の支持を広げられるだろうか。
 view-if: peoples_party == 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if peoples_party_support < 3: この政策に対する党内の支持が足りない。 ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: peoples_party
 
 @campaigning_peoples_party
-title: Campaigning as a People's Party
-subtitle: Campaigning with some of our previously nontraditional demographics.
+title: 人民政党として選挙運動を行う
+subtitle: 従来は支持基盤でなかった社会集団にも働きかける。
 view-if: peoples_party = 1
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?]
 on-arrival: advisor_action_timer = 6;
 go-to: peoples_party_campaigning

@@ -1,5 +1,5 @@
-title: Schleicher Learns of the Plot
-subtitle: Hindenburg's loyalty is put to the test.
+title: シュライヒャー、陰謀を知る
+subtitle: ヒンデンブルクの忠誠が試される。
 view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode
 on-arrival: {!
 if ((Q.hindenburg_schleicher_r <= 0 || Q.schleicher_strength <= 1) && (Q.schleicher_spd_adopted || Q.schleicher_spd_r >= 4) && Q.pro_republic >= 40 || Q.constructive_vonc) {
@@ -23,47 +23,47 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Emergency Decree Request
+= 緊急令の要請
 
-Following the Camarilla’s meeting with Papen and [+ nsdap_leader +], Schleicher questions Meissner about what transpired at Ribbentrop’s estate—and finally grasps the precariousness of his position. He decides to test Hindenburg’s loyalty, arranging an appointment with the President just hours after the Camarilla’s own visit.
+側近集団がパーペンおよび[+ nsdap_leader +]と会談した後、シュライヒャーはリッベントロップ邸で何が起きたのかをマイスナーに問いただし、ついに自らの立場が危機に瀕していることを悟る。彼はヒンデンブルクの忠誠を試すことを決め、側近集団の訪問からわずか数時間後に大統領との会見を取りつける。
 
-The course Schleicher pursues is one of three options developed by his colleagues in the Defense Ministry. The first two involve unconstitutional maneuvers: either postponing elections or forcing the Reichstag into indefinite adjournment.
+シュライヒャーが選んだ方策は、国防省の同僚たちが立案した三案のうちの一つである。最初の二案はいずれも違憲の策で、選挙を延期するか、国会を無期限休会に追い込むというものだ。
 
-The third option, however, is more intriguing—a constructive vote of no confidence. Legal advisors have identified a loophole in the Republic’s constitution: while a hostile Reichstag majority can pass a no-confidence vote, it cannot unite to support a new cabinet. In the event of <span style="color: #7A3C00;">**NSDAP**</span> and <span style="color: #700000;">**KPD**</span> “cooperation,” this mechanism could paralyze governance.
+しかし第三案はより興味深い。建設的不信任決議である。法律顧問は共和国憲法の抜け穴を見つけていた。敵対的な国会多数派は不信任決議を可決できても、新内閣の支持では結束できない。<span style="color: #7A3C00;">**NSDAP**</span>と<span style="color: #700000;">**KPD**</span>が「協力」すれば、この仕組みによって統治が麻痺しかねない。
 
-To remedy this, the Defense Ministry proposes a constitutional amendment requiring the Reichstag to propose a viable replacement cabinet alongside any no-confidence motion—thereby curbing purely negative obstruction.
+これを是正するため、国防省は不信任動議と同時に、実現可能な後継内閣を国会に提案させる憲法改正を唱える。単なる否定のための妨害を封じる狙いである。
 
-This option is favored within the Defense Ministry: it has the potential to attract <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> support and avoid the civil unrest that the other two would likely provoke. Schleicher could remain in office as a caretaker indefinitely.
-[? if wurttemberg_vonc: A precedent has even been set in Württemberg, where the Bolz government ignored a no-confidence vote from a purely negative majority and continued to rule by decree. ?]Crucially, this approach requires nothing from Hindenburg beyond passive acquiescence.
+国防省内ではこの案が支持されている。<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">諸党</span>の支持を得られる可能性があり、他の二案が引き起こしかねない内乱も避けられるからだ。シュライヒャーは暫定首相として無期限に在職できる。
+[? if wurttemberg_vonc: ヴュルテンベルクでは、ボルツ政権が否定のためだけに形成された多数派による不信任決議を無視し、緊急令による統治を続けたという先例さえある。?]決定的なのは、この方策がヒンデンブルクに消極的な黙認以上のものを求めない点である。
 
-- @schleicher_2: Schleicher's second new lease on life?
-- @schleicher_4: Schleicher's second new lease on life?
+- @schleicher_2: シュライヒャーに二度目の延命か？
+- @schleicher_4: シュライヒャーに二度目の延命か？
 
 @schleicher_2
 view-if: not schleicher_cabinet_smart
 
-Despite the clear advantages of the third option, Schleicher rejects it. He hints that even if the Reichstag cannot oust him directly, a hostile majority could still repeal his emergency decrees—rendering his position untenable. True to Prussian military tradition, which favors offense over defense and prizes personal courage in the face of adversity, Schleicher may find it too humiliating to swallow his pride and retreat from his earlier threats to dissolve the Reichstag.
+第三案には明白な利点があるにもかかわらず、シュライヒャーはこれを退ける。国会が直接彼を罷免できなくとも、敵対的な多数派は緊急令を廃止できるため、いずれ立場を維持できなくなるというのだ。防御より攻勢を好み、逆境に立ち向かう個人の勇気を尊ぶプロイセン軍人の伝統に忠実なシュライヒャーには、誇りを捨てて、国会解散をちらつかせた先の脅しを撤回することが屈辱的すぎるのかもしれない。
 
-Nevertheless, he decides to ask the President for authorization to dissolve the Reichstag and postpone new elections—despite Oskar likely having convinced his father to oppose this course weeks ago. His position is weakened by the fact that he previously brought down Papen, in front of the very cabinet members he retains today, by claiming the Reichswehr could not handle the outrage such a blatantly unconstitutional move would provoke.
+それでも彼は大統領に国会解散と新選挙延期の承認を求めることを決める。数週間前には、オスカーが父を説得してこの方策に反対させていた可能性が高いにもかかわらずである。しかもシュライヒャーは、これほど露骨な違憲行為が招く憤激を国軍は抑えられないと主張してパーペンを失脚させていた。それを聞いた閣僚たちは今なお留任しており、この事実が彼の立場を弱めている。
 
-Schleicher now argues that circumstances have changed. His outreach to the labor unions, he claims, has neutralized the risk of civil war, and his economic plan will soon reduce tensions. As Defense Minister, he also asserts that he has addressed the Reichswehr’s deficiencies—it is now better prepared, with greatly expanded stocks of tear gas and streetfighting gear.
+シュライヒャーは今や、状況は変わったと主張する。労働組合への働きかけによって内戦の危険は消え、経済計画も間もなく緊張を緩和するという。さらに国防相として国軍の弱点も克服したと断言する。催涙ガスや市街戦装備の備蓄を大幅に増やし、以前より十分に備えているというのだ。
 
 - @schleicher_3
 
 @schleicher_3
-title: The moment of truth.
-on-arrival: schleicher_strength -= 1; schleicher_goal = "Concede defeat";
+title: 運命の時。
+on-arrival: schleicher_strength -= 1; schleicher_goal = "敗北を認める";
 
-Schleicher requests for a decree dissolving the Reichstag, pointing out the chamber in all likelihood approve a no-confidence motion at the end in the next reconvocation. Also predicting that a new election wouldn't alter the Reichstag in his favor much, he also asks for a decree postponing the planned election. 
+シュライヒャーは、次の再開会で国会がほぼ確実に不信任動議を可決すると指摘し、国会解散令を求める。また、新選挙を行っても自らに有利な議席構成にはほとんど変わらないと予測し、予定された選挙を延期する緊急令も求める。
 
-Hindenburg remains unresponsive. His personal estrangement from Schleicher is already far advanced, and there have been little personal contact between the two men for a majority of Schleicher's term. Schleicher advocating for the same course of action that he himself opposed when it was advocated by Papen. 
+ヒンデンブルクは反応を示さない。シュライヒャーとの個人的な疎遠はすでに深刻であり、彼の在任期間の大半を通じて両者の直接の接触はほとんどなかった。しかもシュライヒャーは、かつてパーペンが唱えた際に自ら反対したのと同じ方策を今になって主張している。
 
-In the end, Hindenburg is only willing to provide a dissolution decree, but then he refuses to provide it to Schleicher as of right now. But to the public, Schleicher's hold on the chancellorship remains firm.
+結局、ヒンデンブルクが用意する意思を示したのは解散令だけであり、それさえ現時点ではシュライヒャーへの交付を拒む。とはいえ国民の目には、シュライヒャーの首相としての地位はいまだ揺るぎないように見える。
 
 @schleicher_4
 view-if: schleicher_cabinet_smart
 on-arrival: schleicher_explode = 0; constructive_vonc = 1; constructive_schleicher = 1
 
-With Schleicher himself unsure of Hindenburg's support, and the <span style="color: #c00000;">**SPD**</span> likely to support the third option—and potentially convince other <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> parties to do the same—he now sees a new avenue out of the political deadlock.
+シュライヒャー自身がヒンデンブルクの支持を確信できない一方、<span style="color: #c00000;">**SPD**</span>は第三案を支持し、他の<span style="color: #000000;">共和</span><span style="color: #DD0000;">主義</span><span style="color: #FFCC00;">諸党</span>にも同調を促す可能性が高い。彼はここに政治的行き詰まりから抜け出す新たな道を見る。
 
-The chancellor has therefore cancelled his planned test of loyalty with Hindenburg, along with his intended resignation in the event of rejection or a no-confidence vote from the Reichstag. All that remains is Hindenburg's acquiescence.
+そこで首相は、予定していたヒンデンブルクの忠誠試しと、拒否または国会の不信任決議を受けた場合の辞任をともに取りやめる。残るのはヒンデンブルクの黙認を得ることだけである。

@@ -1,70 +1,70 @@
-title: The [? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?] calls a vote of no confidence against the current government!
-subtitle: We have angered the [? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?] too much...
+title: [? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?]が現政権への不信任決議を提出！
+subtitle: [? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?]を怒らせすぎた……。
 new-page: true
 view-if: spd_in_government = 1 and ((in_popular_front = 1 and kpd_coalition_dissent >= 3) or (in_left_front = 1 and kpd_coalition_dissent >= 4) or (sapd_toleration and kpd_coalition_dissent >= 4)) and spd_r < 50 and not constructive_vonc
 tags: event
 go-to: menu
 
-= Vote of No Confidence
+= 不信任決議案
 
-The [? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?] has called a vote of no confidence against us, due to our various policies and disagreements. If this succeeds, there will be an election in a few months.
+[? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?]は、一連の政策対立を理由に我々への不信任決議を提出した。可決されれば、数か月後に選挙が行われる。
 
 @menu
 
-- @try_assuage: Try to assuage them somehow.
-- @support_center: Could we form a new government based on the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: (and possibly <span style="color: #C0A054;">**DVP**</span>)?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]?
-- @let_it_happen: Let the vote happen.
+- @try_assuage: 何とかして彼らをなだめる。
+- @support_center: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:（場合によっては<span style="color: #C0A054;">**DVP**</span>も）?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]を軸に、新政権を組めないだろうか？
+- @let_it_happen: 投票を行え。
 
 @try_assuage
 
-How do we assuage the [? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?]?
+どうすれば[? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?]をなだめられるだろうか？
 
-- @resources: Use our resources to reduce dissent within the coalition.
-- @thalmann: Appoint Thälmann as chancellor instead of [+ chancellor +].
-- @rosenfeld: Appoint Rosenfeld as chancellor instead of [+ chancellor +].
-- @support_center: Could we form a new government based on the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: (and possibly <span style="color: #C0A054;">**DVP**</span>)?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]?
-- @let_it_happen: Never mind. Let the vote happen.
+- @resources: 連合内の不満を減らすために、我々の資源を使え。
+- @thalmann: [+ chancellor +]の代わりにテルマンを首相に任命する。
+- @rosenfeld: [+ chancellor +]の代わりにローゼンフェルトを首相に任命する。
+- @support_center: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:（場合によっては<span style="color: #C0A054;">**DVP**</span>も）?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]を軸に、新政権を組めないだろうか？
+- @let_it_happen: 気にするな。投票をさせろ。
 
 @thalmann
 choose-if: president_ideology == "Left"
 view-if: not sapd_toleration
-subtitle: This would be pretext for a right-wing coup.
-unavailable-subtitle: [? if president == "Hindenburg" : President Hindenburg would never allow this. ?]
+subtitle: これは右翼クーデターの口実となるだろう。
+unavailable-subtitle: [? if president == "Hindenburg" : ヒンデンブルク大統領はこれを決して許さないだろう。?]
 on-arrival: chancellor = "Thälmann"; chancellor_party = "KPD"
 
-With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
+[+ president +]大統領は、極めて不本意ながら[+ chancellor +]を首相に任命する。
 
-Immediately, [+ chancellor +] goes to work building a "<span style="color: #750e0e;">Soviet Germany</span>": consolidating as much power as possible in the <span style="color: #700000;">**KPD**</span>, purging state institutions of anti-<span style="color: #700000;">communists</span>, and sending street fighters against the "enemies of the people".
+[+ chancellor +]は直ちに「<span style="color: #750e0e;">ソビエト・ドイツ</span>」の建設へ動き出す。権力を可能な限り<span style="color: #700000;">**KPD**</span>へ集中し、国家機関から反<span style="color: #700000;">共産主義者</span>を追放し、街頭闘争部隊を「人民の敵」へ差し向ける。
 
-In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> enter Berlin and immediately begin clashing with our supporters! <span style="color: #808080;">Reactionary</span> officers within the Reichswehr have taken their troops out of the barracks and joined them with the <span style="color: #3E88B3;">**Stahlhelm**</span> to stop the <span style="color: #700000;">**KPD**</span> from taking power. We are forced to be on the same side as the <span style="color: #700000;">**KPD**</span>, whether we want to or not.
+[+ chancellor +]の首相任命に対し、右翼勢力はほぼ即座にクーデターを起こす。<span style="color: #3E88B3;">**鉄兜団**</span>と<span style="color: #7A3C00;">ナチ</span>の<span style="color: #7A3C00;">**SA**</span>がベルリンへ進入し、我々の支持者と衝突を始めた！ 国防軍内の<span style="color: #808080;">反動的な</span>将校も部隊を兵舎から出し、<span style="color: #3E88B3;">**鉄兜団**</span>と合流して<span style="color: #700000;">**KPD**</span>の権力掌握を阻止しようとしている。望むと望まざるとにかかわらず、我々は<span style="color: #700000;">**KPD**</span>と同じ側に立たざるを得ない。
 
 @rosenfeld
 view-if: sapd_toleration and chancellor != "Rosenfeld"
-subtitle: The right-wing parties would not like this.
+subtitle: 右派の政党はこれを好まないだろう。
 on-arrival: chancellor = "Rosenfeld"; chancellor_party = "SAPD"; kpd_coalition_dissent -= 1; kpd_relation += 5; z_relation -= 3; lvp_relation -= 3; dvp_relation -= 3; ddp_relation -= 3; dvp_right += 2; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 1; reichswehr_loyalty -= 0.1;
 
-President [+ president +] has appointed [+ chancellor +] as chancellor.
+[+ president +]大統領は[+ chancellor +]を首相に任命した。
 
 
 @resources
 choose-if: resources >= 3 and kpd_ultimatum_seen = 0
-unavailable-subtitle: -3 resources - [? if resources < 3 : We do not have enough resources. ?][? if kpd_ultimatum_seen : This is beyond the point when resources could fix. ?]
-subtitle: -3 resources
+unavailable-subtitle: 資源 -3――[? if resources < 3 : 資源が不足している。?][? if kpd_ultimatum_seen : もはや資源で解決できる段階ではない。 ?]
+subtitle: 資源 -3
 on-arrival: resources -= 3; kpd_coalition_dissent -= 1;
 
-By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
+連立相手へ資源を移せば、我々の政策に対する不満を和らげられる。露骨ではあるが、効果的な解決策だ。
 
 
 @support_center
 choose-if: (weimar_coalition >= 50 and z_relation >= 40 and (ddp_relation >= 35 or lvp_relation >= 35)) or (grand_coalition >= 50 and z_relation >= 45 and ((dvp_relation >= 30 and ddp_relation >= 40) or lvp_relation >= 40))
-unavailable-subtitle: [? if grand_coalition < 50 : This would not give us a majority. ?] [? if z_relation < 45 : After working with the <span style="color: #700000;">Communists</span>, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] does not wish to form a coalition with us. ?] [? if dvp_relation < 30 and not lvp_formed and dvp_exist : The <span style="color: #C0A054;">**DVP**</span> would rather see the government fall than rescue us from the <span style="color: #700000;">Communists</span>. ?] [? if ddp_relation < 40 and not lvp_formed : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is no longer our ally. ?] [? if lvp_relation < 40 and lvp_formed : The <span style="color: #FFCC00;">**LVP**</span> is no longer our ally. ?]
+unavailable-subtitle: [? if grand_coalition < 50 : これでは過半数にならない。 ?] [? if z_relation < 45 : <span style="color: #700000;">共産主義者</span>と協力した我々に対し、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は連立を望んでいない。 ?] [? if dvp_relation < 30 and not lvp_formed and dvp_exist : <span style="color: #C0A054;">**DVP**</span>は我々を<span style="color: #700000;">共産主義者</span>から救うより、政権の崩壊を望んでいる。 ?] [? if ddp_relation < 40 and not lvp_formed : <span style="color: #D3C24D;">**[+ ddp_name +]**</span>はもはや我々の同盟者ではない。 ?] [? if lvp_relation < 40 and lvp_formed : <span style="color: #FFCC00;">**LVP**</span>はもはや我々の同盟者ではない。 ?]
 
-We could try to boot the [? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?] from our governing coalition, and form a new government with the bourgeois parties.
+我々は、我々の与党連立から[? if not sapd_toleration: <span style="color: #700000;">**KPD**</span> ?][? if sapd_toleration: <span style="color: #9B0000;">**SAPD**</span> ?]を排除し、ブルジョワ政党と新たな政府を樹立することを試みることができる。
 
-- @election_1928.weimar_coalition: Form a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition?
-- @election_1928.weimar_coalition_liberal_parliament: Form a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition?
-- @election_1928.grand_coalition: Form a Grand Coalition?
-- @let_it_happen: There is nothing we can do.
+- @election_1928.weimar_coalition: <span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>連立を組むか？
+- @election_1928.weimar_coalition_liberal_parliament: <span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>連立を組むか？
+- @election_1928.grand_coalition: 大連立を組むか？
+- @let_it_happen: 何もできない。
 
 
 @let_it_happen
@@ -77,25 +77,25 @@ go-to: let_it_happen_braun if president_ideology == "Left"; let_it_happen_hinden
 @let_it_happen_braun
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_popular_front = 0; in_left_front = 0; sapd_toleration = 0; foreign_minister_party = "I"; interior_minister_party = "I"; justice_minister_party = "I"; labor_minister_party = "I"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "I";
 
-The vote succeeds, and our coalition has collapsed. Chancellor [+ chancellor +] will lead a caretaker government until the next election.
+投票は成功し、我々の連立は崩壊した。首相[+ chancellor +]が次期選挙まで暫定政府を率いる。
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新たな選挙は[+ next_election_year +]年[+ next_election_month : month +]に行われる。
 
 @let_it_happen_hindenburg
 on-arrival: time_to_election = 3; spd_in_government = 0; in_popular_front = 0; in_left_front = 0; sapd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "LVP" if lvp_formed; finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; agriculture_minister_party = "Z"; coalition_dissent = 0; kpd_coalition_dissent = 0; pro_republic -= 5; old_middle_spd -= 3; new_middle_spd -= 2; workers_spd -= 3 if pro_republic < 50; workers_spd -= 4 if pro_republic < 40; old_middle_nsdap += 4 if pro_republic < 50; new_middle_nsdap += 3 if pro_republic < 50; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930
 go-to: elections if bruning_event_seen or year < 1930
 
-The vote succeeds, and our government has resigned. Chancellor Brüning has been appointed as the head of an acting government, consisting solely of the bourgeois parties.
+採決は成功し、我々の政府は辞任した。ブリューニングが、ブルジョワ政党のみで構成される暫定政府の首班として任命された。
 
-[? if not bruning_event_seen and year >= 1930: New elections haven't been called yet but it's likely that they will be soon, considering Brüning most likely doesn't have the majority of the Reichstag behind him. ?]
+[? if not bruning_event_seen and year >= 1930: 新たな選挙はまだ呼ばれていないが、ブリューニングが国会で過半数を確保していないことを考えると、間もなく呼ばれる可能性が高い。?]
 
 @let_it_happen_other
 on-arrival: time_to_election = 3; spd_in_government = 0; in_popular_front = 0; in_left_front = 0; sapd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "LVP" if lvp_formed; finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; agriculture_minister_party = "Z"; coalition_dissent = 0; kpd_coalition_dissent = 0; pro_republic -= 3; old_middle_spd -= 2; new_middle_spd -= 2; workers_spd -= 2 if pro_republic < 50; workers_spd -= 3 if pro_republic < 40; old_middle_nsdap += 3 if pro_republic < 50; new_middle_nsdap += 2 if pro_republic < 50
 go-to: elections
 
-The vote succeeds, and our government has resigned. Chancellor Brüning has been appointed as the head of an acting government, consisting solely of the bourgeois parties.
+採決は成功し、我々の政府は辞任した。ブリューニング首相が、ブルジョワ政党のみで構成される暫定政府の長として任命された。
 
 @elections
 call: set_next_election_time
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+新たな選挙は[+ next_election_year +]年[+ next_election_month : month +]に行われる。

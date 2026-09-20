@@ -1,4 +1,4 @@
-title: Cabinet
+title: 内閣
 is-pinned-card: true
 tags: advisor
 card-image: img/muller_cabinet.jpg
@@ -6,12 +6,12 @@ view-if: in_spd_majority or sapd_toleration or (in_emergency_government and chan
 on-arrival: last_cabinet_action = 1
 new-page: true 
 
-= Cabinet
+= 内閣
 
-With an SPD chancellor and SPD cabinet members, we can direct the affairs of the national government.
+SPD所属の首相と閣僚がいれば、中央政府の政務を直接指揮できる。
 
 - #cabinet
-- @back: Return to main
+- @back: メイン画面へ戻る
 
 @back
 on-arrival: last_cabinet_action = 0

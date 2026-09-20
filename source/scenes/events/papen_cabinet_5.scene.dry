@@ -1,5 +1,5 @@
-title: Constitution Day
-subtitle: The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic has reached its thirteenth birthday.
+title: 憲法記念日
+subtitle: <span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>共和国は建国13周年を迎えた。
 view-if: chancellor = "Papen" and papen_time and year == 1932 and month == 8 and week == 2
 new-page: true
 tags: event
@@ -18,32 +18,32 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Constitution Day
+= 憲法記念日
 
-It has been thirteen years since the adoption of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution in 1919—a date still marked as a public holiday in its commemoration.
+1919年に<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>憲法が採択されてから13年が経った。この日は今なお、憲法を記念する祝日となっている。
 
-However, Papen has chosen this occasion to unveil his plan for a so-called “New State”: an authoritarian constitution that would merge the offices of chancellor and Prussian minister president, free the chancellor from reliance on Reichstag confidence, and establish an aristocratic upper house of parliament appointed by the president. In practice, this would transform Germany into a dictatorship run by elites.
+しかしパーペンは、この機会にいわゆる「新国家」構想を発表した。それは首相とプロイセン州首相の職を統合し、首相を国会の信任から切り離し、大統領が任命する貴族的な上院を設ける権威主義憲法である。実際には、ドイツをエリート支配の独裁国へ変えるものにほかならない。
 
 - @papen
 - @papen_2
 
 @papen
-title: Use the holiday to rally support for the republic—and against Papen's ambitions.
+title: 祝日を利用して共和国への支持を結集し、パーペンの野望に対抗する。
 on-arrival: pro_republic += 3
 
-Papen’s plan bears obvious similarities to the former <span class="tooltip-text" title="good mod">*Kaiserreich*</span>, and given his <span style="color: #808080;">monarchist</span> sympathies, it’s clear that restoring the monarchy remains his ultimate goal.
+パーペンの構想は旧<span class="tooltip-text" title="良好な補正">*帝政*</span>と明らかに似ており、彼の<span style="color: #808080;">君主主義</span>への共感を考えれば、君主制復古が究極の目標であることは明白だ。
 
-[? if largest_party == "NSDAP": Surprisingly, the <span style="color: #7A3C00;">**NSDAP**</span> have also criticized the planned “New State”—ironically invoking democratic principles to argue that the largest party in parliament should be the one to form a government. ?]
+[? if largest_party == "NSDAP": 驚くべきことに、<span style="color: #7A3C00;">**NSDAP**</span>も「新国家」構想を批判している。皮肉にも民主主義の原則を持ち出し、議会第一党こそ組閣を担うべきだと論じているのである。?]
 
 @papen_2
-title: Launch an official campaign to rekindle public support for the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> system.
-subtitle: -1 resource
-unavailable-subtitle: Not enough resources.
+title: <span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>への国民的支持を再燃させる公式運動を開始する。
+subtitle: 資源－1
+unavailable-subtitle: 資源が足りない。
 choose-if: resources >= 1
 on-arrival: resources -= 1; weimar_rally = 1 if (z_relation >= 50 and (ddp_relation >= 50 or lvp_relation >= 50)); pro_republic += 5; pro_republic += 3 if weimar_rally; workers_spd += 1; new_middle_ddp += 1; new_middle_dvp += 1 if dvp_leader != "Dingeldey"; new_middle_lvp += 2; new_middle_spd += 2; new_middle_nsdap -= 4; new_middle_ddp += 2 if weimar_rally; new_middle_z += 2 if weimar_rally; old_middle_ddp += 2 if weimar_rally; old_middle_z += 2 if weimar_rally; rural_ddp += 1 if weimar_rally; new_middle_lvp += 3 if weimar_rally; old_middle_lvp += 3 if weimar_rally; rural_lvp += 2 if weimar_rally; ddp_left += 2 if weimar_rally; lvp_left += 2 if weimar_rally
 
-We have launched a propaganda campaign aimed at shifting public opinion back in favor of the system. But as always, you can’t effectively preach to hungry people. [? if z_relation >= 50 and (ddp_relation >= 50 or lvp_relation >= 50): We’ve managed to coordinate this campaign with the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition parties, countering the belief that <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> patriotism belongs solely to the <span style="color: #c00000;">socialists</span>. ?] 
+世論を再び体制支持へ向けるため、宣伝運動を開始した。しかし、空腹の人々にいくら説教しても効果はない。[? if z_relation >= 50 and (ddp_relation >= 50 or lvp_relation >= 50): 我々は<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>連合の諸党と運動を調整することに成功し、<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">主義</span>的愛国心は<span style="color: #c00000;">社会主義者</span>だけのものだという見方に対抗している。?]
 
-Papen’s plan bears obvious similarities to the former <span class="tooltip-text" title="good mod">*Kaiserreich*</span>, and given his <span style="color: #808080;">monarchist</span> sympathies, it’s clear that restoring the monarchy remains his ultimate goal.
+パーペンの構想は旧<span class="tooltip-text" title="良好な補正">*帝政*</span>と明らかに似ており、彼の<span style="color: #808080;">君主主義</span>への共感を考えれば、君主制復古が究極の目標であることは明白だ。
 
-[? if largest_party == "NSDAP": Surprisingly, the <span style="color: #7A3C00;">**NSDAP**</span> have also criticized the planned “New State”—ironically invoking democratic principles to argue that the largest party in parliament should be the one to form a government. ?]
+[? if largest_party == "NSDAP": 驚くべきことに、<span style="color: #7A3C00;">**NSDAP**</span>も「新国家」構想を批判している。皮肉にも民主主義の原則を持ち出し、議会第一党こそ組閣を担うべきだと論じているのである。?]

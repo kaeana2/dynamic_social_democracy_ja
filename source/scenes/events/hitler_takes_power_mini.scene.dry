@@ -1,27 +1,27 @@
-title: Hitler takes power.
-subtitle: The beginning of the end?
+title: ヒトラー、権力を掌握する。
+subtitle: 終焉の始まりなのか？
 view-if: (chancellor == nsdap_chancellor or president == "Hitler" or chancellor_party == "NSDAP") and rubicon_mini
 max-visits: 1
 tags: event
 new-page: true
 
-[? if hitler_deported and president != "Hitler" and chancellor != "Hitler": The first act that Chancellor [+ chancellor +] takes upon assuming office is bringing Adolf Hitler back to Germany, and giving him citizenship and an official cabinet position. ?]
+[? if hitler_deported and president != "Hitler" and chancellor != "Hitler": 首相[+ chancellor +]が就任後最初に行ったのは、アドルフ・ヒトラーをドイツへ呼び戻し、国籍と正式な閣僚職を与えることだった。?]
 
-With [+ chancellor +]'s appointment, it may seem all but over for the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. However, people like Schleicher and Brüning have surprisingly found themselves in the same cabinet as the <span style="color: #7A3C00;">Nazis</span>, perhaps taming is possible? Maybe we shouldn't act too rash, and bide our time.
+[+ chancellor +]の任命によって、<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>共和国はほとんど終わったようにも見える。しかし意外にも、シュライヒャーやブリューニングのような人物が<span style="color: #7A3C00;">ナチ</span>と同じ内閣に入っている。彼らを飼い慣らせる可能性があるのではないか？　軽率に動かず、時機を待つべきかもしれない。
 
-What are we to do now?
+今、我々はどうすべきなのか？
 
-- @fight: We will fight on the streets to prevent Hitler from taking power.
-- @bide_time: We will vote against the <span style="color: #7A3C00;">Nazis</span> in the Reichstag.
+- @fight: ヒトラーの権力掌握を阻むため、街頭で戦う。
+- @bide_time: 国会で<span style="color: #7A3C00;">ナチ</span>に反対票を投じる。
 
 @fight
 
-Do we realize that this means civil war, against the full force of the state?
+それが国家の全兵力を相手にする内戦を意味すると理解しているのか？
 
-- @civil_war: Yes.
-- @bide_time: We are not ready for war. Instead, we will vote against the <span style="color: #7A3C00;">Nazis</span> in the Reichstag.
+- @civil_war: その通りだ。
+- @bide_time: 戦争の準備はできていない。代わりに国会で<span style="color: #7A3C00;">ナチ</span>に反対票を投じる。
 
 @bide_time
-subtitle: The game is not over.
+subtitle: ゲームはまだ終わっていない。
 
-The coalition is a ticking bomb, [+ nsdap_chancellor +] will attempt to exercise complete power, only to be checked by Schleicher, who has the full confidence of President Hindenburg.
+連立政権は時限爆弾である。[+ nsdap_chancellor +]は全権掌握を試みるだろうが、ヒンデンブルク大統領の全幅の信任を得たシュライヒャーがそれを阻むことになる。

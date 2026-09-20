@@ -1,5 +1,5 @@
-title: Schleicher and the Reichsbanner
-subtitle: It's time to decide our stance on the *Reichskuratorium*.
+title: シュライヒャーと国旗団
+subtitle: *全国青少年鍛錬委員会*への態度を決める時が来た。
 view-if: chancellor = "Schleicher" and schleicher_reichsbanner_wait
 new-page: true
 tags: event
@@ -17,31 +17,31 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Schleicher and the Reichsbanner
+= シュライヒャーと国旗団
 
-Weeks ago, Schleicher reached out to the <span style="color: #c00000;">socialist</span> youth organizations and the Reichsbanner to gauge their interest in participating in the Reich Institute to Promote Youth Fitness. The program, led by retired Reichswehr officers, aims to teach "military sports" to young workers.
+数週間前、シュライヒャーは<span style="color: #c00000;">社会主義</span>青年組織と国旗団に接触し、全国青少年鍛錬委員会への参加意向を探った。退役国防軍将校が指導するこの事業は、若い労働者に「軍事スポーツ」を教えることを目的としている。
 
-We've taken a non-committal stance, putting off the issue until after the elections, and now, the General himself is chancellor. 
+我々は態度を保留し、選挙後まで判断を先送りしてきた。今や将軍自身が首相となっている。
 
-We can either build goodwill and strengthen the Reichsbanner through our participation, or maintain our total opposition against the presidential cabinets and boycott it.
+参加して友好関係を築き、国旗団を強化するか。それとも大統領内閣への全面的な反対を貫き、参加を拒むか。
 
 - @yay
 - @nay
 
 @yay
-title: Approve the participation of the Reichsbanner and our youth organizations in the *Reichskuratorium*.
-unavailable-subtitle: The party is too distrustful of Schleicher to allow this.
+title: 国旗団と我々の青年組織が*全国青少年鍛錬委員会*に参加することを認める。
+unavailable-subtitle: 党のシュライヒャーへの不信が強すぎて、認められない。
 choose-if: schleicher_spd_support >= 4 or neorevisionist_strength >= center_strength
 on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1; rb_militancy += 0.04; rb_strength += 125; workers_spd -= 4; unemployed_spd -= 4; nationalism += 10
 
-The Reichsbanner is now officially participating in the Reich Institute to Promote Youth Fitness. Their board of trustees, with our input, has swiftly established infantry and naval training schools across the country. Reichsbanner youth are the primary recipients of specialized instruction from former and decommissioned Reichswehr officers, and we have secured considerable influence within the institute’s leadership.
+国旗団は全国青少年鍛錬委員会への正式参加を決めた。我々の意見を取り入れた理事会は、全国に歩兵・海軍訓練学校を速やかに設置した。退役・退職した国防軍将校による専門訓練は主に国旗団の青年を対象とし、我々は委員会指導部で相当な影響力を確保した。
 
-This program has strengthened the Reichsbanner and improved our relations with von Schleicher. However, our collaboration with an initiative authorized by the deeply unpopular [+ chancellor +] government has cost us support—many have defected to the <span style="color: #700000;">**Communists**</span>.
+この事業によって国旗団は強化され、フォン・シュライヒャーとの関係も改善した。しかし、極めて不人気な[+ chancellor +]政権が認可した事業への協力は支持を失う原因となり、多くが<span style="color: #700000;">**共産党**</span>へ移った。
 
 @nay
-title: We need the sharpest opposition to the new Schleicher cabinet. Order the ADGB and Reichsbanner to boycott the Institute for Youth Fitness. 
+title: 新たなシュライヒャー内閣には最も厳しく対抗すべきだ。ADGBと国旗団に、全国青少年鍛錬委員会への参加拒否を命じる。
 on-arrival: schleicher_spd_r -= 1; schleicher_spd_support -= 2; labor_dissent += 10; neorevisionist_dissent += 10
 
-Our explicit rejection of Reichsbanner participation in the program has caused discontent within both the ADGB and the Reichsbanner, who have nonetheless reluctantly yielded to the party leadership’s decision. 
+事業への国旗団の参加を明確に拒否したことで、ADGBと国旗団の双方に不満が生じた。それでも両組織は、不承不承ながら党指導部の決定に従った。
 
-As a <span style="color: #c00000;">socialist</span> party, we cannot lend our support to what is, in essence, a thinly veiled rearmament scheme.
+<span style="color: #c00000;">社会主義</span>政党として、実質的には再軍備をほとんど隠そうともしない計画を支持するわけにはいかない。

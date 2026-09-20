@@ -1,5 +1,5 @@
-title: Collapse of the Saxon Cabinet
-subtitle: [? if saxony_leader == "Bünger": Wilhelm Bünger?][? if saxony_leader == "Heldt": Max Heldt?] faces a vote of no confidence.
+title: ザクセン内閣の崩壊
+subtitle: [? if saxony_leader == "Bünger": ヴィルヘルム・ビュンガー?][? if saxony_leader == "Heldt": マックス・ヘルト?]が不信任投票に直面する。
 view-if: saxony_right and year == 1930 and month >= 2
 on-arrival: {!
 Q.saxony_kill = 1;
@@ -44,22 +44,22 @@ max-visits: 1
 tags: event
 new-page: true
 
-= Collapse of the Saxon Cabinet
+= ザクセン内閣の崩壊
 
-The [+ saxony_leader +] Cabinet's days are numbered following a dispute over the Saxon Reichsrat delegation's support for the Young Plan, which has led to a loss of confidence from the <span style="color: #3E88B3;">**DNVP**</span>, <span style="color: #11DD11;">**SLV**</span>, and <span style="color: #7A3C00;">**NSDAP**</span>.
+ヤング案を支持するザクセンの全国参議院代表団をめぐる対立により、<span style="color: #3E88B3;">**DNVP**</span>、<span style="color: #11DD11;">**SLV**</span>、<span style="color: #7A3C00;">**NSDAP**</span>が信任を撤回した。[+ saxony_leader +]内閣の命運は尽きようとしている。
 
-We can either exit the opposition and prop up the cabinet to avoid new elections, or maintain our role in opposition-supporting all votes of no confidences. [? if spd_coalition_possible_saxony >= 50: While a [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition with the liberals could be an option, the strong leftist leanings of the Saxon <span style="color: #c00000;">**SPD**</span> make such an alliance unlikely. ?]
+野党を離れて内閣を支え、新選挙を避けるか。それとも野党にとどまり、すべての不信任案を支持するか。[? if spd_coalition_possible_saxony >= 50: 自由主義勢力との[? if lvp_formed and stegerwald_path: <span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>?][? if not lvp_formed or not stegerwald_path: 大?]連立も選択肢だが、ザクセン<span style="color: #c00000;">**SPD**</span>の左傾が強く、実現は難しい。?]
 
 - @united_left_saxony
-- @grand_coalition_saxony: We will form a [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition!
+- @grand_coalition_saxony: [? if lvp_formed and stegerwald_path: <span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>?][? if not lvp_formed or not stegerwald_path: 大?]連立を組む！
 - @no_majority_saxony
 
 @united_left_saxony
-title: We will form a United Left coalition with the <span style="color: #700000;">**KPD**</span>.
-subtitle: History will repeat itself.
+title: <span style="color: #700000;">**KPD**</span>と左翼統一連立を組む。
+subtitle: 歴史は繰り返す。
 view-if: left_coalition_saxony >= 50
 choose-if: (kpd_relation >= 35 and kpd_leader == "Conciliators") or (kpd_relation >= 55 and kpd_leader != "Conciliators")
-unavailable-subtitle: Despite having the necessary votes, we lack the necessary relations.
+unavailable-subtitle: 必要な議席はあるが、必要な関係がない。
 on-arrival: red_saxony = 1; z_relation -= 7; ddp_relation -= 7; dvp_relation -= 7; lvp_relation -= 7; coup_progress += 5; hindenburg_angry += 60; rfb_militancy += 0.08; rfb_strength += 150; sa_strength += 80; sh_strength += 80; strife += 1; workers_spd += 5; workers_kpd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; communist_coalition += 3; kpd_relation += 15
 on-display: {!  
     var cardEl = document.createElement('div');  
@@ -74,26 +74,26 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-Surprisingly, despite reluctance on both sides due to fears that the <span style="color: #808080;">reactionary</span> Hindenburg will order a <i>Reichsexekution</i> if a coalition were to form. <span style="color: #c00000;">Red</span> Saxony is restored! 
+<span style="color: #808080;">反動的な</span>ヒンデンブルクが連立成立時に<i>ライヒ執行</i>を命じるという懸念から、双方とも消極的だった。それにもかかわらず、意外にも<span style="color: #c00000;">赤い</span>ザクセンが復活した！
 
-As one of the most left-wing and industrial states in Germany, we will use our leverage to implement comprehensive reforms and transform Saxony into a stronghold of <span style="color: #c00000;">socialism</span>. Hindenburg’s patience is especially thin. Tread carefully.
+ドイツ有数の左派的かつ工業的な州として、我々の影響力を用いて包括的な改革を行い、ザクセンを<span style="color: #c00000;">社会主義</span>の拠点に変える。ヒンデンブルクの忍耐は特に限界に近い。慎重に進めよ。
 
 @grand_coalition_saxony
-subtitle: We have somehow reconciled with the bourgeois parties, that they're willing to govern with us again.
-unavailable-subtitle: [? if z_relation < 45 and stegerwald_path: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if dvp_toleration_threshold_fail_saxony: We need higher relations with the [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?][? if left_strength >= 30: Our Saxon organization is too left-wing to even consider this as an option—after all, their stubborn refusal in the past led to the expulsion of the majority of the parliamentary faction and the subsequent formation of the <span style="color: #fe9e00;">ASPD</span>. ?]
+subtitle: どうにかブルジョワ諸党と和解し、再び我々と統治する意思を得た。
+unavailable-subtitle: [? if z_relation < 45 and stegerwald_path: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]との関係改善が必要だ。?][? if dvp_toleration_threshold_fail_saxony: [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]との関係改善が必要だ。?][? if left_strength >= 30: ザクセンの党組織は左寄りすぎて、この選択肢を検討すらしない。過去の頑なな拒否によって議員団の多数が除名され、<span style="color: #fe9e00;">ASPD</span>が結成されたのだから。?]
 view-if: spd_coalition_saxony >= 50
 choose-if: spd_coalition_possible_saxony and left_strength < 30
 on-arrival: saxony_spd = 1; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_spd += 3; unemployed_spd += 3; z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 5; pro_republic += 3; reformist_dissent -= 15; reformist_strength += 10; aspd_dead = 1; saxony_groko = 1
 
-Somehow, the bourgeois parties are willing to form a [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition with us, replacing the [+ saxony_leader +] Cabinet and preventing the need for new elections.
+どうにかブルジョワ諸党が我々との[? if lvp_formed and stegerwald_path: <span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>?][? if not lvp_formed or not stegerwald_path: 大?]連立に応じ、[+ saxony_leader +]内閣に代わる政府を組んで新選挙を回避した。
 
-With the <span style="color: #fe9e00;">**ASPD**</span> (whose Saxon chapter is notably more sane) now convinced of our reformist path, they have rejoined the Saxon <span style="color: #c00000;">**SPD**</span>!
+<span style="color: #fe9e00;">**ASPD**</span>は我々の改革路線を受け入れ（ザクセン支部は明らかに分別がある）、ザクセン<span style="color: #c00000;">**SPD**</span>へ復帰した！
 
 @no_majority_saxony
-title: A majority can't be found!
-subtitle: New elections will be called.
+title: 過半数を確保できない！
+subtitle: 新選挙が行われる。
 on-arrival: saxony_1930_trigger = 1
 
-As expected, the bourgeois government in Saxony isn't able to survive the vote of no confidence. New elections are called for June, but the [+ saxony_leader +] Cabinet continues to operate as a caretaker government.
+予想どおり、ザクセンのブルジョワ政府は不信任投票を乗り切れなかった。6月に新選挙が行われるが、[+ saxony_leader +]内閣は選挙管理内閣として引き続き職務を担う。
 
-This grants an opportunity for the <span style="color: #7A3C00;">**NSDAP**</span> to exploit and capitalize on political instability and the perceived failure of parliamentary democracy.
+これにより<span style="color: #7A3C00;">**NSDAP**</span>は、政治的不安定と議会制民主主義の失敗という印象を利用して勢力を伸ばす機会を得た。

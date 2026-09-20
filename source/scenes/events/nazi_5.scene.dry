@@ -1,23 +1,21 @@
-title: Strasser and Hindenburg
-subtitle: A rumored meeting between the two men?
+title: シュトラッサーとヒンデンブルク
+subtitle: 二人が会談したとの噂か？
 view-if: chancellor = "Schleicher" and schleicher_time == 4
-on-arrival: nazi_explode += 1; schleicher_goal = "Pray that Strasser does something";
+on-arrival: nazi_explode += 1; schleicher_goal = "シュトラッサーが動くことを祈る";
 new-page: true
 tags: event
 priority: -2
 max-visits: 1
 face-image: img/strasser.jpg
 
-= Strasser and Hindenburg
+= シュトラッサーとヒンデンブルク
 
-With Strasser’s return from vacation, many of his loyalists—and [+ nsdap_leader +] himself—interpret his prolonged silence as quiet scheming. Frustration is beginning to boil over among his supporters, who have grown impatient with his inaction and are now publicly criticizing the party's all-or-nothing strategy.
+シュトラッサーが休暇から戻ると、多くの忠誠者、そして[+ nsdap_leader +]本人も、彼の長い沈黙を密かな策動と受け取った。何もしない彼に業を煮やした支持者たちの不満は沸騰し始め、今や党の全か無かの戦略を公然と批判している。
 
-[+ nsdap_leader +]'s suspicions are confirmed when Schleicher purposefully leaks news of a private meeting between Strasser and President Hindenburg. The President is said to have expressed relief at finding “nothing radical” about Strasser and signaled willingness to appoint him as vice chancellor. Schleicher, however, prefers to keep him outside the cabinet—believing that such an appointment would trigger an irreparable rift between Strasser and the party over his betrayal.
+シュライヒャーがシュトラッサーとヒンデンブルク大統領の非公式会談を意図的に漏洩すると、[+ nsdap_leader +]の疑念は確信に変わった。大統領はシュトラッサーに「急進的なところは何もない」と知って安堵し、副首相に任命する意向を示したという。しかしシュライヒャーは彼を閣外に置く方を好んだ。任命されれば、その裏切りをめぐってシュトラッサーと党の間に修復不能な亀裂が生じると考えたのである。
 
-Still, most of Strasser’s followers aren’t seeking a break. They hope for reconciliation, blaming Goebbels and Göring—his chief rivals—for leading Hitler down a ruinous path. Schleicher appears to share that hope, intending to use Strasser as a lever to shift [+ nsdap_leader +] once the two reconciled.
+それでもシュトラッサーの支持者の大半は決裂を望んでいない。彼らは、最大の政敵ゲッベルスとゲーリングがヒトラーを破滅の道へ導いたと非難し、和解を期待している。シュライヒャーも同じ期待を抱いているらしく、両者が和解した後にシュトラッサーを梃子として[+ nsdap_leader +]を動かすつもりである。
 
-> *"Strasser is plotting. He was with Hindenburg... That’s what I call a traitor. I always saw through him."*
+> *「シュトラッサーは陰謀を企てている。奴はヒンデンブルクと会っていた……こういう奴を裏切り者というのだ。私は初めから見抜いていた」*
 
- - Joseph Goebbels, to his diary, [+ year +]
-
- 
+ - ヨーゼフ・ゲッベルスの日記、[+ year +]年

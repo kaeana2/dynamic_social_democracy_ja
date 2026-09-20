@@ -1,5 +1,5 @@
-title: Prussian Government Collapses
-subtitle: Our coalition partners are dissolving the Prussian government.
+title: プロイセン政府崩壊
+subtitle: 連立相手がプロイセン政府を崩壊させようとしている。
 view-if: ((z_relation < 30 and z_ideology == "Right") or (z_relation < 25 and z_leader == "Joos") or (z_relation < 20 and z_leader == "Kaiser") or ((((ddp_relation < 30 and ddp_ideology == "Right") or (ddp_relation < 25 and ddp_ideology == "Moderate") or (ddp_relation < 20 and ddp_ideology == "Left" and ddp_cohesion < 8)) and not lvp_formed) or (((lvp_relation < 40 and lvp_ideology == "Right") or (lvp_relation < 35 and lvp_ideology == "Moderate") or (lvp_relation < 30 and lvp_ideology == "Left")) and lvp_formed))) and in_weimar_coalition_prussia == 1 and not (year == 1928 and month < 6)
 on-arrival: coalition_dissent += 2 if not in_left_front; was_in_social_catholic_coalition_prussia = 0; was_in_social_liberal_coalition_prussia = 0; was_in_weimar_coalition_prussia = 0; was_in_grand_coalition_prussia = 0; was_in_social_catholic_coalition_prussia = 1 if in_social_catholic_coalition_prussia == 1 or in_minority_social_catholic_coalition_prussia == 1; was_in_social_liberal_coalition_prussia = 1 if in_social_liberal_coalition_prussia == 1 or in_minority_social_liberal_coalition_prussia == 1; was_in_weimar_coalition_prussia = 1 if ((in_weimar_coalition_prussia == 1 or in_minority_weimar_coalition_prussia == 1) or (in_grand_coalition_prussia == 1 and lvp_formed)); was_in_grand_coalition_prussia = 1 if (in_grand_coalition_prussia == 1 or in_minority_grand_coalition_prussia == 1); in_right_coalition_prussia = 0; in_social_catholic_coalition_prussia = 0; in_social_liberal_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; in_minority_social_catholic_coalition_prussia = 0; in_minority_social_liberal_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0
 on-departure: {!
@@ -15,11 +15,11 @@ new-page: true
 tags: event
 face-image: img/weimar_coalition.jpg
 
-= Democratic Bulwark Dismantled
+= 民主主義の防波堤の解体
 
-We have somehow antagonized the parties involved in the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition ruling over Prussia, and our coalition partners have called a vote of no confidence against us.
+プロイセンを統治する<span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>連立の諸党をどういうわけか敵に回し、連立相手から我々に対する不信任投票を求められた。
 
-[? if spd_r_prussia + kpd_r_prussia + sapd_r_prussia < 50: The only alternative coalition that can be formed with the current composition of the state parliament is a broad right-wing coalition, ranging from the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to the [? if center_right_coalition_prussia >= 50: <span style="color: #3E88B3;">**DNVP**</span>?][? if center_right_coalition_prussia < 50: <span style="color: #7A3C00;">**NSDAP**</span>?]. [? if dnvp_ideology == "Radical" and not dnvp_westarp: However, this is heavily unlikely with the <span style="color: #3E88B3;">**DNVP**</span>'s all-or-nothing stance on governance. ?]?][? if spd_r_prussia + kpd_r_prussia + sapd_r_prussia >= 50: New elections will have to be called, as all parties to our right lack the votes necessary to form an alternative majority coalition—even if they were to unite behind a single candidate. ?]
+[? if spd_r_prussia + kpd_r_prussia + sapd_r_prussia < 50: 現在の州議会構成で成立し得る唯一の代替政権は、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]から[? if center_right_coalition_prussia >= 50: <span style="color: #3E88B3;">**DNVP**</span>?][? if center_right_coalition_prussia < 50: <span style="color: #7A3C00;">**NSDAP**</span>?]までを含む広範な右派連立である。[? if dnvp_ideology == "Radical" and not dnvp_westarp: しかし<span style="color: #3E88B3;">**DNVP**</span>の政権運営に対する全か無かの姿勢から、実現性は極めて低い。?]?][? if spd_r_prussia + kpd_r_prussia + sapd_r_prussia >= 50: 我々より右の全政党が統一候補の下に結集しても代替多数派を組む議席がないため、新選挙を行うほかない。?]
 
 - @spd_majority
 - @spd_minority
@@ -30,117 +30,117 @@ We have somehow antagonized the parties involved in the <span style="color: #000
 - @bourgeois_coalition_kvp
 - @left_coalition
 - @progressive_coalition
-- @new_elections: New elections will be called.
+- @new_elections: 新選挙を行う。
 
 
 @spd_majority
-title: <span style="color: #c00000;">**SPD**</span> majority alone
-subtitle: <span style="color: #c00000;">**SPD**</span>: [+ spd_r_prussia +]%
+title: <span style="color: #c00000;">**SPD**</span>単独過半数
+subtitle: <span style="color: #c00000;">**SPD**</span>：[+ spd_r_prussia +]％
 view-if: spd_r_prussia >= 50
 on-arrival: pro_republic += 5; reichswehr_loyalty -= 0.05 if chancellor == "Braun"; ddp_right += 2; dvp_right += 4; lvp_right += 3; liberal_cooperation += 5; bourgeois_cooperation += 5; prussia_leader = "Braun"; in_spd_majority_prussia = 1; prussian_police_loyalty += 0.1; prussian_police_strength += 50; democratization += 3; coup_progress += 1; capital_strike_progress += 2; ddp_relation -= 3; lvp_relation -= 3; z_relation -= 3; spd_prussia = 1
 
-Finally, the <span style="color: #c00000;">**SPD**</span> can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. However, our former coalition partners are going to start drifting to the right.
+ついに<span style="color: #c00000;">**SPD**</span>が単独統治できる！ 長い選挙運動が実を結んだ。連立運営を気にする必要はなく、何でも可能だ。ただし、かつての連立相手は右へ動き始めるだろう。
 
-Braun is selected to be the Minister-President of Prussia.
+ブラウンがプロイセン州首相に選出された。
 
 @spd_minority
-title: <span style="color: #c00000;">**SPD**</span> minority
-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #9B0000;">SAPD</span> toleration: ([+ socialist_front_prussia +]%)
+title: <span style="color: #c00000;">**SPD**</span>少数政権
+subtitle: <span style="color: #c00000;">**SPD**</span>＋<span style="color: #9B0000;">SAPD</span>の閣外協力：（[+ socialist_front_prussia +]％）
 view-if: socialist_front_prussia >= 50 and kpd_relation >= 50 and sapd_formed and spd_r_prussia < 50
 on-arrival: pro_republic += 5; reichswehr_loyalty -= 0.05 if chancellor == "Braun"; ddp_right += 2; dvp_right += 4; lvp_right += 3; liberal_cooperation += 5; bourgeois_cooperation += 5; prussia_leader = "Braun"; sapd_toleration_prussia = 1; prussian_police_loyalty += 0.1; prussian_police_strength += 50; democratization += 3; coup_progress += 1; capital_strike_progress += 2; ddp_relation -= 3; lvp_relation -= 3; z_relation -= 3; spd_prussia = 1
 
-We have managed to form a <span style="color: #c00000;">**SPD**</span> minority government, thanks to the toleration of the <span style="color: #9B0000;">SAPD</span>. We are no longer bound by the demands of our former coalition partners, though they are going to start drifting to the right.
+<span style="color: #9B0000;">SAPD</span>の閣外協力により、<span style="color: #c00000;">**SPD**</span>少数政権の樹立に成功した。かつての連立相手の要求に縛られなくなったが、彼らは右へ動き始めるだろう。
 
-Braun is selected to be the Minister-President of Prussia.
+ブラウンがプロイセン州首相に選出された。
 
 @far_right_coalition_prussia
-title: <span style="color: #7A3C00;">Far</span>-[? if not dnf_formed:<span style="color: #3E88B3;">right</span>?][? if dnf_formed:<span style="color: #003755;">right</span>?] Coalition
-subtitle: <span style="color: #7A3C00;">**NSDAP**</span> + [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span> ?] ([+ far_right_coalition_prussia +]%)
+title: <span style="color: #7A3C00;">極</span>[? if not dnf_formed:<span style="color: #3E88B3;">右</span>?][? if dnf_formed:<span style="color: #003755;">右</span>?]連立
+subtitle: <span style="color: #7A3C00;">**NSDAP**</span>＋[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span> ?]（[+ far_right_coalition_prussia +]％）
 view-if: far_right_coalition_prussia >= 50
 on-arrival: in_far_right_coalition_prussia = 1; coup_progress += 5; rural_nsdap += 10; workers_nsdap += 10; new_middle_nsdap += 10; old_middle_nsdap += 10; unemployed_nsdap += 10; workers_spd -= 5; workers_kpd -= 5; prussia_leader = "Goring"; sh_strength += 100; sh_militancy += 0.1; sa_strength += 200; sa_militancy += 0.1; rfb_banned = 1; rfb_strength -= 50; rb_strength -= 200; prussian_police_loyalty -= 0.5
 
-There are enough votes for the <span style="color: #7A3C00;">Nazis</span> and the [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span> ?] to form a coalition. Hermann Göring is elevated to the position of Minister-President and immediately starts dismantling its democratic institutions.
+<span style="color: #7A3C00;">ナチ党</span>と[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**DNF**</span> ?]には連立を組むだけの議席がある。ヘルマン・ゲーリングが州首相に昇格し、直ちに民主的制度の解体を始めた。
 
-A wave of terror and repression unfolds, targeting the <span style="color: #c00000;">socialists</span> and <span style="color: #700000;">communists</span>. Violence erupts in the streets, with bullets flying and leftists being killed or imprisoned.
+<span style="color: #c00000;">社会主義者</span>と<span style="color: #700000;">共産主義者</span>を標的とする恐怖と弾圧の波が広がる。街頭では暴力が噴出し、銃弾が飛び交い、左派が殺害・投獄されている。
 
 @right_coalition
-title: A Bürgerblock is formed.
-subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #3E88B3;">**DNVP**</span> + **Others** ([+ right_coalition_prussia +]%)
-unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;+ <span style="color: #FFCC00;">LVP</span>?] + <span style="color: #3E88B3;">DNVP</span> + Others ([+ right_coalition_prussia +]%) [? if (dnvp_ideology == "Radical" and not dnvp_westarp) or (year = 1929 and month >= 7):- The <span style="color: #3E88B3;">DNVP</span> is not interested in a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].?]
+title: 市民ブロックが成立。
+subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span>＋[? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]＋<span style="color: #3E88B3;">**DNVP**</span>＋**その他**（[+ right_coalition_prussia +]％）
+unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span>[? if dvp_exist:＋<span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:＋<span style="color: #FFCC00;">LVP</span>?]＋<span style="color: #3E88B3;">DNVP</span>＋その他（[+ right_coalition_prussia +]％）[? if (dnvp_ideology == "Radical" and not dnvp_westarp) or (year = 1929 and month >= 7):― <span style="color: #3E88B3;">DNVP</span>は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]との連立に関心がない。?]
 view-if: right_coalition_prussia >= 50 and not cvp_formed
 choose-if: (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)
 on-arrival: in_right_coalition_prussia = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; new_middle_spd -= 4; rural_spd -= 2; dvp_right += 1; center_dissent += 10; left_dissent += 5; labor_dissent += 20; reformist_dissent += 20; neorevisionist_dissent += 10; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 1; reformist_dissent += 10; prussian_police_loyalty -= 0.1; prussian_police_strength -= 10; pro_republic -= 3; ddp_relation -= 4; z_relation -= 4; dvp_relation -= 4; lvp_relation -= 4
 
-A right coalition is formed, albeit with an extremely narrow majority. They will begin undoing years of reform and democratization that we fought hard to achieve and will let <span style="color: #3E88B3;">right</span>-<span style="color: #7A3C00;">wing</span> paramilitaries like the <span style="color: #3E88B3;">Stahlhelm</span> and the <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> run free.
+極めて僅差ながら、右派連立が成立した。彼らは我々が苦闘の末に実現した長年の改革と民主化を覆し、<span style="color: #3E88B3;">右</span><span style="color: #7A3C00;">翼</span>準軍事組織である<span style="color: #3E88B3;">鉄兜団</span>や<span style="color: #7A3C00;">ナチ党</span>の<span style="color: #7A3C00;">**SA**</span>を野放しにするだろう。
 
-It won't take long for the government to collapse and for us to take power through new elections. But when it eventually does, we won't have much allies as our former coalition partners are beginning to shift to the right. When the time comes, who will stand with us?
+政府はいずれ崩壊し、新選挙で我々が政権を握るだろう。しかし、かつての連立相手が右へ移り始めているため、その時には味方がほとんどいない。いざという時、誰が我々とともに立つのか。
 
-[? if z_leader != "Stegerwald": Adam Stegerwald?][? if z_leader == "Stegerwald": Heinrich Brüning?] of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected to be the Minister-President of Prussia.
+[? if z_leader != "Stegerwald": アダム・シュテーガーヴァルト?][? if z_leader == "Stegerwald": ハインリヒ・ブリューニング?]が、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]からプロイセン州首相に選出された。
 
 @center_right_coalition
-title: A Bürgerblock is formed.
-unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span> + [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">DVP</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">LVP</span>?] + Others + <span style="color: #3E88B3;">DNVP</span> ([+ center_right_coalition_prussia +]%) [? if (year = 1929 and month >= 7): The <span style="color: #3E88B3;">DNVP</span> is not interested in a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].?]
-subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?] + **Others** + <span style="color: #3E88B3;">**DNVP**</span> ([+ center_right_coalition_prussia +]%)
+title: 市民ブロックが成立。
+unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span>＋[? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if dvp_exist:＋<span style="color: #C0A054;">DVP</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">LVP</span>?]＋その他＋<span style="color: #3E88B3;">DNVP</span>（[+ center_right_coalition_prussia +]％）[? if (year = 1929 and month >= 7): <span style="color: #3E88B3;">DNVP</span>は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]との連立に関心がない。?]
+subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span>＋<span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:＋<span style="color: #C0A054;">**DVP**</span>?]＋**その他**＋<span style="color: #3E88B3;">**DNVP**</span>（[+ center_right_coalition_prussia +]％）
 view-if: dnvp_ideology == "Moderate" and center_right_coalition_prussia >= 50 and dnf_formed and right_coalition_prussia < 50 and not lvp_formed and not cvp_formed
 choose-if: not (year = 1929 and month >= 7)
 on-arrival: in_center_right_coalition_prussia = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; new_middle_spd -= 4; ddp_right += 1; ddp_cohesion -= 1; dvp_right += 1; lvp_right += 1; center_dissent += 10; left_dissent += 5; labor_dissent += 20; reformist_dissent += 20; neorevisionist_dissent += 10; prussian_police_loyalty -= 0.06; prussian_police_strength -= 8; pro_republic -= 3; ddp_relation -= 4; z_relation -= 4; dvp_relation -= 4; lvp_relation -= 4
 
-A center-right coalition is formed featuring an broad array of parties to the right of us. They will begin undoing years of reform and democratization that we fought hard to achieve and will let <span style="color: #3E88B3;">right</span>-<span style="color: #7A3C00;">wing</span> paramilitaries like the <span style="color: #3E88B3;">Stahlhelm</span> and the <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> run free.
+我々より右の幅広い諸党からなる中道右派連立が成立した。彼らは我々が苦闘の末に実現した長年の改革と民主化を覆し、<span style="color: #3E88B3;">右</span><span style="color: #7A3C00;">翼</span>準軍事組織である<span style="color: #3E88B3;">鉄兜団</span>や<span style="color: #7A3C00;">ナチ党</span>の<span style="color: #7A3C00;">**SA**</span>を野放しにするだろう。
 
-It won't take long for the government to collapse and for us to take power through new elections. But when it eventually does, we won't have much allies as our former coalition partners are beginning to shift to the right. When the time comes, who will stand with us?
+政府はいずれ崩壊し、新選挙で我々が政権を握るだろう。しかし、かつての連立相手が右へ移り始めているため、その時には味方がほとんどいない。いざという時、誰が我々とともに立つのか。
 
-[? if z_leader != "Stegerwald": Adam Stegerwald?][? if z_leader == "Stegerwald": Heinrich Brüning?] of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected to be the Minister-President of Prussia.
+[? if z_leader != "Stegerwald": アダム・シュテーガーヴァルト?][? if z_leader == "Stegerwald": ハインリヒ・ブリューニング?]が、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]からプロイセン州首相に選出された。
 
 @bourgeois_coalition
-title: A Bürgerblock is formed.
-unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span> + [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">DVP</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">LVP</span>?] + Others ([+ center_right_coalition_prussia +]%)
-subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?] + **Others** ([+ center_right_coalition_prussia +]%)
+title: 市民ブロックが成立。
+unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span>＋[? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if dvp_exist:＋<span style="color: #C0A054;">DVP</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">LVP</span>?]＋その他（[+ center_right_coalition_prussia +]％）
+subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span>＋<span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:＋<span style="color: #C0A054;">**DVP**</span>?]＋**その他**（[+ center_right_coalition_prussia +]％）
 view-if: cvp_formed and center_right_coalition_prussia >= 50
 on-arrival: in_center_right_coalition_prussia = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; new_middle_spd -= 4; ddp_right += 2; ddp_cohesion -= 2; dvp_right += 3; lvp_right += 3; center_dissent += 10; left_dissent += 5; labor_dissent += 20; reformist_dissent += 20; neorevisionist_dissent += 10; prussian_police_loyalty -= 0.08; prussian_police_strength -= 15; pro_republic -= 3; ddp_relation -= 5; z_relation -= 5; dvp_relation -= 5; lvp_relation -= 5
 
-Letting go the democratic bulwark to the right-wing parties is deeply unpopular among all party members, and provides no discernible benefit. Our members are furious that we have alienated the bourgeois parties enough to let this happen.
+民主主義の防波堤を右派諸党へ明け渡すことは、全党員に極めて不評であり、目に見える利益もない。ブルジョワ諸党をここまで遠ざけたことに、党員は激怒している。
 
-[? if z_leader != "Stegerwald": Adam Stegerwald?][? if z_leader == "Stegerwald": Heinrich Brüning?] of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected to be the Minister-President of Prussia.
+[? if z_leader != "Stegerwald": アダム・シュテーガーヴァルト?][? if z_leader == "Stegerwald": ハインリヒ・ブリューニング?]が、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]からプロイセン州首相に選出された。
 
 @bourgeois_coalition_kvp
-title: A Bürgerblock is formed.
-unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span> + [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">DVP</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">LVP</span>?] + Others[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span>?] ([+ bourgeois_coalition_prussia +]%)
-subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] + **Others**[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span>?] ([+ bourgeois_coalition_prussia +]%)
+title: 市民ブロックが成立。
+unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span>＋[? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if dvp_exist:＋<span style="color: #C0A054;">DVP</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">LVP</span>?]＋その他[? if kvp_formed:＋<span style="color: #0087DC;">**KVP**</span>?]（[+ bourgeois_coalition_prussia +]％）
+subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span>＋[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:＋<span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]＋**その他**[? if kvp_formed:＋<span style="color: #0087DC;">**KVP**</span>?]（[+ bourgeois_coalition_prussia +]％）
 view-if: bourgeois_coalition_prussia >= 50 and not cvp_formed
 on-arrival: in_center_right_coalition_prussia = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; new_middle_spd -= 4; ddp_right += 2; ddp_cohesion -= 2; dvp_right += 2; lvp_right += 2; center_dissent += 10; left_dissent += 5; labor_dissent += 20; reformist_dissent += 20; neorevisionist_dissent += 10; ddp_right += 1; lvp_right += 3; prussian_police_loyalty -= 0.06; prussian_police_strength -= 8; pro_republic -= 3; ddp_relation -= 4; z_relation -= 4; dvp_relation -= 4; lvp_relation -= 4
 
-Letting go the democratic bulwark to the right-wing parties is deeply unpopular among all party members, and provides no discernible benefit. Our members are furious that we have alienated the bourgeois parties enough to let this happen.
+民主主義の防波堤を右派諸党へ明け渡すことは、全党員に極めて不評であり、目に見える利益もない。ブルジョワ諸党をここまで遠ざけたことに、党員は激怒している。
 
-[? if z_leader != "Stegerwald": Adam Stegerwald?][? if z_leader == "Stegerwald": Heinrich Brüning?] of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected to be the Minister-President of Prussia.
+[? if z_leader != "Stegerwald": アダム・シュテーガーヴァルト?][? if z_leader == "Stegerwald": ハインリヒ・ブリューニング?]が、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]からプロイセン州首相に選出された。
 
 @left_coalition
-title: Is a United Left coalition possible?
-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> [? if sapd_formed: + <span style="color: #9B0000;">**SAPD**</span> ?] ([+ left_coalition_prussia +]%)
-unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #700000;">KPD</span> [? if sapd_formed: + <span style="color: #9B0000;">SAPD</span> ?] ([+ left_coalition_prussia +]%). [? if kpd_relation < 50 : We do not have adequate relations with the <span style="color: #700000;">KPD</span>. ?][? if communist_coalition < 3 : The <span style="color: #700000;">Communists</span> are too committed to their radical ways to partake in government. ?] [? if (president_ideology == "Right" or president == "Hindenburg") and not presidential_powers: [+ president +] will perform a <i>Reichsexekution</i> upon our government. ?] [? if reformist_strength >= left_strength: Our own Prussian party has ruled out this possibility. ?]
+title: 左翼統一連立は可能か。
+subtitle: <span style="color: #c00000;">**SPD**</span>＋<span style="color: #700000;">**KPD**</span>[? if sapd_formed:＋<span style="color: #9B0000;">**SAPD**</span>?]（[+ left_coalition_prussia +]％）
+unavailable-subtitle: <span style="color: #c00000;">SPD</span>＋<span style="color: #700000;">KPD</span>[? if sapd_formed:＋<span style="color: #9B0000;">SAPD</span>?]（[+ left_coalition_prussia +]％）。[? if kpd_relation < 50 : <span style="color: #700000;">KPD</span>との関係が不十分だ。?][? if communist_coalition < 3 : <span style="color: #700000;">共産党</span>は急進路線に固執しすぎており、政権に参加できない。?] [? if (president_ideology == "Right" or president == "Hindenburg") and not presidential_powers: [+ president +]が我が政府に<i>ライヒ執行</i>を行う。?] [? if reformist_strength >= left_strength: 我が党のプロイセン組織がこの可能性を否定している。?]
 view-if: left_coalition_prussia >= 50
 choose-if: (kpd_relation >= 50 or (kpd_leader == "Conciliators" and kpd_relation >= 40)) and communist_coalition >= 3 and ((president_ideology != "Right" and president != "Hindenburg") or presidential_powers) and left_strength >= reformist_strength
 on-arrival: in_left_front_prussia = 1; prussia_leader = "Rosenfeld"; reichswehr_loyalty -= 0.05; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 3; liberal_cooperation += 5; bourgeois_cooperation += 10; kpd_relation += 10; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 8; dvp_relation -= 8; coup_progress += 2; coup_progress += 1 if in_left_front; capital_strike_progress += 2; capital_strike_progress += 1 if in_left_front; reformist_dissent += 25; reformist_strength -= 15; left_dissent -= 15; left_strength += 15; prussian_police_loyalty -= 0.1; rfb_strength += 50; rfb_militancy += 0.05; spd_prussia = 1
 
-Somehow, surprisingly, the left coalition is successfully formed, without appointing a <span style="color: #700000;">communist</span> as Minister-President. The consensus choice for Minister-President, accepted by the <span style="color: #c00000;">**SPD**</span>, <span style="color: #700000;">**KPD**</span>, is[? if left_split == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if left_split == 0: belongs?][? if left_split == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #700000;">**KPD**</span> members through his work..
+意外にも、<span style="color: #700000;">共産党員</span>を州首相にせず左派連立が成立した。<span style="color: #c00000;">**SPD**</span>と<span style="color: #700000;">**KPD**</span>が受け入れた州首相の統一候補は、[? if left_split == 1:<span style="color: #9B0000;">**SAPD**</span>党員の?]クルト・ローゼンフェルトである。彼は<span style="color: #c00000;">**SPD**</span>左派に[? if left_split == 0:属し?][? if left_split == 1:属していた人物で?]、仕事を通じて<span style="color: #700000;">**KPD**</span>党員を弁護してきた。
 
-In response to the <span style="color: #700000;">**KPD**</span>'s entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that our government will be unstable and incompetent, and will collapse of its own accord, eventually enabling the destruction of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. [? if in_left_front: The right will be more active in resisting our rule considering we are also ruling with the <span style="color: #700000;">**KPD**</span> on the federal level too. ?]
+<span style="color: #700000;">**KPD**</span>の入閣に対し、右派は当面「様子見」の姿勢を取る。我が政府は不安定で無能なため自壊し、やがて<span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>共和国を破壊できるようになると見込んでいる。[? if in_left_front: 全国でも<span style="color: #700000;">**KPD**</span>と共同統治しているため、右派は我々の州統治に一層激しく抵抗するだろう。?]
 
-- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #700000;">**KPD**</span> presents us with a list of demands.
+- @prussia_election_1928.kpd_goals_prussia: <span style="color: #700000;">**KPD**</span>が要求一覧を示す。
 
 @progressive_coalition
-title: Is a progressive coalition possible?
-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?] ([+ progressive_coalition_prussia +]%)
+title: 進歩派連立は可能か。
+subtitle: <span style="color: #c00000;">**SPD**</span>＋<span style="color: #700000;">**KPD**</span>＋<span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if sapd_formed:＋<span style="color: #9B0000;">**SAPD**</span>?]（[+ progressive_coalition_prussia +]％）
 view-if: ddp_relation >= 60 and ddp_ideology == "Left" and ((kpd_relation >= 60 and kpd_leader == "Thälmann") or (kpd_relation >= 40 and kpd_leader == "Conciliators")) and not lvp_formed
-unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #700000;">KPD</span> + <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">SAPD</span>?] ([+ progressive_coalition_prussia +]%) - Secret mode needs to be enabled.
+unavailable-subtitle: <span style="color: #c00000;">SPD</span>＋<span style="color: #700000;">KPD</span>＋<span style="color: #D3C24D;">[+ ddp_name +]</span>[? if sapd_formed:＋<span style="color: #9B0000;">SAPD</span>?]（[+ progressive_coalition_prussia +]％）― 秘密モードを有効にする必要がある。
 choose-if: secret_mode = 1
 on-arrival: workers_spd *= 100; workers += 1000; super_secret_mode = 1; prussia_leader = "joavig"
 
-Super secret mode has been enabled. Shoutout to "joavig" for being the first one to achieve this, on April 29, 2025.
+秘密モードが有効になった。2025年4月29日に初めて達成した「joavig」に敬意を表する。
 
 @new_elections
 on-arrival: pro_republic -= 5; rural_spd -= 4; new_middle_spd -= 4; old_middle_spd -= 4; workers_spd -= 3; rural_nsdap += 4; new_middle_nsdap += 4; old_middle_nsdap += 4; workers_nsdap += 3
 call: set_next_election_time_prussia
 
-No coalition is able to be formed, forcing [+ prussia_leader +] to call new elections, with the extremist parties likely to benefit from.
+いずれの連立も成立せず、[+ prussia_leader +]は新選挙を行わざるを得ない。過激派諸党が利益を得る可能性が高い。
 
-New Prussian elections have been set for [+ next_election_month_prussia : month +] [+ next_election_year_prussia +]. 
+プロイセンの新選挙は[+ next_election_year_prussia +]年[+ next_election_month_prussia : month +]に決まった。

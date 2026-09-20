@@ -1,5 +1,5 @@
-title: <span style="color: #C0A054;">**DVP**</span> Party Vote
-subtitle: Julius Curtius has resigned!
+title: <span style="color: #C0A054;">**DVP**</span>党内投票
+subtitle: ユリウス・クルティウスが辞任！
 view-if: curtius_explosion_timer == time and dvp_leader == "Curtius" and not lvp_formed
 on-arrival: {!
 
@@ -28,61 +28,60 @@ tags: event
 face-image: img/dvp.jpg
 new-page: true
 
-= <span style="color: #C0A054;">**DVP**</span> Party Vote
+= <span style="color: #C0A054;">**DVP**</span>党内投票
 
-Following the disastrous Austrian customs union project, of which he was the architect, he has tendered his resignation from both the Foreign Ministry and the leadership of the <span style="color: #C0A054;">**DVP**</span>. This debacle has significantly discredited him and his allies on the party’s left wing, leading to a rightward shift within the <span style="color: #C0A054;">**DVP**</span>, particularly at the local level.
+自ら立案した独墺関税同盟構想が惨敗に終わり、クルティウスは外相と<span style="color: #C0A054;">**DVP**</span>党首の両職を辞任した。この失敗で彼と党内左派の盟友は大きく信用を失い、<span style="color: #C0A054;">**DVP**</span>は、とりわけ地方組織で右傾化している。
 
-An internal election must now be held to determine Curtius’s successor. With the industrial wing largely weakened, none of the leading candidates have particularly strong ties to big business. Otto Thiel and Frank Glatzel, both members of the DHV - a conservative white-collar union - and leaders of the <span style="color: #C0A054;">**DVP**</span>'s Young Liberal wing, [? if not dvp_reform: are the leading voices pushing for a genuine People's Party?][? if dvp_reform: were instrumental in pushing the <span style="color: #C0A054;">**DVP**</span> toward reform years ago?]. Meanwhile, Siegfried von Kardorff, a veteran parliamentarian despite his past affiliation with the <span style="color: #3E88B3;">**DNVP**</span>, has significantly moderated over the years and was a close follower of Stresemann, advocating for a Grand Coalition with the <span style="color: #c00000;">**SPD**</span>. And, of course, Dingeldey is running again, undeterred by his previous defeat.
+クルティウスの後任を選ぶ党内選挙が必要となった。産業界派閥は大きく弱体化しており、主要候補はいずれも大企業との結び付きが特に強いわけではない。保守的な職員労組DHVの組合員で、<span style="color: #C0A054;">**DVP**</span>青年自由派を率いるオットー・ティールとフランク・グラッツェルは、[? if not dvp_reform:真の人民政党への転換を唱える中心人物である?][? if dvp_reform:数年前に<span style="color: #C0A054;">**DVP**</span>の改革を進めるうえで重要な役割を果たした?]。一方、ベテラン議員ジークフリート・フォン・カルドルフは元<span style="color: #3E88B3;">**DNVP**</span>党員ながら長年の間に穏健化し、シュトレーゼマンの側近として<span style="color: #c00000;">**SPD**</span>との大連立を唱えてきた。そしてディンゲルダイも、前回の敗北にひるまず再出馬している。
 
-- @thiel: Otto Thiel is elected!
-- @glatzel: Frank Glatzel is elected!
-- @kardorff: Siegfried von Kardorff is elected!
-- @dingeldey: Eduard Dingeldey is elected.
+- @thiel: オットー・ティールが選出される！
+- @glatzel: フランク・グラッツェルが選出される！
+- @kardorff: ジークフリート・フォン・カルドルフが選出される！
+- @dingeldey: エドゥアルト・ディンゲルダイが選出される。
 
 @thiel
-subtitle: Thiel is a controversial unionist within the party, being more left wing than Glatzel.
-unavailable-subtitle: [? if not glatzel_unlock: The workers have no power within the <span style="color: #C0A054;">DVP</span>, and the wider party won't back a trade unionist. ?][? if glatzel_unlock: Thiel is still considered too left-wing for the party, and many prefer to back his colleague Glatzel instead. ?]
+subtitle: ティールはグラッツェルより左寄りの労組活動家で、党内で評価が分かれる。
+unavailable-subtitle: [? if not glatzel_unlock: 労働者は<span style="color: #C0A054;">DVP</span>内で力を持たず、党全体も労組活動家を支持しない。 ?][? if glatzel_unlock: ティールは依然として左寄りすぎると見なされ、多くは同僚グラッツェルの支持を望んでいる。 ?]
 choose-if: thiel_unlock
 on-arrival: dvp_leader = "Thiel"; bourgeois_cooperation -= 3; dvp_left += 10; coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
 face-image: img/portraits/thiel.jpg
 
-Surprisingly, Otto Thiel has been elected as the new leader of the <span style="color: #C0A054;">**DVP**</span>! Compared to his colleague Glatzel, Thiel leans further left within the party’s unionist faction. He has even voiced support for increased welfare spending, arguing that austerity measures would only deepen the hardships faced by the people. In his push for *Volksgemeinschaft*, he has begun introducing more labor-friendly policies into the party’s platform, backing collective bargaining rights and worker protections.
+意外にも、オットー・ティールが<span style="color: #C0A054;">**DVP**</span>の新党首に選出された！党内の労組派でも同僚グラッツェルより左寄りで、緊縮策は国民の苦境を深めるだけだとして、福祉支出の増額さえ支持している。*民族共同体*の実現を目指し、団体交渉権や労働者保護など、労働者に友好的な政策を党綱領へ取り入れ始めた。
 
-As expected, the remaining industrialists within the <span style="color: #C0A054;">**DVP**</span> are outraged—even those with sympathies toward the late Stresemann. This has led to a dramatic shift in the party’s financial backing, as funding from big business dwindles and is replaced by donations and dues from the DHV and its affiliated members. [? if in_grand_coalition: We have noticed a significant decrease in coalition tensions. ?]
+予想どおり、<span style="color: #C0A054;">**DVP**</span>に残る産業界勢力は、故シュトレーゼマンに好意的だった者まで激怒している。大企業からの資金が減り、職員労組DHVとその組合員からの寄付・会費が代わりを担うなど、党の財政基盤は大きく変わった。[? if in_grand_coalition: 連立内の緊張は大幅に和らいだ。 ?]
 
 @glatzel
-subtitle: Glatzel, being a former member of the <span style="color: #3E88B3;">**DNVP**</span> as well, has shown nationalist sympathies.
-unavailable-subtitle: [? if not thiel_unlock: The workers have no power within the <span style="color: #C0A054;">DVP</span>, and the wider party won't back a trade unionist. ?][? if thiel_unlock: Glatzel's views are too right-wing and nationalistic for the party, particularly given the current national mood. ?]
+subtitle: グラッツェルは元<span style="color: #3E88B3;">**DNVP**</span>党員でもあり、民族主義への共感を示している。
+unavailable-subtitle: [? if not thiel_unlock: 労働者は<span style="color: #C0A054;">DVP</span>内で力を持たず、党全体も労組活動家を支持しない。 ?][? if thiel_unlock: グラッツェルの見解は、特に現在の国民感情から見て、党には右寄りで民族主義的すぎる。 ?]
 choose-if: glatzel_unlock
 on-arrival: dvp_leader = "Glatzel"; bourgeois_cooperation += 1; dvp_right += 3; dvp_relation -= 5; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_nsdap -= 2; new_middle_dvp += 6; new_middle_nsdap -= 4; new_middle_other -= 2; catholics_dvp += 4; catholics_other -= 2; catholics_dnvp -= 2; old_middle_dvp += 2; old_middle_dnvp -= 2; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed
 face-image: img/portraits/glatzel.jpg
 achievement: neuer_nationalismus
 
-Frank Glatzel is elected to become the new leader of the <span style="color: #C0A054;">**DVP**</span>, being more nationalist and right-wing than his colleague Thiel. He stands for a "New Nationalism," a solidarity among all classes, to defend the country's "<span class="tooltip-text" title="Lebensraum">living space</span>" and to create freedom for the people. In his push for *Volksgemeinschaft*, to reduce the conflict between the classes, he has begun including more nationalistic and corporatist elements into the party platform.
+同僚ティールより民族主義的で右寄りのフランク・グラッツェルが、<span style="color: #C0A054;">**DVP**</span>の新党首に選出された。彼は全国民の階級を超えた連帯によって国の「<span class="tooltip-text" title="生存圏">生存空間</span>」を守り、人々の自由を実現する「新民族主義」を掲げる。階級対立を和らげる*民族共同体*を目指し、民族主義とコーポラティズムの要素を党綱領へ取り入れ始めた。
 
-As expected, the remaining industrialists within the <span style="color: #C0A054;">**DVP**</span> are worried, as the party begins to shift towards including the demands of the worker. This has led to a dramatic shift in the party’s financial backing, as funding from big business dwindles and is replaced by donations and dues from the DHV and its affiliated members. His <span class="tooltip-text" title="good mod">dynamic</span> leadership should be closely watched.
+予想どおり、<span style="color: #C0A054;">**DVP**</span>に残る産業界勢力は、党が労働者の要求を取り入れ始めたことに不安を抱いている。大企業からの資金が減り、職員労組DHVとその組合員からの寄付・会費が代わりを担うなど、党の財政基盤は大きく変わった。彼の「<span class="tooltip-text" title="良いMODだ">躍動的</span>」な指導には注意を払う必要がある。
 
 @kardorff
-subtitle: Kardorff is able to secure the continuation of Curtius's leadership.
-unavailable-subtitle: [? if dingeldey_unlock: His closeness to Curtius has undermined his position. ?][? if thiel_unlock or glatzel_unlock: The party prefers a new and dynamic leader, preferably not one with closeness to Curtius. ?]
+subtitle: カルドルフならクルティウスの路線を継承できる。
+unavailable-subtitle: [? if dingeldey_unlock: クルティウスとの近さが彼の立場を弱めている。 ?][? if thiel_unlock or glatzel_unlock: 党はクルティウスに近くない、新たな活力ある指導者を望んでいる。 ?]
 choose-if: kardorff_unlock
 on-arrival: dvp_leader = "Kardorff"; dvp_left += 3 if in_grand_coalition; liberal_cooperation += 3; bourgeois_cooperation += 3; dvp_relation += 5 if in_grand_coalition; new_middle_dvp += 4; catholics_dvp += 2; rural_dvp += 2; old_middle_dvp += 2; pro_republic += 3
 face-image: img/portraits/kardorff.jpg
 
-Kardorff is elected to succeed Curtius as the leader of the <span style="color: #C0A054;">**DVP**</span>. He is expected to be a continuation of Curtius's leadership, being another Stresemann follower and supporter of constructive cooperation with the <span style="color: #c00000;">**SPD**</span>. [? if ui0_seen: He even rallied his parliamentary faction to save our Grand Coalition back in 1929.?]
+カルドルフがクルティウスの後任として<span style="color: #C0A054;">**DVP**</span>党首に選出された。彼もシュトレーゼマンの支持者であり、<span style="color: #c00000;">**SPD**</span>との建設的協力を唱えるため、クルティウス路線を継承すると見られる。[? if ui0_seen: 1929年には議員団をまとめ、我々の大連立を救ったことさえある。?]
 
-[? if bruning_time: He is also one of the strongest supporters of the Brüning government, frequently coming into conflict with the right of the party over support for it. ?]
+[? if bruning_time: 彼はブリューニング政権の最も強い支持者の一人でもあり、その支持をめぐって党内右派としばしば衝突している。 ?]
 
 @dingeldey
-subtitle: Dingeldey aims to revert all of Curtius's progress.
-unavailable-subtitle: The right-industrial faction of <span style='color: #C0A054;'>DVP</span> lacks the required influence.
+subtitle: ディンゲルダイはクルティウスの成果を全て覆そうとしている。
+unavailable-subtitle: <span style='color: #C0A054;'>DVP</span>の右派産業界派閥には、必要な影響力がない。
 choose-if: dingeldey_unlock
 on-arrival: old_dvp_leader = dvp_leader; dvp_leader = "Dingeldey"; dvp_right += 10; dvp_relation -= 25; old_middle_dvp -= 3; new_middle_dvp -= 6; rural_dvp -= 4; pro_republic -= 5; ddp_cohesion -= 1; liberal_cooperation -= 5; bourgeois_cooperation -= 5
 face-image: img/portraits/dingeldey.jpg
 
-Eduard Dingeldey has unexpectedly won the vote to replace [+ old_dvp_leader +] as chairman of the <span style="color: #C0A054;">**DVP**</span>. Backed by broad and unified support from the party’s right wing, and endorsed by Ernst Scholz, he has narrowly clinched victory against Kardorff.
+意外にも、エドゥアルト・ディンゲルダイが[+ old_dvp_leader +]に代わる<span style="color: #C0A054;">**DVP**</span>党首に選出された。党内右派の一致した幅広い支持と、エルンスト・ショルツの推薦を受け、カルドルフを僅差で破った。
 
-Dingeldey's election represents a significant and irreversible shift to the right,[? if dvp_reform:&nbsp;with him even repealing Stresemann's reform of the internal party structure,?] granting the industrialists back their lost influence on the <span style="color: #C0A054;">**DVP**</span>'s decision making. [? if chancellor == "Brüning" and not spd_in_government: Dingeldey doesn't even feel great loyalty toward the Brüning government and believes that the party could only fulfill its mission towards bourgeois concentration after it is freed from the burden of governmental responsibility.?] 
+ディンゲルダイの選出は大幅で不可逆的な右旋回を意味する。[? if dvp_reform:&nbsp;シュトレーゼマンによる党内組織改革まで撤回し、?]産業界は<span style="color: #C0A054;">**DVP**</span>の意思決定に対する影響力を取り戻した。[? if chancellor == "Brüning" and not spd_in_government: ディンゲルダイはブリューニング政権への忠誠心さえ強くなく、政権責任の重荷から解放されてこそ、ブルジョワ諸勢力の結集という党の使命を果たせると考えている。?]
 
-Furthermore, Dingeldey is not particularly interested in a closer relationship with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and definitely not with us, but rather with parties to the right, such as the <span style="color: #3E88B3;">**DNVP**</span> and even the <span style="color: #7A3C00;">**NSDAP**</span>, to transform them into a 'constructive component of the state.' This does not bode well for the future of <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> democracy.
-
+さらにディンゲルダイは、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>との接近にはさほど関心を持たず、我々との接近にはなおさら冷淡である。むしろ<span style="color: #3E88B3;">**DNVP**</span>、さらには<span style="color: #7A3C00;">**NSDAP**</span>のような右の政党と協力し、「国家の建設的な構成要素」に変えようとしている。<span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>民主主義の将来には不吉な兆候である。

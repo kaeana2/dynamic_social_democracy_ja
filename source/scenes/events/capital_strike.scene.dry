@@ -1,16 +1,16 @@
-title: Capital Strike
-subtitle: Germany's industries are idling...
+title: 資本ストライキ
+subtitle: ドイツ産業が停滞している……
 view-if: (capital_strike_progress >= 10 or budget <= -5) and spd_in_government
 new-page: true
 max-visits: 1
 on-arrival: unemployed += 5; workers_spd*= 0.7; new_middle_spd -= 15 if new_middle_conscious == 0; new_middle_spd -= 10 if new_middle_conscious == 1; old_middle_spd -= 15; unemployed_spd*=0.7; rural_spd -= 15 if rural_conscious == 0; rural_spd -= 10 if rural_conscious == 1; pro_republic -= 15; capital_strike_seen = 1; z_relation -= 10; dvp_relation -= 10; ddp_relation -= 8; lvp_relation -= 8; workers_nsdap += 8; unemployed_nsdap += 10; new_middle_nsdap += 15; old_middle_nsdap += 15; rural_nsdap += 15; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 1; lvp_right += 4; coalition_dissent += 1; hindenburg_angry += 100; economic_growth -= 4;
 tags: event
 
-= Capital Strike
+= 資本ストライキ
 
-Our policies have greatly angered the capitalists. Investment has fallen, and factories are idling, preventing the workers from fulfilling their jobs. Meanwhile, the bourgeois press is a constant chorus of venomous invective directed at us and our economic policies.
+我々の政策は資本家を激怒させた。投資は落ち込み、工場は休止し、労働者は職を失っている。一方、ブルジョワ新聞は我々と我々の経済政策に対する悪罵を絶え間なく浴びせている。
 
-What can we do?
+何ができるか？
 
 - @seize
 - @capital_controls
@@ -18,35 +18,35 @@ What can we do?
 - @nothing
 
 @seize
-title: Empower workers to seize the factories!
-unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : The bulk of the party does not support this radical action. ?] [? if judicial_reform < 3 : The judiciary would oppose this action. ?] [? if rb_militancy < 0.25 : If we increased the strength of our paramilitary forces, perhaps we could do this. ?] [? if works_councils < 1 : We need the support of the works councils first. ?]
+title: 労働者が工場を奪取する力を与えよ！
+unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党の大半はこの急進的な行動を支持していない。 ?] [? if judicial_reform < 3 : 司法がこの行動を阻む。 ?] [? if rb_militancy < 0.25 : 準軍事組織をさらに強化すれば実行できるかもしれない。 ?] [? if works_councils < 1 : まず労働者評議会の支持が必要だ。 ?]
 choose-if: left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1
 on-arrival: nationalization_progress += 1; coup_progress += 6; unemployed -= 2; unemployed -= 1 if works_councils >= 3; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); new_middle_spd += 8*(1-dissent) if new_middle_conscious == 1; coalition_dissent += 2; dvp_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; workers_nsdap -= 8*(1-dissent); unemployed_nsdap -= 8*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; factory_takeovers += 1; dvp_right += 5; ddp_right += 3; lvp_right += 4; economic_growth += 2;
 
-If the capitalists are going to attack us, then we must hit them back. We have empowered the workers to seize and take full control of the factories that the capitalists have idled. The <span style="color: #7A3C00;">fascists</span>, of course, call us thieves and looters.
+資本家が我々を攻撃するのなら、我々も彼らを叩かねばならぬ。我々は労働者に、資本家が遊休させている工場を接収し、完全に支配する力を与えた。もちろん、<span style="color: #7A3C00;">ファシスト</span>は我々を泥棒、略奪者と呼ぶ。
 
 
 @capital_controls
-title: Enact capital controls to lessen the impact.
+title: 資本規制を制定し、影響を軽減する。
 choose-if: judicial_reform >= 2
-unavailable-subtitle: The judiciary would never allow this.
+unavailable-subtitle: 司法がこれを許すことはない。
 on-arrival: unemployed -= 1.5; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); economic_growth += 2;
 
-Capital controls might blunt some of the worst economic components of the capital strike.
+資本規制は、資本ストライキの最も深刻な経済的要素の一部を鈍らせるかもしれない。
 
 
 
 @propaganda
-title: Launch a propaganda campaign blaming the capitalists for the crisis.
-subtitle: -1 resources
+title: 資本家を危機の原因とするプロパガンダキャンペーンを開始する。
+subtitle: -1リソース
 choose-if: (radio >= 2 or commercialized_media >= 3) and resources >= 1
-unavailable-subtitle: [? if radio < 2 and commercialized_media < 3 : We have not built up our media enough. ?] [? if resources < 1: We do not have enough resources. ?]
+unavailable-subtitle: [? if radio < 2 and commercialized_media < 3 : メディア基盤が十分に整っていない。 ?] [? if resources < 1: リソースが不足している。 ?]
 on-arrival: workers_spd += 7*(1-dissent); new_middle_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); pro_republic += 5*(1-dissent); resources -= 1
 
-We launch a counter-propaganda campaign to blame the economic crisis on the capitalists, using all of our media channels to do so. Because of our existing media framework, this is moderately successful in directing popular criticisms towards the capitalists and away from us.
+あらゆる媒体を使い、経済危機の責任を資本家に集中させる宣伝運動を開始した。築いてきたメディア基盤のおかげで、世論の批判を我々から資本家へ向け直すことに一定の成功を収めた。
 
 
 @nothing
-title: There is nothing we can do.
+title: 何もできない。
 
-There is nothing we can do that is within constitutional and legal bounds.
+憲法上および法的に許される範囲で我々ができることは何もない。

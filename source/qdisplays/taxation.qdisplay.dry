@@ -1,10 +1,10 @@
 
-(..-6) extremely low
-(-5..-4) very low
-(-3..-2) low
-(-1..-1) below baseline
-(0..0) moderate
-(1..1) above baseline
-(2..3) high
-(4..5) very high
-(6..) extremely high
+(..-6) 極端に低い
+(-5..-4) 非常に低い
+(-3..-2) 低い
+(-1..-1) 基準未満
+(0..0) 中程度
+(1..1) 基準超過
+(2..3) 高い
+(4..5) 非常に高い
+(6..) 極端に高い

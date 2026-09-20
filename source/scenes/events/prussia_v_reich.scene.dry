@@ -1,5 +1,5 @@
-title: *Prussia v. Reich*
-subtitle: Oral proceedings begin in the legal challenge against Papen’s <i>Reichsexekution</i>.
+title: *プロイセン対ライヒ事件*
+subtitle: パーペンの<i>ライヒ執行</i>を争う裁判で口頭弁論が始まる。
 view-if: chancellor = "Papen" and prussia_leader == "Papen" and papen_time == 20 and otl_prussian_coup_seen
 new-page: true
 tags: event
@@ -17,29 +17,29 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Prussia v. Reich
+= プロイセン対ライヒ事件
 
-The time has finally come for us, along with the <span style="color: #000000;">Center Party</span>, and the state governments of Bavaria and Baden, to argue for the unconstitutionality of the Prussian <i>Reichsexekution</i>. However, the leader of the state court, and president of the supreme court, is Erwin Bumke, a known <span style="color: #808080;">reactionary</span> and former <span style="color: #3E88B3;">**DNVP**</span> member before taking his job. 
+ついに我々は、<span style="color: #000000;">中央党</span>、バイエルン州政府、バーデン州政府とともに、プロイセンへの<i>ライヒ執行</i>は違憲だと主張する時を迎えた。しかし国事裁判所の裁判長を務めるライヒ裁判所長官は、名うての<span style="color: #808080;">反動派</span>エルヴィン・ブムケであり、就任前には<span style="color: #3E88B3;">**DNVP**</span>に所属していた。
 
-The main conditions under examination are whether the Prussian government failed to fulfill its constitutional obligations in maintaining public order and security, and whether the federal government had the constitutional right to intervene and appoint a Reich Commissioner to take over governance in Prussia indefinitely.
+主な争点は、プロイセン政府が公共の秩序と安全を維持する憲法上の義務を怠ったか、また中央政府に介入して国家弁務官を任命し、プロイセンの統治を無期限に掌握する憲法上の権限があったかである。
 
 - @papen
 - @papen_2
 
 @papen
-title: We await the final verdict.
+title: 最終判決を待つ。
 view-if: (judicial_reform < 4 and not altona_good) or (judicial_reform < 2 and altona_good)
 on-arrival: pro_republic -= 3
 
-The State Court has ruled that the Prussian government did not fail in its duties, meaning the use of force against a state refusing to follow the constitution was unlawful and the application of the <i>Reichsexekution</i> was unjustified. However, the court did affirm that the government could still appoint a Reich Commissioner and temporarily assume control of Prussia due to a perceived threat to public safety and order.
+国事裁判所は、プロイセン政府が義務を怠ったとは認めなかった。したがって、憲法に従うことを拒んだ州に対する武力行使という要件を満たさず、<i>ライヒ執行</i>の発動は正当化できないとの判断である。しかし裁判所は、公共の安全と秩序に脅威があるとして、政府が国家弁務官を任命し、一時的にプロイセンの統治を掌握すること自体は認めた。
 
-Additionally, the court declared that the dismissal of the Prussian government was illegal and that Prussia’s representation in the Reichsrat must be restored. While acknowledging that the Prussian government remains legally intact, the judicial system’s <span style="color: #808080;">reactionary</span> nature meant that no practical change was enforced. The court’s ruling did not explicitly demand the reinstatement of the Prussian government, and the [+ chancellor +] government has ignored the decision. Holding the government accountable for this violation would require accusing President Hindenburg of breaching the law by signing the decree—an action the conservative judges find politically unacceptable.
+さらに裁判所は、プロイセン政府の罷免は違法であり、ライヒ参議院におけるプロイセンの代表権を回復しなければならないと宣告した。プロイセン政府が法的には存続していると認定したものの、司法制度の<span style="color: #808080;">反動的</span>性格ゆえ、実際の変更は強制されなかった。判決はプロイセン政府の復職を明確には命じず、[+ chancellor +]政権はこれを無視している。この違法行為について政府の責任を問うには、大統領令へ署名したヒンデンブルク大統領が法を犯したと認定しなければならない。保守的な裁判官にとって、それは政治的に受け入れがたいのである。
 
 @papen_2
-title: We await the final verdict.
+title: 最終判決を待つ。
 view-if: (judicial_reform >= 4 and not altona_good) or (judicial_reform >= 2 and altona_good)
 on-arrival: prussia_returned = 1; prussia_legal_returned = 1; prussia_leader = older_prussia_leader; in_weimar_coalition_prussia = 1 if pre_in_weimar_coalition_prussia; in_grand_coalition_prussia = 1 if pre_in_grand_coalition_prussia; in_minority_weimar_coalition_prussia = 1 if in_weimar_coalition_prussia and weimar_coalition_prussia < 50; in_minority_grand_coalition_prussia = 1 if in_grand_coalition_prussia and grand_coalition_prussia < 50; pro_republic += 8; workers_spd += 5; new_middle_spd += 5; unemployed_spd += 3; new_middle_ddp += 3; labor_dissent -= 15; reformist_dissent -= 15; left_dissent -= 15; prussian_police_loyalty += 0.3; rb_strength *= 1.1; rb_militancy *= 1.1; papen_strength -= 1; hindenburg_papen_r -= 1
 
-The State Court has ruled that the Prussian government did not fail in its duties, declaring that the use of force against a state obeying the constitution was unlawful, and that the application of the <i>Reichsexekution</i> was unjustified. The court has ordered the federal government to relinquish control over Prussia's ministries and to restore its representation in the Reichsrat.
+国事裁判所は、プロイセン政府が義務を怠ったとは認めず、憲法に従う州への武力行使は違法であり、<i>ライヒ執行</i>の発動は正当化できないと宣告した。裁判所は中央政府に対し、プロイセン各省庁の支配権を返還し、ライヒ参議院におけるプロイセンの代表権を回復するよう命じた。
 
-Papen complies with the ruling and reinstates the Prussian government under [+ prussia_leader +]. Unfortunately, they remain powerless against Hindenburg and Papen, who signed the decree in the first place.
+パーペンは判決に従い、[+ prussia_leader +]率いるプロイセン政府を復職させた。しかし残念ながら、そもそも大統領令に署名したヒンデンブルクとパーペンを前に、州政府は依然として無力である。

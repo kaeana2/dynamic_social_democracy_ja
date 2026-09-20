@@ -1,4 +1,4 @@
-title: Snap Elections Called
+title: 解散選挙の実施
 view-if: chancellor = "Schleicher" and schleicher_time and not schleicher_post_protests and reichstag_break and dnef_total_votes >= 35
 on-arrival: {!
 Q.reichstag_rubicon = 0;
@@ -25,25 +25,25 @@ tags: event
 max-visits: 1
 priority: 2
 
-= Snap Elections Called
+= 解散選挙の実施
 
-Chancellor Schleicher and the <span style="color: #BFC8CC;">**DNEF**</span> now see an opportunity to dramatically boost their seat share in fresh elections—paving the way to consolidate power and govern outright with only the loyal <span style="color: #6A1E1E;">**DSU**</span>, free from parliamentarianism.
+シュライヒャー首相と<span style="color: #BFC8CC;">**DNEF**</span>は、新選挙で議席を大幅に増やす好機を見いだした。権力を固め、議会主義の束縛を離れ、忠実な<span style="color: #6A1E1E;">**DSU**</span>とのみ組んで直接統治する道が開ける。
 
-New Reichstag elections are scheduled for [+ next_election_month : month +] [+ next_election_year +], Week [+ next_election_week +].
+次回国会選挙は[+ next_election_year +]年[+ next_election_month : month +]（第[+ next_election_week +]週）に予定された。
 
 - @prussia_election
 
 @prussia_election
-title: Schleicher pressures [+ prussia_leader +] for a double dissolution.
+title: シュライヒャーは両議会の同時解散を求め、[+ prussia_leader +]に圧力をかける。
 view-if: prussia_leader != "Goerdeler" and prussia_leader != "Strasser"
 
-Schleicher communicates to [+ prussia_leader +] that a double dissolution of the chambers of the Reich and Prussia is necessary for the legislature of the former to be accurate to the updated opinions of the people. The threat of federal action is also present.
+シュライヒャーは[+ prussia_leader +]に対し、国民の最新の意思を国会へ正確に反映させるには、国会とプロイセン州議会を同時に解散する必要があると伝えた。そこにはライヒ政府による介入の威嚇も込められている。
 
 - @prussia_election_2
 
 @prussia_election_2
-title: [+ prussia_leader +] bends to pressure.
+title: [+ prussia_leader +]が圧力に屈する。
 on-arrival: next_election_week_prussia = next_election_week if rubicon and next_election_time - time < 3; next_election_week_prussia = week + 6 if rubicon and next_election_time - time >= 3; next_election_week_prussia -= 4 if rubicon and next_election_week_prussia > 4; next_election_week_prussia -= 4 if rubicon and next_election_week_prussia > 4
 call: set_next_election_time_prussia
 
-New Landtag elections are scheduled for [+ next_election_month_prussia : month +] [+ next_election_year_prussia +], Week [+ next_election_week +].
+次回州議会選挙は[+ next_election_year_prussia +]年[+ next_election_month_prussia : month +]（第[+ next_election_week +]週）に予定された。
