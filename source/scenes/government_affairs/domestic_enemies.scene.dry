@@ -73,19 +73,19 @@ on-arrival: sh_strength *= 0.7; sh_militancy -= 0.05; dvp_relation -= 5; lvp_rel
 
 @ban_rfb
 view-if: communist_coalition < 3 and rfb_banned = 0 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
-on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; dvp_relation += 5; lvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; kpd_coalition_dissent += 2; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_banned = 0; n_rfb_banned += 1; hindenburg_angry -= 8
+on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; dvp_relation += 5; lvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; kpd_coalition_dissent += 2; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_banned = 0; n_rfb_banned += 1; hindenburg_angry -= 8; kpd_nazi_urgency -= 1;
 
 禁止措置は警察によって熱心に、いや熱心すぎるほど徹底された。<span style="color: #700000;">共産主義者</span>は、<span style="color: #c00000;">社会主義者</span>が左翼への裏切り者である新たな証拠だと受け止めている。一方、<span style="color: #000000;">穏健派</span>と<span style="color: #C0A054;">中道右派</span>の諸党、そして警察は支持している。
 
 @unban_rfb
 view-if: rfb_banned = 1
-on-arrival: rfb_banned = 0; kpd_relation += 5; rfb_strength += 50; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; hindenburg_angry += 8; rfb_goal_prussia -= 1
+on-arrival: rfb_banned = 0; kpd_relation += 5; rfb_strength += 50; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; hindenburg_angry += 8; rfb_goal_prussia -= 1; kpd_nazi_urgency -= 1 if kpd_nazi_urgency < 0;
 
 <span style="color: #700000;">共産党</span>の<span style="color: #8B0000;">**RFB**</span>への禁止は解除された。
 
 @persecute_rfb
 title: <span style="color: #8B0000;">**RFB**</span>への弾圧を強化する。
 view-if: rfb_banned = 1 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
-on-arrival: rfb_strength *= 0.7; rfb_militancy -= 0.05; kpd_relation -= 10; kpd_coalition_dissent += 1; z_relation += 2; dvp_relation += 2; lvp_relation += 2; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1; hindenburg_angry -= 5
+on-arrival: rfb_strength *= 0.7; rfb_militancy -= 0.05; kpd_relation -= 10; kpd_coalition_dissent += 1; z_relation += 2; dvp_relation += 2; lvp_relation += 2; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1; hindenburg_angry -= 5; kpd_nazi_urgency -= 1;
 
 <span style="color: #8B0000;">**RFB**</span>の指導者をさらに逮捕し、武器を押収した。

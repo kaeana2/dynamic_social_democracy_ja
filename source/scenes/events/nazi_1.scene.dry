@@ -30,7 +30,7 @@ title: 直ちに国旗団を強化して対抗する。
 subtitle: 資源－1
 unavailable-subtitle: 資源が足りない。
 choose-if: resources >= 1
-on-arrival: nazi_urgency += 1; resources -= 1; rb_strength += 200; rb_militancy += 0.05
+on-arrival: nazi_urgency += 1; resources -= 1; rb_strength += 200; rb_militancy += 0.05; kpd_nazi_urgency += 1
 
 この事態を受け、<span style="color: #c00000;">**SPD**</span>指導部、そしてオットー・ヴェルス自身も、国旗団に独立した権限と財政支援を与えるよう説得された。国旗団指導部が不可欠と考えていた措置である。
 

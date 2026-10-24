@@ -1,6 +1,7 @@
 title: 自由労働組合とシュライヒャー
 subtitle: 今度は労組側が会談を申し入れた。
 view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_spd_r < 3
+on-arrival: kpd_nazi_urgency -= 1;
 new-page: true
 priority: 1
 tags: event

@@ -542,7 +542,7 @@ go-to: lippe_coalition_menu
 @nsdap_big_win
 title: <span style="color: #7A3C00;">**NSDAP**</span>が痛快な勝利を収める。
 view-if: change_nsdap_votes_lippe >= 6
-on-arrival: lippe_big_win = 1; hindenburg_hitler_r += 2; hindenburg_schleicher_r -= 2; workers_nsdap += 2; unemployed_nsdap += 2; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 4; nazi_funds += 1; lippe_good = 1
+on-arrival: lippe_big_win = 1; hindenburg_hitler_r += 2; hindenburg_schleicher_r -= 2; workers_nsdap += 2; unemployed_nsdap += 2; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 4; nazi_funds += 1; lippe_good = 1; kpd_nazi_urgency += 2;
 
 予想外に、<span style="color: #7A3C00;">**NSDAP**</span>はピーク時の選挙実績に匹敵した。これは、運動が死んでいるのではなく、成長している証拠だ。
 
@@ -551,7 +551,7 @@ on-arrival: lippe_big_win = 1; hindenburg_hitler_r += 2; hindenburg_schleicher_r
 @nsdap_moderate_win
 title: <span style="color: #7A3C00;">**NSDAP**</span>は怪しい勝利を収める。
 view-if: change_nsdap_votes_lippe >= 3 and change_nsdap_votes_lippe < 6
-on-arrival: hindenburg_hitler_r += 1; hindenburg_schleicher_r -= 1; new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 2; lippe_good = 1
+on-arrival: hindenburg_hitler_r += 1; hindenburg_schleicher_r -= 1; new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 2; lippe_good = 1; kpd_nazi_urgency += 1;
 
 <span style="color: #7A3C00;">ナチス</span>の得票は最盛期には及ばなかったが、前回選挙からは増加した。一見すると、<span style="color: #7A3C00;">**NSDAP**</span>は再び勢いを取り戻したように見える。同党はこの結果を手軽な宣伝材料として利用し、失望した支持者を再び奮い立たせようとしている。
 
@@ -575,7 +575,7 @@ on-arrival: new_middle_nsdap -= 2; old_middle_nsdap -= 2; rural_nsdap -= 2; lipp
 @nsdap_joever
 title: <span style="color: #7A3C00;">**NSDAP**</span>は壊滅的な敗北を喫した！
 view-if: change_nsdap_votes_lippe < 0 and change_nsdap_votes_lippe > -4
-on-arrival: hindenburg_hitler_r -= 1; workers_nsdap -= 2; unemployed_nsdap -= 2; new_middle_nsdap -= 4; old_middle_nsdap -= 4; rural_nsdap -= 4; catholics_nsdap -= 2; nazi_funds -= 1
+on-arrival: hindenburg_hitler_r -= 1; workers_nsdap -= 2; unemployed_nsdap -= 2; new_middle_nsdap -= 4; old_middle_nsdap -= 4; rural_nsdap -= 4; catholics_nsdap -= 2; nazi_funds -= 1; kpd_nazi_urgency -= 1;
 
 <span style="color: #7A3C00;">**NSDAP**</span>は壊滅的な敗北を喫した！この運動に全てを賭けたにもかかわらず、彼らの得票率は実際に低下した。これは、その運動が急速に崩壊している明白な証拠であり、新たな選挙は<span style="color: #7A3C00;">ナチ</span>の運動にとって悲惨なものとなるだろう。
 
@@ -586,7 +586,7 @@ on-arrival: hindenburg_hitler_r -= 1; workers_nsdap -= 2; unemployed_nsdap -= 2;
 @nsdap_explode
 title: <span style="color: #7A3C00;">**NSDAP**</span>は急速に崩壊している！
 view-if: change_nsdap_votes_lippe <= -4
-on-arrival: hindenburg_hitler_r -= 2; workers_nsdap -= 4; unemployed_nsdap -= 4; new_middle_nsdap -= 8; old_middle_nsdap -= 8; rural_nsdap -= 6; catholics_nsdap -= 4; nazi_funds -= 2
+on-arrival: hindenburg_hitler_r -= 2; workers_nsdap -= 4; unemployed_nsdap -= 4; new_middle_nsdap -= 8; old_middle_nsdap -= 8; rural_nsdap -= 6; catholics_nsdap -= 4; nazi_funds -= 2; kpd_nazi_urgency -= 2;
 
 <span style="color: #7A3C00;">**NSDAP**</span>は自由落下状態だ！この選挙運動に全てを注ぎ込んだにもかかわらず、彼らの得票率は実際に低下した。これは運動の急速な崩壊を裏付ける屈辱的な打撃だ。
 

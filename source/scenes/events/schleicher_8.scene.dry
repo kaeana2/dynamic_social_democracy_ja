@@ -19,7 +19,7 @@ audio: music/1930_1933/Ugly_American.mp3
 - @schleicher_2: <i>Deutschnationale Einheitsfront</i>（<span style="color: #BFC8CC;">ドイツ国民統一戦線</span>、<span style="color: #BFC8CC;">**DNEF**</span>）が結成された！
 
 @schleicher_2
-on-arrival: dnef_formed = 1; chancellor_party = "DNEF"
+on-arrival: dnef_formed = 1; chancellor_party = "DNEF"; kpd_nazi_urgency += 1;
 audio: shuffle music/1930_1933/Backroom_Deal.ogg music/1930_1933/Ugly_American.mp3
 go-to: dnef_formed
 

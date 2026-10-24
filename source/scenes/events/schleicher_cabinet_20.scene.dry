@@ -109,6 +109,7 @@ subtitle: 情勢はシュライヒャーが公に認めるよりはるかに不�
 unavailable-subtitle: <span style="color: #BFC8CC;">**DNEF**</span>は十分に安定しており、シュライヒャーは全面崩壊を防げる。
 choose-if: dnef_collapse_points >= 30
 on-arrival: {!
+Q.kpd_nazi_urgency += 1;
 Q.dnef_collapse = 1;
 Q.dnef_formed = 0;
 
@@ -299,18 +300,18 @@ for (var party of Q.parties) {
 
         if (Q.dsu_exist && !Q.nvf_exist) {
             Q.dsu_support = Q.workers_nsdap*Q.workers*((120 - Q.sa_force) / 100);
-            Q.dsu_support += Q.unemployed_nsdap*Q.unemployed*((80 - Q.sa_force) / 100);
+            Q.dsu_support += Q.unemployed_nsdap*Q.effective_unemployed*((80 - Q.sa_force) / 100);
             Q.dsu_support += Q.new_middle_nsdap*Q.new_middle;
         } else if (!Q.dsu_exist && Q.nvf_exist) {
-            Q.nvf_support = Q.unemployed_nsdap*Q.unemployed*((120 - Q.sa_force) / 100);
+            Q.nvf_support = Q.unemployed_nsdap*Q.effective_unemployed*((120 - Q.sa_force) / 100);
             Q.nvf_support += Q.workers_nsdap*Q.workers*((Q.sa_force - 80) / 100);
             Q.nvf_support += Q.new_middle_nsdap*Q.new_middle;
         } else if (Q.dsu_exist && Q.nvf_exist) {
             Q.dsu_support = Q.workers_nsdap*Q.workers*((120 - Q.sa_force) / 100);
-            Q.dsu_support += Q.unemployed_nsdap*Q.unemployed*((80 - Q.sa_force) / 100);
+            Q.dsu_support += Q.unemployed_nsdap*Q.effective_unemployed*((80 - Q.sa_force) / 100);
             Q.dsu_support += Q.new_middle_nsdap*Q.new_middle;
 
-            Q.nvf_support = Q.unemployed_nsdap*Q.unemployed*((120 - Q.sa_force) / 100);
+            Q.nvf_support = Q.unemployed_nsdap*Q.effective_unemployed*((120 - Q.sa_force) / 100);
             Q.nvf_support += Q.workers_nsdap*Q.workers*((Q.sa_force - 80) / 100);
         } else {
             Q.nsdap_hitler_support += Q.workers_nsdap*Q.workers;
@@ -1082,6 +1083,7 @@ if (d3 && window) {
 @dnef_live
 title: <span style="color: #BFC8CC;">**DNEF**</span>は嵐を切り抜ける。
 unavailable-subtitle: 情勢はシュライヒャーが公に認めるよりはるかに不安定である。
+on-arrival: kpd_nazi_urgency += 1;
 choose-if: dnef_collapse_points < 20
 
 <span style="color: #BFC8CC;">**DNEF**</span>内の二派を和解させたのは、ほかならぬシュライヒャー本人であった。病に衰えながらも舞台裏で糸を引き、党内対立を停止させたのである。今のところ「シュライヒャー主義」という思想が運動を再統合し、[+ chancellor +]はシュライヒャーがかつて振るった権威の多くを継承するようだ。

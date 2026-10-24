@@ -33,6 +33,7 @@ Q.dnef_relation -= 15;
 
 Q.dnef_r += Q.nvf_r;
 Q.nvf_r = 0;
+Q.kpd_nazi_urgency += 1;
 !}
 
 レームが政府の正式な役職を得れば、何をするか分かったものではない。幸い、ヒンデンブルク大統領を含め、誰もがレームの<span style="color: #700000;">革命的</span>思想に強い不信を抱いている。

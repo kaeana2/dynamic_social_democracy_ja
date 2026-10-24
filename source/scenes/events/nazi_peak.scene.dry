@@ -27,6 +27,6 @@ priority: -2
 - @nazi_explode: あと数か月だけでも持ちこたえねばならない。
 
 @nazi_explode
-on-arrival: neorevisionist_dissent -= 20; labor_dissent -= 10; left_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; ddp_left += 3; dvp_left += 5; lvp_left += 5; ddp_cohesion += 3
+on-arrival: neorevisionist_dissent -= 20; labor_dissent -= 10; left_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; ddp_left += 3; dvp_left += 5; lvp_left += 5; ddp_cohesion += 3; kpd_nazi_urgency -= 1;
 
 <span style="color: #000000;">ヴァ</span><span style="color: #DD0000;">イマ</span><span style="color: #FFCC00;">ル</span>体制はまだ安泰ではない。油断は禁物である。今後数か月のうちに何が起きてもおかしくない。権力奪取の最後の手段として、<span style="color: #7A3C00;">**SA**</span>がクーデターを起こすとの噂すらある。

@@ -41,7 +41,7 @@ on-arrival: kpd_relation -= 8; workers_spd -= 4; unemployed_spd -= 4; workers_kp
 - @skibidi: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:（場合によっては<span style="color: #C0A054;">**DVP**</span>も）?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]を軸に、新政権を組めないだろうか？
 
 @goals_success
-on-arrival: workers_spd += 4; unemployed_spd += 4; kpd_relation += 6; workers_kpd += 4; kpd_coalition_success += 1; rfb_strength += 150; rfb_militancy += 0.1; reichsexekution += 1; kpd_demands_prussia = 0
+on-arrival: workers_spd += 4; unemployed_spd += 4; kpd_relation += 6; workers_kpd += 4; kpd_coalition_success += 1; rfb_strength += 150; rfb_militancy += 0.1; reichsexekution += 1; kpd_demands_prussia = 0; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 予想通り、<span style="color: #700000;">**KPD**</span>の掲げた目標を達成した。[? if president == "Hindenburg": しかし、この数か月でヒンデンブルク大統領は我々の連立政権への懸念を強めている……。 ?]
 

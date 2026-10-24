@@ -1,6 +1,6 @@
 title: 国旗団員の減少
 subtitle: 我が党の不人気により、国旗団の募集力が損なわれている。
-view-if: rb_militancy >= 0.1 and workers_spd_normalized + unemployed_spd_normalized < (workers_kpd_normalized + workers_nsdap_normalized + workers_dnvp_normalized + (rb_militancy*100)) and time >= reichsbanner_unpopularity_time
+view-if: rb_militancy >= 0.1 and workers_spd_normalized + unemployed_spd_normalized < (workers_kpd_normalized + workers_nsdap_normalized + workers_dnvp_normalized + (rb_militancy*100*(effective_unemployed/unemployed))) and time >= reichsbanner_unpopularity_time
 new-page: true
 tags: event
 on-display: {!  

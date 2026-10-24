@@ -28,7 +28,7 @@ on-display: {!
 
 @schleicher
 title: 懸念すべき事態だ。
-on-arrival: schleicher_spd_r -= 1; schleicher_spd_support -= 1; nazi_urgency += 1; 
+on-arrival: schleicher_spd_r -= 1; schleicher_spd_support -= 1; nazi_urgency += 1; kpd_nazi_urgency += 1;
 
 シュライヒャー将軍が<span style="color: #7A3C00;">ナチ党</span>と結び、<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">制</span>勢力に対して陰謀を企てているという疑いは、これでほぼ裏付けられた。「赤い将軍」との関係は悪化した。
 

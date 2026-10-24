@@ -22,7 +22,7 @@ card-image: img/portraits/JuchaczMarie.jpg
 subtitle: プロレタリアートの支持基盤を傷つける。予算 +1
 unavailable-subtitle: これ以上削減できない。
 choose-if: welfare >= -5
-on-arrival: budget += 1; workers_spd -= 6; unemployed_spd -= 6; new_middle_spd -= 2 if new_middle_conscious == 1; rural_spd -= 2 if rural_conscious == 1; workers_kpd += 3; welfare -= 1; reformist_dissent += 10; left_dissent += 10; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 5; dvp_relation += 5; ddp_relation += 2; lvp_relation += 3; z_relation += 3; pro_republic -= 3; coalition_dissent -= 1 if ((in_grand_coalition or (in_weimar_coalition and lvp_formed)) and coalition_dissent > 0); kpd_coalition_dissent += 1; kpd_relation -= 8; inflation -= 0.3; unemployed += 0.4; dvp_left += 1; ddp_right += 1; ddp_cohesion -= 0.5; lvp_left += 0.5; goal_spd_cancel += 1; economic_growth -= 0.2;
+on-arrival: budget += 1; workers_spd -= 6*(effective_unemployed/unemployed); unemployed_spd -= 6*(effective_unemployed/unemployed); new_middle_spd -= 2*(effective_unemployed/unemployed) if new_middle_conscious == 1; rural_spd -= 2*(effective_unemployed/unemployed) if rural_conscious == 1; workers_kpd += 3*(effective_unemployed/unemployed); welfare -= 1; reformist_dissent += 10; left_dissent += 10; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 5; dvp_relation += 5; ddp_relation += 2; lvp_relation += 3; z_relation += 3; pro_republic -= 3; coalition_dissent -= 1 if ((in_grand_coalition or (in_weimar_coalition and lvp_formed)) and coalition_dissent > 0); kpd_coalition_dissent += 1; kpd_relation -= 8; inflation -= 0.3; unemployed += 0.4; dvp_left += 1; ddp_right += 1; ddp_cohesion -= 0.5; lvp_left += 0.5; goal_spd_cancel += 1; economic_growth -= 0.2;
 
 社会福祉支出を削減した。その結果、労働者階級の貧困と苦難は深まる。批判者は、ブルジョワジーとの階級協調のためにプロレタリアートの生活を犠牲にしたと主張している。彼らは間違っているのか？ この選択を前に、労働者が<span style="color: #700000;">**共産主義者**</span>へ向かうのは誤りなのか？
 
@@ -51,7 +51,7 @@ view-if: unemployed <= 15
 
 @spending_same_post_depression
 view-if: unemployed > 15
-on-arrival: workers_spd -= 3; unemployed_spd -= 4; new_middle_spd -= 2 if new_middle_conscious == 1; rural_spd -= 2 if rural_conscious == 1; welfare -= 1; reformist_dissent += 5; left_dissent += 5; labor_dissent += 5; center_dissent += 5; neorevisionist_dissent += 5; kpd_coalition_dissent += 1; kpd_relation -= 8 if in_popular_front or in_left_front; goal_spd_cancel += 1
+on-arrival: workers_spd -= 3*(effective_unemployed/unemployed); unemployed_spd -= 4*(effective_unemployed/unemployed); new_middle_spd -= 2*(effective_unemployed/unemployed) if new_middle_conscious == 1; rural_spd -= 2*(effective_unemployed/unemployed) if rural_conscious == 1; welfare -= 1; reformist_dissent += 5; left_dissent += 5; labor_dissent += 5; center_dissent += 5; neorevisionist_dissent += 5; kpd_coalition_dissent += 1; kpd_relation -= 8 if in_popular_front or in_left_front; goal_spd_cancel += 1
 subtitle: 失業者の増加により、支援支出の増額が必要となる。
 
 失業者の増加により福祉支出の増額が必要だったため、据え置きは実質的な福祉削減となった。労働者の不満はもっともである。我々はブルジョワジーの緊縮要求をなだめるため、彼らの生活を犠牲にしている。

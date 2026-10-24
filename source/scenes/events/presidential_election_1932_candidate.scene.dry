@@ -818,7 +818,7 @@ on-arrival: resources -= 2; spd_campaign = 1; braun_campaign = 1; reformist_diss
 subtitle: 資源を2消費する。
 choose-if: resources >= 2 and not schleicher_spd and left_strength > reformist_strength and (spd_votes + kpd_votes + sapd_votes >= 40) and spd_votes >= kpd_votes
 unavailable-subtitle: [? if resources < 2: 資源が不足している。?][? if schleicher_spd: シュライヒャーとの取引により、ヒンデンブルク再選を支持する義務がある。?][? if reformist_strength >= left_strength: 改革派が党をブラウン支持へ導いた。?][? if (spd_votes + kpd_votes + sapd_votes < 40): <span style="color: #700000;">KPD</span>は選挙情勢を悲観し、統一候補ローゼンフェルトの支持を拒んでいる。?][? if spd_votes < kpd_votes: <span style="color: #700000;">KPD</span>は我々より高い支持を得ており、我が党候補を支持する理由がない。?][? if kpd_relation < 40: <span style="color: #700000;">KPD</span>の姿勢は明白であり、支持されそうにない統一候補を提案しても意味がない。?]
-on-arrival: resources -= 2; spd_campaign = 1; rosenfeld_campaign = 1; reformist_dissent += 20; left_dissent -= 20; left_strength += 10; kpd_relation += 10; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; lvp_relation -= 5; lvp_right += 3; dvp_right += 3; ddp_right += 3; ddp_cohesion -= 2; ddp_support_spd = 0; lvp_support_spd = 0; dvp_support_spd = 0; spd_candidate_1932 = "Rosenfeld"; spd_candidate_1932_disp = "Kurt Rosenfeld"
+on-arrival: resources -= 2; spd_campaign = 1; rosenfeld_campaign = 1; reformist_dissent += 20; left_dissent -= 20; left_strength += 10; kpd_relation += 10; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; lvp_relation -= 5; lvp_right += 3; dvp_right += 3; ddp_right += 3; ddp_cohesion -= 2; ddp_support_spd = 0; lvp_support_spd = 0; dvp_support_spd = 0; spd_candidate_1932 = "Rosenfeld"; spd_candidate_1932_disp = "Kurt Rosenfeld"; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 予想外の選挙運動には労力が要る。まずローゼンフェルトを説得しなければならない。党内の低い地位から大統領候補へ担ぎ上げられることに、本人はさほど乗り気ではない。
 
@@ -841,21 +841,21 @@ on-arrival: resources -= 1; spd_campaign = 1; eckener_campaign = 1; reformist_di
 @support_hindenburg
 subtitle: 既定の選択肢である。
 view-if: hindenburg_run
-on-arrival: spd_support_reactionary = 1; left_dissent += 15; labor_dissent += 10; hindenburg_angry_bruning += 25; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
+on-arrival: spd_support_reactionary = 1; left_dissent += 15; labor_dissent += 10; hindenburg_angry_bruning += 25; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3;
 
 周知の<span style="color: #808080;">反動的</span>性格にもかかわらず、ヒンデンブルクは少なくとも<span style="color: #7A3C00;">ナチ</span>を抑えてきた。ゆえに彼を支持せねばならない。[? if bruning_time: ヒンデンブルクは<span style="color: #c00000;">社会主義者</span>の支持で当選したことに不満を抱き、その結果をブリューニングと不人気な内閣のせいにしているという。?]
 
 @support_reactionary
 subtitle: 既定の選択肢である。
 view-if: not hindenburg_run and reactionary_candidate_1932 and reactionary_candidate_1932 != "Westarp" and reactionary_candidate_1932 != "Lettow-Vorbeck"
-on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_choice = reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
+on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_choice = reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3; kpd_nazi_urgency -= 1;
 
 独自候補を擁立することが物理的に<i>不可能</i>なのか、[+ reactionary_candidate_1932 +]がドイツ民主主義にとって最も安全な賭けだと本気で信じたのか、ともかく我々は彼を支持している。
 
 @support_reactionary_2
 subtitle: 既定の選択肢である。
 view-if: not hindenburg_run and secondary_reactionary_candidate_1932 and secondary_reactionary_candidate_1932 != "Westarp" and secondary_reactionary_candidate_1932 != "Lettow-Vorbeck"
-on-arrival: spd_support_reactionary = 1; spd_support_reactionary_2 = 1; spd_choice = secondary_reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
+on-arrival: spd_support_reactionary = 1; spd_support_reactionary_2 = 1; spd_choice = secondary_reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3; kpd_nazi_urgency -= 1;
 
 独自候補を擁立することが物理的に<i>不可能</i>なのか、[+ secondary_reactionary_candidate_1932 +]がドイツ民主主義にとって最も安全な賭けだと本気で信じたのか、ともかく我々は彼を支持している。
 
@@ -873,7 +873,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : <span style="color: #700000;">�
 - @abstain: 代わりにいずれの候補への支持表明も控える。
 
 @support_thalmann_2
-on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; workers_kpd += 5; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
+on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; workers_kpd += 5; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10; kpd_nazi_urgency += 1;
 
 よかろう。我々はブルジョワ同盟勢力を狼狽させながら、<span style="color: #700000;">**KPD**</span>議長[+ communist_candidate_1932 +]支持へ踏み切った。
 
@@ -1115,7 +1115,7 @@ view-if: kpd_relation >= 60 or (kpd_relation >= 45 and kpd_leader == "Conciliato
 choose-if: resources >= 3
 subtitle: 資源 -3
 unavailable-subtitle: 資源が足りない（3必要）。
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 go-to: endorsements_braun
 
 <span style="color: #700000;">**KPD**</span>が大統領選挙でブラウン支持に転じた。ブルジョワ有権者を遠ざけないよう、支持表明は控えめにするよう求めた。
@@ -1123,7 +1123,7 @@ go-to: endorsements_braun
 @kpd_relations
 view-if: kpd_relation >= 75 or (kpd_leader == "Conciliators" and kpd_relation >= 55)
 unavailable-subtitle: 関係が十分に良くない。
-on-arrival: kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 go-to: endorsements_braun
 
 <span style="color: #700000;">**KPD**</span>が大統領選挙でブラウン支持に転じた。ブルジョワ有権者を遠ざけないよう、支持表明は控えめにするよう求めた。
@@ -1153,7 +1153,7 @@ view-if: kpd_relation >= 35 or kpd_relation >= 25 and kpd_leader == "Conciliator
 choose-if: resources >= 2
 subtitle: 資源 -2
 unavailable-subtitle: 資源が足りない（2必要）。
-on-arrival: resources -= 2; kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 2; kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 go-to: endorsements_rosenfeld
 
 <span style="color: #700000;">**KPD**</span>が大統領選挙でローゼンフェルト支持に転じた。[? if sapd_formed: さらに<span style="color: #9B0000;">**SAPD**</span>も同調させた。?] <span style="color: #9B0000;">マルクス主義者</span>の大統領が現実となる見通しに、ブルジョワ諸党は震え上がっている。
@@ -1161,7 +1161,7 @@ go-to: endorsements_rosenfeld
 @kpd_relations_rosenfeld
 view-if: kpd_relation >= 40 or (kpd_leader == "Conciliators" and kpd_relation >= 30)
 unavailable-subtitle: 関係が十分に良くない。
-on-arrival: kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 go-to: endorsements_rosenfeld
 
 <span style="color: #700000;">**KPD**</span>が大統領選挙でローゼンフェルト支持に転じた。[? if sapd_formed: さらに<span style="color: #9B0000;">**SAPD**</span>も同調させた。?] <span style="color: #9B0000;">マルクス主義者</span>の大統領が現実となる見通しに、ブルジョワ諸党は震え上がっている。

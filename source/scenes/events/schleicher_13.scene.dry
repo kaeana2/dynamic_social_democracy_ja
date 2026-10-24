@@ -34,6 +34,7 @@ if (Q.ddp_ideology != "Left") Q.ddp_leader = "Hellpach";
 
 Q.old_ddp_name = Q.ddp_name;
 Q.ddp_name = "DStP";
+Q.kpd_nazi_urgency += 1;
 !}
 
 シュライヒャーは、<span style="color: #D3C24D;">**[+ old_ddp_name +]**</span>を別組織のまま密接に結びついた<i>衛星政党</i>として残す方が、票を集めるうえで有効だと考えている。そのため、当面は名目上の独立を維持する[? if not dstp_formed:が、もはや皮肉にしかならない古い「民主」の看板を捨てるため改称する?]。今や<i>衛星政党</i>となった<span style="color: #D3C24D;">[+ ddp_name +]</span>の党首には、[+ ddp_leader +]が据えられた。

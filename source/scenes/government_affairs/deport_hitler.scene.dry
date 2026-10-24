@@ -40,7 +40,7 @@ on-arrival: sa_strength += 50; workers_nsdap += 5; unemployed_nsdap += 5; new_mi
 残念ながら、我々の部隊はヒトラーを囲む<span style="color: #7A3C00;">**SA**</span>を排除できなかった。ヒトラーは強力な指導者であると同時に被害者とも見なされ、そのイメージはいっそう強まった。<span style="color: #7A3C00;">ナチ</span>はかつてないほど勢力を増している。
 
 @force_success
-on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; pro_republic += 10
+on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; pro_republic += 10; kpd_nazi_urgency -= 1;
 achievement: deport_hitler
 
 衝突は警察と国旗団の勝利に終わり、ヒトラーの身柄を確保して国外追放できた！ この一件はナチの弱さを示し、ヒトラーが遠方に置かれたことで組織運営も難しくなり、<span style="color: #7A3C00;">ナチ</span>の得票拡大を妨げている。
@@ -48,7 +48,7 @@ achievement: deport_hitler
 ヒトラー不在の間、ヨーゼフ・ゲッベルスが<span style="color: #7A3C00;">ナチ党</span>の臨時指導者となり、ヘルマン・ゲーリングも大きな影響力を及ぼしている。
 
 @deport_success
-on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; pro_republic += 10
+on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; pro_republic += 10; kpd_nazi_urgency -= 1;
 achievement: deport_hitler
 
 驚くべきことに計画は成功した！ ヒトラーの国外追放に対する抵抗はごくわずかだった。この一件はナチの弱さを示し、ヒトラーが遠方に置かれたことで組織運営も難しくなり、<span style="color: #7A3C00;">ナチ</span>の得票拡大を妨げている。

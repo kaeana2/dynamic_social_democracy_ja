@@ -26,6 +26,7 @@ Q.lvp_relation = (Q.dnef_relation - 5);
 
 Q.dnef_r += Q.lvp_r;
 Q.lvp_r = 0;
+Q.kpd_nazi_urgency += 1;
 !}
 
 ドイツの中間勢力は、ほぼシュライヒャー体制の下に結集した。しかし<span style="color: #FFCC00;">**LVP**</span>左派の確固たる<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>の小集団は、抗議して離党し、<span style="color: #E0B0FF;">急進民主党</span>（<span style="color: #E0B0FF;">**RDP**</span>）を結成した。独自の選挙基盤に乏しい彼らは、今や我々の候補者名簿に加えてほしいと懇願している。

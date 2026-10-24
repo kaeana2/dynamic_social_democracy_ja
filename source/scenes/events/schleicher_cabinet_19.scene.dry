@@ -56,6 +56,7 @@ Q.schleicher_approval -= 4;
 Q.schleicher_spd_r -= 3;
 Q.schleicher_spd_influence -= 4;
 Q.schleicher_spd_support -= 5; 
+Q.kpd_nazi_urgency -= 1;
 !}
 
 シュライヒャー路線の継承者で、もう一人の無党派軍人を自任するフォン・ブレドウは、親友シュライヒャーの支持を得た。前首相シュライヒャーは正式には引退したものの、策謀癖を捨てようとせず、今なお舞台裏で数多くの糸を操っている。

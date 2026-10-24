@@ -25,6 +25,6 @@ on-arrival: schleicher_would_never_do_this_he_is_literally_hitler = 1
 
 @nay
 title: やはり予想どおりだ。
-on-arrival: schleicher_spd_support += 1; schleicher_spd_support += 1 if reformist_strength >= center_strength
+on-arrival: schleicher_spd_support += 1; schleicher_spd_support += 1 if reformist_strength >= center_strength; kpd_nazi_urgency -= 1;
 
 結局、会談は何の成果も生まなかった。しかしブラウンは、労組以外の主要な政治家として初めて、首相と取引する意向を公然と示した人物となった。

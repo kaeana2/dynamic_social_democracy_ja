@@ -32,7 +32,7 @@ subtitle: まず話を聞き、何を提示するか見極める。
 @schleicher_yay_2
 title: 我々は無防備だ――無防備で、名誉さえない。
 subtitle: これが後戻りできない一線である。
-on-arrival: schleicher_spd = 1; hindenburg_angry = 0; hindenburg_angry_pause_time = time + 12; nationalism += 20; pacifism -= 5; democratization -= 5; pro_republic -= spd_votes / 2; left_dissent += 50; center_dissent += 30; reformist_dissent += 10; nsdap_radicalization += 5; nsdap_strasser_time = time + 6; data_miner_detected = 1; kpd_relation -= 100; communist_coalition -= 5; reichswehr_loyalty += 0.05
+on-arrival: schleicher_spd = 1; hindenburg_angry = 0; hindenburg_angry_pause_time = time + 12; nationalism += 20; pacifism -= 5; democratization -= 5; pro_republic -= spd_votes / 2; left_dissent += 50; center_dissent += 30; reformist_dissent += 10; nsdap_radicalization += 5; nsdap_strasser_time = time + 6; data_miner_detected = 1; kpd_relation -= 100; communist_coalition -= 5; reichswehr_loyalty += 0.05; kpd_nazi_urgency -= 1;
 
 WTB計画の実施には1年の猶予が与えられた。かつてヒンデンブルクへ[+ chancellor +]政権の解任を働きかけた策謀家シュライヒャーが、今や我々の解任を阻止しようと動いている。残念ながら、緊急権を我々に与えるようヒンデンブルクを説得することには失敗した。
 

@@ -15,7 +15,7 @@ face-image: img/panzerkreuzer.jpg
 - @vote_no: 装甲巡洋艦を建造しない。
 
 @vote_yes
-on-arrival: left_dissent += 10; labor_dissent += 10; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; workers_spd -= 4 if panzerkreuzer_campaign; unemployed_spd -= 2 if panzerkreuzer_campaign; reichswehr_loyalty += 0.1; panzerkreuzer_funded = 1; dvp_left += 1; ddp_right += 1; ddp_cohesion -= 1; lvp_left += 0.5; goal_spd_cancel += 1; hindenburg_angry -= 5
+on-arrival: left_dissent += 10; labor_dissent += 10; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; workers_spd -= 4 if panzerkreuzer_campaign; unemployed_spd -= 2 if panzerkreuzer_campaign; reichswehr_loyalty += 0.1; panzerkreuzer_funded = 1; dvp_left += 1; ddp_right += 1; ddp_cohesion -= 1; lvp_left += 0.5; goal_spd_cancel += 1; hindenburg_angry -= 5;
 
 装甲巡洋艦の建造を支持したことで軍部を満足させた。しかし我々の強硬な決定に、党の一般党員は衝撃を受けている！　多くの支部が国会議員団への反対運動を始めた。
 

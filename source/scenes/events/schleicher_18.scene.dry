@@ -54,6 +54,10 @@ Q.workers_spd += 6;
 
 Q.unemployed_dnef -= 6;
 Q.unemployed_spd += 6;
+
+if (kpd_nazi_urgency < 0) {
+    kpd_nazi_urgency += 1;
+}
 !}
 
 労組の統一により、シュライヒャーの分断統治は難しくなった。穏健な労組をADGBに対抗させる手段を失ったのだ。我々はまた、今後数か月の間に政府が攻撃的な措置を試みた場合、統一行動で応じることにも合意した。

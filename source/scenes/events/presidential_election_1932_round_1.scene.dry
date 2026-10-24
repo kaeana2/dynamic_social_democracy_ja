@@ -877,7 +877,7 @@ go-to: round2_menu
 @round2_convince_z
 view-if: braun_campaign > 0 and z_support_spd != 1 and not eckener_campaign and not rosenfeld_campaign
 choose-if: spd_votes >= z_votes and not cvp_formed
-unavailable-subtitle: [? if spd_votes < z_votes: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は自党のほうが我々より有力だと承知しており、こちらの候補を支持する理由を見いだしていない。?] [? if cvp_formed: <span style="color: #000000;">**CVP**</span>に加わった旧<span style="color: #3E88B3;">**DNVP**</span>勢力が、社会主義者の大統領候補を支持することは決してない。?]
+unavailable-subtitle: [? if spd_votes < z_votes: [? if z_party_name != "CVP":<span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP":<span style="color: #000000;">**CVP**</span>?]は自党のほうが我々より有力だと承知しており、我々の候補を支持する理由を見いだしていない。?][? if cvp_formed: <span style="color: #000000;">**CVP**</span>に加わった旧<span style="color: #3E88B3;">**DNVP**</span>勢力が、社会主義者の大統領候補を支持することは決してない。?]
 on-arrival: {!
 if (!Q.bruning_time) {
     if (((Q.z_relation >= 60 && Q.spd_president_votes >= Q.hindenburg_votes) || (Q.z_relation > 50 && Q.z_ideology == "Left")) && Q.prussia_leader != "Braun") {
@@ -969,7 +969,7 @@ view-if: kpd_relation >= 55 or (kpd_relation >= 40 and kpd_leader == "Conciliato
 choose-if: resources >= 3
 subtitle: 資源 -3
 unavailable-subtitle: 資源が足りない（3必要）。
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 go-to: round2_menu
 
 <span style="color: #700000;">**KPD**</span>が大統領選挙でブラウン支持に転じた。ブルジョワ有権者を遠ざけないよう、支持表明は控えめにするよう求めた。
@@ -977,7 +977,7 @@ go-to: round2_menu
 @r2_kpd_relations
 view-if: kpd_relation >= 70 or (kpd_leader == "Conciliators" and kpd_relation >= 50)
 unavailable-subtitle: 関係が十分に良くない。
-on-arrival: kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; dvp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 go-to: round2_menu
 
 <span style="color: #700000;">**KPD**</span>が大統領選挙でブラウン支持に転じた。ブルジョワ有権者を遠ざけないよう、支持表明は控えめにするよう求めた。
@@ -1060,7 +1060,7 @@ max-visits: 1
 - @round2_menu: やめておく。
 
 @round2_thalmann_2
-on-arrival: spd_campaign = 0; spd_support_thalmann = 1; reformist_dissent += 20; center_dissent += 15; labor_dissent += 10; neorevisionist_dissent += 15; catholics_spd -= 5; workers_spd -= 3; workers_kpd += 5; kpd_relation += 10; communist_coalition += 2; dvp_relation -= 15; ddp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
+on-arrival: spd_campaign = 0; spd_support_thalmann = 1; reformist_dissent += 20; center_dissent += 15; labor_dissent += 10; neorevisionist_dissent += 15; catholics_spd -= 5; workers_spd -= 3; workers_kpd += 5; kpd_relation += 10; communist_coalition += 2; dvp_relation -= 15; ddp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10; kpd_nazi_urgency += 1;
 on-departure: z_support_spd = 0; kpd_support_spd = 0;
 
 よし。ブルジョワの同盟勢力を狼狽させながらも、我々は<span style="color: #700000;">**KPD**</span>議長テールマン支持へ踏み切った。
@@ -1071,7 +1071,7 @@ on-departure: z_support_spd = 0; kpd_support_spd = 0;
 
 @round2_hindenburg
 view-if: (spd_campaign > 0 or spd_support_thalmann > 0) and organizational_endorsements_seen and hindenburg_run
-on-arrival: spd_campaign = 0; spd_support_thalmann = 0; spd_support_reactionary = 1; left_dissent += 10; hindenburg_angry_bruning += 25; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
+on-arrival: spd_campaign = 0; spd_support_thalmann = 0; spd_support_reactionary = 1; left_dissent += 10; hindenburg_angry_bruning += 25; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3;
 
 我々はヒンデンブルク支持へ転じた。[? if bruning_time: ヒンデンブルクは<span style="color: #c00000;">社会主義者</span>の支持で当選することに不満を抱き、この結果をブリューニングと不人気な内閣の責任だとしているという。?]
 
@@ -1079,7 +1079,7 @@ on-arrival: spd_campaign = 0; spd_support_thalmann = 0; spd_support_reactionary 
 
 @round2_reactionary
 view-if: not hindenburg_run and reactionary_candidate_1932 and reactionary_candidate_1932 != "Westarp" and reactionary_candidate_1932 != "Lettow-Vorbeck" and not (lib_drop_out_bourgeois and liberal_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (z_drop_out_bourgeois and center_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (lib_drop_out_2 and liberal_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (z_drop_out_2 and center_reactionary_candidate_1932_name == reactionary_candidate_1932) and spd_choice != reactionary_candidate_1932
-on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_campaign = 0; braun_campaign = 0; rosenfeld_campaign = 0; eckener_campaign = 0; z_choice = reactionary_candidate_1932 if spd_campaign; ddp_choice = reactionary_candidate_1932 if spd_campaign; lvp_choice = reactionary_candidate_1932 if spd_campaign; dvp_choice = reactionary_candidate_1932 if spd_campaign; spd_choice = reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
+on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_campaign = 0; braun_campaign = 0; rosenfeld_campaign = 0; eckener_campaign = 0; z_choice = reactionary_candidate_1932 if spd_campaign; ddp_choice = reactionary_candidate_1932 if spd_campaign; lvp_choice = reactionary_candidate_1932 if spd_campaign; dvp_choice = reactionary_candidate_1932 if spd_campaign; spd_choice = reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3; kpd_nazi_urgency -= 1;
 
 我々は[+ reactionary_candidate_1932 +]支持へ転じた。
 
@@ -1087,7 +1087,7 @@ on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_camp
 
 @round2_reactionary_2
 view-if: not hindenburg_run and secondary_reactionary_candidate_1932 and secondary_reactionary_candidate_1932 != "Westarp" and secondary_reactionary_candidate_1932 != "Lettow-Vorbeck" and not (lib_drop_out_bourgeois and liberal_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (z_drop_out_bourgeois and center_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (lib_drop_out_2 and liberal_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (z_drop_out_2 and center_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and spd_choice != secondary_reactionary_candidate_1932
-on-arrival: spd_support_reactionary = 1; spd_support_reactionary_2 = 1; spd_campaign = 0; braun_campaign = 0; rosenfeld_campaign = 0; eckener_campaign = 0; z_choice = secondary_reactionary_candidate_1932 if spd_campaign; ddp_choice = secondary_reactionary_candidate_1932 if spd_campaign; lvp_choice = secondary_reactionary_candidate_1932 if spd_campaign; dvp_choice = secondary_reactionary_candidate_1932 if spd_campaign; spd_choice = secondary_reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
+on-arrival: spd_support_reactionary = 1; spd_support_reactionary_2 = 1; spd_campaign = 0; braun_campaign = 0; rosenfeld_campaign = 0; eckener_campaign = 0; z_choice = secondary_reactionary_candidate_1932 if spd_campaign; ddp_choice = secondary_reactionary_candidate_1932 if spd_campaign; lvp_choice = secondary_reactionary_candidate_1932 if spd_campaign; dvp_choice = secondary_reactionary_candidate_1932 if spd_campaign; spd_choice = secondary_reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3;  kpd_nazi_urgency -= 1;
 
 我々は[+ reactionary_candidate_1932 +]支持へ転じた。
 

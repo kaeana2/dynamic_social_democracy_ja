@@ -31,16 +31,16 @@ on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; worker
 <span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>への攻撃は党全体に好評だが、左派はブルジョワ諸党も同様に危険だと考え、右派は<span style="color: #700000;">**KPD**</span>への対応不足を批判している。ブルジョワ連立諸党も、反共主義への消極姿勢を疑問視している。
 
 @nsdap
-on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4; unemployed_nsdap -= 4; workers_nsdap += 8 if nsdap_votes < 8; unemployed_nsdap += 8 if nsdap_votes < 8
+on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4; unemployed_nsdap -= 4; workers_nsdap += 8 if nsdap_votes < 8; unemployed_nsdap += 8 if nsdap_votes < 8; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 [? if nazi_urgency == 0 or nsdap_votes < 10: 現在の<span style="color: #7A3C00;">**NSDAP**</span>は、声ばかり大きい小政党にすぎない。党内ではこの選択を疑問視する者が多い。[? if nsdap_votes < 8: さらに悪いことに、注目を集めすぎれば彼らを利するだけかもしれない。 ?] ?][? if nazi_urgency > 0 and nsdap_votes >= 10 : <span style="color: #7A3C00;">ナチ</span>こそ最優先で対処すべき問題である。 ?]
 
 @kpd
-on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; ddp_relation += 3; z_relation += 5; lvp_relation += 5; workers_kpd -= 3; unemployed_kpd -= 4; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
+on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; ddp_relation += 3; z_relation += 5; lvp_relation += 5; workers_kpd -= 3; unemployed_kpd -= 4; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1; kpd_nazi_urgency -= 1;
 
 <span style="color: #700000;">**KPD**</span>への攻撃は最左派の<span style="color: #c00000;">社会主義者</span>を除いて支持され、ブルジョワ諸党からも一定の評価を得る。しかし<span style="color: #700000;">**KPD**</span>との和解を目指すなら最善の選択ではない。
 
 @bourgeois
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; new_middle_dvp -= 2; workers_dvp -= 1; workers_ddp -= 0.5; workers_ddp -= 0.5 if not dvp_exist; coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1
+on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; new_middle_dvp -= 2; workers_dvp -= 1; workers_ddp -= 0.5; workers_ddp -= 0.5 if not dvp_exist; coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1; kpd_nazi_urgency += 1;
 
 反ブルジョワの言辞は左派に好評だが、将来の政権に必要な連立形成を難しくする恐れがある。

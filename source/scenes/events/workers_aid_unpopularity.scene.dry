@@ -1,0 +1,35 @@
+title: 労働者福祉会の会員が減少
+subtitle: 我が党の不人気が、労働者福祉会の会員獲得を妨げている。
+view-if: workers_aid > 0 and workers_spd_normalized + unemployed_spd_normalized < (workers_kpd_normalized + workers_nsdap_normalized + workers_dnvp_normalized) and time >= workers_aid_unpopularity_time
+new-page: true
+tags: event
+on-display: {!
+    var cardEl = document.createElement('div');
+    cardEl.className = "face-figure2";
+
+    var image = new Image();
+    image.className = "face-img";
+    image.src = "img/tnoreference.png";
+
+    cardEl.appendChild(image);
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+on-arrival: workers_aid_unpopularity_time = time + 6
+
+= 労働者福祉会の会員が減少
+
+残念ながら、労働者福祉会の活動効果は<span style="color: #c00000;">**SPD**</span>の不人気によって低下している。労働者たちが入会にあまり乗り気ではないためだ。[? if labor_strength >= 40: ただし、熱心な労働組合員の多くは会にとどまっている。?][? if spd_votes >= 29: さらに、労働者以外の階層からも、まとまった数の支持者を獲得できずにいる。?]
+
+- @workers_aid_joever: 残念なことだ。
+
+@workers_aid_joever
+on-arrival: {!
+    if (Q.labor_strength < 40) {
+        Q.workers_aid = Math.floor(Q.workers_aid * 0.8);
+    } else {
+        Q.workers_aid = Math.floor(Q.workers_aid * 0.9);
+    }
+!}
+
+我が党の支持が低迷し続ける限り、この問題は解消しない。

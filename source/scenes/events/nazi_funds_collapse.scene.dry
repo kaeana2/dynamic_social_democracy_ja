@@ -31,6 +31,6 @@ on-display: {!
 @nazi_explode
 title: <span style="color: #7A3C00;">ナチ</span>運動は一時的に麻痺した。
 subtitle: 緊縮に反対する党内で緊縮が始まる。
-on-arrival: nazi_funds_timer += 12; sa_strength -= 50; sa_militancy -= 0.05; nazi_explode += 3
+on-arrival: nazi_funds_timer += 12; sa_strength -= 50; sa_militancy -= 0.05; nazi_explode += 3;kpd_nazi_urgency -= 1;
 
 かつて<span style="color: #7A3C00;">**NSDAP**</span>を支えた草の根献金が回復するまで、党は今後数か月にわたり厳しい予算で運営される。『我が闘争』の収益さえも、[? if not hitler_dead: 従来はヒトラーの贅沢な生活を支えていたが、今や?][? if hitler_dead: &nbsp;?]党を存続させるために振り向けられている。

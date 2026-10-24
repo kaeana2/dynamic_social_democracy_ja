@@ -23,6 +23,7 @@ Q.z_relation = (Q.dnef_relation - 10);
 Q.dnef_r += Q.z_r;
 Q.z_r = 0;
 Q.bvp_r = 0;
+Q.kpd_nazi_urgency += 1;
 !}
 
 <span style="color: #BFC8CC;">ドイツ国民統一戦線</span>の現在の構成：

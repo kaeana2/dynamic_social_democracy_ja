@@ -32,7 +32,7 @@ on-display: {!
 title: 労組に交渉を任せる。
 unavailable-subtitle: 党のシュライヒャーへの不信が強すぎて、認められない。
 choose-if: schleicher_spd_support >= 6 and labor_strength >= (center_strength*2) + left_strength
-on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1 if schleicher_spd_r < 5; workers_spd -= 4; unemployed_spd -= 4; center_dissent += 10; neorevisionist_dissent += 10; schleicher_spd_adopted = 1; schleicher_approval += 1
+on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1 if schleicher_spd_r < 5; workers_spd -= 4; unemployed_spd -= 4; center_dissent += 10; neorevisionist_dissent += 10; schleicher_spd_adopted = 1; schleicher_approval += 1; kpd_nazi_urgency -= 1;
 
 ADGBは声明で政治的休戦のうわさを明確には否定せず、公共事業計画を実行できるよう、首相に数か月は議会に妨げられない時間を与えるべきだと主張した。<span style="color: #c00000;">**SPD**</span>指導部には、我々が代表する労働者の利益となるだけでなく、<span style="color: #700000;">**共産党**</span>と<span style="color: #7A3C00;">ナチ党</span>の双方から支持者を引き離せるとして、この行動を正当化している。
 

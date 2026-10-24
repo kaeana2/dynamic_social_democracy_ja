@@ -46,6 +46,7 @@ Q.old_middle_nsdap -= 2;
 Q.schleicher_spd_influence -= 1;
 Q.schleicher_spd_r -= 1;
 Q.schleicher_spd_support -= 2;
+Q.kpd_nazi_urgency += 1;
 !}
 
 <span style="color: #3E88B3;">**鉄兜団**</span>のように誇り高い退役軍人組織にとって、従属は最も受け入れ難い。しかし指導者の抵抗は裏目に出るばかりだった。全国・地方支部の指導者会議で、準軍事組織と政治工作の時代は終わったと認め、国益のため組織を国家と一体化させることに合意した。

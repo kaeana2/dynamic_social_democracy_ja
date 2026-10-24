@@ -25,7 +25,7 @@ subtitle: 労組の意思は固まったが、党の説得はまったく別問�
 unavailable-subtitle: 親シュライヒャー派はADGBの方針へ影響するほど強くない。
 view-if: schleicher_spd_support >= 10
 choose-if: labor_strength + reformist_strength + social_patriot_strength >= (center_strength*1.5) + left_strength
-on-arrival: schleicher_spd_adopted = 1; schleicher_spd_r += 1 if schleicher_spd_r < 5; center_dissent += 5; left_dissent += 10; labor_strength += 10; reformist_strength += 5; schleicher_approval += 2
+on-arrival: schleicher_spd_adopted = 1; schleicher_spd_r += 1 if schleicher_spd_r < 5; center_dissent += 5; left_dissent += 10; labor_strength += 10; reformist_strength += 5; schleicher_approval += 2; kpd_nazi_urgency -= 3;
 max-visits: 1
 
 ADGB指導部は非公開ながら正式に「赤い将軍」との協力を支持した。労組は<span style="color: #c00000;">**SPD**</span>への影響力を使い、ためらう党指導部にも同じ立場を採らせようとする。
@@ -37,7 +37,7 @@ subtitle: [? if chancellor == "Papen": 少なくともパーペンが首相で�
 unavailable-subtitle: 親シュライヒャー派はADGBの方針へ影響するほど強くない。
 view-if: schleicher_spd_support < 10
 choose-if: labor_strength + reformist_strength + social_patriot_strength >= (center_strength*1.5) + left_strength
-on-arrival: schleicher_spd_support += 3; schleicher_spd_support += 1 if wtb_adopted; schleicher_spd_support -= 1 if chancellor == "Papen"; schleicher_spd_support -= 1 if otl_prussian_coup_seen; workers_spd -= 1; unemployed_spd -= 1; workers_kpd += 1; unemployed_kpd += 1; center_dissent += 5; left_dissent += 5
+on-arrival: schleicher_spd_support += 3; schleicher_spd_support += 1 if wtb_adopted; schleicher_spd_support -= 1 if chancellor == "Papen"; schleicher_spd_support -= 1 if otl_prussian_coup_seen; workers_spd -= 1; unemployed_spd -= 1; workers_kpd += 1; unemployed_kpd += 1; center_dissent += 5; left_dissent += 5; kpd_nazi_urgency -= 1;
 
 ゆっくりだが確実に、ADGB指導部は「赤い将軍」との建設的協力へ好意を持ち始めた。しかし課題は多い。労組内の多数と<span style="color: #c00000;">**SPD**</span>の圧倒的多数は、[? if chancellor == "Papen": 広く憎まれるパーペン内閣を支える人物?][? if chancellor == "Schleicher": 不人気な政府を率いる人物?]との協力に断固反対している。[? if wtb_adopted: WTB計画の採用と、同様の公共事業構想をシュライヒャーが公然と支持したことで、党内では協力を検討する姿勢がわずかに強まった。 ?]
 
@@ -72,7 +72,7 @@ ADGB、<span style="color: #c00000;">**SPD**</span>、フォン・シュライ�
 
 @schleicher_distance
 subtitle: 将軍の同調者を脇へ追いやる。
-on-arrival: schleicher_spd_r -= 1; schleicher_spd_support -= 2; schleicher_spd_influence -= 1; labor_dissent += 8; reformist_dissent += 8; social_patriot_dissent += 8; center_dissent -= 5; left_dissent -= 5; neorevisionist_dissent -= 5; reformist_strength -= 4; labor_strength -= 4; social_patriot_strength -= 4
+on-arrival: schleicher_spd_r -= 1; schleicher_spd_support -= 2; schleicher_spd_influence -= 1; labor_dissent += 8; reformist_dissent += 8; social_patriot_dissent += 8; center_dissent -= 5; left_dissent -= 5; neorevisionist_dissent -= 5; reformist_strength -= 4; labor_strength -= 4; social_patriot_strength -= 4; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 近月、シュライヒャーは<span style="color: #c00000;">**SPD**</span>の改革派と労働派で多くの同調者を得た。彼らを排除すれば将軍の不信を招き、該当派閥の不満を煽るだろう。
 
@@ -98,7 +98,7 @@ subtitle: プロイセン警察の統制を取り戻し、州政府への参加�
 unavailable-subtitle: [? if schleicher_spd_r < 5: まずシュライヒャーとの関係を改善する必要がある。 ?][? if hindenburg_schleicher_r < 5: ヒンデンブルクはプロイセンを<span style="color: #c00000;">社会主義者</span>の手へ戻すことに強く反対している。 ?][? if not schleicher_post: シュライヒャーは次の選挙まで待つよう求めている。 ?][? if dsu_in_gov or dsu_was_gov: シュライヒャーは[? if dsu_was_gov:旧?]<span style="color: #7A3C00;">ナチ</span>を政権に残す決意を固めている。 ?]
 choose-if: schleicher_post and schleicher_spd_r >= 7 and hindenburg_schleicher_r >= 5 and not dsu_in_gov and not dsu_was_gov
 view-if: prussia_leader == "Schleicher"
-on-arrival: schleicher_spd_concession += 1; schleicher_spd_influence += 4; schleicher_spd_support += 2; schleicher_spd_r -= 2; prussia_returned = 1; prussia_leader = older_prussia_leader; in_weimar_coalition_prussia = 1 if pre_in_weimar_coalition_prussia; in_grand_coalition_prussia = 1 if pre_in_grand_coalition_prussia; in_minority_weimar_coalition_prussia = 1 if in_weimar_coalition_prussia and weimar_coalition_prussia < 50; in_minority_grand_coalition_prussia = 1 if in_grand_coalition_prussia and grand_coalition_prussia < 50; pro_republic += 10; workers_spd += 5; new_middle_spd += 5; unemployed_spd += 3; new_middle_ddp += 3; labor_dissent -= 15; reformist_dissent -= 15; reformist_strength += 15; left_dissent -= 15; prussian_police_loyalty += 0.3; rb_strength *= 1.1; rb_militancy *= 1.1; papen_strength += 1; schleicher_strength -= 1; hindenburg_schleicher_r -= 2; schleicher_approval += 1; nationalists_schleicher_bonus -= 2; industrialists_schleicher_bonus -= 1; republicans_schleicher_bonus += 2
+on-arrival: schleicher_spd_concession += 1; schleicher_spd_influence += 4; schleicher_spd_support += 2; schleicher_spd_r -= 2; prussia_returned = 1; prussia_leader = older_prussia_leader; in_weimar_coalition_prussia = 1 if pre_in_weimar_coalition_prussia; in_grand_coalition_prussia = 1 if pre_in_grand_coalition_prussia; in_minority_weimar_coalition_prussia = 1 if in_weimar_coalition_prussia and weimar_coalition_prussia < 50; in_minority_grand_coalition_prussia = 1 if in_grand_coalition_prussia and grand_coalition_prussia < 50; pro_republic += 10; workers_spd += 5; new_middle_spd += 5; unemployed_spd += 3; new_middle_ddp += 3; labor_dissent -= 15; reformist_dissent -= 15; reformist_strength += 15; left_dissent -= 15; prussian_police_loyalty += 0.3; rb_strength *= 1.1; rb_militancy *= 1.1; papen_strength += 1; schleicher_strength -= 1; hindenburg_schleicher_r -= 2; schleicher_approval += 1; nationalists_schleicher_bonus -= 2; industrialists_schleicher_bonus -= 1; republicans_schleicher_bonus += 2; kpd_nazi_urgency -= 1;
 
 数か月前にブラウンの提案を拒絶したシュライヒャーは、その後考え直した。これほど人気のある政治家を味方につければ、<span style="color: #000000;">共</span><span style="color: #DD0000;">和</span><span style="color: #FFCC00;">派</span>と国民の目に統治の正統性が増す。ブラウンも党内で親シュライヒャー方針を精力的に唱えるだろう。
 
@@ -113,7 +113,7 @@ subtitle: 賃上げ、パーペン政令の廃止、8時間労働制の復活を
 unavailable-subtitle: [? if schleicher_spd_r < 5: まずシュライヒャーとの関係を改善する必要がある。 ?][? if hindenburg_schleicher_r < 3: シュライヒャーは、パーペンの措置を覆したくないヒンデンブルクが政令を阻止すると主張している。 ?]
 choose-if: schleicher_spd_r >= 5 and hindenburg_schleicher_r >= 3
 view-if: not schleicher_labor
-on-arrival: schleicher_spd_concession += 1; schleicher_labor = 1; schleicher_spd_influence += 4; schleicher_spd_support += 2; schleicher_spd_r -= 2; hindenburg_schleicher_r -= 1; unemployed -= 1.8; economic_growth += 0.8; inflation += 1.4; budget -= 1; workers_kpd -= 6; unemployed_kpd -= 6; workers_nsdap -= 2; unemployed_nsdap -= 2; workers_spd += 6; unemployed_spd += 6; workers_z += 2; unemployed_z += 2; workers_dnef += 4; unemployed_dnef += 2; workers_dnef_bonus += 4; unemployed_dnef_bonus += 2; pro_republic += 5; labor_dissent -= 40; labor_strength += 15; social_patriot_strength += 10; schleicher_approval += 2; industrialists_schleicher_bonus -= 1
+on-arrival: schleicher_spd_concession += 1; schleicher_labor = 1; schleicher_spd_influence += 4; schleicher_spd_support += 2; schleicher_spd_r -= 2; hindenburg_schleicher_r -= 1; unemployed -= 1.8; economic_growth += 0.8; inflation += 1.4; budget -= 1; workers_kpd -= 6; unemployed_kpd -= 6; workers_nsdap -= 2; unemployed_nsdap -= 2; workers_spd += 6; unemployed_spd += 6; workers_z += 2; unemployed_z += 2; workers_dnef += 4; unemployed_dnef += 2; workers_dnef_bonus += 4; unemployed_dnef_bonus += 2; pro_republic += 5; labor_dissent -= 40; labor_strength += 15; social_patriot_strength += 10; schleicher_approval += 2; industrialists_schleicher_bonus -= 1; kpd_nazi_urgency -= 1;
 
 <span style="color: #c00000;">社会派</span>将軍は異名に応えた。失業保険の資力調査は廃止され、仕事をより多くの人へ「分配」するため一部産業で8時間労働制が復活した。パーペン政権下で削られた労働省予算も回復し、福祉水準は最低点から上昇している。
 
@@ -124,7 +124,7 @@ title: 内閣改造を要求する。
 subtitle: シュライヒャー内閣は、貴族内閣たるパーペン内閣から残った極めて<span style="color: #808080;">反動的</span>な人物に支配されている。
 unavailable-subtitle: [? if schleicher_spd_r < 7: まずシュライヒャーとの関係を改善する必要がある。 ?][? if hindenburg_schleicher_r < 5: シュライヒャーによれば、ヒンデンブルクはお気に入りの<span style="color: #808080;">反動派</span>を外す内閣改造を阻止するという。 ?][? if not schleicher_post: シュライヒャーは自らの内閣が単なる選挙管理内閣だと主張し、次の選挙後まで待つよう求めている。 ?][? if dsu_in_gov or dsu_was_gov: シュライヒャーは[? if dsu_was_gov:旧?]<span style="color: #7A3C00;">ナチ</span>を政権に残す決意を固めている。 ?][? if z_leader == "Bracht": もはや手遅れである。<span style="color: #000000;">中央党</span>のブラハトが、穏健派の閣僚を増やすいかなる動きも拒んでいる。 ?]
 choose-if: schleicher_post and schleicher_spd_r >= 7 and z_in_gov and not dsu_in_gov and not dsu_was_gov and hindenburg_schleicher_r >= 5 and z_leader != "Bracht"
-on-arrival: schleicher_spd_concession += 1; schleicher_spd_influence += 2; schleicher_spd_support += 2; schleicher_spd_r -= 2; papen_strength += 2; schleicher_strength -= 1; hindenburg_schleicher_r -= 3; schleicher_cabinet_weak = 1; unemployed -= 0.4; economic_growth += 0.2; workers_spd += 2; unemployed_spd += 2; workers_kpd -= 2; unemployed_kpd -= 2; pro_republic += 8; reformist_dissent -= 10; reformist_strength += 5; schleicher_approval += 1
+on-arrival: schleicher_spd_concession += 1; schleicher_spd_influence += 2; schleicher_spd_support += 2; schleicher_spd_r -= 2; papen_strength += 2; schleicher_strength -= 1; hindenburg_schleicher_r -= 3; schleicher_cabinet_weak = 1; unemployed -= 0.4; economic_growth += 0.2; workers_spd += 2; unemployed_spd += 2; workers_kpd -= 2; unemployed_kpd -= 2; pro_republic += 8; reformist_dissent -= 10; reformist_strength += 5; schleicher_approval += 1; kpd_nazi_urgency -= 1;
 
 内閣の多くの<span style="color: #808080;">反動的</span>人物はすでに<span style="color: #000000;">中央党</span>の任命者へ交代したが、シュライヒャー政府をより民主的な外観へ近づけるにはさらなる改革が必要である。
 

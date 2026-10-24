@@ -2,7 +2,7 @@ title: ボックスハイム文書
 new-page: true
 subtitle: <span style="color: #7A3C00;">ナチ</span>による暴力的な権力奪取を詳述した文書が発見される……
 view-if: year = 1931 and month == 11 and nsdap_votes >= 24 and investigate_far_right < 3
-on-arrival: boxheim_seen = 1; nazi_urgency += 1; investigate_far_right = 4; hindenburg_angry_bruning -= 10
+on-arrival: boxheim_seen = 1; nazi_urgency += 1; investigate_far_right = 4; hindenburg_angry_bruning -= 10; kpd_nazi_urgency += 1;
 max-visits: 1
 face-image: img/boxheim.jpg
 tags: event

@@ -26,7 +26,7 @@ subtitle: 労働者はゼネストを宣言する。国旗団とRFBを動員し�
 - @surrender
 
 @defend_2
-on-arrival: resist_coup = 1; thuringia_joever = 0; reformist_dissent += 10; defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += rfb_strength*rfb_militancy; defense_strength += workers_spd_normalized*(1 - dissent)*(2 - unemployed/100); defense_strength += workers_kpd_normalized*(2 - unemployed/100); defense_strength *= 0.8; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; enemy_strength += reichswehr_strength*reichswehr_militancy*(1-reichswehr_loyalty)
+on-arrival: resist_coup = 1; thuringia_joever = 0; reformist_dissent += 10; defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += rfb_strength*rfb_militancy; defense_strength += workers_spd_normalized*(1 - dissent)*(2 - effective_unemployed/100); defense_strength += workers_kpd_normalized*(2 - effective_unemployed/100); defense_strength *= 0.8; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; enemy_strength += reichswehr_strength*reichswehr_militancy*(1-reichswehr_loyalty)
 go-to: defend_2_civil_war if defense_strength < enemy_strength; defend_2_victory if defense_strength >= enemy_strength
 
 @defend_2_civil_war
@@ -46,7 +46,7 @@ achievement: drei_pfeile
 @surrender
 title: 流血を避けるため、我々の役職を辞任する。
 subtitle: ヒンデンブルクは新たな国家弁務官を任命する。
-on-arrival: red_thuringia = 0; workers_spd -= 3; workers_kpd -= 3; unemployed_kpd -= 3; unemployed_spd -= 3; left_dissent += 10; labor_dissent += 5; rb_militancy = rb_militancy*0.8; rb_strength -= 200; rfb_banned = 1; rfb_strength -= 100; rfb_militancy -= 0.1; kpd_relation -= 25; communist_coalition -= 1
+on-arrival: red_thuringia = 0; workers_spd -= 3; workers_kpd -= 3; unemployed_kpd -= 3; unemployed_spd -= 3; left_dissent += 10; labor_dissent += 5; rb_militancy = rb_militancy*0.8; rb_strength -= 200; rfb_banned = 1; rfb_strength -= 100; rfb_militancy -= 0.1; kpd_relation -= 25; communist_coalition -= 1; kpd_nazi_urgency -= 1
 
 街頭で抗議する<span style="color: #700000;">共産党員</span>は容赦なく鎮圧された。国防軍は街頭を巡回して政治集会を制限し、<span style="color: #7A3C00;">ナチ</span>の<span style="color: #7A3C00;">**SA**</span>が地元党幹部を襲っても見て見ぬふりをしている。
 

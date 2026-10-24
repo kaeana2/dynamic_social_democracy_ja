@@ -16,7 +16,7 @@ max-visits: 1
 @ban_march
 choose-if: judicial_reform >= 2
 unavailable-subtitle: 表現の自由を理由に、司法は示威行進の禁止を認めないだろう。
-on-arrival: sa_strength -= 10; altona_good = 1
+on-arrival: sa_strength -= 10; altona_good = 1; kpd_nazi_urgency += 2;
 
 我々は計画された示威行進を禁止した。<span style="color: #7A3C00;">ナチ</span>は表現の自由を掲げて、禁止処分を裁判所に訴えた。幸いにも司法は、<span style="color: #7A3C00;">ナチ</span>の主張が詭弁にすぎないという我々の見解を認めた。
 
@@ -25,19 +25,19 @@ on-arrival: sa_strength -= 10; altona_good = 1
 go-to: allow_police_violence if prussian_police_loyalty <= 0.75; allow_police_no_violence if prussian_police_loyalty > 0.75 
 
 @allow_police_violence
-on-arrival: strife += 1; sa_strength += 50; kpd_relation -= 8; communist_coalition -= 1
+on-arrival: strife += 1; sa_strength += 50; kpd_relation -= 8; communist_coalition -= 1; kpd_nazi_urgency += 2;
 
 行進隊がアルトナに到着すると、怒りに燃えた<span style="color: #700000;">共産主義者</span>と<span style="color: #c00000;">社会主義者</span>の群衆が直ちに立ちはだかり、<span style="color: #7A3C00;">ナチ</span>へ物を投げつけた。警察は両者を引き離そうとしたが、効果はなかった。屋上の狙撃手によるものとされる銃声が響き、警察は狙撃手を<span style="color: #700000;">共産主義者</span>と判断した。これに応じて警察は周囲の建物へ発砲し、数十人が死亡した。犠牲者は全員民間人であり、報告された狙撃手はついに発見されなかった。
 
 報道機関はこの事件を「アルトナの血の日曜日」と呼んでいる。<span style="color: #700000;">共産主義者</span>は、我々の指揮下にあるはずの警察の無能を激しく非難した。
 
 @allow_police_no_violence
-on-arrival: altona_good = 1; sa_strength += 10
+on-arrival: altona_good = 1; sa_strength += 10; kpd_nazi_urgency += 1;
 
 行進隊がアルトナに到着すると、怒りに燃えた<span style="color: #700000;">共産主義者</span>と<span style="color: #c00000;">社会主義者</span>の群衆が直ちに立ちはだかり、<span style="color: #7A3C00;">ナチ</span>へ物を投げつけた。警察は両者を引き離そうとしたが、効果はなかった。屋上の狙撃手によるものとされる銃声が響いた。それでも警察は冷静さを保ち、やがて銃声は止み、行進隊はさらなる暴力を起こすことなく解散した。
 
 
 @allow_no_police
-on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; kpd_relation -= 8; communist_coalition -= 1
+on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; kpd_relation -= 8; communist_coalition -= 1; kpd_nazi_urgency -= 1;
 
 行進隊がアルトナに到着すると、怒りに燃えた<span style="color: #700000;">共産主義者</span>と<span style="color: #c00000;">社会主義者</span>の群衆が直ちに立ちはだかり、<span style="color: #7A3C00;">ナチ</span>へ物を投げつけた。屋上の狙撃手によるものとされる銃声が響くと、<span style="color: #7A3C00;">**SA**</span>は周囲の群衆と交戦し、建物へ向けても発砲した。数十人が死亡し、その大半は民間人だった。<span style="color: #7A3C00;">ナチ</span>は死者を殉教者として宣伝し、新たな党員を募っている。

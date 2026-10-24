@@ -65,10 +65,10 @@ on-arrival: resources -= 3; coalition_dissent -= 1;
 我々の連立パートナーに資源を移すことで、彼らの我々の政策に対する異議を減らすことができる。これは粗雑だが、効果的な解決策だ。
 
 @support_kpd
-choose-if: ((in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= dvp_r and not lvp_formed) or (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_relation >= 50 and kpd_r >= z_r and communist_coalition >= 3)
+choose-if: communist_coalition >= 3 and kpd_relation >= 50 and ((in_weimar_coalition and kpd_r + sapd_r + weimar_coalition - z_r >= 50) or (in_grand_coalition and not lvp_formed and kpd_r + sapd_r + grand_coalition - dvp_r >= 50) or (in_grand_coalition and lvp_formed and lvp_ideology == "Right" and kpd_r + sapd_r + grand_coalition - lvp_r * 3 / 4 >= 50) or (in_grand_coalition and lvp_formed and lvp_ideology == "Center" and kpd_r + sapd_r + grand_coalition - lvp_r / 2 >= 50) or (in_grand_coalition and lvp_formed and lvp_ideology == "Left" and kpd_r + sapd_r + grand_coalition - lvp_r / 4 >= 50))
 view-if: tried_supporting_kpd = 0 and not in_popular_front
 on-arrival: tried_supporting_kpd = 1
-unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #700000;">KPD</span>は議会政府に参加しない。 ?] [? if kpd_relation < 50 : <span style="color: #700000;">KPD</span>は我々にとって友好的ではない。 ?] [? if ((in_grand_coalition and kpd_r < dvp_r and not lvp_formed) or (in_grand_coalition and kpd_r < (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_r < z_r): <span style="color: #700000;">KPD</span>は十分な票を持たない。 ?] [? if in_popular_front : 我々はすでに<span style="color: #700000;">KPD</span>と人民戦線にある。 ?]
+unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #700000;">KPD</span>は議会を基盤とする政権への参加を拒んでいる。?][? if kpd_relation < 50 : <span style="color: #700000;">KPD</span>との関係が十分に友好的ではない。?][? if (in_weimar_coalition and kpd_r + sapd_r + weimar_coalition - z_r < 50) or (in_grand_coalition and not lvp_formed and kpd_r + sapd_r + grand_coalition - dvp_r < 50) or (in_grand_coalition and lvp_formed and lvp_ideology == "Right" and kpd_r + sapd_r + grand_coalition - lvp_r * 3 / 4 < 50) or (in_grand_coalition and lvp_formed and lvp_ideology == "Center" and kpd_r + sapd_r + grand_coalition - lvp_r / 2 < 50) or (in_grand_coalition and lvp_formed and lvp_ideology == "Left" and kpd_r + sapd_r + grand_coalition - lvp_r / 4 < 50): <span style="color: #700000;">KPD</span>の支持を得ても必要な票数に届かない。?][? if in_popular_front : 我々はすでに<span style="color: #700000;">KPD</span>と人民戦線を結成している。?]
 
 もし<span style="color: #700000;">**共産主義者**</span>が棄権すれば、我々は本質的に少数与党を維持できる[? if president=="Hindenburg":が、大統領ヒンデンブルクの支持なしに政策を進めるのは非常に困難だが、我々はそれを持っていない?]。これが起こった場合、我々は<span style="color: #700000;">**KPD**</span>に対して多大な負債を負うことになる。これは、良か悪かに関わらず、将来的なより広範な協力を生む可能性がある。
 
@@ -76,7 +76,7 @@ unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #70000
 - @let_it_happen: 気にするな。投票をさせろ。
 
 @support_kpd_2
-on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
+on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5; kpd_nazi_urgency += 0 if kpd_nazi_urgency < 0;
 go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
 
 

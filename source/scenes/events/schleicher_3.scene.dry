@@ -16,7 +16,7 @@ face-image: img/portraits/schleicher.jpg
 
 @schleicher
 title: 将軍の話を聞こう。
-on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1
+on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1; kpd_nazi_urgency -= 1;
 
 ADGB指導者テオドール・ライパルトとヴィルヘルム・エッゲルトが、次期首相シュライヒャーと会談した。シュライヒャーは、パーペンの賃金に関する緊急令のうち特に反発の強いものを撤回し、公共事業計画を始めると約束した。また、大統領令によって「新国家」を押し付けようとした前首相の構想も放棄するという。
 

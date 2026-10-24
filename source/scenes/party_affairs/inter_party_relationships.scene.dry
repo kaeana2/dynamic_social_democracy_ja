@@ -17,10 +17,22 @@ card-image: img/weimar_coalition_2.jpg
 - @center: カトリック系の[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]との絆を強める。
 - @cvp: <span style="color: #000000;">キリスト教人民党</span>と和解する。
 - @kpd: <span style="color: #700000;">共産党</span>との関係修復を図る。
+- @afa: <span style="color: #700000;">反ファシズム</span><span style="color: #c00000;">行動</span>に資金を提供する。これは<span style="color: #700000;">KPD</span>の大衆組織であり、<span style="color: #7A3C00;">ファシズム</span>に対抗するものだ
 - @dnvp: <span style="color: #3E88B3;">**DNVP**</span>の[? if dnvp_leader != "Lambach": トレヴィラヌスと<span style="color: #0087DC;">人民保守派</span>?][? if dnvp_leader == "Lambach": ランバッハと<span style="color: #6D5298;">キリスト教社会派</span>?]との対話を始める。
 - @nsdap: シュトラッサーと<span style="color: #7A3C00;">ナチ党</span>左派に接触する。
 - @spd_alone: 当面は<span style="color: #c00000;">SPD</span>単独で進む。
 - @easy_discard
+
+@afa
+view-if: kpd_truce and afa_seen
+subtitle: リソース -1
+choose-if: resources > 0 and ((rfb_banned or rfb_banned_prussia) and (left_strength >= reformist_strength + neorevisionist_strength + center_strength)) or (not (rfb_banned or rfb_banned_prussia) and (left_strength >= reformist_strength + neorevisionist_strength))
+unavailable-subtitle: [? if resources <= 0: リソースが足りない。?][? if not (rfb_banned or rfb_banned_prussia) and left_strength < reformist_strength + neorevisionist_strength: 党内の大勢は、<span style="color: #700000;">共産主義</span>の準軍事組織への資金提供に反対している。?][? if (rfb_banned or rfb_banned_prussia) and left_strength < reformist_strength + neorevisionist_strength + center_strength: 党内の大勢は、非合法の<span style="color: #700000;">共産主義</span>準軍事組織の偽装団体と見なしている組織への資金提供に反対している。?]
+on-arrival: resources -= 1; rfb_strength += 100; rfb_militancy += 0.1; kpd_relation += 3; ddp_relation -= 2 if not ddp_in_popular_front or ddp_in_popular_front_prussia; z_relation -= 3 if not in_popular_front or in_popular_front_prussia; dvp_relation -= 5; hindenburg_angry += 10; hindenburg_angry_bruning += 10; ddp_relation -= 2 if rfb_banned or rfb_banned_prussia; z_relation -= 3 if rfb_banned or rfb_banned_prussia; dvp_relation -= 5 if rfb_banned or rfb_banned_prussia; hindenburg_angry += 10 if rfb_banned or rfb_banned_prussia; hindenburg_angry_bruning += 10 if rfb_banned or rfb_banned_prussia; reformist_dissent += 2; reformist_dissent += 3 if rfb_banned or rfb_banned_prussia; center_dissent += 3 if rfb_banned or rfb_banned_prussia; new_middle_spd -= 2*(1-dissent) if not new_middle_conscious; old_middle_spd -= 2*(1-dissent); rural_spd -= 2*(1-dissent) if not rural_conscious; catholics_spd -= 2*(1-dissent) if not in_popular_front or in_popular_front_prussia; new_middle_spd -= 2*(1-dissent) if rfb_banned or rfb_banned_prussia; old_middle_spd -= 2*(1-dissent) if rfb_banned or rfb_banned_prussia; rural_spd -= 2*(1-dissent) if rfb_banned or rfb_banned_prussia; catholics_spd -= 2*(1-dissent) if rfb_banned or rfb_banned_prussia;
+
+我々は<span style="color: #700000;">反ファシズム</span><span style="color: #c00000;">行動</span>に資金を提供した。掲げたのは、<span style="color: #7A3C00;">ファシズム</span>に対抗する統一戦線である。
+
+<span style="color: #000000;">ブルジョワ</span>諸政党は、これを[? if rfb_banned or rfb_banned_prussia:非合法の準軍事組織の偽装団体への?][? if not rfb_banned and not rfb_banned_prussia:準軍事組織への?]物質的支援だと非難している。その組織は<span style="color: #700000;">共産主義</span>勢力のものである。[? if (reformist_strength >= 20 and not (rfb_banned or rfb_banned_prussia)) or (reformist_strength + center_strength >= 20 and (rfb_banned or rfb_banned_prussia)): 我が党でも多くの者がこの批判に同調している。?]
 
 @kpd
 subtitle: リソース－1
@@ -44,7 +56,7 @@ on-arrival: kpd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_int
 - @no_history: いや、謝罪する必要はない。
 
 @yes_history
-on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; kpd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; dvp_relation -= 6; lvp_relation -= 6; ddp_relation -= 4; kpd_relation += 8*(1-dissent); coalition_dissent += 1; dvp_right += 2; ddp_right += 2; lvp_right += 2
+on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; kpd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; dvp_relation -= 6; lvp_relation -= 6; ddp_relation -= 4; kpd_relation += 8*(1-dissent); coalition_dissent += 1; dvp_right += 2; ddp_right += 2; lvp_right += 2; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 <span style="color: #700000;">**KPD**</span>との関係正常化の一環として過去の過ちを認め、ノスケを除名し、蜂起中に軍隊に殺害された人々の公開追悼式を行った。
 

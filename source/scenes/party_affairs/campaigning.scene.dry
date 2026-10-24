@@ -25,9 +25,9 @@ tags: party_affairs
 subtitle: リソース－1
 choose-if: resources >= 1
 unavailable-subtitle: リソースが足りない。
-on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
+on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 1 if effective_unemployed >= 20; workers_spd -= 1 if effective_unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
 
-労働者への選挙運動を強化した。[? if unemployed >= 15: 高失業率によって運動は難しくなっている。 ?][? if wtb_adopted = 1 : WTB計画の採用は、労働者を引きつける新たな結集軸となった。 ?]
+労働者向けの選挙運動を強化した。[? if effective_unemployed >= 15: 高い失業率が選挙運動を難しくしている。?][? if wtb_adopted = 1 : WTB計画の採用は、労働者の支持を集める新たな旗印となった。?]
 
 @new_middle
 subtitle: リソース－1
@@ -58,7 +58,7 @@ on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_pa
 subtitle: リソース－1
 choose-if: resources >= 1
 unavailable-subtitle: リソースが足りない。
-on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd -= 2 if unemployed >= 30; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
+on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd -= 2 if effective_unemployed >= 30; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
 
 失業者への選挙運動を強化した。[? if welfare < 0: 福祉削減を実施した政権と結びつけられているため、削減と貧困が運動を難しくし、逆効果になる恐れさえある。 ?][? if wtb_adopted = 1 : WTB計画の採用は、失業者を引きつける新たな結集軸となった。 ?]
 

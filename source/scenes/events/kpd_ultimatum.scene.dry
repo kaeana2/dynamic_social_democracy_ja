@@ -78,7 +78,7 @@ on-arrival: kpd_ultimatum_seen = 0; kpd_ultimatum_timer += 6; kpd_appeal_seen = 
 
 
 @goals_success
-on-arrival: workers_spd += 8; unemployed_spd += 8; kpd_relation += 10; workers_kpd += 5; kpd_coalition_success += 1; kpd_demands_federal = 0
+on-arrival: workers_spd += 8; unemployed_spd += 8; kpd_relation += 10; workers_kpd += 5; kpd_coalition_success += 1; kpd_demands_federal = 0; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 go-to: popular_front_achievement if in_popular_front; united_front_achievement if in_left_front
 
 あらゆる予想に反し、<span style="color: #700000;">**KPD**</span>の目標はすべて達成された！ <span style="color: #700000;">**共産主義者**</span>は、民主的手段で労働者政府が実現する事態を想定していなかったらしい。彼らは任期満了まで我々の政権への「閣外協力」を続ける一方、ブルジョワ的後退を監視し続けるだろう。

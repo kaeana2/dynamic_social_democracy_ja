@@ -344,7 +344,7 @@ title: <span style="color: #700000;">**共産主義者**</span>の[+ communist_c
 subtitle: 彼は「唯一の左派候補」を名乗って多くの支持を集めている。資源 -1
 choose-if: resources >= 1
 unavailable-subtitle: 資源が不足している。
-on-arrival: resources -= 1; left_dissent -= 10; workers_spd += 2; workers_kpd -= 2; kpd_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10
+on-arrival: resources -= 1; left_dissent -= 10; workers_spd += 2; workers_kpd -= 2; kpd_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10; kpd_nazi_urgency -= 1;
 face-image: img/social_fascist.jpg
 max-visits: 1
 go-to: campaigning_eckener
@@ -459,7 +459,7 @@ title: <span style="color: #700000;">**共産主義者**</span>の[+ communist_c
 subtitle: 彼は「唯一の左派候補」を名乗って多くの支持を集めている。資源 -1
 choose-if: resources >= 1
 unavailable-subtitle: 資源が不足している。
-on-arrival: resources -= 1; left_dissent -= 10; workers_spd += 3; workers_kpd -= 3; kpd_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10
+on-arrival: resources -= 1; left_dissent -= 10; workers_spd += 3; workers_kpd -= 3; kpd_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10;
 face-image: img/social_fascist.jpg
 max-visits: 1
 go-to: campaigning_reactionary
@@ -480,7 +480,7 @@ view-if: spd_support_thalmann
 @paramilitary
 title: 街頭で<span style="color: #700000;">共産主義者</span>の<span style="color: #700000;">**RFB**</span>と提携し、<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>と戦う。
 subtitle: ブルジョワ諸党を永久に敵へ回すことになる！
-on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; neorevisionist_dissent += 10; reformist_dissent += 10; hindenburg_angry += 150; z_relation -= 20; ddp_relation -= 20; dvp_relation -= 20; lvp_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
+on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; neorevisionist_dissent += 10; reformist_dissent += 10; hindenburg_angry += 150; z_relation -= 20; ddp_relation -= 20; dvp_relation -= 20; lvp_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 face-image: img/reichsbanner_2.jpg
 max-visits: 1
 go-to: campaigning_thalmann

@@ -1,7 +1,7 @@
 title: ハルツブルク戦線
 subtitle: 右翼勢力が現政権に対抗して結集する。
 new-page: true
-on-arrival: harzburg_front_seen = 1; harzburg_front_time = time; sa_strength += 50; sa_militancy += 0.1; sh_militancy += 0.1; old_middle_nsdap += 3; unemployed_nsdap += 3; rural_nsdap += 3; nazi_urgency += 1; iron_front_timer = 0; dvp_right += 3 if dvp_leader == "Dingeldey"; lvp_right += 1; hindenburg_angry += 15; hindenburg_angry_bruning += 15
+on-arrival: harzburg_front_seen = 1; harzburg_front_time = time; sa_strength += 50; sa_militancy += 0.1; sh_militancy += 0.1; old_middle_nsdap += 3; unemployed_nsdap += 3; rural_nsdap += 3; nazi_urgency += 1; iron_front_timer = 0; dvp_right += 3 if dvp_leader == "Dingeldey"; lvp_right += 1; hindenburg_angry += 15; hindenburg_angry_bruning += 15; kpd_nazi_urgency += 1;
 tags: event
 view-if: year = 1931 and month >= 10 and chancellor != "Schleicher" and chancellor != "Papen" and dnvp_ideology == "Radical"
 max-visits: 1
@@ -15,6 +15,9 @@ max-visits: 1
 - @strategy: 右翼に対抗する一貫した戦略を策定せねばならない。
 - @confronting_nazis.iron_front: <span style="color: #c00000;">鉄の</span><span style="color: #1A1A1A;">戦線</span>を結成せねばならない！
 - @iron_front: <span style="color: #c00000;">鉄の</span><span style="color: #1A1A1A;">戦線</span>こそ我々の回答だ！
+- @inter_party_relationships.afa: <span style="color: #700000;">反ファシズム</span><span style="color: #c00000;">行動</span>に資金を提供する
+- @streetfighting.afa-truce: <span style="color: #700000;">KPD</span>に働きかけ、<span style="color: #700000;">反</span><span style="color: #c00000;"></span><span style="color: #7A3C00;">ファシズム</span>の名の下に両党の部隊の連携を図る
+- @streetfighting.afa-lol: <span style="color: #700000;">KPD</span>に働きかけ、<span style="color: #700000;">反</span><span style="color: #c00000;"></span><span style="color: #7A3C00;">ファシズム</span>の名の下に両党の部隊の連携を図る
 
 @strategy
 view-if: nazi_urgency < 3

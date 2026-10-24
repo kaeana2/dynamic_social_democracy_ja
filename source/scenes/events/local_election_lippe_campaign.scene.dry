@@ -39,7 +39,7 @@ go-to: campaign_menu
 title: シュライヒャー首相が支持政党へ国費の提供を申し出る。
 unavailable-subtitle: 現時点では<span style="color: #3E88B3;">DNVP</span>を含め、該当する政党はない。
 choose-if: schleicher_spd_r >= 3
-on-arrival: resources += 2; schleicher_spd_support += 1; schleicher_spd_lippe = 1; nsdap_lippe -= 0.05; schleicher_spd_influence += 1
+on-arrival: resources += 2; schleicher_spd_support += 1; schleicher_spd_lippe = 1; nsdap_lippe -= 0.05; schleicher_spd_influence += 1; kpd_nazi_urgency -= 1;
 max-visits: 1
 go-to: campaign_menu
 

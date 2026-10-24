@@ -18,7 +18,7 @@ max-visits: 4
 
 @nothing_to_do
 view-if: spd_toleration == 0
-on-arrival: welfare -= 1; unemployed += 1; unemployed_nsdap += 3; unemployed_kpd += 3; unemployed_spd += 3; pro_republic -= 4; budget += 1; inflation -= 2; economic_growth -= 0.5;
+on-arrival: welfare -= 1; unemployed += 1; unemployed_nsdap += 3*(effective_unemployed/unemployed); unemployed_kpd += 3*(effective_unemployed/unemployed); unemployed_spd += 3*(unemployed/effective_unemployed) if effective_unemployed > 0; unemployed_spd += 3*unemployed if effective_unemployed <= 0; pro_republic -= 4; budget += 1; inflation -= 2; economic_growth -= 0.5;
 
 国会は現在解散中であるため、この政策は緊急令として施行された。<span style="color: #7A3C00;">ナチ党</span>はこれを党勢拡大に利用している。我々も同様である。
 
@@ -54,6 +54,6 @@ on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 
 @vote_yes
 title: 閣外協力協定を継続するため、この措置に賛成票を投じる。
 view-if: spd_toleration
-on-arrival: welfare -= 1; unemployed += 1; left_dissent += 10; labor_dissent += 10; workers_spd *= 0.92; unemployed_spd *= 0.92; unemployed_nsdap += 3; unemployed_kpd += 3; workers_nsdap += 3; workers_kpd += 3; workers_spd -= 3 if welfare < 0; unemployed_spd -= 4 if welfare < 0; pro_republic -= 3; kpd_relation -= 8; budget += 1; inflation -= 2; economic_growth -= 0.5
+on-arrival: welfare -= 1; unemployed += 1; left_dissent += 10; labor_dissent += 10; workers_spd -= 0.08*workers_spd*(effective_unemployed/unemployed); unemployed_spd -= 0.08*unemployed_spd*(effective_unemployed/unemployed); unemployed_nsdap += 3*(effective_unemployed/unemployed); unemployed_kpd += 3*(effective_unemployed/unemployed); workers_nsdap += 3*(effective_unemployed/unemployed); workers_kpd += 3*(effective_unemployed/unemployed); workers_spd -= 3*(effective_unemployed/unemployed) if welfare < 0; unemployed_spd -= 4*(effective_unemployed/unemployed) if welfare < 0; pro_republic -= 3; kpd_relation -= 8; budget += 1; inflation -= 2; economic_growth -= 0.5
 
 我々は、安定した議会政府を維持し、恐慌による財政上の帰結に対処するため、この政策が必要だと労働者を説得しようとしている。それでも、この政策は<span style="color: #7A3C00;">ナチ党</span>と<span style="color: #700000;">**共産党**</span>に格好の党勢拡大材料を与える。

@@ -70,6 +70,6 @@ title: 経済危機への対処
 view-if: nationalization_adopted == 0
 subtitle: ゼンダーは左派の経済綱領への支持を広げられる。
 choose-if: advisor_action_timer <= 0 and black_thursday_seen == 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] か月後に次の顧問行動が可能。 ?][? if black_thursday_seen == 0 : 現在は経済危機ではない。 ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : あと[+ advisor_action_timer +]か月で次の顧問行動が可能になる。?][? if black_thursday_seen == 0 : 現在は経済危機ではない。?]
 on-arrival: advisor_action_timer = 6;
 go-to: crisis_program.support_left

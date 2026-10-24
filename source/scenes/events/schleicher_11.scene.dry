@@ -27,6 +27,7 @@ Q.dnef_r += Q.kvp_r;
 Q.kvp_r = 0;
 
 Q.kvp_leader = "Treviranus";
+Q.kpd_nazi_urgency += 1;
 !}
 
 その後、トレヴィラヌスが、今や<i>衛星政党</i>となった<span style="color: #0087DC;">**KVP**</span>の党首に据えられた。

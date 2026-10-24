@@ -27,7 +27,7 @@ on-display: {!
 
 @z_in_gov
 title: シュライヒャーはカースという新たな傀儡を手に入れた。
-on-arrival: kaas_puppet = 1; z_in_gov = 1; z_relation -= 20; pro_republic -= 5; schleicher_approval += 1; hindenburg_schleicher_r += 1
+on-arrival: kaas_puppet = 1; z_in_gov = 1; z_relation -= 20; pro_republic -= 5; schleicher_approval += 1; hindenburg_schleicher_r += 1; kpd_nazi_urgency += 1;
 
 <span style="color: #000000;">中央党</span>は閣僚職を確保し、アダム・シュテーガーヴァルトが労働相、ほかの党員が運輸相と司法相に就任した。さらに<span style="color: #A2D8E0;">**BVP**</span>を政権へ引き入れ、郵政相の地位を与えた。
 

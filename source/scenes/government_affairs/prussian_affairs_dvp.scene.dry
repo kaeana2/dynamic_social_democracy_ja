@@ -89,13 +89,13 @@ on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_pro
 
 @ban_rfb
 view-if: communist_coalition < 3 and rfb_banned = 0
-on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1; dvp_left += 1; ddp_left += 0.5; hindenburg_angry -= 8
+on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1; dvp_left += 1; ddp_left += 0.5; hindenburg_angry -= 8; kpd_nazi_urgency -= 1;
 
 禁止措置は警察によって熱心に、いや熱心すぎるほど徹底された。<span style="color: #700000;">共産主義者</span>は、<span style="color: #c00000;">社会主義者</span>が<span style="color: #9B0000;">左翼</span>への裏切り者である新たな証拠だと受け止めている。一方、<span style="color: #000000;">穏健派</span>と<span style="color: #C0A054;">中道右派</span>の諸党、そして警察は支持している。
 
 @unban_rfb
 view-if: rfb_banned = 1
-on-arrival: rfb_banned = 0; rfb_strength += 50; prussian_police_loyalty -= 0.1; hindenburg_angry += 8
+on-arrival: rfb_banned = 0; rfb_strength += 50; prussian_police_loyalty -= 0.1; hindenburg_angry += 8; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 <span style="color: #700000;">共産党</span>の<span style="color: #700000;">**RFB**</span>への禁止は解除された。
 

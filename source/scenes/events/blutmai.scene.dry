@@ -19,7 +19,7 @@ face-image: img/redfront.jpg
 - @join: 自分たちでデモに参加する。
 
 @ban
-on-arrival: blutmai = 1; kpd_relation -= 25; z_relation += 3; dvp_relation += 3; ddp_relation += 3; lvp_relation += 3; workers_spd -= 4; unemployed_spd -= 4; workers_kpd += 2; unemployed_kpd += 3; communist_coalition -= 3; strife += 1; dvp_left += 1; ddp_left += 0.5; lvp_left += 1; hindenburg_angry -= 8
+on-arrival: blutmai = 1; kpd_relation -= 25; z_relation += 3; dvp_relation += 3; ddp_relation += 3; lvp_relation += 3; workers_spd -= 4; unemployed_spd -= 4; workers_kpd += 2; unemployed_kpd += 3; communist_coalition -= 3; strife += 1; dvp_left += 1; ddp_left += 0.5; lvp_left += 1; hindenburg_angry -= 8; kpd_nazi_urgency -= 1;
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -49,7 +49,7 @@ on-arrival: kpd_relation += 10; z_relation -= 2; dvp_relation -= 2; lvp_relation
 これは<span style="color: #700000;">**共産主義者**</span>の怒りをいくらか和らげるが、全てではない。
 
 @communist_fault
-on-arrival: kpd_relation -= 10; z_relation += 3; dvp_relation += 3; lvp_relation += 2; rfb_strength -= 80; rfb_banned = 1; hindenburg_angry -= 4
+on-arrival: kpd_relation -= 10; z_relation += 3; dvp_relation += 3; lvp_relation += 2; rfb_strength -= 80; rfb_banned = 1; hindenburg_angry -= 4; kpd_nazi_urgency -= 1;
 
 もし<span style="color: #700000;">**KPD**</span>が違法な行動を続けるなら、その結果を味わわねばならない。ゆえに、我々は彼らの準軍事組織である<span style="color: #8B0000;">**RFKB**</span>を禁止する。ブルジョワや右派の政党が賛成する。
 
@@ -65,7 +65,7 @@ on-arrival: kpd_relation += 5; workers_kpd += 3; unemployed_kpd += 5
 
 
 @allow
-on-arrival: workers_kpd += 3; unemployed_kpd += 5; kpd_relation += 10; rfb_strength += 50; z_relation -= 3; dvp_relation -= 3; ddp_relation -= 2; lvp_relation -= 3; coalition_dissent += 1; rfb_militancy += 0.1; dvp_right += 1; ddp_right += 0.5; lvp_right += 1; hindenburg_angry += 5
+on-arrival: workers_kpd += 3; unemployed_kpd += 5; kpd_relation += 10; rfb_strength += 50; z_relation -= 3; dvp_relation -= 3; ddp_relation -= 2; lvp_relation -= 3; coalition_dissent += 1; rfb_militancy += 0.1; dvp_right += 1; ddp_right += 0.5; lvp_right += 1; hindenburg_angry += 5; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 警察を最小限にとどめたまま、示威行動は平穏に進んだ。見物人は<span style="color: #700000;">共産党</span>労働者の力に感銘を受け、我が党員の一部も引き寄せられたかもしれない。<span style="color: #700000;">**KPD**</span>は決して認めないだろうが、我々への敵意を幾分和らげつつある――まだ我々を*好いて*はいないとしても。我々の<span style="color: #000000;">中</span><span style="color: #C0A054;">央派</span>の同盟諸党は示威行動を非難するが、その抗議に効果はない。
 
@@ -73,7 +73,7 @@ on-arrival: workers_kpd += 3; unemployed_kpd += 5; kpd_relation += 10; rfb_stren
 @join
 choose-if: kpd_relation >= 45
 unavailable-subtitle: <span style="color: #700000;">共産主義者</span>は我々を十分に信用していない。
-on-arrival: kpd_relation += 15; workers_kpd += 3; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; coalition_dissent += 2; communist_coalition += 2; rb_strength += 100; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50; dvp_right += 3; ddp_right += 3; ddp_relation -= 8; ddp_cohesion -= 1; lvp_right += 3; lvp_relation -= 10; hindenburg_angry += 20
+on-arrival: kpd_relation += 15; workers_kpd += 3; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; coalition_dissent += 2; communist_coalition += 2; rb_strength += 100; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50; dvp_right += 3; ddp_right += 3; ddp_relation -= 8; ddp_cohesion -= 1; lvp_right += 3; lvp_relation -= 10; hindenburg_angry += 20; kpd_nazi_urgency += 1;
 achievement: die_rote_fahne
 
 両党の歴史を考えれば、<span style="color: #700000;">**共産主義者**</span>に我々との共同行進を認めさせるのは難しい。それでも最後には彼らも折れた。プロレタリアートの団結を示す行進は労働者を鼓舞し、ブルジョワジーと中間層を震え上がらせる。[? if in_grand_coalition or in_weimar_coalition: 政府の連立相手は、我々が<span style="color: #700000;">共産主義者</span>と行進したことに激怒し、連立離脱をちらつかせている。 ?]<span style="color: #7A3C00;">極</span><span style="color: #3E88B3;">右</span>準軍事組織は、我々に対抗して隊員募集を強化する。

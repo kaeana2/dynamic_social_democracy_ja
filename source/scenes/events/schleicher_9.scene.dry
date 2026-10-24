@@ -20,7 +20,7 @@ face-image: img/portraits/schleicher.jpg
 - @schleicher_2: 主張には真実が含まれているかもしれない……
 
 @schleicher_1
-on-arrival: schleicher_spd_support -= 2; schleicher_spd_influence += 1; pro_republic -= 5; adjustmentFactors_votes_dnef += 0.08
+on-arrival: schleicher_spd_support -= 2; schleicher_spd_influence += 1; pro_republic -= 5; adjustmentFactors_votes_dnef += 0.08; kpd_nazi_urgency -= 1;
 
 実にばかげた話だ。
 

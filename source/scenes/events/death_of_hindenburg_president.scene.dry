@@ -344,7 +344,7 @@ go-to: z_failed if z_support_braun = 0 or (z_support_braun == 2 and historical_m
 @convince_z_spd
 title: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]に[+ spd_candidate +]支持を求める。
 choose-if: spd_votes >= z_votes and not cvp_formed
-unavailable-subtitle: [? if spd_votes < z_votes: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は自党のほうが我々より有力だと承知しており、こちらの候補を支持する理由を見いだしていない。?] [? if cvp_formed: <span style="color: #000000;">**CVP**</span>に加わった旧<span style="color: #3E88B3;">**DNVP**</span>勢力が、社会主義者の大統領候補を支持することは決してない。?]
+unavailable-subtitle: [? if spd_votes < z_votes: [? if z_party_name != "CVP":<span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP":<span style="color: #000000;">**CVP**</span>?]は自党のほうが我々より有力だと承知しており、我々の候補を支持する理由を見いだしていない。?][? if cvp_formed: <span style="color: #000000;">**CVP**</span>に加わった旧<span style="color: #3E88B3;">**DNVP**</span>勢力が、社会主義者の大統領候補を支持することは決してない。?]
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate) and z_candidate != spd_candidate and not cvp_formed
 on-arrival: {!
 Q.z_support_braun = 0;

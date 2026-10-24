@@ -32,7 +32,7 @@ on-display: {!
 title: 国旗団と我々の青年組織が*全国青少年鍛錬委員会*に参加することを認める。
 unavailable-subtitle: 党のシュライヒャーへの不信が強すぎて、認められない。
 choose-if: schleicher_spd_support >= 4 or neorevisionist_strength >= center_strength
-on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1; rb_militancy += 0.04; rb_strength += 125; workers_spd -= 4; unemployed_spd -= 4; nationalism += 10
+on-arrival: schleicher_spd_support += 2; schleicher_spd_r += 1; rb_militancy += 0.04; rb_strength += 125; workers_spd -= 4; unemployed_spd -= 4; nationalism += 10; kpd_nazi_urgency -= 1;
 
 国旗団は全国青少年鍛錬委員会への正式参加を決めた。我々の意見を取り入れた理事会は、全国に歩兵・海軍訓練学校を速やかに設置した。退役・退職した国防軍将校による専門訓練は主に国旗団の青年を対象とし、我々は委員会指導部で相当な影響力を確保した。
 

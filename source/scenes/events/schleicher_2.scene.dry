@@ -33,7 +33,7 @@ on-display: {!
 title: 国旗団と我々の青年組織が*全国青少年鍛錬委員会*に参加することを認める。
 unavailable-subtitle: 党のシュライヒャーへの不信が強すぎて、認められない。
 choose-if: schleicher_spd_support >= 4 or neorevisionist_strength >= center_strength
-on-arrival: schleicher_spd_support += 3; schleicher_spd_r += 1; rb_militancy += 0.06; rb_strength += 200; workers_spd -= 4; unemployed_spd -= 4; nationalism += 10
+on-arrival: schleicher_spd_support += 3; schleicher_spd_r += 1; rb_militancy += 0.06; rb_strength += 200; workers_spd -= 4; unemployed_spd -= 4; nationalism += 10; kpd_nazi_urgency -= 2;
 
 国旗団は全国青少年鍛錬委員会への正式参加を決めた。我々の意見を取り入れた理事会は、全国に歩兵・海軍訓練学校を速やかに設置した。退役・退職した国防軍将校による専門訓練は主に国旗団の青年を対象とし、我々は委員会指導部で相当な影響力を確保した。
 
@@ -41,7 +41,7 @@ on-arrival: schleicher_spd_support += 3; schleicher_spd_r += 1; rb_militancy += 
 
 @wait
 title: 少なくとも次の選挙までは態度を保留するよう、国旗団を説得する。
-on-arrival: schleicher_spd_support += 1; schleicher_reichsbanner_wait = 1; rb_strength += 50; rb_militancy += 0.02
+on-arrival: schleicher_spd_support += 1; schleicher_reichsbanner_wait = 1; rb_strength += 50; rb_militancy += 0.02; kpd_nazi_urgency -= 1;
 
 党内各派の妥協として、国旗団指導部から、次の選挙まで*全国青少年鍛錬委員会*への参加を正式には決めないとの約束を取り付けた。ただし、一部の地方団員は独自の判断で訓練に参加するかもしれない。
 

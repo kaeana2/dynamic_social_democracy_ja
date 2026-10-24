@@ -57,7 +57,7 @@ subtitle: 賃下げ幅を90％も削ったのだ！　これ以上何を望む�
 go-to: nay_strike_2 if workers_spd_normalized + pro_republic < 100; nay_strike_3 if workers_spd_normalized + pro_republic >= 100
 
 @nay_strike_2
-on-arrival: z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 3; kpd_relation -= 10; communist_coalition -= 1
+on-arrival: z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 3; kpd_relation -= 10; communist_coalition -= 1; kpd_nazi_urgency -= 1;
 
 投票に参加したのは全従業員の84％にとどまり、そのうち79％がストに賛成した。スト委員会における<span style="color: #700000;">**RGO**</span>の広範な影響力によるものである。ゲザムトフェアバントが指摘したとおり、これは投票者だけでなく全従業員の4分の3の賛成を必要とする労組の標準的慣行を満たさない。しかし、急進化し組織から離れつつある労働者を前に、この立場は維持できなかった。3労組による中央スト委員会が結成され、<span style="color: #700000;">**RGO**</span>が主導権を握った。
 
@@ -83,6 +83,7 @@ Q.pro_republic += 3;
 Q.labor_dissent -= 5;
 Q.reformist_dissent -= 5;
 Q.transport_strike_vote = Math.round((100 - Q.pro_republic) * 10) / 10;
+Q.kpd_nazi_urgency -= 1;
 !}
 
 投票に参加したのは全従業員の76％にとどまり、そのうち[+ transport_strike_vote +]％がストに賛成したが、必要な全従業員の4分の3には届かなかった。それでも<span style="color: #700000;">**RGO**</span>と<span style="color: #7A3C00;">**NSBO**</span>は無許可の独自スト委員会を結成した。ゲザムトフェアバントが参加せず、代替要員も速やかに投入されたため、ストの試みはほぼ即座に崩壊した。

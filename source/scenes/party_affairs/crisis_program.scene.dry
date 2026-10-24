@@ -66,7 +66,7 @@ go-to: support_left_progress if nationalization_support < 5; adopt_left if natio
 まだ計画の正式採用には至っていない。さらなる働きかけが必要だ。
 
 @adopt_left
-on-arrival: left_strength += 15; left_dissent -= 10; reformist_dissent += 10; neorevisionist_dissent += 8; labor_dissent += 6; nationalization_adopted = 1; coup_progress += 1; economic_plan = 3; kpd_relation += 5*(1-dissent)
+on-arrival: left_strength += 15; left_dissent -= 10; reformist_dissent += 10; neorevisionist_dissent += 8; labor_dissent += 6; nationalization_adopted = 1; coup_progress += 1; economic_plan = 3; kpd_relation += 5*(1-dissent); kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 粘り強い活動により党の多数を説得し、<span style="color: #c00000;">社会主義</span>経済計画を採用させた！[? if spd_in_government == 1 : 経済相または蔵相を確保している限り、速やかに実施へ移れる。 ?]ブルジョワ勢力の激しい反対が予想される。[? if spd_in_government == 0 : 現状では計画の実施は難しいかもしれない。 ?]
 
