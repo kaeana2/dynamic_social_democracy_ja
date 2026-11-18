@@ -22,7 +22,7 @@ card-image: img/portraits/LeberJulius.jpg
 subtitle: 予算 -1
 choose-if: budget >= 1
 unavailable-subtitle: 予算が足りない。
-on-arrival: budget -= 1; coalition_dissent -= 1 if coalition_dissent > 0; reichswehr_loyalty += 0.07 if reichswehr_loyalty < 1; reichswehr_strength += 20; left_dissent += 5; kpd_coalition_dissent += 1; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; eu_progress -= 1; dvp_left += 1; dvp_relation += 4; lvp_relation += 4; ddp_relation += 2; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 1; goal_spd_cancel += 1; hindenburg_angry -= 10; economic_growth += 0.1
+on-arrival: budget -= 1; ddp_coalition_dissent -= 1 if ddp_coalition_dissent > 0; dvp_coalition_dissent -= 1 if dvp_coalition_dissent > 0; lvp_coalition_dissent -= 1 if lvp_coalition_dissent > 0; reichswehr_loyalty += 0.07 if reichswehr_loyalty < 1; reichswehr_strength += 20; left_dissent += 5; kpd_coalition_dissent += 1; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; eu_progress -= 1; dvp_left += 1; dvp_relation += 4; lvp_relation += 4; ddp_relation += 2; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 1; goal_spd_cancel += 1; hindenburg_angry -= 10; economic_growth += 0.1
 
 軍部と中道右派政党は、我々が軍事予算を増額したことを好意的な驚きをもって受け止めている。反軍的な傾向を持つ党員の反応は冷ややかである。近隣諸国はドイツの軍備増強を懸念している。[? if reparations >= 0 : 賠償交渉には悪影響となる。 ?]
 
@@ -30,7 +30,7 @@ on-arrival: budget -= 1; coalition_dissent -= 1 if coalition_dissent > 0; reichs
 subtitle: 予算 +1
 unavailable-subtitle: これ以上削減できない。
 choose-if: reichswehr_strength > 0
-on-arrival: budget += 1; coalition_dissent += 1 if in_grand_coalition == 1; coalition_dissent += 1 if (in_weimar_coalition and lvp_formed); dvp_relation -= 8; ddp_relation -= 4; lvp_relation -= 6; z_relation -= 4; reichswehr_militancy -= 1; reichswehr_strength -= 20; sh_strength += 15; sa_strength += 5; sh_militancy += 0.05; reichswehr_loyalty -= 0.05 if reichswehr_loyalty > 0; coup_progress += 1; coup_progress += 1 if reichswehr_loyalty < 0.2; coup_progress += 1 if reichswehr_loyalty < 0.1; coup_progress += 1 if reichswehr_loyalty <= 0; reichswehr_goal_completed = 1; dvp_right += 3; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 2; reichswehr_goal_spd += 1; hindenburg_angry += 10; economic_growth -= 0.1
+on-arrival: budget += 1; ddp_coalition_dissent += 1; lvp_coalition_dissent += 1; dvp_relation -= 8; ddp_relation -= 4; lvp_relation -= 6; z_relation -= 4; reichswehr_militancy -= 1; reichswehr_strength -= 20; sh_strength += 15; sa_strength += 5; sh_militancy += 0.05; reichswehr_loyalty -= 0.05 if reichswehr_loyalty > 0; coup_progress += 1; coup_progress += 1 if reichswehr_loyalty < 0.2; coup_progress += 1 if reichswehr_loyalty < 0.1; coup_progress += 1 if reichswehr_loyalty <= 0; reichswehr_goal_completed = 1; dvp_right += 3; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 2; reichswehr_goal_spd += 1; hindenburg_angry += 10; economic_growth -= 0.1
 
 軍の兵器と兵員は減少した。今のところクーデターの兆候はないが、どこが一線となるかは分からない。中道右派政党は軍を重視しており、我々の予算削減に強く反対している。
 
@@ -40,7 +40,7 @@ on-arrival: budget += 1; coalition_dissent += 1 if in_grand_coalition == 1; coal
 subtitle: 予算 -1
 choose-if: budget >= 1 and reichswehr_loyalty < 1
 unavailable-subtitle: [? if budget < 1 : 予算が足りない。 ?][? if reichswehr_loyalty >= 1 : 国防軍はすでに民主政府へ完全に忠誠を誓っている。 ?]
-on-arrival: coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); reichswehr_loyalty += 0.15; reichswehr_militancy -= 0.5 if reichswehr_loyalty < 0.5; budget -= 1; coup_progress += 1; dvp_relation -= 5; pacifism += 1; democratization += 1; dvp_right += 2; ddp_left += 1; lvp_right += 1; hindenburg_angry += 5;
+on-arrival: ddp_coalition_dissent += 1; lvp_coalition_dissent += 1; reichswehr_loyalty += 0.15; reichswehr_militancy -= 0.5 if reichswehr_loyalty < 0.5; budget -= 1; coup_progress += 1; dvp_relation -= 5; pacifism += 1; democratization += 1; dvp_right += 2; ddp_left += 1; lvp_right += 1; hindenburg_angry += 5;
 
 我々の試みは少なくとも一定の成果を上げた。募集と訓練のあり方を変更し、非<span style="color: #808080;">反動的</span>な背景を持つ者がより多く入隊できるようにしたことで、軍の文化も変わっていくことが期待される。かつてカップ一揆を支持した将校の一部も排除した。
 

@@ -31,7 +31,7 @@ max-visits: 3
 
 @family
 subtitle: 家族法と相続法を改め、女性をより平等に扱う。
-on-arrival: family_law += 1; womens_rights += 1; new_middle_spd += 2*(1-dissent); workers_spd += 3*(1-dissent); old_middle_spd -= 2; rural_spd -= 2; catholics_spd -= 4; coalition_dissent += 1; z_relation -= 4; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 0.5; women_goal_spd += 1
+on-arrival: family_law += 1; womens_rights += 1; new_middle_spd += 2*(1-dissent); workers_spd += 3*(1-dissent); old_middle_spd -= 2; rural_spd -= 2; catholics_spd -= 4; z_coalition_dissent += 1; z_relation -= 4; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 0.5; women_goal_spd += 1
 max-visits: 2
 
 これらの政策は離婚権を含め、婚姻関係における女性の平等な権利を保障するものである。社会の保守層は、我々の改革が社会組織を損なうと見なしている。
@@ -40,7 +40,7 @@ max-visits: 2
 @welfare
 subtitle: 予算 -1
 choose-if: budget > 0
-on-arrival: welfare += 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent); budget -= 1; womens_rights += 1; coalition_dissent += 1 if welfare >= 1 and unemployed >= 15; unemployed -= 0.4; inflation += 0.2; dvp_right += 1 if welfare >= 1; lvp_right += 1 if welfare >= 1; women_goal_spd += 1; economic_growth += 0.3;
+on-arrival: welfare += 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent); budget -= 1; womens_rights += 1; dvp_coalition_dissent += 1 if welfare >= 1 and unemployed >= 15; lvp_coalition_dissent += 1 if welfare >= 1 and unemployed >= 15; unemployed -= 0.4; inflation += 0.2; dvp_right += 1 if welfare >= 1; lvp_right += 1 if welfare >= 1; women_goal_spd += 1; economic_growth += 0.3;
 
 女性と子どもへの福祉支出を増額した。[? if welfare >= 1 and unemployed >= 15 : 連立相手の一部は、この時期の福祉支出増額を放漫財政だと見なしている。 ?]
 
@@ -51,11 +51,11 @@ subtitle: [? if progressive_coalition < 50 : 成功の見込みは薄い。過�
 go-to: liberalize_fail if progressive_coalition < 50; liberalize_success if progressive_coalition >= 50
 
 @liberalize_fail
-on-arrival: z_relation -= 5; coalition_dissent += 1; workers_spd += 3*(1-dissent); catholics_spd -= 5;
+on-arrival: z_relation -= 5; z_coalition_dissent += 1; workers_spd += 3*(1-dissent); catholics_spd -= 5;
 
 残念ながら、我々の法案は国会で否決された。長年の協力相手であるカトリック系の[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]がとりわけ激しく反対し、我が党からも造反者が出た。この試みに意気をくじかれた活動家たちは、時機を待つことにした。
 
 @liberalize_success
-on-arrival: abortion_rights += 1; womens_rights += 1; coalition_dissent += 2; coalition_dissent += 3 if in_social_catholic_coalition; z_relation -= 8; catholics_spd -= 10; dvp_relation -= 5; ddp_relation += 4; lvp_relation -= 2; workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_z += 3; new_middle_z += 3; old_middle_z += 3; old_middle_dnvp += 3; rural_dnvp += 3; workers_nsdap -= 3; new_middle_nsdap -= 3; old_middle_nsdap -= 2; rural_nsdap -= 2; unemployed_nsdap -= 2; unemployed_z += 3; unemployed_spd += 3*(1-dissent); new_middle_ddp += 4; workers_ddp += 1; rural_ddp -= 2; ddp_left += 3; lvp_left += 1; rural_lvp -= 3; old_middle_lvp -= 3; new_middle_lvp += 3; workers_lvp += 2; women_goal_spd += 1
+on-arrival: abortion_rights += 1; womens_rights += 1; z_coalition_dissent += 2; dvp_coalition_dissent += 2; z_coalition_dissent += 3 if in_social_catholic_coalition; z_relation -= 8; catholics_spd -= 10; dvp_relation -= 5; ddp_relation += 4; lvp_relation -= 2; workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_z += 3; new_middle_z += 3; old_middle_z += 3; old_middle_dnvp += 3; rural_dnvp += 3; workers_nsdap -= 3; new_middle_nsdap -= 3; old_middle_nsdap -= 2; rural_nsdap -= 2; unemployed_nsdap -= 2; unemployed_z += 3; unemployed_spd += 3*(1-dissent); new_middle_ddp += 4; workers_ddp += 1; rural_ddp -= 2; ddp_left += 3; lvp_left += 1; rural_lvp -= 3; old_middle_lvp -= 3; new_middle_lvp += 3; workers_lvp += 2; women_goal_spd += 1
 
 <span style="color: #700000;">**KPD**</span>と[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>左派議員?]を含む「進歩派連合」の支持により、ドイツで中絶を合法化する法案を可決した！ 進歩的な支持者は勇気づけられたが、[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]との関係は悪化した。中絶をめぐる政治論争が高まるなか、宗教色の強い[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]と<span style="color: #3E88B3;">**DNVP**</span>は、<span style="color: #7A3C00;">**NSDAP**</span>から保守票を奪った。

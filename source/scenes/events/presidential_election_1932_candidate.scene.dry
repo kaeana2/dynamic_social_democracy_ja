@@ -570,6 +570,8 @@ go-to: endorsements_braun if braun_campaign; endorsements_eckener if eckener_cam
 
 [? if kpd_support_spd == 1 and sapd_formed and spd_campaign: - <span style="color: #9B0000;">**SAPD**</span> ?]
 
+[? if ((ddp_support_spd and not lvp_formed) or (lvp_support_spd and lvp_formed) or srpd_support_spd) and srpd_formed and spd_campaign: - <span style="color: #F4A460;">**SRPD**</span> ?]
+
 [? if kpd_support_spd == 1 and spd_campaign: - <span style="color: #700000;">**KPD**</span> ?]
 
 [? if z_support_spd == 1 and spd_campaign: - [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?]
@@ -585,6 +587,8 @@ go-to: endorsements_braun if braun_campaign; endorsements_eckener if eckener_cam
 [? if reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span>?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Gessler" or reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932_disp +]**</span>?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932_disp +]**</span>?][? if reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932_disp +]**</span>?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932_disp +]**</span>?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932_disp +]**</span>?][? if reactionary_candidate_1932 == "Adenauer" or reactionary_candidate_1932 == "Brüning" or reactionary_candidate_1932 == "Stegerwald" or (reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932_disp +]**</span>?] ― 支持政党：?]
 
 [? if (spd_support_reactionary_1 or (spd_support_reactionary and hindenburg_run)) and reactionary_candidate_1932: - <span style="color: #c00000;">**SPD**</span> ?]
+
+[? if (spd_support_reactionary_1 or (spd_support_reactionary and hindenburg_run) or ((ddp_choice == reactionary_candidate_1932 and not lvp_formed) or (lvp_choice == reactionary_candidate_1932 and lvp_formed) and not srpd_support_spd)) and reactionary_candidate_1932: - <span style="color: #F4A460;">**SRPD**</span> ?]
 
 [? if z_support_spd != 1 and (z_choice == reactionary_candidate_1932 or hindenburg_run) and reactionary_candidate_1932: - [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] ?]
 
@@ -605,6 +609,8 @@ go-to: endorsements_braun if braun_campaign; endorsements_eckener if eckener_cam
 [? if secondary_reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ secondary_reactionary_candidate_1932_disp +]**</span>?][? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Gessler" or secondary_reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932_disp +]**</span>?][? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932_disp +]**</span>?][? if secondary_reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932_disp +]**</span>?][? if ((secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932_disp +]**</span>?][? if ((secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932_disp +]**</span>?][? if secondary_reactionary_candidate_1932 == "Adenauer" or secondary_reactionary_candidate_1932 == "Brüning" or secondary_reactionary_candidate_1932 == "Stegerwald" or (secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932_disp +]**</span>?] ― 支持政党：?]
 
 [? if spd_support_reactionary_2 and reactionary_candidate_1932: - <span style="color: #c00000;">**SPD**</span> ?]
+
+[? if (spd_support_reactionary_2 or ((ddp_choice == secondary_reactionary_candidate_1932 and not lvp_formed) or (lvp_choice == secondary_reactionary_candidate_1932 and lvp_formed) and not srpd_support_spd)) and reactionary_candidate_1932: - <span style="color: #F4A460;">**SRPD**</span> ?]
 
 [? if z_support_spd != 1 and (z_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and secondary_reactionary_candidate_1932: - [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] ?]
 
@@ -884,6 +890,7 @@ on-arrival: z_support_spd = 0 if z_support_spd == 2
 
 - @convince_z: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]を<span style="color: #c00000;">ブラウン</span>支持へ説得する[? if center_reactionary_candidate_1932:。さらに[+ center_reactionary_candidate_1932_name +]支持を撤回させる?]。
 - @convince_kpd: <span style="color: #700000;">**共産主義者**</span>を<span style="color: #c00000;">ブラウン</span>支持へ説得する。
+- @convince_srpd: <span style="color: #F4A460;">**SRPD**</span>を説得し[? if liberal_reactionary_candidate_1932:、[+ liberal_reactionary_candidate_1932_name +]への支持を取り下げ?]、<span style="color: #c00000;">ブラウン</span>を支持させる。
 - @convince_ddp: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>を<span style="color: #c00000;">ブラウン</span>支持へ説得する[? if liberal_reactionary_candidate_1932:。さらに[+ liberal_reactionary_candidate_1932_name +]支持を撤回させる?]。
 - @convince_lvp: <span style="color: #FFCC00;">**LVP**</span>を<span style="color: #c00000;">ブラウン</span>支持へ説得する[? if liberal_reactionary_candidate_1932:。さらに[+ liberal_reactionary_candidate_1932_name +]支持を撤回させる?]。
 - @view_candidates: 各党の支持表明を確認する。
@@ -1016,13 +1023,32 @@ go-to: convince_ddp_success if (ddp_relation >= 60 and (ddp_ideology == "Right" 
 on-arrival: ddp_support_spd = 1; ddp_left += 3; ddp_cohesion -= 2; ddp_relation += 5
 go-to: endorsements_braun
 
-友好的関係と党内左派とのつながりにより、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>はブラウンの選挙運動を始めた。
+友好的関係と党内左派とのつながりにより、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>はブラウンの選挙運動を始めた。[? if srpd_formed and not srpd_support_spd: これを受け、<span style="color: #F4A460;">**SRPD**</span>も同じ候補への支持を表明した。?]
 
 @convince_ddp_fail
 on-arrival: ddp_support_spd = 0; ddp_right += 3; ddp_cohesion -= 2; ddp_relation -= 5
 go-to: endorsements_braun
 
 残念ながら財界派の影響を受けた<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は、<span style="color: #c00000;">社会主義者</span>の大統領候補を支持しなかった。
+
+@convince_srpd
+view-if: srpd_formed and not ((ddp_support_spd and not lvp_formed) or (lvp_support_spd and lvp_formed))
+max-visits: 1
+go-to: convince_srpd_success if (reformist_strength > left_strength or (reformist_strength + neorevisionist_strength > left_strength and not lvp_leave_reichsbanner) or ((reformist_strength + labor_strength > left_strength) and ((ddp_relation >= 50 and not lvp_formed) or (lvp_relation >= 40 and lvp_formed))) or ((reformist_strength + labor_strength + center_strength > left_strength) and ((ddp_relation >= 60 and not lvp_formed) or (lvp_relation >= 50 and lvp_formed))) or ((reformist_strength + labor_strength + neorevisionist_strength > left_strength) and not lvp_leave_reichsbanner and ((ddp_relation >= 50 and not lvp_formed) or (lvp_relation >= 40 and lvp_formed))) or ((reformist_strength + labor_strength + center_strength + neorevisionist_strength > left_strength) and not lvp_leave_reichsbanner and ((ddp_relation >= 60 and not lvp_formed) or (lvp_relation >= 50 and lvp_formed))) or ((ddp_relation >= 70 and not lvp_formed) or (lvp_relation >= 60 and lvp_formed))); convince_srpd_fail if not (reformist_strength > left_strength or (reformist_strength + neorevisionist_strength > left_strength and not lvp_leave_reichsbanner) or ((reformist_strength + labor_strength > left_strength) and ((ddp_relation >= 50 and not lvp_formed) or (lvp_relation >= 40 and lvp_formed))) or ((reformist_strength + labor_strength + center_strength > left_strength) and ((ddp_relation >= 60 and not lvp_formed) or (lvp_relation >= 50 and lvp_formed))) or ((reformist_strength + labor_strength + neorevisionist_strength > left_strength) and not lvp_leave_reichsbanner and ((ddp_relation >= 50 and not lvp_formed) or (lvp_relation >= 40 and lvp_formed))) or ((reformist_strength + labor_strength + center_strength + neorevisionist_strength > left_strength) and not lvp_leave_reichsbanner and ((ddp_relation >= 60 and not lvp_formed) or (lvp_relation >= 50 and lvp_formed))) or ((ddp_relation >= 70 and not lvp_formed) or (lvp_relation >= 60 and lvp_formed)))
+
+我々は<span style="color: #F4A460;">**SRPD**</span>に働きかけ、<span style="color: #c00000;">社会主義</span>勢力の<span style="color: #F4A460;">団結</span>と<span style="color: #c00000;">反</span><span style="color: #7A3C00;">ファシズム</span>のため、ブラウンを支持するよう求める。
+
+@convince_srpd_success
+on-arrival: srpd_support_spd = 1; reformist_dissent -= 3;
+go-to: endorsements_braun
+
+予想どおり、<span style="color: #F4A460;">**SRPD**</span>はブラウンを支持し、選挙運動に乗り出した。
+
+@convince_srpd_fail
+on-arrival: srpd_support_spd = 0; reformist_strength -= 2;
+go-to: endorsements_braun
+
+意外にも、<span style="color: #F4A460;">**SRPD**</span>は我々が<span style="color: #000000;">民</span><span style="color: #DD0000;">主</span><span style="color: #FFCC00;">主義</span>を守るという約束を捨てたのではないかと懸念し、大統領候補ブラウンへの支持を拒んだ。
 
 @convince_lvp
 view-if: lvp_formed
@@ -1035,7 +1061,7 @@ go-to: convince_lvp_success if ((lvp_relation >= 70 and lvp_ideology == "Right")
 on-arrival: lvp_support_spd = 1; lvp_left += 6; lvp_relation += 5; new_middle_dnvp += new_middle_lvp*0.1 if not kvp_formed; old_middle_dnvp += old_middle_lvp*0.2 if not kvp_formed; rural_dnvp += rural_lvp*0.2 if not kvp_formed; new_middle_kvp += new_middle_lvp*0.1 if not kvp_formed; old_middle_kvp += old_middle_lvp*0.2 if not kvp_formed; rural_kvp += rural_lvp*0.2 if not kvp_formed; new_middle_lvp *= 0.9; old_middle_lvp *= 0.8; rural_lvp *= 0.8
 go-to: endorsements_braun
 
-驚くべきことに、<span style="color: #FFCC00;">**LVP**</span>から<span style="color: #c00000;">ブラウン</span>への公式支持を取り付けた。党を支える実業家たちは衝撃を受け、続々と支援を引き揚げ始めた。さらに、右翼有権者の相当数が我々への支持を拒んでいる。
+驚くべきことに、<span style="color: #FFCC00;">**LVP**</span>から<span style="color: #c00000;">ブラウン</span>への公式支持を取り付けた。党を支える実業家たちは衝撃を受け、続々と支援を引き揚げ始めた。さらに、右翼有権者の相当数が我々への支持を拒んでいる。[? if srpd_formed and not srpd_support_spd: これを受け、<span style="color: #F4A460;">**SRPD**</span>も同じ候補への支持を表明した。?]
 
 @convince_lvp_fail
 on-arrival: lvp_support_spd = 0; lvp_right += 3; lvp_relation -= 5
@@ -1133,6 +1159,7 @@ go-to: endorsements_braun
 我々だけではこの選挙に勝てない。他党の支持が必要だ。[? if spd_votes >= 50: いや、待て。我々だけでも実際に勝てる。?]
 
 - @convince_kpd_rosenfeld: <span style="color: #700000;">**共産党**</span>に<span style="color: #c00000;">ローゼンフェルト</span>支持を求める。
+- @convince_srpd_rosenfeld: <span style="color: #F4A460;">**SRPD**</span>を説得し[? if liberal_reactionary_candidate_1932:、[+ liberal_reactionary_candidate_1932_name +]への支持を取り下げ?]、<span style="color: #c00000;">ローゼンフェルト</span>を支持させる。
 - @convince_z_rosenfeld: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]に<span style="color: #c00000;">ローゼンフェルト</span>支持[? if center_reactionary_candidate_1932:と[+ center_reactionary_candidate_1932_name +]への支持撤回?]を求める。
 - @view_candidates: 各党の支持状況を見る。
 - @hope: 他党との交渉を終える。
@@ -1177,6 +1204,25 @@ go-to: endorsements_rosenfeld
 
 望み薄ではあったが、党内には<span style="color: #000000;">中央党</span>を説得してローゼンフェルト支持へ向かわせられると考える者もいた。予想どおり、この試みは失敗した。同党指導部は、我が党左派の候補を当選させるために<span style="color: #700000;">**共産党**</span>と協力することへ断固反対を表明した。
 
+@convince_srpd_rosenfeld
+choose-if: srpd_formed and not srpd_support_spd
+max-visits: 1
+go-to: convince_srpd_rosenfeld_success if (neorevisionist_strength + reformist_strength > left_strength + center_strength) or (neorevisionist_strength + reformist_strength + center_strength > left_strength and goerdeler_seen); convince_srpd_rosenfeld_fail if not (neorevisionist_strength + reformist_strength > left_strength + center_strength) or (neorevisionist_strength + reformist_strength + center_strength > left_strength and goerdeler_seen)
+
+我々は<span style="color: #F4A460;">**SRPD**</span>に働きかけ、<span style="color: #c00000;">社会主義</span>と<span style="color: #c00000;">反</span><span style="color: #7A3C00;">ファシズム</span>のため、ローゼンフェルトを支持するよう求める。
+
+@convince_srpd_rosenfeld_success
+on-arrival: srpd_support_spd = 1; reformist_dissent -= 2;
+go-to: endorsements_rosenfeld
+
+意外にも、<span style="color: #F4A460;">**SRPD**</span>は大統領選でローゼンフェルトを支持することに同意した。
+
+@convince_srpd_rosenfeld_fail
+on-arrival: srpd_support_spd = 0; reformist_strength -= 1;
+go-to: endorsements_rosenfeld
+
+予想どおり、<span style="color: #F4A460;">**SRPD**</span>は<span style="color: #700000;">**共産主義者**</span>との協力を拒んだ。
+
 @endorsements_eckener
 
 エッケナーだけではこの選挙に勝てない。他党の支持が必要だ。
@@ -1185,8 +1231,28 @@ go-to: endorsements_rosenfeld
 - @convince_ddp_eckener: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>に<span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>支持[? if liberal_reactionary_candidate_1932:と[+ liberal_reactionary_candidate_1932_name +]への支持撤回?]を求める。
 - @convince_lvp_eckener: <span style="color: #FFCC00;">**LVP**</span>に<span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>支持[? if liberal_reactionary_candidate_1932:と[+ liberal_reactionary_candidate_1932_name +]への支持撤回?]を求める。
 - @convince_dvp_eckener: <span style="color: #C0A054;">**DVP**</span>に<span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>支持[? if liberal_reactionary_candidate_1932:と[+ liberal_reactionary_candidate_1932_name +]への支持撤回?]を求める。
+- @convince_srpd_eckener: <span style="color: #F4A460;">**SRPD**</span>を説得し[? if liberal_reactionary_candidate_1932:、[+ liberal_reactionary_candidate_1932_name +]への支持を取り下げ?]、<span style="color: #000000;">**エッ**</span><span style="color: #DD0000;">**ケ**</span><span style="color: #FFCC00;">**ナー**</span>を支持させる。
 - @view_candidates: 各党の支持状況を見る。
 - @hope: 他党との交渉を終える。
+
+@convince_srpd_eckener
+view-if: srpd_formed and not (ddp_support_spd and not lvp_formed) or (lvp_support_spd and lvp_formed)
+max-visits: 1
+go-to: convince_srpd_success_eckener if (reformist_strength + neorevisionist_strength > left_strength or ((reformist_strength + labor_strength + neorevisionist_strength > left_strength) and ((ddp_relation >= 60 and not lvp_formed) or (lvp_relation >= 50 and lvp_formed))) or ((reformist_strength + labor_strength + center_strength + neorevisionist_strength > left_strength) and ((ddp_relation >= 70 and not lvp_formed) or (lvp_relation >= 60 and lvp_formed))) or ((ddp_relation >= 80 and not lvp_formed) or (lvp_relation >= 70 and lvp_formed))); convince_srpd_fail_eckener if not (reformist_strength + neorevisionist_strength > left_strength or ((reformist_strength + labor_strength + neorevisionist_strength > left_strength) and ((ddp_relation >= 60 and not lvp_formed) or (lvp_relation >= 50 and lvp_formed))) or ((reformist_strength + labor_strength + center_strength + neorevisionist_strength > left_strength) and ((ddp_relation >= 70 and not lvp_formed) or (lvp_relation >= 60 and lvp_formed))) or ((ddp_relation >= 80 and not lvp_formed) or (lvp_relation >= 70 and lvp_formed)))
+
+我々は<span style="color: #F4A460;">**SRPD**</span>に働きかけ、<span style="color: #000000;">民</span><span style="color: #DD0000;">主</span><span style="color: #FFCC00;">主義</span>勢力の<span style="color: #F4A460;">団結</span>と<span style="color: #c00000;">反</span><span style="color: #7A3C00;">ファシズム</span>のため、エッケナーを支持するよう求める。
+
+@convince_srpd_success_eckener
+on-arrival: srpd_support_spd = 1; reformist_dissent -= 4;
+go-to: endorsements_eckener
+
+予想どおり、<span style="color: #F4A460;">**SRPD**</span>はエッケナーを支持し、選挙運動に乗り出した。
+
+@convince_srpd_fail_eckener
+on-arrival: srpd_support_spd = 0; reformist_strength -= 3;
+go-to: endorsements_eckener
+
+意外にも、<span style="color: #F4A460;">**SRPD**</span>は我々が<span style="color: #000000;">民</span><span style="color: #DD0000;">主</span><span style="color: #FFCC00;">主義</span>を守るという約束を捨てたのではないかと懸念し、大統領候補エッケナーへの支持を拒んだ。
 
 @convince_ddp_eckener
 view-if: not lvp_formed
@@ -1199,7 +1265,7 @@ go-to: convince_ddp_success_eckener if (ddp_relation >= 40 and (ddp_ideology == 
 on-arrival: ddp_support_spd = 1; ddp_left += 1; ddp_cohesion -= 1; ddp_relation += 3
 go-to: endorsements_eckener
 
-友好的関係、党内左派とのつながり、そしてエッケナーの無党派性により、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は選挙でエッケナーのために運動を始めた。
+友好的関係、党内左派とのつながり、そしてエッケナーの無党派性により、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>は選挙でエッケナーのために運動を始めた。[? if srpd_formed and not srpd_support_spd: これを受け、<span style="color: #F4A460;">**SRPD**</span>も同じ候補への支持を表明した。?]
 
 @convince_ddp_fail_eckener
 on-arrival: ddp_support_spd = 0; ddp_right += 1; ddp_cohesion -= 1; ddp_relation -= 3
@@ -1218,7 +1284,7 @@ go-to: convince_lvp_success_eckener if ((lvp_relation >= 50 and lvp_ideology == 
 on-arrival: lvp_support_spd = 1; lvp_left += 3; lvp_relation += 4; old_middle_lvp -= 2; rural_lvp -= 2; old_middle_kvp += 2; rural_kvp += 2; old_middle_kvp += 2 if not kvp_formed; rural_kvp += 2 if not kvp_formed
 go-to: endorsements_eckener
 
-<span style="color: #FFCC00;">**LVP**</span>からエッケナーへの公式支持を取り付けたが、党を支える実業家たちは不満を募らせている。彼らは党への支援を引き揚げ始め、右翼有権者のかなりの部分が棄権を選んでいる。
+<span style="color: #FFCC00;">**LVP**</span>からエッケナーへの公式支持を取り付けたが、党を支える実業家たちは不満を募らせている。彼らは党への支援を引き揚げ始め、右翼有権者のかなりの部分が棄権を選んでいる。[? if srpd_formed and not srpd_support_spd: これを受け、<span style="color: #F4A460;">**SRPD**</span>も同じ候補への支持を表明した。?]
 
 @convince_lvp_fail_eckener
 on-arrival: lvp_support_spd = 0; lvp_right += 3; lvp_relation -= 5

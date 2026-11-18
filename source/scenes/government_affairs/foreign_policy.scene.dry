@@ -78,7 +78,7 @@ on-arrival: soviet_aid_forpol = 1; budget -= 1; soviet_relation += 1; reichswehr
 @soviet_economic_aid_yes
 choose-if: budget >= 1
 subtitle: 予算 -1
-on-arrival: soviet_aid_forpol = 1; budget -= 1; soviet_relation += 2; coalition_dissent += 1; foreign_goal_completed += 1
+on-arrival: soviet_aid_forpol = 1; budget -= 1; soviet_relation += 2; z_coalition_dissent += 1; ddp_coalition_dissent += 1; dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; foreign_goal_completed += 1
 
 <span style="color: #940000;">ソビエト</span>は援助を歓迎した。具体的な見返りは求めていない。連立相手の反応は芳しくない。
 
@@ -120,7 +120,7 @@ view-if: black_thursday_seen = 1 and customs_union = 0
 - @fp_menu: いや、ほかのことをすべきである。
 
 @customs_union_2
-on-arrival: banking_crisis_timer = 4; customs_union = 1; west_relation -= 2; east_relation -= 2; z_relation += 6; dvp_relation += 6; ddp_relation += 4; lvp_relation += 6; coalition_dissent -= 1 if coalition_dissent > 0; coup_progress -= 1; hindenburg_angry -= 15
+on-arrival: banking_crisis_timer = 4; customs_union = 1; west_relation -= 2; east_relation -= 2; z_relation += 6; dvp_relation += 6; ddp_relation += 4; lvp_relation += 6; z_coalition_dissent -= 1 if z_coalition_dissent > 0; ddp_coalition_dissent -= 1 if ddp_coalition_dissent > 0; dvp_coalition_dissent -= 1 if dvp_coalition_dissent > 0; lvp_coalition_dissent -= 1 if lvp_coalition_dissent > 0; coup_progress -= 1; hindenburg_angry -= 15
 max-visits: 1
 
 オーストリアとの関税同盟を結成した！ 右翼諸党は予想外の展開に我々を称賛している。
@@ -143,7 +143,7 @@ subtitle: 交渉は成功した。
 unavailable-subtitle: [? if not young_plan_ratified: ヤング案の批准を待たねばならない。 ?][? if west_relation < 4: 賠償停止をめぐり<span style="color: #002654;">フランス</span>政府と他の西側列強が激しく対立している。西側との関係改善が必要である。 ?]
 choose-if: young_plan_ratified == 1 and west_relation >= 4
 view-if: reparations_negotiation >= 3 and reparations > -2 and young_plan_seen
-on-arrival: west_relation += 1; reparations = -2; budget += 2 if hoover_memorandum_seen == 0; budget += 1 if hoover_memorandum_seen == 1; coalition_dissent -= 1 if coalition_dissent > 0; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); coup_progress -= 2 if coup_progress > 2; dvp_left += 3; pro_republic += 8; ddp_left += 1; ddp_cohesion += 1; lvp_left += 3; hindenburg_angry -= 20; economic_growth += 0.5 if economic_growth < 0; labor_dissent -= 15; dvp_relation += 5; ddp_relation += 5; z_relation += 5; lvp_relation += 5
+on-arrival: west_relation += 1; reparations = -2; budget += 2 if hoover_memorandum_seen == 0; budget += 1 if hoover_memorandum_seen == 1; z_coalition_dissent -= 1 if z_coalition_dissent > 0; ddp_coalition_dissent -= 1 if ddp_coalition_dissent > 0; dvp_coalition_dissent -= 1 if dvp_coalition_dissent > 0; lvp_coalition_dissent -= 1 if lvp_coalition_dissent > 0; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); coup_progress -= 2 if coup_progress > 2; dvp_left += 3; pro_republic += 8; ddp_left += 1; ddp_cohesion += 1; lvp_left += 3; hindenburg_angry -= 20; economic_growth += 0.5 if economic_growth < 0; labor_dissent -= 15; dvp_relation += 5; ddp_relation += 5; z_relation += 5; lvp_relation += 5
 max-visits: 1
 
 経済状況と継続的交渉を受け、<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>はついに賠償支払いの停止に応じた！ 功績の多くは、<span style="color: #001489;">欧州諸国</span>より我々に友好的だった<span style="color: #0A3161;">アメリカ</span>のフーヴァー大統領に帰せられる。
@@ -156,7 +156,7 @@ subtitle: 賠償と将来の支払いの問題がついに解決する。
 unavailable-subtitle: [? if west_relation < 6: 賠償の全面廃止をめぐり<span style="color: #002654;">フランス</span>政府と他の西側列強が激しく対立している。 ?][? if not france_left_seen and year < 1932: <span style="color: #002654;">フランス</span>右翼政府は承認しない。より友好的な内閣の成立を待つ必要がある。 ?][? if not france_left_seen and year >= 1932: 5月の選挙を控え、<span style="color: #002654;">フランス</span>政府は決定を下せない。 ?]
 choose-if: west_relation >= 6 and france_left_seen
 view-if: reparations == -2 and not lausanne_seen
-on-arrival: west_relation += 1; eu_progress += 1; reparations_resolved = 1; budget += 1; coalition_dissent -= 3 if coalition_dissent > 0; workers_spd += 8*(1-dissent); old_middle_spd += 6*(1-dissent); new_middle_spd += 6*(1-dissent); rural_spd += 6*(1-dissent); catholics_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); coup_progress -= 4 if coup_progress > 4; dvp_left += 8; ddp_left += 4; ddp_cohesion += 4; pro_republic += 15; lvp_left += 8; hindenburg_angry -= 100; economic_growth += 2.5; unemployed -= 3; labor_dissent -= 15; workers_nsdap -= 5; unemployed_nsdap -= 5; new_middle_nsdap -= 5; old_middle_nsdap -= 5; rural_nsdap -= 5; catholics_nsdap -= 5; dvp_relation += 10; ddp_relation += 10; z_relation += 10; lvp_relation += 10
+on-arrival: west_relation += 1; eu_progress += 1; reparations_resolved = 1; budget += 1; z_coalition_dissent -= 3 if z_coalition_dissent > 0; ddp_coalition_dissent -= 3 if ddp_coalition_dissent > 0; dvp_coalition_dissent -= 3 if dvp_coalition_dissent > 0; lvp_coalition_dissent -= 3 if lvp_coalition_dissent > 0; workers_spd += 8*(1-dissent); old_middle_spd += 6*(1-dissent); new_middle_spd += 6*(1-dissent); rural_spd += 6*(1-dissent); catholics_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); coup_progress -= 4 if coup_progress > 4; dvp_left += 8; ddp_left += 4; ddp_cohesion += 4; pro_republic += 15; lvp_left += 8; hindenburg_angry -= 100; economic_growth += 2.5; unemployed -= 3; labor_dissent -= 15; workers_nsdap -= 5; unemployed_nsdap -= 5; new_middle_nsdap -= 5; old_middle_nsdap -= 5; rural_nsdap -= 5; catholics_nsdap -= 5; dvp_relation += 10; ddp_relation += 10; z_relation += 10; lvp_relation += 10
 max-visits: 1
 
 賠償支払い停止の交渉成功により、<span style="color: #0A3161;">西側</span><span style="color: #C8102E;">連合国</span>は我々が平和主義へ誠実に取り組み、軍国主義から距離を置いていると確信した。さらに<span style="color: #002654;">フランス</span>の新たな<span style="color: #E0B0FF;">左翼</span>首相は前任者よりはるかに友好的である。その結果、賠償問題の最終解決を目指す会議の開催に同意させた。
@@ -180,7 +180,7 @@ on-arrival: military_parity = 1 if eu or (west_relation >= 8 and reformist_stren
 @expose
 title: 前外務省の秘密再軍備計画を暴露する！
 view-if: rearmament_exposed == 0
-on-arrival: west_relation += 2; east_relation += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coalition_dissent += 1; reichswehr_loyalty -= 0.05; rearmament_exposed += 1; reparations_negotiation += 3; coup_progress += 2; dvp_right += 2; ddp_left += 1; ddp_cohesion -= 1; lvp_right += 1; hindenburg_angry += 20
+on-arrival: west_relation += 2; east_relation += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); z_coalition_dissent += 1; ddp_coalition_dissent += 1; dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; reichswehr_loyalty -= 0.05; rearmament_exposed += 1; reparations_negotiation += 3; coup_progress += 2; dvp_right += 2; ddp_left += 1; ddp_cohesion -= 1; lvp_right += 1; hindenburg_angry += 20
 
 前外務省は慈善的で平和的な顔の裏で、ヴェルサイユ条約に反して国防軍の軍備増強を密かに助けていた。
 

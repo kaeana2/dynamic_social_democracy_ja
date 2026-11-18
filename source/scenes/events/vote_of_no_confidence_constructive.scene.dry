@@ -1,0 +1,88 @@
+title: 右派が現政権に対する建設的不信任案を提出した！
+subtitle: 連立相手の反発が限界に達した……
+new-page: true
+on-arrival: tried_supporting_kpd = 0; z_relation -= 5 if not in_social_catholic_coalition; dvp_relation -= 5 if in_grand_coalition; ddp_relation -= 5 if not in_social_catholic_coalition; lvp_relation -= 5 if in_weimar_coalition and not in_social_catholic_coalition or in_grand_coalition; lvp_right += 2 if in_weimar_coalition or in_grand_coalition; dvp_right += 2 if in_grand_coalition; ddp_right += 1; hindenburg_angry += 20
+on-departure: secularized = 0
+view-if: chancellor_party == "SPD" and spd_in_government = 1 and (((in_grand_coalition or in_popular_front or in_minority_government or (in_social_catholic_coalition and cvp_formed)) and z_coalition_dissent >= 3) or ((in_weimar_coalition or (in_social_catholic_coalition and not cvp_formed)) and z_coalition_dissent >= 4)) or (in_grand_coalition and dvp_coalition_dissent >= 3 and (not lvp_formed) and dvp_exist) or ((in_weimar_coalition or in_grand_coalition or in_social_liberal_coalition) and lvp_coalition_dissent >= 3 and lvp_formed) or ((in_weimar_coalition or in_social_liberal_coalition or in_grand_coalition) and (ddp_coalition_dissent >= 3)) and spd_r < 50 and constructive_vonc and ((bourgeois_coalition >= 50) or (dnvp_ideology == "Moderate" and center_right_coalition >= 50 and dnf_formed and not (year = 1929 and month >= 7)) or (right_coalition >= 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)))
+tags: event
+go-to: vonc_menu
+
+= 建設的不信任決議
+
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は、我々の政策や意見の相違を理由に、建設的不信任案を提出した。可決されれば、ハインリヒ・ブリューニングを首班とする新政権が発足する。
+
+@vonc_menu
+
+- @try_assuage: 連立相手をなだめる。
+- @right_coalition: ブリューニングが右派連立政権を樹立する。
+- @center_right_coalition: ブリューニングが中道右派連立政権を樹立する。
+- @bourgeois_coalition: ブリューニングがブルジョワ連立政権を樹立する。
+- @snap_elections: [+ president +]大統領が繰り上げ選挙を実施する。
+
+@try_assuage
+
+どうすれば連立相手をなだめられるだろうか？
+
+- @dvp_prussia_2: <span style="color: #C0A054;">**DVP**</span>をプロイセン州政権に加える。
+- @give_up_prussia: プロイセン州政権の主導権を手放す。
+- @austerity: 大規模な緊縮策を実施する。
+- @resources: リソースを使って連立内の不満を抑える。
+- @vonc_menu: やめておこう。ほかにどんな手がある？
+
+@dvp_prussia_2
+view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_weimar_coalition_prussia) and in_grand_coalition = 1 and dvp_was_in_prussia == 0 and not lvp_formed
+choose-if: z_leader != "Kaas" and not secularized
+unavailable-subtitle: [? if z_leader = "Kaas": カースと[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が強く反対している。 ?]
+on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; dvp_relation += 10; z_relation -= 5; ddp_relation += 3; z_coalition_dissent -= 1; dvp_coalition_dissent -= 1; ddp_coalition_dissent -= 1; lvp_coalition_dissent -= 1; left_dissent += 5; in_grand_coalition_prussia = 1; dvp_left += 3; new_middle_dvp += 3
+
+プロイセン州政権への参加は、誰が党首であっても<span style="color: #C0A054;">**DVP**</span>には断れないほど有利な提案だ。
+
+しかしその代償として、我々が<span style="color: #000000;">ヴァイ</span><span style="color: #DD0000;">マ</span><span style="color: #FFCC00;">ル</span>連立で持っていた行動の自由は狭まった。
+
+@give_up_prussia
+subtitle: ブラウンの辞任が必要になる。
+view-if: prussia_leader = "Braun" and neo_weimar_coalition_prussia >= 50
+on-arrival: z_coalition_dissent = 1 if z_coalition_dissent > 1; ddp_coalition_dissent = 1 if ddp_coalition_dissent > 1; dvp_coalition_dissent = 1 if dvp_coalition_dissent > 1; lvp_coalition_dissent = 1 if lvp_coalition_dissent > 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
+
+やむを得ない。我々はプロイセン州政権の主導権を手放した。不信任案は取り下げられた。
+
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]に州首相の座を譲る。
+
+@austerity
+view-if: welfare >= 0 and not secularized
+on-arrival: z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; workers_kpd += 7; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; kpd_coalition_dissent += 1; kpd_relation -= 10 if in_popular_front; goal_spd_cancel += 1; social_welfare_timer = 10
+
+やむを得ない。我々は連立を維持するため、大規模な緊縮策を実施し、社会福祉を削減した。不信任案は取り下げられた。
+
+@resources
+view-if: secularized = 0
+choose-if: (resources >= 3 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 3 and in_grand_coalition and not (dvp_ideology == "Right" and year >= 1930) and not lvp_formed) or (resources >= 3 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Right" and year >= 1930) and lvp_formed))
+unavailable-subtitle: [? if resources < 3: リソースが足りない。 ?] [? if in_grand_coalition and (dvp_ideology == "Right" and year >= 1930) and not lvp_formed: <span style="color: #C0A054;">**DVP**</span>はもはや我々のリソースを求めていない。 ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Right" and year >= 1930) and lvp_formed: <span style="color: #FFCC00;">**LVP**</span>はもはや我々のリソースを求めていない。 ?]
+subtitle: リソース -3
+on-arrival: resources -= 3; z_coalition_dissent -= 1 if z_coalition_dissent > 0; ddp_coalition_dissent -= 1 if ddp_coalition_dissent > 0; dvp_coalition_dissent -= 1 if dvp_coalition_dissent > 0; lvp_coalition_dissent -= 1 if lvp_coalition_dissent > 0;
+
+連立相手にリソースを渡せば、我々の政策への不満を和らげられる。力ずくだが、効果はある。
+
+@right_coalition
+view-if: right_coalition >= 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)
+on-arrival: center_dissent += 5; reformist_dissent += 5; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0;
+go-to: election_1928.right_coalition_2
+
+@center_right_coalition
+view-if: dnvp_ideology == "Moderate" and not lvp_formed and center_right_coalition >= 50 and dnf_formed and right_coalition < 50 and not (year = 1929 and month >= 7)
+on-arrival: center_dissent += 5; reformist_dissent += 5; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0;
+go-to: election_1928.center_right_coalition_2
+
+@bourgeois_coalition
+view-if: bourgeois_coalition >= 50 and not cvp_formed
+on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0;
+go-to: election_1928.bourgeois_coalition
+
+@snap_elections
+view-if: president_ideology == "Left"
+choose-if: presidential_powers != 1
+unavailable-subtitle: その権限はもうない。君の改革のおかげで本当に困ったことになったものだ。
+call: set_next_election_time
+on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; spd_toleration = 0; spd_toleration_right = 0; z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0; pro_republic -= 5; old_middle_spd -= 3; new_middle_spd -= 2; workers_spd -= 3 if pro_republic < 50; workers_spd -= 4 if pro_republic < 40; old_middle_nsdap += 4 if pro_republic < 50; new_middle_nsdap += 3 if pro_republic < 50; lvp_right += 3; ddp_right += 2; ddp_cohesion -= 1; dvp_right += 3
+
+野党に転落するのを避けるため、我々は[+ next_election_year +]年[+ next_election_month : month +]に改めて選挙を行うことにした。

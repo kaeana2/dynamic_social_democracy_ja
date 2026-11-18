@@ -56,7 +56,7 @@ new-page: true
 subtitle: ティールはグラッツェルより左寄りの労組活動家で、党内で評価が分かれる。
 unavailable-subtitle: [? if not glatzel_unlock: 労働者は<span style="color: #C0A054;">DVP</span>内で力を持たず、党全体も労組活動家を支持しない。 ?][? if glatzel_unlock: ティールは依然として左寄りすぎると見なされ、多くは同僚グラッツェルの支持を望んでいる。 ?]
 choose-if: thiel_unlock
-on-arrival: dvp_leader = "Thiel"; bourgeois_cooperation -= 3; dvp_left += 10; coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
+on-arrival: dvp_leader = "Thiel"; bourgeois_cooperation -= 3; dvp_left += 10; dvp_coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
 face-image: img/portraits/thiel.jpg
 
 意外にも、オットー・ティールが<span style="color: #C0A054;">**DVP**</span>の新党首に選出された！党内の労組派でも同僚グラッツェルより左寄りで、緊縮策は国民の苦境を深めるだけだとして、福祉支出の増額さえ支持している。*民族共同体*の実現を目指し、団体交渉権や労働者保護など、労働者に友好的な政策を党綱領へ取り入れ始めた。
@@ -90,7 +90,7 @@ face-image: img/portraits/kardorff.jpg
 subtitle: オットー・フーゴーは産業界による党の支配を固めようとしている。
 unavailable-subtitle: <span style='color: #C0A054;'>DVP</span>の右派産業界派閥には、必要な影響力がない。
 choose-if: hugo_unlock
-on-arrival: old_dvp_leader = dvp_leader; dvp_leader = "Hugo"; dvp_right += 10; dvp_relation -= 25; old_middle_ddp += 2; new_middle_ddp += 6; rural_ddp += 4; old_middle_dvp -= 2; new_middle_dvp -= 6; rural_dvp -= 4; pro_republic -= 5; ddp_cohesion -= 1; liberal_cooperation -= 5; bourgeois_cooperation -= 5; ddp_right += 5; ddp_cohesion -= 3; ddp_relation -= 10
+on-arrival: old_dvp_leader = dvp_leader; dvp_leader = "Hugo"; dvp_right += 10; dvp_relation -= 25; old_middle_ddp += 2; new_middle_ddp += 6; rural_ddp += 4; old_middle_dvp -= 2; new_middle_dvp -= 6; rural_dvp -= 4; pro_republic -= 5; ddp_cohesion -= 1; liberal_cooperation -= 5; bourgeois_cooperation -= 5; ddp_right += 5; ddp_cohesion -= 3; ddp_relation -= 10; dvp_coalition_dissent += 1
 face-image: img/portraits/hugo.jpg
 
 意外にも、オットー・フーゴーが[+ old_dvp_leader +]に代わる<span style="color: #C0A054;">DVP</span>党首に選出された。党内右派の一致した支持とエルンスト・ショルツの推薦を受け、カルドルフを僅差で破った。

@@ -30,7 +30,7 @@ on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coa
 @accept
 unavailable-subtitle: [? if reformist_strength + center_strength + labor_strength / 2 < left_strength + labor_strength / 2: 党がこれを認めない。 ?]
 choose-if: reformist_strength + center_strength + labor_strength / 2 >= left_strength + labor_strength / 2
-on-arrival: workers_spd -= 0.1*workers_spd; unemployed_spd -= 0.2*unemployed_spd; new_middle_spd -= 0.1*new_middle_spd if new_middle_conscious == 1; workers_kpd += 3; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; welfare -= 1; budget += 1; pro_republic -= 3; kpd_relation -= 5; inflation -= 1; unemployment_insurance_threshold = unemployed; dvp_left += 2; coalition_dissent -= 1; goal_spd_cancel += 1; economic_growth -= 0.3
+on-arrival: workers_spd -= 0.1*workers_spd; unemployed_spd -= 0.2*unemployed_spd; new_middle_spd -= 0.1*new_middle_spd if new_middle_conscious == 1; workers_kpd += 3; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; welfare -= 1; budget += 1; pro_republic -= 3; kpd_relation -= 5; inflation -= 1; unemployment_insurance_threshold = unemployed; dvp_left += 2; dvp_coalition_dissent -= 1; goal_spd_cancel += 1; economic_growth -= 0.3
 
 残念ながら、連立を維持するには要求を受け入れざるを得ない。<span style="color: #7A3C00;">ナチ</span>と<span style="color: #700000;">**共産主義者**</span>は我々の失敗を待ち構え、政権連立の崩壊が生む混乱につけ込もうとしている。
 
@@ -54,6 +54,6 @@ on-arrival: workers_spd -= 2; unemployed_spd -= 2; new_middle_spd -= 2 if new_mi
 @accept_compromise_good
 choose-if: dvp_ideology == "Left" and dvp_relation >= 40
 unavailable-subtitle: [? if dvp_ideology != "Left": <span style="color: #C0A054;">DVP</span>は右傾化しすぎている。 ?] [? if dvp_relation < 40: 右翼諸党との関係が十分に良くない。 ?]
-on-arrival: workers_spd -= 1; unemployed_spd -= 1; new_middle_spd -= 1 if new_middle_conscious == 1; unemployed_kpd += 1; unemployed_nsdap += 1; workers_nsdap += 1; left_dissent += 5; labor_dissent += 3; kpd_relation -= 4; reformist_strength += 10; reformist_dissent -= 5; coalition_dissent -= 1; old_middle_dvp -= 3; old_middle_nsdap += 3; unemployment_insurance_threshold = unemployed; dvp_left += 3; ddp_left += 1; ddp_cohesion += 1; unemployment_goal_spd += 1; economic_growth -= 0.1
+on-arrival: workers_spd -= 1; unemployed_spd -= 1; new_middle_spd -= 1 if new_middle_conscious == 1; unemployed_kpd += 1; unemployed_nsdap += 1; workers_nsdap += 1; left_dissent += 5; labor_dissent += 3; kpd_relation -= 4; reformist_strength += 10; reformist_dissent -= 5; dvp_coalition_dissent -= 1; old_middle_dvp -= 3; old_middle_nsdap += 3; unemployment_insurance_threshold = unemployed; dvp_left += 3; ddp_left += 1; ddp_cohesion += 1; unemployment_goal_spd += 1; economic_growth -= 0.1
 
 我々は給付を削減する代わりに、雇用主と被用者双方の拠出増額を主張した。<span style="color: #C0A054;">**DVP**</span>は、[? if not stresemann_dead:シュトレーゼマンと?]党内左派の影響を受け、提案に同意した。

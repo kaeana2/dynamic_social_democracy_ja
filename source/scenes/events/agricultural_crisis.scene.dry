@@ -1,0 +1,61 @@
+title: 農村住民の反乱
+subtitle: 負債と税負担にあえぐ小農が立ち上がった……
+view-if: ((year = 1929 and month >= 2)) and spd_in_government and agricultural_finance < 2
+max-visits: 1
+on-arrival: agricultural_crisis_seen = 1; rural_dnvp -= 2; rural_spd -= 2; rural_nsdap += 2
+new-page: true
+tags: event
+face-image: img/Kollwitz_bauernkrieg.jpg
+
+= 農村住民の反乱
+
+# Schleswig-Holstein Landvolk
+# sources: https://www.journals.uchicago.edu/doi/10.2307/2125668
+# https://www.jstor.org/stable/1405576?seq=11 - Landvolk Revolt, centered in Schleswig-Holstein
+
+ドイツの農民が共和国に闘いを挑み始めた。シュレースヴィヒ＝ホルシュタイン州に始まった*農村住民運動*（ラントフォルク運動）は次第に大胆になり、地元の官庁に対する破壊工作に及んでいる。農民たちは税と負債に押し潰されそうだと訴えている。彼らの要求は一枚岩ではないが、共通して求めているのは無条件の経済救済だ。この運動は「国家社会主義者」を名乗るナチ党との結びつきも強めつつある。
+
+どう対応すべきか？
+
+- @nothing: 我々にできることは何もない。
+- @suppress: *農村住民運動*を鎮圧しなければならない！
+- @financing_1: 農民への資金援助を拡充する。
+- @financing_2: 農民への資金援助を拡充する。
+
+# options:
+# 1. There is nothing we can do.
+# 2. The Landvolk must be suppressed.
+# 3. Increase agricultural financing
+
+@nothing
+on-arrival: rural_nsdap += 3*(1-dissent); rural_spd -= 2; rural_ddp -= 2; pro_republic -= 3; nationalism += 5;
+
+我々に打つ手はない。農民の抗議は激しさを増し、運動内部の対立がかろうじて歯止めとなっている。勢力を伸ばすナチ党はこの運動を取り込み、農民の不満を共和国打倒の要求へと向けている。
+
+@suppress
+unavailable-subtitle: 警察の大半は、鎮圧に必要な措置を取る気がない。
+choose-if: prussian_police_loyalty >= 0.6 or interior_police_loyalty >= 0.6
+on-arrival: rural_spd -= 4; rural_ddp -= 4; rural_nsdap -= 2*(1-dissent); pro_republic -= 1; nationalism += 3;
+
+警察は農民の騒乱を鎮圧し、国家への脅威となるのを防いだ。しかし農民の暮らしは苦しいままであり、彼らのSPDに対する反感はますます強まるだろう。
+
+@financing_1
+subtitle: 予算 -1。農業融資には資金を投じているが、さらなる支援が必要だ。
+choose-if: budget >= 1
+unavailable-subtitle: 予算 -1。必要な資金がない。
+view-if: agricultural_finance == 1
+on-arrival: budget -= 1; agricultural_finance += 1; rural_policy += 1; center_dissent += 5; left_dissent += 4; rural_sol += 4; economic_growth += 0.2;
+go-to: financing_done
+
+@financing_2
+subtitle: 予算 -2
+choose-if: budget >= 2
+unavailable-subtitle: 予算 -2。必要な資金がない。
+view-if: agricultural_finance < 1
+on-arrival: budget -= 2; rural_spd += 2*(1-dissent); dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; agricultural_finance += 1; rural_policy += 1; rural_nsdap -= 3*(1-dissent); center_dissent += 8; left_dissent += 6; rural_sol += 8; economic_growth += 0.4; dvp_right += 1; lvp_right += 1;
+go-to: financing_done
+
+@financing_done
+on-arrival: rural_spd += 3*(1-dissent); rural_ddp += 2 if ddp_in_government
+
+騒乱を受け、我々は小農への資金援助を大幅に増やした。ナチ党の影響は一部に残るものの、支援の拡充によって*農村住民運動*はおおむね沈静化した。しかし連立内の一部は、我々が弱腰でテロに屈し、財政規律まで損なったと見ている。

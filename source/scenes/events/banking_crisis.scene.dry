@@ -35,7 +35,7 @@ view-if: spd_in_government = 1
 subtitle: 予算 -1
 unavailable-subtitle: 必要な予算がない。[? if budget <= 0 and budget >= -3 and wtb_adopted = 1: <span style="color: #C0A054;">**DVP**</span>が先手を打って不信任決議を提出する。?] [? if wtb_adopted = 0: 我が党が財政赤字を容認していない。?] [? if budget <= 0 and economic_minister_party != "SPD": 現連立の経済相がこの方針への支持を拒んでいる。?]
 choose-if: budget >= 1 or (wtb_adopted = 1 and budget >= -3 and (in_spd_majority = 1 or in_social_catholic_coalition = 1 or in_weimar_coalition = 1 or in_left_front = 1 or in_popular_front = 1 or sapd_toleration = 1) and economic_minister_party = "SPD")
-on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_nsdap -= 3; economic_growth += 1; coalition_dissent += 1 if budget <= 0 and (in_social_catholic_coalition = 1 or in_weimar_coalition = 1 or in_popular_front = 1)
+on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_nsdap -= 3; economic_growth += 1; z_coalition_dissent += 1 if budget <= 0
 
 銀行危機を前に、我々は銀行制度へ資金を注入し、経済を安定させる緊急措置を講じた。十分ではないかもしれないが、当面の出血は抑えられる。
 

@@ -26,7 +26,7 @@ subtitle: 刑法第175条は現在、<span style="color: red;">同</span><span s
 unavailable-subtitle: この政策への過半数の支持がない。
 view-if: repealed_175 == 0
 choose-if: progressive_coalition >= 50 
-on-arrival: repealed_175 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; ddp_left += 1; ddp_cohesion -= 1; economic_growth += 0.1;
+on-arrival: repealed_175 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); z_coalition_dissent += 1; catholics_spd -= 4; ddp_left += 1; ddp_cohesion -= 1; economic_growth += 0.1;
 go-to: heuchelei if rohm_explode
 
 <span style="color: #700000;">**KPD**</span>と[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>左派議員?]の進歩派とともに、ドイツにおける<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">間</span>の<span style="color: green;">性</span><span style="color: blue;">行</span><span style="color: purple;">為</span>を事実上非犯罪化した。警察が共和国に忠実である限り、私的行為を理由とする<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">者</span>への迫害は終わる。
@@ -41,7 +41,7 @@ subtitle: 刑法第183条は公然たる<span style="color: red;">同</span><spa
 unavailable-subtitle: この政策への過半数の支持がない。
 view-if: reformed_183 == 0
 choose-if: progressive_coalition >= 50 
-on-arrival: reformed_183 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; ddp_left += 1; ddp_cohesion -= 1; economic_growth += 0.1;
+on-arrival: reformed_183 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); z_coalition_dissent += 1; catholics_spd -= 4; ddp_left += 1; ddp_cohesion -= 1; economic_growth += 0.1;
 
 <span style="color: #700000;">**KPD**</span>と[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>左派議員?]の進歩派とともに投票し、刑法第183条を改正した。これにより公然たる<span style="color: red;">同</span><span style="color: orange;">性</span><span style="color: yellow;">愛</span><span style="color: green;">的</span>表現や<span style="color: deepskyblue;">異性</span><span style="color: deeppink;">装</span>は犯罪とされなくなった。
 
@@ -51,7 +51,7 @@ subtitle: 個人が法的性別を変更できる手続きを設け、生活上�
 unavailable-subtitle: この政策への過半数の支持がない。
 view-if: trans_rights == 0
 choose-if: progressive_coalition >= 50
-on-arrival: trans_rights = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; ddp_left += 1; ddp_cohesion -= 1; economic_growth += 0.1;
+on-arrival: trans_rights = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); z_coalition_dissent += 1; catholics_spd -= 4; ddp_left += 1; ddp_cohesion -= 1; economic_growth += 0.1;
 
 <span style="color: deepskyblue;">トランス</span><span style="color: lightpink;">セクシュアル</span>や異性装者が、現に生きている性別で法的承認を受けられるようにする法案を可決した。これにより改名が可能となり、警察の迫害を受けず望む服装をし、医療を受けることもできる。
 

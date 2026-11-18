@@ -24,7 +24,7 @@ tags: govt_affairs, cabinet
 subtitle: 予算 -1
 unavailable-subtitle: 予算が足りない。
 choose-if: budget >= 1
-on-arrival: budget -= 1; democratization += 2; coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); workers_spd += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 4*(1-dissent); coup_progress += 1; coalition_dissent += 1 if historical_mode; dvp_left += 2; ddp_left += 1; lvp_left += 1.5; hindenburg_angry += 5
+on-arrival: budget -= 1; democratization += 2; dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; workers_spd += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 4*(1-dissent); coup_progress += 1; dvp_coalition_dissent += 1 if historical_mode; lvp_coalition_dissent += 1 if historical_mode; ddp_coalition_dissent += 1 if historical_mode; z_coalition_dissent += 1 if historical_mode; dvp_left += 2; ddp_left += 1; lvp_left += 1.5; hindenburg_angry += 5
 
 偏向または腐敗した行動を示した司法官を調査して罷免し、より民主主義的な司法官と交代させる。当然ながら、連立内部を含む保守派は激しく反発している。
 

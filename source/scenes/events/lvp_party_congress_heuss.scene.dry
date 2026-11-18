@@ -203,7 +203,7 @@ title: エドゥアルト・ディンゲルダイが選出された。
 subtitle: ディンゲルダイは旧<span style="color: #C0A054;">**DVP**</span>の出身で、党の産業界右派と結びつきが深い。
 unavailable-subtitle: <span style="color: #FFCC00;">LVP</span>の産業界右派には、自派の候補を当選させるだけの力がない。
 choose-if: dingeldey_lead
-on-arrival: lvp_relation -= 15; lvp_right += 8; lvp_leader = "Dingeldey"; new_middle_lvp -= 8; workers_lvp -= 4; old_middle_lvp += 6; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
+on-arrival: lvp_relation -= 15; lvp_right += 8; lvp_leader = "Dingeldey"; new_middle_lvp -= 8; workers_lvp -= 4; old_middle_lvp += 6; lvp_coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
 face-image: img/portraits/dingeldey.jpg
 
 かつてブルジョワ勢力の統合運動に参加していたエドゥアルト・ディンゲルダイが、<span style="color: #FFCC00;">**LVP**</span>党首に選ばれた。旧<span style="color: #C0A054;">**DVP**</span>党員に加え、党右派の産業界勢力の支持を受けている。<span style="color: #FFCC00;">**LVP**</span>と<span style="color: #3E88B3;">**DNVP**</span>の間に位置する諸党との協力強化に力を注いでいるようだ。

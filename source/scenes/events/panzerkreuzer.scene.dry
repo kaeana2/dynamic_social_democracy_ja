@@ -25,7 +25,7 @@ on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformi
 装甲巡洋艦反対運動は失敗し、反対票を投じたのは造反した<span style="color: #c00000;">**SPD**</span>議員と<span style="color: #700000;">**KPD**</span>議員だけであった。艦は建造される。
 
 @vote_no
-on-arrival: dvp_relation -= 8; lvp_relation -= 5; z_relation -= 5; pacifism += 1; nationalism -= 2*(1-dissent); coalition_dissent += 1; dvp_right += 1; ddp_left += 1; ddp_cohesion -= 1; lvp_right += 1; hindenburg_angry += 5; panzerkreuzer_no = 1;
+on-arrival: dvp_relation -= 8; lvp_relation -= 5; z_relation -= 5; pacifism += 1; nationalism -= 2*(1-dissent); z_coalition_dissent += 1; dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; dvp_right += 1; ddp_left += 1; ddp_cohesion -= 1; lvp_right += 1; hindenburg_angry += 5; panzerkreuzer_no = 1;
 go-to: vote_no_chancellor if chancellor_party = "SPD"; vote_no_pass if chancellor_party != "SPD"
 
 @vote_no_chancellor

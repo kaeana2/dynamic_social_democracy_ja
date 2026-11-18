@@ -1,0 +1,44 @@
+title: シュクラレク事件
+subtitle: ベルリンで長年続いた汚職を調査する
+new-page: true
+view-if: (year = 1929 and month >= 11) and spd_prussia
+max-visits: 1
+on-arrival: sklarek_affair_seen = 1; workers_spd -= 1; new_middle_spd -= 1; old_middle_spd -= 1; rural_spd -= 1; catholics_spd -= 1; unemployed_spd -= 1; new_middle_ddp -= 2; pro_republic -= 2
+tags: event
+face-image: img/sklarek.jpg
+
+= シュクラレク事件
+
+# The Prussian committee of inquiry into the affair in 1929
+ベルリンとプロイセンで大規模な汚職事件が明るみに出つつある。1927年、シュクラレク一族の経営する会社がベルリン市当局への制服納入契約を結んだが、制服を納品せず、代金を持ち逃げした。調査の結果、一族はベルリンの政界に深く入り込み、SPDやDDPなどに党員を抱え、公共契約の見返りに政治家に賄賂を贈っていたことが判明した。右派はこの事件を足がかりに「ヴァイマル諸党」と共和国の統治体制を攻撃し、一族が東欧系ユダヤ人であることを利用して反ユダヤ主義をあおっている。
+
+プロイセン州議会は事件の調査委員会を設置した。我々はどのような姿勢を取るべきか？
+
+# Corruption is unacceptable. Cooperate with the investigation fully to root out
+# The Sklareks also ingratiated themselves with the DNVP; turn the attacks back against the right. (requires judicial reform and either Prussian police reform or interior ministry reform  to succeed)
+
+- @downplay
+- @corruption_unacceptable
+- @turn_back
+
+@corruption_unacceptable
+title: 汚職は許されない。SPDに疑いが及んでも調査に協力する。
+on-arrival: center_dissent += 5; reformist_dissent += 5; labor_dissent += 5; reformist_dissent += 5; pro_republic -= 1; ddp_left += 1;
+
+我々は調査に全面的に協力し、汚職の疑いに十分な根拠がある党員を除名した。党に忠実だった者も多数除名されたため、党内には不満が広がった。それでも、この対応によってSPDの支持への打撃は抑えられた。
+
+@downplay
+title: 事件を小さく扱う。
+on-arrival: workers_spd -= 1; new_middle_spd -= 2; old_middle_spd -= 2; rural_spd -= 2; catholics_spd -= 2; unemployed_spd -= 2; new_middle_ddp -= 2; pro_republic -= 2; nationalism += 3;
+
+我々は党のメディアで事件を小さく扱い、対応を迫られたときにだけ動いた。この事件で党の信用は大きく損なわれ、人々は共和国にも次第に失望を深めている。
+
+@turn_back
+title: 一族はDNVPにも取り入っていた。右派に反撃する。
+choose-if: judicial_reform > 1 and prussian_police_loyalty > 0.5
+unavailable-subtitle: 司法と警察が我々に敵対している。
+on-arrival: new_middle_spd -= 1; old_middle_spd -= 1; rural_spd -= 1; catholics_spd -= 1; new_middle_ddp -= 1; workers_dnvp -= 1; new_middle_dnvp -= 1; old_middle_dnvp -= 1; rural_dnvp -= 1; pro_republic -= 2; ddp_right += 1; dvp_right += 1; lvp_right += 1; ddp_relation -= 2; dvp_relation -= 3; lvp_relation -= 3; nationalism -= 3; z_relation -= 2; pro_republic -= 3;
+
+調査により、シュクラレク一族の汚職は党派を問わず広がっていたと判明した。右派諸党もヴァイマル連立の諸党と同じように関与していた。我々はこの事実を公にし、右派の攻撃に反撃する。
+
+事件の影響を免れたと見られる政党は、KPDとNSDAPだけだ。

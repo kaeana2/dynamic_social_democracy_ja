@@ -3,13 +3,13 @@ new-page: true
 is-card: true
 tags: govt_affairs
 on-arrival: month_actions += 1; coalition_affairs_timer = 5
-view-if: spd_in_government = 1 and coalition_dissent >= 1 and coalition_affairs_timer = 0 and (in_grand_coalition or in_weimar_coalition or in_popular_front)
+view-if: spd_in_government = 1 and coalition_affairs_timer = 0 and ((lvp_coalition_dissent > 0 and lvp_formed and (in_grand_coalition or in_weimar_coalition or in_social_liberal_coalition)) or (z_coalition_dissent > 0 and (in_social_catholic_coalition or in_weimar_coalition or in_grand_coalition or in_popular_front)) or (ddp_coalition_dissent > 0 and not lvp_formed and (in_weimar_coalition or in_grand_coalition or in_social_liberal_coalition)) or (dvp_coalition_dissent > 0 and not lvp_formed and in_grand_coalition))
 card-image: img/muller_cabinet.jpg
 #subtitle: There is dissent within our coalition.
 
 = 連立政務
 
-連立政権が危機にある。[? if not in_social_liberal_coalition: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?] [? if not in_social_catholic_coalition:[? if in_grand_coalition and not lvp_formed: と<span style="color: #C0A054;">**DVP**</span> ?][? if not lvp_formed and in_weimar_coalition: [? if not in_social_liberal_coalition: および?] <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: [? if not in_social_liberal_coalition: および?] <span style="color: #FFCC00;">**LVP**</span> ?]?]の右派議員は我々の政策を絶えず批判し、内閣を倒す不信任案を提出すると脅している[? if spd_prussia :。プロイセン州政府でも同じことをする構えである?]。
+連立政権が危機にある。閣内の右派は我々の政策を繰り返し批判し、不信任案を提出して政権を倒すと脅している。[? if spd_prussia : プロイセン州の我々の政権にも、同じ手を使うと脅している。?]
 
 連立内部の緊張をどう和らげるべきか？
 
@@ -22,10 +22,10 @@ card-image: img/muller_cabinet.jpg
 
 
 @dvp_prussia_2
-view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_weimar_coalition_prussia) and in_grand_coalition = 1 and dvp_was_in_prussia == 0 and not lvp_formed
+view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_weimar_coalition_prussia) and in_grand_coalition = 1 and dvp_was_in_prussia == 0 and dvp_coalition_dissent > 0 and not lvp_formed
 choose-if: z_leader != "Kaas"
 unavailable-subtitle: [? if z_leader = "Kaas": カースと[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が強硬に反対している。 ?]
-on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 1; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; dvp_relation += 10; z_relation -= 5; ddp_relation += 3; coalition_dissent -= 1; left_dissent += 5; in_grand_coalition_prussia = 1; in_weimar_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; dvp_left += 3; new_middle_dvp += 3;
+on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 1; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; dvp_relation += 10; z_relation -= 5; ddp_relation += 3; dvp_coalition_dissent -= 1; ddp_coalition_dissent -= 1 if ddp_coalition_dissent > 0; left_dissent += 5; in_grand_coalition_prussia = 1; in_weimar_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; dvp_left += 3; new_middle_dvp += 3;
 
 <span style="color: #C0A054;">**DVP**</span>をプロイセン州政府へ迎えるという提案は、指導部が誰であろうと拒みがたい好条件である。
 
@@ -34,14 +34,14 @@ on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_
 @give_up_prussia
 subtitle: ブラウンの辞任が必要となる。
 view-if: prussia_leader = "Braun" and neo_weimar_coalition_prussia >= 50
-on-arrival: coalition_dissent = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
+on-arrival: z_coalition_dissent = 1 if z_coalition_dissent > 1; ddp_coalition_dissent = 1 if ddp_coalition_dissent > 1; dvp_coalition_dissent = 1 if dvp_coalition_dissent > 1; lvp_coalition_dissent = 1 if lvp_coalition_dissent > 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
 
 よかろう。もはやプロイセン州政府は我々の統制下にない。不信任投票は撤回された。
 
 州首相の座は[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]へ移った。
 
 @promise_cuts
-on-arrival: workers_spd -= 5; unemployed_spd -= 6; workers_kpd += 5; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 5; welfare -= 1; budget += 1; coalition_dissent = 0; dvp_left += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 1; goal_spd_cancel += 1; social_welfare_timer = 10
+on-arrival: workers_spd -= 5; unemployed_spd -= 6; workers_kpd += 5; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 5; welfare -= 1; budget += 1; z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0; dvp_left += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 1; goal_spd_cancel += 1; social_welfare_timer = 10
 
 よかろう。福祉を削減したことで、連立内部の不満は和らいだ。
 
@@ -50,7 +50,7 @@ subtitle: 資源 -2
 view-if: historical_mode = 0
 choose-if: (resources >= 2 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 2 and in_grand_coalition and not (dvp_ideology == "Right" and year >= 1930) and not lvp_formed) or (resources >= 2 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Right" and year >= 1930) and lvp_formed))
 unavailable-subtitle: [? if resources < 2: 資源が足りない。 ?] [? if in_grand_coalition and (dvp_ideology == "Right" and year >= 1930) and not lvp_formed: <span style="color: #C0A054;">**DVP**</span>はもはや我々の資源を望んでいない。 ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Right" and year >= 1930) and lvp_formed: <span style="color: #FFCC00;">**LVP**</span>はもはや我々の資源を望んでいない。 ?]
-on-arrival: resources -= 2; coalition_dissent -= 1
+on-arrival: resources -= 2; z_coalition_dissent -= 1 if z_coalition_dissent > 0; ddp_coalition_dissent -= 1 if ddp_coalition_dissent > 0; dvp_coalition_dissent -= 1 if dvp_coalition_dissent > 0; lvp_coalition_dissent -= 1 if lvp_coalition_dissent > 0;
 
 選挙資金を連立相手へ移せば、我々の政策を受け入れやすくできる。汚職と呼ぶ者もいるだろうが、民主主義を救うには必要なのかもしれない。
 

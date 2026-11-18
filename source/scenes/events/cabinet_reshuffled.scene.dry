@@ -2,7 +2,7 @@ title: 右派が我々を政府から追い出している！
 subtitle: 連立パートナーたちを怒らせすぎたようだ...
 new-page: true
 on-arrival: tried_supporting_kpd = 0; z_relation -= 6; dvp_relation -= 6; ddp_relation -= 6; lvp_relation -= 6; lvp_right += 3; dvp_right += 3; ddp_right += 3
-view-if: chancellor_party != "SPD" and chancellor_party != "KPD" and spd_in_government = 1 and ((in_grand_coalition = 1 or in_popular_front = 1 or in_minority_government = 1) and coalition_dissent >= 3) or (in_weimar_coalition = 1 and coalition_dissent >= 4) and spd_r < 50
+view-if: chancellor_party != "SPD" and chancellor_party != "KPD" and spd_in_government = 1 and ((((in_grand_coalition or in_popular_front or in_minority_government or (in_social_catholic_coalition and cvp_formed))and z_coalition_dissent >= 3) or (((in_weimar_coalition and not in_social_liberal_coalition) or (in_social_catholic_coalition and not cvp_formed)) and z_coalition_dissent >= 4)) or (in_grand_coalition and dvp_coalition_dissent >= 3 and  (not lvp_formed) and dvp_exist) or (((in_weimar_coalition and not in_social_catholic_coalition) or in_grand_coalition or in_social_liberal_coalition) and lvp_coalition_dissent >= 3 and lvp_formed) or (((in_weimar_coalition and not in_social_catholic_coalition) or in_social_liberal_coalition or in_grand_coalition) and ddp_coalition_dissent >= 3) and spd_r < 50) or (federal_coalition_trigger == time and last_election_time != time)
 tags: event
 go-to: menu if chancellor != "Wirth"; wirth_resign_hindenburg if chancellor == "Wirth" and president_ideology != "Left"; wirth_resign_braun if chancellor == "Wirth" and president_ideology == "Left"
 
@@ -22,8 +22,10 @@ go-to: menu if chancellor != "Wirth"; wirth_resign_hindenburg if chancellor == "
 - @bruning_chain: 次は何だ？
 - @tolerate: 再編を許し、新しい少数与党を容認せよ。
 - @no_tolerate: この裏切り者の政府を打倒せよ！
+- @majority_vonc: 建設的不信任案を提出する！
 
 @try_assuage
+view-if: not (federal_coalition_trigger == time and last_election_time != time)
 
 パートナーをどうなだめるか？
 
@@ -37,7 +39,7 @@ go-to: menu if chancellor != "Wirth"; wirth_resign_hindenburg if chancellor == "
 view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_weimar_coalition_prussia) and in_grand_coalition = 1 and dvp_was_in_prussia == 0 and not lvp_formed
 choose-if: z_leader != "Kaas"
 unavailable-subtitle: [? if z_leader = "Kaas": カースと[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]が強く反対している。?]
-on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; dvp_relation += 10; z_relation -= 5; ddp_relation += 3; coalition_dissent -= 1; left_dissent += 5; in_grand_coalition_prussia = 1; dvp_left += 3; new_middle_dvp += 3
+on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; sapd_toleration_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; dvp_relation += 10; z_relation -= 5; ddp_relation += 3; ddp_coalition_dissent -= 1; dvp_coalition_dissent -= 1; lvp_coalition_dissent -= 1; left_dissent += 5; in_grand_coalition_prussia = 1; dvp_left += 3; new_middle_dvp += 3
 
 <span style="color: #C0A054;">**DVP**</span>にプロイセン州政府への参加を認めるという提案は、彼らにとって拒みがたいものだった。
 
@@ -46,7 +48,7 @@ on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_
 @give_up_prussia
 subtitle: ブラウンは辞任する必要がある。
 view-if: prussia_leader = "Braun" and neo_weimar_coalition_prussia >= 50
-on-arrival: coalition_dissent = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
+on-arrival: z_coalition_dissent = 1; ddp_coalition_dissent = 1; lvp_coalition_dissent = 1; dvp_coalition_dissent = 1 if in_grand_coalition_prussia; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
 
 結構だ。我々はもはやプロイセン政府を支配しない。投票は中止された。
 
@@ -54,7 +56,7 @@ on-arrival: coalition_dissent = 1; prussia_leader = "Stegerwald"; prussia_leader
 
 @austerity
 view-if: welfare >= 0
-on-arrival: coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; workers_kpd += 7; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; kpd_coalition_dissent += 1; kpd_relation -= 10 if in_popular_front; goal_spd_cancel += 1
+on-arrival: z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; workers_kpd += 7; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; kpd_coalition_dissent += 1; kpd_relation -= 10 if in_popular_front; goal_spd_cancel += 1
 
 結構だ。我々は連立の安定を維持するため、福祉を削減する大規模な緊縮財政プログラムを実施した。採決は中止された。
 
@@ -62,7 +64,7 @@ on-arrival: coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; work
 choose-if: (resources >= 3 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 3 and in_grand_coalition and not (dvp_ideology == "Right" and year >= 1930) and not lvp_formed) or (resources >= 3 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Right" and year >= 1930) and lvp_formed))
 unavailable-subtitle: [? if resources < 3: リソースが足りない。 ?] [? if in_grand_coalition and (dvp_ideology == "Right" and year >= 1930) and not lvp_formed: <span style="color: #C0A054;">**DVP**</span>はもはや我々のリソースを求めていない。 ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Right" and year >= 1930) and lvp_formed: <span style="color: #FFCC00;">**LVP**</span>はもはや我々のリソースを求めていない。 ?]
 subtitle: -3リソース
-on-arrival: resources -= 3; coalition_dissent -= 1
+on-arrival: resources -= 3; z_coalition_dissent -= 1; ddp_coalition_dissent -= 1; dvp_coalition_dissent -= 1; lvp_coalition_dissent -= 1
 
 我々の連立パートナーに資源を移転することで、彼らの我々の政策に対する異議を減らすことができる。これは粗雑だが、効果的な解決策だ。
 
@@ -152,3 +154,40 @@ on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 [+ president +]は後任に[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]のブリューニングを任命し、彼は直ちに内閣を改造する。
 
 - @menu: ブリューニングが我々の大臣たちを解雇する。
+
+@majority_vonc
+view-if: constructive_vonc and spd_r >= 50
+on-arrival: in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Empty"; chancellor_party = "SPD"; spd_in_government = 1; in_spd_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05;  ddp_right += 3; lvp_right += 4; dvp_right += 5; liberal_cooperation += 8; bourgeois_cooperation += 8; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; lvp_relation -= 5
+
+我々は国会で過半数を握っており、建設的不信任案の可決は確実だ。だが、誰を首相に指名すべきだろうか？
+
+- @braun_majority_chancellor: オットー・ブラウンを首相に指名する。
+- @breitscheid_majority_chancellor: ルドルフ・ブライトシャイトを首相に指名する。
+- @muller_majority_chancellor: ヘルマン・ミュラーを首相に指名する。
+- @wels_majority_chancellor: オットー・ヴェルスを首相に指名する。
+
+@braun_majority_chancellor
+view-if: not historical_mode or not prussia_leader = "Braun"
+on-arrival: chancellor = "Braun"
+
+[? if president == "Braun": 専門家が憲法を調べたところ、首相と大統領の兼任を明示的に禁じる規定はなかった。大統領は国会議員を兼ねられないが、首相が国会議員でなければならないという規定もない。こうしてオットー・ブラウンは大統領と首相を兼ねることになった。?]
+[? if president != "Braun": オットー・ブラウンが<span style="color: #c00000;">**SPD**</span>単独政権の首相に就任した。?]
+
+@breitscheid_majority_chancellor
+on-arrival: chancellor = "Breitscheid"
+
+ルドルフ・ブライトシャイトが<span style="color: #c00000;">**SPD**</span>単独政権の首相に就任した。
+
+@muller_majority_chancellor
+view-if: muller_dead = 0
+on-arrival: chancellor = "Müller"
+
+ヘルマン・ミュラーが<span style="color: #c00000;">**SPD**</span>単独政権の首相に就任した。
+
+@wels_majority_chancellor
+view-if: muller_dead = 1
+on-arrival: chancellor = "Wels"
+
+オットー・ヴェルスが<span style="color: #c00000;">**SPD**</span>単独政権の首相に就任した。
+
+我々は過半数を握っており、建設的不信任案の可決は確実だ。だが、誰を首相に指名すべきだろうか？

@@ -3,7 +3,7 @@ subtitle: ドイツ産業が停滞している……
 view-if: (capital_strike_progress >= 10 or budget <= -5) and spd_in_government
 new-page: true
 max-visits: 1
-on-arrival: unemployed += 5; workers_spd*= 0.7; new_middle_spd -= 15 if new_middle_conscious == 0; new_middle_spd -= 10 if new_middle_conscious == 1; old_middle_spd -= 15; unemployed_spd*=0.7; rural_spd -= 15 if rural_conscious == 0; rural_spd -= 10 if rural_conscious == 1; pro_republic -= 15; capital_strike_seen = 1; z_relation -= 10; dvp_relation -= 10; ddp_relation -= 8; lvp_relation -= 8; workers_nsdap += 8; unemployed_nsdap += 10; new_middle_nsdap += 15; old_middle_nsdap += 15; rural_nsdap += 15; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 1; lvp_right += 4; coalition_dissent += 1; hindenburg_angry += 100; economic_growth -= 4;
+on-arrival: unemployed += 5; workers_spd*= 0.7; new_middle_spd -= 15 if new_middle_conscious == 0; new_middle_spd -= 10 if new_middle_conscious == 1; old_middle_spd -= 15; unemployed_spd*=0.7; rural_spd -= 15 if rural_conscious == 0; rural_spd -= 10 if rural_conscious == 1; pro_republic -= 15; capital_strike_seen = 1; z_relation -= 10; dvp_relation -= 10; ddp_relation -= 8; lvp_relation -= 8; workers_nsdap += 8; unemployed_nsdap += 10; new_middle_nsdap += 15; old_middle_nsdap += 15; rural_nsdap += 15; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 1; lvp_right += 4; z_coalition_dissent += 1; ddp_coalition_dissent += 1; lvp_coalition_dissent += 1; dvp_coalition_dissent += 1; hindenburg_angry += 100; economic_growth -= 4;
 tags: event
 
 = 資本ストライキ
@@ -21,7 +21,7 @@ tags: event
 title: 労働者が工場を奪取する力を与えよ！
 unavailable-subtitle: [? if left_strength <= reformist_strength + neorevisionist_strength : 党の大半はこの急進的な行動を支持していない。 ?] [? if judicial_reform < 3 : 司法がこの行動を阻む。 ?] [? if rb_militancy < 0.25 : 準軍事組織をさらに強化すれば実行できるかもしれない。 ?] [? if works_councils < 1 : まず労働者評議会の支持が必要だ。 ?]
 choose-if: left_strength > reformist_strength + neorevisionist_strength and (judicial_reform >= 3 or rb_militancy >= 0.25) and works_councils >= 1
-on-arrival: nationalization_progress += 1; coup_progress += 6; unemployed -= 2; unemployed -= 1 if works_councils >= 3; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); new_middle_spd += 8*(1-dissent) if new_middle_conscious == 1; coalition_dissent += 2; dvp_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; workers_nsdap -= 8*(1-dissent); unemployed_nsdap -= 8*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; factory_takeovers += 1; dvp_right += 5; ddp_right += 3; lvp_right += 4; economic_growth += 2;
+on-arrival: nationalization_progress += 1; coup_progress += 6; unemployed -= 2; unemployed -= 1 if works_councils >= 3; works_program += 1; workers_spd += 10*(1-dissent); unemployed_spd += 10*(1-dissent); new_middle_spd += 8*(1-dissent) if new_middle_conscious == 1; ddp_coalition_dissent += 2; dvp_coalition_dissent += 2; lvp_coalition_dissent += 2; dvp_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; workers_nsdap -= 8*(1-dissent); unemployed_nsdap -= 8*(1-dissent); left_strength += 15; reformist_dissent += 10; left_dissent -= 10; factory_takeovers += 1; dvp_right += 5; ddp_right += 3; lvp_right += 4; economic_growth += 2;
 
 資本家が我々を攻撃するのなら、我々も彼らを叩かねばならぬ。我々は労働者に、資本家が遊休させている工場を接収し、完全に支配する力を与えた。もちろん、<span style="color: #7A3C00;">ファシスト</span>は我々を泥棒、略奪者と呼ぶ。
 

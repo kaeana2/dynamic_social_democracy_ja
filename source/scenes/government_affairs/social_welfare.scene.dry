@@ -22,7 +22,7 @@ card-image: img/portraits/JuchaczMarie.jpg
 subtitle: プロレタリアートの支持基盤を傷つける。予算 +1
 unavailable-subtitle: これ以上削減できない。
 choose-if: welfare >= -5
-on-arrival: budget += 1; workers_spd -= 6*(effective_unemployed/unemployed); unemployed_spd -= 6*(effective_unemployed/unemployed); new_middle_spd -= 2*(effective_unemployed/unemployed) if new_middle_conscious == 1; rural_spd -= 2*(effective_unemployed/unemployed) if rural_conscious == 1; workers_kpd += 3*(effective_unemployed/unemployed); welfare -= 1; reformist_dissent += 10; left_dissent += 10; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 5; dvp_relation += 5; ddp_relation += 2; lvp_relation += 3; z_relation += 3; pro_republic -= 3; coalition_dissent -= 1 if ((in_grand_coalition or (in_weimar_coalition and lvp_formed)) and coalition_dissent > 0); kpd_coalition_dissent += 1; kpd_relation -= 8; inflation -= 0.3; unemployed += 0.4; dvp_left += 1; ddp_right += 1; ddp_cohesion -= 0.5; lvp_left += 0.5; goal_spd_cancel += 1; economic_growth -= 0.2;
+on-arrival: budget += 1; workers_spd -= 6*(effective_unemployed/unemployed); unemployed_spd -= 6*(effective_unemployed/unemployed); new_middle_spd -= 2*(effective_unemployed/unemployed) if new_middle_conscious == 1; rural_spd -= 2*(effective_unemployed/unemployed) if rural_conscious == 1; workers_kpd += 3*(effective_unemployed/unemployed); welfare -= 1; reformist_dissent += 10; left_dissent += 10; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 5; dvp_relation += 5; ddp_relation += 2; lvp_relation += 3; z_relation += 3; pro_republic -= 3; z_coalition_dissent -= 1 if z_coalition_dissent > 0; dvp_coalition_dissent -= 1 if (in_grand_coalition and dvp_coalition_dissent > 0); lvp_coalition_dissent -= 1 if ((in_grand_coalition or in_weimar_coalition) and lvp_coalition_dissent > 0); kpd_coalition_dissent += 1; kpd_relation -= 8; inflation -= 0.3; unemployed += 0.4; dvp_left += 1; ddp_right += 1; ddp_cohesion -= 0.5; lvp_left += 0.5; goal_spd_cancel += 1; economic_growth -= 0.2;
 
 社会福祉支出を削減した。その結果、労働者階級の貧困と苦難は深まる。批判者は、ブルジョワジーとの階級協調のためにプロレタリアートの生活を犠牲にしたと主張している。彼らは間違っているのか？ この選択を前に、労働者が<span style="color: #700000;">**共産主義者**</span>へ向かうのは誤りなのか？
 
@@ -38,7 +38,7 @@ on-arrival: budget -= 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-di
 @increase_spending_post_depression
 view-if: unemployed > 15
 choose-if: budget > 0
-on-arrival: budget -= 1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd += 1*(1-dissent) if new_middle_conscious == 1; rural_spd += 1*(1-dissent) if rural_conscious == 1; coalition_dissent += 1 if welfare > 0; welfare_goal_completed += 1; welfare_goal_spd += 1; inflation += 0.3; dvp_right += 1; ddp_right += 1 if welfare > 1; lvp_right += 1
+on-arrival: budget -= 1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd += 1*(1-dissent) if new_middle_conscious == 1; rural_spd += 1*(1-dissent) if rural_conscious == 1; ddp_coalition_dissent += 1 if welfare > 0; dvp_coalition_dissent += 1 if welfare > 0; lvp_coalition_dissent += 1 if welfare > 0; welfare_goal_completed += 1; welfare_goal_spd += 1; inflation += 0.3; dvp_right += 1; ddp_right += 1 if welfare > 1; lvp_right += 1
 subtitle: 失業者の増加により、給付水準の維持にも支援支出の増額が必要となる。予算 -1
 
 失業者の増加を受けて福祉支出の増額が必要となったため、実質的には現状維持である。

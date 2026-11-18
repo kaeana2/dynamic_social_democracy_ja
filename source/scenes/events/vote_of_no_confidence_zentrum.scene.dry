@@ -1,0 +1,116 @@
+title: 中央党が現政権に対する不信任案を提出した！
+subtitle: 連立相手の反発が限界に達した……
+new-page: true
+on-arrival: tried_supporting_kpd = 0; z_relation -= 5 if not in_social_catholic_coalition; hindenburg_angry += 20
+on-departure: secularized = 0
+view-if: chancellor_party == "SPD" and spd_in_government and ((in_grand_coalition or in_popular_front or in_minority_government or (in_social_catholic_coalition and cvp_formed) and z_coalition_dissent >= 3) or (in_weimar_coalition and not ((in_social_catholic_coalition and cvp_formed) or (in_social_liberal_coalition)) and z_coalition_dissent >= 4)) and spd_r < 50 and not constructive_vonc
+tags: event
+go-to: vonc_menu
+
+= 不信任決議
+
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は、我々の政策や意見の相違を理由に、内閣不信任案を提出した。可決されれば、数か月以内に選挙が行われる可能性が高い。
+
+@vonc_menu
+
+- @try_assuage: 連立相手をなだめる。
+- @support_kpd: <span style="color: #700000;">**KPD**</span>に棄権を求めるか？
+- @support_kpd_left: <span style="color: #700000;">**KPD**</span>と左翼統一連立を組めるだろうか？
+- @let_it_happen: 採決を受け入れる。
+
+@try_assuage
+
+どうすれば連立相手をなだめられるだろうか？
+
+- @give_up_prussia: プロイセン州政権の主導権を手放す。
+- @austerity: 大規模な緊縮策を実施する。
+- @resources: リソースを使って連立内の不満を抑える。
+- @support_kpd: <span style="color: #700000;">**KPD**</span>に棄権を求めるか？
+- @support_kpd_left: <span style="color: #700000;">**KPD**</span>と左翼統一連立を組めるだろうか？
+- @let_it_happen: やめておこう。採決を受け入れる。
+
+@give_up_prussia
+subtitle: ブラウンの辞任が必要になる。
+view-if: prussia_leader = "Braun" and neo_weimar_coalition_prussia >= 50
+on-arrival: z_coalition_dissent = 1; ddp_coalition_dissent = 1 if ddp_coalition_dissent > 1; lvp_coalition_dissent = 1 if lvp_coalition_dissent > 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
+
+やむを得ない。我々はプロイセン州政権の主導権を手放した。不信任案は取り下げられた。
+
+[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]に州首相の座を譲る。
+
+@austerity
+view-if: welfare >= 0 and not secularized
+on-arrival: z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; workers_kpd += 7; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; kpd_coalition_dissent += 1; kpd_relation -= 10 if in_popular_front; goal_spd_cancel += 1; social_welfare_timer = 10
+
+やむを得ない。我々は連立を維持するため、大規模な緊縮策を実施し、社会福祉を削減した。不信任案は取り下げられた。
+
+@resources
+view-if: secularized = 0
+choose-if: resources >= 1
+unavailable-subtitle: [? if resources < 1: リソースが足りない。 ?]
+subtitle: リソース -1
+on-arrival: resources -= 1; z_coalition_dissent -= 1;
+
+連立相手にリソースを渡せば、我々の政策への不満を和らげられる。力ずくだが、効果はある。
+
+@support_kpd
+choose-if: ((in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and (kpd_r + sapd_r + (grand_coalition - dvp_r)) < 50 and not lvp_formed) or (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and (kpd_r + sapd_r + (grand_coalition - (lvp_r * 0.75))) and lvp_formed and lvp_ideology == "Right") or (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and (kpd_r + sapd_r + (grand_coalition - (lvp_r / 2))) and lvp_formed and lvp_ideology == "Center") or (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and (kpd_r + sapd_r + (grand_coalition - (lvp_r * 0.25))) and lvp_formed and lvp_ideology == "Left")) or (in_weimar_coalition and kpd_relation >= 50 and (kpd_r + sapd_r + (weimar_coalition - z_r)) < 50 and communist_coalition >= 3)
+view-if: tried_supporting_kpd = 0 and not in_popular_front
+on-arrival: tried_supporting_kpd = 1
+unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #700000;">KPD</span>は議会内閣への参加に応じない。 ?] [? if kpd_relation < 50 : <span style="color: #700000;">KPD</span>との関係が十分に良くない。 ?] [? if ((in_grand_coalition and (kpd_r + sapd_r + (grand_coalition - dvp_r)) < 50 and not lvp_formed) or (in_grand_coalition and (kpd_r + sapd_r + (grand_coalition - (lvp_r * 3 / 4))) and lvp_formed and lvp_ideology == "Right")) or ((in_grand_coalition and (kpd_r + sapd_r + (grand_coalition - dvp_r)) < 50 and not lvp_formed) or (in_grand_coalition and (kpd_r + sapd_r + (grand_coalition - (lvp_r / 2))) and lvp_formed and lvp_ideology == "Center")) or ((in_grand_coalition and (kpd_r + sapd_r + (grand_coalition - dvp_r)) < 50 and not lvp_formed) or (in_grand_coalition and (kpd_r + sapd_r + (grand_coalition - (lvp_r * 1 / 4))) and lvp_formed and lvp_ideology == "Left")) or (in_weimar_coalition and (kpd_r + sapd_r + (weimar_coalition - z_r) < 50)): <span style="color: #700000;">KPD</span>の票だけでは足りない。 ?] [? if in_popular_front : 我々はすでに<span style="color: #700000;">KPD</span>と人民戦線を組んでいる。 ?]
+
+<span style="color: #700000;">**共産主義者**</span>が棄権すれば、我々は事実上、少数政権を維持できる。[? if president=="Hindenburg":ただし、ヒンデンブルク大統領の支持を得られない以上、政策を進めるのは極めて難しい。?] その場合、我々は<span style="color: #700000;">**KPD**</span>に大きな借りを作ることになる。それが吉と出るか凶と出るかはともかく、今後の協力拡大につながるかもしれない。
+
+- @support_kpd_2: <span style="color: #700000;">**KPD**</span>を説得し、閣外協力を取り付けるか？
+- @let_it_happen: やめておこう。採決を受け入れる。
+
+@support_kpd_2
+on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5; kpd_nazi_urgency += 0 if kpd_nazi_urgency < 0;
+go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
+
+
+<span style="color: #700000;">**KPD**</span>は閣外協力に関心を示していない。支持を得るには、連立に加えて政権に参加させる必要がある。一方、閣外協力の取り決めが成立すれば、右派諸党は我々への支持に消極的になるだろう。
+
+@support_kpd_grand
+on-arrival: support_kpd_grand = 1
+
+- @election_1928.left_coalition
+- @try_assuage: やめておこう。別の手を考える必要がある。
+
+@support_kpd_weimar
+on-arrival: support_kpd_weimar = 1
+
+- @election_1928.left_coalition
+- @try_assuage: やめておこう。別の手を考える必要がある。
+
+@support_kpd_left
+subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> [? if sapd_formed: + <span style="color: #9B0000;">**SAPD**</span> ?] ([+ left_coalition +]%)
+unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #700000;">KPD</span> [? if sapd_formed: + <span style="color: #9B0000;">SAPD</span> ?] ([+ left_coalition +]%). [? if kpd_relation < 50 : <span style="color: #700000;">KPD</span>との関係が十分に良くない。 ?][? if communist_coalition < 3 : <span style="color: #700000;">共産主義者</span>は急進路線に固執し、政権には参加しない。 ?] [? if rubicon: - ヒンデンブルクがこんなことを認めるとでも？ ?] [? if president_ideology != "Left" and president != "Hindenburg": - [+ president +]大統領は<span style="color: #9B0000;">社会主義</span>政権に強く反対している。 ?]
+view-if: in_popular_front
+choose-if: left_coalition >= 50 and (kpd_relation >= 50 or (kpd_leader == "Conciliators" and kpd_relation >= 40)) and communist_coalition >= 3 and not rubicon and president_ideology == "Left" or president == "Hindenburg"
+go-to: election_1928.left_coalition_success
+
+@let_it_happen
+on-arrival: time_to_election = 3; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; spd_toleration = 0; spd_toleration_right = 0; foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "LVP" if lvp_formed; finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; agriculture_minister_party = "Z"; labor_minister = "Stegerwald"; interior_minister = "Wirth"; finance_minister = "Moldenhauer"; economic_minister = "Curtius"; justice_minister = "Koch-Weser"; foreign_minister = "Stresemann" if not stresemann_dead; foreign_minister = "Curtius" if stresemann_dead; agriculture_minister = "Dietrich"; reichswehr_minister = "Groener"; z_coalition_dissent = 0; ddp_coalition_dissent = 0; dvp_coalition_dissent = 0; lvp_coalition_dissent = 0; pro_republic -= 4; old_middle_spd -= 3; new_middle_spd -= 2; workers_spd -= 3 if pro_republic < 50; workers_spd -= 4 if pro_republic < 40; old_middle_nsdap += 4 if pro_republic < 50; new_middle_nsdap += 3 if pro_republic < 50
+go-to: let_it_happen_hindenburg if president_ideology != "Left"; let_it_happen_braun if president_ideology == "Left"
+
+@let_it_happen_hindenburg
+on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; welfare -= 2; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930
+go-to: elections if bruning_event_seen or year < 1930
+
+不信任案が可決され、我々の内閣は総辞職した。ブリューニングが首相に任命され、ブルジョワ諸党だけで新内閣を組織した。新政権は直ちに社会福祉支出の大幅な削減に乗り出した。
+
+[? if not bruning_event_seen and year >= 1930: 選挙の日程はまだ決まっていない。だが、ブリューニングは国会で過半数の支持を得ていないと見られ、近く選挙が行われる可能性が高い。 ?]
+
+@elections
+call: set_next_election_time
+
+[+ next_election_year +]年[+ next_election_month : month +]に新たな選挙が行われることになった。
+
+@let_it_happen_braun
+on-arrival: spd_caretaker = 1
+call: set_next_election_time
+
+不信任案が可決され、我々の内閣は総辞職した。[+ chancellor +]は暫定内閣の首相としてとどまるが、新たな政策を実施する権限は失った。
+
+[+ next_election_year +]年[+ next_election_month : month +]に新たな選挙が行われることになった。

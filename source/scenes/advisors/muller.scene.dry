@@ -20,7 +20,7 @@ title: 連立交渉
 subtitle: ミュラーは連立相手との関係を改善できる。
 choose-if: advisor_action_timer <= 0 and spd_in_government = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : 次の顧問行動まであと[+ advisor_action_timer +]か月。 ?][? if not spd_in_government: <span style="color: #c00000;">SPD</span>は政権に参加していない。 ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 4; ddp_relation += 4; dvp_relation += 2; dvp_relation += 2 if in_grand_coalition; lvp_relation += 4; dvp_left += 0.5 if in_grand_coalition; lvp_left += 0.5; ddp_left += 0.25
+on-arrival: advisor_action_timer = 6; z_coalition_dissent -= 1 if spd_in_government = 1 and z_coalition_dissent > 0; ddp_coalition_dissent -= 1 if spd_in_government = 1 and ddp_coalition_dissent > 0; dvp_coalition_dissent -= 1 if spd_in_government = 1 and dvp_coalition_dissent > 0; lvp_coalition_dissent -= 1 if spd_in_government = 1 and lvp_coalition_dissent > 0; z_relation += 4; ddp_relation += 4; dvp_relation += 2; dvp_relation += 2 if in_grand_coalition; lvp_relation += 4; dvp_left += 0.5 if in_grand_coalition; lvp_left += 0.5; ddp_left += 0.25
 
 [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?][? if not lvp_formed:、<span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:、<span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed:、<span style="color: #FFCC00;">**LVP**</span>?]との関係を改善し、連立内の緊張を緩和した。
 

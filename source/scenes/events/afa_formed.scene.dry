@@ -1,5 +1,5 @@
 title: 反ファシズム行動
-subtitle: 共産主義勢力が極右に対抗して結集する
+subtitle: 共産主義勢力が極右に対抗して結集する……
 new-page: true
 on-arrival: afa_seen = 1; rfb_strength += 100; rfb_militancy += 0.1; workers_kpd += 3; unemployed_kpd += 3; nationalism -= 3; nazi_urgency += 1;
 tags: event
@@ -27,12 +27,12 @@ on-arrival: resources -= 1; rfb_strength += 100; rfb_militancy += 0.1; kpd_relat
 
 我々は<span style="color: #700000;">反ファシズム</span><span style="color: #c00000;">行動</span>に資金を提供した。掲げたのは、<span style="color: #7A3C00;">ファシズム</span>に対抗する統一戦線である。
 
-<span style="color: #000000;">ブルジョワ</span>諸政党は、これを[? if rfb_banned or rfb_banned_prussia:非合法の準軍事組織の偽装団体への?][? if not rfb_banned and not rfb_banned_prussia:準軍事組織への?]物質的支援だと非難している。その組織は<span style="color: #700000;">共産主義</span>勢力のものである。[? if (reformist_strength >= 20 and not (rfb_banned or rfb_banned_prussia)) or (reformist_strength + center_strength >= 20 and (rfb_banned or rfb_banned_prussia)): 我が党でも多くの者がこの批判に同調している。?]
+<span style="color: #000000;">ブルジョワ</span>諸政党は、これを[? if rfb_banned or rfb_banned_prussia:非合法の準軍事組織の偽装団体への?][? if not (rfb_banned or rfb_banned_prussia):準軍事組織への?]物質的支援だと非難している。その組織は<span style="color: #700000;">共産主義</span>勢力のものである。[? if (reformist_strength >= 20 and not (rfb_banned or rfb_banned_prussia)) or (reformist_strength + center_strength >= 20 and (rfb_banned or rfb_banned_prussia)): 我が党でも多くの者がこの批判に同調している。?]
 
 @reach-out-truce
 view-if: kpd_truce and kpd_relation >= 50 and iron_front_formed
-choose-if: ((rfb_banned or rfb_banned_prussia) and (left_strength + neorevisionist_strength >= reformist_strength)) or (not (rfb_banned or rfb_banned_prussia) and (left_strength + neorevisionist_strength >= reformist_strength + center_strength))
-unavailable-subtitle: [? if not (rfb_banned or rfb_banned_prussia) and left_strength + neorevisionist_strength < reformist_strength + center_strength: 党内の大勢は、<span style="color: #700000;">共産主義</span>の準軍事組織との協力に反対している。?][? if (rfb_banned or rfb_banned_prussia) and left_strength + neorevisionist_strength < reformist_strength: 党内の大勢は、非合法の<span style="color: #700000;">共産主義</span>準軍事組織の偽装団体と見なしている組織との連携に反対している。?]
+choose-if: ((rfb_banned or rfb_banned_prussia) and (left_strength + neorevisionist_strength >= reformist_strength + center_strength)) or (not (rfb_banned or rfb_banned_prussia) and (left_strength + neorevisionist_strength >= reformist_strength))
+unavailable-subtitle: [? if not (rfb_banned or rfb_banned_prussia) and left_strength + neorevisionist_strength < reformist_strength: 党内の大勢は、<span style="color: #700000;">共産主義</span>の準軍事組織との協力に反対している。?][? if (rfb_banned or rfb_banned_prussia) and left_strength + neorevisionist_strength < reformist_strength + center_strength: 党内の大勢は、非合法の<span style="color: #700000;">共産主義</span>準軍事組織の偽装団体と見なしている組織との連携に反対している。?]
 on-arrival: rb_militancy += 0.05; sa_strength += 50; rfb_militancy += 0.05; rfb_strength += 50; afa_training += 1; kpd_relation += 1; ddp_relation -= 1 if not ddp_in_popular_front or ddp_in_popular_front_prussia; z_relation -= 2 if not in_popular_front or in_popular_front_prussia; dvp_relation -= 3; hindenburg_angry += 2; hindenburg_angry_bruning += 2; ddp_relation -= 1 if rfb_banned or rfb_banned_prussia; z_relation -= 2 if rfb_banned or rfb_banned_prussia; dvp_relation -= 3 if rfb_banned or rfb_banned_prussia; hindenburg_angry += 2 if rfb_banned or rfb_banned_prussia; hindenburg_angry_bruning += 2 if rfb_banned or rfb_banned_prussia; reformist_dissent += 1; reformist_dissent += 2 if rfb_banned or rfb_banned_prussia; center_dissent += 1 if rfb_banned or rfb_banned_prussia; new_middle_spd -= 1*(1-dissent) if not new_middle_conscious and (rfb_banned or rfb_banned_prussia); old_middle_spd -= 1*(1-dissent) if rfb_banned or rfb_banned_prussia; rural_spd -= 1*(1-dissent) if not rural_conscious and (rfb_banned or rfb_banned_prussia); catholics_spd -= 1*(1-dissent) if not (in_popular_front or in_popular_front_prussia) and (rfb_banned or rfb_banned_prussia);
 
 <span style="color: #700000;">反ファシズム</span><span style="color: #c00000;">行動</span>が[? if afa_training == 1:開始した?][? if afa_training > 1:継続している?]のは、<span style="color: #c00000;">鉄の</span><span style="color: #1A1A1A;">戦線</span>との合同訓練である。
@@ -41,8 +41,8 @@ on-arrival: rb_militancy += 0.05; sa_strength += 50; rfb_militancy += 0.05; rfb_
 
 @reach-out-lol
 view-if: (not kpd_truce or kpd_relation < 50) and iron_front_formed
-choose-if: ((rfb_banned or rfb_banned_prussia) and (left_strength + neorevisionist_strength >= reformist_strength)) or (not (rfb_banned or rfb_banned_prussia) and (left_strength + neorevisionist_strength >= reformist_strength + center_strength))
-unavailable-subtitle: [? if not (rfb_banned or rfb_banned_prussia) and left_strength + neorevisionist_strength < reformist_strength + center_strength: 党内の大勢は、<span style="color: #700000;">共産主義</span>の準軍事組織との協力に反対している。?][? if (rfb_banned or rfb_banned_prussia) and left_strength + neorevisionist_strength < reformist_strength: 党内の大勢は、非合法の<span style="color: #700000;">共産主義</span>準軍事組織の偽装団体と見なしている組織との連携に反対している。?]
+choose-if: ((rfb_banned or rfb_banned_prussia) and (left_strength + neorevisionist_strength >= reformist_strength + center_strength)) or (not (rfb_banned or rfb_banned_prussia) and (left_strength + neorevisionist_strength >= reformist_strength))
+unavailable-subtitle: [? if not (rfb_banned or rfb_banned_prussia) and left_strength + neorevisionist_strength < reformist_strength: 党内の大勢は、<span style="color: #700000;">共産主義</span>の準軍事組織との協力に反対している。?][? if (rfb_banned or rfb_banned_prussia) and left_strength + neorevisionist_strength < reformist_strength + center_strength: 党内の大勢は、非合法の<span style="color: #700000;">共産主義</span>準軍事組織の偽装団体と見なしている組織との連携に反対している。?]
 
 予想どおりと言うべきか、<span style="color: #700000;">共産主義者</span>たちは<span style="color: #c00000;">我々</span>を鼻で笑った。
 
@@ -55,3 +55,5 @@ on-arrival: rfb_strength += 25;
 choose-if: ((rfb_banned or rfb_banned_prussia) or (reformist_strength + center_strength >= left_strength + neorevisionist_strength))
 unavailable-subtitle: [? if not (rfb_banned or rfb_banned_prussia) and reformist_strength + center_strength < left_strength + neorevisionist_strength: 党内の大勢が統一戦線の結成を求めている。その敵は<span style="color: #7A3C00;">ファシズム</span>である。?]
 on-arrival: kpd_relation -= 3; ddp_relation += 2; z_relation += 3; dvp_relation += 5; left_dissent += 5; neorevisionist_dissent += 3 if not (rfb_banned or rfb_banned_prussia);
+
+我が党は、この大衆組織への参加を党員に禁じた。[? if left_strength >= 20 or (neorevisionist_strength >= 20 and (rfb_banned or rfb_banned_prussia)): これに対し、党内の多くが反発している。?]

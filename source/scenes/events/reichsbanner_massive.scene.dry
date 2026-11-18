@@ -32,7 +32,7 @@ on-display: {!
 subtitle: 警察が役割を果たすとは信用できず、国旗団は依然として必要だ。[? if president == "Hindenburg" and spd_in_government: ヒンデンブルクは、措置を取らなければ我々の政府を罷免すると脅している。?][? if spd_in_government and not in_left_front and not in_spd_majority and not sapd_toleration: 連立相手は内閣不信任案を提出する。?]ブルジョワ諸党とは永久に敵対することになる。
 unavailable-subtitle: 党内改革派が、この選択肢への支持を思いとどまらせている。
 choose-if: left_strength + neorevisionist_strength >= reformist_strength
-on-arrival: rb_strength *= 0.8; z_relation -= 20; ddp_relation -= 20; lvp_relation -= 20; rb_exit = 1; left_strength += 10*(1-dissent); neorevisionist_strength += 20*(1-dissent); ddp_right += 8; lvp_right += 10; dvp_right += 10; ddp_cohesion -= 5; pro_republic -= 10; coalition_dissent += 5; rb_massive = 1; hindenburg_angry += 100
+on-arrival: rb_strength *= 0.8; z_relation -= 20; ddp_relation -= 20; lvp_relation -= 20; rb_exit = 1; left_strength += 10*(1-dissent); neorevisionist_strength += 20*(1-dissent); ddp_right += 8; lvp_right += 10; dvp_right += 10; ddp_cohesion -= 5; pro_republic -= 10; z_coalition_dissent += 5; ddp_coalition_dissent += 5; dvp_coalition_dissent += 5; lvp_coalition_dissent += 5; rb_massive = 1; hindenburg_angry += 100
 
 警戒を緩めてはならない。国旗団は軍事化を維持すべきだ。好むと好まざるとにかかわらず、準軍事組織は今後も存在し続ける。
 

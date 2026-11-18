@@ -41,7 +41,7 @@ subtitle: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</
 連立相手は新首相の受け入れに消極的だが、表立った反対はしていない。
 
 @bruning_chancellor
-on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; z_relation += 5; dvp_relation += 5; ddp_relation += 5; lvp_relation += 5; coalition_dissent -= 1; dvp_left += 1; ddp_left += 1; ddp_cohesion += 1; lvp_left += 1
+on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; z_relation += 5; dvp_relation += 5; ddp_relation += 5; lvp_relation += 5; z_coalition_dissent -= 1; ddp_coalition_dissent -= 1; dvp_coalition_dissent -= 1; lvp_coalition_dissent -= 1; dvp_left += 1; ddp_left += 1; ddp_cohesion += 1; lvp_left += 1
 subtitle: [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は、今度は自党の番だと主張している……。
 
 [? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は、我々がブリューニングの首相就任を支持したことに感謝している。

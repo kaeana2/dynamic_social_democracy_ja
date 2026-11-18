@@ -28,7 +28,7 @@ on-arrival: banking_crisis_timer = 4; curtius_banking_crisis = 1 if not in_weima
 
 @end_coalition
 view-if: spd_in_government = 1
-on-arrival: coalition_dissent += 1; dvp_relation -= 5; z_relation -= 4; z_relation -= 3 if chancellor_party == "Z"; dvp_relation -= 3 if chancellor_party == "Z"; ddp_relation -= 4; lvp_relation -= 4; ddp_right += 1; dvp_right += 1; lvp_right += 1;
+on-arrival: dvp_coalition_dissent += 1; z_coalition_dissent += 1; ddp_coalition_dissent += 1; lvp_coalition_dissent += 1; dvp_relation -= 5; z_relation -= 4; z_relation -= 3 if chancellor_party == "Z"; dvp_relation -= 3 if chancellor_party == "Z"; ddp_relation -= 4; lvp_relation -= 4; ddp_right += 1; dvp_right += 1; lvp_right += 1;
 
 我々は連立相手に、連合国の反応がもたらす危険を説いた。提案は葬られたが、[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>と<span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]、そして[? if z_party_name != "CVP": <span style="color: #000000;">中央党</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]は不満を抱いている。
 

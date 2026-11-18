@@ -41,6 +41,6 @@ on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformi
 <span style="color: #700000;">**KPD**</span>への攻撃は最左派の<span style="color: #c00000;">社会主義者</span>を除いて支持され、ブルジョワ諸党からも一定の評価を得る。しかし<span style="color: #700000;">**KPD**</span>との和解を目指すなら最善の選択ではない。
 
 @bourgeois
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; new_middle_dvp -= 2; workers_dvp -= 1; workers_ddp -= 0.5; workers_ddp -= 0.5 if not dvp_exist; coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1; kpd_nazi_urgency += 1;
+on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; new_middle_dvp -= 2; workers_dvp -= 1; workers_ddp -= 0.5; workers_ddp -= 0.5 if not dvp_exist; z_coalition_dissent += 1; ddp_coalition_dissent += 1; dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1; kpd_nazi_urgency += 1;
 
 反ブルジョワの言辞は左派に好評だが、将来の政権に必要な連立形成を難しくする恐れがある。

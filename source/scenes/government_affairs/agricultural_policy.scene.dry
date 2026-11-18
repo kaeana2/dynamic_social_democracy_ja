@@ -24,7 +24,7 @@ title: 農地改革
 subtitle: 予算 -1 ― 貴族の大所領を解体し、土地を持たない農業労働者へ与える。
 unavailable-subtitle: [? if budget <= 0 : 予算が1必要である。 ?] [? if judicial_reform < 2 : 司法府が決して認めない。 ?]
 choose-if: judicial_reform >= 2 and budget > 0
-on-arrival: budget -= 1; land_reform += 1; coalition_dissent += 1; rural_spd += 7*(1-dissent); rural_nsdap -= 4*(1-dissent); rural_other -= 2*(1-dissent); unemployed -= 1 if unemployed >= 5; dvp_relation -= 5; z_relation -= 4; lvp_relation -= 3; left_strength += 8; left_dissent -= 5; rural_sol += 3; rural_policy += 1; coup_progress += 1; agriculture_goal_completed += 1; dvp_right += 1; lvp_right += 1; agriculture_goal_spd_peoples += 1; hindenburg_angry += 10
+on-arrival: budget -= 1; land_reform += 1; z_coalition_dissent += 1; dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; rural_spd += 7*(1-dissent); rural_nsdap -= 4*(1-dissent); rural_other -= 2*(1-dissent); unemployed -= 1 if unemployed >= 5; dvp_relation -= 5; z_relation -= 4; lvp_relation -= 3; left_strength += 8; left_dissent -= 5; rural_sol += 3; rural_policy += 1; coup_progress += 1; agriculture_goal_completed += 1; dvp_right += 1; lvp_right += 1; agriculture_goal_spd_peoples += 1; hindenburg_angry += 10
 max-visits: 4
 
 農地改革政策により大所領から農地を取得し、農業労働者組合と小農へ譲渡している。これは本質的に階級闘争を農村へ持ち込み、東プロイセンなど大所領が広がる地域の半封建的な所有関係を打破するものである。ブルジョワ政党と大農は、神聖な私有財産への介入だとして我々を憎悪する一方、左派は慎重ながら期待を寄せている。
@@ -44,7 +44,7 @@ on-arrival: budget -= 1; agricultural_finance += 1; rural_spd += 5*(1-dissent); 
 title: 食料調達
 subtitle: 予算 -1 ― 労働者へ安価な食料を供給する。
 choose-if: budget >= 1
-on-arrival: budget -= 1; pro_consumer += 1; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); workers_sol += 4; coalition_dissent += 1 if black_thursday_seen; dvp_right += 1 if black_thursday_seen; lvp_right += 1 if black_thursday_seen; agriculture_goal_spd += 1; economic_growth += 0.2;
+on-arrival: budget -= 1; pro_consumer += 1; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); workers_sol += 4; dvp_coalition_dissent += 1 if black_thursday_seen; lvp_coalition_dissent += 1 if black_thursday_seen; dvp_right += 1 if black_thursday_seen; lvp_right += 1 if black_thursday_seen; agriculture_goal_spd += 1; economic_growth += 0.2;
 
 都市労働者と貧困層へ供給するため、国家による主要食料品の買い付けを増やした。買い付け価格を引き下げる交渉を行っているため、農民よりも労働者の利益となる。[? if black_thursday_seen and (in_weimar_coalition or in_grand_coalition) : 連立相手はこの政策を浪費的なばらまきと見なしている。 ?]
 
@@ -52,7 +52,7 @@ on-arrival: budget -= 1; pro_consumer += 1; workers_spd += 4*(1-dissent); unempl
 title: 国家穀物買付機関
 subtitle: 予算 -2 ― 穀物買い付けを国家独占とし、農民には保証価格を、消費者には安定価格をもたらす。[? if judicial_reform < 2 : 司法府が決して認めない。 ?]
 choose-if: budget >= 2 and judicial_reform >= 2
-on-arrival: budget -= 2; state_buyer = 1; rural_spd += 5*(1-dissent); rural_nsdap -= 3*(1-dissent); workers_spd += 4*(1-dissent); unemployed_spd += 5*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); dvp_relation -= 5; lvp_relation -= 4; z_relation -= 3; peoples_party_support += 1; rural_policy += 2; capital_strike_progress += 1; dvp_right += 2; ddp_relation -= 3; lvp_right += 2; ddp_right += 1; ddp_cohesion -= 0.5; agriculture_goal_spd += 1; hindenburg_angry += 5; economic_growth += 0.4; agriculture_goal_spd_peoples += 1;
+on-arrival: budget -= 2; state_buyer = 1; rural_spd += 5*(1-dissent); rural_nsdap -= 3*(1-dissent); workers_spd += 4*(1-dissent); unemployed_spd += 5*(1-dissent); z_coalition_dissent += 1; ddp_coalition_dissent += 1; dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; dvp_relation -= 5; lvp_relation -= 4; z_relation -= 3; peoples_party_support += 1; rural_policy += 2; capital_strike_progress += 1; dvp_right += 2; ddp_relation -= 3; lvp_right += 2; ddp_right += 1; ddp_cohesion -= 0.5; agriculture_goal_spd += 1; hindenburg_angry += 5; economic_growth += 0.4; agriculture_goal_spd_peoples += 1;
 max-visits: 1
 
 新設した買付機関は農民に公正な価格を保証する一方、労働者と都市貧困層にはより安価な食料を提供する。この政策には巨額の支出と前例のない規模の国家介入が必要であり、保守派経済学者の怒りを買っている。

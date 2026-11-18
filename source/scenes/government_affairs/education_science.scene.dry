@@ -118,7 +118,7 @@ go-to: secularize_menu if not in_social_liberal_coalition and not in_spd_majorit
 - @cancel_advisor_action
 
 @secularize_2
-on-arrival: secularized = 1; secularized_a = 1; budget -= 1; catholics_spd -= 15; catholics -= 5; z_relation -= 15; dvp_relation += 6*(1-dissent); ddp_relation += 6*(1-dissent); lvp_relation += 6*(1-dissent); kpd_relation += 6*(1-dissent); new_middle_spd += 3*(1-dissent); workers_spd += 3*(1-dissent); education_science += 0.5; new_middle_ddp += 4; new_middle_dvp += 4; new_middle_lvp += 8; dvp_left += 3; ddp_left += 3; ddp_cohesion += 2; lvp_left += 5; education_goal_spd += 1; coalition_dissent += 3 if constructive_vonc and ((in_weimar_coalition and not in_social_liberal_coalition) or in_grand_coalition or in_popular_front or in_emergency_government)
+on-arrival: secularized = 1; secularized_a = 1; budget -= 1; catholics_spd -= 15; catholics -= 5; z_relation -= 15; dvp_relation += 6*(1-dissent); ddp_relation += 6*(1-dissent); lvp_relation += 6*(1-dissent); kpd_relation += 6*(1-dissent); new_middle_spd += 3*(1-dissent); workers_spd += 3*(1-dissent); education_science += 0.5; new_middle_ddp += 4; new_middle_dvp += 4; new_middle_lvp += 8; dvp_left += 3; ddp_left += 3; ddp_cohesion += 2; lvp_left += 5; education_goal_spd += 1; z_coalition_dissent += 3 if constructive_vonc
 go-to: vote_of_no_confidence.vonc_menu if ((in_weimar_coalition and not in_social_liberal_coalition) or in_grand_coalition or in_popular_front or in_emergency_government) and not constructive_vonc
 
 # instant VONC from zentrum
@@ -170,7 +170,7 @@ unavailable-subtitle: [? if curriculum_timer > 0 : 教育課程を再変更す�
 @dem_major
 title: 民主主義的教育課程
 subtitle: 批判的思考、民主的市民性、協働
-on-arrival: curriculum_timer = 50; major_curriculum = "democratic"; pro_republic += 5*(1-dissent); workers_spd += 3*(1-dissent); democratization += 1; z_relation -= 3; ddp_relation += 3; lvp_relation += 3 if lvp_ideology != "Right"; lvp_relation -= 3 if lvp_ideology == "Right"; dvp_relation -= 5; ddp_left += 2; ddp_cohesion += 1; dvp_right += 2; lvp_left += 1; coalition_dissent += 1 if in_grand_coalition; pacifism += 1; education_science += 0.3
+on-arrival: curriculum_timer = 50; major_curriculum = "democratic"; pro_republic += 5*(1-dissent); workers_spd += 3*(1-dissent); democratization += 1; z_relation -= 3; ddp_relation += 3; lvp_relation += 3 if lvp_ideology != "Right"; lvp_relation -= 3 if lvp_ideology == "Right"; dvp_relation -= 5; ddp_left += 2; ddp_cohesion += 1; dvp_right += 2; lvp_left += 1; dvp_coalition_dissent += 1 if in_grand_coalition; pacifism += 1; education_science += 0.3
 go-to: curriculum_minor
 
 政治と時事を批判的に評価し、自らの権利を行使し、他の市民の権利を尊重することを教え、民主共和国の市民となる方法を学ばせるべきである。あらゆる伝統主義者がこの教育課程を批判している。
@@ -178,7 +178,7 @@ go-to: curriculum_minor
 @science_major
 title: 科学的教育課程
 subtitle: 現代科学、数学、技術技能
-on-arrival: curriculum_timer = 50; major_curriculum = "scientific"; education_science += 1; coalition_dissent += 1 if in_weimar_coalition; z_relation -= 5; ddp_relation += 4*(1-dissent); lvp_relation += 2*(1-dissent); kpd_relation += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_spd += 2*(1-dissent); ddp_left += 1; ddp_cohesion += 0.5; lvp_left += 0.5
+on-arrival: curriculum_timer = 50; major_curriculum = "scientific"; education_science += 1; z_coalition_dissent += 1; z_relation -= 5; ddp_relation += 4*(1-dissent); lvp_relation += 2*(1-dissent); kpd_relation += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_spd += 2*(1-dissent); ddp_left += 1; ddp_cohesion += 0.5; lvp_left += 0.5
 go-to: curriculum_minor
 
 教育制度は現代を反映し、科学と合理的思考を教えるべきである。宗教保守派は否定的に反応する傾向がある。
@@ -203,7 +203,7 @@ go-to: curriculum_minor
 @trad_major
 title: 伝統的教育課程
 subtitle: 古典、規律、国家主義
-on-arrival: curriculum_timer = 50; major_curriculum = "traditional"; dvp_relation += 5*(1-dissent);  z_relation += 4*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); pacifism -= 1 if pacifism > 0; pro_republic -= 5; nationalism += 5; education_science += 0.2; lvp_relation += 3 if lvp_ideology != "Left"; lvp_relation -= 3 if lvp_ideology == "Left"; ddp_right += 2; dvp_right += 2; lvp_right += 2
+on-arrival: curriculum_timer = 50; major_curriculum = "traditional"; dvp_relation += 5*(1-dissent); z_relation += 4*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); pacifism -= 1 if pacifism > 0; pro_republic -= 5; nationalism += 5; education_science += 0.2; lvp_relation += 3 if lvp_ideology != "Left"; lvp_relation -= 3 if lvp_ideology == "Left"; ddp_right += 2; dvp_right += 2; lvp_right += 2
 go-to: curriculum_minor
 
 伝統的教育課程は古代史と古典語、とりわけラテン語とギリシア語、厳格な規律、一定の軍国主義を重視していた。

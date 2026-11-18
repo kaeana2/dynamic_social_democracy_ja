@@ -32,7 +32,7 @@ on-arrival: resources -= 1; rfb_strength += 100; rfb_militancy += 0.1; kpd_relat
 
 我々は<span style="color: #700000;">反ファシズム</span><span style="color: #c00000;">行動</span>に資金を提供した。掲げたのは、<span style="color: #7A3C00;">ファシズム</span>に対抗する統一戦線である。
 
-<span style="color: #000000;">ブルジョワ</span>諸政党は、これを[? if rfb_banned or rfb_banned_prussia:非合法の準軍事組織の偽装団体への?][? if not rfb_banned and not rfb_banned_prussia:準軍事組織への?]物質的支援だと非難している。その組織は<span style="color: #700000;">共産主義</span>勢力のものである。[? if (reformist_strength >= 20 and not (rfb_banned or rfb_banned_prussia)) or (reformist_strength + center_strength >= 20 and (rfb_banned or rfb_banned_prussia)): 我が党でも多くの者がこの批判に同調している。?]
+<span style="color: #000000;">ブルジョワ</span>諸政党は、これを[? if rfb_banned or rfb_banned_prussia:非合法の準軍事組織の偽装団体への?][? if not (rfb_banned or rfb_banned_prussia):準軍事組織への?]物質的支援だと非難している。その組織は<span style="color: #700000;">共産主義</span>勢力のものである。[? if (reformist_strength >= 20 and not (rfb_banned or rfb_banned_prussia)) or (reformist_strength + center_strength >= 20 and (rfb_banned or rfb_banned_prussia)): 我が党でも多くの者がこの批判に同調している。?]
 
 @kpd
 subtitle: リソース－1
@@ -56,7 +56,7 @@ on-arrival: kpd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_int
 - @no_history: いや、謝罪する必要はない。
 
 @yes_history
-on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; kpd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; dvp_relation -= 6; lvp_relation -= 6; ddp_relation -= 4; kpd_relation += 8*(1-dissent); coalition_dissent += 1; dvp_right += 2; ddp_right += 2; lvp_right += 2; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
+on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; kpd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; dvp_relation -= 6; lvp_relation -= 6; ddp_relation -= 4; kpd_relation += 8*(1-dissent); z_coalition_dissent += 1; ddp_coalition_dissent += 1; dvp_coalition_dissent += 1; lvp_coalition_dissent += 1; dvp_right += 2; ddp_right += 2; lvp_right += 2; kpd_nazi_urgency += 1 if kpd_nazi_urgency < 0;
 
 <span style="color: #700000;">**KPD**</span>との関係正常化の一環として過去の過ちを認め、ノスケを除名し、蜂起中に軍隊に殺害された人々の公開追悼式を行った。
 
@@ -251,6 +251,15 @@ if (Q.rdp_r) {
         "legend": "RDP",
         "name": "RDP",
         "seats": Math.round(Q.rdp_r * Q.reichstag_size),
+    });
+}
+
+if (Q.srpd_formed && Q.srpd_r) {
+    data.push({
+        "id": "srpd",
+        "legend": "SRPD",
+        "name": "SRPD",
+        "seats": Math.round(Q.srpd_r * Q.reichstag_size),
     });
 }
 

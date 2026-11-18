@@ -84,7 +84,7 @@ go-to: adopt_moderate if moderate_plan_support >= 3; support_moderate_progress i
 まだ計画を採用していない。さらなる働きかけが必要だ。
 
 @adopt_moderate
-on-arrival: reformist_strength += 10; reformist_dissent -= 10; left_dissent += 8; labor_dissent += 6; moderate_plan_adopted = 1; economic_plan = 2; coalition_dissent -= 1 if unemployed > 15; z_relation += 5;
+on-arrival: reformist_strength += 10; reformist_dissent -= 10; left_dissent += 8; labor_dissent += 6; moderate_plan_adopted = 1; economic_plan = 2; z_coalition_dissent -= 1 if unemployed > 15; ddp_coalition_dissent -= 1 if unemployed > 15; z_relation += 5;
 
 粘り強い活動により党の多数を説得し、穏健な雇用創出計画を採用させた！[? if spd_in_government == 1 : 経済相または蔵相を確保している限り、速やかに実施へ移れる。 ?]
 

@@ -6,6 +6,9 @@ on-arrival: kpd_policy_timer = 5
 #tags: event
 #max-choices: 1
 
+# honestly who cares about this 
+# i will still update dissents — archie
+
 # disable this event for now - the <span style="color: #700000;">**KPD**</span> is abstentionist in government. This position is loosely based on Paul Levi's ideas during the Kapp Putsch. A <span style="color: #700000;">**KPD**</span> that is willing to support an SPD government would necessarily have some different policy ideas from the Thälmann Stalinist line, so I looked to the earlier Paul Levi <span style="color: #700000;">**KPD**</span> as well as the French popular front for ideas.
 
 # ironically the hypothetical <span style="color: #700000;">**KPD**</span> position towards the Popular Front is basically analogous to the SPD position towards the Brüning government (i.e. toleration).
@@ -39,7 +42,7 @@ view-if: labor_minister_party = "KPD"
 - @labor_oppose: いや、これはあまりに急進的だ。
 
 @labor_support
-on-arrival: capital_strike_progress += 2; workers_kpd += 5; workers_spd += 3*(1-dissent); kpd_labor_support += 1; coalition_dissent += 1; z_relation -= 6; unemployment += 2; kpd_influence += 2
+on-arrival: capital_strike_progress += 2; workers_kpd += 5; workers_spd += 3*(1-dissent); kpd_labor_support += 1; z_coalition_dissent += 1; z_relation -= 6; unemployment += 2; kpd_influence += 2
 
 労働者寄りの政策は労働者層から歓迎され、<span style="color: #700000;">**KPD**</span>への支持を高めた。だが企業側は報復として解雇と労働時間の短縮を進めている。政府は資本家との正面対決へ向かいつつある。
 
@@ -61,7 +64,7 @@ view-if: economic_minister_party = "KPD"
 - @economy_oppose: いや、これは止めなければならない。
 
 @economy_support
-on-arrival: nationalization_progress += 1; capital_strike_progress += 4; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; workers_spd += 4*(1-dissent); workers_kpd += 8*(1-dissent); unemployed_kpd += 4*(1-dissent); coalition_dissent += 2; dvp_relation -= 6; lvp_relation -= 6; z_relation -= 4; new_middle_spd -= 3; old_middle_spd -= 3; economy_goal_completed += 1; kpd_influence += 2
+on-arrival: nationalization_progress += 1; capital_strike_progress += 4; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; workers_spd += 4*(1-dissent); workers_kpd += 8*(1-dissent); unemployed_kpd += 4*(1-dissent); dvp_coalition_dissent += 2; lvp_coalition_dissent += 2; ddp_coalition_dissent += 2; z_coalition_dissent += 1; dvp_relation -= 6; lvp_relation -= 6; z_relation -= 4; new_middle_spd -= 3; old_middle_spd -= 3; economy_goal_completed += 1; kpd_influence += 2
 
 <span style="color: #700000;">**KPD**</span>は、多くの人が職を保てるようにしたことで労働者からの信頼を得た。一方、ブルジョワ政党や中産階級の有権者は、国有化を可能にした<span style="color: #c00000;">**SPD**</span>を非難する。
 
